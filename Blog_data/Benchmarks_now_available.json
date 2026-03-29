@@ -1,0 +1,153 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Benchmarks now available",
+  "message_count": 7,
+  "messages": [
+    {
+      "id": 206,
+      "sender_full_name": "Terence Tao",
+      "sender_email": "user28@zulip.sair.foundation",
+      "timestamp": 1773501334,
+      "date": "2026-03-14T15:15:34.000Z",
+      "content": "We have benchmarked various models on the problems in the test set; data is available [here](https://benchmark.sair.foundation/benchmarks/mathematics-distillation-challenge-equational-theories-stage1).",
+      "topic": "Benchmarks now available",
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 42
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 46
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 57
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 79
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 97
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 98
+        }
+      ],
+      "sender_id": 28
+    },
+    {
+      "id": 581,
+      "sender_full_name": "Baptiste Polchlopek",
+      "sender_email": "user97@zulip.sair.foundation",
+      "timestamp": 1773682199,
+      "date": "2026-03-16T17:29:59.000Z",
+      "content": "The model `gpt-5.4` behaves strangely regarding `F1 Score`.\nOn the setting \"Default Reasoning / Default Temperature\", it is a strong outlier in terms of not degrading the `F1 Score` too much on the *Hard* dataset (4%) vs. *Normal* dataset (98%) (bottom right point in the scatterplot).\n\n[image.png](/user_uploads/5/50/p14FI-kr3aW1FCdwz2d8y4y8/image.png)\n\nAdditionally, on the *Hard* dataset, this model performs better on \"Low Reasoning / Low Temperature\" setting (F1=16.9%) than on \"Default Reasoning / Default Temperature\" setting (F1=4%).\n\nI believe that `gpt-5.4` is getting more tokens for reasoning on Low compared to Default setting :sweat_smile:",
+      "topic": "Benchmarks now available",
+      "reactions": [
+        {
+          "emoji_name": "folded_hands",
+          "emoji_code": "1f64f",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "sender_id": 97
+    },
+    {
+      "id": 583,
+      "sender_full_name": "Baptiste Polchlopek",
+      "sender_email": "user97@zulip.sair.foundation",
+      "timestamp": 1773683291,
+      "date": "2026-03-16T17:48:11.000Z",
+      "content": "NB: these 2 issues are not present for the accuracy metric, so it could be linked to the class imbalance of the original *Hard* dataset: 63% False / 37% True",
+      "topic": "Benchmarks now available",
+      "reactions": [],
+      "sender_id": 97
+    },
+    {
+      "id": 596,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773687881,
+      "date": "2026-03-16T19:04:41.000Z",
+      "content": "We will update the benchmark.",
+      "topic": "Benchmarks now available",
+      "reactions": [],
+      "sender_id": 25
+    },
+    {
+      "id": 597,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773687939,
+      "date": "2026-03-16T19:05:39.000Z",
+      "content": "The current hard problem benchmark is still based on the old duped version. The new benchmark with normal, hard1, and hard2 will be launched soon.",
+      "topic": "Benchmarks now available",
+      "reactions": [],
+      "sender_id": 25
+    },
+    {
+      "id": 603,
+      "sender_full_name": "Alex Meiburg",
+      "sender_email": "user134@zulip.sair.foundation",
+      "timestamp": 1773689725,
+      "date": "2026-03-16T19:35:25.000Z",
+      "content": "Wow, so even with no \"cheatsheet\", gpt-oss-120b gets 92% on the Normal set? That's a lot!",
+      "topic": "Benchmarks now available",
+      "reactions": [],
+      "sender_id": 134
+    },
+    {
+      "id": 604,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773690953,
+      "date": "2026-03-16T19:55:53.000Z",
+      "content": "yes but only 47% on hards",
+      "topic": "Benchmarks now available",
+      "reactions": [],
+      "sender_id": 50
+    }
+  ]
+}

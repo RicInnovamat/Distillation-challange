@@ -1,0 +1,72 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "The hardest ETP problems",
+  "message_count": 5,
+  "messages": [
+    {
+      "id": 500,
+      "sender_full_name": "Terence Tao",
+      "sender_email": "user28@zulip.sair.foundation",
+      "timestamp": 1773628061,
+      "date": "2026-03-16T02:27:41.000Z",
+      "content": "In case it is helpful for some contestants to test against, [this thread](https://leanprover.zulipchat.com/#narrow/channel/458659-Equational/topic/Which.20implications.20are.20harder.20for.20ATPs/with/547257323) collects the positive implications that were the hardest for automated theorem provers to resolve.  Here we are using the equation numbering system listed [here](https://raw.githubusercontent.com/teorth/equational_theories/main/data/equations.txt).\n\nHere is a list of implications that were particularly challenging to refute (to the point where we explicitly assigned tasks in the ETP to formalize them):\n\n* 63 => 1692\n* 73 => 99, 203, 255, 4380\n* 206 => 1648\n* 713 => 817, 1426, 3862, 4065\n* 854 => 107, 413, 1248,1251\n* 879 => 4065\n* 917 => 1629, 1729, 2441, 2541\n* 1076 => 47, 99, 151, 203, 255, 411, 614, 817, 1223, 1426, 1629, 1832, 2035, 2238, 2441, 2644, 2847, 3050, 3253, 3456, 3659, 3862, 4065, 4380\n* 1117 => 2241\n* 1289 => 3116, 4815\n* 1323 => 2744\n* 1437 => 4269\n* 1447 => 1429, 4269\n* 1485 => 3457, 2124, 2087, 3511, 1483, 151, 3456, 3862\n* 1491 => 65\n* 1516 => 255, 1489\n* 1518 => 47, 614, 817, 3862\n* 1526 => 1223, 2744\n* 1648 => 151, 203, 307, 1426, 1832, 2238, 2441, 3050, 3456, 3522, 4065\n* 1692 => 47, 1832, 2441, 3050, 3456, 4065\n* 1722 => 644, 3050, 1832\n* 1729 => 817\n* 2126 => 151, 152, 167, 168, 1426, 1427, 1428, 1429, 1430, 1478, 1479, 1480, 1481, 1482, 1483, 1484, 1485, 1486, 2050, 2051, 2052, 2087, 2088, 2089, 2161, 2162, 2163, 3456, 3457, 3511, 3512, 3513, 3862, 3877, 3918, 3955, 3993\n* 3308 => 3456\n* 3342 => 3456, 3522, 4065, 4118",
+      "topic": "The hardest ETP problems",
+      "reactions": [
+        {"emoji_name": "heart", "emoji_code": "2764", "reaction_type": "unicode_emoji", "user_id": 25},
+        {"emoji_name": "heart", "emoji_code": "2764", "reaction_type": "unicode_emoji", "user_id": 71},
+        {"emoji_name": "heart", "emoji_code": "2764", "reaction_type": "unicode_emoji", "user_id": 52}
+      ],
+      "sender_id": 28
+    },
+    {
+      "id": 607,
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "timestamp": 1773693783,
+      "date": "2026-03-16T20:43:03.000Z",
+      "content": "Thanks @**Terence Tao**, this helps a lot. It confirms accuracy is low not just because the model \"doesn't know magmas\". In my testing, many failures happen when the implications require the exact things LLMs are weakest at like controlled search, deep intermediate term invention, strict proof-state management, and not confusing \"plausible local move\" with \"globally valid derivation\". Tweaking cheat sheet now and seeing better results.",
+      "topic": "The hardest ETP problems",
+      "reactions": [],
+      "sender_id": 71
+    },
+    {
+      "id": 640,
+      "sender_full_name": "Terence Tao",
+      "sender_email": "user28@zulip.sair.foundation",
+      "timestamp": 1773707691,
+      "date": "2026-03-17T00:34:51.000Z",
+      "content": "I just realized that essentially the same lists can also be found at https://teorth.github.io/equational_theories/blueprint/hard-implications-chapter.html#a0000000057 with a bit more annotation.",
+      "topic": "The hardest ETP problems",
+      "reactions": [
+        {"emoji_name": "looking", "emoji_code": "1f440", "reaction_type": "unicode_emoji", "user_id": 71},
+        {"emoji_name": "looking", "emoji_code": "1f440", "reaction_type": "unicode_emoji", "user_id": 25}
+      ],
+      "sender_id": 28
+    },
+    {
+      "id": 865,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773836022,
+      "date": "2026-03-18T12:13:42.000Z",
+      "content": "Ewf mobile phones >>\n\nId like to share the success of zer00logy cheat sheet model and axioms and share with yall possible the most difficult magma question zer00logy cheat sheet could create, here are two equations y'all can try :)\n\nEquation 1 (The Recursive Anchor):\nx = (y * (x * (z * y))) * (x * (y * x))\n\nEquation 2 (The Distillation Mirage):\n(x * x) * (y * y) = (z * z) * (x * x)\n\nDon't quote me but these should be S++ Hard haha\n\nAnswers : when presenting both equations together Answers : true\n\nIf presented a single equation, each alone and seperated, Answers: false",
+      "topic": "The hardest ETP problems",
+      "reactions": [
+        {"emoji_name": "+1", "emoji_code": "1f44d", "reaction_type": "unicode_emoji", "user_id": 25}
+      ],
+      "sender_id": 113
+    },
+    {
+      "id": 917,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773896533,
+      "date": "2026-03-19T05:02:13.000Z",
+      "content": "@_**Stacey Szmy|113** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/The.20hardest.20ETP.20problems/near/865):\n```quote\nEwf mobile phones >>\n\nId like to share the success of zer00logy cheat sheet model and axioms and share with yall possible the most difficult magma question zer00logy cheat sheet could create, here are two equations y'all can try :)\n\nEquation 1 (The Recursive Anchor):\nx = (y * (x * (z * y))) * (x * (y * x))\n\nEquation 2 (The Distillation Mirage):\n(x * x) * (y * y) = (z * z) * (x * x)\n\nDon't quote me but these should be S++ Hard haha\n\nAnswers : when presenting both equations together Answers : true\n\nIf presented a single equation, each alone and seperated, Answers: false\n```\n\nmaybe its not a S++? V=TRUE the playground did'nt detect bc of custom equation maybe, idk..\n\nx-ai/grok-4.1-fastERROR\n\ncustom#0\n\n`x = (y * (x * (z * y))) * (x * (y * x))`⇒`(x * x) * (y * y) = (z * z) * (x * x)`\n\nNo VERDICT found in response\n\n3.8stime\n\n$0.0011cost\n\n0.20credit\n\n4170in\n\n432out\n\nHide responseShow promptConfig\n\nA*e Eq1=TRUE \nSUB P1: Replace **all** x in Eq2 with RHS=(y * (x * (z * y))) * (x * (y * x)) \n**Eq2 post-SUB:** \nLHS: [((y * (x * (z * y))) * (x * (y * x))) * ((y * (x * (z * y))) * (x * (y * x)))] * [((y * (x * (z * y))) * (x * (y * x))) * ((y * (x * (z * y))) * (x * (x * (y * x)))))] \n\nRHS: [(z * (y * (x * (z * y)))) * ((y * (x * (z * y))) * (x * (y * x)))] * [((y * (x * (z * y))) * (x * (y * x))) * ((y * (x * (z * y))) * (x * (y * x)))] \n**STAR COUNT (L0.57.2 DK PROOF):** \nP1 * LHS: 24 * ops \nP1 * RHS: 24 * ops \n\nNo c+t_M@#h (|LHS-RHS|=0 ✓ L0.57.35) \n**NEW_VAR AUDIT (L21.193/L23.9):** \nEq2 vars post-SUB: {x,y,z} \nEq1 RHS vars: {x,y,z} \n✓ No NEW_VAR_FATAL (all Eq2 vars ∈ Eq1 RHS) \n**L21.191/1.6:** x-distillation valid (SYM DST, not violation) \n**No literal C@#^Tion** (x equal$ y ∧ x≠y) f&D \n**No SYM/ECHO** (structures differ) \n**PIPE TERM:** Δc+t=0 ∧ ¬NEW_VAR → **default TRUE** (L20.5, PRIORITY #5) \n**V=TRUE**",
+      "topic": "The hardest ETP problems",
+      "reactions": [],
+      "sender_id": 113
+    }
+  ]
+}

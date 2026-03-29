@@ -1,0 +1,694 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "discussions",
+  "message_count": 32,
+  "messages": [
+    {
+      "id": 191,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773449043,
+      "date": "2026-03-14T00:44:03.000Z",
+      "content": "Welcome to the Math Distillation Challenge!",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 28
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 46
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 74
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 98
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 249,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773527657,
+      "date": "2026-03-14T22:34:17.000Z",
+      "content": "Hey, glad to be here. Does anybody have the intuition on how many hards should we test our cheatsheets before promoting them to a full 200 hards test? Say I am testing 100 versions of cheatsheets with ShinkaEvolve/AlphaEvolve. Testing each on 200 hards would be time / resources consuming, even with parallelized infra. Will I see a significant statistical signals of some cheatsheets being great (or bad) at, say, 30 hards sweep?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 50
+    },
+    {
+      "id": 250,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773528522,
+      "date": "2026-03-14T22:48:42.000Z",
+      "content": "Hi @**stokarz** ! Welcome. To help you pick the best subset of questions, you can check out our benchmark: https://benchmark.sair.foundation/\n\nIt details the baseline LLM performance on all 200 hards without any cheatsheets. You can probably use this data to purposefully narrow your scope and select the most representative questions for your smaller test runs before scaling up.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 251,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773528719,
+      "date": "2026-03-14T22:51:59.000Z",
+      "content": "@**YZ** what are the expectations or some ideas about how high the score could go, if one created a really amazing cheatsheet? Do you expect the score of, say, gpt120b oss to go towards 65-70%, or more like 80%?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 50
+    },
+    {
+      "id": 252,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773529410,
+      "date": "2026-03-14T23:03:30.000Z",
+      "content": "@_**stokarz|50** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/251):\n```quote\n@**YZ** what are the expectations or some ideas about how high the score could go, if one created a really amazing cheatsheet? Do you expect the score of, say, gpt120b oss to go towards 65-70%, or more like 80%?\n```\nAs you can see in our benchmark, gemini-3.1-pro-preview can exceed 90%, so perhaps it is possible for us to reach a similar goal, or even higher? :smile:",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 79
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 264,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773539690,
+      "date": "2026-03-15T01:54:50.000Z",
+      "content": "@_**YZ|25** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/252):\n````quote\n@_**stokarz|50** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/251):\n```quote\n@**YZ** what are the expectations or some ideas about how high the score could go, if one created a really amazing cheatsheet? Do you expect the score of, say, gpt120b oss to go towards 65-70%, or more like 80%?\n```\nAs you can see in our benchmark, gemini-3.1-pro-preview can exceed 90%, so perhaps it is possible for us to reach a similar goal, or even higher? :smile:\n````\n\nThanks YZ. Challenge is really fun. I am working with gpt-120b-oss, specially picked the smaller model to see where I can get using the cheapest, smallest, oss model possible. I've used GroqCloud for inference (0.17s latency, 500tok/s), totalling 13.1M tokens to arrive at the interesting results. You could go much faster using Cerebras inference, since they are serving at 3000 tok/s. And multiple workers ofcs. \n\nI've found a clean (no answer leaks in the testing pipeline) 4.3KB distilled sheet that scores 199/200 on the SAIR 200-hards, using the standard evaluation template, without parse errors. The method is a compact structural classifier with canonical source-family collapse lemmas and ordered invariant-based decision rules. I guess the results are interesting? \n\nScore is 99.0% to 99.5% over 4 independent cold standard-template runs, The recurring misses were small and local: hard_0061 and hard_0165 each missed twice, hard_0071 and hard_0091 once each. Seems like the model is at it's stochastic limits, or near them. I've verified data sanity checks. Best run was 199/200. Since idk how to verify my cheatsheet inside the Playground with the 10 normal limits, I'm sending it to you in DMs. Goodnight! \n\n[image.png](/user_uploads/5/46/fjGaD25XtfXbapZVWKiF8pT4/image.png)",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "surprise",
+          "emoji_code": "1f62e",
+          "reaction_type": "unicode_emoji",
+          "user_id": 74
+        },
+        {
+          "emoji_name": "surprise",
+          "emoji_code": "1f62e",
+          "reaction_type": "unicode_emoji",
+          "user_id": 98
+        },
+        {
+          "emoji_name": "surprise",
+          "emoji_code": "1f62e",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "surprise",
+          "emoji_code": "1f62e",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        },
+        {
+          "emoji_name": "surprise",
+          "emoji_code": "1f62e",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "sender_id": 50
+    },
+    {
+      "id": 337,
+      "sender_full_name": "Alex",
+      "sender_email": "user81@zulip.sair.foundation",
+      "timestamp": 1773583265,
+      "date": "2026-03-15T14:01:05.000Z",
+      "content": "Excited to follow this challenge!",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "sender_id": 81
+    },
+    {
+      "id": 445,
+      "sender_full_name": "Muneeb Ur Rahman",
+      "sender_email": "user104@zulip.sair.foundation",
+      "timestamp": 1773618203,
+      "date": "2026-03-15T23:43:23.000Z",
+      "content": "Does the challenge involve finetuning? or only writing prompts?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 104
+    },
+    {
+      "id": 450,
+      "sender_full_name": "Terence Tao",
+      "sender_email": "user28@zulip.sair.foundation",
+      "timestamp": 1773618808,
+      "date": "2026-03-15T23:53:28.000Z",
+      "content": "The submission for Stage 1 consists only of a prompt, and will be tested against a fixed basket of models in the final evaluation. You are of course free to use whatever frameworks you wish to test those prompts locally.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 104
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "sender_id": 28
+    },
+    {
+      "id": 582,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773682724,
+      "date": "2026-03-16T17:38:44.000Z",
+      "content": "Daily task limit reached (10 tasks/day)\n\nSo, does the playground operate on token max daily limit usage or does it operate on task daily limits? some ai and equations use less tokens to test the equation, but I'm still limited to 10 tasks 24 hours while having remaining tokens left from my daily 10? \n\n8.400000000000004Credits left\n\n32Credits used (today)\n\n12Total tasks\n\n10Tasks (24h)\n\n<< hmm these 24 hour stats a little broken I think when you updated the new hard equations it also reset my 24 hour timer and gave me 10 more tokens and 10 more tasks, because I wasn't expecting to be able to run tests until Reset at 00:00 UTC but when I checked to see if the 69 og hard and new 100 hard equations where inside the playground I noticed I had my tokens and tasks reset early.",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 113
+    },
+    {
+      "id": 589,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773687684,
+      "date": "2026-03-16T19:01:24.000Z",
+      "content": "We are updating the playground, and a new version is coming soon!\n\nFor the next version, each credit will be around 0.01$ equivalent compute. Different models will have different price -- 0.1 credit is the minimum cost per run",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 98
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 592,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773687756,
+      "date": "2026-03-16T19:02:36.000Z",
+      "content": "You can run up to 100 times per day with your 10 credit if you use a cheap model, and you can use more models.",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 25
+    },
+    {
+      "id": 615,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773698389,
+      "date": "2026-03-16T21:59:49.000Z",
+      "content": "Hi everyone. \n\nI was successful in saturating the benchmark for the new dataset. Since I run through 100M tokens just on the tested models, not even orchestration, I am happy to share the results and insight I have stumbled upon. \n\nGeneral clue is that smaller models have a huge mathematical potential that is \"artificially gated\" by the problem of representation. Which (if holds true for all the mathematical capabilities inside models) is quite a revelation. One could imagine GPT-OSS-120b getting IMO gold without additional fine-tuning, but with the right representation cheatsheets. \n\n0) Method I am using for finding these cheatsheets is an AlphaEvolve like search and optimisation solution, with 30-60-200 probing and GPT 5.4 acting as the orchestrator who analyses the results and fixes the prompt according to what hards in the dataset are failing. Important: there are no answer leaks, all the prompts are generalized \"for the distribution\" of problems in the dataset. \n\n1) Cheatsheet tuning to max is very dependent on dataset distribution. A different prompt works amazingly on 69 hard1 deduplicated dataset, but it doesn't generalize to hard2. A new prompt was required to saturate the benchmark on hard2. \n\n2) GPT-OSS-120b & GPT-OSS-20b score 99% and 98% respectively. GPT-OSS-20b does 98% on high reasoning, and 94% on low. Both models work best with a cheatsheet that makes use of a symbolic generalized solver. \n\n3) Llama 3.3 70b & Llama 3.1 8B were completely different. They performed poorly on cheatsheets with a generalized solver. But they started doing extremely well on an algebraic family atlas with proof/countermodel schemas. 88.5% for Llama 3.3 70b and, the most surprising of all of these results, Llama 3.1 8B params model scored a whooping 77% with the right prompt! Llama 3.3 70b actually underperformed Llama 3.1 8B for a long time in the run, but finally I was able to \"fine-tune\" the prompt. Additionally, changing the evaluation from a standard one (tested on both - standard + reversed order) to literally \"You are a math... {cheatsheet}, determine if eq1 implies eq2, output TRUE or FALSE\" got me a nearly +11points jump in performance. If you use the standard evaluation, The 70B model will have \"a deeply embedded belief that equational implications are FALSE\", which is weird!\n \n4) I have also derived a third dataset from Mr. Tao post and [Teorth](https://raw.githubusercontent.com/teorth/equational_theories/main/blueprint/src/chapter/hard.tex). On this, my cheatsheet scores either 130/130 for GPT-OSS-120b (but requires a new, dataset specific prompt), or (surprising fact) Llama 70B does 93.8% there, with the same cheatsheet used as in the hard2. Algebraic cheatsheets clearly generalize much better for different hard datasets. I haven't tried it yet, but my bet is that GPT-OSS-120b has a potential to saturate the benchmark with the algebraic cheatsheet. \n\nFor the spirit of competitiveness in Stage 1, I am keeping results closed source as per YZ request, but have send him all the prompts for verification again. \n\nFinally, since we still have a lot of time till Stage 2, I've started trying to formalize 13102 proof in Lean. Hoping to bring some real contribution to equational theories. \n\n[image.png](/user_uploads/5/e5/QdxcyzEsCXtp6CB4VLKRsAfP/image.png)",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 32
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 169
+        }
+      ],
+      "sender_id": 50
+    },
+    {
+      "id": 627,
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "timestamp": 1773700145,
+      "date": "2026-03-16T22:29:05.000Z",
+      "content": "Nice work @**stokarz** , that's a seriously impressive result!\n\nThe representation point is super interesting. The idea that a lot of the math ability is already there, but gated by how the problem is encoded is a big deal if it holds more broadly.\n\nHow much do you think this is a universal scaffold versus benchmark-specific tuning?\n\nHave you tried testing the same cheatsheet on a structurally different held-out set?\n\nYour result is awesome, I'm curious to know if you think it's universal, some overfitting, or a mix.",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 71
+    },
+    {
+      "id": 630,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773700777,
+      "date": "2026-03-16T22:39:37.000Z",
+      "content": "Hey @**Heath Sanchez**. What I think is universal: Llama algebraic cheatsheets. GPT (both of them) achieve around 85%+ with them, and they \"generalize\" on the 3rd dataset I have prepared, from Mr. Tao post here in the group. \n\nThe exact prompts that make the GPTs do 98-99% on the benchmark aren't generalizable in my opinion, and are fitted for the distribution of the problems available in the dataset. However this is exciting in itself. It means that you could potentially map the distributions of all the 22 million magmas, and then fine tune maybe 10-100 prompts like this for even gpt 20b and get to this amazing accuracy. Of course this is much easier to actually achieve now, when we know the answers to optimise against after the Equational Theories Project brought us them. \n\nI am happy with these results, and was surprised to see smaller models (even Llama 8B!) being able to make a significant jumps. I have long held the hypothesis that a lot of capabilities (poetry, but also in the field of mathematics) are representation-gated in older/smaller models. But nobody really care, since we get these massive intelligence spikes every 3 months now. So nobody really looks, maybe besides amazing people inside the mechanistic interpretability research community. \n\nTo answer your question, it's a mix of universality and overfitting for the set's distribution. But the fact the models can even comprehend such overfitting is exciting. Remember I am taking a lot of care to not leak any answer in the prompt and only do generalized rules. \n\nI am now looking into trying out this method in AIMO3 if I have some time. I know in AIMO1 participants were able to score very well with just prompts, but nobody is trying it anymore in AIMO3, since problems are now IMO level. But if the results from here holds, you should be able to have a system where a small model is identifying a problem's type and distribution and handling it to gpt 120b (or 20b) model with the right representation prompt. With this approach, without any fine-tunning on massive problems datasets, you should, in theory, be able to score silver-gold at IMO using these small oss models!",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "sender_id": 50
+    },
+    {
+      "id": 635,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773705156,
+      "date": "2026-03-16T23:52:36.000Z",
+      "content": "Hi everyone, thank you for your active participation and insightful discussions!\n\nCurrently, we are developing a new feature: the SAIR competition platform will allow participants to share cheatsheets. We will also enable a citation mechanism\u2014if other participants use your cheatsheet, they must cite it in their own. This creates a collaborative system for everyone.\n\nAdditionally, being cited will count as a community contribution, which will give you a bonus on your final Stage 1 score.\n\nOnce this feature is live, you can use our platform to share and build upon each other's work. This incentive mechanism will better ensure fairness while encouraging sharing.\n\nTherefore, we strongly suggest waiting until the share and cite features are officially released. For now, to keep the competition fair, we suggest you do not share your cheatsheets.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "light_bulb",
+          "emoji_code": "1f4a1",
+          "reaction_type": "unicode_emoji",
+          "user_id": 97
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 98
+        },
+        {
+          "emoji_name": "light_bulb",
+          "emoji_code": "1f4a1",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "light_bulb",
+          "emoji_code": "1f4a1",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 169
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 636,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773705972,
+      "date": "2026-03-17T00:06:12.000Z",
+      "content": "i think im still bugged out -- 8:05 EDT -- Daily task limit reached (10 tasks/day) -- 10Credits left - 0Credits used (today) - 12Total tasks - 10Tasks (24h)\n\nnplo ill test tmrw tyty",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 113
+    },
+    {
+      "id": 638,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773706848,
+      "date": "2026-03-17T00:20:48.000Z",
+      "content": "could citation for contribution occur outside the cheat sheet somewhere? cheat sheets at 9.99kb atm i'm sure others are probably too",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 113
+    },
+    {
+      "id": 648,
+      "sender_full_name": "Jose Brox",
+      "sender_email": "user52@zulip.sair.foundation",
+      "timestamp": 1773709659,
+      "date": "2026-03-17T01:07:39.000Z",
+      "content": "@_**stokarz|50** [ha dicho](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/615):\n```quote\nI've started trying to formalize 13102 proof in Lean\n```\nDo you mean you think you have a sound proof of the fact that 13102 has no finite models? That would be neat! How long the informal proof is?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 52
+    },
+    {
+      "id": 668,
+      "sender_full_name": "Hrushikesh Pawar",
+      "sender_email": "user119@zulip.sair.foundation",
+      "timestamp": 1773727888,
+      "date": "2026-03-17T06:11:28.000Z",
+      "content": "A quick question - For stage 1 do we have any output token constraints for the models - i.e the output should always be less that (lets say) 4096 tokens?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 119
+    },
+    {
+      "id": 679,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1773730885,
+      "date": "2026-03-17T07:01:25.000Z",
+      "content": "@_**Jose Brox|52** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/648):\n````quote\n@_**stokarz|50** [ha dicho](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/discussions/near/615):\n```quote\nI've started trying to formalize 13102 proof in Lean\n```\nDo you mean you think you have a sound proof of the fact that 13102 has no finite models? That would be neat! How long the informal proof is?\n````\n\nNo, not yet. Seems like only a part of it. Will work on this more ofcs.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "sender_id": 50
+    },
+    {
+      "id": 804,
+      "sender_full_name": "Jose Brox",
+      "sender_email": "user52@zulip.sair.foundation",
+      "timestamp": 1773790501,
+      "date": "2026-03-17T23:35:01.000Z",
+      "content": "@**YZ** For stage 1 there is a cheatsheet size cap of 10KB. Do you plan on using the same size cap for stage 2? A larger one? About how much longer?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 52
+    },
+    {
+      "id": 806,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773790643,
+      "date": "2026-03-17T23:37:23.000Z",
+      "content": "Hi @**Jose Brox** Yes, the cheat sheet size cap for Stage 2 will be larger. We will announce the exact limit before the stage 2 begins. Thanks!",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 811,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773791950,
+      "date": "2026-03-17T23:59:10.000Z",
+      "content": "@**Hrushikesh Pawar** Yes, for the Stage 1 final evaluation, there will be a `max-tokens` limit and a maximum cost limit per question. For the current stage, however, you are free to experiment without those constraints.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 820,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773801981,
+      "date": "2026-03-18T02:46:21.000Z",
+      "content": "Any chance we could have the playgrounds file size limit increased from 10KB to a limit of like 20kb? but warn and let the user know if they beyond 10kb? It would be nice to be able to maintain and test my denseform and solidform cheat sheet code langue and make sure my own distillation in my cheat sheet is not causing negative effects.. but maintaining keeping my denseform code under 10kbs to keep decreasing my solidform code will eventually be difficult as my denseform always sorta max 10kb already.. i just wanna use the playground the whole competition for the fun of it haha.\n\nok tyty.",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 113
+    },
+    {
+      "id": 822,
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "timestamp": 1773802111,
+      "date": "2026-03-18T02:48:31.000Z",
+      "content": "10 messages were moved here from #**Math Distillation Challenge - equational theories>** by @_**Stacey Szmy|113**.",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 15
+    },
+    {
+      "id": 824,
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "timestamp": 1773803060,
+      "date": "2026-03-18T03:04:20.000Z",
+      "content": "also minor tho could this >> confirm screen >> ### Confirm Run\n\nModelGoogle: Gemini 3.1 Flash Lite Preview\nTemplateOfficial_initial_evaluation\nCheatsheetsolidform d4v1\nProblems2 problems\n\n>>let me know a credit cost total?",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 113
+    },
+    {
+      "id": 828,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773805217,
+      "date": "2026-03-18T03:40:17.000Z",
+      "content": "@**Stacey Szmy** thanks for your suggestion! We can add this feature to the playground for testing purposes.\n\nPlease note that we will not change the rules for the maximum length of the final evaluated cheatsheet. It will remain strictly 10KB. If you use a cheatsheet larger than 10KB in the playground, a warning will appear.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 877,
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "timestamp": 1773844515,
+      "date": "2026-03-18T14:35:15.000Z",
+      "content": "Hi may i know which inference provider is the playground using, and which inference provider(or if local machine, which inference framework) will the final evaluation be running on? \n\nIs it same as the current benchmark, that is OpenRouter?\n[image.png](/user_uploads/5/20/WunrmtyfupObVISciXqS19t-/image.png)\n\nThanks",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 117
+    },
+    {
+      "id": 890,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773857125,
+      "date": "2026-03-18T18:05:25.000Z",
+      "content": "The Playground and the benchmark both run through OpenRouter. The Playground setup is aligned with the benchmark's low-reasoning, low-temperature configuration. If you want to reproduce the setup locally, you can do so by calling the same models through OpenRouter.",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "sender_id": 25
+    },
+    {
+      "id": 1053,
+      "sender_full_name": "Baptiste Polchlopek",
+      "sender_email": "user97@zulip.sair.foundation",
+      "timestamp": 1774122299,
+      "date": "2026-03-21T19:44:59.000Z",
+      "content": "@**YZ** @**Terence Tao** FYI: Mistral released an AI agent for Lean 4 on the 16th of March (Leanstral)\n\n[News article](https://mistral.ai/news/leanstral)\n[Model official API](https://docs.mistral.ai/models/leanstral-26-03)\n[Open Weights (Apache 2.0)](https://huggingface.co/mistralai/Leanstral-2603)\n\nNB:\n- free for a limited amount of time\n- not available on OpenRouter yet",
+      "topic": "discussions",
+      "reactions": [],
+      "sender_id": 97
+    },
+    {
+      "id": 1067,
+      "sender_full_name": "stokarz",
+      "sender_email": "user50@zulip.sair.foundation",
+      "timestamp": 1774180812,
+      "date": "2026-03-22T12:00:12.000Z",
+      "content": "in terms of autoformalization, OpenGauss works well, a fork of Hermes Agent with full Lean formalization capabilities",
+      "topic": "discussions",
+      "reactions": [
+        {
+          "emoji_name": "note",
+          "emoji_code": "1f4dd",
+          "reaction_type": "unicode_emoji",
+          "user_id": 97
+        }
+      ],
+      "sender_id": 50
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Community contributions",
+  "message_count": 1,
+  "messages": [
+    {
+      "id": 818,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "timestamp": 1773801785,
+      "date": "2026-03-18T02:43:05.000Z",
+      "content": "Dear community members,\n\nIf you are interested in contributing selected problem sets or prompt templates, please use this GitHub repo: \nhttps://github.com/SAIRcompetition/equational-theories-community\n\nThank you so much for your support!",
+      "topic": "Community contributions",
+      "reactions": [],
+      "sender_id": 25
+    }
+  ]
+}

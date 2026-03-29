@@ -1,0 +1,30 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "channel events",
+  "message_count": 2,
+  "messages": [
+    {
+      "id": 81,
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "timestamp": 1771823666,
+      "date": "2026-02-23T05:14:26.000Z",
+      "content": "**Public** channel created by @_**YZ|25**. **Description:**\n```` quote\n*No description.*\n````",
+      "topic": "channel events",
+      "reactions": [],
+      "sender_id": 15
+    },
+    {
+      "id": 158,
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "timestamp": 1772995945,
+      "date": "2026-03-08T18:52:25.000Z",
+      "content": "@_**YZ|25** renamed channel **competition** to **Math Distillation Challenge - equational theories**.",
+      "topic": "channel events",
+      "reactions": [],
+      "sender_id": 15
+    }
+  ]
+}
