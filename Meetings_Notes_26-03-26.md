@@ -1,4 +1,4 @@
-# Mathematics Distillation Challenge -- Meeting Notes
+# Mathematics Distillation Challenge -- Meeting Notes 23 march 2026
 **Date:** 2026-03-26
 **Participants:** Andrea (A), Riccardo (R), Tommaso (T)
 
