@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,False,True,True,VERDICT: FALSE,313.13,220,12709,0.006398,VERDICT: FALSE
+hard1_0002,False,,,False,,1131.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0003,True,False,False,True,VERDICT: FALSE,16.23,218,2498,0.001293,VERDICT: FALSE
+hard1_0004,False,False,True,True,VERDICT: FALSE,107.87,221,10505,0.005297,VERDICT: FALSE
+hard1_0005,False,True,False,True,VERDICT: TRUE,319.94,220,17457,0.008773,VERDICT: TRUE
+hard1_0006,False,False,True,True,VERDICT: FALSE,6.73,213,1052,0.000569,VERDICT: FALSE
+hard1_0007,True,False,False,True,VERDICT: FALSE,47.56,220,1282,0.000685,VERDICT: FALSE
+hard1_0008,False,,,False,,1019.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0009,False,,,False,,1117.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0010,False,False,True,True,VERDICT: FALSE,33.54,221,5919,0.003004,VERDICT: FALSE
+hard1_0011,False,False,True,True,VERDICT: FALSE,39.58,223,974,0.000532,VERDICT: FALSE
+hard1_0012,False,False,True,True,VERDICT: FALSE,173.63,221,2026,0.001057,VERDICT: FALSE
+hard1_0013,True,,,False,,1104.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0014,False,False,True,True,VERDICT: FALSE,500.60,222,4475,0.002282,VERDICT: FALSE
+hard1_0015,False,False,True,True,VERDICT: FALSE,944.93,220,14117,0.007102,VERDICT: FALSE
+hard1_0016,False,,,False,,1015.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0017,False,False,True,True,VERDICT: FALSE,769.13,221,15275,0.007682,VERDICT: FALSE
+hard1_0018,True,False,False,True,VERDICT: FALSE,474.79,222,2608,0.001348,VERDICT: FALSE
+hard1_0019,False,False,True,True,VERDICT: FALSE,83.67,219,9954,0.005021,VERDICT: FALSE
+hard1_0020,False,False,True,True,VERDICT: FALSE,143.04,221,1092,0.000590,VERDICT: FALSE
+hard1_0021,False,False,True,True,VERDICT: FALSE,288.65,218,2905,0.001496,VERDICT: FALSE
+hard1_0022,False,,,False,,1178.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0023,True,True,True,True,VERDICT: TRUE,875.90,218,10533,0.005310,VERDICT: TRUE
+hard1_0024,False,False,True,True,VERDICT: FALSE,899.21,221,3027,0.001558,VERDICT: FALSE
+hard1_0025,False,False,True,True,VERDICT: FALSE,376.23,221,18756,0.009422,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning begins by recognizing
+hard1_0026,False,,,False,,1159.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0027,True,,,False,,917.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0028,False,,,False,,996.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0029,False,False,True,True,VERDICT: FALSE,264.57,221,3121,0.001605,VERDICT: FALSE
+hard1_0030,False,,,False,,1136.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0031,False,False,True,True,VERDICT: FALSE,15.67,222,2206,0.001147,VERDICT: FALSE
+hard1_0032,False,False,True,True,VERDICT: FALSE,97.30,218,2085,0.001086,VERDICT: FALSE
+hard1_0033,False,,,False,,1043.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0034,True,True,True,True,VERDICT: TRUE,455.74,216,11155,0.005621,VERDICT: TRUE
+hard1_0035,True,False,False,True,VERDICT: FALSE,30.16,221,5114,0.002601,VERDICT: FALSE
+hard1_0036,False,,,False,,983.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0037,False,,,False,,1038.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0038,False,False,True,True,VERDICT: FALSE,532.55,219,7813,0.003950,VERDICT: FALSE
+hard1_0039,False,,,False,,969.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0040,True,True,True,True,VERDICT: TRUE,230.80,220,6426,0.003257,VERDICT: TRUE
+hard1_0041,True,False,False,True,VERDICT: FALSE,728.48,220,1718,0.000903,VERDICT: FALSE
+hard1_0042,False,False,True,True,VERDICT: FALSE,28.09,219,4625,0.002356,VERDICT: FALSE
+hard1_0043,False,False,True,True,VERDICT: FALSE,45.24,219,1781,0.000934,VERDICT: FALSE
+hard1_0044,True,True,True,True,VERDICT: TRUE,210.40,218,6121,0.003104,VERDICT: TRUE
+hard1_0045,False,True,False,True,VERDICT: TRUE,1109.14,223,16299,0.008194,VERDICT: TRUE
+hard1_0046,True,,,False,,1211.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0047,False,False,True,True,VERDICT: FALSE,38.88,222,1424,0.000756,VERDICT: FALSE
+hard1_0048,False,False,True,True,VERDICT: FALSE,217.94,218,11168,0.005628,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning determines whether the equation \(x = (y * (z * y)) * x\) implies \(x = (((y * z) * y) * y) * x\) in all magmas by analyzing the equational consequenc
+hard1_0049,False,False,True,True,VERDICT: FALSE,318.71,221,3990,0.002039,VERDICT: FALSE
+hard1_0050,True,True,True,True,VERDICT: TRUE,447.15,221,12444,0.006266,VERDICT: TRUE
+hard1_0051,False,False,True,True,VERDICT: FALSE,34.18,219,1211,0.000649,VERDICT: FALSE
+hard1_0052,True,True,True,True,VERDICT: TRUE,256.75,220,15859,0.007974,VERDICT: TRUE\n\n## Explanation\n\nThe reasoning proceeds by analyzing the premise \(x = (y \cdot x) \cdot (y \cdot x)\) in any magma and determining whether it entails \(x = ((x \cdot y) \cdot x) \cd
+hard1_0053,False,False,True,True,VERDICT: FALSE,378.15,221,12793,0.006441,VERDICT: FALSE
+hard1_0054,True,True,True,True,VERDICT: TRUE,482.39,220,4674,0.002381,VERDICT: TRUE
+hard1_0055,False,False,True,True,VERDICT: FALSE,25.62,221,1470,0.000779,VERDICT: FALSE
+hard1_0056,True,False,False,True,VERDICT: FALSE,228.17,222,15067,0.007578,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning process for determining that the equation \( x = (y * (y * z)) * (w * x) \) does not imply \( x = y * (z * (w * (u * x))) \) in all magmas proceeds as
+hard1_0057,False,,,False,,1090.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0058,False,,,False,,1164.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0059,True,True,True,True,VERDICT: TRUE,63.13,218,8816,0.004452,VERDICT: TRUE
+hard1_0060,True,,,False,,1010.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0061,True,False,False,True,VERDICT: FALSE,1058.77,221,18821,0.009455,VERDICT: FALSE
+hard1_0062,False,False,True,True,VERDICT: FALSE,1133.27,222,16577,0.008333,VERDICT: FALSE
+hard1_0063,True,False,False,True,VERDICT: FALSE,21.98,218,3121,0.001604,VERDICT: FALSE
+hard1_0064,True,True,True,True,VERDICT: TRUE,149.40,221,7429,0.003759,VERDICT: TRUE
+hard1_0065,True,True,True,True,VERDICT: TRUE,294.39,218,7487,0.003787,VERDICT: TRUE
+hard1_0066,False,False,True,True,VERDICT: FALSE,393.40,222,2210,0.001149,VERDICT: FALSE
+hard1_0067,True,,,False,,922.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0068,False,,,False,,989.85,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0069,True,False,False,True,VERDICT: FALSE,244.81,218,2388,0.001238,VERDICT: FALSE

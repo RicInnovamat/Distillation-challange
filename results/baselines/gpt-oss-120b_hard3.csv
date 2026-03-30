@@ -1,0 +1,401 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0001,True,False,False,True,VERDICT: FALSE,483.63,108,1001,0.000194,VERDICT: FALSE
+hard3_0002,True,True,True,True,TRUE,504.06,125,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma (set with binary operation *) satisfies the equation x = x * (x * y) for all x,y? Or is it a conditional: ""Determine whether x ="
+hard3_0003,True,False,False,True,VERDICT: FALSE,551.42,112,1655,0.000319,VERDICT: FALSE
+hard3_0004,True,False,False,True,VERDICT: FALSE,545.52,136,664,0.000131,VERDICT: FALSE
+hard3_0005,True,,,False,,563.46,128,1295,0.000251,VER
+hard3_0006,True,False,False,True,VERDICT: FALSE,588.35,123,981,0.000191,VERDICT: FALSE
+hard3_0007,False,False,True,True,VERDICT: FALSE,602.31,134,1329,0.000258,VERDICT: FALSE
+hard3_0008,True,False,False,True,VERDICT: FALSE,615.24,125,532,0.000106,VERDICT: FALSE
+hard3_0009,False,False,True,True,VERDICT: FALSE,644.42,130,1398,0.000271,VERDICT: FALSE
+hard3_0010,False,True,False,True,true,680.61,127,2048,0.000394,"We need to determine if the identity x = x * (x * (y * x)) implies the identity x * x = (x * (y * x)) * x in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the "
+hard3_0011,False,False,True,True,VERDICT: FALSE,1207.70,128,1536,0.000297,VERDICT: FALSE
+hard3_0012,False,False,True,True,VERDICT: FALSE,719.91,115,1277,0.000247,VERDICT: FALSE
+hard3_0013,False,,,False,,751.95,115,2048,0.000394,"We need to determine if the equation x = x * (y * (z * x)) implies the equation x = (((x * x) * x) * x) * x in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if th"
+hard3_0014,True,False,False,True,false,778.66,115,2048,0.000394,"We need to determine if the equation x = x * (y * (z * y)) implies x = (((x * y) * z) * x) * y holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the impli"
+hard3_0015,True,False,False,True,VERDICT: FALSE,763.21,127,904,0.000177,VERDICT: FALSE
+hard3_0016,False,False,True,True,VERDICT: FALSE,793.57,130,1010,0.000197,VERDICT: FALSE
+hard3_0017,False,,,False,,803.09,129,1113,0.000217,VER
+hard3_0018,False,False,True,True,VERDICT: FALSE,809.29,128,914,0.000179,VERDICT: FALSE
+hard3_0019,False,True,False,True,VERDICT: TRUE,832.57,128,1904,0.000367,VERDICT: TRUE
+hard3_0020,True,False,False,True,VERDICT: FALSE,863.13,116,1648,0.000318,VERDICT: FALSE
+hard3_0021,False,False,True,True,VERDICT: FALSE,897.89,128,6555,0.001250,VERDICT: FALSE
+hard3_0022,False,True,False,True,TRUE,908.18,114,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma satisfies identity (1): x = x * ((x * y) * z) for all x,y,z, does it necessarily satisfy identity (2): x * y = x * ((y * x) * y)"
+hard3_0023,True,False,False,True,false,937.51,109,2048,0.000393,"We need to determine if the equation x = x * ((y * z) * x) implies x = x * (y * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the identity (∀x,y,z)"
+hard3_0024,True,False,False,True,VERDICT: FALSE,940.03,128,837,0.000164,VERDICT: FALSE
+hard3_0025,False,True,False,True,true,966.33,131,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). Statement: ""x = y * ((y * x) * x) implies x = (y * z) * ((y * y) * x) over all magmas."" So "
+hard3_0026,False,False,True,True,VERDICT: FALSE,979.04,131,1106,0.000215,VERDICT: FALSE
+hard3_0027,True,False,False,True,VERDICT: FALSE,1216.43,126,1487,0.000287,VERDICT: FALSE
+hard3_0028,True,,,False,,989.63,133,1870,0.000360,VER
+hard3_0029,False,False,True,True,VERDICT: FALSE,1024.73,114,1764,0.000340,VERDICT: FALSE
+hard3_0030,True,False,False,True,false,1036.74,115,2048,0.000394,We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: If x = (x * x) * (y * z) then x * y = x * ((x * x) * y). Is this universally valid? We need to 
+hard3_0031,False,False,True,True,false,1041.95,133,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma satisfies identity x = (x*y)*(x*x) for all x,y, does it also satisfy x*y = x*(z*(z*y)) for all x,y,z? We need to see if the seco"
+hard3_0032,False,True,False,True,true,1045.39,128,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). Statement: For all elements x,y,z in any magma, if x = (y * x) * (x * z) then x * y = (x * "
+hard3_0033,True,False,False,True,VERDICT: FALSE,1069.38,132,755,0.000149,VERDICT: FALSE
+hard3_0034,True,False,False,True,VERDICT: FALSE,1115.00,116,1568,0.000302,VERDICT: FALSE
+hard3_0035,False,False,True,True,false,1142.91,116,2048,0.000394,"We need to determine if the equation x = (y*z)*(z*x) implies x = y * ((x * (x*y)) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication i"
+hard3_0036,True,True,True,True,VERDICT: TRUE,1138.92,129,1871,0.000361,VERDICT: TRUE
+hard3_0037,False,False,True,True,false,1150.15,129,2048,0.000394,"We need to determine if the equation (1) x = (x * (x * y)) * x implies (2) x * x = x * ((y * y) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if (1)"
+hard3_0038,True,True,True,True,true,29.51,129,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: If for all elements x,y,z in a magma, we have x = (x * (x * y)) * z, does that imply that x * x"
+hard3_0039,False,False,True,True,FALSE,23.19,131,2048,0.000394,"We need to determine if the equation (1) x = (x * (y * x)) * y implies (2) x = (x * x) * (x * (y * z)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if t"
+hard3_0040,False,True,False,True,true,65.98,115,2048,0.000394,"We need to determine if the equation x = (x * (y * z)) * y implies x = (((x * x) * x) * x) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the first"
+hard3_0041,False,False,True,True,VERDICT: FALSE,80.22,128,2599,0.000499,VERDICT: FALSE
+hard3_0042,False,False,True,True,false,93.14,126,2048,0.000394,"We need to determine if the equation x = ((x * x) * y) * y implies x = x * ((y * y) * (z * w)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the impli"
+hard3_0043,True,False,False,True,VERDICT: FALSE,90.25,130,1560,0.000301,VERDICT: FALSE
+hard3_0044,False,False,True,True,VERDICT: FALSE,95.74,138,1230,0.000239,VERDICT: FALSE
+hard3_0045,False,True,False,True,TRUE,117.15,128,2048,0.000394,"We need to determine if the identity x = ((y * x) * y) * x implies the identity x * (y * z) = y * (x * z) in all magmas (i.e., sets with a binary operation *). So we need to see if the first identity "
+hard3_0046,True,False,False,True,VERDICT: FALSE,127.86,128,1307,0.000253,VERDICT: FALSE
+hard3_0047,True,False,False,True,VERDICT: FALSE,135.93,127,1794,0.000346,VERDICT: FALSE
+hard3_0048,True,False,False,True,VERDICT: FALSE,178.46,115,1827,0.000352,VERDICT: FALSE
+hard3_0049,True,False,False,True,VERDICT: FALSE,179.07,130,1271,0.000247,VERDICT: FALSE
+hard3_0050,False,False,True,True,VERDICT: FALSE,186.09,126,735,0.000145,VERDICT: FALSE
+hard3_0051,True,True,True,True,VERDICT: TRUE,218.28,126,964,0.000188,VERDICT: TRUE
+hard3_0052,True,True,True,True,VERDICT: TRUE,285.96,127,1198,0.000233,VERDICT: TRUE
+hard3_0053,True,True,True,True,VERDICT: TRUE,256.22,114,1356,0.000262,VERDICT: TRUE
+hard3_0054,True,False,False,True,VERDICT: FALSE,276.01,126,1016,0.000198,VERDICT: FALSE
+hard3_0055,False,False,True,True,VERDICT: FALSE,294.86,131,1105,0.000215,VERDICT: FALSE
+hard3_0056,False,False,True,True,VERDICT: FALSE,323.64,131,1301,0.000252,VERDICT: FALSE
+hard3_0057,False,False,True,True,VERDICT: FALSE,344.29,128,1448,0.000280,VERDICT: FALSE
+hard3_0058,True,False,False,True,VERDICT: FALSE,360.25,123,810,0.000159,VERDICT: FALSE
+hard3_0059,False,False,True,True,VERDICT: FALSE,430.79,127,924,0.000181,VERDICT: FALSE
+hard3_0060,True,True,True,True,VERDICT: TRUE,387.35,131,1862,0.000359,VERDICT: TRUE
+hard3_0061,True,True,True,True,VERDICT: TRUE,413.09,113,682,0.000134,VERDICT: TRUE
+hard3_0062,False,False,True,True,FALSE,437.53,133,2048,0.000394,"We need to determine if the identity x = x * (x * (y * (y * x))) implies the identity x = x * ((y * y) * (x * x)) in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if th"
+hard3_0063,False,,,False,,1152.93,135,1287,0.000250,VER
+hard3_0064,False,True,False,True,true,465.22,133,2048,0.000394,"We need to determine if the equation (1) x = x * (x * (y * (z * z))) implies (2) x = (x * ((y * y) * x)) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to se"
+hard3_0065,False,False,True,True,FALSE,497.43,127,2048,0.000394,"We need to determine if the equation (1) x = x * (y * (x * (x * z))) implies (2) x * x = (x * x) * y for all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if (1) logi"
+hard3_0066,True,True,True,True,true,496.90,132,2048,0.000394,"We need to determine if the equation x = x * (y * (x * (z * w))) implies x = (x * y) * ((z * w) * z) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0067,True,False,False,True,false,558.70,118,2048,0.000394,"We need to determine if the equation (identity) x = x * (y * (z * (y * w))) implies the equation x = x * (x * ((x * x) * y)) holds in all magmas (i.e., sets with a binary operation * with no axioms). "
+hard3_0068,True,False,False,True,false,554.34,118,2048,0.000394,"We need to determine if the equation x = x * (y * (z * (z * z))) implies x = x * ((y * (y * z)) * x) holds in all magmas (i.e., any binary operation, no axioms). So we need to see if the implication i"
+hard3_0069,False,False,True,True,VERDICT: FALSE,583.45,134,1585,0.000306,VERDICT: FALSE
+hard3_0070,False,False,True,True,VERDICT: FALSE,596.48,130,1074,0.000209,VERDICT: FALSE
+hard3_0071,False,False,True,True,VERDICT: FALSE,606.33,132,945,0.000185,VERDICT: FALSE
+hard3_0072,False,False,True,True,VERDICT: FALSE,620.53,136,1193,0.000232,VERDICT: FALSE
+hard3_0073,False,False,True,True,FALSE,662.18,118,2048,0.000394,"We need to determine if the equation x = y * (z * (x * (y * x))) implies x = y * (((z * y) * x) * x) holds in all magmas (i.e., any binary operation, no axioms). So we need to see if the implication i"
+hard3_0074,False,False,True,True,FALSE,667.99,136,2048,0.000394,"We need to determine if the equation x = y * (z * (x * (z * x))) implies x = (x * (x * x)) * (x * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0075,False,False,True,True,VERDICT: FALSE,712.05,132,1261,0.000245,VERDICT: FALSE
+hard3_0076,False,False,True,True,FALSE,733.33,119,2048,0.000394,"We need to determine if the equation\n\n(1) x = y * (z * (x * (w * x))) \n\nimplies\n\n(2) x = (y * (z * x)) * (z * x)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So "
+hard3_0077,True,False,False,True,FALSE,767.94,117,2048,0.000394,"We need to determine if the equation\n\n(1) x = y * (z * (y * (x * x))) \n\nimplies\n\n(2) x * y = (x * (z * x)) * y\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we"
+hard3_0078,False,False,True,True,VERDICT: FALSE,780.02,118,1712,0.000330,VERDICT: FALSE
+hard3_0079,False,False,True,True,VERDICT: FALSE,788.40,119,1509,0.000291,VERDICT: FALSE
+hard3_0080,False,True,False,True,TRUE,822.42,117,2048,0.000394,"We need to determine if the identity\n\n(1) x = x * (x * ((x * y) * z))\n\nimplies\n\n(2) x * y = x * (x * (y * z))\n\nholds in all magmas (i.e., sets with a binary operation * with no other axioms). "
+hard3_0081,False,True,False,True,TRUE,840.84,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = x * (x * ((y * y) * y))\n\nimplies\n\n(2) x = x * ((y * (x * x)) * x)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So w"
+hard3_0082,False,False,True,True,FALSE,1203.10,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). The statement: ""x = x * (x * ((y * z) * x)) implies x = ((x * x) * (x * y)) * x"". So we need to see if the"
+hard3_0083,False,,,False,,832.52,129,2048,0.000394,
+hard3_0084,False,False,True,True,VERDICT: FALSE,871.08,130,1778,0.000343,VERDICT: FALSE
+hard3_0085,True,False,False,True,VERDICT: FALSE,855.35,142,1796,0.000347,VERDICT: FALSE
+hard3_0086,False,False,True,True,VERDICT: FALSE,884.99,132,772,0.000152,VERDICT: FALSE
+hard3_0087,True,False,False,True,false,939.24,118,2048,0.000394,"We need to determine if the equation x = x * (y * ((y * z) * w)) implies the equation x = (((x * y) * x) * x) * z holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need "
+hard3_0088,True,False,False,True,VERDICT: FALSE,976.91,130,2780,0.000533,VERDICT: FALSE
+hard3_0089,True,False,False,True,false,975.18,117,2048,0.000394,"We need to determine if the equation x = x * (y * ((z * x) * w)) implies x * x = x * (y * (z * z)) in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implica"
+hard3_0090,True,False,False,True,VERDICT: FALSE,994.26,119,1671,0.000322,VERDICT: FALSE
+hard3_0091,False,False,True,True,false,981.92,136,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: ""x = y * (y * ((x * y) * y)) implies x = (y * (z * z)) * (y * x)"". So for all elements x,y,z in a"
+hard3_0092,False,False,True,True,VERDICT: FALSE,1067.25,130,3312,0.000634,VERDICT: FALSE
+hard3_0093,False,False,True,True,FALSE,1013.87,136,2048,0.000394,"We need to determine if the equation x = y * (y * ((y * x) * y)) implies x = y * ((x * (x * y)) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0094,False,False,True,True,VERDICT: FALSE,1357.73,118,1511,0.000292,VERDICT: FALSE
+hard3_0095,False,True,False,True,true,1062.30,118,2048,0.000394,"We need to determine if the equation x = y * (y * ((z * w) * x)) implies x = ((y * z) * (z * z)) * x in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the impli"
+hard3_0096,False,False,True,True,VERDICT: FALSE,1080.14,115,1991,0.000383,VERDICT: FALSE
+hard3_0097,False,False,True,True,FALSE,1106.93,131,2048,0.000394,"We need to determine if the equation x = y * (z * ((x * w) * x)) implies x = (y * ((y * z) * y)) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0098,False,False,True,True,VERDICT: FALSE,1113.75,119,1231,0.000239,VERDICT: FALSE
+hard3_0099,False,False,True,True,VERDICT: FALSE,1112.28,131,1887,0.000364,VERDICT: FALSE
+hard3_0100,False,False,True,True,false,1153.27,118,2048,0.000394,"We need to determine if the equation\n\nx = y * (z * ((w * y) * x))\n\nimplies\n\nx = y * ((y * (x * z)) * x)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need t"
+hard3_0101,False,False,True,True,VERDICT: FALSE,1136.63,132,1241,0.000241,VERDICT: FALSE
+hard3_0102,False,False,True,True,FALSE,19.26,133,2048,0.000394,"We need to determine if the equation x = y * (z * ((w * w) * x)) implies x = ((x * (y * x)) * z) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0103,False,False,True,True,FALSE,38.49,117,2048,0.000394,"We need to determine if the equation (identity) x = x * ((x * y) * (y * z)) implies the identity x * y = x * (z * (y * w)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So"
+hard3_0104,False,,,False,,67.62,118,2048,0.000394,"We need to determine if the identity (1) x = x * ((x * y) * (z * y)) implies identity (2) x * (y * y) = (x * z) * z in all magmas (i.e., binary operation * with no axioms). So we need to see if (1) lo"
+hard3_0105,False,False,True,True,VERDICT: FALSE,43.00,135,761,0.000150,VERDICT: FALSE
+hard3_0106,True,True,True,True,true,90.44,116,2048,0.000394,"We need to determine if the equation x = x * ((y * z) * (x * y)) implies x = (x * y) * (y * y) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the impli"
+hard3_0107,True,False,False,True,false,116.22,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = x * ((y * z) * (y * w))\n\nimplies\n\n(2) x = ((x * (y * y)) * z) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So w"
+hard3_0108,False,True,False,True,true,106.94,131,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If for all elements x,y,z in a magma, we have x = x * ((y * z) * (z * x)), does it imply that x *"
+hard3_0109,True,False,False,True,VERDICT: FALSE,114.90,118,748,0.000147,VERDICT: FALSE
+hard3_0110,False,True,False,True,true,134.77,136,2048,0.000394,"We need to determine if the equation x = y * ((x * y) * (z * x)) implies x = ((y * (y * x)) * y) * x holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the impli"
+hard3_0111,False,False,True,True,false,155.01,132,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: For all elements x,y,z in any magma, if x = y * ((x * z) * (z * x)) then x * x = x * ((y * z) *"
+hard3_0112,False,False,True,True,FALSE,169.31,133,2048,0.000394,"We need to determine if the given equation (implication) holds in all magmas (i.e., sets with a binary operation * with no axioms). The statement: ""Determine whether x = y * ((y * x) * (x * x)) implie"
+hard3_0113,False,False,True,True,VERDICT: FALSE,204.79,131,1761,0.000340,VERDICT: FALSE
+hard3_0114,True,False,False,True,VERDICT: FALSE,200.12,134,1531,0.000296,VERDICT: FALSE
+hard3_0115,True,False,False,True,VERDICT: FALSE,213.84,130,1845,0.000356,VERDICT: FALSE
+hard3_0116,False,False,True,True,FALSE,253.73,118,2048,0.000394,"We need to determine if the equation x = y * ((y * z) * (y * x)) implies x = ((y * (z * y)) * z) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0117,True,False,False,True,VERDICT: FALSE,255.91,132,1631,0.000315,VERDICT: FALSE
+hard3_0118,False,False,True,True,false,319.02,118,2048,0.000394,"We need to determine if the identity x = y * ((z * x) * (y * x)) implies x = (((y * x) * z) * y) * x in all magmas (i.e., binary operation with no axioms). So we need to see if the second equation is "
+hard3_0119,False,False,True,True,VERDICT: FALSE,317.97,118,1348,0.000261,VERDICT: FALSE
+hard3_0120,False,False,True,True,VERDICT: FALSE,341.90,134,1511,0.000292,VERDICT: FALSE
+hard3_0121,False,False,True,True,VERDICT: FALSE,346.16,142,1877,0.000362,VERDICT: FALSE
+hard3_0122,False,False,True,True,VERDICT: FALSE,367.79,128,1096,0.000213,VERDICT: FALSE
+hard3_0123,False,False,True,True,VERDICT: FALSE,379.38,129,610,0.000121,VERDICT: FALSE
+hard3_0124,True,False,False,True,VERDICT: FALSE,420.06,132,1869,0.000360,VERDICT: FALSE
+hard3_0125,False,False,True,True,VERDICT: FALSE,433.02,118,1750,0.000337,VERDICT: FALSE
+hard3_0126,False,False,True,True,FALSE,449.22,131,2048,0.000394,"We need to determine if the equation x = y * ((z * w) * (u * x)) implies x = (x * ((y * z) * y)) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0127,True,False,False,True,VERDICT: FALSE,458.32,132,2004,0.000386,VERDICT: FALSE
+hard3_0128,False,False,True,True,VERDICT: FALSE,455.09,132,977,0.000191,VERDICT: FALSE
+hard3_0129,False,False,True,True,false,473.19,142,2048,0.000395," need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If a magma satisfies identity x = x * ((x * (y * z)) * w) for all elements x,y,z,w? Or ""implies"" me"
+hard3_0130,False,True,False,True,true,527.75,130,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = x * ((y * (x * x)) * z) implies x * y = x * ((z * y) * y) over all magm"
+hard3_0131,True,False,False,True,false,541.91,130,2048,0.000394,"We need to determine if the equation x = x * ((y * (y * x)) * z) implies x = (x * y) * (z * (x * z)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0132,False,True,False,True,true,587.77,117,2048,0.000394,"We need to determine if the equation\n\n(1) x = x * ((y * (y * y)) * z)\n\nimplies\n\n(2) x * y = x * (y * (y * z))\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we "
+hard3_0133,True,False,False,True,VERDICT: FALSE,582.80,118,951,0.000185,VERDICT: FALSE
+hard3_0134,True,True,True,True,TRUE,611.50,114,2048,0.000394,"We need to determine if the identity\n\n(1) x = x * ((y * (z * x)) * z)\n\nimplies the identity\n\n(2) x * y = x * (z * y)\n\nholds in all magmas (i.e., sets with a binary operation * with no other ax"
+hard3_0135,True,True,True,True,TRUE,633.22,119,2048,0.000394,"We need to determine if the identity x = x * ((y * (z * x)) * z) implies the identity x = (x * y) * (y * (y * x)) in all magmas (i.e., binary operation with no axioms). So we need to see if the first "
+hard3_0136,True,True,True,True,VERDICT: TRUE,674.07,131,2549,0.000489,VERDICT: TRUE
+hard3_0137,True,,,False,,1199.02,132,2048,0.000394,"We need to determine if the equation (1) x = x * ((y * (z * z)) * z) implies (2) x = (x * y) * ((x * y) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to se"
+hard3_0138,True,False,False,True,false,691.85,118,2048,0.000394,"We need to determine if the equation x = x * ((y * (z * w)) * u) implies (x * y) * x = (x * z) * x for all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implic"
+hard3_0139,True,False,False,True,VERDICT: FALSE,1174.42,128,999,0.000195,VERDICT: FALSE
+hard3_0140,True,True,True,True,true,722.35,133,2048,0.000394,"We need to determine if the equation x = y * ((x * (x * x)) * x) implies x = x * (((y * y) * y) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0141,False,False,True,True,VERDICT: FALSE,745.50,117,1273,0.000246,VERDICT: FALSE
+hard3_0142,True,False,False,True,VERDICT: FALSE,752.82,129,1048,0.000204,VERDICT: FALSE
+hard3_0143,False,False,True,True,FALSE,788.79,133,2048,0.000394,"We need to determine if the equation x = y * ((x * (z * y)) * x) implies x = y * (x * (y * (y * x))) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0144,True,False,False,True,VERDICT: FALSE,803.45,134,1335,0.000259,VERDICT: FALSE
+hard3_0145,True,False,False,True,VERDICT: FALSE,831.31,118,1524,0.000294,VERDICT: FALSE
+hard3_0146,False,False,True,True,false,827.58,137,2048,0.000394,"We need to determine if the equation x = y * ((z * (z * x)) * y) implies x = (x * x) * (x * (y * y)) holds in all magmas (i.e., sets with a binary operation, no axioms). This is a logical implication "
+hard3_0147,True,False,False,True,VERDICT: FALSE,835.67,131,1953,0.000376,VERDICT: FALSE
+hard3_0148,True,False,False,True,VERDICT: FALSE,1219.10,132,1715,0.000331,VERDICT: FALSE
+hard3_0149,False,True,False,True,TRUE,877.58,133,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma satisfies identity x = x * (((x * y) * y) * y) for all x,y, does it then satisfy x * y = (x * z) * (z * y) for all x,y,z? We nee"
+hard3_0150,False,False,True,True,false,914.30,118,2048,0.000394,"We need to determine if the equation (implication) holds in all magmas: If a magma satisfies identity x = x * (((y * x) * y) * z) for all elements x,y,z, does it necessarily satisfy x = x * ((y * (z *"
+hard3_0151,False,False,True,True,false,930.83,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If for all elements x,y,z in a magma, we have x = x * (((y * x) * y) * z) (i.e., the equation hol"
+hard3_0152,False,,,False,,963.98,118,2048,0.000394,"We need to determine if the equation x = x * (((y * y) * y) * y) implies x = x * ((x * (x * x)) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0153,False,True,False,True,true,975.22,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = x * (((y * z) * x) * y)\n\nimplies\n\n(2) x * (y * x) = x * (z * z)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we "
+hard3_0154,True,False,False,True,VERDICT: FALSE,981.08,117,836,0.000163,VERDICT: FALSE
+hard3_0155,True,False,False,True,VERDICT: FALSE,988.50,135,1113,0.000217,VERDICT: FALSE
+hard3_0156,True,False,False,True,VERDICT: FALSE,998.19,134,1271,0.000247,VERDICT: FALSE
+hard3_0157,True,False,False,True,false,1020.49,133,2048,0.000394,"We need to determine if the equation x = y * (((y * y) * z) * x) implies x = y * ((x * (x * z)) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0158,True,False,False,True,VERDICT: FALSE,1052.70,131,1147,0.000223,VERDICT: FALSE
+hard3_0159,False,False,True,True,false,1030.03,135,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: If x = y * (((y * z) * z) * x) then (x * y) * x = (y * x) * x, for all elements x,y,z in any ma"
+hard3_0160,True,True,True,True,true,1070.19,134,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If x = (x * x) * (y * (x * z)) then (x * y) * x = (x * z) * x, for all elements x,y,z in any magm"
+hard3_0161,False,False,True,True,false,1082.54,133,2048,0.000394,"We need to determine if the equation (identity) x = (x * y) * (y * (z * y)) implies x = (x * (y * y)) * (y * z) holds in all magmas (i.e., any binary operation, no axioms). So we need to see if the im"
+hard3_0162,True,False,False,True,VERDICT: FALSE,1108.21,118,725,0.000142,VERDICT: FALSE
+hard3_0163,False,False,True,True,FALSE,1113.96,132,2048,0.000394,"We need to determine if the equation x = (y * x) * (x * (x * z)) implies x = y * (y * (z * (z * x))) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0164,False,True,False,True,true,1143.85,134,2048,0.000394,"We need to determine if the equation x = (y * x) * (x * (z * x)) implies x = (y * (y * (z * y))) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0165,False,True,False,True,true,1170.43,116,2048,0.000394,"We need to determine if the equation\n\n(1) x = (y * x) * (x * (z * w))\n\nimplies\n\n(2) x = (y * (y * y)) * y\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need"
+hard3_0166,False,False,True,True,VERDICT: FALSE,26.14,131,1776,0.000343,VERDICT: FALSE
+hard3_0167,False,False,True,True,VERDICT: FALSE,48.50,131,1102,0.000214,VERDICT: FALSE
+hard3_0168,True,False,False,True,VERDICT: FALSE,39.41,130,1045,0.000204,VERDICT: FALSE
+hard3_0169,False,False,True,True,VERDICT: FALSE,73.96,132,873,0.000171,VERDICT: FALSE
+hard3_0170,False,True,False,True,true,96.83,119,2048,0.000394,"We need to determine if the identity\n\nx = (y * x) * (z * (w * x))\n\nimplies\n\nx = y * ((z * (y * x)) * x)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need t"
+hard3_0171,False,False,True,True,VERDICT: FALSE,111.46,120,1817,0.000350,VERDICT: FALSE
+hard3_0172,False,False,True,True,VERDICT: FALSE,105.42,132,1684,0.000325,VERDICT: FALSE
+hard3_0173,False,False,True,True,VERDICT: FALSE,109.85,136,2048,0.000394,"We need to determine if the equation x = (y*y)*(z*(y*x)) implies x = y*(y*(z*(y*x))) in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication holds uni"
+hard3_0174,False,False,True,True,FALSE,154.51,119,2048,0.000394,"We need to determine if the equation x = (y*y)*(z*(y*x)) implies x = (y*((x*z)*z))*x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication is "
+hard3_0175,False,False,True,True,FALSE,220.38,131,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: For all elements x,y,z in any magma, if x = (y * z) * (x * (z * x)) then x * y = ((x * x) * y) "
+hard3_0176,True,False,False,True,VERDICT: FALSE,180.19,119,1619,0.000312,VERDICT: FALSE
+hard3_0177,False,False,True,True,false,206.73,119,2048,0.000394,"We need to determine if the equation x = (y*z)*(y*(y*x)) implies x = (((x*y)*x)*y)*x in all magmas (i.e., binary operation * with no axioms). So we need to see if the first identity logically entails "
+hard3_0178,False,False,True,True,VERDICT: FALSE,203.90,119,1199,0.000232,VERDICT: FALSE
+hard3_0179,False,False,True,True,VERDICT: FALSE,297.93,132,1692,0.000327,VERDICT: FALSE
+hard3_0180,False,False,True,True,VERDICT: FALSE,246.24,119,1256,0.000243,VERDICT: FALSE
+hard3_0181,False,False,True,True,VERDICT: FALSE,280.37,119,1856,0.000357,VERDICT: FALSE
+hard3_0182,False,,,False,,283.29,136,1280,0.000249,VER
+hard3_0183,True,False,False,True,VERDICT: FALSE,327.32,133,2129,0.000410,VERDICT: FALSE
+hard3_0184,False,False,True,True,VERDICT: FALSE,360.65,119,1447,0.000280,VERDICT: FALSE
+hard3_0185,False,False,True,True,VERDICT: FALSE,369.10,118,1509,0.000291,VERDICT: FALSE
+hard3_0186,False,True,False,True,TRUE,395.31,116,2048,0.000394,"We need to determine if the equation\n\n(1) x = (x * y) * ((y * z) * w)\n\nimplies\n\n(2) x = (x * (y * z)) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). We need to"
+hard3_0187,True,False,False,True,VERDICT: FALSE,378.92,137,1167,0.000227,VERDICT: FALSE
+hard3_0188,True,False,False,True,VERDICT: FALSE,413.52,131,1623,0.000313,VERDICT: FALSE
+hard3_0189,False,True,False,True,VERDICT: TRUE,414.50,133,1881,0.000363,VERDICT: TRUE
+hard3_0190,False,False,True,True,FALSE,433.79,132,2048,0.000394,"We need to determine if the identity x = (y * x) * ((x * x) * y) implies the identity x * (y * z) = (x * z) * y in all magmas (i.e., binary operation with no axioms). So we need to see if the first id"
+hard3_0191,False,False,True,True,VERDICT: FALSE,528.70,131,1534,0.000297,VERDICT: FALSE
+hard3_0192,True,False,False,True,false,485.68,119,2048,0.000394,"We need to determine if the equation x = (y * x) * ((y * y) * y) implies x = y * (x * ((y * y) * y)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0193,True,False,False,True,VERDICT: FALSE,488.78,134,1753,0.000338,VERDICT: FALSE
+hard3_0194,True,False,False,True,VERDICT: FALSE,520.19,135,1617,0.000312,VERDICT: FALSE
+hard3_0195,False,False,True,True,VERDICT: FALSE,541.40,133,983,0.000192,VERDICT: FALSE
+hard3_0196,True,True,True,True,true,562.78,132,2048,0.000394,"We need to determine if the equation x = (y * z) * ((w * x) * x) implies x = y * (z * (x * (z * x))) holds in all magmas (i.e., sets with a binary operation * with no axioms). This is a logical implic"
+hard3_0197,True,False,False,True,VERDICT: FALSE,572.04,131,1441,0.000279,VERDICT: FALSE
+hard3_0198,True,True,True,True,true,1167.26,132,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = (y * z) * ((w * u) * x) implies x = y * (((z * w) * z) * x)"". We need t"
+hard3_0199,True,False,False,True,VERDICT: FALSE,607.69,132,1225,0.000238,VERDICT: FALSE
+hard3_0200,False,False,True,True,VERDICT: FALSE,638.08,120,1442,0.000279,VERDICT: FALSE
+hard3_0201,False,False,True,True,FALSE,674.15,119,2048,0.000394,"We need to determine if the equation x = (x * (y * x)) * (y * z) implies x = (((x * y) * z) * y) * x holds in all magmas (i.e., arbitrary binary operation, no axioms). So we need to see if the implica"
+hard3_0202,True,False,False,True,VERDICT: FALSE,685.32,129,1168,0.000227,VERDICT: FALSE
+hard3_0203,True,False,False,True,VERDICT: FALSE,699.23,118,651,0.000128,VERDICT: FALSE
+hard3_0204,True,False,False,True,VERDICT: FALSE,724.63,119,1005,0.000196,VERDICT: FALSE
+hard3_0205,True,True,True,True,true,742.74,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). The statement: ""x = (y * (x * x)) * (z * x) implies x * x = (x * (y * z)) * x"". We need to see if for any "
+hard3_0206,False,False,True,True,false,774.84,133,2048,0.000394,"We need to determine if the equation x = (y * (y * x)) * (y * x) implies x * y = x * (z * (w * y)) for all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the first "
+hard3_0207,True,False,False,True,VERDICT: FALSE,785.13,133,1698,0.000328,VERDICT: FALSE
+hard3_0208,True,False,False,True,VERDICT: FALSE,800.37,136,1560,0.000302,VERDICT: FALSE
+hard3_0209,True,False,False,True,VERDICT: FALSE,815.08,135,854,0.000168,VERDICT: FALSE
+hard3_0210,True,False,False,True,VERDICT: FALSE,823.40,138,1545,0.000299,VERDICT: FALSE
+hard3_0211,False,False,True,True,VERDICT: FALSE,833.80,132,832,0.000163,VERDICT: FALSE
+hard3_0212,True,False,False,True,VERDICT: FALSE,848.85,131,1526,0.000295,VERDICT: FALSE
+hard3_0213,True,False,False,True,VERDICT: FALSE,935.01,131,3359,0.000643,VERDICT: FALSE
+hard3_0214,True,False,False,True,VERDICT: FALSE,902.47,119,929,0.000181,VERDICT: FALSE
+hard3_0215,False,True,False,True,true,943.68,119,2048,0.000394,"We need to determine if the equation x = ((x * x) * y) * (z * x) implies x = x * ((y * (z * z)) * x) holds in all magmas (i.e., any binary operation, no axioms). So we need to see if the implication i"
+hard3_0216,False,False,True,True,false,939.97,132,2048,0.000394,"We need to determine if the given identity (call it I1): x = ((x * x) * y) * (z * z) implies the associativity law x * (y * z) = (x * y) * z for all magmas (i.e., binary operation with no other axioms"
+hard3_0217,False,False,True,True,VERDICT: FALSE,986.41,129,1207,0.000234,VERDICT: FALSE
+hard3_0218,False,False,True,True,VERDICT: FALSE,985.56,134,929,0.000182,VERDICT: FALSE
+hard3_0219,False,False,True,True,VERDICT: FALSE,1000.86,134,1502,0.000291,VERDICT: FALSE
+hard3_0220,False,,,False,,991.53,137,1329,0.000258,VER
+hard3_0221,True,False,False,True,FALSE,1215.79,134,2048,0.000394,"We need to determine if the equation x = ((x * y) * z) * (y * y) implies x = ((x * (y * y)) * x) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0222,False,False,True,True,VERDICT: FALSE,1017.22,136,1534,0.000297,VERDICT: FALSE
+hard3_0223,False,True,False,True,true,1057.67,135,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: For all elements x,y,z,w in any magma, if x = ((x * y) * z) * (w * y) then x"
+hard3_0224,False,False,True,True,VERDICT: FALSE,1094.91,120,2003,0.000385,VERDICT: FALSE
+hard3_0225,False,False,True,True,VERDICT: FALSE,1101.81,132,1181,0.000230,VERDICT: FALSE
+hard3_0226,False,False,True,True,VERDICT: FALSE,1121.93,120,1220,0.000236,VERDICT: FALSE
+hard3_0227,False,True,False,True,true,1135.12,134,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: For all elements x,y,z,w in any magma, if x = ((x * y) * z) * (w * z) then x"
+hard3_0228,False,False,True,True,VERDICT: FALSE,1151.92,116,1908,0.000367,VERDICT: FALSE
+hard3_0229,False,False,True,True,false,1164.16,135,2048,0.000394,"We need to determine if the equation x = ((y * x) * x) * (z * x) implies x = (y * (x * x)) * (z * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0230,True,False,False,True,VERDICT: FALSE,21.42,118,1087,0.000211,VERDICT: FALSE
+hard3_0231,True,False,False,True,VERDICT: FALSE,23.58,134,1615,0.000312,VERDICT: FALSE
+hard3_0232,True,False,False,True,FALSE,44.12,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = ((y * x) * z) * (y * z) implies x * y = x * ((z * z) * y) over all magm"
+hard3_0233,True,False,False,True,VERDICT: FALSE,70.78,119,1376,0.000266,VERDICT: FALSE
+hard3_0234,False,False,True,True,FALSE,68.45,133,2048,0.000394,"We need to determine if the equation x = ((y*y)*x)*(x*z) implies x = y*((y*x)*x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication is univ"
+hard3_0235,False,False,True,True,VERDICT: FALSE,95.21,119,953,0.000186,VERDICT: FALSE
+hard3_0236,False,True,False,True,true,138.71,120,2048,0.000394,"We need to determine if the equation\n\n(1) x = ((y * y) * x) * (x * z)\n\nimplies\n\n(2) x = (y * x) * ((y * x) * x)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So w"
+hard3_0237,False,False,True,True,VERDICT: FALSE,131.41,119,1192,0.000231,VERDICT: FALSE
+hard3_0238,True,False,False,True,VERDICT: FALSE,125.24,138,1140,0.000222,VERDICT: FALSE
+hard3_0239,True,False,False,True,FALSE,174.48,120,2048,0.000394,"We need to determine if the equation x = ((y*y)*z)*(w*x) implies x = (y*(x*x))*(y*x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication is "
+hard3_0240,True,False,False,True,FALSE,171.20,131,2048,0.000394,"We need to determine if the equation x = ((y*y)*z)*(w*x) implies x = ((y*x)*y)*(x*x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the implication is "
+hard3_0241,False,True,False,True,true,202.91,135,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = ((y * z) * x) * (x * w) implies x = (x * x) * ((y * x) * x)"". We need t"
+hard3_0242,False,False,True,True,VERDICT: FALSE,196.39,135,1011,0.000197,VERDICT: FALSE
+hard3_0243,True,False,False,True,VERDICT: FALSE,320.78,133,2026,0.000390,VERDICT: FALSE
+hard3_0244,True,False,False,True,VERDICT: FALSE,220.42,131,1009,0.000197,VERDICT: FALSE
+hard3_0245,True,True,True,True,true,282.09,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = ((y * z) * w) * (u * x) implies x * x = x * (y * (y * x))"". We need to "
+hard3_0246,True,False,False,True,VERDICT: FALSE,285.28,134,1429,0.000277,VERDICT: FALSE
+hard3_0247,True,False,False,True,VERDICT: FALSE,327.26,133,1498,0.000290,VERDICT: FALSE
+hard3_0248,False,True,False,True,VERDICT: TRUE,1248.99,131,5091,0.000972,VERDICT: TRUE
+hard3_0249,True,False,False,True,VERDICT: FALSE,362.48,132,1238,0.000240,VERDICT: FALSE
+hard3_0250,True,False,False,True,VERDICT: FALSE,380.04,117,1039,0.000202,VERDICT: FALSE
+hard3_0251,True,False,False,True,VERDICT: FALSE,422.49,132,1101,0.000214,VERDICT: FALSE
+hard3_0252,True,False,False,True,VERDICT: FALSE,401.37,119,1058,0.000206,VERDICT: FALSE
+hard3_0253,False,True,False,True,TRUE,441.26,133,2048,0.000394,"We need to determine if the given implication holds in all magmas (sets with a binary operation *). The premise: x = (x * (y * (y * z))) * y. From that, does it follow that x * (x * y) = x * (z * z) f"
+hard3_0254,False,False,True,True,false,436.02,135,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). The statement: ""x = (y * (z * (x * x))) * x implies x * x = (y * z) * (x * x)"". We need to see if for any "
+hard3_0255,True,False,False,True,VERDICT: FALSE,465.13,118,1426,0.000276,VERDICT: FALSE
+hard3_0256,True,False,False,True,VERDICT: FALSE,1224.54,131,1513,0.000293,VERDICT: FALSE
+hard3_0257,True,False,False,True,FALSE,507.63,131,2048,0.000394,"We need to determine if the equation x = (y * (z * (w * w))) * x implies x = ((y * y) * (y * y)) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0258,True,True,True,True,VERDICT: TRUE,525.74,131,2692,0.000517,VERDICT: TRUE
+hard3_0259,True,True,True,True,VERDICT: TRUE,562.51,131,4184,0.000800,VERDICT: TRUE
+hard3_0260,True,False,False,True,FALSE,582.09,133,2048,0.000394,"We need to determine if the equation (1) x = (x * ((y * z) * x)) * z implies (2) x = (x * (y * (z * w))) * z holds in all magmas (i.e., binary operation * with no axioms). So we need to see if the imp"
+hard3_0261,True,False,False,True,FALSE,598.34,134,2048,0.000394,"We need to determine if the equation x = (x * ((y * z) * y)) * w implies x = (x * y) * (z * (x * x)) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0262,True,False,False,True,VERDICT: FALSE,591.67,128,993,0.000194,VERDICT: FALSE
+hard3_0263,False,False,True,True,FALSE,607.36,135,2048,0.000394,"We need to determine if the equation x = (y * ((x * x) * x)) * x implies x = (((x * x) * x) * y) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0264,False,False,True,True,FALSE,656.05,117,2048,0.000394,"We need to determine if the equation x = (y * ((x * z) * x)) * x implies x * y = ((z * w) * u) * y holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the i"
+hard3_0265,True,False,False,True,false,663.82,133,2048,0.000394,"We need to determine if the given identity (call it I1): x = (y * ((x * z) * y)) * z holds in all magmas (i.e., binary operation with no axioms). Does it imply the identity I2: x * (x * y) = (y * x) *"
+hard3_0266,True,,,False,,703.13,119,2048,0.000394,"We need to determine if the equation (1) x = (y * ((x * z) * z)) * x implies (2) x = (x * (y * z)) * (w * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to se"
+hard3_0267,True,False,False,True,VERDICT: FALSE,700.10,131,1542,0.000298,VERDICT: FALSE
+hard3_0268,True,False,False,True,VERDICT: FALSE,717.50,133,811,0.000159,VERDICT: FALSE
+hard3_0269,True,False,False,True,VERDICT: FALSE,741.47,132,1528,0.000295,VERDICT: FALSE
+hard3_0270,False,False,True,True,VERDICT: FALSE,759.73,131,947,0.000185,VERDICT: FALSE
+hard3_0271,True,False,False,True,VERDICT: FALSE,1248.79,132,4190,0.000801,VERDICT: FALSE
+hard3_0272,True,True,True,True,true,830.28,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = (y * ((z * x) * w)) * x\n\nimplies\n\n(2) x = ((x * (y * z)) * x) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So w"
+hard3_0273,True,False,False,True,FALSE,830.69,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = (y * ((z * w) * w)) * x implies x * x = (x * y) * (z * x)"". We need to "
+hard3_0274,False,False,True,True,VERDICT: FALSE,821.15,131,1090,0.000212,VERDICT: FALSE
+hard3_0275,False,True,False,True,VERDICT: TRUE,849.55,130,2379,0.000457,VERDICT: TRUE
+hard3_0276,False,False,True,True,VERDICT: FALSE,844.47,130,1215,0.000236,VERDICT: FALSE
+hard3_0277,False,False,True,True,false,900.33,117,2048,0.000394,"We need to determine if the equation\n\nE1: x = ((x * y) * (x * x)) * y\n\nimplies\n\nE2: x * x = x * (y * (x * y))\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we "
+hard3_0278,True,False,False,True,VERDICT: FALSE,1002.70,127,649,0.000128,VERDICT: FALSE
+hard3_0279,True,False,False,True,VERDICT: FALSE,924.68,132,735,0.000145,VERDICT: FALSE
+hard3_0280,False,False,True,True,false,962.18,132,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: ""x = ((x * y) * (y * z)) * x implies x * y = x * (x * (z * y))"". So we need "
+hard3_0281,False,False,True,True,VERDICT: FALSE,963.10,142,1972,0.000380,VERDICT: FALSE
+hard3_0282,False,False,True,True,VERDICT: FALSE,977.79,136,987,0.000193,VERDICT: FALSE
+hard3_0283,True,False,False,True,VERDICT: FALSE,986.21,132,741,0.000146,VERDICT: FALSE
+hard3_0284,True,False,False,True,VERDICT: FALSE,992.36,128,887,0.000174,VERDICT: FALSE
+hard3_0285,True,False,False,True,VERDICT: FALSE,1018.34,130,777,0.000153,VERDICT: FALSE
+hard3_0286,False,False,True,True,VERDICT: FALSE,1037.88,132,1522,0.000294,VERDICT: FALSE
+hard3_0287,False,False,True,True,FALSE,1077.49,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = ((x * y) * (z * y)) * x\n\nimplies\n\n(2) x * y = (x * x) * (y * y)\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). We nee"
+hard3_0288,True,False,False,True,false,1101.13,118,2048,0.000394,"We need to determine if the equation\n\nx = ((x * y) * (z * z)) * w\n\nimplies\n\nx = ((x * (y * x)) * z) * z\n\nholds in all magmas (i.e., any binary operation * with no axioms). So we need to see if"
+hard3_0289,False,False,True,True,false,1122.92,118,2048,0.000394,"We need to determine if the equation (1) x = ((x * y) * (z * w)) * z implies (2) x = x * (x * (y * (z * x))) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to se"
+hard3_0290,True,,,False,,1104.93,132,1696,0.000327,VER
+hard3_0291,True,False,False,True,VERDICT: FALSE,1123.52,133,815,0.000160,VERDICT: FALSE
+hard3_0292,True,,,False,,1127.11,135,1855,0.000358,VER
+hard3_0293,False,True,False,True,true,1174.33,118,2048,0.000394,"We need to determine if the equation x = ((y * z) * (y * x)) * x implies x = y * (x * (x * (y * x))) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0294,True,False,False,True,VERDICT: FALSE,37.81,118,2008,0.000386,VERDICT: FALSE
+hard3_0295,True,False,False,True,VERDICT: FALSE,25.58,134,1947,0.000375,VERDICT: FALSE
+hard3_0296,True,False,False,True,VERDICT: FALSE,30.04,131,1176,0.000229,VERDICT: FALSE
+hard3_0297,True,False,False,True,VERDICT: FALSE,68.86,134,1856,0.000358,VERDICT: FALSE
+hard3_0298,True,False,False,True,VERDICT: FALSE,176.96,131,1725,0.000333,VERDICT: FALSE
+hard3_0299,True,False,False,True,FALSE,104.87,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: ""x = ((y * z) * (w * u)) * x implies x * (x * x) = y * (y * x) over all magmas.""\n\nInterpretat"
+hard3_0300,False,False,True,True,FALSE,109.52,131,2048,0.000394,"We need to determine if the equation x = ((x * (x * x)) * x) * y implies x = x * ((y * (z * z)) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0301,False,True,False,True,true,217.29,128,2048,0.000394,"We need to determine if the equation x = ((x * (x * x)) * y) * z implies x = x * ((y * y) * z) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the impli"
+hard3_0302,False,False,True,True,false,124.85,142,2048,0.000395," need to determine if the equation (1) x = ((x * (x * y)) * x) * x implies (2) x = ((x * (y * z)) * y) * x holds in all magmas (i.e., binary operation with no axioms). So we need to see if (1) logical"
+hard3_0303,False,False,True,True,FALSE,177.69,118,2048,0.000394,"We need to determine if the identity x = ((x * (x * y)) * y) * y implies the identity x = x * (x * ((x * y) * x)) holds in all magmas (i.e., binary operation with no axioms). So we need to see if the "
+hard3_0304,False,True,False,True,TRUE,159.48,136,2048,0.000394,"We need to determine if the equation x = ((x * (x * y)) * z) * y implies x = (x * y) * ((x * y) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0305,False,True,False,True,true,207.73,118,2048,0.000394,"We need to determine if the equation x = ((x * (y * x)) * x) * z implies x = x * (x * ((y * y) * z)) holds in all magmas (i.e., arbitrary binary operation * with no axioms). So we need to see if the i"
+hard3_0306,False,False,True,True,false,234.51,118,2048,0.000394,"We need to determine if the identity x = ((x * (y * x)) * z) * w implies x = x * ((y * z) * (x * w)) holds in all magmas (i.e., binary operation with no axioms). So we need to see if the first identit"
+hard3_0307,True,False,False,True,VERDICT: FALSE,315.12,131,1991,0.000383,VERDICT: FALSE
+hard3_0308,True,False,False,True,VERDICT: FALSE,228.12,137,999,0.000195,VERDICT: FALSE
+hard3_0309,False,True,False,True,VERDICT: TRUE,1257.50,130,4682,0.000895,VERDICT: TRUE
+hard3_0310,False,,,False,,364.73,125,2048,0.000394,"We need to determine if the equation x = ((x * (y * z)) * y) * w implies x = (x * y) * z for all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the first identity ("
+hard3_0311,False,False,True,True,VERDICT: FALSE,385.23,130,1314,0.000255,VERDICT: FALSE
+hard3_0312,False,False,True,True,VERDICT: FALSE,342.39,128,1935,0.000373,VERDICT: FALSE
+hard3_0313,True,,,False,,391.06,118,2048,0.000394,"We need to determine if the equation x = ((y * (x * x)) * z) * x implies the equation x * (y * z) = (w * y) * z holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to"
+hard3_0314,True,,,False,,370.89,130,2048,0.000394,
+hard3_0315,True,,,False,,384.16,135,1516,0.000293,VER
+hard3_0316,True,False,False,True,false,506.09,130,2048,0.000394,"We need to determine if the equation\n\n(1) x = ((y * (x * z)) * z) * x\n\nimplies\n\n(2) x * x = (y * (y * y)) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we "
+hard3_0317,True,False,False,True,FALSE,434.06,133,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: If x = ((y * (x * z)) * z) * x holds for all elements x,y,z? Actually the premise is ""x = ((y *"
+hard3_0318,True,False,False,True,FALSE,465.95,118,2048,0.000394,"We need to determine if the equation x = ((y * (x * z)) * w) * x implies x = (x * ((y * z) * z)) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0319,True,False,False,True,VERDICT: FALSE,449.84,131,591,0.000117,VERDICT: FALSE
+hard3_0320,False,False,True,True,VERDICT: FALSE,465.30,130,1359,0.000263,VERDICT: FALSE
+hard3_0321,True,False,False,True,FALSE,522.00,118,2048,0.000394,"We need to determine if the equation x = ((y * (z * x)) * w) * x implies x = y * (((z * y) * z) * x) holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0322,False,False,True,True,false,1187.04,117,2048,0.000394,"We need to determine if the equation\n\n(1) x = ((y * (z * y)) * z) * x\n\nimplies\n\n(2) x * x = (x * (y * y)) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we "
+hard3_0323,True,False,False,True,VERDICT: FALSE,642.44,131,4894,0.000935,VERDICT: FALSE
+hard3_0324,True,False,False,True,false,582.72,133,2048,0.000394,"We need to determine if the equation (identity) ""x = ((y * (z * w)) * z) * x"" implies ""x = x * (((x * y) * x) * x)"" holds in all magmas (i.e., sets with a binary operation * with no axioms). So we nee"
+hard3_0325,True,,,False,,595.09,129,2048,0.000394,
+hard3_0326,True,False,False,True,FALSE,596.47,135,2048,0.000394,"We need to determine if the equation x = ((y * (z * w)) * w) * x implies x = (((x * y) * x) * x) * x holds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the"
+hard3_0327,False,False,True,True,VERDICT: FALSE,614.36,130,1489,0.000288,VERDICT: FALSE
+hard3_0328,False,False,True,True,VERDICT: FALSE,685.15,129,3669,0.000702,VERDICT: FALSE
+hard3_0329,True,False,False,True,VERDICT: FALSE,663.18,131,884,0.000173,VERDICT: FALSE
+hard3_0330,False,False,True,True,VERDICT: FALSE,688.94,118,976,0.000190,VERDICT: FALSE
+hard3_0331,True,False,False,True,VERDICT: FALSE,722.04,118,1899,0.000365,VERDICT: FALSE
+hard3_0332,False,False,True,True,VERDICT: FALSE,734.23,133,1666,0.000322,VERDICT: FALSE
+hard3_0333,True,False,False,True,FALSE,749.94,131,2048,0.000394,"We need to determine if the implication holds in all magmas (set with binary operation *). Statement: If x = (((y * x) * y) * z) * x, then x * (y * z) = (y * x) * z, for all elements x,y,z in any magm"
+hard3_0334,True,,,False,,794.21,115,2048,0.000394,"We need to determine if the equation\n\nx = (((y * x) * z) * z) * x\n\nimplies\n\nx = (y * (y * y)) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see "
+hard3_0335,True,False,False,True,VERDICT: FALSE,782.16,119,1802,0.000347,VERDICT: FALSE
+hard3_0336,True,False,False,True,VERDICT: FALSE,804.98,130,818,0.000160,VERDICT: FALSE
+hard3_0337,True,False,False,True,FALSE,809.43,135,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with a binary operation *). Statement: If x = (((y * y) * z) * w) * x, does it imply x * x = (x * y) * (y * x) for all elements x,y,z,"
+hard3_0338,True,False,False,True,false,840.53,131,2048,0.000394,We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If x = (((y * y) * z) * w) * x then conclude x * (y * y) = (y * x) * y. Is this universally valid
+hard3_0339,False,False,True,True,FALSE,865.91,118,2048,0.000394,"We need to determine if the equation\n\n(1) x = (((y * z) * y) * x) * x\n\nimplies\n\n(2) x = ((y * z) * (y * w)) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So w"
+hard3_0340,True,False,False,True,false,881.53,115,2048,0.000394,"We need to determine if the equation\n\nx = (((y * z) * w) * u) * x\n\nimplies\n\nx = ((y * x) * z) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need to see "
+hard3_0341,True,False,False,True,false,903.20,118,2048,0.000394,"We need to determine if the equation\n\nx = (((y * z) * w) * u) * x\n\nimplies\n\nx = (y * (z * (y * z))) * x\n\nholds in all magmas (i.e., sets with a binary operation * with no axioms). So we need t"
+hard3_0342,False,False,True,True,VERDICT: FALSE,920.88,132,1710,0.000330,VERDICT: FALSE
+hard3_0343,False,False,True,True,FALSE,929.59,116,2048,0.000394,"We need to determine if the equation (1) x * x = y * (x * (x * z)) implies (2) x * x = ((y * y) * y) * x holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the i"
+hard3_0344,False,False,True,True,false,971.81,117,2048,0.000394,"We need to determine if the equation (identity) x * x = y * (x * (y * z)) implies the equation x * (x * y) = z * (w * w) holds in all magmas (i.e., sets with a binary operation, no axioms). So we need"
+hard3_0345,False,False,True,True,false,996.71,130,2048,0.000394,"We need to determine if the equation (identity) x * x = y * (x * (z * w)) implies x * (y * x) = x * (y * y) holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if th"
+hard3_0346,False,,,False,,977.46,134,726,0.000143,VER
+hard3_0347,False,False,True,True,FALSE,990.28,141,2048,0.000395," need to determine if the implication holds in all magmas (sets with a binary operation * with no axioms). The statement: If a magma satisfies the identity (for all x,y,z,w) x * x = y * (x * (z * w)),"
+hard3_0348,False,False,True,True,VERDICT: FALSE,1000.42,132,1174,0.000228,VERDICT: FALSE
+hard3_0349,False,,,False,,1011.79,128,2048,0.000394,
+hard3_0350,False,True,False,True,true,1025.52,130,2048,0.000394,"We need to determine if the identity (1) x * x = y * (z * (x * w)) implies identity (2) x * (y * y) = (y * x) * y in all magmas (i.e., arbitrary binary operation, no axioms). So we need to see if (1) "
+hard3_0351,False,,,False,,1042.90,133,2048,0.000394,"We need to determine if the identity x*y = x*(y*(z*x)) implies the identity x*y = x*((z*y)*w) holds in all magmas (i.e., binary operation, no axioms). So we need to see if the first identity logically"
+hard3_0352,True,,,False,,1086.76,131,2048,0.000394,"We need to determine if the equation (identity) x*y = x*(z*(x*w)) implies x*y = x*(x*(z*z)) holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the first identity"
+hard3_0353,True,,,False,,1090.13,117,2048,0.000394,"We need to determine if the identity x * y = y * (x * (z * y)) implies (x * y) * z = (y * w) * z for all magmas (i.e., binary operation with no other axioms). So we need to see if the first identity ("
+hard3_0354,True,,,False,,1103.43,130,691,0.000136,VER
+hard3_0355,True,True,True,True,VERDICT: TRUE,1142.65,116,1501,0.000290,VERDICT: TRUE
+hard3_0356,False,,,False,,1153.95,116,2048,0.000394,"We need to determine if the identity\n\n(1) x * y = z * (x * (x * y))\n\nimplies\n\n(2) x * y = ((y * y) * z) * y\n\nholds in all magmas (i.e., sets with a binary operation, no axioms). So we need to "
+hard3_0357,False,,,False,,1177.18,117,2048,0.000394,"We need to determine if the identity x*y = z*(z*(y*x)) implies the identity x*y = (x*z)*(y*z) in all magmas (i.e., binary operation, no other axioms). So we need to see if the first identity logically"
+hard3_0358,False,True,False,True,TRUE,5.92,134,2048,0.000394,"We need to determine if the identity x * x = y * ((x * y) * z) implies the identity x * (y * y) = (x * x) * y in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the fi"
+hard3_0359,False,False,True,True,FALSE,63.52,117,2048,0.000394,"We need to determine if the equation (identity) ""x * x = y * ((y * x) * z)"" implies ""x * y = (y * y) * (z * z)"" holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see i"
+hard3_0360,False,False,True,True,VERDICT: FALSE,53.60,126,577,0.000115,VERDICT: FALSE
+hard3_0361,True,False,False,True,VERDICT: FALSE,47.39,140,613,0.000122,VERDICT: FALSE
+hard3_0362,False,False,True,True,FALSE,95.56,131,2048,0.000394,"We need to determine if the equation (identity) x * x = y * ((z * z) * x) implies x * y = z * (w * (z * y)) holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if th"
+hard3_0363,False,,,False,,92.91,133,1006,0.000196,VER
+hard3_0364,True,True,True,True,VERDICT: TRUE,97.62,134,773,0.000152,VERDICT: TRUE
+hard3_0365,True,True,True,True,VERDICT: TRUE,113.20,124,957,0.000187,VERDICT: TRUE
+hard3_0366,True,True,True,True,VERDICT: TRUE,142.81,129,1686,0.000325,VERDICT: TRUE
+hard3_0367,True,True,True,True,VERDICT: TRUE,145.62,127,958,0.000187,VERDICT: TRUE
+hard3_0368,False,False,True,True,VERDICT: FALSE,163.31,141,779,0.000154,VERDICT: FALSE
+hard3_0369,False,False,True,True,false,193.21,131,2048,0.000394,"We need to determine if the identity x*x = (y*x)*(x*z) implies the identity (x*y)*z = (y*w)*z in all magmas (i.e., binary operation with no other axioms). So we need to see if the first identity (call"
+hard3_0370,False,False,True,True,VERDICT: FALSE,201.40,130,705,0.000139,VERDICT: FALSE
+hard3_0371,False,True,False,True,TRUE,326.75,131,2048,0.000394,"We need to determine if the identity (1) x * x = (y * z) * (z * w) implies identity (2) x * (y * z) = y * (x * z) holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see"
+hard3_0372,False,True,False,True,TRUE,329.50,131,2048,0.000394,"We need to determine if the identity (1) x * y = (x * y) * (z * y) implies identity (2) x * (y * z) = (x * x) * z holds in all magmas (i.e., sets with a binary operation, no axioms). So we need to see"
+hard3_0373,False,True,False,True,VERDICT: TRUE,261.32,130,664,0.000131,VERDICT: TRUE
+hard3_0374,True,True,True,True,VERDICT: TRUE,337.70,127,2697,0.000517,VERDICT: TRUE
+hard3_0375,True,True,True,True,VERDICT: TRUE,338.75,117,996,0.000194,VERDICT: TRUE
+hard3_0376,True,True,True,True,TRUE,333.57,131,2048,0.000394,"We need to determine if the identity x * y = (z * x) * (y * z) implies the identity x * (x * y) = x * (y * x) in all magmas (i.e., sets with a binary operation, no other axioms). So we need to see if "
+hard3_0377,False,False,True,True,false,417.19,125,2048,0.000394,"We need to determine if the identity x*y = (z*x)*(w*y) implies x*y = (z*y)*y in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the first identity (call it I1) logical"
+hard3_0378,True,False,False,True,VERDICT: FALSE,382.17,133,1075,0.000209,VERDICT: FALSE
+hard3_0379,True,False,False,True,VERDICT: FALSE,398.40,133,1349,0.000261,VERDICT: FALSE
+hard3_0380,True,False,False,True,VERDICT: FALSE,411.33,132,1215,0.000236,VERDICT: FALSE
+hard3_0381,True,False,False,True,FALSE,442.76,131,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma satisfies identity (1): x*y = (x*(z*y))*w for all x,y,z,w? Wait the statement: ""Determine whether x * y = (x * (z * y)) * w impl"
+hard3_0382,True,True,True,True,VERDICT: TRUE,447.83,132,990,0.000193,VERDICT: TRUE
+hard3_0383,False,False,True,True,FALSE,457.80,140,2048,0.000395," need to determine if the equation x*y = (y*(z*x))*y implies x*y = ((y*y)*y)*y for all magmas (i.e., sets with a binary operation * with no axioms). So we need to see if the first identity (call it A)"
+hard3_0384,True,False,False,True,VERDICT: FALSE,559.71,130,1073,0.000209,VERDICT: FALSE
+hard3_0385,True,False,False,True,VERDICT: FALSE,488.71,124,411,0.000083,VERDICT: FALSE
+hard3_0386,True,True,True,True,TRUE,539.46,126,2048,0.000394,"We need to determine if the equation x*x = ((y*z)*z)*z implies x*x = (x*x)*x in all magmas (i.e., sets with a binary operation, no axioms). So we need to see if the first identity (call it A) logicall"
+hard3_0387,True,False,False,True,VERDICT: FALSE,547.73,129,751,0.000148,VERDICT: FALSE
+hard3_0388,True,True,True,True,VERDICT: TRUE,1175.86,128,1575,0.000304,VERDICT: TRUE
+hard3_0389,True,True,True,True,VERDICT: TRUE,603.03,130,1044,0.000203,VERDICT: TRUE
+hard3_0390,True,False,False,True,FALSE,619.21,127,2048,0.000394,"We need to determine if the implication holds in all magmas: If for all elements x,y,z,w in a magma, we have x*y = ((z*y)*w)*y, does it follow that x*y = ((x*z)*w)*y? Wait the statement: ""Determine wh"
+hard3_0391,False,True,False,True,TRUE,619.37,131,2048,0.000394,"We need to determine if the identity x * (x * x) = (y * z) * y implies the identity (x * y) * z = (y * x) * z in all magmas (i.e., sets with a binary operation, no other axioms). So we need to see whe"
+hard3_0392,False,False,True,True,FALSE,658.89,131,2048,0.000394,"We need to determine if the implication holds in all magmas (sets with binary operation *). Statement: If a magma satisfies identity (1): x * (x * y) = (x * z) * w for all x,y,z,w? Wait the identity i"
+hard3_0393,True,True,True,True,true,693.42,131,2048,0.000394,"We need to determine if the implication holds in all magmas: If a magma satisfies identity x*(x*y) = (y*z)*w for all elements x,y,z,w, does it necessarily satisfy (x*x)*y = (z*z)*w for all x,y,z,w? We"
+hard3_0394,False,True,False,True,TRUE,691.23,130,2048,0.000394,"We need to determine if the equation x * (y * z) = (y * y) * x implies the equation x * y = z * (w * (y * u)) holds in all magmas (i.e., sets with a binary operation *). So we need to see if the first"
+hard3_0395,True,False,False,True,false,708.30,131,2048,0.000394,"We need to determine if the equation (1) x * (y * z) = (z * y) * y implies (2) x * (x * x) = y * (z * y) holds in all magmas (i.e., sets with a binary operation *). So we need to see if (1) logically "
+hard3_0396,True,False,False,True,FALSE,753.51,118,2048,0.000394,"We need to determine if the identity x*(y*z) = (w*x)*y implies x*(y*z) = (x*w)*y in all magmas (i.e., binary operation with no axioms). So we ask: does the identity with w on left of x imply the same "
+hard3_0397,True,True,True,True,TRUE,748.47,131,2048,0.000394,"We need to determine if the implication holds in all magmas: given that the equation x*(y*z) = (w*w)*y holds (presumably for all elements x,y,z,w? Or is it a premise that this equation holds for all e"
+hard3_0398,True,False,False,True,false,767.75,131,2048,0.000394,"We need to determine if the given implication holds in all magmas (sets with a binary operation *). The premise: x * (y * z) = (w * w) * y for all elements? The statement ""x * (y * z) = (w * w) * y im"
+hard3_0399,True,True,True,True,VERDICT: TRUE,802.75,118,1164,0.000226,VERDICT: TRUE
+hard3_0400,True,True,True,True,VERDICT: TRUE,810.24,131,731,0.000144,VERDICT: TRUE

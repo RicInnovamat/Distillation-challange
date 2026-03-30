@@ -1,0 +1,1001 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+normal_0001,True,,,False,,2174.57,0,0,0.000000,[API ERROR] Provider returned error
+normal_0002,True,,,False,,1825.59,0,0,0.000000,[API ERROR] Provider returned error
+normal_0003,False,,,False,,1849.94,0,0,0.000000,[API ERROR] Provider returned error
+normal_0004,True,False,False,True,VERDICT: FALSE,2868.31,222,1523,0.000806,VERDICT: FALSE
+normal_0005,True,False,False,True,VERDICT: FALSE,2942.37,221,2564,0.001326,VERDICT: FALSE
+normal_0006,False,False,True,True,VERDICT: FALSE,10.73,220,1160,0.000624,VERDICT: FALSE
+normal_0007,True,False,False,True,VERDICT: FALSE,18.33,221,1059,0.000574,VERDICT: FALSE
+normal_0008,False,False,True,True,VERDICT: FALSE,71.40,221,1018,0.000553,VERDICT: FALSE
+normal_0009,True,False,False,True,VERDICT: FALSE,135.50,221,1297,0.000693,VERDICT: FALSE
+normal_0010,True,True,True,True,VERDICT: TRUE,193.96,221,2587,0.001338,"VERDICT: TRUE\n\n## Explanation\n\nThe reasoning proceeds by analyzing the equational implication in the theory of magmas, where the premise is the identity ∀x, y, z, w (x * y = (z * w) * (w * z)) and"
+normal_0011,True,False,False,True,VERDICT: FALSE,239.85,222,3929,0.002009,VERDICT: FALSE
+normal_0012,False,False,True,True,VERDICT: FALSE,305.54,219,4564,0.002326,VERDICT: FALSE
+normal_0013,True,False,False,True,VERDICT: FALSE,346.50,222,2373,0.001231,VERDICT: FALSE
+normal_0014,False,False,True,True,VERDICT: FALSE,407.67,217,4384,0.002235,VERDICT: FALSE
+normal_0015,False,False,True,True,VERDICT: FALSE,434.01,220,1413,0.000750,VERDICT: FALSE
+normal_0016,False,False,True,True,VERDICT: FALSE,543.03,221,6742,0.003415,VERDICT: FALSE
+normal_0017,False,False,True,True,VERDICT: FALSE,562.16,221,809,0.000449,VERDICT: FALSE
+normal_0018,True,,,False,,2250.17,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0019,False,False,True,True,VERDICT: FALSE,662.20,221,941,0.000515,VERDICT: FALSE
+normal_0020,False,False,True,True,VERDICT: FALSE,696.40,223,1310,0.000700,VERDICT: FALSE
+normal_0021,False,False,True,True,VERDICT: FALSE,739.36,220,1636,0.000862,VERDICT: FALSE
+normal_0022,True,False,False,True,VERDICT: FALSE,774.73,220,1302,0.000695,VERDICT: FALSE
+normal_0023,True,,,False,,2265.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0024,False,False,True,True,VERDICT: FALSE,888.79,221,833,0.000461,VERDICT: FALSE
+normal_0025,False,False,True,True,VERDICT: FALSE,946.77,218,844,0.000466,VERDICT: FALSE
+normal_0026,False,,,False,,2267.18,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0027,False,False,True,True,VERDICT: FALSE,1033.69,221,1177,0.000633,VERDICT: FALSE
+normal_0028,True,False,False,True,VERDICT: FALSE,1111.33,221,3047,0.001568,VERDICT: FALSE
+normal_0029,False,,,False,,2282.45,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0030,False,False,True,True,VERDICT: FALSE,1244.40,220,1289,0.000688,VERDICT: FALSE
+normal_0031,True,False,False,True,VERDICT: FALSE,1281.11,222,2153,0.001121,VERDICT: FALSE
+normal_0032,True,True,True,True,VERDICT: TRUE,1327.22,219,3745,0.001916,VERDICT: TRUE
+normal_0033,False,False,True,True,VERDICT: FALSE,1354.44,223,1647,0.000868,VERDICT: FALSE
+normal_0034,True,False,False,True,VERDICT: FALSE,1429.28,221,4094,0.002091,VERDICT: FALSE
+normal_0035,True,False,False,True,VERDICT: FALSE,1463.47,223,3746,0.001918,VERDICT: FALSE
+normal_0036,False,False,True,True,VERDICT: FALSE,1473.07,219,1241,0.000664,VERDICT: FALSE
+normal_0037,True,False,False,True,VERDICT: FALSE,1518.41,222,2576,0.001332,VERDICT: FALSE
+normal_0038,True,False,False,True,VERDICT: FALSE,1670.01,222,8807,0.004448,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x = (y * y) * (z * (z * z))\) implies \(x = x * (x * (y * (y * x)))\) in every magma by checking for a counterexample.
+normal_0039,True,,,False,,2301.49,0,0,0.000000,[API ERROR] Provider returned error
+normal_0040,True,False,False,True,VERDICT: FALSE,1918.72,221,6301,0.003195,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x = y * (y * ((y * z) * y))\) implies \(x = (((y * z) * x) * x) * y\) in every magma by checking for a counterexample.
+normal_0041,False,,,False,,2350.59,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0042,True,,,False,,1925.81,0,0,0.000000,[API ERROR] Provider returned error
+normal_0043,False,,,False,,1941.26,0,0,0.000000,[API ERROR] Provider returned error
+normal_0044,False,,,False,,2409.01,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0045,False,,,False,,2438.41,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0046,True,,,False,,2456.39,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0047,False,,,False,,2484.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0048,True,,,False,,2497.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0049,True,,,False,,2528.10,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0050,True,,,False,,1745.90,0,0,0.000000,[API ERROR] Provider returned error
+normal_0051,False,,,False,,2541.65,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0052,False,,,False,,2558.31,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0053,False,,,False,,2573.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0054,True,,,False,,2038.61,0,0,0.000000,[API ERROR] Provider returned error
+normal_0055,False,,,False,,2620.70,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0056,True,,,False,,2651.06,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0057,True,,,False,,2675.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0058,True,,,False,,2094.71,0,0,0.000000,[API ERROR] Provider returned error
+normal_0059,False,,,False,,2711.70,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0060,True,,,False,,2748.90,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0061,False,,,False,,2761.09,0,0,0.000000,[API ERROR] Provider returned error
+normal_0062,True,,,False,,2776.27,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0063,True,False,False,True,VERDICT: FALSE,1814.09,222,3056,0.001572,VERDICT: FALSE
+normal_0064,False,False,True,True,VERDICT: FALSE,2819.18,218,1669,0.000878,VERDICT: FALSE
+normal_0065,True,,,False,,2951.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0066,True,,,False,,1825.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0067,True,,,False,,1849.93,0,0,0.000000,[API ERROR] Provider returned error
+normal_0068,True,False,False,True,VERDICT: FALSE,2890.65,220,3186,0.001637,VERDICT: FALSE
+normal_0069,True,,,False,,3050.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0070,True,True,True,True,VERDICT: TRUE,21.47,217,2803,0.001445,VERDICT: TRUE
+normal_0071,False,False,True,True,VERDICT: FALSE,22.03,220,1295,0.000691,VERDICT: FALSE
+normal_0072,True,,,False,,2235.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0073,False,False,True,True,VERDICT: FALSE,146.35,222,1739,0.000914,VERDICT: FALSE
+normal_0074,False,False,True,True,VERDICT: FALSE,185.96,220,1031,0.000559,VERDICT: FALSE
+normal_0075,True,False,False,True,VERDICT: FALSE,236.25,220,2013,0.001051,VERDICT: FALSE
+normal_0076,True,False,False,True,VERDICT: FALSE,272.51,215,2644,0.001365,VERDICT: FALSE
+normal_0077,True,True,True,True,VERDICT: TRUE,346.59,220,3238,0.001663,VERDICT: TRUE
+normal_0078,False,False,True,True,VERDICT: FALSE,389.84,221,1585,0.000837,VERDICT: FALSE
+normal_0079,True,,,False,,2236.81,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0080,False,False,True,True,VERDICT: FALSE,511.53,221,1613,0.000851,VERDICT: FALSE
+normal_0081,True,False,False,True,VERDICT: FALSE,572.17,222,1826,0.000957,VERDICT: FALSE
+normal_0082,False,False,True,True,VERDICT: FALSE,607.85,222,1128,0.000608,VERDICT: FALSE
+normal_0083,True,,,False,,2250.31,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0084,True,False,False,True,VERDICT: FALSE,702.48,222,1367,0.000728,VERDICT: FALSE
+normal_0085,False,False,True,True,VERDICT: FALSE,734.91,218,896,0.000492,VERDICT: FALSE
+normal_0086,True,False,False,True,VERDICT: FALSE,803.47,222,5200,0.002644,VERDICT: FALSE
+normal_0087,True,,,False,,2263.60,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0088,False,False,True,True,VERDICT: FALSE,896.59,222,1268,0.000678,VERDICT: FALSE
+normal_0089,True,True,True,True,VERDICT: TRUE,959.96,222,2291,0.001190,VERDICT: TRUE
+normal_0090,True,False,False,True,VERDICT: FALSE,1018.08,221,8771,0.004430,VERDICT: FALSE
+normal_0091,True,False,False,True,VERDICT: FALSE,1061.47,220,4901,0.002495,VERDICT: FALSE
+normal_0092,True,,,False,,2288.94,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0093,True,False,False,True,VERDICT: FALSE,1153.76,221,2892,0.001490,VERDICT: FALSE
+normal_0094,False,False,True,True,VERDICT: FALSE,1244.49,217,1163,0.000625,VERDICT: FALSE
+normal_0095,False,False,True,True,VERDICT: FALSE,1273.10,222,1002,0.000545,VERDICT: FALSE
+normal_0096,False,False,True,True,VERDICT: FALSE,1309.47,221,1292,0.000690,VERDICT: FALSE
+normal_0097,False,False,True,True,VERDICT: FALSE,1373.88,222,4529,0.002309,VERDICT: FALSE
+normal_0098,True,False,False,True,VERDICT: FALSE,1424.96,216,3067,0.001577,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning determines whether the equation x = y * (y * z) implies x = (y * x) * (x * (y * x)) in all magmas by checking for universal validity. A magma is a set
+normal_0099,True,False,False,True,VERDICT: FALSE,1450.16,221,1836,0.000962,VERDICT: FALSE
+normal_0100,False,False,True,True,VERDICT: FALSE,1480.35,221,1183,0.000636,VERDICT: FALSE
+normal_0101,True,True,True,True,VERDICT: TRUE,1524.88,216,4356,0.002221,VERDICT: TRUE
+normal_0102,False,False,True,True,VERDICT: FALSE,1580.65,221,1977,0.001033,VERDICT: FALSE
+normal_0103,True,,,False,,2301.42,0,0,0.000000,[API ERROR] Provider returned error
+normal_0104,True,False,False,True,VERDICT: FALSE,2326.98,222,2112,0.001100,VERDICT: FALSE
+normal_0105,True,,,False,,2350.60,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0106,False,,,False,,2369.41,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0107,False,,,False,,2390.50,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0108,False,,,False,,2402.82,0,0,0.000000,[API ERROR] Provider returned error
+normal_0109,False,,,False,,2439.43,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0110,True,,,False,,2456.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0111,False,,,False,,2490.33,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0112,True,,,False,,2497.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0113,True,,,False,,2528.10,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0114,False,,,False,,2004.79,0,0,0.000000,[API ERROR] Provider returned error
+normal_0115,True,,,False,,2544.20,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0116,False,,,False,,2558.48,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0117,False,,,False,,2573.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0118,True,,,False,,2038.65,0,0,0.000000,[API ERROR] Provider returned error
+normal_0119,False,,,False,,2620.76,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0120,True,,,False,,2636.05,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0121,True,,,False,,2675.17,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0122,True,,,False,,2094.67,0,0,0.000000,[API ERROR] Provider returned error
+normal_0123,True,,,False,,2712.03,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0124,True,,,False,,2736.23,0,0,0.000000,[API ERROR] Provider returned error
+normal_0125,True,,,False,,2756.12,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0126,True,,,False,,2776.27,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0127,False,False,True,True,VERDICT: FALSE,2801.51,221,803,0.000446,VERDICT: FALSE
+normal_0128,False,False,True,True,VERDICT: FALSE,2817.08,221,1006,0.000547,VERDICT: FALSE
+normal_0129,False,False,True,True,VERDICT: FALSE,2840.42,222,1165,0.000627,VERDICT: FALSE
+normal_0130,False,,,False,,1825.54,0,0,0.000000,[API ERROR] Provider returned error
+normal_0131,False,,,False,,1849.99,0,0,0.000000,[API ERROR] Provider returned error
+normal_0132,True,True,True,True,VERDICT: TRUE,2922.39,222,8581,0.004335,VERDICT: TRUE
+normal_0133,False,False,True,True,VERDICT: FALSE,2942.59,220,1564,0.000826,VERDICT: FALSE
+normal_0134,True,False,False,True,VERDICT: FALSE,11.13,219,1447,0.000767,VERDICT: FALSE
+normal_0135,True,True,True,True,VERDICT: TRUE,32.67,219,1876,0.000982,VERDICT: TRUE
+normal_0136,True,False,False,True,VERDICT: FALSE,90.68,222,2383,0.001236,VERDICT: FALSE
+normal_0137,True,,,False,,2232.38,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0138,True,False,False,True,VERDICT: FALSE,194.83,218,1760,0.000924,VERDICT: FALSE
+normal_0139,False,False,True,True,VERDICT: FALSE,228.25,219,1150,0.000619,VERDICT: FALSE
+normal_0140,True,False,False,True,VERDICT: FALSE,282.35,222,2627,0.001358,VERDICT: FALSE
+normal_0141,True,False,False,True,VERDICT: FALSE,361.08,217,2689,0.001388,VERDICT: FALSE
+normal_0142,False,False,True,True,VERDICT: FALSE,397.71,221,1345,0.000717,VERDICT: FALSE
+normal_0143,False,False,True,True,VERDICT: FALSE,451.89,221,2372,0.001230,VERDICT: FALSE
+normal_0144,True,False,False,True,VERDICT: FALSE,520.86,223,2295,0.001192,VERDICT: FALSE
+normal_0145,True,False,False,True,VERDICT: FALSE,565.90,222,1197,0.000643,VERDICT: FALSE
+normal_0146,True,False,False,True,VERDICT: FALSE,613.35,221,1759,0.000924,VERDICT: FALSE
+normal_0147,False,False,True,True,VERDICT: FALSE,669.82,223,1118,0.000604,VERDICT: FALSE
+normal_0148,True,False,False,True,VERDICT: FALSE,705.56,220,1669,0.000878,VERDICT: FALSE
+normal_0149,False,False,True,True,VERDICT: FALSE,741.84,221,1221,0.000655,VERDICT: FALSE
+normal_0150,True,False,False,True,VERDICT: FALSE,796.90,220,2537,0.001313,VERDICT: FALSE
+normal_0151,False,False,True,True,VERDICT: FALSE,828.29,221,1029,0.000559,VERDICT: FALSE
+normal_0152,True,False,False,True,VERDICT: FALSE,924.16,222,4439,0.002264,VERDICT: FALSE
+normal_0153,True,False,False,True,VERDICT: FALSE,965.99,218,2691,0.001389,VERDICT: FALSE
+normal_0154,True,,,False,,2267.18,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0155,True,False,False,True,VERDICT: FALSE,1054.61,221,3193,0.001641,VERDICT: FALSE
+normal_0156,False,False,True,True,VERDICT: FALSE,1116.74,221,3464,0.001776,VERDICT: FALSE
+normal_0157,False,False,True,True,VERDICT: FALSE,1216.77,221,9814,0.004951,VERDICT: FALSE
+normal_0158,False,False,True,True,VERDICT: FALSE,1245.68,221,1072,0.000580,VERDICT: FALSE
+normal_0159,False,False,True,True,VERDICT: FALSE,1283.40,221,1541,0.000815,VERDICT: FALSE
+normal_0160,True,False,False,True,VERDICT: FALSE,1319.30,218,2534,0.001311,VERDICT: FALSE
+normal_0161,True,False,False,True,VERDICT: FALSE,1365.32,220,2352,0.001220,VERDICT: FALSE
+normal_0162,False,False,True,True,VERDICT: FALSE,1418.35,222,1298,0.000693,VERDICT: FALSE
+normal_0163,False,False,True,True,VERDICT: FALSE,1443.68,221,893,0.000491,VERDICT: FALSE
+normal_0164,False,False,True,True,VERDICT: FALSE,1484.69,221,1437,0.000763,VERDICT: FALSE
+normal_0165,False,False,True,True,VERDICT: FALSE,1512.90,218,1659,0.000873,VERDICT: FALSE
+normal_0166,True,True,True,True,VERDICT: TRUE,1673.35,218,12421,0.006254,VERDICT: TRUE
+normal_0167,False,,,False,,2303.57,56,45,0.000034,
+normal_0168,False,,,False,,2335.44,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0169,True,,,False,,2350.75,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0170,True,,,False,,2369.42,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0171,True,,,False,,2388.72,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0172,True,,,False,,2410.83,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0173,True,,,False,,2439.37,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0174,False,,,False,,2456.44,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0175,False,,,False,,2484.92,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0176,False,,,False,,2511.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0177,True,,,False,,2528.14,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0178,False,,,False,,1745.91,0,0,0.000000,[API ERROR] Provider returned error
+normal_0179,False,,,False,,2014.87,0,0,0.000000,[API ERROR] Provider returned error
+normal_0180,True,,,False,,2558.44,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0181,True,,,False,,2587.39,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0182,False,,,False,,2604.04,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0183,False,,,False,,2620.71,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0184,True,,,False,,2650.48,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0185,True,,,False,,2675.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0186,True,,,False,,2094.69,0,0,0.000000,[API ERROR] Provider returned error
+normal_0187,True,,,False,,2726.12,56,46,0.000034,
+normal_0188,True,,,False,,2748.98,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0189,True,,,False,,2761.11,0,0,0.000000,[API ERROR] Provider returned error
+normal_0190,False,False,True,True,VERDICT: FALSE,2812.96,221,5432,0.002760,VERDICT: FALSE
+normal_0191,False,False,True,True,VERDICT: FALSE,2794.81,221,1324,0.000706,VERDICT: FALSE
+normal_0192,True,False,False,True,VERDICT: FALSE,2856.29,218,1207,0.000647,VERDICT: FALSE
+normal_0193,False,False,True,True,VERDICT: FALSE,2844.55,220,1351,0.000719,VERDICT: FALSE
+normal_0194,True,,,False,,1839.13,0,0,0.000000,[API ERROR] Provider returned error
+normal_0195,True,,,False,,1849.96,0,0,0.000000,[API ERROR] Provider returned error
+normal_0196,False,False,True,True,VERDICT: FALSE,2923.98,220,2799,0.001443,VERDICT: FALSE
+normal_0197,False,False,True,True,VERDICT: FALSE,2961.58,221,5105,0.002597,VERDICT: FALSE
+normal_0198,False,False,True,True,VERDICT: FALSE,9.27,222,1079,0.000584,VERDICT: FALSE
+normal_0199,False,False,True,True,VERDICT: FALSE,33.87,221,1734,0.000911,VERDICT: FALSE
+normal_0200,False,False,True,True,VERDICT: FALSE,94.42,222,2876,0.001482,VERDICT: FALSE
+normal_0201,True,False,False,True,VERDICT: FALSE,153.33,220,2948,0.001518,VERDICT: FALSE
+normal_0202,True,False,False,True,VERDICT: FALSE,223.16,221,4985,0.002537,VERDICT: FALSE
+normal_0203,True,False,False,True,VERDICT: FALSE,248.28,221,2774,0.001431,VERDICT: FALSE
+normal_0204,False,False,True,True,VERDICT: FALSE,302.25,221,4796,0.002442,VERDICT: FALSE
+normal_0205,True,False,False,True,VERDICT: FALSE,358.92,222,2405,0.001247,VERDICT: FALSE
+normal_0206,True,True,True,True,VERDICT: TRUE,405.13,220,1915,0.001002,VERDICT: TRUE
+normal_0207,False,False,True,True,VERDICT: FALSE,554.57,219,17518,0.008803,VERDICT: FALSE
+normal_0208,False,False,True,True,VERDICT: FALSE,517.06,222,1157,0.000623,VERDICT: FALSE
+normal_0209,False,False,True,True,VERDICT: FALSE,581.07,220,2775,0.001432,VERDICT: FALSE
+normal_0210,True,False,False,True,VERDICT: FALSE,641.11,221,4628,0.002358,VERDICT: FALSE
+normal_0211,True,False,False,True,VERDICT: FALSE,706.44,221,5568,0.002828,VERDICT: FALSE
+normal_0212,True,True,True,True,VERDICT: TRUE,722.90,220,2735,0.001411,"VERDICT: TRUE\n\n## Explanation\n\nThe reasoning proceeds by analyzing the implications of the premise equation \(x * y = z * (x * (w * x))\) holding for all elements in any magma.\n\nFirst, fix \(x\)"
+normal_0213,True,False,False,True,VERDICT: FALSE,753.42,222,2665,0.001377,VERDICT: FALSE
+normal_0214,True,,,False,,2262.79,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0215,True,False,False,True,VERDICT: FALSE,832.28,217,1311,0.000699,VERDICT: FALSE
+normal_0216,False,False,True,True,VERDICT: FALSE,907.59,222,1221,0.000655,VERDICT: FALSE
+normal_0217,False,False,True,True,VERDICT: FALSE,954.87,223,1271,0.000680,VERDICT: FALSE
+normal_0218,False,False,True,True,VERDICT: FALSE,981.48,218,1177,0.000632,VERDICT: FALSE
+normal_0219,True,False,False,True,VERDICT: FALSE,1058.42,220,1680,0.000884,VERDICT: FALSE
+normal_0220,False,False,True,True,VERDICT: FALSE,1095.45,221,1067,0.000578,VERDICT: FALSE
+normal_0221,True,,,False,,2282.45,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0222,True,False,False,True,VERDICT: FALSE,1251.33,222,1081,0.000585,VERDICT: FALSE
+normal_0223,False,,,False,,2285.67,0,0,0.000000,[API ERROR] Provider returned error
+normal_0224,True,False,False,True,VERDICT: FALSE,1331.47,222,3171,0.001630,VERDICT: FALSE
+normal_0225,True,False,False,True,VERDICT: FALSE,1368.60,219,1716,0.000902,VERDICT: FALSE
+normal_0226,False,False,True,True,VERDICT: FALSE,1415.69,220,685,0.000386,VERDICT: FALSE
+normal_0227,True,False,False,True,VERDICT: FALSE,1451.98,221,1436,0.000762,VERDICT: FALSE
+normal_0228,False,False,True,True,VERDICT: FALSE,1483.61,222,1163,0.000626,VERDICT: FALSE
+normal_0229,True,False,False,True,VERDICT: FALSE,1535.90,222,4665,0.002377,VERDICT: FALSE
+normal_0230,True,False,False,True,VERDICT: FALSE,1618.28,220,1209,0.000648,VERDICT: FALSE
+normal_0231,True,False,False,True,VERDICT: FALSE,1708.42,219,1300,0.000694,VERDICT: FALSE
+normal_0232,True,,,False,,2331.80,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0233,False,False,True,True,VERDICT: FALSE,2338.18,220,709,0.000398,VERDICT: FALSE
+normal_0234,True,,,False,,1930.16,0,0,0.000000,[API ERROR] Provider returned error
+normal_0235,True,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0236,False,,,False,,2410.85,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0237,False,,,False,,2441.34,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0238,False,,,False,,2469.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0239,False,False,True,True,VERDICT: FALSE,2478.92,222,2471,0.001280,VERDICT: FALSE
+normal_0240,False,,,False,,2512.78,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0241,True,,,False,,2528.11,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0242,False,,,False,,1745.90,0,0,0.000000,[API ERROR] Provider returned error
+normal_0243,True,,,False,,2543.27,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0244,False,,,False,,2573.67,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0245,False,,,False,,2574.53,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0246,False,,,False,,2602.58,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0247,False,,,False,,2620.88,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0248,False,,,False,,2651.06,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0249,False,,,False,,2669.16,0,0,0.000000,[API ERROR] Network connection lost.
+normal_0250,True,,,False,,2696.67,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0251,False,,,False,,2711.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0252,True,,,False,,2751.23,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0253,True,,,False,,2761.10,0,0,0.000000,[API ERROR] Provider returned error
+normal_0254,False,False,True,True,VERDICT: FALSE,2785.00,222,892,0.000490,VERDICT: FALSE
+normal_0255,False,False,True,True,VERDICT: FALSE,2806.33,222,1497,0.000793,VERDICT: FALSE
+normal_0256,True,False,False,True,VERDICT: FALSE,2831.22,222,3058,0.001573,VERDICT: FALSE
+normal_0257,True,,,False,,1825.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0258,False,False,True,True,VERDICT: FALSE,2838.67,220,765,0.000426,VERDICT: FALSE
+normal_0259,True,,,False,,1849.96,0,0,0.000000,[API ERROR] Provider returned error
+normal_0260,True,False,False,True,VERDICT: FALSE,2887.61,222,3196,0.001642,VERDICT: FALSE
+normal_0261,False,False,True,True,VERDICT: FALSE,2960.43,221,1449,0.000769,VERDICT: FALSE
+normal_0262,True,True,True,True,VERDICT: TRUE,67.19,221,9759,0.004924,VERDICT: TRUE
+normal_0263,True,False,False,True,VERDICT: FALSE,42.56,218,2849,0.001468,VERDICT: FALSE
+normal_0264,True,False,False,True,VERDICT: FALSE,91.08,222,2195,0.001142,VERDICT: FALSE
+normal_0265,False,False,True,True,VERDICT: FALSE,174.43,218,5796,0.002942,VERDICT: FALSE
+normal_0266,False,False,True,True,VERDICT: FALSE,193.96,217,1107,0.000597,VERDICT: FALSE
+normal_0267,False,False,True,True,VERDICT: FALSE,233.30,220,1296,0.000692,VERDICT: FALSE
+normal_0268,True,False,False,True,VERDICT: FALSE,295.20,218,2870,0.001479,VERDICT: FALSE
+normal_0269,False,False,True,True,VERDICT: FALSE,355.36,220,1226,0.000657,VERDICT: FALSE
+normal_0270,True,True,True,True,VERDICT: TRUE,484.17,215,12956,0.006521,VERDICT: TRUE
+normal_0271,False,False,True,True,VERDICT: FALSE,443.05,218,883,0.000485,VERDICT: FALSE
+normal_0272,False,,,False,,2247.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0273,True,False,False,True,VERDICT: FALSE,567.97,221,1152,0.000620,VERDICT: FALSE
+normal_0274,False,False,True,True,VERDICT: FALSE,620.68,220,791,0.000440,VERDICT: FALSE
+normal_0275,True,False,False,True,VERDICT: FALSE,670.86,220,1115,0.000602,VERDICT: FALSE
+normal_0276,False,False,True,True,VERDICT: FALSE,732.23,221,5083,0.002586,VERDICT: FALSE
+normal_0277,True,False,False,True,VERDICT: FALSE,757.50,218,2681,0.001384,VERDICT: FALSE
+normal_0278,True,False,False,True,VERDICT: FALSE,815.30,221,5063,0.002576,VERDICT: FALSE
+normal_0279,False,False,True,True,VERDICT: FALSE,837.39,222,1093,0.000591,VERDICT: FALSE
+normal_0280,False,False,True,True,VERDICT: FALSE,904.23,221,911,0.000500,VERDICT: FALSE
+normal_0281,True,False,False,True,VERDICT: FALSE,959.99,222,1962,0.001025,VERDICT: FALSE
+normal_0282,True,True,True,True,VERDICT: TRUE,1082.54,220,15039,0.007563,VERDICT: TRUE
+normal_0283,False,False,True,True,VERDICT: FALSE,1058.19,220,1442,0.000765,VERDICT: FALSE
+normal_0284,True,False,False,True,VERDICT: FALSE,1126.15,221,2884,0.001486,VERDICT: FALSE
+normal_0285,True,,,False,,2285.37,0,0,0.000000,[API ERROR] Provider returned error
+normal_0286,False,False,True,True,VERDICT: FALSE,1249.99,221,756,0.000422,VERDICT: FALSE
+normal_0287,True,,,False,,2300.33,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0288,True,False,False,True,VERDICT: FALSE,1320.45,222,1404,0.000746,VERDICT: FALSE
+normal_0289,True,True,True,True,VERDICT: TRUE,1483.12,218,16944,0.008516,VERDICT: TRUE
+normal_0290,False,False,True,True,VERDICT: FALSE,1423.22,221,1019,0.000554,VERDICT: FALSE
+normal_0291,False,False,True,True,VERDICT: FALSE,1456.09,221,1616,0.000852,VERDICT: FALSE
+normal_0292,True,True,True,True,VERDICT: TRUE,1496.03,219,2538,0.001313,VERDICT: TRUE
+normal_0293,True,False,False,True,VERDICT: FALSE,1523.02,221,2753,0.001421,VERDICT: FALSE
+normal_0294,False,False,True,True,VERDICT: FALSE,1619.03,221,1015,0.000552,VERDICT: FALSE
+normal_0295,False,False,True,True,VERDICT: FALSE,1690.69,221,1308,0.000698,VERDICT: FALSE
+normal_0296,True,,,False,,2331.97,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0297,True,,,False,,2369.43,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0298,False,,,False,,1930.16,0,0,0.000000,[API ERROR] Provider returned error
+normal_0299,False,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0300,True,,,False,,2417.99,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0301,False,,,False,,2441.19,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0302,False,,,False,,2469.52,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0303,True,,,False,,2484.93,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0304,False,,,False,,2512.92,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0305,False,,,False,,2528.19,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0306,False,,,False,,1745.93,0,0,0.000000,[API ERROR] Provider returned error
+normal_0307,False,,,False,,1761.05,0,0,0.000000,[API ERROR] Provider returned error
+normal_0308,True,,,False,,2558.50,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0309,True,,,False,,2588.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0310,False,,,False,,2603.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0311,False,,,False,,2635.92,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0312,False,,,False,,2635.26,0,0,0.000000,[API ERROR] Provider returned error
+normal_0313,True,,,False,,2696.50,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0314,True,,,False,,2696.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0315,False,,,False,,2711.84,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0316,True,,,False,,2736.29,0,0,0.000000,[API ERROR] Provider returned error
+normal_0317,True,,,False,,2776.12,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0318,False,False,True,True,VERDICT: FALSE,2784.57,217,1022,0.000554,VERDICT: FALSE
+normal_0319,True,False,False,True,VERDICT: FALSE,2797.96,221,1688,0.000888,VERDICT: FALSE
+normal_0320,True,False,False,True,VERDICT: FALSE,2831.00,215,1387,0.000736,VERDICT: FALSE
+normal_0321,True,False,False,True,VERDICT: FALSE,2871.13,222,5386,0.002737,VERDICT: FALSE
+normal_0322,True,,,False,,1839.11,0,0,0.000000,[API ERROR] Provider returned error
+normal_0323,True,,,False,,1849.93,0,0,0.000000,[API ERROR] Provider returned error
+normal_0324,True,,,False,,3008.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0325,True,,,False,,2206.45,54,279,0.000150,
+normal_0326,False,,,False,,2217.19,0,0,0.000000,[API ERROR] Provider returned error
+normal_0327,True,,,False,,2217.22,0,0,0.000000,[API ERROR] Provider returned error
+normal_0328,True,,,False,,2235.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0329,True,True,True,True,VERDICT: TRUE,228.70,222,12845,0.006467,VERDICT: TRUE
+normal_0330,True,False,False,True,VERDICT: FALSE,196.89,222,1418,0.000753,VERDICT: FALSE
+normal_0331,True,False,False,True,VERDICT: FALSE,237.82,222,1269,0.000679,VERDICT: FALSE
+normal_0332,False,False,True,True,VERDICT: FALSE,294.14,220,1392,0.000740,VERDICT: FALSE
+normal_0333,True,False,False,True,VERDICT: FALSE,387.01,223,4674,0.002382,VERDICT: FALSE
+normal_0334,True,False,False,True,VERDICT: FALSE,409.97,222,1824,0.000956,VERDICT: FALSE
+normal_0335,False,False,True,True,VERDICT: FALSE,556.49,218,12366,0.006227,VERDICT: FALSE
+normal_0336,True,False,False,True,VERDICT: FALSE,534.46,220,3044,0.001566,VERDICT: FALSE
+normal_0337,False,False,True,True,VERDICT: FALSE,570.89,221,1103,0.000596,VERDICT: FALSE
+normal_0338,False,False,True,True,VERDICT: FALSE,632.16,223,1584,0.000837,VERDICT: FALSE
+normal_0339,False,False,True,True,VERDICT: FALSE,672.76,220,764,0.000426,VERDICT: FALSE
+normal_0340,False,False,True,True,VERDICT: FALSE,711.76,218,1278,0.000683,VERDICT: FALSE
+normal_0341,True,False,False,True,VERDICT: FALSE,748.98,222,1666,0.000877,VERDICT: FALSE
+normal_0342,True,False,False,True,VERDICT: FALSE,795.19,221,2002,0.001045,VERDICT: FALSE
+normal_0343,False,,,False,,2265.33,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0344,False,False,True,True,VERDICT: FALSE,925.75,222,2806,0.001447,VERDICT: FALSE
+normal_0345,True,True,True,True,VERDICT: TRUE,963.26,220,1842,0.000965,VERDICT: TRUE
+normal_0346,True,False,False,True,VERDICT: FALSE,995.80,221,2811,0.001450,VERDICT: FALSE
+normal_0347,False,False,True,True,VERDICT: FALSE,1066.38,217,1464,0.000775,VERDICT: FALSE
+normal_0348,False,False,True,True,VERDICT: FALSE,1105.03,221,867,0.000478,VERDICT: FALSE
+normal_0349,False,False,True,True,VERDICT: FALSE,1168.06,222,1546,0.000817,VERDICT: FALSE
+normal_0350,False,False,True,True,VERDICT: FALSE,1259.43,222,1649,0.000869,VERDICT: FALSE
+normal_0351,True,False,False,True,VERDICT: FALSE,1282.61,214,1075,0.000580,VERDICT: FALSE
+normal_0352,True,,,False,,2303.61,55,41,0.000031,
+normal_0353,False,False,True,True,VERDICT: FALSE,1372.83,219,946,0.000517,VERDICT: FALSE
+normal_0354,False,False,True,True,VERDICT: FALSE,1424.11,220,1226,0.000657,VERDICT: FALSE
+normal_0355,True,False,False,True,VERDICT: FALSE,1456.40,221,2001,0.001045,VERDICT: FALSE
+normal_0356,False,False,True,True,VERDICT: FALSE,1520.60,219,5012,0.002550,VERDICT: FALSE
+normal_0357,False,False,True,True,VERDICT: FALSE,1548.65,222,3398,0.001743,VERDICT: FALSE
+normal_0358,False,False,True,True,VERDICT: FALSE,1666.42,219,1069,0.000578,VERDICT: FALSE
+normal_0359,True,,,False,,2320.25,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0360,False,,,False,,2335.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0361,True,,,False,,2353.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0362,True,,,False,,1940.42,0,0,0.000000,[API ERROR] Provider returned error
+normal_0363,True,,,False,,2390.47,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0364,False,,,False,,2418.01,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0365,True,,,False,,2441.19,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0366,True,,,False,,2469.77,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0367,False,,,False,,2484.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0368,False,,,False,,2512.94,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0369,False,,,False,,2528.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0370,False,,,False,,1745.91,0,0,0.000000,[API ERROR] Provider returned error
+normal_0371,False,,,False,,1761.07,0,0,0.000000,[API ERROR] Provider returned error
+normal_0372,True,,,False,,2559.37,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0373,False,,,False,,2588.86,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0374,False,,,False,,2603.89,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0375,False,,,False,,2620.71,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0376,True,,,False,,2636.06,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0377,False,,,False,,2696.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0378,False,,,False,,2711.73,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0379,True,,,False,,2726.13,55,101,0.000062,
+normal_0380,False,,,False,,2736.26,0,0,0.000000,[API ERROR] Provider returned error
+normal_0381,False,,,False,,2761.09,0,0,0.000000,[API ERROR] Provider returned error
+normal_0382,True,False,False,True,VERDICT: FALSE,2800.37,223,3640,0.001865,VERDICT: FALSE
+normal_0383,True,False,False,True,VERDICT: FALSE,2808.75,218,2121,0.001104,VERDICT: FALSE
+normal_0384,True,False,False,True,VERDICT: FALSE,2824.70,221,1599,0.000844,VERDICT: FALSE
+normal_0385,True,,,False,,1825.56,0,0,0.000000,[API ERROR] Provider returned error
+normal_0386,False,,,False,,1839.10,0,0,0.000000,[API ERROR] Provider returned error
+normal_0387,True,,,False,,1849.95,0,0,0.000000,[API ERROR] Provider returned error
+normal_0388,False,False,True,True,VERDICT: FALSE,2894.59,218,941,0.000514,VERDICT: FALSE
+normal_0389,False,False,True,True,VERDICT: FALSE,2949.26,220,981,0.000535,VERDICT: FALSE
+normal_0390,True,,,False,,2217.19,0,0,0.000000,[API ERROR] Provider returned error
+normal_0391,True,False,False,True,VERDICT: FALSE,47.53,218,2279,0.001183,VERDICT: FALSE
+normal_0392,True,False,False,True,VERDICT: FALSE,98.21,221,928,0.000508,VERDICT: FALSE
+normal_0393,False,False,True,True,VERDICT: FALSE,157.41,220,1594,0.000841,VERDICT: FALSE
+normal_0394,True,False,False,True,VERDICT: FALSE,194.54,220,1228,0.000658,VERDICT: FALSE
+normal_0395,False,False,True,True,VERDICT: FALSE,240.14,222,1322,0.000705,VERDICT: FALSE
+normal_0396,True,False,False,True,VERDICT: FALSE,299.99,221,2576,0.001332,VERDICT: FALSE
+normal_0397,True,False,False,True,VERDICT: FALSE,358.07,221,1325,0.000707,VERDICT: FALSE
+normal_0398,True,False,False,True,VERDICT: FALSE,408.54,222,1648,0.000868,VERDICT: FALSE
+normal_0399,False,False,True,True,VERDICT: FALSE,455.78,220,875,0.000481,VERDICT: FALSE
+normal_0400,True,,,False,,2247.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0401,True,,,False,,2250.17,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0402,True,False,False,True,VERDICT: FALSE,663.07,222,5107,0.002598,VERDICT: FALSE
+normal_0403,False,False,True,True,VERDICT: FALSE,679.86,221,1047,0.000568,VERDICT: FALSE
+normal_0404,True,,,False,,2251.99,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0405,False,False,True,True,VERDICT: FALSE,750.26,221,1540,0.000814,VERDICT: FALSE
+normal_0406,True,False,False,True,VERDICT: FALSE,820.68,218,3211,0.001649,VERDICT: FALSE
+normal_0407,True,True,True,True,VERDICT: TRUE,857.04,217,2570,0.001328,VERDICT: TRUE
+normal_0408,False,False,True,True,VERDICT: FALSE,928.91,222,3072,0.001580,VERDICT: FALSE
+normal_0409,False,False,True,True,VERDICT: FALSE,961.64,222,1724,0.000906,VERDICT: FALSE
+normal_0410,False,False,True,True,VERDICT: FALSE,1004.59,220,3260,0.001674,VERDICT: FALSE
+normal_0411,False,False,True,True,VERDICT: FALSE,1067.97,223,1259,0.000674,VERDICT: FALSE
+normal_0412,True,,,False,,2288.94,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0413,True,False,False,True,VERDICT: FALSE,1197.38,221,3530,0.001809,VERDICT: FALSE
+normal_0414,True,,,False,,2285.35,0,0,0.000000,[API ERROR] Provider returned error
+normal_0415,False,False,True,True,VERDICT: FALSE,1289.85,218,1531,0.000809,VERDICT: FALSE
+normal_0416,True,False,False,True,VERDICT: FALSE,1326.33,214,851,0.000468,VERDICT: FALSE
+normal_0417,False,False,True,True,VERDICT: FALSE,1377.75,221,1088,0.000588,VERDICT: FALSE
+normal_0418,True,False,False,True,VERDICT: FALSE,1424.53,217,1293,0.000690,VERDICT: FALSE
+normal_0419,True,False,False,True,VERDICT: FALSE,1456.98,217,1023,0.000555,VERDICT: FALSE
+normal_0420,False,False,True,True,VERDICT: FALSE,1491.24,222,1611,0.000850,VERDICT: FALSE
+normal_0421,True,False,False,True,VERDICT: FALSE,1539.82,222,2298,0.001193,VERDICT: FALSE
+normal_0422,True,,,False,,2004.80,0,0,0.000000,[API ERROR] Provider returned error
+normal_0423,False,,,False,,2316.59,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0424,False,,,False,,2335.38,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0425,False,,,False,,2369.41,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0426,True,,,False,,1941.26,56,194,0.000108,
+normal_0427,False,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0428,True,,,False,,2423.22,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0429,False,,,False,,2448.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0430,True,,,False,,2469.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0431,False,,,False,,2486.73,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0432,False,,,False,,2511.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0433,True,,,False,,2541.65,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0434,False,,,False,,1745.90,0,0,0.000000,[API ERROR] Provider returned error
+normal_0435,False,,,False,,2543.36,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0436,True,,,False,,2558.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0437,False,,,False,,2588.78,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0438,True,,,False,,2604.05,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0439,False,,,False,,2620.86,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0440,False,,,False,,2651.13,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0441,False,,,False,,2676.06,0,0,0.000000,[API ERROR] Provider returned error
+normal_0442,False,,,False,,2696.52,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0443,False,,,False,,2726.12,56,45,0.000034,
+normal_0444,False,,,False,,2125.04,0,0,0.000000,[API ERROR] Provider returned error
+normal_0445,True,,,False,,2776.10,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0446,False,False,True,True,VERDICT: FALSE,2793.01,218,2157,0.001122,VERDICT: FALSE
+normal_0447,True,False,False,True,VERDICT: FALSE,2806.69,219,1559,0.000823,VERDICT: FALSE
+normal_0448,True,False,False,True,VERDICT: FALSE,2835.76,218,3266,0.001677,VERDICT: FALSE
+normal_0449,True,False,False,True,VERDICT: FALSE,2852.35,221,1445,0.000767,VERDICT: FALSE
+normal_0450,False,False,True,True,VERDICT: FALSE,2842.28,221,857,0.000473,VERDICT: FALSE
+normal_0451,True,,,False,,1849.96,0,0,0.000000,[API ERROR] Provider returned error
+normal_0452,True,False,False,True,VERDICT: FALSE,2973.43,222,2376,0.001232,VERDICT: FALSE
+normal_0453,False,False,True,True,VERDICT: FALSE,2994.84,222,6498,0.003293,VERDICT: FALSE
+normal_0454,False,False,True,True,VERDICT: FALSE,8.92,220,1184,0.000636,VERDICT: FALSE
+normal_0455,True,False,False,True,VERDICT: FALSE,46.51,221,1538,0.000813,VERDICT: FALSE
+normal_0456,False,False,True,True,VERDICT: FALSE,99.43,221,693,0.000391,VERDICT: FALSE
+normal_0457,True,False,False,True,VERDICT: FALSE,177.22,221,3705,0.001897,VERDICT: FALSE
+normal_0458,False,False,True,True,VERDICT: FALSE,211.84,220,2663,0.001375,VERDICT: FALSE
+normal_0459,False,False,True,True,VERDICT: FALSE,241.15,220,1075,0.000581,VERDICT: FALSE
+normal_0460,True,,,False,,2232.37,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0461,True,,,False,,2235.14,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0462,False,False,True,True,VERDICT: FALSE,435.38,220,5351,0.002720,VERDICT: FALSE
+normal_0463,True,True,True,True,VERDICT: TRUE,530.41,221,11059,0.005574,VERDICT: TRUE
+normal_0464,True,False,False,True,VERDICT: FALSE,539.93,221,2595,0.001342,VERDICT: FALSE
+normal_0465,True,False,False,True,VERDICT: FALSE,618.90,222,5922,0.003005,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x = y * (z * ((w * x) * w))\) implies \(x = (y * z) * (w * (u * w))\) in all magmas by checking for universal validity
+normal_0466,True,False,False,True,VERDICT: FALSE,634.73,211,835,0.000460,VERDICT: FALSE
+normal_0467,False,False,True,True,VERDICT: FALSE,677.81,217,929,0.000508,VERDICT: FALSE
+normal_0468,False,False,True,True,VERDICT: FALSE,718.31,220,1567,0.000828,VERDICT: FALSE
+normal_0469,False,False,True,True,VERDICT: FALSE,806.81,221,9007,0.004548,VERDICT: FALSE
+normal_0470,True,False,False,True,VERDICT: FALSE,819.40,219,2681,0.001384,VERDICT: FALSE
+normal_0471,True,,,False,,1930.18,56,3481,0.001752,
+normal_0472,False,False,True,True,VERDICT: FALSE,917.38,222,1104,0.000596,VERDICT: FALSE
+normal_0473,False,False,True,True,VERDICT: FALSE,953.47,221,809,0.000449,VERDICT: FALSE
+normal_0474,True,,,False,,2273.94,0,0,0.000000,[API ERROR] Provider returned error
+normal_0475,True,,,False,,2273.99,0,0,0.000000,[API ERROR] Provider returned error
+normal_0476,True,,,False,,2288.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0477,True,False,False,True,VERDICT: FALSE,1192.70,221,1663,0.000876,VERDICT: FALSE
+normal_0478,False,False,True,True,VERDICT: FALSE,1264.08,222,1716,0.000902,VERDICT: FALSE
+normal_0479,False,False,True,True,VERDICT: FALSE,1295.60,220,2389,0.001239,VERDICT: FALSE
+normal_0480,True,False,False,True,VERDICT: FALSE,1332.64,221,1489,0.000789,VERDICT: FALSE
+normal_0481,False,False,True,True,VERDICT: FALSE,1388.20,220,1668,0.000878,VERDICT: FALSE
+normal_0482,False,False,True,True,VERDICT: FALSE,1426.54,220,1240,0.000664,VERDICT: FALSE
+normal_0483,True,True,True,True,VERDICT: TRUE,1545.79,218,12589,0.006338,VERDICT: TRUE
+normal_0484,True,,,False,,2305.23,56,43,0.000033,
+normal_0485,True,False,False,True,VERDICT: FALSE,1533.16,214,1994,0.001040,VERDICT: FALSE
+normal_0486,True,False,False,True,VERDICT: FALSE,1694.88,220,1446,0.000767,VERDICT: FALSE
+normal_0487,False,,,False,,2316.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0488,True,,,False,,2335.41,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0489,True,,,False,,2354.41,0,0,0.000000,[API ERROR] Provider returned error
+normal_0490,False,,,False,,1940.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0491,True,,,False,,2390.53,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0492,True,,,False,,2423.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0493,False,,,False,,2441.26,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0494,True,,,False,,2469.52,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0495,True,,,False,,2486.77,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0496,True,,,False,,2512.96,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0497,False,,,False,,2528.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0498,False,,,False,,1761.05,0,0,0.000000,[API ERROR] Provider returned error
+normal_0499,False,,,False,,2543.31,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0500,True,,,False,,2572.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0501,False,,,False,,2589.71,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0502,True,,,False,,2605.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0503,False,,,False,,2635.87,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0504,True,,,False,,2656.42,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0505,False,,,False,,2681.51,0,0,0.000000,[API ERROR] Provider returned error
+normal_0506,False,False,True,True,VERDICT: FALSE,1798.91,221,3666,0.001877,VERDICT: FALSE
+normal_0507,True,,,False,,2726.16,55,45,0.000034,
+normal_0508,True,,,False,,2740.91,0,0,0.000000,[API ERROR] Provider returned error
+normal_0509,False,,,False,,2776.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0510,True,False,False,True,VERDICT: FALSE,2888.23,223,2608,0.001349,VERDICT: FALSE
+normal_0511,True,False,False,True,VERDICT: FALSE,2803.55,222,2783,0.001436,VERDICT: FALSE
+normal_0512,False,False,True,True,VERDICT: FALSE,2833.44,221,2503,0.001296,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x * (x * y) = (z * y) * x\) implies \((x * y) * x = (z * y) * z\) in every magma by seeking a counterexample. A magma 
+normal_0513,False,,,False,,1825.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0514,False,,,False,,1839.10,0,0,0.000000,[API ERROR] Provider returned error
+normal_0515,False,False,True,True,VERDICT: FALSE,2852.98,221,938,0.000513,VERDICT: FALSE
+normal_0516,True,False,False,True,VERDICT: FALSE,2926.74,221,1270,0.000679,VERDICT: FALSE
+normal_0517,False,,,False,,2206.44,0,0,0.000000,[API ERROR] Provider returned error
+normal_0518,False,False,True,True,VERDICT: FALSE,9.06,221,1170,0.000629,VERDICT: FALSE
+normal_0519,False,False,True,True,VERDICT: FALSE,45.06,222,1169,0.000629,VERDICT: FALSE
+normal_0520,False,False,True,True,VERDICT: FALSE,133.96,220,4577,0.002333,VERDICT: FALSE
+normal_0521,True,False,False,True,VERDICT: FALSE,164.99,220,1482,0.000785,VERDICT: FALSE
+normal_0522,True,True,True,True,VERDICT: TRUE,312.08,218,16664,0.008376,"VERDICT: TRUE\n\n## Explanation\n\nThe reasoning for the verdict ""TRUE"
+normal_0523,False,False,True,True,VERDICT: FALSE,346.50,221,4940,0.002514,VERDICT: FALSE
+normal_0524,False,False,True,True,VERDICT: FALSE,346.46,221,1939,0.001014,VERDICT: FALSE
+normal_0525,False,False,True,True,VERDICT: FALSE,366.17,222,2412,0.001250,VERDICT: FALSE
+normal_0526,True,False,False,True,VERDICT: FALSE,417.93,222,1841,0.000965,VERDICT: FALSE
+normal_0527,True,False,False,True,VERDICT: FALSE,500.63,222,5477,0.002783,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x = y * ((y * z) * w) * y\) implies \(x = (y * y) * ((x * x) * x)\) in all magmas by seeking a counterexample. A count
+normal_0528,False,False,True,True,VERDICT: FALSE,538.23,222,807,0.000448,VERDICT: FALSE
+normal_0529,False,False,True,True,VERDICT: FALSE,581.42,222,1573,0.000831,VERDICT: FALSE
+normal_0530,False,False,True,True,VERDICT: FALSE,640.55,220,962,0.000525,VERDICT: FALSE
+normal_0531,False,False,True,True,VERDICT: FALSE,686.08,221,1696,0.000892,VERDICT: FALSE
+normal_0532,False,False,True,True,VERDICT: FALSE,724.51,221,1822,0.000955,VERDICT: FALSE
+normal_0533,False,False,True,True,VERDICT: FALSE,766.75,220,1907,0.000998,VERDICT: FALSE
+normal_0534,False,False,True,True,VERDICT: FALSE,806.21,214,1124,0.000605,VERDICT: FALSE
+normal_0535,False,False,True,True,VERDICT: FALSE,847.28,217,2074,0.001080,VERDICT: FALSE
+normal_0536,False,False,True,True,VERDICT: FALSE,950.52,219,4172,0.002130,VERDICT: FALSE
+normal_0537,False,False,True,True,VERDICT: FALSE,961.15,220,1325,0.000706,VERDICT: FALSE
+normal_0538,True,False,False,True,VERDICT: FALSE,1019.40,222,5830,0.002959,VERDICT: FALSE
+normal_0539,False,False,True,True,VERDICT: FALSE,1072.81,221,1110,0.000599,VERDICT: FALSE
+normal_0540,True,True,True,True,VERDICT: TRUE,1125.03,219,1598,0.000843,VERDICT: TRUE
+normal_0541,False,False,True,True,VERDICT: FALSE,1201.34,220,1344,0.000716,VERDICT: FALSE
+normal_0542,False,False,True,True,VERDICT: FALSE,1262.83,221,1776,0.000932,VERDICT: FALSE
+normal_0543,False,False,True,True,VERDICT: FALSE,1290.40,221,1096,0.000592,VERDICT: FALSE
+normal_0544,True,False,False,True,VERDICT: FALSE,1337.56,220,1511,0.000799,VERDICT: FALSE
+normal_0545,False,False,True,True,VERDICT: FALSE,1388.50,220,1300,0.000694,VERDICT: FALSE
+normal_0546,False,False,True,True,VERDICT: FALSE,1434.85,217,2632,0.001359,VERDICT: FALSE
+normal_0547,False,False,True,True,VERDICT: FALSE,1459.56,218,1086,0.000587,VERDICT: FALSE
+normal_0548,True,True,True,True,VERDICT: TRUE,1514.64,222,4180,0.002134,VERDICT: TRUE
+normal_0549,True,False,False,True,VERDICT: FALSE,1634.42,221,17022,0.008555,"VERDICT: FALSE\n\n## Explanation\n\nThe reasoning for the verdict ""FALSE"" involves verifying whether the equation LHS: \("
+normal_0550,False,False,True,True,VERDICT: FALSE,1680.65,217,1360,0.000723,VERDICT: FALSE
+normal_0551,True,,,False,,2316.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0552,False,,,False,,2335.43,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0553,True,,,False,,2369.43,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0554,False,,,False,,2369.42,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0555,True,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0556,False,,,False,,2424.20,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0557,True,,,False,,2448.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0558,True,,,False,,2469.71,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0559,True,,,False,,2486.85,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0560,False,,,False,,2512.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0561,True,,,False,,2004.79,0,0,0.000000,[API ERROR] Provider returned error
+normal_0562,False,,,False,,2004.90,0,0,0.000000,[API ERROR] Provider returned error
+normal_0563,False,,,False,,2556.91,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0564,False,,,False,,2572.07,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0565,False,,,False,,2588.89,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0566,True,False,False,True,VERDICT: FALSE,2593.53,219,1171,0.000629,VERDICT: FALSE
+normal_0567,True,,,False,,2640.60,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0568,False,,,False,,2651.22,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0569,False,,,False,,2696.52,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0570,False,,,False,,2691.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0571,True,,,False,,2729.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0572,False,,,False,,2751.67,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0573,True,,,False,,2776.12,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0574,False,False,True,True,VERDICT: FALSE,2786.68,223,1315,0.000702,VERDICT: FALSE
+normal_0575,False,,,False,,2159.76,0,0,0.000000,[API ERROR] Provider returned error
+normal_0576,True,,,False,,2174.55,56,293,0.000158,
+normal_0577,False,,,False,,1825.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0578,True,,,False,,1839.13,0,0,0.000000,[API ERROR] Provider returned error
+normal_0579,False,False,True,True,VERDICT: FALSE,2874.39,221,4407,0.002248,VERDICT: FALSE
+normal_0580,False,False,True,True,VERDICT: FALSE,2900.26,220,1252,0.000670,VERDICT: FALSE
+normal_0581,False,,,False,,2206.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0582,True,,,False,,2219.98,0,0,0.000000,[API ERROR] Provider returned error
+normal_0583,True,,,False,,2221.64,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0584,True,False,False,True,VERDICT: FALSE,111.47,222,1510,0.000799,VERDICT: FALSE
+normal_0585,True,False,False,True,VERDICT: FALSE,165.25,220,945,0.000517,VERDICT: FALSE
+normal_0586,False,False,True,True,VERDICT: FALSE,274.92,219,9159,0.004623,VERDICT: FALSE
+normal_0587,False,False,True,True,VERDICT: FALSE,256.66,220,2710,0.001399,VERDICT: FALSE
+normal_0588,False,False,True,True,VERDICT: FALSE,338.40,219,4066,0.002077,VERDICT: FALSE
+normal_0589,True,,,False,,2273.95,54,3464,0.001743,
+normal_0590,True,False,False,True,VERDICT: FALSE,424.18,222,2535,0.001312,VERDICT: FALSE
+normal_0591,True,False,False,True,VERDICT: FALSE,497.78,218,3440,0.001764,VERDICT: FALSE
+normal_0592,False,False,True,True,VERDICT: FALSE,548.61,223,1472,0.000781,VERDICT: FALSE
+normal_0593,False,False,True,True,VERDICT: FALSE,583.38,220,1364,0.000726,VERDICT: FALSE
+normal_0594,False,False,True,True,VERDICT: FALSE,645.67,219,1439,0.000763,VERDICT: FALSE
+normal_0595,False,False,True,True,VERDICT: FALSE,685.38,220,999,0.000544,VERDICT: FALSE
+normal_0596,False,False,True,True,VERDICT: FALSE,727.34,219,1505,0.000796,VERDICT: FALSE
+normal_0597,True,False,False,True,VERDICT: FALSE,762.13,221,1540,0.000814,VERDICT: FALSE
+normal_0598,False,False,True,True,VERDICT: FALSE,815.28,220,1240,0.000664,VERDICT: FALSE
+normal_0599,True,True,True,True,VERDICT: TRUE,855.18,219,2309,0.001198,VERDICT: TRUE
+normal_0600,True,False,False,True,VERDICT: FALSE,945.47,222,2424,0.001256,VERDICT: FALSE
+normal_0601,True,,,False,,2265.47,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0602,True,False,False,True,VERDICT: FALSE,1013.75,220,2009,0.001048,VERDICT: FALSE
+normal_0603,True,False,False,True,VERDICT: FALSE,1083.50,221,2433,0.001261,VERDICT: FALSE
+normal_0604,False,False,True,True,VERDICT: FALSE,1124.91,221,1357,0.000723,VERDICT: FALSE
+normal_0605,True,False,False,True,VERDICT: FALSE,1215.53,217,1636,0.000861,VERDICT: FALSE
+normal_0606,True,False,False,True,VERDICT: FALSE,1260.48,221,1177,0.000633,VERDICT: FALSE
+normal_0607,True,False,False,True,VERDICT: FALSE,1299.73,221,2068,0.001078,VERDICT: FALSE
+normal_0608,False,False,True,True,VERDICT: FALSE,1334.80,222,1173,0.000631,VERDICT: FALSE
+normal_0609,True,False,False,True,VERDICT: FALSE,1399.58,222,2468,0.001278,VERDICT: FALSE
+normal_0610,True,False,False,True,VERDICT: FALSE,1435.57,217,972,0.000529,VERDICT: FALSE
+normal_0611,True,False,False,True,VERDICT: FALSE,1463.31,220,1307,0.000697,VERDICT: FALSE
+normal_0612,False,False,True,True,VERDICT: FALSE,1498.82,222,2120,0.001104,VERDICT: FALSE
+normal_0613,True,False,False,True,VERDICT: FALSE,1545.62,221,1697,0.000893,VERDICT: FALSE
+normal_0614,False,False,True,True,VERDICT: FALSE,1681.65,220,992,0.000540,VERDICT: FALSE
+normal_0615,True,,,False,,2316.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0616,False,,,False,,2342.14,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0617,False,False,True,True,VERDICT: FALSE,1705.36,220,1294,0.000691,VERDICT: FALSE
+normal_0618,False,,,False,,2369.40,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0619,False,,,False,,2408.06,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0620,True,,,False,,2424.19,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0621,True,,,False,,2453.56,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0622,False,,,False,,2469.79,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0623,True,,,False,,2494.08,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0624,False,,,False,,2512.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0625,True,,,False,,2004.85,0,0,0.000000,[API ERROR] Provider returned error
+normal_0626,True,,,False,,1761.05,0,0,0.000000,[API ERROR] Provider returned error
+normal_0627,False,,,False,,2543.33,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0628,False,,,False,,2573.67,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0629,True,False,False,True,VERDICT: FALSE,1773.19,221,1371,0.000730,VERDICT: FALSE
+normal_0630,False,,,False,,2604.89,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0631,False,,,False,,2635.87,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0632,False,,,False,,2651.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0633,True,,,False,,2696.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0634,False,,,False,,2696.50,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0635,True,,,False,,2729.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0636,False,,,False,,2751.48,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0637,False,,,False,,2776.09,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0638,True,False,False,True,VERDICT: FALSE,2141.56,220,972,0.000530,VERDICT: FALSE
+normal_0639,False,,,False,,2159.79,0,0,0.000000,[API ERROR] Provider returned error
+normal_0640,True,False,False,True,VERDICT: FALSE,2834.48,222,1438,0.000763,VERDICT: FALSE
+normal_0641,True,,,False,,2206.45,0,0,0.000000,[API ERROR] Provider returned error
+normal_0642,False,False,True,True,VERDICT: FALSE,211.86,221,2070,0.001079,VERDICT: FALSE
+normal_0643,False,False,True,True,VERDICT: FALSE,481.34,221,1667,0.000878,VERDICT: FALSE
+normal_0644,False,False,True,True,VERDICT: FALSE,725.63,221,1264,0.000676,VERDICT: FALSE
+normal_0645,True,False,False,True,VERDICT: FALSE,975.60,221,3051,0.001570,VERDICT: FALSE
+normal_0646,True,False,False,True,VERDICT: FALSE,1464.25,222,1251,0.000670,VERDICT: FALSE
+normal_0647,False,,,False,,2320.23,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0648,True,,,False,,2426.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0649,True,,,False,,1745.91,0,0,0.000000,[API ERROR] Provider returned error
+normal_0650,True,,,False,,2094.74,56,3859,0.001941,
+normal_0651,False,False,True,True,VERDICT: FALSE,2718.13,218,724,0.000406,VERDICT: FALSE
+normal_0652,True,,,False,,2174.54,0,0,0.000000,[API ERROR] Provider returned error
+normal_0653,False,,,False,,2206.42,0,0,0.000000,[API ERROR] Provider returned error
+normal_0654,True,False,False,True,VERDICT: FALSE,180.85,220,1860,0.000974,VERDICT: FALSE
+normal_0655,False,False,True,True,VERDICT: FALSE,465.45,221,6269,0.003179,VERDICT: FALSE
+normal_0656,True,True,True,True,VERDICT: TRUE,695.59,220,1464,0.000776,VERDICT: TRUE
+normal_0657,True,False,False,True,VERDICT: FALSE,945.36,221,1819,0.000954,VERDICT: FALSE
+normal_0658,True,False,False,True,VERDICT: FALSE,1257.78,218,4462,0.002275,VERDICT: FALSE
+normal_0659,True,False,False,True,VERDICT: FALSE,1444.35,222,2400,0.001244,VERDICT: FALSE
+normal_0660,True,,,False,,1684.49,0,0,0.000000,[API ERROR] Provider returned error
+normal_0661,False,,,False,,2410.82,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0662,False,,,False,,2527.98,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0663,True,,,False,,2038.64,0,0,0.000000,[API ERROR] Provider returned error
+normal_0664,False,,,False,,2711.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0665,True,False,False,True,VERDICT: FALSE,2831.62,218,1197,0.000642,VERDICT: FALSE
+normal_0666,True,False,False,True,VERDICT: FALSE,2956.57,221,2084,0.001086,VERDICT: FALSE
+normal_0667,False,False,True,True,VERDICT: FALSE,133.42,221,1699,0.000894,VERDICT: FALSE
+normal_0668,True,,,False,,2248.40,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0669,True,False,False,True,VERDICT: FALSE,687.95,221,1300,0.000694,VERDICT: FALSE
+normal_0670,False,False,True,True,VERDICT: FALSE,934.59,221,1237,0.000663,VERDICT: FALSE
+normal_0671,False,False,True,True,VERDICT: FALSE,1216.61,220,2146,0.001117,VERDICT: FALSE
+normal_0672,True,False,False,True,VERDICT: FALSE,1453.86,220,4273,0.002181,VERDICT: FALSE
+normal_0673,True,False,False,True,VERDICT: FALSE,1691.42,220,1363,0.000726,VERDICT: FALSE
+normal_0674,True,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0675,False,,,False,,2512.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0676,False,,,False,,2588.86,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0677,True,,,False,,2711.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0678,False,False,True,True,VERDICT: FALSE,2916.35,221,1183,0.000636,VERDICT: FALSE
+normal_0679,True,False,False,True,VERDICT: FALSE,133.57,217,1384,0.000735,VERDICT: FALSE
+normal_0680,False,False,True,True,VERDICT: FALSE,368.71,221,1142,0.000615,VERDICT: FALSE
+normal_0681,True,False,False,True,VERDICT: FALSE,678.34,221,3459,0.001774,VERDICT: FALSE
+normal_0682,True,False,False,True,VERDICT: FALSE,880.41,220,2648,0.001368,VERDICT: FALSE
+normal_0683,False,False,True,True,VERDICT: FALSE,1132.47,222,1036,0.000562,VERDICT: FALSE
+normal_0684,False,False,True,True,VERDICT: FALSE,1414.21,217,3017,0.001552,VERDICT: FALSE
+normal_0685,False,False,True,True,VERDICT: FALSE,1627.94,220,7781,0.003934,VERDICT: FALSE
+normal_0686,True,,,False,,1941.26,0,0,0.000000,[API ERROR] Provider returned error
+normal_0687,False,,,False,,2497.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0688,True,,,False,,2590.44,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0689,False,,,False,,2094.71,0,0,0.000000,[API ERROR] Provider returned error
+normal_0690,False,False,True,True,VERDICT: FALSE,2795.28,220,708,0.000398,VERDICT: FALSE
+normal_0691,True,,,False,,2994.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0692,True,,,False,,2221.64,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0693,False,False,True,True,VERDICT: FALSE,313.11,221,953,0.000521,VERDICT: FALSE
+normal_0694,False,False,True,True,VERDICT: FALSE,596.71,219,1774,0.000931,VERDICT: FALSE
+normal_0695,False,False,True,True,VERDICT: FALSE,827.28,217,1370,0.000728,VERDICT: FALSE
+normal_0696,False,False,True,True,VERDICT: FALSE,1095.15,221,1309,0.000699,VERDICT: FALSE
+normal_0697,False,False,True,True,VERDICT: FALSE,1346.28,220,987,0.000538,VERDICT: FALSE
+normal_0698,True,,,False,,2304.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0699,False,False,True,True,VERDICT: FALSE,1264.94,221,4832,0.002460,VERDICT: FALSE
+normal_0700,False,,,False,,2497.78,0,0,0.000000,[API ERROR] Provider returned error
+normal_0701,True,,,False,,2573.50,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0702,False,,,False,,2094.70,0,0,0.000000,[API ERROR] Provider returned error
+normal_0703,False,,,False,,2148.57,0,0,0.000000,[API ERROR] Network connection lost.
+normal_0704,False,False,True,True,VERDICT: FALSE,2862.58,222,1168,0.000628,VERDICT: FALSE
+normal_0705,False,False,True,True,VERDICT: FALSE,66.04,221,2511,0.001300,VERDICT: FALSE
+normal_0706,True,,,False,,2233.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0707,False,False,True,True,VERDICT: FALSE,580.40,222,870,0.000479,VERDICT: FALSE
+normal_0708,False,False,True,True,VERDICT: FALSE,813.71,214,963,0.000524,VERDICT: FALSE
+normal_0709,False,False,True,True,VERDICT: FALSE,1081.18,220,1534,0.000811,VERDICT: FALSE
+normal_0710,False,False,True,True,VERDICT: FALSE,1547.30,221,1382,0.000735,VERDICT: FALSE
+normal_0711,False,,,False,,2369.43,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0712,False,,,False,,2471.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0713,False,,,False,,2558.53,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0714,True,,,False,,2655.77,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0715,True,False,False,True,VERDICT: FALSE,2784.67,221,1129,0.000609,VERDICT: FALSE
+normal_0716,True,,,False,,1839.10,0,0,0.000000,[API ERROR] Provider returned error
+normal_0717,False,False,True,True,VERDICT: FALSE,62.23,219,7681,0.003884,VERDICT: FALSE
+normal_0718,True,False,False,True,VERDICT: FALSE,275.05,221,4518,0.002303,VERDICT: FALSE
+normal_0719,False,False,True,True,VERDICT: FALSE,554.85,210,1525,0.000805,VERDICT: FALSE
+normal_0720,True,True,True,True,VERDICT: TRUE,877.07,221,12809,0.006449,VERDICT: TRUE
+normal_0721,False,False,True,True,VERDICT: FALSE,1027.06,218,1056,0.000572,VERDICT: FALSE
+normal_0722,False,False,True,True,VERDICT: FALSE,1300.72,222,1405,0.000747,VERDICT: FALSE
+normal_0723,True,,,False,,2301.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0724,True,,,False,,2347.16,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0725,False,,,False,,2454.59,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0726,False,,,False,,1761.07,0,0,0.000000,[API ERROR] Provider returned error
+normal_0727,False,,,False,,2651.09,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0728,True,,,False,,2749.08,0,0,0.000000,[API ERROR] Provider returned error
+normal_0729,True,True,True,True,VERDICT: TRUE,678.76,221,13620,0.006854,VERDICT: TRUE
+normal_0730,True,,,False,,1925.81,0,0,0.000000,[API ERROR] Provider returned error
+normal_0731,True,False,False,True,VERDICT: FALSE,264.83,221,3433,0.001761,VERDICT: FALSE
+normal_0732,False,False,True,True,VERDICT: FALSE,548.88,219,1404,0.000746,VERDICT: FALSE
+normal_0733,True,False,False,True,VERDICT: FALSE,779.17,221,4222,0.002155,VERDICT: FALSE
+normal_0734,True,False,False,True,VERDICT: FALSE,1023.88,222,2773,0.001431,VERDICT: FALSE
+normal_0735,True,False,False,True,VERDICT: FALSE,1301.72,222,1723,0.000906,VERDICT: FALSE
+normal_0736,False,False,True,True,VERDICT: FALSE,1491.94,216,1146,0.000616,VERDICT: FALSE
+normal_0737,True,,,False,,2335.57,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0738,True,False,False,True,VERDICT: FALSE,1724.25,221,1925,0.001007,VERDICT: FALSE
+normal_0739,True,,,False,,2543.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0740,False,False,True,True,VERDICT: FALSE,2624.70,222,1052,0.000570,VERDICT: FALSE
+normal_0741,False,,,False,,2749.09,0,0,0.000000,[API ERROR] Provider returned error
+normal_0742,True,,,False,,2220.00,0,0,0.000000,[API ERROR] Provider returned error
+normal_0743,True,False,False,True,VERDICT: FALSE,224.17,221,1711,0.000900,VERDICT: FALSE
+normal_0744,True,False,False,True,VERDICT: FALSE,507.13,222,3164,0.001626,VERDICT: FALSE
+normal_0745,False,False,True,True,VERDICT: FALSE,764.21,220,6390,0.003239,VERDICT: FALSE
+normal_0746,False,False,True,True,VERDICT: FALSE,973.92,220,1585,0.000837,VERDICT: FALSE
+normal_0747,True,False,False,True,VERDICT: FALSE,1279.28,215,2116,0.001101,VERDICT: FALSE
+normal_0748,True,False,False,True,VERDICT: FALSE,1474.72,220,1180,0.000634,VERDICT: FALSE
+normal_0749,True,,,False,,2320.41,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0750,True,,,False,,2433.16,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0751,True,,,False,,1745.90,0,0,0.000000,[API ERROR] Provider returned error
+normal_0752,False,,,False,,2620.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0753,True,,,False,,2726.13,0,0,0.000000,[API ERROR] Provider returned error
+normal_0754,True,,,False,,2174.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0755,True,,,False,,2206.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0756,True,,,False,,2234.97,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0757,True,False,False,True,VERDICT: FALSE,449.44,222,3741,0.001915,VERDICT: FALSE
+normal_0758,False,,,False,,2251.97,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0759,False,False,True,True,VERDICT: FALSE,947.86,221,1549,0.000819,VERDICT: FALSE
+normal_0760,False,False,True,True,VERDICT: FALSE,1271.28,221,1389,0.000739,VERDICT: FALSE
+normal_0761,True,False,False,True,VERDICT: FALSE,1478.40,221,3328,0.001708,VERDICT: FALSE
+normal_0762,True,,,False,,2320.20,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0763,False,,,False,,2426.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0764,False,,,False,,2004.75,0,0,0.000000,[API ERROR] Provider returned error
+normal_0765,True,,,False,,2605.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0766,False,,,False,,2726.11,0,0,0.000000,[API ERROR] Provider returned error
+normal_0767,True,False,False,True,VERDICT: FALSE,2844.44,221,2019,0.001054,VERDICT: FALSE
+normal_0768,True,,,False,,2206.45,0,0,0.000000,[API ERROR] Provider returned error
+normal_0769,False,False,True,True,VERDICT: FALSE,170.68,223,986,0.000538,VERDICT: FALSE
+normal_0770,False,False,True,True,VERDICT: FALSE,415.85,221,1151,0.000620,VERDICT: FALSE
+normal_0771,False,False,True,True,VERDICT: FALSE,687.24,218,1016,0.000552,VERDICT: FALSE
+normal_0772,True,False,False,True,VERDICT: FALSE,939.61,219,1455,0.000771,VERDICT: FALSE
+normal_0773,True,,,False,,2289.12,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0774,True,,,False,,1684.51,0,0,0.000000,[API ERROR] Provider returned error
+normal_0775,False,,,False,,2402.83,0,0,0.000000,[API ERROR] Provider returned error
+normal_0776,False,,,False,,2526.47,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0777,False,False,True,True,VERDICT: FALSE,2043.35,222,5109,0.002599,VERDICT: FALSE
+normal_0778,False,,,False,,2711.70,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0779,True,False,False,True,VERDICT: FALSE,2831.57,222,4038,0.002063,VERDICT: FALSE
+normal_0780,False,False,True,True,VERDICT: FALSE,2931.59,218,1158,0.000623,VERDICT: FALSE
+normal_0781,True,False,False,True,VERDICT: FALSE,134.19,221,1289,0.000689,VERDICT: FALSE
+normal_0782,True,False,False,True,VERDICT: FALSE,377.56,220,1526,0.000807,VERDICT: FALSE
+normal_0783,False,False,True,True,VERDICT: FALSE,654.44,222,1236,0.000662,VERDICT: FALSE
+normal_0784,True,,,False,,2265.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0785,False,False,True,True,VERDICT: FALSE,1132.85,221,888,0.000488,VERDICT: FALSE
+normal_0786,False,False,True,True,VERDICT: FALSE,1411.13,222,990,0.000539,VERDICT: FALSE
+normal_0787,False,False,True,True,VERDICT: FALSE,1597.20,221,4518,0.002303,"VERDICT: FALSE\n\n## Explanation\n\nTo determine whether the equation \(x = (y * (x * (z * x))) * x\) implies \(x = y * (z * (z * (z * x)))\) in all magmas, a counterexample is constructed using a mag"
+normal_0788,False,,,False,,2390.49,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0789,False,,,False,,2497.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0790,False,,,False,,2587.24,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0791,True,,,False,,1941.26,0,0,0.000000,[API ERROR] Provider returned error
+normal_0792,False,False,True,True,VERDICT: FALSE,2811.04,221,885,0.000487,VERDICT: FALSE
+normal_0793,True,False,False,True,VERDICT: FALSE,2905.90,220,1519,0.000803,VERDICT: FALSE
+normal_0794,False,False,True,True,VERDICT: FALSE,117.76,217,857,0.000472,VERDICT: FALSE
+normal_0795,False,False,True,True,VERDICT: FALSE,396.16,221,5609,0.002849,VERDICT: FALSE
+normal_0796,False,False,True,True,VERDICT: FALSE,665.15,221,3435,0.001762,VERDICT: FALSE
+normal_0797,False,False,True,True,VERDICT: FALSE,860.17,222,1489,0.000789,VERDICT: FALSE
+normal_0798,True,,,False,,2288.94,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0799,False,False,True,True,VERDICT: FALSE,1407.10,220,2137,0.001112,VERDICT: FALSE
+normal_0800,True,True,True,True,VERDICT: TRUE,1604.27,220,6518,0.003303,VERDICT: TRUE
+normal_0801,False,,,False,,1941.23,0,0,0.000000,[API ERROR] Provider returned error
+normal_0802,True,,,False,,2497.77,0,0,0.000000,[API ERROR] Provider returned error
+normal_0803,False,,,False,,2573.63,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0804,False,,,False,,2094.72,0,0,0.000000,[API ERROR] Provider returned error
+normal_0805,True,False,False,True,VERDICT: FALSE,2795.29,222,2929,0.001509,VERDICT: FALSE
+normal_0806,False,False,True,True,VERDICT: FALSE,53.62,221,862,0.000475,VERDICT: FALSE
+normal_0807,False,False,True,True,VERDICT: FALSE,319.56,220,1359,0.000723,VERDICT: FALSE
+normal_0808,False,False,True,True,VERDICT: FALSE,592.80,221,1259,0.000674,VERDICT: FALSE
+normal_0809,True,,,False,,2262.77,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0810,False,False,True,True,VERDICT: FALSE,1088.23,222,824,0.000456,VERDICT: FALSE
+normal_0811,True,False,False,True,VERDICT: FALSE,1343.01,221,1279,0.000684,VERDICT: FALSE
+normal_0812,False,False,True,True,VERDICT: FALSE,1547.20,221,967,0.000528,VERDICT: FALSE
+normal_0813,True,,,False,,1925.82,0,0,0.000000,[API ERROR] Provider returned error
+normal_0814,False,,,False,,2484.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0815,False,,,False,,2558.48,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0816,True,,,False,,2675.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0817,False,,,False,,2776.29,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0818,True,,,False,,2959.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0819,False,False,True,True,VERDICT: FALSE,37.53,217,4044,0.002065,VERDICT: FALSE
+normal_0820,True,False,False,True,VERDICT: FALSE,346.59,221,13429,0.006759,VERDICT: FALSE
+normal_0821,True,False,False,True,VERDICT: FALSE,561.16,221,1150,0.000619,VERDICT: FALSE
+normal_0822,False,,,False,,2640.60,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0823,True,False,False,True,VERDICT: FALSE,504.78,221,1270,0.000679,VERDICT: FALSE
+normal_0824,False,False,True,True,VERDICT: FALSE,1346.35,221,2594,0.001341,VERDICT: FALSE
+normal_0825,True,,,False,,2301.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0826,True,,,False,,2369.42,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0827,True,,,False,,2471.62,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0828,False,,,False,,2556.83,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0829,False,,,False,,2672.93,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0830,False,,,False,,2776.28,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0831,False,,,False,,1839.37,0,0,0.000000,[API ERROR] Provider returned error
+normal_0832,False,False,True,True,VERDICT: FALSE,24.28,221,2207,0.001148,VERDICT: FALSE
+normal_0833,False,False,True,True,VERDICT: FALSE,247.28,217,813,0.000450,VERDICT: FALSE
+normal_0834,False,False,True,True,VERDICT: FALSE,550.10,220,1090,0.000589,VERDICT: FALSE
+normal_0835,False,False,True,True,VERDICT: FALSE,763.26,221,1090,0.000589,VERDICT: FALSE
+normal_0836,True,False,False,True,VERDICT: FALSE,1044.64,222,3644,0.001866,VERDICT: FALSE
+normal_0837,False,,,False,,2303.59,56,456,0.000239,
+normal_0838,False,,,False,,2347.00,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0839,False,,,False,,2454.63,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0840,False,,,False,,2543.29,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0841,False,,,False,,2635.87,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0842,True,,,False,,2756.28,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0843,True,,,False,,1825.54,0,0,0.000000,[API ERROR] Provider returned error
+normal_0844,True,,,False,,2217.19,0,0,0.000000,[API ERROR] Provider returned error
+normal_0845,False,False,True,True,VERDICT: FALSE,220.07,221,1064,0.000576,VERDICT: FALSE
+normal_0846,False,False,True,True,VERDICT: FALSE,505.85,221,1454,0.000771,VERDICT: FALSE
+normal_0847,False,False,True,True,VERDICT: FALSE,737.06,220,1935,0.001012,VERDICT: FALSE
+normal_0848,True,False,False,True,VERDICT: FALSE,987.18,223,3096,0.001593,VERDICT: FALSE
+normal_0849,True,False,False,True,VERDICT: FALSE,1274.39,219,1715,0.000901,VERDICT: FALSE
+normal_0850,False,False,True,True,VERDICT: FALSE,1472.61,221,882,0.000485,VERDICT: FALSE
+normal_0851,True,,,False,,2331.81,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0852,False,,,False,,2438.39,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0853,False,False,True,True,VERDICT: FALSE,2930.49,221,2038,0.001063,VERDICT: FALSE
+normal_0854,True,False,False,True,VERDICT: FALSE,1135.34,220,1028,0.000558,VERDICT: FALSE
+normal_0855,False,,,False,,2749.08,0,0,0.000000,[API ERROR] Provider returned error
+normal_0856,True,,,False,,1825.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0857,False,,,False,,2206.44,0,0,0.000000,[API ERROR] Provider returned error
+normal_0858,False,False,True,True,VERDICT: FALSE,210.49,221,1796,0.000942,VERDICT: FALSE
+normal_0859,False,False,True,True,VERDICT: FALSE,493.33,217,2084,0.001085,VERDICT: FALSE
+normal_0860,False,False,True,True,VERDICT: FALSE,723.97,221,704,0.000396,VERDICT: FALSE
+normal_0861,True,True,True,True,VERDICT: TRUE,1002.29,221,6275,0.003182,VERDICT: TRUE
+normal_0862,True,False,False,True,VERDICT: FALSE,1286.16,220,3666,0.001877,VERDICT: FALSE
+normal_0863,True,False,False,True,VERDICT: FALSE,1480.85,219,2656,0.001372,VERDICT: FALSE
+normal_0864,True,,,False,,2320.22,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0865,False,,,False,,2426.01,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0866,True,,,False,,2004.76,0,0,0.000000,[API ERROR] Provider returned error
+normal_0867,True,,,False,,2605.70,0,0,0.000000,[API ERROR] Provider returned error
+normal_0868,True,,,False,,2729.52,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0869,True,,,False,,2174.54,0,0,0.000000,[API ERROR] Provider returned error
+normal_0870,False,False,True,True,VERDICT: FALSE,182.43,221,1766,0.000927,VERDICT: FALSE
+normal_0871,False,False,True,True,VERDICT: FALSE,434.01,218,2134,0.001111,VERDICT: FALSE
+normal_0872,False,False,True,True,VERDICT: FALSE,690.47,220,613,0.000351,VERDICT: FALSE
+normal_0873,True,False,False,True,VERDICT: FALSE,946.35,221,1705,0.000897,VERDICT: FALSE
+normal_0874,True,False,False,True,VERDICT: FALSE,1243.39,216,2665,0.001376,VERDICT: FALSE
+normal_0875,False,False,True,True,VERDICT: FALSE,1440.90,221,1391,0.000740,VERDICT: FALSE
+normal_0876,True,False,False,True,VERDICT: FALSE,1697.04,220,1781,0.000935,VERDICT: FALSE
+normal_0877,False,,,False,,2410.84,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0878,False,,,False,,2526.47,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0879,True,,,False,,2038.63,0,0,0.000000,[API ERROR] Provider returned error
+normal_0880,False,,,False,,2711.68,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0881,True,False,False,True,VERDICT: FALSE,2819.23,222,2957,0.001523,VERDICT: FALSE
+normal_0882,False,False,True,True,VERDICT: FALSE,1417.07,219,11538,0.005813,VERDICT: FALSE
+normal_0883,False,,,False,,2675.16,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0884,False,False,True,True,VERDICT: FALSE,574.35,220,3394,0.001741,VERDICT: FALSE
+normal_0885,False,,,False,,2350.32,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0886,True,,,False,,2602.40,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0887,False,False,True,True,VERDICT: FALSE,1222.92,219,1000,0.000544,VERDICT: FALSE
+normal_0888,True,False,False,True,VERDICT: FALSE,1452.43,222,4485,0.002287,VERDICT: FALSE
+normal_0889,False,,,False,,1665.34,0,0,0.000000,[API ERROR] Provider returned error
+normal_0890,True,,,False,,2408.05,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0891,True,,,False,,1752.12,56,876,0.000449,
+normal_0892,False,,,False,,2038.63,0,0,0.000000,[API ERROR] Provider returned error
+normal_0893,False,,,False,,2714.61,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0894,False,False,True,True,VERDICT: FALSE,2817.63,218,2352,0.001220,VERDICT: FALSE
+normal_0895,True,False,False,True,VERDICT: FALSE,2916.90,221,1868,0.000978,VERDICT: FALSE
+normal_0896,True,False,False,True,VERDICT: FALSE,126.48,221,1270,0.000679,VERDICT: FALSE
+normal_0897,True,False,False,True,VERDICT: FALSE,392.11,221,3922,0.002005,VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \( x = (y \cdot ((z \cdot x) \cdot z)) \cdot w \) implies \( x = ((y \cdot (x \cdot z)) \cdot w) \cdot x \) in all magma
+normal_0898,False,False,True,True,VERDICT: FALSE,649.24,219,1235,0.000661,VERDICT: FALSE
+normal_0899,True,False,False,True,VERDICT: FALSE,884.47,221,3379,0.001734,VERDICT: FALSE
+normal_0900,False,False,True,True,VERDICT: FALSE,1131.63,221,1213,0.000651,VERDICT: FALSE
+normal_0901,True,False,False,True,VERDICT: FALSE,1401.58,220,1151,0.000619,VERDICT: FALSE
+normal_0902,True,,,False,,2369.91,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0903,False,,,False,,2497.78,0,0,0.000000,[API ERROR] Provider returned error
+normal_0904,False,,,False,,2573.70,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0905,False,,,False,,2094.69,0,0,0.000000,[API ERROR] Provider returned error
+normal_0906,True,,,False,,2906.60,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0907,False,False,True,True,VERDICT: FALSE,2895.87,221,5313,0.002701,VERDICT: FALSE
+normal_0908,True,False,False,True,VERDICT: FALSE,70.07,221,1501,0.000795,VERDICT: FALSE
+normal_0909,False,False,True,True,VERDICT: FALSE,341.02,222,1011,0.000550,VERDICT: FALSE
+normal_0910,True,,,False,,2250.16,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0911,True,True,True,True,VERDICT: TRUE,833.50,218,2590,0.001339,VERDICT: TRUE
+normal_0912,False,False,True,True,VERDICT: FALSE,1115.91,222,3865,0.001977,VERDICT: FALSE
+normal_0913,True,,,False,,2426.02,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0914,False,False,True,True,VERDICT: FALSE,1554.26,221,1014,0.000551,VERDICT: FALSE
+normal_0915,False,False,True,True,VERDICT: FALSE,1236.76,222,1885,0.000987,VERDICT: FALSE
+normal_0916,False,,,False,,2038.66,0,0,0.000000,[API ERROR] Provider returned error
+normal_0917,True,,,False,,2681.52,56,4214,0.002118,
+normal_0918,True,False,False,True,VERDICT: FALSE,1791.96,221,2393,0.001241,VERDICT: FALSE
+normal_0919,True,False,False,True,VERDICT: FALSE,2786.01,221,1151,0.000620,VERDICT: FALSE
+normal_0920,True,False,False,True,VERDICT: FALSE,2868.51,221,2301,0.001195,VERDICT: FALSE
+normal_0921,False,False,True,True,VERDICT: FALSE,60.14,221,1633,0.000861,VERDICT: FALSE
+normal_0922,True,True,True,True,VERDICT: TRUE,396.17,223,10532,0.005311,VERDICT: TRUE
+normal_0923,False,False,True,True,VERDICT: FALSE,595.77,215,2206,0.001146,VERDICT: FALSE
+normal_0924,False,False,True,True,VERDICT: FALSE,815.45,221,1376,0.000732,VERDICT: FALSE
+normal_0925,True,False,False,True,VERDICT: FALSE,1084.11,220,1251,0.000669,VERDICT: FALSE
+normal_0926,True,True,True,True,VERDICT: TRUE,1450.26,223,17606,0.008848,VERDICT: TRUE
+normal_0927,True,False,False,True,VERDICT: FALSE,1565.20,221,2233,0.001161,VERDICT: FALSE
+normal_0928,True,,,False,,1925.81,0,0,0.000000,[API ERROR] Provider returned error
+normal_0929,True,,,False,,2471.56,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0930,True,,,False,,2543.35,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0931,False,,,False,,2675.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0932,True,,,False,,2776.26,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0933,False,,,False,,1839.13,0,0,0.000000,[API ERROR] Provider returned error
+normal_0934,True,True,True,True,VERDICT: TRUE,269.56,219,2361,0.001224,VERDICT: TRUE
+normal_0935,False,False,True,True,VERDICT: FALSE,555.20,221,788,0.000438,VERDICT: FALSE
+normal_0936,False,False,True,True,VERDICT: FALSE,791.64,217,3590,0.001838,VERDICT: FALSE
+normal_0937,True,,,False,,2273.95,0,0,0.000000,[API ERROR] Provider returned error
+normal_0938,True,False,False,True,VERDICT: FALSE,1316.32,218,2844,0.001466,VERDICT: FALSE
+normal_0939,False,False,True,True,VERDICT: FALSE,1501.48,221,1156,0.000622,VERDICT: FALSE
+normal_0940,True,,,False,,2350.54,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0941,True,,,False,,2454.51,0,0,0.000000,[API ERROR] Provider returned error
+normal_0942,True,,,False,,2004.83,0,0,0.000000,[API ERROR] Provider returned error
+normal_0943,True,False,False,True,VERDICT: FALSE,1402.93,222,1564,0.000826,VERDICT: FALSE
+normal_0944,True,,,False,,2094.69,0,0,0.000000,[API ERROR] Provider returned error
+normal_0945,True,False,False,True,VERDICT: FALSE,592.93,221,1322,0.000705,VERDICT: FALSE
+normal_0946,True,,,False,,1925.81,0,0,0.000000,[API ERROR] Provider returned error
+normal_0947,True,False,False,True,VERDICT: FALSE,2863.31,220,2917,0.001502,VERDICT: FALSE
+normal_0948,True,False,False,True,VERDICT: FALSE,1100.78,220,3359,0.001723,"VERDICT: FALSE\n\n## Explanation\n\nThe reasoning verifies whether the equation \(x = y * (y * ((z * y) * y))\) implies \(x * x = x * (y * (z * y))\) in every magma. To determine this, a counterexampl"
+normal_0949,True,False,False,True,VERDICT: FALSE,769.98,222,1693,0.000891,VERDICT: FALSE
+normal_0950,False,False,True,True,VERDICT: FALSE,1046.88,217,5070,0.002578,VERDICT: FALSE
+normal_0951,True,False,False,True,VERDICT: FALSE,1308.29,222,2317,0.001203,VERDICT: FALSE
+normal_0952,False,False,True,True,VERDICT: FALSE,1494.48,221,1341,0.000715,VERDICT: FALSE
+normal_0953,True,,,False,,2346.96,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0954,True,,,False,,2453.57,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0955,True,,,False,,2004.78,0,0,0.000000,[API ERROR] Provider returned error
+normal_0956,False,,,False,,2635.86,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0957,False,,,False,,2761.11,0,0,0.000000,[API ERROR] Provider returned error
+normal_0958,False,,,False,,1825.57,0,0,0.000000,[API ERROR] Provider returned error
+normal_0959,True,,,False,,2217.18,0,0,0.000000,[API ERROR] Provider returned error
+normal_0960,False,False,True,True,VERDICT: FALSE,219.02,222,1223,0.000656,VERDICT: FALSE
+normal_0961,False,False,True,True,VERDICT: FALSE,493.23,222,1439,0.000764,VERDICT: FALSE
+normal_0962,True,False,False,True,VERDICT: FALSE,745.93,219,3522,0.001805,VERDICT: FALSE
+normal_0963,False,False,True,True,VERDICT: FALSE,971.56,221,1566,0.000827,VERDICT: FALSE
+normal_0964,False,False,True,True,VERDICT: FALSE,1288.41,222,3314,0.001701,VERDICT: FALSE
+normal_0965,True,False,False,True,VERDICT: FALSE,1480.39,221,3205,0.001647,VERDICT: FALSE
+normal_0966,True,,,False,,2433.19,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0967,True,,,False,,2004.78,0,0,0.000000,[API ERROR] Provider returned error
+normal_0968,True,,,False,,2620.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0969,False,,,False,,2736.67,0,0,0.000000,[API ERROR] Provider returned error
+normal_0970,False,,,False,,2174.53,0,0,0.000000,[API ERROR] Provider returned error
+normal_0971,False,,,False,,2206.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0972,True,False,False,True,VERDICT: FALSE,185.89,220,1576,0.000832,VERDICT: FALSE
+normal_0973,True,,,False,,2236.79,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0974,False,False,True,True,VERDICT: FALSE,697.75,221,1386,0.000737,VERDICT: FALSE
+normal_0975,False,,,False,,2217.20,0,0,0.000000,[API ERROR] Provider returned error
+normal_0976,False,False,True,True,VERDICT: FALSE,1272.37,218,1583,0.000835,VERDICT: FALSE
+normal_0977,False,,,False,,2620.68,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0978,True,,,False,,2094.70,0,0,0.000000,[API ERROR] Provider returned error
+normal_0979,False,,,False,,2319.89,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0980,True,,,False,,1745.89,0,0,0.000000,[API ERROR] Provider returned error
+normal_0981,True,,,False,,2617.57,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0982,False,,,False,,2741.12,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0983,True,,,False,,2174.55,0,0,0.000000,[API ERROR] Provider returned error
+normal_0984,True,,,False,,2206.43,0,0,0.000000,[API ERROR] Provider returned error
+normal_0985,False,False,True,True,VERDICT: FALSE,174.68,221,1240,0.000664,VERDICT: FALSE
+normal_0986,True,False,False,True,VERDICT: FALSE,434.78,220,3475,0.001781,VERDICT: FALSE
+normal_0987,False,False,True,True,VERDICT: FALSE,732.25,220,6817,0.003453,VERDICT: FALSE
+normal_0988,True,False,False,True,VERDICT: FALSE,942.71,222,2040,0.001064,VERDICT: FALSE
+normal_0989,False,False,True,True,VERDICT: FALSE,1232.52,221,1744,0.000916,VERDICT: FALSE
+normal_0990,False,False,True,True,VERDICT: FALSE,1504.36,220,11170,0.005629,VERDICT: FALSE
+normal_0991,False,,,False,,1684.49,0,0,0.000000,[API ERROR] Provider returned error
+normal_0992,True,,,False,,2409.01,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0993,False,,,False,,2512.95,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0994,False,,,False,,2590.44,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0995,False,,,False,,2696.69,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+normal_0996,False,False,True,True,VERDICT: FALSE,2820.02,221,2908,0.001498,VERDICT: FALSE
+normal_0997,False,,,False,,3026.59,0,0,0.000000,[EXCEPTION] TimeoutError: 
+normal_0998,True,False,False,True,VERDICT: FALSE,378.06,220,1292,0.000690,VERDICT: FALSE
+normal_0999,False,False,True,True,VERDICT: FALSE,658.00,221,1391,0.000740,VERDICT: FALSE
+normal_1000,True,False,False,True,VERDICT: FALSE,908.48,221,3395,0.001742,VERDICT: FALSE
