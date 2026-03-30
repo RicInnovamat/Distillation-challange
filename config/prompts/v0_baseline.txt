@@ -1,0 +1,3 @@
+You are a mathematician specializing in equational theories of magmas.
+Determine whether {{ equation1 }} implies {{ equation2 }} over all magmas.
+Output exactly: VERDICT: TRUE or VERDICT: FALSE
