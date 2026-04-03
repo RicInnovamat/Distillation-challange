@@ -1,0 +1,141 @@
+You are solving equational implication problems over magmas (a set with one binary operation *, and no other axioms unless forced by Equation 1).
+Task: does Equation 1 imply Equation 2 over ALL magmas?
+
+Equation 1:
+{{ equation1 }}
+
+Equation 2:
+{{ equation2 }}
+
+OUTPUT FORMAT (mandatory)
+Your FIRST line must be exactly one of:
+VERDICT: TRUE
+VERDICT: FALSE
+Then optionally one short line:
+RULE: <very short reason>
+No other format.
+
+IMPORTANT
+- Follow the STEP protocol exactly.
+- Never override a fired rule with free-form algebra.
+- FALSE requires an exact refutation rule or a listed finite witness.
+- TRUE requires an exact family solver, a listed named theorem, or a tiny exact rewrite.
+- For FALSE-search, work finite-first: use only the listed finite witnesses.
+- Failure to find a finite witness is NOT evidence for TRUE.
+- If no listed TRUE rule fires, answer FALSE.
+- Keep reasoning internal; keep the output short.
+
+STEP 0. META-PROCESS
+READ: parse both equations as binary trees.
+ANALYZE: compute the invariants in STEP 1.
+PLAN: choose one route only: family / exclusion / finite witness / named theorem / tiny rewrite.
+IMPLEMENT: execute that route literally.
+VERIFY: ask internally: What exactly am I doing? Why? How does it decide TRUE/FALSE?
+If unclear, do not trust the route.
+
+STEP 1. NORMALIZE AND EXTRACT INVARIANTS
+Safe symmetries for classification only:
+- alpha-rename variables by first appearance;
+- swap the two sides of an equation;
+- dualize BOTH equations simultaneously by reversing every product: dual(a*b)=dual(b)*dual(a).
+Never dualize only one equation.
+
+For each side compute:
+- whether it is a bare variable or a genuine product term;
+- leftmost variable;
+- rightmost variable;
+- leaf word = variables read left-to-right, ignoring parentheses;
+- variable set;
+- variable multiset;
+- parity vector = variable counts mod 2;
+- left spine depth: LSD(x)=0, LSD(a*b)=1+LSD(a);
+- right spine depth: RSD(x)=0, RSD(a*b)=1+RSD(b).
+For commutativity only, use recursive commutative normal form CN:
+CN(x)=x; CN(a*b)=sort(CN(a),CN(b)) with tree shape preserved.
+So ((x*y)*z) and (x*(y*z)) are different under commutativity alone.
+
+STEP 2. TRIVIAL DECISIONS
+2.1 If Equation 2 is a tautology t=t, answer TRUE.
+2.2 If Equation 1 and Equation 2 are identical up to alpha-renaming, side-swap, and optional simultaneous dualization, answer TRUE.
+2.3 If Equation 1 is a tautology and Equation 2 is not, answer FALSE.
+
+STEP 3. EXACT SOURCE-FAMILY SOLVERS
+If Equation 1 matches one of the following exactly (up to alpha-renaming, side-swap, and optional simultaneous dualization), use the solver and STOP.
+
+3.1 Singleton/collapse family.
+If one side is a bare variable v and the other side does not contain v at all, then Equation 1 forces the singleton law. Examples: x=y, x=y*y, x=y*z, x=(y*z)*w. Then every equation holds. Answer TRUE.
+
+3.2 Left projection family.
+If Equation 1 is x=x*y or x*y=x, then a*b=a. Every term equals its leftmost variable. Equation 2 holds iff the two sides of Equation 2 have the same leftmost variable. Otherwise FALSE.
+
+3.3 Right projection family.
+If Equation 1 is x=y*x or x*y=y, then a*b=b. Every term equals its rightmost variable. Equation 2 holds iff the two sides of Equation 2 have the same rightmost variable. Otherwise FALSE.
+
+3.4 Right-ignored-input family.
+If Equation 1 is x*x=x*y or x*y=x*z, then a*b depends only on a and equals a*a after one step. Every term is determined by (leftmost variable, left spine depth). Equation 2 holds iff both sides of Equation 2 have the same leftmost variable and the same left spine depth. Otherwise FALSE.
+
+3.5 Left-ignored-input family.
+If Equation 1 is x*x=y*x or x*y=z*y, then a*b depends only on b and equals b*b after one step. Every term is determined by (rightmost variable, right spine depth). Equation 2 holds iff both sides of Equation 2 have the same rightmost variable and the same right spine depth. Otherwise FALSE.
+
+3.6 Constant-operation family.
+If Equation 1 is x*y=z*w or x*x=y*z, then every genuine product term has one constant value c. Equation 2 holds iff both sides of Equation 2 are genuine product terms, or Equation 2 is tautological. Otherwise FALSE.
+
+3.7 Associativity family.
+If Equation 1 is x*(y*z)=(x*y)*z (or reverse orientation), then Equation 2 holds iff the two sides of Equation 2 have the same leaf word. Otherwise FALSE.
+
+3.8 Commutativity family.
+If Equation 1 is x*y=y*x, then Equation 2 holds iff the two sides of Equation 2 have the same commutative normal form CN. Otherwise FALSE.
+
+3.9 Idempotence family.
+If Equation 1 is x*x=x or x=x*x, use only local contractions/expansions u*u <-> u. Do NOT assume associativity or commutativity. If both sides of Equation 2 reduce to exactly the same tree, answer TRUE. Otherwise continue.
+
+STEP 4. SYNTACTIC EXCLUSION THEOREMS
+These are exact FALSE rules.
+If Equation 1 has the same invariant on its two sides, but Equation 2 does not, answer FALSE.
+Use this for:
+4.1 leftmost variable;
+4.2 rightmost variable;
+4.3 leaf word;
+4.4 variable set;
+4.5 variable multiset;
+4.6 parity vector mod 2.
+Also: if Equation 2 has a bare variable on one side and a genuine product term on the other, and Equation 1 is compatible with a non-singleton constant magma, confirm FALSE via STEP 5.7.
+
+STEP 5. FINITE WITNESS MAGMAS
+Use only these finite witnesses for FALSE. If Equation 1 holds in one of them and Equation 2 fails there, answer FALSE immediately.
+5.1 Left-zero witness: a*b=a. Realizes leftmost-variable equality.
+5.2 Right-zero witness: a*b=b. Realizes rightmost-variable equality.
+5.3 Bounded-word witness: words over the current variables of length <= K, with overflow symbol O; operation = concatenation with overflow. Realizes leaf-word equality.
+5.4 Set-union witness: carrier P(V), operation = union. Realizes variable-set equality.
+5.5 Bounded-count witness: carrier (Z/(K+1)Z)^V, operation = addition mod K+1. Realizes variable-multiset equality exactly for the current pair.
+5.6 Parity witness: carrier (F2)^V, operation = addition mod 2. Realizes parity equality.
+5.7 Two-element constant witness: carrier {0,1}, operation a*b=0. Every genuine product term is 0, but a bare variable stays free. Use this against targets mixing bare-variable and product sides.
+
+STEP 6. NAMED HIGH-LEVERAGE THEOREMS
+If Equation 1 matches one of these exactly, use the stated consequence and STOP.
+6.1 x = y*((z*x)*(z*z))  => singleton law => TRUE for every Equation 2.
+6.2 x = (y*z)*(y*(x*z)) => parity law. Equation 2 holds iff the two sides of Equation 2 have the same parity vector; otherwise FALSE.
+6.3 x*y = (y*y)*x       => commutativity. Then solve Equation 2 by commutative normal form CN.
+6.4 The pair x = y*(x*y) and x = (y*x)*y are equivalent. If Equation 1 is one and Equation 2 is the other, answer TRUE.
+
+STEP 7. TINY SAFE REWRITE FALLBACK
+Use this only if STEPs 3-6 did not decide the case.
+Allowed rule: if Equation 1 is L=R, then under any substitution and one-hole context you may replace L by R or R by L.
+Restrictions:
+- at most 2 rewrite steps;
+- exact subterm replacement only;
+- no new variables in the rewritten term beyond those already present in the matched subterm;
+- do not invent derived laws;
+- use this mainly for commutativity, associativity, idempotence, projection, or the ignored-input families.
+If 1-2 exact rewrites convert one side of Equation 2 into the other, answer TRUE. Otherwise continue.
+
+STEP 8. FINAL DEFAULT
+If you are here, no exact TRUE rule fired.
+Answer FALSE, especially if any of these hold:
+- Equation 2 introduces a variable absent from Equation 1, and Equation 1 is not singleton/constant/named-strong;
+- Equation 2 asks for child-order freedom, but Equation 1 does not imply commutativity;
+- Equation 2 asks for rebracketing, but Equation 1 does not imply associativity;
+- Equation 2 mixes bare-variable and product sides while Equation 1 is compatible with the constant witness;
+- the only support for TRUE is “Equation 1 feels stronger”.
+
+Now solve the given pair.
