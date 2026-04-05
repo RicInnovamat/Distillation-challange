@@ -1,33 +1,78 @@
+# Official SAIR evaluation models for the Equational Theories Stage 1 challenge.
+# Seven models, as shown in the SAIR Playground. Each has one or two backends:
+#   - openrouter: cloud inference via OpenRouter
+#   - ollama:     local inference via ollama (omitted for closed models)
+#
+# Verify ollama model_ids before first local run: `ollama pull <model_id>`.
+
 models:
   gpt-oss-120b:
-    provider: openrouter
-    model_id: "openai/gpt-oss-120b"
-    input_cost_per_1m: 0.039
-    output_cost_per_1m: 0.19
+    display_name: "OpenAI: gpt-oss-120b"
+    openrouter:
+      model_id: "openai/gpt-oss-120b"
+      input_cost_per_1m: 0.039
+      output_cost_per_1m: 0.190
+    ollama:
+      model_id: "gpt-oss:120b"
+
+  gemma-4-31b:
+    display_name: "Google: Gemma 4 31B"
+    openrouter:
+      model_id: "google/gemma-4-31b-it"
+      input_cost_per_1m: 0.140
+      output_cost_per_1m: 0.400
+    ollama:
+      model_id: "gemma4:31b"
 
   llama-3.3-70b:
-    provider: openrouter
-    model_id: "meta-llama/llama-3.3-70b-instruct"
-    input_cost_per_1m: 0.10
-    output_cost_per_1m: 0.32
+    display_name: "Meta: Llama 3.3 70B Instruct"
+    openrouter:
+      model_id: "meta-llama/llama-3.3-70b-instruct"
+      input_cost_per_1m: 0.100
+      output_cost_per_1m: 0.320
+    ollama:
+      model_id: "llama3.3:70b"
+
+  deepseek-v3.2:
+    display_name: "DeepSeek: DeepSeek V3.2"
+    openrouter:
+      model_id: "deepseek/deepseek-v3.2"
+      input_cost_per_1m: 0.260
+      output_cost_per_1m: 0.380
+    ollama:
+      model_id: "deepseek-v3.2:latest"
+
+  gpt-oss-20b:
+    display_name: "OpenAI: gpt-oss-20b"
+    openrouter:
+      model_id: "openai/gpt-oss-20b"
+      input_cost_per_1m: 0.030
+      output_cost_per_1m: 0.110
+    ollama:
+      model_id: "gpt-oss:20b"
 
   gemini-3.1-flash-lite:
-    provider: openrouter
-    model_id: "google/gemini-3.1-flash-lite-preview"
-    input_cost_per_1m: 0.25
-    output_cost_per_1m: 1.50
+    display_name: "Google: Gemini 3.1 Flash Lite Preview"
+    openrouter:
+      model_id: "google/gemini-3.1-flash-lite-preview"
+      input_cost_per_1m: 0.250
+      output_cost_per_1m: 1.500
+    # closed model — no ollama backend
 
   grok-4.1-fast:
-    provider: openrouter
-    model_id: "x-ai/grok-4.1-fast"
-    input_cost_per_1m: 0.20
-    output_cost_per_1m: 0.50
+    display_name: "xAI: Grok 4.1 Fast"
+    openrouter:
+      model_id: "x-ai/grok-4.1-fast"
+      input_cost_per_1m: 0.200
+      output_cost_per_1m: 0.500
+    # closed model — no ollama backend
 
 defaults:
   temperature: 0.0
   max_tokens: 1024
   concurrency: 10
   openrouter_base_url: "https://openrouter.ai/api/v1"
+  ollama_base_url: "http://localhost:11434"
 
 datasets:
   normal: "Training_data/normal.jsonl"

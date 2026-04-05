@@ -6,11 +6,13 @@ Loads JSONL problems, substitutes equations into a prompt template,
 calls target models via OpenRouter API, parses VERDICT from responses,
 and outputs per-problem CSV results with accuracy summary and cost tracking.
 
-Usage:
-    python eval_harness.py --model gpt-oss-120b --prompt config/prompts/v0_baseline.txt --data hard2
-    python eval_harness.py --model llama-3.3-70b --prompt cheatsheets/v1.txt --data normal --concurrency 20
-    python eval_harness.py --model gpt-oss-120b --prompt config/prompts/v0_baseline.txt --data hard2 --dry-run
-    python eval_harness.py --model gpt-oss-120b --prompt config/prompts/v0_baseline.txt --data hard2 --limit 30
+Usage (interactive — model/backend prompted at start):
+    python eval_harness.py --prompt cheatsheets/v1_cheatsheet.txt --data hard2
+
+Usage (scripted — model/backend fully specified):
+    python eval_harness.py --model gpt-oss-120b --backend openrouter --prompt config/prompts/v0_baseline.txt --data hard2
+    python eval_harness.py --model llama-3.3-70b --backend ollama     --prompt cheatsheets/v1.txt --data normal
+    python eval_harness.py --model gpt-oss-120b --prompt config/prompts/v0_baseline.txt --data hard2 --dry-run --limit 30
 """
 
 import argparse
@@ -23,6 +25,7 @@ import ssl
 import sys
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 
 import aiohttp
@@ -67,11 +70,13 @@ class Result:
     raw_verdict: str
     parse_ok: bool
     correct: bool | None
-    response_text: str
+    response_text: str        # truncated content (for CSV display)
     latency_s: float
     input_tokens: int = 0
     output_tokens: int = 0
     cost_usd: float = 0.0
+    content: str = ""         # full message content (for JSON reasoning dump)
+    reasoning: str = ""       # separate reasoning thread, if the model emits one
 
 
 @dataclass
@@ -206,7 +211,7 @@ async def call_openrouter(
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://github.com/RicInnovamat/Distillation-challange",
+        "HTTP-Referer": "https://github.com/Distilliation-Math/Distillation-challange",
         "X-Title": "SAIR-Distillation-Challenge",
     }
     payload = {
@@ -243,6 +248,110 @@ async def call_openrouter(
     raise RuntimeError(f"Failed after {MAX_RETRIES} retries")
 
 
+async def call_ollama(
+    session: aiohttp.ClientSession,
+    model_id: str,
+    prompt: str,
+    base_url: str,
+    temperature: float,
+    max_tokens: int,
+) -> dict:
+    """Call local Ollama chat API; return response shaped like OpenRouter's."""
+    url = f"{base_url}/api/chat"
+    payload = {
+        "model": model_id,
+        "messages": [{"role": "user", "content": prompt}],
+        "stream": False,
+        "options": {
+            "temperature": temperature,
+            "num_predict": max_tokens,
+        },
+    }
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            async with SEMAPHORE:
+                async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=300)) as resp:
+                    if resp.status >= 500:
+                        delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
+                        print(f"  Ollama error {resp.status}, retrying in {delay}s...", file=sys.stderr)
+                        await asyncio.sleep(delay)
+                        continue
+                    if resp.status == 404:
+                        body = await resp.text()
+                        raise RuntimeError(
+                            f"Ollama model not found: {model_id}. "
+                            f"Pull it first: `ollama pull {model_id}`. Server said: {body[:200]}"
+                        )
+                    resp.raise_for_status()
+                    raw = await resp.json()
+        except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+            if attempt < MAX_RETRIES - 1:
+                delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
+                print(f"  Ollama request error: {e}, retrying in {delay}s...", file=sys.stderr)
+                await asyncio.sleep(delay)
+                continue
+            raise
+        # Shape ollama response like OpenRouter's (OpenAI format) so downstream
+        # parsing code is backend-agnostic. Ollama thinking-mode models return
+        # the reasoning trace in message.thinking; expose it as "reasoning" for
+        # a unified downstream interface.
+        message = raw.get("message", {})
+        content = message.get("content", "") or ""
+        reasoning = message.get("thinking", "") or ""
+        return {
+            "choices": [{"message": {"role": "assistant", "content": content, "reasoning": reasoning}}],
+            "usage": {
+                "prompt_tokens": raw.get("prompt_eval_count", 0),
+                "completion_tokens": raw.get("eval_count", 0),
+            },
+        }
+
+    raise RuntimeError(f"Ollama failed after {MAX_RETRIES} retries")
+
+
+# ---------------------------------------------------------------------------
+# Interactive model/backend selection
+# ---------------------------------------------------------------------------
+
+def prompt_select_model(models: dict) -> str:
+    """Show a numbered menu of models and return the chosen key."""
+    names = list(models.keys())
+    print("\nSelect a model:")
+    for i, name in enumerate(names, 1):
+        disp = models[name].get("display_name", name)
+        backends = [b for b in ("openrouter", "ollama") if b in models[name]]
+        tag = "" if "ollama" in backends else "  (remote only)"
+        print(f"  {i}. {disp}{tag}")
+    while True:
+        raw = input(f"Enter number [1-{len(names)}]: ").strip()
+        try:
+            idx = int(raw)
+            if 1 <= idx <= len(names):
+                return names[idx - 1]
+        except ValueError:
+            pass
+        print(f"Invalid choice. Enter a number between 1 and {len(names)}.")
+
+
+def prompt_select_backend(model_name: str, model_cfg: dict) -> str:
+    """If model has multiple backends, prompt user; otherwise return the only one."""
+    backends = [b for b in ("openrouter", "ollama") if b in model_cfg]
+    if len(backends) == 1:
+        print(f"  → only '{backends[0]}' backend available for {model_name}")
+        return backends[0]
+    print(f"\nSelect backend for {model_cfg.get('display_name', model_name)}:")
+    print("  1. Remote (OpenRouter)")
+    print("  2. Local (Ollama)")
+    while True:
+        raw = input("Enter number [1-2]: ").strip()
+        if raw == "1":
+            return "openrouter"
+        if raw == "2":
+            return "ollama"
+        print("Invalid choice. Enter 1 or 2.")
+
+
 # ---------------------------------------------------------------------------
 # Evaluation logic
 # ---------------------------------------------------------------------------
@@ -251,8 +360,8 @@ async def evaluate_problem(
     session: aiohttp.ClientSession,
     problem: Problem,
     prompt_template: str,
-    model_id: str,
-    model_config: dict,
+    backend: str,
+    backend_cfg: dict,
     api_key: str,
     base_url: str,
     temperature: float,
@@ -274,22 +383,32 @@ async def evaluate_problem(
             latency_s=0.0,
         )
 
+    model_id = backend_cfg["model_id"]
     try:
         start = time.monotonic()
-        response = await call_openrouter(
-            session, model_id, rendered, api_key, base_url, temperature, max_tokens
-        )
+        if backend == "openrouter":
+            response = await call_openrouter(
+                session, model_id, rendered, api_key, base_url, temperature, max_tokens
+            )
+        elif backend == "ollama":
+            response = await call_ollama(
+                session, model_id, rendered, base_url, temperature, max_tokens
+            )
+        else:
+            raise ValueError(f"unknown backend: {backend}")
         latency = time.monotonic() - start
 
-        # Extract response text (handle reasoning models where content may be null)
-        text = ""
+        # Extract content and reasoning separately (kept independent for the
+        # reasoning-thread JSON dump). For verdict parsing, prefer content;
+        # if content is empty (some reasoning models return null), fall back
+        # to reasoning so we can still extract a TRUE/FALSE answer.
+        content = ""
+        reasoning = ""
         if "choices" in response and response["choices"]:
             msg = response["choices"][0].get("message", {})
-            text = msg.get("content", "") or ""
-            # For reasoning models (e.g. GPT-OSS), content may be null;
-            # fall back to reasoning field
-            if not text:
-                text = msg.get("reasoning", "") or ""
+            content = msg.get("content", "") or ""
+            reasoning = msg.get("reasoning", "") or ""
+        text = content if content else reasoning
 
         # Check for API error in response
         if "error" in response:
@@ -305,9 +424,9 @@ async def evaluate_problem(
         input_tokens = usage.get("prompt_tokens", 0)
         output_tokens = usage.get("completion_tokens", 0)
 
-        # Calculate cost
-        input_cost = (input_tokens / 1_000_000) * model_config.get("input_cost_per_1m", 0)
-        output_cost = (output_tokens / 1_000_000) * model_config.get("output_cost_per_1m", 0)
+        # Calculate cost (ollama has no cost; costs are on openrouter backend_cfg)
+        input_cost = (input_tokens / 1_000_000) * backend_cfg.get("input_cost_per_1m", 0)
+        output_cost = (output_tokens / 1_000_000) * backend_cfg.get("output_cost_per_1m", 0)
 
         # Parse verdict
         predicted, raw_verdict = parse_verdict(text)
@@ -326,6 +445,8 @@ async def evaluate_problem(
             input_tokens=input_tokens,
             output_tokens=output_tokens,
             cost_usd=input_cost + output_cost,
+            content=content,
+            reasoning=reasoning,
         )
     except Exception as e:
         return Result(
@@ -340,7 +461,8 @@ async def run_evaluation(
     problems: list[Problem],
     prompt_template: str,
     model_name: str,
-    model_config: dict,
+    backend: str,
+    backend_cfg: dict,
     config: dict,
     dry_run: bool = False,
 ) -> RunSummary:
@@ -348,26 +470,31 @@ async def run_evaluation(
     global SEMAPHORE
 
     defaults = config.get("defaults", {})
-    api_key = os.environ.get("OPENROUTER_API_KEY", "")
-    if not api_key and not dry_run:
-        print("Error: OPENROUTER_API_KEY environment variable not set.", file=sys.stderr)
-        sys.exit(1)
+    if backend == "openrouter":
+        api_key = os.environ.get("OPENROUTER_API_KEY", "")
+        if not api_key and not dry_run:
+            print("Error: OPENROUTER_API_KEY environment variable not set.", file=sys.stderr)
+            sys.exit(1)
+        base_url = defaults.get("openrouter_base_url", "https://openrouter.ai/api/v1")
+    elif backend == "ollama":
+        api_key = ""  # no auth for local ollama
+        base_url = defaults.get("ollama_base_url", "http://localhost:11434")
+    else:
+        raise ValueError(f"unknown backend: {backend}")
 
-    base_url = defaults.get("openrouter_base_url", "https://openrouter.ai/api/v1")
     temperature = defaults.get("temperature", 0.0)
     max_tokens = defaults.get("max_tokens", 1024)
     concurrency = defaults.get("concurrency", 10)
     SEMAPHORE = asyncio.Semaphore(concurrency)
 
-    model_id = model_config["model_id"]
-    summary = RunSummary(model=model_name, dataset="", prompt_file="")
+    summary = RunSummary(model=f"{model_name} ({backend})", dataset="", prompt_file="")
 
     ssl_ctx = ssl.create_default_context(cafile=certifi.where())
     connector = aiohttp.TCPConnector(ssl=ssl_ctx)
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [
             evaluate_problem(
-                session, p, prompt_template, model_id, model_config,
+                session, p, prompt_template, backend, backend_cfg,
                 api_key, base_url, temperature, max_tokens, dry_run
             )
             for p in problems
@@ -450,6 +577,65 @@ def write_csv(summary: RunSummary, output_path: Path):
     print(f"\nResults written to: {output_path}")
 
 
+def write_reasoning_json(
+    summary: RunSummary,
+    backend: str,
+    backend_cfg: dict,
+    output_path: Path,
+) -> None:
+    """Write full per-problem reasoning threads + content (no truncation).
+
+    Both OpenRouter and Ollama backends populate `content` and `reasoning`;
+    reasoning-mode models (GPT-OSS family, DeepSeek-R1, ollama thinking-mode)
+    typically have non-empty `reasoning`, while regular models have it empty.
+    """
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "model": summary.model,
+        "backend": backend,
+        "model_id": backend_cfg.get("model_id", ""),
+        "dataset": summary.dataset,
+        "prompt_file": summary.prompt_file,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "summary": {
+            "total": summary.total,
+            "correct": summary.correct,
+            "wrong": summary.wrong,
+            "parse_errors": summary.parse_errors,
+            "accuracy": summary.accuracy,
+            "true_as_true": summary.true_as_true,
+            "true_as_false": summary.true_as_false,
+            "false_as_true": summary.false_as_true,
+            "false_as_false": summary.false_as_false,
+            "total_cost_usd": summary.total_cost,
+            "total_input_tokens": summary.total_input_tokens,
+            "total_output_tokens": summary.total_output_tokens,
+            "avg_latency_s": summary.avg_latency,
+        },
+        "problems": [
+            {
+                "problem_id": r.problem_id,
+                "expected": r.expected,
+                "predicted": r.predicted,
+                "correct": r.correct,
+                "parse_ok": r.parse_ok,
+                "raw_verdict": r.raw_verdict,
+                "latency_s": round(r.latency_s, 3),
+                "input_tokens": r.input_tokens,
+                "output_tokens": r.output_tokens,
+                "cost_usd": round(r.cost_usd, 6),
+                "reasoning": r.reasoning,
+                "content": r.content,
+            }
+            for r in summary.results
+        ],
+    }
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"Reasoning written to: {output_path}")
+
+
 def print_summary(summary: RunSummary):
     """Print accuracy summary to stdout."""
     scorable = summary.total - summary.parse_errors
@@ -483,8 +669,12 @@ def parse_args():
         description="SAIR Distillation Challenge - Evaluation Harness"
     )
     parser.add_argument(
-        "--model", required=True,
-        help="Model name from config/models.yaml (e.g., gpt-oss-120b)"
+        "--model", default=None,
+        help="Model name from config/models.yaml (e.g., gpt-oss-120b). If omitted, prompts interactively."
+    )
+    parser.add_argument(
+        "--backend", choices=["openrouter", "ollama"], default=None,
+        help="Inference backend. If omitted, prompts interactively (unless only one is available for the model)."
     )
     parser.add_argument(
         "--prompt", required=True,
@@ -524,13 +714,26 @@ def parse_args():
 def main():
     args = parse_args()
     config = load_config()
-
-    # Validate model
     models = config.get("models", {})
-    if args.model not in models:
-        print(f"Error: unknown model '{args.model}'. Available: {', '.join(models.keys())}", file=sys.stderr)
+
+    # Model selection (interactive if --model not provided)
+    model_name = args.model
+    if model_name is None:
+        model_name = prompt_select_model(models)
+    elif model_name not in models:
+        print(f"Error: unknown model '{model_name}'. Available: {', '.join(models.keys())}", file=sys.stderr)
         sys.exit(1)
-    model_config = models[args.model]
+    model_config = models[model_name]
+
+    # Backend selection (interactive if --backend not provided)
+    backend = args.backend
+    if backend is None:
+        backend = prompt_select_backend(model_name, model_config)
+    elif backend not in model_config:
+        avail = [b for b in ("openrouter", "ollama") if b in model_config]
+        print(f"Error: backend '{backend}' not configured for {model_name}. Available: {', '.join(avail)}", file=sys.stderr)
+        sys.exit(1)
+    backend_cfg = model_config[backend]
 
     # Override defaults
     if args.concurrency:
@@ -555,12 +758,14 @@ def main():
     sample = render_prompt(prompt_template, problems[0])
     print(f"Sample rendered prompt ({len(sample)} chars):\n---\n{sample[:300]}{'...' if len(sample) > 300 else ''}\n---")
 
+    print(f"Model: {model_config.get('display_name', model_name)} | backend: {backend} | model_id: {backend_cfg['model_id']}")
+
     if args.dry_run:
         print("\n[DRY RUN] Skipping API calls.")
 
     # Run evaluation
     summary = asyncio.run(run_evaluation(
-        problems, prompt_template, args.model, model_config, config, args.dry_run
+        problems, prompt_template, model_name, backend, backend_cfg, config, args.dry_run
     ))
     summary.dataset = args.data
     summary.prompt_file = args.prompt
@@ -573,8 +778,9 @@ def main():
             output_path = Path(args.output)
         else:
             ts = time.strftime("%Y%m%d_%H%M%S")
-            output_path = PROJECT_ROOT / "results" / f"{args.model}_{args.data}_{ts}.csv"
+            output_path = PROJECT_ROOT / "results" / f"{model_name}_{backend}_{args.data}_{ts}.csv"
         write_csv(summary, output_path)
+        write_reasoning_json(summary, backend, backend_cfg, output_path.with_suffix(".json"))
 
 
 if __name__ == "__main__":
