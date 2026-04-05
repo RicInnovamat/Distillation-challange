@@ -30,7 +30,10 @@ Three-layer cloud-first system (no local GPU):
 - `eval_harness.py` -- Evaluation harness script
 - `Research/equations.txt` -- Full list of 4694 equational laws (uses `◇` operator)
 - `Research/Raw_implication_graph.csv` -- Per-equation implication statistics (Implies, Implied by, Does not imply, etc.)
-- `Blog_data/` -- 23 JSON files of SAIR Zulip community discussions with competitive insights
+- `Blog_data/` -- Community intelligence synced from SAIR sources (see `Blog_data/README.md`):
+  - `Blog_data/cheatsheets/` -- Community cheatsheets from the SAIR contributor-network API (one file per `publicCode`, plus `_network_snapshot.json` graph snapshot and `INDEX.md` navigation table)
+  - `Blog_data/zulip/` -- Zulip thread dumps organized by stream (`math_distillation_challenge/`, `general/`, `prime_scales/`), with `INDEX.md` navigation table
+  - Refreshed every 48h by `.github/workflows/sair-intel-refresh.yml` via `scripts/refresh_sair_intel.py`
 - `Plan.md` -- Full project plan with phases, cost estimates, architecture, and team responsibilities
 
 ## Key Domain Knowledge

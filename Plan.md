@@ -163,7 +163,7 @@ project/
 │   └── error_taxonomy.py    # Error classification helpers
 ├── Training_data/           # (existing) JSONL problem sets
 ├── Research/                # (existing) equations, implication graph
-└── Blog_data/               # (existing) community discussions
+└── Blog_data/               # Community intel (cheatsheets/ + zulip/, auto-refreshed)
 ```
 
 Requirements for `eval_harness.py`:
@@ -370,8 +370,9 @@ Checklist:
 | `Training_data/hard1.jsonl` (69), `hard2.jsonl` (200), `hard3.jsonl` (400) | Hard problem sets |
 | `Research/equations.txt` | Complete list of 4694 equations |
 | `Research/Raw_implication_graph.csv` | Equation-level implication statistics |
-| `Blog_data/discussions.json` | stokarz methodology and competitive insights |
-| `Blog_data/The_hardest_ETP_problems.json` | Tao's hardest implications list |
+| `Blog_data/zulip/math_distillation_challenge/discussions.json` | stokarz methodology and competitive insights |
+| `Blog_data/zulip/math_distillation_challenge/The_hardest_ETP_problems.json` | Tao's hardest implications list |
+| `Blog_data/cheatsheets/INDEX.md` | Community cheatsheets roster |
 
 ## External Resources
 

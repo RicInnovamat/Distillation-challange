@@ -47,7 +47,9 @@ A [magma](https://en.wikipedia.org/wiki/Magma_(algebra)) is a set with a single 
 ├── Research/
 │   ├── equations.txt        # All 4694 equational laws
 │   └── Raw_implication_graph.csv  # Per-equation implication statistics
-└── Blog_data/               # SAIR Zulip community discussions (JSON)
+└── Blog_data/               # Community intelligence (see Blog_data/README.md)
+    ├── cheatsheets/         # Community cheatsheets from SAIR contributor network
+    └── zulip/               # Zulip thread dumps, organized by stream
 ```
 
 ## Data Format
