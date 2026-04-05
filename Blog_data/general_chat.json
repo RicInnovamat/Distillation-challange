@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 53,
+  "message_count": 54,
   "messages": [
     {
       "id": 341,
@@ -813,6 +813,31 @@
       "type": "stream",
       "stream_id": 13,
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html"
+    },
+    {
+      "id": 1449,
+      "sender_id": 177,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1447\">said</a>:</p>\n<blockquote>\n<p>In the benchmark, unparsed results are treated as wrong answers.</p>\n</blockquote>\n<p>Is the parser code available, so participants can evaluate their results against it?</p>",
+      "recipient_id": 43,
+      "timestamp": 1775411385,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam McKenna",
+      "sender_email": "user177@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
       "content_type": "text/html"
     }
   ]

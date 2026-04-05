@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-04-05T14:22:25.995481+00:00",
+  "fetched_at": "2026-04-05T20:17:35.061857+00:00",
   "source_url": "https://server-9527.sair.foundation/api/contributor-network/graph?competition=mathematics-distillation-challenge-equational-theories-stage1",
   "data": {
     "competitions": [
@@ -273,7 +273,7 @@
     "meta": {
       "competitionCount": 1,
       "entityCount": 9,
-      "generatedAt": "2026-04-05T14:22:25Z",
+      "generatedAt": "2026-04-05T20:17:34Z",
       "itemCount": 17,
       "relationCount": 1,
       "truncated": false
