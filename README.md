@@ -30,10 +30,12 @@ A [magma](https://en.wikipedia.org/wiki/Magma_(algebra)) is a set with a single 
 │   ├── models.yaml          # Model configuration for eval harness
 │   └── prompts/             # Prompt templates (v0_baseline.txt, etc.)
 ├── cheatsheets/             # Versioned prompt+cheatsheet files
-│   └── v1_cheatsheet.txt    # Current best cheatsheet (4.6KB)
-├── results/
+│   ├── v3.4.1_10KB_cheatsheet.md  # v3.4.1 cheatsheet (8.9KB)
+│   └── v4_10KB_cheatsheet.md      # Current v4 cheatsheet (8.8KB)
+├── results/                 # Organized by batch: YYYYMMDD_HHMM_description/
 │   ├── baselines/           # Baseline (no cheatsheet) results per model/dataset + SUMMARY.md
-│   └── iterations/          # Per-iteration results: v{N}_{model}_{dataset}.csv
+│   ├── iterations/          # Per-iteration results: v{N}_{model}_{dataset}.csv
+│   └── 20260406_2308_v4-all-models-hard/  # Full v4 sweep (7 models x 3 hard datasets)
 ├── Training_data/           # Official problem sets (JSONL)
 │   ├── normal.jsonl         # 1000 problems (500 TRUE / 500 FALSE)
 │   ├── hard1.jsonl          # 69 problems (deduplicated hard set)
@@ -77,9 +79,31 @@ All model inference runs in the cloud via [OpenRouter](https://openrouter.ai/). 
 |-------|------|---------|
 | Orchestration | Claude Max 200K | Cheatsheet generation, compression, error analysis |
 | Evaluation | `eval_harness.py` | Batch evaluation: substitute equations → call model → parse verdict → score |
-| Inference | OpenRouter API | GPT-OSS-120b, Llama 3.3 70b, Gemini Flash Lite, Grok 4.1 Fast |
+| Inference | OpenRouter API | GPT-OSS-120b, GPT-OSS-20b, Gemma 4 31B, Llama 3.3 70B, DeepSeek V3.2, Gemini Flash Lite, Grok 4.1 Fast |
 
 ## Results
+
+### v4 Cheatsheet -- Full Hard Sweep (2026-04-06)
+
+v4_10KB_cheatsheet.md (8.8KB) evaluated on all 7 models x hard1/hard2/hard3 via OpenRouter. Full results with JSON reasoning in `results/20260406_2308_v4-all-models-hard/`.
+
+| Model | hard1 (69) | hard2 (200) | hard3 (400) | Parse Err | Bias Pattern |
+|-------|-----------|-------------|-------------|-----------|--------------|
+| **grok-4.1-fast** | **53/68 (77.9%)** | **153/200 (76.5%)** | **242/400 (60.5%)** | 1 | Balanced |
+| gemma-4-31b | 43/69 (62.3%) | 145/197 (73.6%) | 202/385 (52.5%) | 18 | TRUE bias (confab) |
+| gemini-flash-lite | 51/69 (73.9%) | 104/200 (52.0%) | 225/400 (56.2%) | 0 | FALSE bias |
+| deepseek-v3.2 | 45/69 (65.2%) | 101/200 (50.5%) | 206/400 (51.5%) | 0 | Total FALSE (0% TRUE recall) |
+| llama-3.3-70b | 45/69 (65.2%) | 100/200 (50.0%) | 206/400 (51.5%) | 0 | Total FALSE (0% TRUE recall) |
+| gpt-oss-20b | 38/65 (58.5%) | 76/174 (43.7%) | 179/358 (50.0%) | 72 | TRUE bias + parse err |
+| gpt-oss-120b | 29/66 (43.9%) | 102/194 (52.6%) | 170/369 (46.1%) | 40 | Extreme TRUE bias |
+
+**Key findings:**
+- **Grok dominates** -- best accuracy on all 3 datasets, only model >60% on hard3, most balanced TRUE/FALSE predictions
+- **v4 creates polarized bias** -- DeepSeek/Llama answer FALSE on 99%+ of problems; GPT-OSS answers TRUE on 85-91%; only Grok stays balanced
+- **GPT-120b: 90% of failures from 1024-token truncation** -- reasoning cut off mid-step with no VERDICT emitted (now fixed: max_tokens increased to 16384)
+- **Llama: pure lookup table** -- 99.7% of failures are identical "RULE: default false" boilerplate with zero reasoning
+- **Gemini: fabricates heuristic rules** not in the cheatsheet ("rightmost exclusion", "count exclusion")
+- **Community benchmark:** Betka achieves 98% on hard200 with feature-first protocol + contradiction motifs
 
 ### Baseline (no cheatsheet)
 
@@ -90,24 +114,14 @@ All model inference runs in the cloud via [OpenRouter](https://openrouter.ai/). 
 | llama-3.3-70b | 36.7% | 46.4% | 36.5% | 34.8% |
 | gemini-flash-lite | 49.8% | 65.2% | 50.0% | 51.2% |
 
-### v1 Cheatsheet (4.6KB)
+### v1 Cheatsheet (historical, 4.6KB)
 
-| Model | Dataset | v1 Accuracy | Baseline | Delta | Parse Fails | Confabulations |
-|---|---|---|---|---|---|---|
-| **grok-4.1-fast** | normal | 840/1000 (84.0%) | 320/1000 (32.0%) | **+52.0pp** | 150 (15.0%) | 4 (0.4%) |
-| gpt-oss-120b | normal | 629/1000 (62.9%) | 519/1000 (51.9%) | +11.0pp | 24 (2.4%) | 313 (31.3%) |
-| llama-3.3-70b | normal | 500/1000 (50.0%) | 367/1000 (36.7%) | +13.3pp | 0 (0%) | 500 (50.0%) |
-| gemini-flash-lite | normal | 502/1000 (50.2%) | 498/1000 (49.8%) | +0.4pp | 0 (0%) | 498 (49.8%) |
-| gpt-oss-120b | hard2_30 | 19/30 (63.3%) | 18/30 (60.0%) | +3.3pp | 2 (6.7%) | 6 (20.0%) |
-| llama-3.3-70b | hard2_30 | 15/30 (50.0%) | 11/30 (36.7%) | +13.4pp | 0 (0%) | 15 (50.0%) |
-| grok-4.1-fast | hard2_30 | 12/30 (40.0%) | 11/30 (36.7%) | +3.4pp | 13 (43.3%) | 2 (6.7%) |
-| gemini-flash-lite | hard2_30 | 15/30 (50.0%) | 15/30 (50.0%) | +0.0pp | 0 (0%) | 15 (50.0%) |
-
-**Key findings:**
-- **Grok is the strongest model** -- 84% on normal with the v1 cheatsheet (+52pp over baseline)
-- **Confabulation is the dominant failure mode** -- models fabricate counterexamples to claim FALSE when the implication actually holds. Gemini and Llama confabulate on 100% of TRUE problems
-- **Grok almost never confabulates** (<1%) but suffers from parse failures/timeouts (15%)
-- **All models improved** over baseline with the v1 cheatsheet
+| Model | normal | Baseline | Delta |
+|---|---|---|---|
+| **grok-4.1-fast** | 840/1000 (84.0%) | 320/1000 (32.0%) | **+52.0pp** |
+| gpt-oss-120b | 629/1000 (62.9%) | 519/1000 (51.9%) | +11.0pp |
+| llama-3.3-70b | 500/1000 (50.0%) | 367/1000 (36.7%) | +13.3pp |
+| gemini-flash-lite | 502/1000 (50.2%) | 498/1000 (49.8%) | +0.4pp |
 
 ## Key Resources
 
@@ -139,8 +153,10 @@ All model inference runs in the cloud via [OpenRouter](https://openrouter.ai/). 
 |------|-----------|--------|
 | Mar 30 | Baselines + eval harness complete | Done |
 | Mar 30 | v1 cheatsheet evaluated (84% grok normal) | Done |
-| Apr 2 | Error analysis + v2 cheatsheet iteration | |
-| Apr 9 | Cheatsheet candidates ready | |
+| Apr 6 | v4 full sweep: 7 models x 3 hard datasets (21 runs) | Done |
+| Apr 6 | JSON failure analysis + community intel review | Done |
+| Apr 7 | max_tokens increased to 16384, PPTX summary generated | Done |
+| Apr 7-9 | v5 cheatsheet: VERDICT-first, feature-first, spine isolation | |
 | Apr 10 | Evaluation models announced by SAIR | |
 | Apr 11 | Model-specific optimization begins | |
 | Apr 18 | Final review | |
