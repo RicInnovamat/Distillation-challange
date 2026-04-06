@@ -255,17 +255,25 @@ async def call_ollama(
     base_url: str,
     temperature: float,
     max_tokens: int,
+    num_ctx: int | None = None,
 ) -> dict:
-    """Call local Ollama chat API; return response shaped like OpenRouter's."""
+    """Call local Ollama chat API; return response shaped like OpenRouter's.
+
+    num_ctx overrides ollama's default context window (2048). Set it to
+    the model's max to avoid silent truncation of long cheatsheet prompts.
+    """
     url = f"{base_url}/api/chat"
+    options: dict = {
+        "temperature": temperature,
+        "num_predict": max_tokens,
+    }
+    if num_ctx is not None:
+        options["num_ctx"] = num_ctx
     payload = {
         "model": model_id,
         "messages": [{"role": "user", "content": prompt}],
         "stream": False,
-        "options": {
-            "temperature": temperature,
-            "num_predict": max_tokens,
-        },
+        "options": options,
     }
 
     for attempt in range(MAX_RETRIES):
@@ -392,7 +400,8 @@ async def evaluate_problem(
             )
         elif backend == "ollama":
             response = await call_ollama(
-                session, model_id, rendered, base_url, temperature, max_tokens
+                session, model_id, rendered, base_url, temperature, max_tokens,
+                num_ctx=backend_cfg.get("num_ctx"),
             )
         else:
             raise ValueError(f"unknown backend: {backend}")

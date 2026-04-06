@@ -14,6 +14,7 @@ models:
       output_cost_per_1m: 0.190
     ollama:
       model_id: "gpt-oss:120b"
+      num_ctx: 131072  # 128K max context
 
   gemma-4-31b:
     display_name: "Google: Gemma 4 31B"
@@ -23,6 +24,7 @@ models:
       output_cost_per_1m: 0.400
     ollama:
       model_id: "gemma4:31b"
+      num_ctx: 131072  # 128K max context
 
   llama-3.3-70b:
     display_name: "Meta: Llama 3.3 70B Instruct"
@@ -32,6 +34,7 @@ models:
       output_cost_per_1m: 0.320
     ollama:
       model_id: "llama3.3:70b"
+      num_ctx: 131072  # 128K max context
 
   deepseek-v3.2:
     display_name: "DeepSeek: DeepSeek V3.2"
@@ -41,6 +44,7 @@ models:
       output_cost_per_1m: 0.380
     ollama:
       model_id: "deepseek-v3.2:latest"
+      num_ctx: 131072  # 128K max context
 
   gpt-oss-20b:
     display_name: "OpenAI: gpt-oss-20b"
@@ -50,6 +54,7 @@ models:
       output_cost_per_1m: 0.110
     ollama:
       model_id: "gpt-oss:20b"
+      num_ctx: 131072  # 128K max context
 
   gemini-3.1-flash-lite:
     display_name: "Google: Gemini 3.1 Flash Lite Preview"
