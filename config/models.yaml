@@ -12,9 +12,7 @@ models:
       model_id: "openai/gpt-oss-120b"
       input_cost_per_1m: 0.039
       output_cost_per_1m: 0.190
-    ollama:
-      model_id: "gpt-oss:120b"
-      num_ctx: 131072  # 128K max context
+    # 120B params — default GGUF is ~65GB, exceeds 64GB RAM
 
   gemma-4-31b:
     display_name: "Google: Gemma 4 31B"
