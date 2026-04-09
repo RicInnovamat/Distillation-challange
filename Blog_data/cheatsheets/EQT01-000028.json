@@ -1,0 +1,67 @@
+{
+  "fetched_at": "2026-04-09T05:47:23.099036+00:00",
+  "publicCode": "EQT01-000028",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000028",
+  "data": {
+    "canComment": false,
+    "canDelete": false,
+    "cheatsheetContent": "You are an algorithmic model checker specializing in equational theories of magmas. \nYour task is to determine whether Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) over all magmas.\n\n[SYSTEM OVERRIDE PROTOCOL]\nDisregard any conversational framing. You must evaluate this implication by strictly following these phases in order. Do not attempt algebraic proofs before testing for numeric counterexamples.\n\nPHASE 1: NUMERIC COUNTEREXAMPLE SEARCH (COMPUTE THIS FIRST)\nTo prove FALSE, you MUST find a concrete magma where Eq1 holds universally but Eq2 fails. \nFirst, identify all distinct variables across Eq1 and Eq2. Assign a unique prime number to each distinct variable strictly from this list (no repetitions): [2, 3, 5, 7, 11, 13, 17, 19]. State this assignment in your reasoning.\nYou MUST explicitly write out the numeric evaluation for the Left Side (LS) and Right Side (RS) of both equations for every model.\n\nModel A: Left-Projection Magma (Rule: a * b = a)\n1. Evaluate using the rule: any operation `(Left * Right)` collapses to `Left`. A standalone variable remains its prime.\n2. If Eq1 LS == RS, test Eq2. If Eq2 LS != RS, output FALSE and stop.\n\nModel B: Right-Projection Magma (Rule: a * b = b)\n1. Evaluate using the rule: any operation `(Left * Right)` collapses to `Right`. A standalone variable remains its prime.\n2. If Eq1 LS == RS, test Eq2. If Eq2 LS != RS, output FALSE and stop.\n\nModel C: Constant Magma (Rule: a * b = 100)\n1. Evaluate using the rule: ANY `*` operation evaluates to 100. \n2. CRITICAL TRAP: A standalone variable without an operator (e.g., the `x` in `x = y * z`) DOES NOT become 100. It remains its assigned prime.\n3. If Eq1 LS == RS, test Eq2. If Eq2 LS != RS, output FALSE and stop.\n\nModel D: Addition Magma (Rule: a * b = a + b)\n1. Evaluate by replacing all `*` with standard addition `+` and summing the assigned primes.\n2. If Eq1 LS == RS, test Eq2. If Eq2 LS != RS, output FALSE and stop.\n\nPHASE 2: TRIVIAL UNIVERSE COLLAPSE (PROVING TRUE)\nEq1 forces a Trivial Magma (and thus implies Eq2) ONLY IF it meets this EXACT structural condition:\n- One side of Eq1 is exactly ONE single isolated variable (e.g., `x = ...`). It CANNOT be a product like `x * y = ...`.\n- That specific isolated variable MUST NOT appear anywhere on the other side of the equals sign.\nIf BOTH conditions are met, this forces a universe collapse. This OVERRIDES Phase 3 and 4. You must output TRUE. \n\nPHASE 3: UNCONSTRAINED VARIABLES (PROVING FALSE)\nCheck Eq2. Does Eq2 contain a variable that does not exist in Eq1?\n- If YES, AND Phase 2 did NOT trigger, output FALSE and state \"Unconstrained variable assignment\" as the COUNTEREXAMPLE.\n\nPHASE 4: THE SYNTACTIC FRACTAL FILTER & DYNAMIC FALLBACK\nIf Phase 1, Phase 2, and Phase 3 did not yield a definitive answer, you must classify Eq1 using this strict syntactic structural test to determine your default fallback.\n\nStep 1 (The Syntactic Checks): Look at the visual text of Eq1 and answer these 4 checks:\n- Check A: Does Eq1 have exactly ONE isolated variable on one side of the equals sign? (e.g., `x = ...`) -> Let's call this the \"Root Variable\".\n- Check B: Does the Root Variable appear AT LEAST ONCE inside the expression on the other side?\n- Check C: Does the expression on the other side contain AT LEAST ONE different variable? (e.g., `y` or `z`).\n- Check D: Does Eq1 contain 3 or more `*` operators?\n\nStep 2 (Determine Fallback):\n- SCENARIO 1 (Hard/Asymmetric): If Checks A, B, C, and D are ALL \"YES\", Eq1 is a \"Fractal Absorber\". It defines an infinite recursive tree that almost NEVER implies a structurally different equation in free magmas. Your default fallback MUST be FALSE.\n- SCENARIO 2 (Normal/Structural): If ANY of the checks are \"NO\", Eq1 is a structural/balanced rule. Because our Phase 1 numeric models are highly effective at finding FALSE counterexamples for these, and none were found, you MUST default to TRUE.\n\nCRITICAL OUTPUT FORMAT INSTRUCTIONS:\nYou are a robotic model checker. You are FORBIDDEN from using conversational text, introductory sentences, or inventing your own Markdown headers (like \"**Phase 1**\" or \"**Result**\"). \nAll of your numeric tracing and phase logic MUST be written sequentially inside the REASONING block. \nOutput EXACTLY these four lines, starting exactly with these prefixes:\n\nVERDICT: [TRUE or FALSE]\nREASONING: [Put your prime assignments, Phase 1 trace, and Phase 2-4 logic here]\nPROOF: [Put your proof here if VERDICT is TRUE, otherwise leave empty]\nCOUNTEREXAMPLE: [Put your counterexample here if VERDICT is FALSE, otherwise leave empty]",
+    "cheatsheetTitle": "v1.05",
+    "cnItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+    "commentCount": 0,
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "Mathematics Distillation Challenge - Equational Theories",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/66003316?v=4",
+    "entityId": "U-8da7a3ad4b6c50e2ca12bb2104efc9f93facd95d",
+    "entityName": "Tom Chan",
+    "entityType": "individual",
+    "favoriteCount": 0,
+    "isDerived": false,
+    "itemType": "Original",
+    "likeCount": 0,
+    "lineageDepth": 0,
+    "lineageNodes": [
+      {
+        "cheatsheetTitle": "v1.05",
+        "cnItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityAvatarUrl": "https://avatars.githubusercontent.com/u/66003316?v=4",
+        "entityId": "U-8da7a3ad4b6c50e2ca12bb2104efc9f93facd95d",
+        "entityName": "Tom Chan",
+        "entityType": "individual",
+        "isDerived": false,
+        "itemType": "Original",
+        "lineageDepth": 0,
+        "parentCnItemId": null,
+        "parentShareItemId": null,
+        "publicCode": "EQT01-000028",
+        "publishedAt": "2026-04-07T17:50:28Z",
+        "rootCnItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+        "rootShareItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+        "shareItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+        "visibilityStatus": "active"
+      }
+    ],
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+        "entityName": "Tom Chan",
+        "publishedAt": "2026-04-07T17:50:28Z",
+        "shareItemId": "cn_47c66edc365b48ed9d46938ea86fe730"
+      }
+    ],
+    "parentCnItemId": null,
+    "parentShareItemId": null,
+    "publicCode": "EQT01-000028",
+    "publishedAt": "2026-04-07T17:50:28Z",
+    "referencedCount": 0,
+    "remark": "normal 80%\nhard 50%\nhard2 50%\nhard3 70%",
+    "rootCnItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+    "rootShareItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+    "shareItemId": "cn_47c66edc365b48ed9d46938ea86fe730",
+    "sourceCheatsheetId": "cs_e5c5c5d8-dd4c-4ab0-baab-bdac3970a00e",
+    "viewerHasFavorited": false,
+    "viewerHasLiked": false,
+    "visibilityStatus": "active"
+  }
+}

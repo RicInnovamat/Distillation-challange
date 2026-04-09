@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 58,
+  "message_count": 60,
   "messages": [
     {
       "id": 341,
@@ -975,6 +975,78 @@
       "avatar_url": "https://secure.gravatar.com/avatar/e552e979dc9058a756f46160f70cbff6?d=identicon&version=1",
       "content_type": "text/html",
       "date": "2026-04-06T20:20:54.000Z"
+    },
+    {
+      "id": 1487,
+      "sender_id": 146,
+      "content": "<p>Quick question about the evaluation pipeline: when our complete prompt is sent to the model, is it passed as the system prompt, user prompt, or something else (e.g. concatenated into a single user message)? This matters for prompt engineering since some models behave differently depending on the role. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1775614340,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Dex",
+      "sender_email": "user146@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/86ab7a6f8bd886a34947db1481dd6f65?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-08T02:12:20.000Z"
+    },
+    {
+      "id": 1488,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"146\">@Dex</span> It is passed as a single complete user prompt. You can customize the entire prompt, up to 10KB</p>",
+      "recipient_id": 43,
+      "timestamp": 1775626948,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 146
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-08T05:42:28.000Z"
     }
   ]
 }
