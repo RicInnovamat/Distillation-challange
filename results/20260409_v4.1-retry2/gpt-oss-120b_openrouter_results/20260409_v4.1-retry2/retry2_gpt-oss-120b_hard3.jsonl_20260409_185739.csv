@@ -1,0 +1,4 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0149,False,False,True,True,VERDICT: FALSE,76.41,2957,4619,0.000993,"VERDICT: FALSE\nRULE: counterexample\n\nIn the two‑element magma with operation defined by  \n\(a*b = a\) if \(b=0\) and \(a*b = 0\) if \(b=1\), the identity  \n\(x = x * (((x*y)*y)*y)\) holds for all"
+hard3_0203,True,False,False,True,VERDICT: FALSE,39.72,2968,7758,0.001590,VERDICT: FALSE\nRULE: default false\n\nNo derivation shows Eq2 follows from Eq1; a counterexample likely exists.
+hard3_0379,True,True,True,True,VERDICT: TRUE,6.47,2957,3315,0.000745,"VERDICT: TRUE  \nRULE: right projection derivation  \n\nThe identity forces every product a * b to be independent of a, i.e. a * b = h(b) with h idempotent (h(b)=h(h(b))). Hence both sides of the targ"

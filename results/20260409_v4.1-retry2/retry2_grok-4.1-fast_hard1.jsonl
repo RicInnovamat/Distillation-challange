@@ -1,0 +1,1 @@
+{"id": "hard1_0036", "index": 36, "difficulty": "hard", "eq1_id": 3290, "eq2_id": 3264, "equation1": "x * x = y * (z * (x * z))", "equation2": "x * x = x * (y * (z * x))", "answer": false}
