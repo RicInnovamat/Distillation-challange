@@ -194,7 +194,7 @@ def parse_verdict(text: str | None) -> tuple[bool | None, str]:
 
 SEMAPHORE = None
 MAX_RETRIES = 3
-RETRY_DELAYS = [2, 5, 15]
+RETRY_DELAYS = [5, 15, 30]
 HARD_TIMEOUT_S = 180  # asyncio.wait_for hard cutoff per API call
 
 
@@ -225,7 +225,7 @@ async def call_openrouter(
     for attempt in range(MAX_RETRIES):
         try:
             async with SEMAPHORE:
-                async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=120)) as resp:
+                async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=HARD_TIMEOUT_S)) as resp:
                     if resp.status == 429:
                         delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
                         print(f"  Rate limited, waiting {delay}s...", file=sys.stderr)
@@ -238,6 +238,13 @@ async def call_openrouter(
                         continue
                     resp.raise_for_status()
                     data = await resp.json()
+
+                    # Guard against null JSON body from OpenRouter
+                    if data is None:
+                        delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
+                        print(f"  Null response body, retrying in {delay}s...", file=sys.stderr)
+                        await asyncio.sleep(delay)
+                        continue
 
                     # Detect empty responses (0 tokens, no content) — treat as
                     # retriable server-side failure instead of accepting silently.
@@ -412,17 +419,16 @@ async def evaluate_problem(
     try:
         start = time.monotonic()
         if backend == "openrouter":
-            coro = call_openrouter(
+            response = await call_openrouter(
                 session, model_id, rendered, api_key, base_url, temperature, max_tokens
             )
         elif backend == "ollama":
-            coro = call_ollama(
+            response = await call_ollama(
                 session, model_id, rendered, base_url, temperature, max_tokens,
                 num_ctx=backend_cfg.get("num_ctx"),
             )
         else:
             raise ValueError(f"unknown backend: {backend}")
-        response = await asyncio.wait_for(coro, timeout=HARD_TIMEOUT_S)
         latency = time.monotonic() - start
 
         # Extract content and reasoning separately (kept independent for the
@@ -509,8 +515,10 @@ async def run_evaluation(
     else:
         raise ValueError(f"unknown backend: {backend}")
 
-    temperature = defaults.get("temperature", 0.0)
-    max_tokens = defaults.get("max_tokens", 1024)
+    # Per-model parameter overrides (e.g., reasoning models need temperature=1)
+    model_params = config.get("models", {}).get(model_name, {}).get("params", {})
+    temperature = model_params.get("temperature", defaults.get("temperature", 0.0))
+    max_tokens = model_params.get("max_tokens", defaults.get("max_tokens", 1024))
     concurrency = defaults.get("concurrency", 10)
     SEMAPHORE = asyncio.Semaphore(concurrency)
 

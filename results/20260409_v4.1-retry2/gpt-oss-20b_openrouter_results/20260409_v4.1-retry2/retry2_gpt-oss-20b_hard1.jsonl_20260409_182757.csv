@@ -1,0 +1,4 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0010,False,False,True,True,VERDICT: FALSE,44.35,2955,13650,0.001590,VERDICT: FALSE\nRULE: default false
+hard1_0019,False,False,True,True,VERDICT: FALSE,117.30,2942,8567,0.001031,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma defined by left‑projection except for 1*0=2 satisfies Eq1 everywhere, but for x=1, y=0 Eq2 gives 1≠2."
+hard1_0054,True,False,False,True,VERDICT: FALSE,5.57,2956,852,0.000182,"VERDICT: FALSE\nRULE: parity exclusion\n\nEq1 forces every variable to occur an odd number of times, whereas Eq2 would require y to occur twice, breaking that parity."

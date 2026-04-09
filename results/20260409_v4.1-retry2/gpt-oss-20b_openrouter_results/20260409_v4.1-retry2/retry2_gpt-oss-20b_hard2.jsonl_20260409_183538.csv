@@ -1,0 +1,21 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard2_0007,False,False,True,True,VERDICT: FALSE,105.80,2957,9356,0.001118,"VERDICT: FALSE  \nRULE: default false  \n\nI couldn't find a rule that unambiguously establishes the implication; no counterexample was found, but the prescribed procedure defaults to FALSE when no qu"
+hard2_0026,True,False,False,True,VERDICT: FALSE,107.78,2957,3421,0.000465,VERDICT: FALSE\nRULE: default false
+hard2_0029,False,False,True,True,VERDICT: FALSE,61.12,2953,15921,0.001840,VERDICT: FALSE\nRULE: default false
+hard2_0038,False,False,True,True,VERDICT: FALSE,19.38,2955,5985,0.000747,"VERDICT: FALSE  \nRULE: default false  \nThe two equations are unrelated; no rule in the hierarchy derives the truth, and no finite magma counterexample has been found."
+hard2_0041,False,False,True,True,VERDICT: FALSE,105.97,2956,7887,0.000956,VERDICT: FALSE\nRULE: default false
+hard2_0047,False,False,True,True,VERDICT: FALSE,460.90,2960,7914,0.000959,VERDICT: FALSE\nRULE: default false\nNo proven implication route is triggered and no counterexample is found. Thus the implication fails in general.
+hard2_0077,False,False,True,True,VERDICT: FALSE,45.14,2955,12425,0.001455,VERDICT: FALSE\nRULE: default false
+hard2_0084,False,True,False,True,VERDICT: TRUE,138.75,2957,7725,0.000938,"VERDICT: TRUE\nRULE: constant-operation source\n\nEq1 forces a*b to be constant on the right argument: for all a,b we have a*b = k(b). The equation then yields k(k(z)) = k(y) for all y,z, which can on"
+hard2_0090,False,False,True,True,VERDICT: FALSE,55.05,2955,6103,0.000760,VERDICT: FALSE\nRULE: default false
+hard2_0096,False,False,True,True,VERDICT: FALSE,119.33,2961,12532,0.001467,VERDICT: FALSE\nRULE: default false
+hard2_0100,False,False,True,True,VERDICT: FALSE,72.66,2954,7099,0.000870,VERDICT: FALSE\nRULE: default false\n\nNo true rule applied and no syntactic false rule matched; no counterexample was found. Therefore the implication is undecided and defaults to FALSE.
+hard2_0102,False,False,True,True,VERDICT: FALSE,197.19,2957,13740,0.001600,VERDICT: FALSE\nRULE: default false
+hard2_0107,True,False,False,True,VERDICT: FALSE,36.98,2956,9428,0.001126,VERDICT: FALSE  \nRULE: default false\n\nThe equations are not equivalent under all magmas. No rule in the decision procedure recognized an implication from Equation 1 to Equation 2. Therefore the def
+hard2_0125,False,True,False,True,VERDICT: TRUE,346.66,2962,11975,0.001406,VERDICT: TRUE\nRULE: T5
+hard2_0156,False,False,True,True,VERDICT: FALSE,68.45,2957,7729,0.000939,"VERDICT: FALSE\nRULE: default false\n\nThe given identities do not satisfy any of the supplied TRUE or FALSE conditions, so we conclude the implication fails in general."
+hard2_0163,False,False,True,True,VERDICT: FALSE,53.25,2963,6475,0.000801,VERDICT: FALSE\nRULE: default false
+hard2_0172,False,False,True,True,VERDICT: FALSE,157.76,2963,8752,0.001052,VERDICT: FALSE\nRULE: default false
+hard2_0177,False,False,True,True,VERDICT: FALSE,146.31,2962,3202,0.000441,"VERDICT: FALSE\nRULE: default false\n\nThe equations are distinct, and none of the provided syntactic or structural rules establish an implication. No witness identity is known that enforces Eq 2 from"
+hard2_0194,False,False,True,True,VERDICT: FALSE,113.56,2957,13015,0.001520,VERDICT: FALSE\nRULE: default false
+hard2_0196,False,False,True,True,VERDICT: FALSE,117.23,2955,11756,0.001382,"VERDICT: FALSE  \nRULE: default false  \nThe rules for true implications (exact renaming, tautological target, singleton collapse, constant operation, projection families, structural heuristics) do no"
