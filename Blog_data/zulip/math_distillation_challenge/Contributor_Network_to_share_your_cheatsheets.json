@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Contributor Network to share your cheatsheets",
-  "message_count": 1,
+  "message_count": 3,
   "messages": [
     {
       "id": 1361,
@@ -74,6 +74,74 @@
       "stream_id": 13,
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
       "content_type": "text/html"
+    },
+    {
+      "id": 1501,
+      "sender_id": 113,
+      "content": "<p>Would it be possible to be able to select multiple referenced users or sheets for the reference graph? Currently limited to a single reference, iv added in Description: the additional information and references &gt;&gt;</p>\n<p>Description</p>\n<p>//Spine-Shatter Logic: Adam Betka EQT01-000015 <br>\n//3-Element Divergence (G9): Reza Jamei EQT01-000021</p>",
+      "recipient_id": 43,
+      "timestamp": 1775763929,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "last_edit_timestamp": 1775764065,
+      "edit_history": [
+        {
+          "user_id": 113,
+          "timestamp": 1775764065,
+          "prev_content": "Would it be possible to be able to select multiple referenced users or sheets for the reference graph? Currently limited to a single reference, iv added in comments the additional information and references >>\n\nDescription\n\n//Spine-Shatter Logic: Adam Betka EQT01-000015 \n//3-Element Divergence (G9): Reza Jamei EQT01-000021",
+          "prev_rendered_content": "<p>Would it be possible to be able to select multiple referenced users or sheets for the reference graph? Currently limited to a single reference, iv added in comments the additional information and references &gt;&gt;</p>\n<p>Description</p>\n<p>//Spine-Shatter Logic: Adam Betka EQT01-000015 <br>\n//3-Element Divergence (G9): Reza Jamei EQT01-000021</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-09T19:45:29.000Z"
+    },
+    {
+      "id": 1502,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"113\">@Stacey Szmy</span> You can reference the major one you use, and also mention the other cheatsheets you use in the description field.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775764005,
+      "client": "ZulipElectron",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-09T19:46:45.000Z"
     }
   ]
 }
