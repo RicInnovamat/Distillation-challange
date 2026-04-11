@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 58,
+  "message_count": 64,
   "messages": [
     {
       "id": 341,
@@ -975,6 +975,198 @@
       "avatar_url": "https://secure.gravatar.com/avatar/e552e979dc9058a756f46160f70cbff6?d=identicon&version=1",
       "content_type": "text/html",
       "date": "2026-04-06T20:20:54.000Z"
+    },
+    {
+      "id": 1487,
+      "sender_id": 146,
+      "content": "<p>Quick question about the evaluation pipeline: when our complete prompt is sent to the model, is it passed as the system prompt, user prompt, or something else (e.g. concatenated into a single user message)? This matters for prompt engineering since some models behave differently depending on the role. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1775614340,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Dex",
+      "sender_email": "user146@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/86ab7a6f8bd886a34947db1481dd6f65?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-08T02:12:20.000Z"
+    },
+    {
+      "id": 1488,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"146\">@Dex</span> It is passed as a single complete user prompt. You can customize the entire prompt, up to 10KB</p>",
+      "recipient_id": 43,
+      "timestamp": 1775626948,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 146
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-08T05:42:28.000Z"
+    },
+    {
+      "id": 1507,
+      "sender_id": 50,
+      "content": "<p>hey guys, what's the best score on hard3 right now?</p>",
+      "recipient_id": 43,
+      "timestamp": 1775767627,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam Betka",
+      "sender_email": "user50@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/f14bb8ad856c1d25d341b64d3485795c25cd1a97.png",
+      "content_type": "text/html",
+      "date": "2026-04-09T20:47:07.000Z"
+    },
+    {
+      "id": 1508,
+      "sender_id": 50,
+      "content": "<p>did anybody try to run best prompts with nemotron or any other new oss small model?</p>",
+      "recipient_id": 43,
+      "timestamp": 1775767699,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam Betka",
+      "sender_email": "user50@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/f14bb8ad856c1d25d341b64d3485795c25cd1a97.png",
+      "content_type": "text/html",
+      "date": "2026-04-09T20:48:19.000Z"
+    },
+    {
+      "id": 1522,
+      "sender_id": 71,
+      "content": "<p>Is anyone else's cheatsheet converging into a symbolic decision router instead of an implication prover? My best one so far feels more like a law-router than a mathematician. Interesting both for the task and for what it says about current LLM math ability</p>",
+      "recipient_id": 43,
+      "timestamp": 1775889774,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "last_edit_timestamp": 1775890056,
+      "edit_history": [
+        {
+          "user_id": 71,
+          "timestamp": 1775890056,
+          "prev_content": "Is anyone else's cheatsheet converging into a symbolic decision router instead of an implication prover? My best one so far feels more like a law-router than a mathematician.",
+          "prev_rendered_content": "<p>Is anyone else's cheatsheet converging into a symbolic decision router instead of an implication prover? My best one so far feels more like a law-router than a mathematician.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-11T06:42:54.000Z"
+    },
+    {
+      "id": 1523,
+      "sender_id": 268,
+      "content": "<p>I'm do like youI am taking a similar approach as yours, which is a solid solution for the problem at Stage 1. However, for Stage 2, we will need to expand to the entire sample space. SAIR is likely searching for more perfected rules, as there are currently too many rules covering an excessive number of cases.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775894012,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "100",
+          "emoji_code": "1f4af",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "BlackNull.com",
+      "sender_email": "user268@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/5d5338aad5491e5f24b07e0990f6e7f2?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-11T07:53:32.000Z"
     }
   ]
 }

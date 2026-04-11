@@ -1,0 +1,309 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Stage 1 evaluation models and setup",
+  "message_count": 8,
+  "messages": [
+    {
+      "id": 1509,
+      "sender_id": 25,
+      "content": "<p>Hi everyone, we have now published the GitHub repository for the official Stage 1 evaluation setup for the Mathematics Distillation Challenge: Equational Theories, together with the current planned evaluation models:</p>\n<p><a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge\">https://github.com/SAIRcompetition/equational-theories-stage1-judge</a></p>\n<p>The current planned Stage 1 evaluation models are OpenAI’s GPT-OSS-120B, Meta’s Llama-3.3-70B-Instruct, and Google’s Gemma-4-31B-IT. These models are currently planned to serve as the final Stage 1 evaluation models, with equal weight, though the setup may still be adjusted based on community feedback.</p>\n<p>The repository also lets participants test prompts locally before submission.</p>\n<p>Thanks to everyone for participating in the challenge and for the helpful discussion and feedback.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775769345,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 241
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 111
+        },
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 162
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 258
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-09T21:15:45.000Z"
+    },
+    {
+      "id": 1512,
+      "sender_id": 157,
+      "content": "<p>Hi! Does the playground now use the same model configs as the official eval (temperature 0.0, pinned providers, reasoning disabled for Llama)? Want to make sure local testing matches final evaluation.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775803364,
+      "client": "website",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 52
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Garbid",
+      "sender_email": "user157@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/72a4645be775e7a8bf0ccdba87f1e0c1?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-10T06:42:44.000Z"
+    },
+    {
+      "id": 1516,
+      "sender_id": 236,
+      "content": "<p>Hi all, while validating our cheatsheet against the strict config in <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json\">https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json</a>, we hit a consistent silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.</p>\n<p>What we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     <br>\n  {                                                                                                                          <br>\n    \"model\": \"google/gemma-4-31b-it\",<br>\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,<br>\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          <br>\n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}<br>\n  }                                                                                                                          </p>\n<p>what comes back:                                                                                                           </p>\n<p>{<br>\n    \"choices\": [{<br>\n      \"message\": {\"content\": null, \"reasoning\": \"...&lt;filled&gt;...\"},<br>\n      \"finish_reason\": \"length\"<br>\n    }],<br>\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     <br>\n  }</p>\n<p>=&gt; content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.</p>\n<p>So we've got two suggestions:</p>\n<p>(A) <strong>Drop reasoning_effort for gemma-4-31b-it</strong>. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).</p>\n<p><strong>OR</strong></p>\n<p>(B) <strong>Raise gemma's max_output_tokens cap when reasoning is enabled</strong> (e.g. 16384), AND <strong>fix the doubled-budget retry in llm.py</strong>. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max &gt; max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               </p>\n<p>Two observations that tighten the diagnosis: 1. <strong>Without reasoning, the same config works cleanly</strong>. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. <strong>Minimal repro is confirming reasoning is the culprit</strong>, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             </p>\n<p><strong>Why I'm flagging it</strong>: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...</p>",
+      "recipient_id": 43,
+      "timestamp": 1775855020,
+      "client": "website",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "last_edit_timestamp": 1775855295,
+      "edit_history": [
+        {
+          "user_id": 236,
+          "timestamp": 1775855295,
+          "prev_content": "Hi all, while validating our cheatsheet against the strict config in https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json, we hit a consistent silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.\n\nWhat we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     \n  {                                                                                                                          \n    \"model\": \"google/gemma-4-31b-it\",\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          \n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}\n  }                                                                                                                          \n\n  what comes back:                                                                                                           \n\n  {\n    \"choices\": [{\n      \"message\": {\"content\": null, \"reasoning\": \"...<filled>...\"},\n      \"finish_reason\": \"length\"\n    }],\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     \n  }\n\n => content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.\n\n So we've got two suggestions:\n\n  (A) **Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json**. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).\n\n**OR**\n\n (B) **Raise gemma's max_output_tokens cap when reasoning is enabled** (e.g. 16384), AND **fix the doubled-budget retry in llm.py**. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max > max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               \n\nTwo observations that tighten the diagnosis: 1. **Without reasoning, the same config works cleanly**. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. **Minimal repro is confirming reasoning is the culprit**, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             \n\n **Why I'm flagging it**: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...",
+          "prev_rendered_content": "<p>Hi all, while validating our cheatsheet against the strict config in <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json\">https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json</a>, we hit a consistent silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.</p>\n<p>What we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     <br>\n  {                                                                                                                          <br>\n    \"model\": \"google/gemma-4-31b-it\",<br>\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,<br>\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          <br>\n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}<br>\n  }                                                                                                                          </p>\n<p>what comes back:                                                                                                           </p>\n<p>{<br>\n    \"choices\": [{<br>\n      \"message\": {\"content\": null, \"reasoning\": \"...&lt;filled&gt;...\"},<br>\n      \"finish_reason\": \"length\"<br>\n    }],<br>\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     <br>\n  }</p>\n<p>=&gt; content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.</p>\n<p>So we've got two suggestions:</p>\n<p>(A) <strong>Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json</strong>. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).</p>\n<p><strong>OR</strong></p>\n<p>(B) <strong>Raise gemma's max_output_tokens cap when reasoning is enabled</strong> (e.g. 16384), AND <strong>fix the doubled-budget retry in llm.py</strong>. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max &gt; max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               </p>\n<p>Two observations that tighten the diagnosis: 1. <strong>Without reasoning, the same config works cleanly</strong>. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. <strong>Minimal repro is confirming reasoning is the culprit</strong>, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             </p>\n<p><strong>Why I'm flagging it</strong>: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...</p>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1775855174,
+          "prev_content": "Hi all, while validating our cheatsheet against the strict config in https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json, we hit a consistent   silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.\n\nWhat we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     \n  {                                                                                                                          \n    \"model\": \"google/gemma-4-31b-it\",\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          \n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}\n  }                                                                                                                          \n\n  what comes back:                                                                                                           \n\n  {\n    \"choices\": [{\n      \"message\": {\"content\": null, \"reasoning\": \"...<filled>...\"},\n      \"finish_reason\": \"length\"\n    }],\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     \n  }\n\n => content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.\n\n So we've got two suggestions:\n\n  (A) **Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json**. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).\n\n**OR**\n\n (B) **Raise gemma's max_output_tokens cap when reasoning is enabled** (e.g. 16384), AND **fix the doubled-budget retry in llm.py**. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max > max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               \n\nTwo observations that tighten the diagnosis: 1. **Without reasoning, the same config works cleanly**. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. **Minimal repro is confirming reasoning is the culprit**, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             \n\n **Why I'm flagging it**: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...",
+          "prev_rendered_content": "<p>Hi all, while validating our cheatsheet against the strict config in <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json\">https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json</a>, we hit a consistent   silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.</p>\n<p>What we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     <br>\n  {                                                                                                                          <br>\n    \"model\": \"google/gemma-4-31b-it\",<br>\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,<br>\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          <br>\n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}<br>\n  }                                                                                                                          </p>\n<p>what comes back:                                                                                                           </p>\n<p>{<br>\n    \"choices\": [{<br>\n      \"message\": {\"content\": null, \"reasoning\": \"...&lt;filled&gt;...\"},<br>\n      \"finish_reason\": \"length\"<br>\n    }],<br>\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     <br>\n  }</p>\n<p>=&gt; content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.</p>\n<p>So we've got two suggestions:</p>\n<p>(A) <strong>Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json</strong>. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).</p>\n<p><strong>OR</strong></p>\n<p>(B) <strong>Raise gemma's max_output_tokens cap when reasoning is enabled</strong> (e.g. 16384), AND <strong>fix the doubled-budget retry in llm.py</strong>. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max &gt; max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               </p>\n<p>Two observations that tighten the diagnosis: 1. <strong>Without reasoning, the same config works cleanly</strong>. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. <strong>Minimal repro is confirming reasoning is the culprit</strong>, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             </p>\n<p><strong>Why I'm flagging it</strong>: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...</p>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1775855159,
+          "prev_content": "Hi all — while validating our cheatsheet against the strict config in https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json, we hit a consistent   silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.\n\nWhat we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     \n  {                                                                                                                          \n    \"model\": \"google/gemma-4-31b-it\",\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          \n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}\n  }                                                                                                                          \n\n  what comes back:                                                                                                           \n\n  {\n    \"choices\": [{\n      \"message\": {\"content\": null, \"reasoning\": \"...<filled>...\"},\n      \"finish_reason\": \"length\"\n    }],\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     \n  }\n\n => content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.\n\n So we've got two suggestions:\n\n  (A) **Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json**. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).\n\n**OR**\n\n (B) **Raise gemma's max_output_tokens cap when reasoning is enabled** (e.g. 16384), AND **fix the doubled-budget retry in llm.py**. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max > max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               \n\nTwo observations that tighten the diagnosis: 1. **Without reasoning, the same config works cleanly**. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. **Minimal repro is confirming reasoning is the culprit**, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             \n\n **Why I'm flagging it**: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...",
+          "prev_rendered_content": "<p>Hi all — while validating our cheatsheet against the strict config in <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json\">https://github.com/SAIRcompetition/equational-theories-stage1-judge/blob/main/evaluation_models.json</a>, we hit a consistent   silent failure on gemma-4-31b-it. Sharing findings and two small suggestions in case anyone else is chasing the same symptom.</p>\n<p>What we see is that by reproducing the exact payload judge.py builds for gemma on a hard1 problem with our ~10 KB cheatsheet:                     <br>\n  {                                                                                                                          <br>\n    \"model\": \"google/gemma-4-31b-it\",<br>\n    \"max_tokens\": 8192, \"seed\": 0, \"temperature\": 0.0,<br>\n    \"reasoning\": {\"effort\": \"low\"},                                                                                          <br>\n    \"provider\": {\"order\": [\"Novita\"], \"quantizations\": [\"bf16\"], \"allow_fallbacks\": false}<br>\n  }                                                                                                                          </p>\n<p>what comes back:                                                                                                           </p>\n<p>{<br>\n    \"choices\": [{<br>\n      \"message\": {\"content\": null, \"reasoning\": \"...&lt;filled&gt;...\"},<br>\n      \"finish_reason\": \"length\"<br>\n    }],<br>\n    \"usage\": {\"completion_tokens\": 8192}                                                                                     <br>\n  }</p>\n<p>=&gt; content is empty, the full 8192-token budget is consumed by hidden reasoning, and the model is cut off mid-thought. It reproduces on every hard1 problem we try.</p>\n<p>So we've got two suggestions:</p>\n<p>(A) <strong>Drop reasoning_effort for gemma-4-31b-it in evaluation_models.json</strong>. In control runs gemma produces cleaner, stabler verdicts without thinking mode on this task, and with reasoning enabled the failure is silent (see below).</p>\n<p><strong>OR</strong></p>\n<p>(B) <strong>Raise gemma's max_output_tokens cap when reasoning is enabled</strong> (e.g. 16384), AND <strong>fix the doubled-budget retry in llm.py</strong>. The existing guardrail: retry_max = min(max_tokens * 2, profile.max_output_tokens) if retry_max &gt; max_tokens:  # never True for gemma: both sides are 8192 is a no-op because profile.max_output_tokens == initial max_tokens == 8192, so the retry path whose entire purpose is this failure mode is unreachable.                                                                                               </p>\n<p>Two observations that tighten the diagnosis: 1. <strong>Without reasoning, the same config works cleanly</strong>. By dropping just reasoning.effort=\"low\" and leaving everything else identical, we consistently got 52/69 correct on hard1, 0 parse errors, taking ~11 min at concurrency 10; 2. <strong>Minimal repro is confirming reasoning is the culprit</strong>, as the same request on x = y * x → x * y = y * x:  took 30 s, 103 reasoning tokens, 0 content tokens, finish_reason=length.             </p>\n<p><strong>Why I'm flagging it</strong>: reasoning.effort=\"low\" enables gemma's thinking mode, and reasoning tokens are billed against max_tokens like completion  tokens. With 8192 − ~2500 prompt tokens of headroom, hard problems exhaust the budget before any visible verdict lands. The config then returns HTTP 200 with an empty string and no explicit error, so any harness that doesn't check finish_reason + reasoning_tokens sees it as a parse failure. I spent a few hours thinking it was a Novita bf16 provider outage before the interaction clicked, so I want to spare the next person that debugging session...</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Erzio",
+      "sender_email": "user236@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c966445f0cdaac2f678aa5c5cc9e8d9c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-10T21:03:40.000Z"
+    },
+    {
+      "id": 1517,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"157\">Garbid</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Stage.201.20evaluation.20models.20and.20setup/near/1512\">said</a>:</p>\n<blockquote>\n<p>Hi! Does the playground now use the same model configs as the official eval (temperature 0.0, pinned providers, reasoning disabled for Llama)? Want to make sure local testing matches final evaluation.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"157\">@Garbid</span> We will check and get back to you asap. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1775861646,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-10T22:54:06.000Z"
+    },
+    {
+      "id": 1518,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> Thanks for the great feedback and suggestions. <br>\nGemma4-31b-it was just released by Google last week and has quickly become a very popular model. We think it is a great model for this competition. At the same time, the current OpenRouter/provider workflow and configuration for this route are still not fully stable. We are now reviewing the setup more carefully, including the reasoning setting, token cap, and provider routing, to determine a more reliable configuration. <br>\nAs noted in the policy, the planned evaluation setup may be adjusted based on community feedback, and we will optimize the evaluation setup based on suggestions from the community.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775861750,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-10T22:55:50.000Z"
+    },
+    {
+      "id": 1519,
+      "sender_id": 236,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> [said](<a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-\">https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-</a> <span class=\"user-mention\" data-user-id=\"25\">@YZ</span>  Thanks for the prompt reply - looking for to getting the new parameters!</p>",
+      "recipient_id": 43,
+      "timestamp": 1775862661,
+      "client": "website",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "last_edit_timestamp": 1775862692,
+      "edit_history": [
+        {
+          "user_id": 236,
+          "timestamp": 1775862692,
+          "prev_content": "@_**YZ|25** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational- Thanks for the prompt reply - looking for to getting the new parameters!",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> [said](<a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-\">https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-</a> Thanks for the prompt reply - looking for to getting the new parameters!</p>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1775862674,
+          "prev_content": "@_**YZ|25** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-Thanks for the prompt reply - looking for to getting the new parameters!",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> [said](<a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-Thanks\">https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-Thanks</a> for the prompt reply - looking for to getting the new parameters!</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Erzio",
+      "sender_email": "user236@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c966445f0cdaac2f678aa5c5cc9e8d9c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-10T23:11:01.000Z"
+    },
+    {
+      "id": 1520,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"157\">@Garbid</span> We confirm that the Playground is aligned with the GitHub configuration for llama-3.3-70b-instruct, including reasoning disabled for that model.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775875938,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-11T02:52:18.000Z"
+    },
+    {
+      "id": 1521,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> Thanks for the feedback and suggestions. </p>\n<p>We have updated the planned Stage 1 evaluation setup on GitHub and disabled reasoning for Gemma-4-31B-IT in the current configuration: <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge\">https://github.com/SAIRcompetition/equational-theories-stage1-judge</a></p>\n<p>We will also continue monitoring provider stability for this model on OpenRouter and will keep an eye on whether a more stable provider becomes available.</p>",
+      "recipient_id": 43,
+      "timestamp": 1775876216,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-11T02:56:56.000Z"
+    }
+  ]
+}
