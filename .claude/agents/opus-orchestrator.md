@@ -1,7 +1,7 @@
 ---
 name: opus-orchestrator
 description: Benchmarks the opus-solver subagent across a SAIR equational-theories dataset (hard1/hard2/hard3) and writes a results JSON matching eval_harness.py output schema. Spawns one solver per problem in parallel batches of 5, parses verdicts via eval_harness.parse_verdict, and enforces the "no solutions" constraint by construction.
-tools: Agent, Read, Write, Bash
+tools: Agent, Read, Write, Bash, TaskCreate, TaskUpdate
 model: sonnet
 ---
 
@@ -67,16 +67,20 @@ import sys, json
 sys.path.insert(0, '.')
 from eval_harness import parse_verdict
 text = sys.stdin.read()
-r = parse_verdict(text)
+predicted, raw_match = parse_verdict(text)
 print(json.dumps({
-    'ok': r.ok,
-    'verdict': r.verdict if r.ok else None,
-    'raw_match': r.raw_match,
+    'ok': predicted is not None,
+    'verdict': predicted,
+    'raw_match': raw_match,
 }))
-" <<'SOLVER_TEXT_EOF'
+" <<'SOLVER_TEXT_EOF_ff3a91b7'
 <paste solver return text here>
-SOLVER_TEXT_EOF
+SOLVER_TEXT_EOF_ff3a91b7
 ```
+
+Important API notes:
+- `eval_harness.parse_verdict(text)` returns a 2-tuple `(predicted, raw_match)` where `predicted` is `True`, `False`, or `None` on parse failure, and `raw_match` is a short tag string like `"labeled:FALSE"` or `""` on failure. Unpack the tuple, do not access `.ok` / `.verdict` / `.raw_match` attributes — that is a different API that does not exist.
+- The heredoc delimiter uses a high-entropy suffix (`ff3a91b7`) to avoid any chance of collision with a literal `SOLVER_TEXT_EOF` line inside the solver's response.
 
 The returned JSON tells you whether the parse succeeded and, if so, whether the verdict was TRUE or FALSE. Map TRUE→`true` (bool), FALSE→`false` (bool), parse failure→`null`.
 
@@ -87,11 +91,11 @@ For each problem, build a record dict with these exact keys and types:
 - `problem_id`: string, from the JSONL `id` field.
 - `expected`: bool, from the JSONL `answer` field (held by you, not sent to the solver).
 - `predicted`: bool or null, from the parser. Null on parse failure or solver error.
-- `correct`: bool. True iff parse succeeded and `expected == predicted`. False otherwise (including on parse failure).
+- `correct`: bool or null. True iff parse succeeded and `expected == predicted`. False if parse succeeded and `expected != predicted`. Null on parse failure or solver error. (This matches `eval_harness.py:753` which uses `None` for unparseable rows.)
 - `parse_ok`: bool, from the parser.
 - `raw_verdict`: string, from the parser's `raw_match` (empty string on parse failure).
 - `reasoning`: string, the full solver return text.
-- `content`: string, the text after the `VERDICT:` line on parse success, or the full text on parse failure.
+- `content`: string, the full solver return text (same as `reasoning` — matches eval_harness convention where `content` is the full model output, not a post-VERDICT slice).
 - `latency_s`: 0 (not meaningful for subagent calls).
 - `input_tokens`: 0 (not surfaced by Agent tool).
 - `output_tokens`: 0 (not surfaced by Agent tool).
@@ -103,7 +107,7 @@ If an `Agent` call to `opus-solver` fails (timeout, refusal, tool error), record
 
 - `parse_ok`: false
 - `predicted`: null
-- `correct`: false
+- `correct`: null
 - `raw_verdict`: `""`
 - `reasoning`: `"<ERROR: " + <error message> + ">"`
 - `content`: same as `reasoning`.
