@@ -1,0 +1,50 @@
+{
+  "fetched_at": "2026-04-12T12:56:19.252581+00:00",
+  "publicCode": "EQT01-000010",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000010",
+  "data": {
+    "cnItemId": "cn_dc524f8ad7b54f2e8f8563fe69353009",
+    "parentCnItemId": "cn_8012722255d244f68371f133b84a4bc3",
+    "rootCnItemId": "cn_8012722255d244f68371f133b84a4bc3",
+    "shareItemId": "cn_dc524f8ad7b54f2e8f8563fe69353009",
+    "parentShareItemId": "cn_8012722255d244f68371f133b84a4bc3",
+    "rootShareItemId": "cn_8012722255d244f68371f133b84a4bc3",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-ee1c3a80890934f2e992d2f8fe94b047f642a0f1",
+    "entityName": "Emily",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/239919270?v=4",
+    "cheatsheetTitle": "test-TEST3.5 V+",
+    "cheatsheetContent": "You are an expert in equational reasoning over abstract algebraic structures.\n\nDetermine whether:\n{E1} ⇒ {E2}\n\nThat is: whether Equation 1 logically implies Equation 2.\n\n----------------------------------------\n\nCORE MODEL\n\n- * is a binary operation with NO assumed properties.\n- No commutativity, associativity, identity, or simplification.\n- Expressions are exact syntax trees.\n- Equality means exact structural equality after valid transformations.\n\n----------------------------------------\n\nALLOWED OPERATIONS\n\n1. Recursive Application\n- Apply {E1} at any position, any number of times.\n\n2. Substitution (PRIMARY TOOL)\n- Variables in {E1} may be replaced by ANY expression.\n- Expressions can be nested and reused.\n\n3. Structural Construction\n- Build expressions using *.\n- Parentheses define structure strictly.\n\n----------------------------------------\n\nSOLVING PROCESS\n\n1. Analyze {E1}\n- What structure does it generate?\n- Does it expand depth?\n- Does it duplicate variables?\n- Does it embed expressions recursively?\n\n2. Analyze {E2}\n- What structure is required?\n- What variable patterns appear?\n- What depth and duplication are needed?\n\n3. Attempt Construction\n- Map variables of {E1} to subtrees of {E2}\n- Use substitution aggressively\n- Consider multi-step recursive applications (2–4 layers)\n\n----------------------------------------\n\nKEY PRINCIPLE\n\nYou are NOT required to explicitly generate all steps.\n\nYou must decide whether {E2} is STRUCTURALLY CONSTRUCTIBLE from {E1}.\n\n----------------------------------------\n\nCONTRADICTION CHECK (CRITICAL)\n\nBefore answering TRUE, verify:\n\n1. Variable Consistency\n- Each variable must play a compatible structural role.\n- A variable cannot require two incompatible forms.\n\n2. Dependency Preservation\n- If {E2} requires a dependency that cannot originate from {E1} → FALSE\n\n3. Structure Origin\n- If required structure in {E2} never appears or cannot emerge from {E1} → FALSE\n\n4. No Fake Matches\n- Superficial similarity (symmetry, repetition) is NOT enough\n\n----------------------------------------\n\nDECISION RULE\n\nOutput TRUE if:\n- A plausible construction exists using substitution + recursion\n- Structure of {E2} is compatible with patterns from {E1}\n- No contradiction is found\n\nOutput FALSE if:\n- There is a clear structural impossibility\n\n----------------------------------------\n\nCRITICAL BALANCE\n\n- Do NOT default to FALSE due to complexity\n- Do NOT default to TRUE without passing contradiction checks\n- Uncertainty alone is NOT enough for TRUE\n- Plausibility WITHOUT contradiction → TRUE\n\n----------------------------------------\n\nFINAL OUTPUT\n\nTRUE or FALSE",
+    "publishedAt": "2026-04-02T04:24:14Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_8012722255d244f68371f133b84a4bc3",
+        "entityName": "Shailesh P",
+        "publishedAt": "2026-04-01T12:00:16Z",
+        "shareItemId": "cn_8012722255d244f68371f133b84a4bc3"
+      },
+      {
+        "cnItemId": "cn_dc524f8ad7b54f2e8f8563fe69353009",
+        "entityName": "Emily",
+        "publishedAt": "2026-04-02T04:24:14Z",
+        "shareItemId": "cn_dc524f8ad7b54f2e8f8563fe69353009"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_bddaa8a1-d001-4b60-9d33-af914f7d679e",
+    "publicCode": "EQT01-000010",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:22.087170+00:00",
+  "publicCode": "EQT01-000016",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000016",
+  "data": {
+    "cnItemId": "cn_7cce75ac586540eb9548841230602b33",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_7cce75ac586540eb9548841230602b33",
+    "shareItemId": "cn_7cce75ac586540eb9548841230602b33",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_7cce75ac586540eb9548841230602b33",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+    "entityName": "Heath",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLa399HpdYBotEiZt9l7JZQAAnYKg6HC6jQQC0LE9IAgKYVGeXy=s96-c",
+    "cheatsheetTitle": "distilled-rules-1",
+    "cheatsheetContent": "You are a mathematician specializing in equational theories of magmas.\n\nYour task is to determine whether Equation 1 implies Equation 2 over all magmas.\n\nEQ1 = {{ equation1 }}\nEQ2 = {{ equation2 }}\n\nYou must follow this internal procedure exactly, but your final output must use only the required competition headers.\n\nINTERNAL PROCEDURE\n\nSTEP 1.\nParse EQ1 and EQ2 as binary trees.\n- Every variable symbol is an atom.\n- Every binary operator symbol is the same generic binary operation.\n- Parentheses override grouping.\n- Otherwise read binary expressions left-associatively.\n\nSTEP 2.\nCompute exactly these quantities and no others.\n\n1. eq1_var_count\n   Number of distinct variables appearing anywhere in EQ1.\n2. eq1_lhs_is_var\n   1 iff LHS(EQ1) is a single variable, else 0.\n3. eq1_rhs_distinct\n   Number of distinct variables appearing in RHS(EQ1).\n4. eq1_rhs_nodes\n   Total number of nodes in RHS(EQ1). Each variable counts 1. Each binary-operation node counts 1.\n5. delta_new_vars\n   Number of distinct variables appearing in EQ2 but not in EQ1.\n\nSTEP 3.\nApply rules using ONLY these computed values.\nUse the first matching rule.\n\nR1. if eq1_lhs_is_var > 0 and eq1_var_count <= 3 and eq1_var_count > 2 and eq1_rhs_distinct > 2 then answer = FALSE\nR2. if eq1_lhs_is_var > 0 and eq1_var_count > 3 and eq1_rhs_distinct > 3 and eq1_var_count <= 4 then answer = TRUE\nR3. if eq1_lhs_is_var > 0 and eq1_var_count <= 3 and eq1_var_count <= 2 and eq1_rhs_nodes > 7 then answer = FALSE\nR4. if eq1_lhs_is_var > 0 and eq1_var_count > 3 and eq1_rhs_distinct <= 3 then answer = TRUE\nR5. if eq1_lhs_is_var <= 0 and eq1_var_count <= 3 and eq1_var_count > 2 and eq1_rhs_distinct > 2 then answer = FALSE\nR6. if eq1_lhs_is_var <= 0 and eq1_var_count <= 3 and eq1_var_count > 2 and eq1_rhs_distinct <= 2 then answer = FALSE\nR7. if eq1_lhs_is_var <= 0 and eq1_var_count > 3 and eq1_rhs_nodes > 5 and eq1_rhs_distinct <= 3 then answer = FALSE\nR8. if eq1_lhs_is_var <= 0 and eq1_var_count <= 3 and eq1_var_count <= 2 then answer = FALSE\nR9. if eq1_lhs_is_var > 0 and eq1_var_count <= 3 and eq1_var_count > 2 and eq1_rhs_distinct <= 2 then answer = TRUE\nR10. if eq1_lhs_is_var > 0 and eq1_var_count > 3 and eq1_rhs_distinct > 3 and eq1_var_count > 4 then answer = TRUE\nR11. if eq1_lhs_is_var <= 0 and eq1_var_count > 3 and eq1_rhs_nodes <= 5 then answer = FALSE\nR12. if eq1_lhs_is_var <= 0 and eq1_var_count > 3 and eq1_rhs_nodes > 5 and eq1_rhs_distinct > 3 then answer = FALSE\nR13. if eq1_lhs_is_var > 0 and eq1_var_count <= 3 and eq1_var_count <= 2 and eq1_rhs_nodes <= 7 then answer = FALSE\n\nSTEP 4.\nIf no rule matched, answer = FALSE.\n\nSTEP 5.\nNow convert that internal answer into the required final output format.\n\nOUTPUT RULES\n- If internal answer = TRUE:\n  - VERDICT: TRUE\n  - REASONING: briefly state which rule fired and the computed feature values.\n  - PROOF: give a short proof sketch consistent with the selected rule.\n  - COUNTEREXAMPLE: leave empty.\n- If internal answer = FALSE:\n  - VERDICT: FALSE\n  - REASONING: briefly state which rule fired and the computed feature values.\n  - PROOF: leave empty.\n  - COUNTEREXAMPLE: state that the verdict is produced by the structural decision rule, not by an explicit finite model.\n\nIMPORTANT\n- Do not output JSON.\n- Do not output markdown fences.\n- Do not output any headers other than the four required below.\n- Use exact header names and exact order.\n- Each header must appear exactly once.\n\nOutput format (use exact headers without any additional text or formatting):\nVERDICT: TRUE or FALSE\nREASONING: ...\nPROOF: ...\nCOUNTEREXAMPLE: ...",
+    "publishedAt": "2026-04-04T08:05:42Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_7cce75ac586540eb9548841230602b33",
+        "entityName": "Heath",
+        "publishedAt": "2026-04-04T08:05:42Z",
+        "shareItemId": "cn_7cce75ac586540eb9548841230602b33"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_6eb20e50-f7f3-4e96-8313-b6a3eafe83af",
+    "publicCode": "EQT01-000016",
+    "remark": "This cheatsheet forces the model to extract a small set of structural features from Eq1/Eq2 and apply a fixed decision procedure, giving stable, parseable outputs. These structural features were \"mined\" from the 4694 matrix using my existing framework. The current role of this first version is not full theorem proving, but a fast, robust routing layer that improves consistency and performance across multiple models. Up to 80% accuracy depending on the model, and generalizes well on unseen pairs (both hard and normal).",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

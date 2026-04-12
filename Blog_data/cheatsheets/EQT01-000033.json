@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:30.754157+00:00",
+  "publicCode": "EQT01-000033",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000033",
+  "data": {
+    "cnItemId": "cn_255575b438d847fabe87f6a809c624ec",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_255575b438d847fabe87f6a809c624ec",
+    "shareItemId": "cn_255575b438d847fabe87f6a809c624ec",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_255575b438d847fabe87f6a809c624ec",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-8f8a69e8c14c70790c8d0fb448df6872fb843bca",
+    "entityName": "omegaestable",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/257198650?v=4",
+    "cheatsheetTitle": "v23c",
+    "cheatsheetContent": "E1 is {{ equation1 }} and E2 is {{ equation2 }}\n\nTASK: Does E1 imply E2 over all magmas?\nDEFAULT: TRUE. Say FALSE only when a test below proves separation.\n\n═══ QUICK TRUE ═══\nIf E1 is literally identical to E2 (ignoring whitespace) → answer TRUE.\n\n═══ STEP 0: SPLIT ON = ═══\nWrite out the four pieces:\n  E1_L = (before = in E1)    E1_R = (after = in E1)\n  E2_L = (before = in E2)    E2_R = (after = in E2)\n\"x = (big * expr)\" → left side is just \"x\", a bare variable with NO *.\n\n═══ 4 TESTS — for each, find E1 result and E2 result, then look up the table ═══\n\nTEST 1 — LP: first letter (a–z) on left side vs first letter on right side.\n  Same → HOLD.  Different → FAIL.\n  Tip: scan left-to-right past ALL opening parentheses to find the first letter.\n  \"(y * x)\" → y.  \"((y * x) * (x * y)) * z\" → y.  \"(x * x) * y\" → x.\n\nTEST 2 — RP: last letter on left side vs last letter on right side.\n  Same → HOLD.  Different → FAIL.\n  Tip: skip all trailing ) to find the last letter.\n  \"(x * y)\" → y.  \"(y * (x * y))\" → y.  \"((y * x) * x) * (y * x)\" → x.\n\nTEST 3 — C0: does left side contain *?  Does right side contain *?\n  Both have * → HOLD.  Neither has * and same variable → HOLD.  Otherwise → FAIL.\n  \"x\" has no *. \"x * y\" has *. Check each side independently in each equation.\n  C0 checks ONLY whether * is present. Do not consider which variables appear.\n\nTEST 4 — VARS: set of distinct letters on left vs set on right.\n  Both have *: same set → HOLD, different set → FAIL.\n  One side is bare variable v, other has *: HOLD only if * side uses only v.\n  Neither has * and same variable → HOLD.  Otherwise → FAIL.\n\n═══ DECISION TABLE — use after EVERY test ═══\n\n  E1=HOLD  E2=HOLD  →  no separation → next test\n  E1=HOLD  E2=FAIL  →  ★ SEPARATION → answer FALSE ★\n  E1=FAIL  E2=HOLD  →  no separation → next test\n  E1=FAIL  E2=FAIL  →  no separation → next test\n\nONLY the second row is separation. Read the row carefully every time.\nIf you write \"E1=HOLD\" and \"E2=FAIL\" that IS separation. Stop and answer FALSE.\nAfter all 4 tests with no separation → answer TRUE.\n\n═══ OUTPUT FORMAT ═══\nWrite your analysis in plain text. Then write these four lines at the end:\n  VERDICT: TRUE or FALSE\n  REASONING: (one sentence)\n  PROOF: (brief)\n  COUNTEREXAMPLE: (if FALSE: name the test; if TRUE: \"None\")\n\nHARD RULE: Your VERDICT line must match your analysis.\nIf ANY test had E1=HOLD and E2=FAIL → you MUST write VERDICT: FALSE.\nIf no test had that → you MUST write VERDICT: TRUE.\n\n═══ EXAMPLE A — FALSE via C0 ═══\nE1: x * y = (y * x) * x     E2: x = (x * y) * z\nE1_L=\"x * y\"  E1_R=\"(y * x) * x\"  |  E2_L=\"x\"  E2_R=\"(x * y) * z\"\n\nLP:  E1 first(L)=x first(R)=y → FAIL | E2 first(L)=x first(R)=x → HOLD\n     → E1=FAIL E2=HOLD → no separation\nRP:  E1 last(L)=y last(R)=x → FAIL | E2 last(L)=x last(R)=z → FAIL\n     → E1=FAIL E2=FAIL → no separation\nC0:  E1 L has *, R has * → HOLD | E2 L=\"x\" no * → FAIL\n     → E1=HOLD E2=FAIL → ★ SEPARATION ★\n\nVERDICT: FALSE\nREASONING: C0 separates — E1 holds on C0 but E2 fails.\nPROOF: E1 left \"x * y\" has *, right has *. E2 left \"x\" has no *.\nCOUNTEREXAMPLE: C0.\n\n═══ EXAMPLE B — FALSE via LP ═══\nE1: x = x * (y * z)     E2: (x * x) * y = (y * x) * z\nE1_L=\"x\"  E1_R=\"x * (y * z)\"  |  E2_L=\"(x * x) * y\"  E2_R=\"(y * x) * z\"\n\nLP:  E1 first(L)=x first(R)=x → HOLD | E2 first(L)=x first(R)=y → FAIL\n     → E1=HOLD E2=FAIL → ★ SEPARATION ★\n\nVERDICT: FALSE\nREASONING: LP separates — E1 first letters match, E2 first letters differ.\nPROOF: E1: x=x. E2: x≠y.\nCOUNTEREXAMPLE: LP.\n\n═══ EXAMPLE C — TRUE ═══\nE1: x = (y * x) * (z * (w * y))     E2: x = ((y * x) * x) * x\nE1_L=\"x\"  E1_R=\"(y * x) * (z * (w * y))\"  |  E2_L=\"x\"  E2_R=\"((y * x) * x) * x\"\n\nLP:  E1 first(L)=x first(R)=y → FAIL | E2 first(L)=x first(R)=y → FAIL\n     → E1=FAIL E2=FAIL → no separation\nRP:  E1 last(L)=x last(R)=y → FAIL | E2 last(L)=x last(R)=x → HOLD\n     → E1=FAIL E2=HOLD → no separation\nC0:  E1 L=\"x\" no * → FAIL | E2 L=\"x\" no * → FAIL\n     → E1=FAIL E2=FAIL → no separation\nVARS: E1 L={x} R={x,y,z,w} → FAIL | E2 L={x} R={x,y} → FAIL\n     → E1=FAIL E2=FAIL → no separation\nNo separation found.\n\nVERDICT: TRUE\nREASONING: No test separates E1 from E2.\nPROOF: All 4 tests checked; none had E1=HOLD with E2=FAIL.\nCOUNTEREXAMPLE: None\n\n═══ EXAMPLE D — FALSE via RP ═══\nE1: x = ((y * x) * x) * (y * x)     E2: x = (x * y) * (y * (x * y))\nE1_L=\"x\"  E1_R=\"((y * x) * x) * (y * x)\"  |  E2_L=\"x\"  E2_R=\"(x * y) * (y * (x * y))\"\n\nLP:  E1 first(L)=x first(R)=y → FAIL | E2 first(L)=x first(R)=x → HOLD\n     → E1=FAIL E2=HOLD → no separation\nRP:  E1 last(L)=x last(R)=x → HOLD | E2 last(L)=x last(R)=y → FAIL\n     → E1=HOLD E2=FAIL → ★ SEPARATION ★\n\nVERDICT: FALSE\nREASONING: RP separates — E1 last letters match, E2 last letters differ.\nPROOF: E1 R ends in x. E2 R ends in y (skip trailing parentheses).\nCOUNTEREXAMPLE: RP.\n\n═══ RULES ═══\n• Text-inspection ONLY. Do not compute tables, evaluate algebras, or invent new tests.\n• Split each equation at = first. \"x = stuff\" → left is \"x\" (no *).\n• Use the DECISION TABLE after every test. Read the row that matches your result.\n• E1=HOLD + E2=FAIL = separation = FALSE. Everything else = continue.\n• Default is TRUE. Say FALSE only with a clear separation.\n• For LP: scan left-to-right past ALL opening parentheses to find the first letter.\n• For RP: scan right-to-left past ALL closing parentheses to find the last letter.\n• Write VERDICT last, and it MUST match your analysis.\n• Do NOT use ## headers, numbered steps, bullet lists, or \\boxed{} for your answer.\n• Use plain text analysis, then the four VERDICT/REASONING/PROOF/COUNTEREXAMPLE lines.",
+    "publishedAt": "2026-04-11T16:30:54Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_255575b438d847fabe87f6a809c624ec",
+        "entityName": "omegaestable",
+        "publishedAt": "2026-04-11T16:30:54Z",
+        "shareItemId": "cn_255575b438d847fabe87f6a809c624ec"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_58fb4e99-d601-4fed-ad0c-94e1ed01e8e3",
+    "publicCode": "EQT01-000033",
+    "remark": "High acc for normal dataset",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

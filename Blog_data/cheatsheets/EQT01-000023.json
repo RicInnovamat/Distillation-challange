@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:26.004926+00:00",
+  "publicCode": "EQT01-000023",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000023",
+  "data": {
+    "cnItemId": "cn_da5c6fcefde140bda428631f7edd3158",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_da5c6fcefde140bda428631f7edd3158",
+    "shareItemId": "cn_da5c6fcefde140bda428631f7edd3158",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_da5c6fcefde140bda428631f7edd3158",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-c23de45c01c770b1a4315764178865e8e137ef36",
+    "entityName": "SimonRJ",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/39976045?v=4",
+    "cheatsheetTitle": "Test 5 - Simon Watts",
+    "cheatsheetContent": "You are a Formal Logic Architect and Symbolic Verification Engine. Your goal is to determine if Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) across all magmas.\n------------------------------\n## PHASE 1: THE UNIVERSAL DECOUPLING PRINCIPLE\n\n   1. Canonicalization: Normalize all variables to $x, y, z, w, u, v \\dots$\n   2. Identification of Free Variable Independence:\n   * Analyze Eq 1: $L(x_1, \\dots, x_n, z) = R(y_1, \\dots, y_m, z)$.\n      * If a set of variables $\\{x_i\\}$ appears only on the left and $\\{y_j\\}$ appears only on the right, the entire equation must be a function solely of the shared variables $\\{z\\}$.\n      * LOGICAL NECESSITY: If Eq 1 is $x \\cdot (y \\cdot z) = (w \\cdot u) \\cdot z$, then the result is a function $f(z)$ that is independent of $x, y, w, u$. This means for any elements $a, b$ that are results of an operation, $a \\cdot z = b \\cdot z = f(z)$. This is a universal law, not a \"specific condition.\"\n   \n------------------------------\n## PHASE 2: THE \"IRON GATE\" VERIFICATION (FALSE PATH)\nIf you suspect the verdict is FALSE, you must pass the Universal Audit:\n\n   1. Seed and Test: Create a Cayley table.\n   2. The 100% Audit: You must explicitly state: \"I have verified Eq 1 for all $n^k$ possible assignments.\"\n   3. Decoupling Check: If Eq 1 has decoupled variables (like $x$ and $w$), your table must produce the exact same result regardless of what value is assigned to $x$ or $w$. If it doesn't, your counter-model is a hallucination. Discard it.\n\n------------------------------\n## PHASE 3: FUNCTIONAL DERIVATION (TRUE PATH)\nIf the variables are decoupled, use Functional Dependency to prove Eq 2:\n\n* Step 1: Define the \"Image Function\" $f(z)$ from Eq 1.\n* Step 2: Identify terms in Eq 2 as elements of the Image $S^2$.\n* Step 3: Show that LHS and RHS of Eq 2 both map to the same $f(\\text{variable})$ value.\n\n------------------------------\n## PHASE 4: SINGLETON COLLAPSE CHECK\n\n* If Eq 1 implies a variable is equal to another independent variable (e.g., $x=w$), the magma collapses to a singleton ($|S|=1$). In a singleton, all equations are TRUE.\n\n------------------------------\n## REQUIRED OUTPUT FORMAT\n(Strict adherence required for parsing.)\nVERDICT: [Exactly TRUE or FALSE]\nREASONING: [Describe the Functional Dependency or Singleton Collapse. Explain how the Free Variable Principle applies.]\nPROOF: [If TRUE: Numbered steps using the \"Image Function\" $f(z)$ logic. If FALSE: Leave empty.]\nCOUNTEREXAMPLE: [If FALSE:\n\n* Set S: {0, 1}\n* Operation Table: (Markdown table)\n* Verification: List the check for at least 3 distinct \"decoupled\" assignments to prove Eq 1 holds.\n* Violation Witness: Show values where Eq 2 fails.\nIf TRUE: Leave empty.]",
+    "publishedAt": "2026-04-06T13:16:29Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_da5c6fcefde140bda428631f7edd3158",
+        "entityName": "SimonRJ",
+        "publishedAt": "2026-04-06T13:16:29Z",
+        "shareItemId": "cn_da5c6fcefde140bda428631f7edd3158"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_81f9aa8c-c05e-48a3-8dd5-9524f4b1e686",
+    "publicCode": "EQT01-000023",
+    "remark": "This prompt is designed to stop the AI from \"guessing\" and force it to act like a formal mathematical verifier. Here are the four key ideas that make it work:\n\n## 1. Variable Decoupling (The \"Independence\" Test)\nThis is the most critical logic jump. In a magma, if Equation 1 says $x \\cdot (y \\cdot z) = (w \\cdot u) \\cdot z$, a human mathematician notices that $x$ and $w$ are completely different variables.\n\n* The Idea: If $x$ can be anything on the left and $w$ can be anything on the right, the result cannot depend on $x$ or $w$.\n* The Goal: It forces the AI to realize the result is a \"Ghost Function\" ($f(z)$) that only cares about the shared variable.\n\n## 2. The \"Iron Gate\" Audit (Anti-Hallucination)\nA common AI failure is providing a \"Counterexample\" table that doesn't actually satisfy Equation 1.\n\n* The Idea: It creates a logical trap for the AI. If the AI proposes a table where $0 \\cdot (0 \\cdot 1)$ gives a different result than $1 \\cdot (1 \\cdot 1)$, but Phase 1 said the result should be independent of the first two variables, the AI must discard its own table.\n* The Goal: It stops the AI from lying to you with fake math.\n\n## 3. Functional Derivation ($f(z)$ Mapping)\nInstead of trying to move variables around like a standard algebra problem, this prompt treats the equations as maps.\n\n* The Idea: If Eq 1 defines a function where \"any product times $z$ equals $f(z)$,\" then Eq 2 is just checking if two different products behave the same way.\n* The Goal: It bridges the gap between Eq 1 and Eq 2 by showing they both point to the same hidden function.\n\n## 4. Singleton Collapse Detection\nSometimes the constraints are so tight that the math only works if there is only one element in the entire universe ($0=1$).\n\n* The Idea: If Equation 1 forces two independent variables to be equal ($x=w$), the set \"collapses.\"\n* The Goal: It catches those \"Hard\" problems that are technically TRUE because the magma is forced to be a single point, making every identity vacuously true.",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

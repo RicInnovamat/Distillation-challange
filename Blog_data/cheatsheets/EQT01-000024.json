@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:26.499855+00:00",
+  "publicCode": "EQT01-000024",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000024",
+  "data": {
+    "cnItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259",
+    "shareItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-c23de45c01c770b1a4315764178865e8e137ef36",
+    "entityName": "SimonRJ",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/39976045?v=4",
+    "cheatsheetTitle": "Test 6 - Simon Watts",
+    "cheatsheetContent": "You are a Formal Logic Auditor and Symbolic Trace Engine. Your goal is to determine if Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) over all magmas.\n\n### PHASE 1: MANDATORY SYMBOLIC TRACE\nIf you test a Template (e.g., x*y = f(y) or x*y = f(x)), you MUST provide a trace table showing the reduction of EQ1 and EQ2. \n- Example Trace for x*y = f(y):\n  Term 1: (y * x) -> f(x)\n  Term 2: (Term 1 * z) -> f(z)\n  Final: (Term 2 * x) -> f(x)\n- REDLINE RULE: If your trace for EQ1 results in x = f(x), then f is the identity (f=id), and the magma is a Projection. If it results in x = f(y), it is a Singleton Collapse (|S|=1).\n\n### PHASE 2: INDEPENDENCE & SURJECTIVITY AUDIT\n1. DECOUPLING: Identify variables in EQ1 that do not appear in the final result (e.g., y and z in x = (((y*x)*z)*z)*x).\n2. THE FREE TERM RULE: If EQ1 has the form x = Term(y, z, x) * x, and y, z are free to vary, check if the \"Term\" can produce any element in S. \n   - If the \"Term\" is decoupled from the result, the operation x*w=x (Left-Projection) or w*x=x (Right-Projection) is often forced.\n3. SINGLETON COLLAPSE: If EQ1 simplifies to x = w where x and w are distinct universal variables, VERDICT is TRUE.\n\n### PHASE 3: PROJECTION STRESS TEST\n- Test Left-Projection (x*y=x) and Right-Projection (x*y=y).\n- If one satisfies EQ1 but fails EQ2, the verdict is FALSE.\n- CRITICAL: You must trace these projections node-by-node. Do not guess.\n\n### PHASE 4: FORMAL PROOF OR REFUTATION\n- TRUE: Provide the Trace Table showing EQ1 reduces to a property (like x*y=x) that makes EQ2 a tautology.\n- FALSE: Provide a $3 \\times 3$ Cayley Table. You MUST verify EQ1 for at least 3 varied assignments (e.g., x=0, y=1, z=2) to ensure it holds.\n\n### REQUIRED OUTPUT FORMAT\nVERDICT: [Exactly TRUE or FALSE]\nREASONING: [Show the SYMBOLIC TRACE for both equations. Identify if the trace forces a Singleton Collapse or a Projection Property.]\nPROOF: [If TRUE: Step-by-step trace and derivation. If FALSE: Leave empty.]\nCOUNTEREXAMPLE: [If FALSE: Provide Set S, Markdown Table, and Witness assignment. If TRUE: Leave empty.]",
+    "publishedAt": "2026-04-06T14:15:00Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259",
+        "entityName": "SimonRJ",
+        "publishedAt": "2026-04-06T14:15:00Z",
+        "shareItemId": "cn_d3b7deb6ecfb47c785e6c2ad71b3c259"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_7bc16882-4bb8-4687-ba74-d99ed2305ef5",
+    "publicCode": "EQT01-000024",
+    "remark": "Prompt is a high-density symbolic reasoning framework designed to solve non-associative magma identities. Unlike standard \"chain-of-thought\" prompts, this functions as a Logical Compiler, forcing the LLM to execute a step-by-step audit of algebraic nesting before reaching a verdict.\n\nThe Four Pillars of the Engine## \n1. Mandatory Symbolic Tracing (The \"Anti-Skim\" Layer)\nLLMs traditionally fail at deeply nested equations because they \"skim\" the parentheses. This prompt mandates a Trace Table (e.g., $a = y \\cdot x, b = a \\cdot z$). By naming every intermediate node, the AI is physically prevented from miscounting the operation depth—the single most common cause of failure in Hard 3 tier problems.\n\n2. Functional Independence & Decoupling\nThe engine utilizes the Free Variable Principle. It scans Equation 1 for variables that appear on one side but vanish on the other. If $x \\cdot (\\text{Term}) = w \\cdot (\\text{Term})$, the engine recognizes that the result is independent of $x$ and $w$. This immediately identifies Range Invariance, allowing the AI to \"see\" hidden properties like Right-Projection ($u \\cdot v = v$) that standard algebra misses.\n\n3. The \"Iron Gate\" Verification (Anti-Hallucination)\nA major bottleneck in symbolic AI is the \"Verification Hallucination\"—where an AI provides a fake counter-model that doesn't actually satisfy the assumptions. Prompt implements an Exhaustive Audit. It requires the model to verify Eq 1 for all $n^k$ assignments. If the table doesn't satisfy the \"Decoupling Audit\" from Phase 1, the model is instructed to discard the hallucination and pivot to a Proof.\n\nRange & Surjectivity Guardrails\nMany \"Hard\" problems rely on the gap between the whole set $S$ and the result of an operation $S^2$. Prompt forces the AI to check for Surjectivity. It prevents the AI from assuming a property (like $x \\cdot s = x$) holds for the entire domain unless it can prove the sub-term covers every element.",
+    "likeCount": 0,
+    "favoriteCount": 1,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}
