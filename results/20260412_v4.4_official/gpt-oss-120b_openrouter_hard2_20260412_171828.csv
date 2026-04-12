@@ -1,0 +1,201 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard2_0001,False,False,True,True,labeled:FALSE,370.22,2861,535,0.000213,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; there exist magmas satisfying \(x*(y*z) = (y*w)*w\) for all assignments while violating \(x*(y*y) = (z*w)*u\). Hence
+hard2_0002,False,False,True,True,labeled:FALSE,416.05,2862,653,0.000236,"VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. No decisive true route applies, and a counterexample can be constructed where the first equation is satisfied while "
+hard2_0003,True,False,False,True,labeled:FALSE,457.77,2859,808,0.000265,"VERDICT: FALSE\nRULE: syntactic exclusion\n\nThe left‑most variable sets of the two equations differ, so the implication does not hold in all magmas."
+hard2_0004,True,False,False,True,labeled:FALSE,493.78,2861,427,0.000193,VERDICT: FALSE\nRULE: default false\n\nNo evidence that the first equation forces the second in every magma; a counterexample can be constructed in a suitable non‑trivial magma.
+hard2_0005,True,False,False,True,labeled:FALSE,526.52,2861,1145,0.000329,VERDICT: FALSE\nRULE: default false
+hard2_0006,True,False,False,True,labeled:FALSE,1.15,2862,35,0.000118,VERDICT: FALSE\nRULE: default false
+hard2_0007,False,True,False,True,labeled:TRUE,56.17,2861,805,0.000265,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces the binary operation to be constant, making both equations hold."
+hard2_0008,True,False,False,True,labeled:FALSE,103.14,2861,351,0.000178,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where Equation 1 is satisfied but Equation 2 fails.
+hard2_0009,False,False,True,True,labeled:FALSE,155.52,2861,356,0.000179,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0010,False,False,True,True,labeled:FALSE,202.10,2862,671,0.000239,VERDICT: FALSE\nRULE: default false
+hard2_0011,False,True,False,True,labeled:TRUE,258.74,2858,1124,0.000325,"VERDICT: TRUE\nRULE: singleton collapse\nThe identity forces all elements to be equal, so any magma satisfying the premise also satisfies the conclusion."
+hard2_0012,False,False,True,True,labeled:FALSE,292.92,2861,39,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0013,False,False,True,True,labeled:FALSE,370.57,2861,1230,0.000345,VERDICT: FALSE\nRULE: default false\nThe premises of Eq 1 do not force the conclusion Eq 2 in all magmas. No true‑rule applies and a countermodel exists.
+hard2_0014,False,False,True,True,labeled:FALSE,408.30,2861,726,0.000250,VERDICT: FALSE\nRULE: default false
+hard2_0015,False,True,False,True,labeled:TRUE,433.65,2860,778,0.000259,"VERDICT: TRUE\nRULE: constant operation\nThe identity forces the binary operation to be a constant, which then makes the target identity hold in every magma."
+hard2_0016,False,True,False,True,labeled:TRUE,483.46,2860,318,0.000172,"VERDICT: TRUE\nRULE: left projection\n\nThe premise is a bare equation of the form x = x * T where x does not occur in T, giving the left‑projection law a * b = a, which makes the target equation hold"
+hard2_0017,True,False,False,True,labeled:FALSE,509.95,2861,1502,0.000397,VERDICT: FALSE\nRULE: default false\n\nThe premise does not universally enforce the target identity in all magmas.
+hard2_0018,True,False,False,True,labeled:FALSE,545.90,2858,447,0.000196,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally over all magmas.
+hard2_0019,True,False,False,True,labeled:FALSE,24.72,2860,1019,0.000305,VERDICT: FALSE\nRULE: default false
+hard2_0020,False,False,True,True,labeled:FALSE,85.66,2861,781,0.000260,VERDICT: FALSE\nRULE: default false\nThe premise does not guarantee the target in all magmas.
+hard2_0021,True,True,True,True,labeled:TRUE,131.03,2860,902,0.000283,VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces the binary operation to be constant; in any constant magma both sides of the target equation are equal.
+hard2_0022,True,True,True,True,labeled:TRUE,178.16,2861,592,0.000224,VERDICT: TRUE\nRULE: singleton collapse
+hard2_0023,True,False,False,True,labeled:FALSE,209.44,2858,533,0.000213,VERDICT: FALSE\nRULE: default false
+hard2_0024,True,False,False,True,labeled:FALSE,265.48,2858,574,0.000221,VERDICT: FALSE\nRULE: default false
+hard2_0025,False,False,True,True,labeled:FALSE,320.03,2859,121,0.000134,VERDICT: FALSE\nRULE: default false
+hard2_0026,True,True,True,True,labeled:TRUE,376.51,2861,993,0.000300,"VERDICT: TRUE\nRULE: structural heuristic\nThe given equation forces a right‑projection behaviour, which also satisfies the target equation."
+hard2_0027,False,False,True,True,labeled:FALSE,426.48,2862,643,0.000234,VERDICT: FALSE\nRULE: default false
+hard2_0028,True,False,False,True,labeled:FALSE,462.49,2859,674,0.000240,VERDICT: FALSE\nRULE: default false
+hard2_0029,False,False,True,True,labeled:FALSE,495.62,2859,339,0.000176,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in general; there exist magmas satisfying the first equation while the second fails.
+hard2_0030,True,False,False,True,labeled:FALSE,529.99,2860,581,0.000222,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied while the second fails.
+hard2_0031,False,False,True,True,labeled:FALSE,12.47,2861,455,0.000198,VERDICT: FALSE\nRULE: default false
+hard2_0032,False,True,False,True,labeled:TRUE,84.48,2859,1206,0.000341,VERDICT: TRUE\nRULE: constant operation
+hard2_0033,True,False,False,True,labeled:FALSE,106.03,2861,422,0.000192,VERDICT: FALSE\nRULE: default false\n\nNo universal implication can be guaranteed; a counterexample magma can be constructed where the first equation holds while the second does not.
+hard2_0034,False,False,True,True,labeled:FALSE,148.44,2859,391,0.000186,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold for all magmas.
+hard2_0035,True,False,False,True,labeled:FALSE,192.20,2861,443,0.000196,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0036,True,False,False,True,labeled:FALSE,239.71,2862,240,0.000157,VERDICT: FALSE\nRULE: default false
+hard2_0037,True,True,True,True,labeled:TRUE,299.62,2861,867,0.000276,VERDICT: TRUE\nRULE: right projection\n\nThe identity x = (((y*z)*w)*w)*x forces a right‑projection law (a * b = b). Under this law the target equation x = x*(((y*y)*y)*x) holds in every magma.
+hard2_0038,False,True,False,True,labeled:TRUE,338.45,2861,748,0.000254,"VERDICT: TRUE\nRULE: singleton collapse\nThe equation forces every element to be equal (a singleton magma), in which the target equation trivially holds."
+hard2_0039,True,False,False,True,labeled:FALSE,409.22,2861,762,0.000256,"VERDICT: FALSE\nRULE: syntactic exclusion\n\nThe parity of variable occurrences differs between the premise and the conclusion, violating the necessary parity condition for implication. Hence the impl"
+hard2_0040,True,False,False,True,labeled:FALSE,438.39,2858,774,0.000259,"VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas; no general proof of derivability exists, and counterexamples can be constructed in non‑trivial magmas."
+hard2_0041,False,False,True,True,labeled:FALSE,479.81,2862,498,0.000206,VERDICT: FALSE\nRULE: default false
+hard2_0042,False,False,True,True,labeled:FALSE,510.99,2861,102,0.000131,VERDICT: FALSE\nRULE: default false
+hard2_0043,False,False,True,True,labeled:FALSE,548.19,2861,500,0.000207,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0044,True,False,False,True,labeled:FALSE,31.35,2861,761,0.000256,VERDICT: FALSE\nRULE: default false
+hard2_0045,False,True,False,True,labeled:TRUE,99.16,2859,641,0.000233,VERDICT: TRUE\nRULE: constant operation
+hard2_0046,False,True,False,True,labeled:TRUE,140.78,2861,530,0.000212,"VERDICT: TRUE\nRULE: constant operation source\nSince (x*y)*z = (w*z)*u forces the binary operation to be a constant, every term evaluates to that constant, making x*(x*x) = y*(z*w) hold in all magmas"
+hard2_0047,False,True,False,True,labeled:TRUE,173.81,2859,690,0.000243,"VERDICT: TRUE\nRULE: projection family\n\nThe given identity forces the operation to be right‑projective (a * b = b), which directly makes the second equation hold in every magma."
+hard2_0048,False,True,False,True,labeled:TRUE,233.02,2861,1073,0.000315,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation \((x*y)*z = (w*y)*u\) forces every product to be a constant element, which trivially makes \(x*(x*y) = z*(x*x)\) hold in all magmas."
+hard2_0049,True,False,False,True,labeled:FALSE,269.74,2861,472,0.000201,VERDICT: FALSE\nRULE: default false\nNo decisive true route applies; a counterexample magma can be constructed where the premise holds but the conclusion fails.
+hard2_0050,True,False,False,True,labeled:FALSE,316.22,2858,41,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0051,False,False,True,True,labeled:FALSE,390.33,2861,704,0.000245,VERDICT: FALSE\nRULE: default false
+hard2_0052,False,False,True,True,labeled:FALSE,421.59,2861,1078,0.000316,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; there exist magmas where the first identity is satisfied universally while the second fails.
+hard2_0053,True,True,True,True,labeled:TRUE,467.10,2862,620,0.000229,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given premise forces all elements to be equal in any magma, so the conclusion holds in every model satisfying the premise."
+hard2_0054,False,False,True,True,labeled:FALSE,518.47,2861,1108,0.000322,VERDICT: FALSE\nRULE: default false
+hard2_0055,False,False,True,True,labeled:FALSE,534.38,2861,816,0.000267,VERDICT: FALSE\nRULE: default false\nNo universal derivation can guarantee the second equation from the first in all magmas.
+hard2_0056,False,False,True,True,labeled:FALSE,15.70,2862,618,0.000229,VERDICT: FALSE\nRULE: default false
+hard2_0057,True,False,False,True,labeled:FALSE,61.52,2862,549,0.000216,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard2_0058,True,False,False,True,labeled:FALSE,134.54,2862,1512,0.000399,VERDICT: FALSE\nRULE: default false
+hard2_0059,True,True,True,True,labeled:TRUE,153.29,2862,762,0.000256,VERDICT: TRUE\nRULE: trivial model only satisfies Eq1 consequently satisfies Eq2.
+hard2_0060,True,False,False,True,labeled:FALSE,197.04,2861,508,0.000208,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. No universal derivation forces the second equation from the first.
+hard2_0061,True,False,False,True,labeled:FALSE,244.76,2861,243,0.000158,VERDICT: FALSE\nRULE: default false\nThe implication fails in general; no universal derivation from the first equation guarantees the second.
+hard2_0062,False,False,True,True,labeled:FALSE,296.15,2859,42,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0063,True,False,False,True,labeled:FALSE,345.46,2858,993,0.000300,VERDICT: FALSE\nRULE: default false
+hard2_0064,False,False,True,True,labeled:FALSE,395.66,2862,346,0.000177,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. No derivation guarantees that Equation 2 follows from Equation 1 under arbitrary binary operations.
+hard2_0065,True,False,False,True,labeled:FALSE,450.73,2859,745,0.000253,VERDICT: FALSE\nRULE: default false
+hard2_0066,True,False,False,True,labeled:FALSE,513.44,2862,578,0.000221,VERDICT: FALSE\nRULE: default false\n\nNo known universal derivation; a counterexample magma exists where the first equation holds universally but the second does not.
+hard2_0067,False,True,False,True,labeled:TRUE,553.87,2863,1016,0.000305,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces all elements to be equal, making the target equation hold in every magma that satisfies the source."
+hard2_0068,False,True,False,True,labeled:TRUE,39.22,2861,506,0.000208,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to a single constant element, which makes the target identity hold in every magma."
+hard2_0069,True,False,False,True,labeled:FALSE,89.31,2861,448,0.000197,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed in a non‑trivial magma where the first equation is satisfied but the second fail
+hard2_0070,True,False,False,True,labeled:FALSE,131.77,2859,59,0.000123,VERDICT: FALSE\nRULE: default false
+hard2_0071,False,False,True,True,labeled:FALSE,175.08,2859,37,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0072,True,False,False,True,labeled:FALSE,217.84,2861,1251,0.000349,VERDICT: FALSE\nRULE: default false
+hard2_0073,True,False,False,True,labeled:FALSE,274.82,2861,643,0.000234,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas; no general proof ensures Eq2 follows from Eq1.
+hard2_0074,True,True,True,True,labeled:TRUE,326.17,2862,1249,0.000349,"VERDICT: TRUE\nRULE: contradiction motif\nThe source equation fits contradiction motif C15, so it universally implies the target equation."
+hard2_0075,True,False,False,True,labeled:FALSE,389.62,2861,641,0.000233,VERDICT: FALSE\nRULE: default false\n\nThe premise does not universally enforce the target equation in all magmas.
+hard2_0076,False,False,True,True,labeled:FALSE,428.31,2861,517,0.000210,VERDICT: FALSE\nRULE: default false
+hard2_0077,False,True,False,True,labeled:TRUE,476.77,2861,669,0.000239,VERDICT: TRUE\nRULE: triviality of Eq1 forces all elements equal  
+hard2_0078,True,True,True,True,labeled:TRUE,494.62,2859,763,0.000256,"VERDICT: TRUE\nRULE: implication holds in all magmas (only constant operation satisfies Eq1, which also satisfies Eq2)"
+hard2_0079,True,False,False,True,labeled:FALSE,499.43,2861,838,0.000271,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied while the second fails.
+hard2_0080,True,False,False,True,labeled:FALSE,552.02,2861,950,0.000292,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; there exists a magma where the first equation is satisfied universally while the second fails.
+hard2_0081,True,False,False,True,labeled:FALSE,3.83,2861,593,0.000224,VERDICT: FALSE\nRULE: default false
+hard2_0082,True,False,False,True,labeled:FALSE,76.94,2860,729,0.000250,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally over all magmas.
+hard2_0083,True,False,False,True,labeled:FALSE,108.49,2861,513,0.000209,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0084,False,False,True,True,labeled:FALSE,164.35,2861,394,0.000186,VERDICT: FALSE\nRULE: default false
+hard2_0085,True,False,False,True,labeled:FALSE,199.83,2861,251,0.000159,VERDICT: FALSE\nRULE: default false\n\nThe premise does not force the target in all magmas.
+hard2_0086,True,False,False,True,labeled:FALSE,248.90,2861,1005,0.000303,VERDICT: FALSE\nRULE: default false
+hard2_0087,False,False,True,True,labeled:FALSE,316.73,2861,884,0.000280,VERDICT: FALSE\nRULE: default false
+hard2_0088,False,True,False,True,labeled:TRUE,352.11,2858,927,0.000288,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given identity forces a projection law that makes all products collapse to the left‑most factor, guaranteeing the commutation in the target equation."
+hard2_0089,True,False,False,True,labeled:FALSE,401.51,2861,877,0.000278,VERDICT: FALSE\nRULE: default false\nNo decisive true route was found; the implication does not hold in general.
+hard2_0090,False,False,True,True,labeled:FALSE,442.46,2859,646,0.000234,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0091,True,False,False,True,labeled:FALSE,481.91,2861,246,0.000158,VERDICT: FALSE\nRULE: default false
+hard2_0092,False,True,False,True,labeled:TRUE,533.27,2861,867,0.000276,"VERDICT: TRUE\nRULE: constant operation\n\nIn any magma where the identity x * (y * z) = (w * u) * u holds for all choices of variables, every term reduces to a single constant value; consequently the"
+hard2_0093,False,False,True,True,labeled:FALSE,564.89,2861,596,0.000225,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; no universal derivation can be guaranteed.
+hard2_0094,True,False,False,True,labeled:FALSE,39.50,2862,1007,0.000303,VERDICT: FALSE\nRULE: default false
+hard2_0095,False,True,False,True,labeled:TRUE,94.33,2860,518,0.000210,VERDICT: TRUE\nRULE: right projection
+hard2_0096,False,True,False,True,labeled:TRUE,134.85,2860,749,0.000254,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation forces enough algebraic constraints (e.g., a right‑projection‐like behavior) that the target equation is valid in every magma satisfyin"
+hard2_0097,True,False,False,True,labeled:FALSE,179.03,2860,568,0.000219,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0098,True,False,False,True,labeled:FALSE,221.02,2861,429,0.000193,VERDICT: FALSE\nRULE: default false
+hard2_0099,True,False,False,True,labeled:FALSE,272.74,2861,42,0.000120,VERDICT: FALSE\nRULE: default false
+hard2_0100,False,False,True,True,labeled:FALSE,327.60,2860,390,0.000186,VERDICT: FALSE\nRULE: default false
+hard2_0101,True,False,False,True,labeled:FALSE,383.02,2855,796,0.000263,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A suitable counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0102,False,False,True,True,labeled:FALSE,424.41,2861,447,0.000197,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0103,True,False,False,True,labeled:FALSE,471.60,2859,832,0.000270,VERDICT: FALSE\nRULE: default false
+hard2_0104,False,False,True,True,labeled:FALSE,501.29,2860,169,0.000144,VERDICT: FALSE\nRULE: default false
+hard2_0105,False,False,True,True,labeled:FALSE,536.94,2861,537,0.000214,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in general over all magmas.
+hard2_0106,True,True,True,True,labeled:TRUE,11.20,2861,1173,0.000334,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation forces a degenerate magma (all elements equal), under which any target equation holds."
+hard2_0107,True,True,True,True,labeled:TRUE,67.70,2862,616,0.000229,"VERDICT: TRUE\nRULE: left projection family\n\nEq1 forces a right‑projection law (a * b = b) in every magma, and under this law the target Eq2 is universally satisfied."
+hard2_0108,False,True,False,True,labeled:TRUE,112.62,2860,857,0.000274,"VERDICT: TRUE\nRULE: constant operation\nThe only way for x * x = ((y * z) * w) * u to hold in every magma is that the binary operation always returns the same element, which makes the target equation"
+hard2_0109,False,False,True,True,labeled:FALSE,160.11,2862,658,0.000237,VERDICT: FALSE\nRULE: default false\nNo valid implication route found; Eq1 does not enforce Eq2 in all magmas.
+hard2_0110,True,False,False,True,labeled:FALSE,208.28,2861,497,0.000206,VERDICT: FALSE\nRULE: default false
+hard2_0111,True,False,False,True,labeled:FALSE,253.84,2860,359,0.000180,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0112,False,False,True,True,labeled:FALSE,318.83,2860,832,0.000270,VERDICT: FALSE\nRULE: default false
+hard2_0113,True,False,False,True,labeled:FALSE,371.09,2861,778,0.000259,VERDICT: FALSE\nRULE: default false
+hard2_0114,True,False,False,True,labeled:FALSE,407.44,2858,925,0.000287,VERDICT: FALSE\nRULE: default false
+hard2_0115,True,False,False,True,labeled:FALSE,446.81,2861,834,0.000270,VERDICT: FALSE\nRULE: default false
+hard2_0116,True,False,False,True,labeled:FALSE,485.16,2861,877,0.000278,VERDICT: FALSE\nRULE: default false
+hard2_0117,True,False,False,True,labeled:FALSE,516.24,2859,689,0.000242,VERDICT: FALSE\nRULE: default false\n\nThe given equation does not universally imply the second one; no general derivation ensures the target holds in all magmas.
+hard2_0118,False,False,True,True,labeled:FALSE,566.03,2862,632,0.000232,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0119,True,True,True,True,labeled:TRUE,59.31,2858,1169,0.000334,"VERDICT: TRUE\nRULE: contradiction motif\nThe pattern of Eq 1 matches motif C11, which guarantees that Eq 2 follows in all magmas."
+hard2_0120,True,True,True,True,labeled:TRUE,100.78,2861,936,0.000289,VERDICT: TRUE\nRULE: singleton collapse
+hard2_0121,True,False,False,True,labeled:FALSE,154.50,2861,1052,0.000311,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in general; no conclusive true route is found and a counterexample can be constructed.
+hard2_0122,False,True,False,True,labeled:TRUE,197.20,2861,918,0.000286,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0123,False,False,True,True,labeled:FALSE,226.44,2861,670,0.000239,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas; no general proof of entailment exists.
+hard2_0124,False,True,False,True,labeled:TRUE,297.86,2861,1134,0.000327,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation imposes a strong constraint forcing the binary operation to behave like left‐projection, under which the target equation holds universa"
+hard2_0125,False,False,True,True,labeled:FALSE,334.36,2861,526,0.000212,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0126,True,False,False,True,labeled:FALSE,384.43,2857,99,0.000130,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0127,True,False,False,True,labeled:FALSE,428.93,2861,680,0.000241,VERDICT: FALSE\nRULE: default false
+hard2_0128,True,False,False,True,labeled:FALSE,470.22,2861,33,0.000118,VERDICT: FALSE\nRULE: default false
+hard2_0129,False,False,True,True,labeled:FALSE,501.48,2861,400,0.000188,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0130,True,False,False,True,labeled:FALSE,539.81,2861,481,0.000203,VERDICT: FALSE\nRULE: default false
+hard2_0131,True,False,False,True,labeled:FALSE,15.82,2861,857,0.000274,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0132,True,False,False,True,labeled:FALSE,71.56,2860,490,0.000205,VERDICT: FALSE\nRULE: default false
+hard2_0133,False,False,True,True,labeled:FALSE,129.24,2861,969,0.000296,VERDICT: FALSE\nRULE: default false
+hard2_0134,False,False,True,True,labeled:FALSE,176.30,2861,863,0.000276,VERDICT: FALSE\nRULE: default false
+hard2_0135,False,True,False,True,labeled:TRUE,204.38,2861,610,0.000227,VERDICT: TRUE\nRULE: constant operation
+hard2_0136,True,False,False,True,labeled:FALSE,260.25,2861,1227,0.000345,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas; a counterexample magma can be constructed where the first equation is satisfied for some assignment of elements while 
+hard2_0137,True,False,False,True,labeled:FALSE,302.63,2862,413,0.000190,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally over all magmas.
+hard2_0138,True,False,False,True,labeled:FALSE,358.70,2861,778,0.000259,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally; there exists a magma satisfying the first equation while the second fails.
+hard2_0139,False,False,True,True,labeled:FALSE,411.69,2861,503,0.000207,VERDICT: FALSE\nRULE: default false
+hard2_0140,True,False,False,True,labeled:FALSE,453.93,2861,1135,0.000327,VERDICT: FALSE\nRULE: default false
+hard2_0141,True,False,False,True,labeled:FALSE,497.35,2861,649,0.000235,VERDICT: FALSE\nRULE: default false
+hard2_0142,False,False,True,True,labeled:FALSE,518.30,2858,380,0.000184,VERDICT: FALSE\nRULE: default false\nThe implication does not hold for all magmas.
+hard2_0143,False,True,False,True,labeled:TRUE,560.07,2861,1134,0.000327,VERDICT: TRUE\nRULE: constant operation
+hard2_0144,False,True,False,True,labeled:TRUE,53.72,2860,629,0.000231,"VERDICT: TRUE\nRULE: constant operation\nAll products must be a single constant, making the target identity hold."
+hard2_0145,True,False,False,True,labeled:FALSE,104.45,2861,415,0.000190,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally over all magmas.
+hard2_0146,False,True,False,True,labeled:TRUE,138.53,2860,566,0.000219,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to be a single constant, making every term equal and thus the target equation holds in all magmas."
+hard2_0147,True,False,False,True,labeled:FALSE,187.62,2861,423,0.000192,VERDICT: FALSE\nRULE: default false
+hard2_0148,False,True,False,True,labeled:TRUE,230.23,2861,474,0.000202,"VERDICT: TRUE\nRULE: constant operation\n\nThe premise forces all products to be a single constant element, making every term equal and thus the target equation holds."
+hard2_0149,True,False,False,True,labeled:FALSE,294.75,2861,917,0.000286,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; there exist magmas where the first equation is satisfied while the second fails.
+hard2_0150,False,False,True,True,labeled:FALSE,329.09,2860,466,0.000200,VERDICT: FALSE\nRULE: default false
+hard2_0151,False,False,True,True,labeled:FALSE,387.69,2861,413,0.000190,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general over all magmas.
+hard2_0152,False,True,False,True,labeled:TRUE,447.81,2861,1092,0.000319,VERDICT: TRUE\nRULE: constant operation
+hard2_0153,True,False,False,True,labeled:FALSE,477.96,2861,346,0.000177,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied while the second fails.
+hard2_0154,True,False,False,True,labeled:FALSE,512.56,2861,541,0.000214,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0155,True,False,False,True,labeled:FALSE,542.97,2859,618,0.000229,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard2_0156,False,False,True,True,labeled:FALSE,27.60,2861,773,0.000258,VERDICT: FALSE\nRULE: default false
+hard2_0157,False,True,False,True,labeled:TRUE,78.30,2860,744,0.000253,"VERDICT: TRUE\nRULE: left projection\n\nThe given equation forces the magma to satisfy a = a * b for all a,b, which makes every product collapse to its left argument; under this projection the target "
+hard2_0158,False,True,False,True,labeled:TRUE,116.57,2859,734,0.000251,VERDICT: TRUE\nRULE: constant operation
+hard2_0159,True,False,False,True,labeled:FALSE,163.64,2861,581,0.000222,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied while the second fails.
+hard2_0160,True,True,True,True,labeled:TRUE,228.82,2861,1141,0.000328,VERDICT: TRUE\nRULE: exact identity
+hard2_0161,False,True,False,True,labeled:TRUE,272.29,2861,864,0.000276,"VERDICT: TRUE\nRULE: constant operation\n\nBoth sides of Eq 1 are non‑variable product terms with disjoint variable sets, forcing all products to equal a single constant. Hence Eq 2 holds in every mag"
+hard2_0162,True,True,True,True,labeled:TRUE,308.70,2861,911,0.000285,VERDICT: TRUE\nRULE: vacuous truth
+hard2_0163,False,False,True,True,labeled:FALSE,362.11,2862,458,0.000199,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample exists.
+hard2_0164,True,False,False,True,labeled:FALSE,417.83,2861,432,0.000194,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0165,False,False,True,True,labeled:FALSE,463.53,2862,750,0.000254,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0166,False,False,True,True,labeled:FALSE,486.24,2859,38,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0167,False,False,True,True,labeled:FALSE,519.98,2860,205,0.000150,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0168,True,False,False,True,labeled:FALSE,563.25,2860,613,0.000228,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general over all magmas.
+hard2_0169,False,False,True,True,labeled:FALSE,43.42,2861,517,0.000210,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally over all magmas.
+hard2_0170,True,False,False,True,labeled:FALSE,100.32,2859,37,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0171,False,False,True,True,labeled:FALSE,146.22,2860,1361,0.000370,VERDICT: FALSE\nRULE: default false
+hard2_0172,False,False,True,True,labeled:FALSE,183.59,2862,640,0.000233,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard2_0173,False,False,True,True,labeled:FALSE,238.89,2860,440,0.000195,VERDICT: FALSE\nRULE: default false
+hard2_0174,True,True,True,True,labeled:TRUE,281.48,2861,733,0.000251,VERDICT: TRUE\nRULE: trivial consequence
+hard2_0175,False,False,True,True,labeled:FALSE,347.28,2861,705,0.000246,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas; a counterexample exists.
+hard2_0176,False,False,True,True,labeled:FALSE,393.28,2861,680,0.000241,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas. No deterministic route forces Eq2 from Eq1.
+hard2_0177,False,False,True,True,labeled:FALSE,435.80,2861,404,0.000188,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard2_0178,True,False,False,True,labeled:FALSE,477.33,2861,995,0.000301,VERDICT: FALSE\nRULE: default false\nNo valid inference route confirms the implication; thus it does not hold in general.
+hard2_0179,False,False,True,True,labeled:FALSE,503.73,2862,449,0.000197,VERDICT: FALSE\nRULE: default false
+hard2_0180,False,False,True,True,labeled:FALSE,543.76,2860,37,0.000119,VERDICT: FALSE\nRULE: default false
+hard2_0181,False,True,False,True,labeled:TRUE,32.14,2861,729,0.000250,"VERDICT: TRUE\nRULE: left projection\nThe identity has the form x = x * T with x absent from T, yielding the left‑projection law a * b = a, which makes the target equation hold."
+hard2_0182,False,False,True,True,labeled:FALSE,95.00,2860,693,0.000243,VERDICT: FALSE\nRULE: default false
+hard2_0183,False,False,True,True,labeled:FALSE,126.07,2861,2225,0.000534,"VERDICT: FALSE\nRULE: counterexample witness\n\nThe magma with elements {0,1,2} and operation defined by  \n0 * a = 0, 1 * a = 0, 2 * 0 = 0, 2 * 1 = 1, 2 * 2 = 0  \nsatisfies (x * y) * z = (x * w) * u"
+hard2_0184,True,True,True,True,labeled:TRUE,169.41,2861,698,0.000244,VERDICT: TRUE\nRULE: right projection
+hard2_0185,True,False,False,True,labeled:FALSE,205.98,2861,96,0.000130,VERDICT: FALSE\nRULE: default false
+hard2_0186,True,False,False,True,labeled:FALSE,271.31,2861,546,0.000215,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed over all magmas.
+hard2_0187,False,True,False,True,labeled:TRUE,313.43,2859,772,0.000258,"VERDICT: TRUE\nRULE: left projection\n\nThe given identity forces a left‑projection law (a * b = a), under which the second equation reduces to the trivial identity x = x. Hence the implication holds "
+hard2_0188,False,True,False,True,labeled:TRUE,367.07,2861,759,0.000256,VERDICT: TRUE\nRULE: constant operation
+hard2_0189,True,False,False,True,labeled:FALSE,412.00,2861,112,0.000133,"VERDICT: FALSE\nRULE: default false\n\nThe premise does not force the target equation in all magmas. No projection or collapse applies, and a simple counterexample magma can be constructed where Eq1 h"
+hard2_0190,False,True,False,True,labeled:TRUE,467.21,2860,798,0.000263,"VERDICT: TRUE\nRULE: constant operation\n\nThe source equation forces all products to be equal a single constant, which makes the target equation hold in every magma."
+hard2_0191,False,False,True,True,labeled:FALSE,491.54,2859,1058,0.000313,VERDICT: FALSE\nRULE: default false\nThe implication is not guaranteed in all magmas. No derivable rule forces Eq2 from Eq1.
+hard2_0192,False,True,False,True,labeled:TRUE,551.87,2861,1433,0.000384,"VERDICT: TRUE\nRULE: left projection\nThe identity forces a left‑projection law (a * b = a), under which the target equation reduces to x = x on both sides."
+hard2_0193,True,True,True,True,labeled:TRUE,570.62,2862,1621,0.000420,"VERDICT: TRUE\nRULE: right projection family\n\nThe identity forces that any product with a rightmost occurrence of x collapses to x, which makes the target equation hold in all magmas."
+hard2_0194,False,False,True,True,labeled:FALSE,48.71,2861,551,0.000216,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard2_0195,False,True,False,True,labeled:TRUE,110.69,2861,439,0.000195,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to a single constant, making the target equation hold in every magma."
+hard2_0196,False,False,True,True,labeled:FALSE,156.31,2861,708,0.000246,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in general; a counterexample magma can be constructed where the first equation is satisfied but the second fails.
+hard2_0197,False,False,True,True,labeled:FALSE,188.28,2859,705,0.000245,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.
+hard2_0198,True,False,False,True,labeled:FALSE,235.86,2860,514,0.000209,VERDICT: FALSE\nRULE: default false
+hard2_0199,True,False,False,True,labeled:FALSE,291.82,2861,1326,0.000364,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; no universal derivation from the first equation guarantees the second across all magmas.
+hard2_0200,True,False,False,True,labeled:FALSE,334.43,2859,964,0.000295,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.

@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,True,False,True,labeled:TRUE,175.48,2943,1604,0.000420,VERDICT: TRUE\nRULE: right projection
+hard1_0002,False,True,False,True,labeled:TRUE,222.96,2944,475,0.000205,VERDICT: TRUE\nRULE: constant operation
+hard1_0003,True,True,True,True,labeled:TRUE,64.22,2941,1419,0.000384,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = ((y*y)*z)*x is a bare equation of the form x = T * x where T contains no occurrence of x, which forces the magma to satisfy the right‑projectio"
+hard1_0004,False,True,False,True,labeled:TRUE,151.77,2944,861,0.000278,VERDICT: TRUE\nRULE: left projection
+hard1_0005,False,False,True,True,labeled:FALSE,7.23,2943,950,0.000295,VERDICT: FALSE  \nRULE: default false
+hard1_0006,False,False,True,True,labeled:FALSE,106.54,2936,798,0.000266,"VERDICT: FALSE\nRULE: left-zero witness\n\nIn the left‑zero magma a * b = a, we have x*x = x and (x*y)*z = x, so the premise holds. But (y*z)*w = y, so the conclusion x*x = (y*z)*w would require x = y"
+hard1_0007,True,False,False,True,labeled:FALSE,195.03,2943,1299,0.000362,"VERDICT: FALSE\nRULE: counterexample\nThe magma with two elements {0,1} and operation a*b = 0 unless a=0 (in which case 0*b = b) satisfies the premise but violates the conclusion."
+hard1_0008,False,False,True,True,labeled:FALSE,245.52,2944,604,0.000230,VERDICT: FALSE\nRULE: default false
+hard1_0009,False,False,True,True,labeled:FALSE,81.54,2944,655,0.000239,VERDICT: FALSE\nRULE: default false
+hard1_0010,False,False,True,True,labeled:FALSE,167.51,2944,1933,0.000482,VERDICT: FALSE\nRULE: default false
+hard1_0011,False,False,True,True,labeled:FALSE,226.02,2946,611,0.000231,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0012,False,False,True,True,labeled:FALSE,49.01,2944,2123,0.000518,VERDICT: FALSE\nRULE: default false
+hard1_0013,True,False,False,True,labeled:FALSE,150.10,2942,352,0.000182,VERDICT: FALSE\nRULE: default false
+hard1_0014,False,False,True,True,labeled:FALSE,220.07,2945,763,0.000260,VERDICT: FALSE\nRULE: default false
+hard1_0015,False,False,True,True,labeled:FALSE,30.93,2943,941,0.000294,VERDICT: FALSE\nRULE: default false
+hard1_0016,False,False,True,True,labeled:FALSE,134.07,2946,620,0.000233,VERDICT: FALSE\nRULE: default false
+hard1_0017,False,False,True,True,labeled:FALSE,214.16,2944,510,0.000212,VERDICT: FALSE\nRULE: default false
+hard1_0018,True,False,False,True,labeled:FALSE,23.36,2945,250,0.000162,VERDICT: FALSE\nRULE: default false
+hard1_0019,False,True,False,True,labeled:TRUE,125.26,2942,581,0.000225,VERDICT: TRUE\nRULE: left projection
+hard1_0020,False,False,True,True,labeled:FALSE,206.01,2944,327,0.000177,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0021,False,True,False,True,labeled:TRUE,17.56,2941,838,0.000274,VERDICT: TRUE\nRULE: structural heuristic
+hard1_0022,False,False,True,True,labeled:FALSE,119.42,2943,648,0.000238,VERDICT: FALSE\nRULE: default false
+hard1_0023,True,True,True,True,labeled:TRUE,203.90,2941,894,0.000285,VERDICT: TRUE\nRULE: structural heuristic
+hard1_0024,False,False,True,True,labeled:FALSE,242.89,2944,728,0.000253,VERDICT: FALSE\nRULE: default false
+hard1_0025,False,False,True,True,labeled:FALSE,72.26,2944,1499,0.000400,VERDICT: FALSE\nRULE: default false
+hard1_0026,False,False,True,True,labeled:FALSE,169.86,2943,650,0.000238,VERDICT: FALSE\nRULE: set exclusion
+hard1_0027,True,True,True,True,labeled:TRUE,228.84,2941,976,0.000300,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe premise of T1 holds: Eq 1 is bare with three distinct variables, and Eq 2 is larger than Eq 1. Hence Eq 1 implies Eq 2 in all magmas."
+hard1_0028,False,False,True,True,labeled:FALSE,62.01,2943,780,0.000263,VERDICT: FALSE\nRULE: default false
+hard1_0029,False,True,False,True,labeled:TRUE,166.80,2944,917,0.000289,VERDICT: TRUE\nRULE: structural heuristic
+hard1_0030,False,False,True,True,labeled:FALSE,7.47,2944,1125,0.000329,VERDICT: FALSE\nRULE: default false
+hard1_0031,False,False,True,True,labeled:FALSE,122.06,2945,926,0.000291,VERDICT: FALSE\nRULE: default false
+hard1_0032,False,True,False,True,labeled:TRUE,193.36,2941,977,0.000300,VERDICT: TRUE\nRULE: structural heuristic
+hard1_0033,False,True,False,True,labeled:TRUE,23.43,2944,549,0.000219,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = T * x with T not containing x forces a*b = b, making Eq2 reduce to x = x."
+hard1_0034,True,False,False,True,labeled:FALSE,90.32,2939,939,0.000293,VERDICT: FALSE\nRULE: default false
+hard1_0035,True,True,True,True,labeled:TRUE,170.17,2944,296,0.000171,"VERDICT: TRUE\nRULE: left projection\n\nThe first equation has the form x = x * T with T not containing x, which forces the left‑projection law a * b = a in every magma satisfying it. Substituting thi"
+hard1_0036,False,False,True,True,labeled:FALSE,237.91,2942,348,0.000181,VERDICT: FALSE\nRULE: default false
+hard1_0037,False,False,True,True,labeled:FALSE,57.07,2944,1189,0.000341,VERDICT: FALSE\nRULE: default false
+hard1_0038,False,False,True,True,labeled:FALSE,154.92,2942,798,0.000266,VERDICT: FALSE\nRULE: default false
+hard1_0039,False,False,True,True,labeled:FALSE,222.55,2944,905,0.000287,VERDICT: FALSE\nRULE: default false
+hard1_0040,True,True,True,True,labeled:TRUE,44.82,2943,811,0.000269,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * ((y * (z * w)) * w) is of the form x = x * T with T not containing x, which forces the left‑projection law a * b = a in every magma satisfyi"
+hard1_0041,True,False,False,True,labeled:FALSE,149.27,2943,1003,0.000305,VERDICT: FALSE\nRULE: default false
+hard1_0042,False,False,True,True,labeled:FALSE,216.34,2942,452,0.000201,VERDICT: FALSE\nRULE: default false
+hard1_0043,False,False,True,True,labeled:FALSE,27.03,2942,551,0.000219,VERDICT: FALSE\nRULE: default false
+hard1_0044,True,False,False,True,labeled:FALSE,131.46,2941,1124,0.000328,VERDICT: FALSE\nRULE: default false
+hard1_0045,False,False,True,True,labeled:FALSE,210.16,2946,620,0.000233,VERDICT: FALSE\nRULE: default false
+hard1_0046,True,False,False,True,labeled:FALSE,25.10,2942,721,0.000252,VERDICT: FALSE\nRULE: default false
+hard1_0047,False,False,True,True,labeled:FALSE,127.27,2945,1679,0.000434,VERDICT: FALSE\nRULE: default false
+hard1_0048,False,True,False,True,labeled:TRUE,207.87,2941,302,0.000172,VERDICT: TRUE\nRULE: right projection
+hard1_0049,False,False,True,True,labeled:FALSE,36.24,2944,1001,0.000305,VERDICT: FALSE\nRULE: default false
+hard1_0050,True,True,True,True,labeled:TRUE,89.79,2944,728,0.000253,VERDICT: TRUE\nRULE: left projection
+hard1_0051,False,False,True,True,labeled:FALSE,186.38,2942,394,0.000190,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0052,True,False,False,True,labeled:FALSE,240.72,2943,2395,0.000570,VERDICT: FALSE\nRULE: default false
+hard1_0053,False,False,True,True,labeled:FALSE,72.41,2944,501,0.000210,VERDICT: FALSE\nRULE: default false
+hard1_0054,True,True,True,True,labeled:TRUE,155.50,2943,520,0.000214,VERDICT: TRUE\nRULE: constant operation
+hard1_0055,False,False,True,True,labeled:FALSE,21.12,2944,513,0.000212,VERDICT: FALSE\nRULE: right-zero witness
+hard1_0056,True,True,True,True,labeled:TRUE,134.69,2945,477,0.000205,VERDICT: TRUE\nRULE: contradiction motif
+hard1_0057,False,False,True,True,labeled:FALSE,212.91,2944,860,0.000278,VERDICT: FALSE\nRULE: default false
+hard1_0058,False,False,True,True,labeled:FALSE,103.10,2944,1657,0.000430,VERDICT: FALSE\nRULE: default false
+hard1_0059,True,True,True,True,labeled:TRUE,105.00,2941,379,0.000187,VERDICT: TRUE\nRULE: right projection
+hard1_0060,True,True,True,True,labeled:TRUE,187.60,2944,519,0.000213,VERDICT: TRUE\nRULE: right projection
+hard1_0061,True,False,False,True,labeled:FALSE,248.07,2944,1717,0.000441,VERDICT: FALSE\nRULE: default false
+hard1_0062,False,False,True,True,labeled:FALSE,64.33,2945,347,0.000181,VERDICT: FALSE\nRULE: default false
+hard1_0063,True,True,True,True,labeled:TRUE,157.25,2941,345,0.000180,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = ((y*z)*w)*x fits the right‑projection pattern x = T*x with T not containing x, forcing a*b = b for all a,b. Under this interpretation the right"
+hard1_0064,True,True,True,True,labeled:TRUE,222.31,2944,288,0.000170,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * T with T not containing x forces a*b = a. Under this projection the target equation reduces to x = x, so it holds."
+hard1_0065,True,True,True,True,labeled:TRUE,42.61,2941,299,0.000172,"VERDICT: TRUE\nRULE: left projection\n\nThe equation x = x * (y * (z * y)) is of the form x = x * T with T not containing x, so it forces a*b = a for all a,b. Under this projection the right‑hand side"
+hard1_0066,False,False,True,True,labeled:FALSE,219.46,2945,899,0.000286,VERDICT: FALSE\nRULE: default false
+hard1_0067,True,False,False,True,labeled:FALSE,27.34,2944,587,0.000226,VERDICT: FALSE\nRULE: default false
+hard1_0068,False,False,True,True,labeled:FALSE,130.55,2943,528,0.000215,VERDICT: FALSE\nRULE: default false
+hard1_0069,True,True,True,True,labeled:TRUE,213.13,2941,787,0.000264,VERDICT: TRUE\nRULE: right projection

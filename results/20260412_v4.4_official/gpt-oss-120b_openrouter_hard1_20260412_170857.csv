@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,False,True,True,labeled:FALSE,221.46,2860,412,0.000190,VERDICT: FALSE\nRULE: default false
+hard1_0002,False,True,False,True,labeled:TRUE,331.66,2861,811,0.000266,"VERDICT: TRUE\nRULE: constant operation\n\nThe only magmas satisfying the source equation force the binary operation to be a constant function, which also makes the target equation hold."
+hard1_0003,True,True,True,True,labeled:TRUE,60.58,2858,522,0.000211,"VERDICT: TRUE\nRULE: right projection\n\nThe equation x = ((y*y)*z)*x forces a right‑projection law (a*b = b), under which the target equation collapses to x = x."
+hard1_0004,False,False,True,True,labeled:FALSE,197.02,2861,1384,0.000375,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the premise equation is universally satisfied while the conclusion fails.
+hard1_0005,False,False,True,True,labeled:FALSE,2.26,2860,55,0.000122,VERDICT: FALSE\nRULE: default false
+hard1_0006,False,False,True,True,labeled:FALSE,120.05,2853,300,0.000168,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe left-zero magma a*b = a satisfies x*x = (x*y)*z for all assignments, but can make x*x ≠ (y*z)*w by choosing y different from x."
+hard1_0007,True,True,True,True,labeled:TRUE,267.06,2860,1025,0.000306,"VERDICT: TRUE\nRULE: right projection\nThe premise forces a right‑projection magma (a * b = b), which makes the target equation collapse to y = y, always true."
+hard1_0008,False,False,True,True,labeled:FALSE,376.18,2861,1107,0.000322,VERDICT: FALSE\nRULE: default false
+hard1_0009,False,False,True,True,labeled:FALSE,102.63,2861,760,0.000256,VERDICT: FALSE\nRULE: default false
+hard1_0010,False,True,False,True,labeled:TRUE,235.37,2861,731,0.000250,"VERDICT: TRUE\nRULE: constant operation source\nThe source equation forces the binary operation to be a constant, which makes the target equation hold in every magma."
+hard1_0011,False,False,True,True,labeled:FALSE,324.49,2863,237,0.000157,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe magma with operation a * b = a satisfies the first equation universally, but the second equation reduces to x = y, which can fail."
+hard1_0012,False,True,False,True,labeled:TRUE,67.75,2861,989,0.000299,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces every left‑associated product of depth 2 to be a constant, which consequently makes all right‑associated products of the same depth con"
+hard1_0013,True,False,False,True,labeled:FALSE,177.92,2859,590,0.000224,VERDICT: FALSE\nRULE: default false
+hard1_0014,False,False,True,True,labeled:FALSE,313.63,2862,595,0.000225,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard1_0015,False,False,True,True,labeled:FALSE,28.83,2860,127,0.000136,VERDICT: FALSE\nRULE: default false
+hard1_0016,False,False,True,True,labeled:FALSE,166.74,2863,642,0.000234,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard1_0017,False,False,True,True,labeled:FALSE,301.40,2861,621,0.000230,VERDICT: FALSE\nRULE: default false
+hard1_0018,True,False,False,True,labeled:FALSE,24.76,2862,425,0.000192,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas. No general proof forces the second equation from the first.
+hard1_0019,False,False,True,True,labeled:FALSE,149.54,2859,719,0.000248,VERDICT: FALSE\nRULE: default false
+hard1_0020,False,False,True,True,labeled:FALSE,286.37,2861,252,0.000159,"VERDICT: FALSE\nRULE: left-zero witness\n\nIn the left‑zero magma (a * b = a) the first equation holds for all elements, but the second equation reduces to x = y, which fails when the magma has at lea"
+hard1_0021,False,True,False,True,labeled:TRUE,18.10,2858,878,0.000278,VERDICT: TRUE\nRULE: default true
+hard1_0022,False,False,True,True,labeled:FALSE,131.71,2860,729,0.000250,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard1_0023,True,False,False,True,labeled:FALSE,263.51,2858,876,0.000278,VERDICT: FALSE\nRULE: default false
+hard1_0024,False,False,True,True,labeled:FALSE,349.81,2861,648,0.000235,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas; a counterexample exists.
+hard1_0025,False,False,True,True,labeled:FALSE,102.73,2861,556,0.000217,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied but the second fails.
+hard1_0026,False,False,True,True,labeled:FALSE,236.05,2860,630,0.000231,VERDICT: FALSE\nRULE: default false
+hard1_0027,True,False,False,True,labeled:FALSE,335.25,2858,459,0.000199,VERDICT: FALSE\nRULE: default false\n\nThe premise does not force the target in all magmas; no known universal derivation exists.
+hard1_0028,False,True,False,True,labeled:TRUE,75.26,2860,890,0.000281,"VERDICT: TRUE\nRULE: projection implication\n\nThe identity forces all left‑multiplications by any element to give the same result for a fixed right operand, making the operation depend only on the ri"
+hard1_0029,False,True,False,True,labeled:TRUE,196.84,2861,778,0.000259,VERDICT: TRUE\nRULE: right projection
+hard1_0030,False,False,True,True,labeled:FALSE,5.02,2861,200,0.000150,VERDICT: FALSE\nRULE: default false
+hard1_0031,False,False,True,True,labeled:FALSE,132.57,2862,524,0.000211,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied while the second equation fails.
+hard1_0032,False,False,True,True,labeled:FALSE,280.40,2858,1449,0.000387,VERDICT: FALSE\nRULE: default false
+hard1_0033,False,True,False,True,labeled:TRUE,12.70,2861,539,0.000214,"VERDICT: TRUE\nRULE: right projection\n\nThe first equation forces a right‑projection (a * b = b) in every magma, and under this law the second equation collapses to x = x. Hence the implication holds"
+hard1_0034,True,False,False,True,labeled:FALSE,102.52,2856,371,0.000182,VERDICT: FALSE\nRULE: default false
+hard1_0035,True,True,True,True,labeled:TRUE,241.51,2861,802,0.000264,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * T with x absent from T forces a left‑projection law a * b = a, under which the target equation collapses to a trivial identity."
+hard1_0036,False,False,True,True,labeled:FALSE,334.22,2859,93,0.000129,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a suitable counterexample can be constructed where the first equation is satisfied but the second fails.
+hard1_0037,False,True,False,True,labeled:TRUE,82.08,2861,897,0.000282,VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces a projection behavior that makes the second equation hold in every magma.
+hard1_0038,False,True,False,True,labeled:TRUE,218.87,2859,1055,0.000312,"VERDICT: TRUE\nRULE: left projection\nThe given premise forces a left‑projection law (a * b = a), which also validates the target equation."
+hard1_0039,False,True,False,True,labeled:TRUE,335.28,2861,1112,0.000323,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is a bare identity that forces a strong projection behavior, and the target equation is satisfied under that projection."
+hard1_0040,True,True,True,True,labeled:TRUE,43.14,2860,621,0.000230,"VERDICT: TRUE\nRULE: left projection\nThe premise x = x * ((y * (z * w)) * w) has the form x = x * T with T not containing x, forcing a left‑projection law a * b = a; under this law the target equatio"
+hard1_0041,True,False,False,True,labeled:FALSE,193.36,2860,1422,0.000382,VERDICT: FALSE\nRULE: default false
+hard1_0042,False,True,False,True,labeled:TRUE,310.31,2859,803,0.000264,VERDICT: TRUE\nRULE: singleton collapse
+hard1_0043,False,True,False,True,labeled:TRUE,31.63,2859,603,0.000226,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to a single constant, which also satisfies the target equation."
+hard1_0044,True,False,False,True,labeled:FALSE,165.26,2858,864,0.000276,VERDICT: FALSE\nRULE: default false
+hard1_0045,False,False,True,True,labeled:FALSE,301.23,2863,851,0.000273,"VERDICT: FALSE\nRULE: default false\n\nThe premise does not match any known true‑implication patterns, and no projection or collapse condition applies. Hence the implication cannot be guaranteed for a"
+hard1_0046,True,False,False,True,labeled:FALSE,14.95,2859,488,0.000204,VERDICT: FALSE\nRULE: default false
+hard1_0047,False,False,True,True,labeled:FALSE,143.13,2862,511,0.000209,VERDICT: FALSE\nRULE: default false\n\nNo valid derivation shows the target follows from the premise in all magmas. Hence the implication does not hold universally.
+hard1_0048,False,False,True,True,labeled:FALSE,281.45,2858,1010,0.000303,"VERDICT: FALSE\nRULE: syntactic exclusion\n\nThe multiset of variable occurrences (parity) differs between the two identities, so the first does not logically entail the second in all magmas."
+hard1_0049,False,False,True,True,labeled:FALSE,52.96,2861,747,0.000254,"VERDICT: FALSE\nRULE: XOR parity witness\n\nIn the abelian group (Z₂,+) the identity x + (y + z) = (z + x) + y holds for all variables, but x + (y + z) = (w + u) + y does not hold universally (e.g., x"
+hard1_0050,True,False,False,True,labeled:FALSE,115.09,2861,486,0.000204,VERDICT: FALSE\nRULE: default false
+hard1_0051,False,False,True,True,labeled:FALSE,241.82,2859,274,0.000164,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0052,True,False,False,True,labeled:FALSE,383.64,2860,2200,0.000530,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas.
+hard1_0053,False,True,False,True,labeled:TRUE,87.49,2861,886,0.000280,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces a left‑dependent (or constant) operation, which also satisfies the target equation."
+hard1_0054,True,True,True,True,labeled:TRUE,211.13,2860,582,0.000222,VERDICT: TRUE\nRULE: constant operation
+hard1_0055,False,False,True,True,labeled:FALSE,25.51,2861,677,0.000240,"VERDICT: FALSE\nRULE: right-zero witness\nIn the magma defined by a * b = b (right projection), Equation 1 holds for all elements, but Equation 2 reduces to x = w, which is not generally true. Hence t"
+hard1_0056,True,False,False,True,labeled:FALSE,145.76,2862,600,0.000226,VERDICT: FALSE\nRULE: default false\n\nThe premise does not guarantee the target; no universal derivation exists.
+hard1_0057,False,False,True,True,labeled:FALSE,280.49,2861,625,0.000230,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. No universally valid derivation from the first equation to the second can be established.
+hard1_0058,False,False,True,True,labeled:FALSE,130.76,2861,1208,0.000341,VERDICT: FALSE\nRULE: default false
+hard1_0059,True,True,True,True,labeled:TRUE,112.58,2858,534,0.000213,VERDICT: TRUE\nRULE: right projection
+hard1_0060,True,True,True,True,labeled:TRUE,247.18,2861,439,0.000195,"VERDICT: TRUE\nRULE: source collapse\n\nThe equation x = (((y*z)*x)*z)*x forces the right‑projection law (a * b = b), under which the target equation also collapses to x = x. Hence the implication hol"
+hard1_0061,True,False,False,True,labeled:FALSE,348.57,2861,576,0.000221,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard1_0062,False,False,True,True,labeled:FALSE,91.55,2862,708,0.000246,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in general over all magmas.
+hard1_0063,True,False,False,True,labeled:FALSE,223.14,2858,1101,0.000321,VERDICT: FALSE\nRULE: default false
+hard1_0064,True,False,False,True,labeled:FALSE,319.23,2861,331,0.000174,VERDICT: FALSE\nRULE: default false\n\nThe implication is not valid over all magmas.
+hard1_0065,True,False,False,True,labeled:FALSE,47.82,2858,656,0.000236,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the first equation is satisfied while the second fails.
+hard1_0066,False,False,True,True,labeled:FALSE,311.83,2862,430,0.000193,VERDICT: FALSE\nRULE: default false\nThe implication does not hold in all magmas.
+hard1_0067,True,False,False,True,labeled:FALSE,35.26,2861,453,0.000198,"VERDICT: FALSE\nRULE: syntactic exclusion\n\nThe parity of variable occurrences differs between the two equations, violating a necessary syntactic condition for implication."
+hard1_0068,False,True,False,True,labeled:TRUE,161.65,2860,593,0.000224,VERDICT: TRUE  \nRULE: structural heuristic  \n\nThe given identity forces a highly constrained magma in which the target equation necessarily holds.
+hard1_0069,True,True,True,True,labeled:TRUE,290.66,2858,369,0.000182,"VERDICT: TRUE\nRULE: right projection\n\nThe equation x = ((y*y)*z)*x is of the form x = T*x with x not in T, giving the right‑projection law a*b = b; under this law the right‑hand side of the target "
