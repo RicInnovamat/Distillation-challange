@@ -1,0 +1,26 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard2_0005,True,True,True,True,VERDICT: TRUE,133.89,2959,4368,0.000569,"VERDICT: TRUE\nRULE: structural heuristic\n\nEquation 1 is bare with three variables, while Equation 2 has fewer variables and a larger imbalance, satisfying the structural heuristic."
+hard2_0007,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0014,False,False,True,True,VERDICT: FALSE,42.81,2955,13283,0.001550,"VERDICT: FALSE\nRULE: default false\n\nI could not find a proof that Eq1 forces Eq2, nor a counterexample. The identity seems too weak to imply the target."
+hard2_0026,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0029,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0038,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0041,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0047,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0077,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0078,True,True,True,True,VERDICT: TRUE,79.44,2953,8804,0.001057,"VERDICT: TRUE\nRULE: proof\n\nThe only magmas satisfying Eq1 are constant operations, and Eq2 holds in all constant magmas. Thus Eq1 implies Eq2 over all magmas."
+hard2_0084,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0090,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0093,False,False,True,True,VERDICT: FALSE,79.92,2955,16791,0.001936,"VERDICT: FALSE\nRULE: default false\n\nNo exact identity, tautology, collapse, or projection rule applies, and no syntactic FALSE route is triggered. The implication does not follow from the given equ"
+hard2_0096,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0100,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0102,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0107,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0125,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0142,False,False,True,True,VERDICT: FALSE,32.27,2952,10083,0.001198,VERDICT: FALSE\nRULE: default false
+hard2_0156,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0163,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0172,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0177,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0194,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard2_0196,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 

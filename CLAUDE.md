@@ -48,7 +48,8 @@ Three-layer cloud-first system (no local GPU):
 - **Confabulation is the #1 failure mode for GPT models:** GPT-OSS-120b finds correct counterexamples then "talks itself out" with fluent wrong proofs. GPT-OSS-20b misfires singleton/collapse heuristic on 58% of failures
 - **Total FALSE bias dominates DeepSeek/Llama/Gemini:** with v4 cheatsheet, these models answer FALSE on 99%+ of problems (0-1% TRUE recall). They treat the cheatsheet as a pure lookup table
 - **Gemini hallucinates structural rules** not in the cheatsheet (e.g. "rightmost exclusion", "count exclusion") -- 53% of its failures
-- **Token truncation kills GPT-OSS models:** at 1024 max_tokens, ~90% of GPT-120b failures were truncated mid-reasoning with no VERDICT emitted. Now set to 16384
+- **Token truncation kills GPT-OSS models:** at 1024 max_tokens, ~90% of GPT-120b failures were truncated mid-reasoning with no VERDICT emitted. Now set to 65536 for reasoning models
+- **Reasoning models require temperature=1.0:** gpt-oss-20b/120b silently return empty responses (0 tokens) with temperature=0 on OpenRouter. Per-model `params` in `config/models.yaml` override the global default
 - **Eval is confirmed 50/50 TRUE/FALSE** by Terence Tao -- default-FALSE is correctly calibrated
 
 ## Cheatsheet Design Rules (community-validated + v4 failure analysis)
@@ -63,6 +64,24 @@ Three-layer cloud-first system (no local GPU):
 - **Model-specific framing:** Llama needs minimal task framing (no "mathematician persona"). GPT needs symbolic solver format with rule locks. Gemini needs explicit "do not invent rules not listed here" guardrail.
 
 ## Current Results
+
+### v4.1 cheatsheet -- 4-model hard sweep (2026-04-09)
+
+v4.1_10KB_cheatsheet.md (10.2KB) evaluated on 4 models x hard1/hard2/hard3 via OpenRouter. All parse errors resolved via retries. Full results with confusion matrices in `results/v4.1_results.pdf`.
+
+| Model | hard1 (69) | hard2 (200) | hard3 (400) | ALL (669) | Bias |
+|-------|-----------|-------------|-------------|-----------|------|
+| **gpt-oss-120b** | **54/69 (78.3%)** | 150/200 (75.0%) | **240/400 (60.0%)** | **444/669 (66.4%)** | Slight TRUE |
+| **grok-4.1-fast** | 53/69 (76.8%) | **160/200 (80.0%)** | 237/400 (59.2%) | 450/669 (67.3%) | Balanced |
+| gpt-oss-20b | 48/69 (69.6%) | 140/200 (70.0%) | 234/400 (58.5%) | 422/669 (63.1%) | Moderate TRUE |
+| gemma-4-31b | 51/69 (73.9%) | 117/200 (58.5%) | 226/399 (56.6%) | 394/668 (59.0%) | Extreme FALSE |
+
+**Key findings (v4 → v4.1 delta):**
+- **GPT-OSS-120b massive improvement:** +34pp hard1, +22pp hard2, +14pp hard3 (was 43.9%/52.6%/46.1% in v4). Fixed by temperature=1.0 + max_tokens=65536
+- **GPT-OSS-20b recovered:** 83 parse errors → 0 after temperature=1.0 fix. Accuracy +11-26pp across datasets
+- **Grok steady:** +3.5pp on hard2 (80.0%), slight regression on hard3. Best overall at 67.3%
+- **Gemma extreme FALSE bias:** T→F=244 (misses 76.5% of TRUE implications), only F→T=30 confabulations
+- **Harness fixes:** temperature=1.0 for reasoning models, max_tokens=65536, per-request 180s timeout, null body guard, empty response retry, longer backoff [5,15,30]s
 
 ### v4 cheatsheet -- full hard sweep (2026-04-06)
 
@@ -81,7 +100,7 @@ v4_10KB_cheatsheet.md (8.8KB) evaluated on all 7 models x hard1/hard2/hard3 via 
 **Key findings (from JSON failure analysis):**
 - **Grok dominates** -- best on all 3 datasets, only model >60% on hard3. Most balanced TRUE/FALSE predictions
 - **v4 creates polarized bias:** DeepSeek/Llama answer FALSE on 99%+ of problems; GPT-OSS answers TRUE on 85-91%
-- **GPT-120b: 90% of failures from 1024-token truncation** -- reasoning cut off mid-step, no VERDICT emitted. max_tokens now increased to 16384
+- **GPT-120b: 90% of failures from 1024-token truncation** -- reasoning cut off mid-step, no VERDICT emitted. Fixed in v4.1 with max_tokens=65536
 - **Llama: pure lookup table** -- 99.7% of failures are identical "RULE: default false" boilerplate in 88 tokens
 - **Gemini: fabricates heuristic rules** not in the cheatsheet ("rightmost exclusion", "count exclusion")
 - **Community top: Betka 98% on hard200** with feature-first protocol + contradiction motifs C1-C14

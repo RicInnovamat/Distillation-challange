@@ -1,0 +1,11 @@
+{"id": "hard3_0045", "index": 45, "difficulty": "hard", "eq1_id": 273, "eq2_id": 4362, "equation1": "x = ((y * x) * y) * x", "equation2": "x * (y * z) = y * (x * z)", "answer": false}
+{"id": "hard3_0093", "index": 93, "difficulty": "hard", "eq1_id": 714, "eq2_id": 1075, "equation1": "x = y * (y * ((y * x) * y))", "equation2": "x = y * ((x * (x * y)) * x)", "answer": false}
+{"id": "hard3_0122", "index": 122, "difficulty": "hard", "eq1_id": 1009, "eq2_id": 130, "equation1": "x = y * ((z * w) * (w * x))", "equation2": "x = y * ((y * z) * x)", "answer": false}
+{"id": "hard3_0162", "index": 162, "difficulty": "hard", "eq1_id": 1462, "eq2_id": 4135, "equation1": "x = (x * y) * (z * (x * y))", "equation2": "x * y = ((x * y) * z) * z", "answer": true}
+{"id": "hard3_0173", "index": 173, "difficulty": "hard", "eq1_id": 1539, "eq2_id": 524, "equation1": "x = (y * y) * (z * (y * x))", "equation2": "x = y * (y * (z * (y * x)))", "answer": false}
+{"id": "hard3_0189", "index": 189, "difficulty": "hard", "eq1_id": 1681, "eq2_id": 2203, "equation1": "x = (y * x) * ((x * x) * x)", "equation2": "x = ((y * z) * z) * (z * x)", "answer": false}
+{"id": "hard3_0293", "index": 293, "difficulty": "hard", "eq1_id": 2787, "eq2_id": 466, "equation1": "x = ((y * z) * (y * x)) * x", "equation2": "x = y * (x * (x * (y * x)))", "answer": false}
+{"id": "hard3_0320", "index": 320, "difficulty": "hard", "eq1_id": 2973, "eq2_id": 4124, "equation1": "x = ((y * (z * x)) * x) * x", "equation2": "x * y = ((x * x) * z) * y", "answer": false}
+{"id": "hard3_0325", "index": 325, "difficulty": "hard", "eq1_id": 3034, "eq2_id": 3762, "equation1": "x = ((y * (z * w)) * z) * x", "equation2": "x * y = (y * y) * (y * y)", "answer": true}
+{"id": "hard3_0368", "index": 368, "difficulty": "hard", "eq1_id": 3669, "eq2_id": 3333, "equation1": "x * x = (x * y) * (y * z)", "equation2": "x * y = x * (z * (z * x))", "answer": false}
+{"id": "hard3_0380", "index": 380, "difficulty": "hard", "eq1_id": 3889, "eq2_id": 4270, "equation1": "x * x = (y * (y * x)) * z", "equation2": "x * (x * x) = x * (y * y)", "answer": true}

@@ -1,0 +1,3 @@
+{"id": "hard3_0149", "index": 149, "difficulty": "hard", "eq1_id": 1232, "eq2_id": 3740, "equation1": "x = x * (((x * y) * y) * y)", "equation2": "x * y = (x * z) * (z * y)", "answer": false}
+{"id": "hard3_0203", "index": 203, "difficulty": "hard", "eq1_id": 1882, "eq2_id": 4125, "equation1": "x = (x * (y * z)) * (w * w)", "equation2": "x * y = ((x * x) * z) * z", "answer": true}
+{"id": "hard3_0379", "index": 379, "difficulty": "hard", "eq1_id": 3857, "eq2_id": 4316, "equation1": "x * y = (z * w) * (u * y)", "equation2": "x * (y * x) = x * (z * x)", "answer": true}

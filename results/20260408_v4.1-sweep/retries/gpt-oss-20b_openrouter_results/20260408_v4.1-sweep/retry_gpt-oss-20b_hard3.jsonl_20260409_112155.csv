@@ -1,0 +1,55 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0027,True,False,False,True,VERDICT: FALSE,68.49,2952,30234,0.003414,VERDICT: FALSE\nRULE: default false
+hard3_0032,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0039,False,False,True,True,VERDICT: FALSE,54.79,2953,5217,0.000662,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=0, 1*0=1, 1*1=0 satisfies Eq1 for all assignments, but Eq2 fails for x=1, y=0, z=0. Thus Eq1 does not imply Eq2 over "
+hard3_0045,False,False,True,True,VERDICT: FALSE,153.97,2954,28244,0.003195,VERDICT: FALSE\nRULE: counterexample
+hard3_0050,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0056,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0072,False,False,True,True,VERDICT: FALSE,61.19,2957,1689,0.000275,VERDICT: FALSE\nRULE: spine isolation
+hard3_0092,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0105,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0129,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0131,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0134,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0144,True,False,False,True,FALSE,36.19,2962,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * ((y * (y * z)) * x). Eq2: x = (y * (z * w)) * (y * x).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0162,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0164,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0175,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0183,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0188,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0189,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0193,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0199,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0200,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0202,True,True,True,True,TRUE,126.97,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (x * (y * z)) * (y * w). Eq2: x * y = x * ((y * z) * x).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEq1: x = (x * (y * z)) * 
+hard3_0205,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0208,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0214,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0221,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0223,False,False,True,True,VERDICT: FALSE,54.17,2959,16874,0.001945,VERDICT: FALSE\nRULE: default false
+hard3_0231,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0234,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0237,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0238,True,False,False,True,VERDICT: FALSE,76.27,2957,4791,0.000616,VERDICT: FALSE\nRULE: counterexample\n\nA magma with operation \(a*b = p(b)\) where \(p\) is a non‑identity permutation (e.g. a 3‑cycle) satisfies Eq1 but not Eq2. Thus Eq1 does not imply Eq2 over all
+hard3_0248,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0265,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0267,True,True,True,True,VERDICT: TRUE,41.60,2957,1659,0.000271,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0270,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0279,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0283,True,False,False,True,VERDICT: FALSE,80.59,2958,16251,0.001876,"VERDICT: FALSE\nRULE: default false\n\nA 3‑element magma with table  \n0*0=0, 0*1=0, 0*2=0,  \n1*0=1, 1*1=1, 1*2=0,  \n2*0=2, 2*1=2, 2*2=2  \nsatisfies Eq1 for all assignments but fails Eq2 (e.g. x=1,"
+hard3_0306,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0317,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0319,True,True,True,True,VERDICT: TRUE,8.27,2957,1827,0.000290,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0320,False,False,True,True,VERDICT: FALSE,176.74,2954,17342,0.001996,"VERDICT: FALSE\nRULE: counterexample\n\nWe found a magma on {0,1,2} with * defined by a*b=b for all pairs except 1*0=2. This magma satisfies Eq1 but fails Eq2 for x=0,y=0,z=1. Thus Eq1 does not imply "
+hard3_0333,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0334,True,False,False,True,VERDICT: FALSE,21.10,2952,6643,0.000819,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe magma defined by \(a*b=a\) (left‑zero) satisfies the source equation \(x = (((y * x) * z) * z) * x\) for all \(x,y,z\), but it does not satisfy the targe"
+hard3_0335,True,True,True,True,VERDICT: TRUE,140.81,2958,1791,0.000286,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare with 3 variables and Eq2 has larger size, so by the structural heuristic Eq2 follows."
+hard3_0339,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0351,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0354,True,False,False,True,VERDICT: FALSE,121.92,2954,2277,0.000339,"VERDICT: FALSE\nRULE: counterexample\n\nA right‑constant magma with columns a↦a and b↦b satisfies Eq1 for all x,y,z.  \nFor x=a, y=a, z=b we have a*a = a but (a*a)*b = b, so Eq2 fails."
+hard3_0357,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0369,False,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0374,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0376,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0381,True,True,True,True,VERDICT: TRUE,65.69,2957,2903,0.000408,"VERDICT: TRUE\nRULE: structural TRUE heuristics\n\nThe implication holds because any magma satisfying the first equation must have the form a*b = h(a) with h idempotent, and such magmas automatically "
+hard3_0386,True,,,False,,180.00,0,0,0.000000,[EXCEPTION] TimeoutError: 

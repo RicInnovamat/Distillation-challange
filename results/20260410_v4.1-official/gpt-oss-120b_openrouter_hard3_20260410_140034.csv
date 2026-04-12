@@ -1,0 +1,401 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0001,True,True,True,True,labeled:TRUE,20.16,2934,340,0.000179,"VERDICT: TRUE\nRULE: right projection\n\nThe premise matches the right‑projection pattern \(x = T * x\) with \(T = y\) not containing \(x\). Under the forced law \(a*b = b\), the target equation colla"
+hard3_0002,True,False,False,True,labeled:FALSE,26.24,2938,929,0.000291,VERDICT: FALSE\nRULE: default false
+hard3_0003,True,False,False,True,labeled:FALSE,36.79,2938,1842,0.000465,VERDICT: FALSE\nRULE: default false
+hard3_0004,True,True,True,True,labeled:TRUE,33.80,2938,599,0.000228,VERDICT: TRUE\nRULE: singleton collapse
+hard3_0005,True,True,True,True,labeled:TRUE,38.53,2937,582,0.000225,"VERDICT: TRUE\nRULE: right projection\n\nThe equation x = (y*z)*x forces (u*v)*a = a for all u,v,a, i.e. right‑projection a*b = b. Under this law both sides of the target equation reduce to y, so the "
+hard3_0006,True,False,False,True,labeled:FALSE,42.34,2936,718,0.000251,VERDICT: FALSE\nRULE: counterexample
+hard3_0007,False,False,True,True,labeled:FALSE,43.96,2936,555,0.000220,VERDICT: FALSE\nRULE: constant witness
+hard3_0008,True,True,True,True,labeled:TRUE,47.36,2936,404,0.000191,"VERDICT: TRUE\nRULE: constant operation\n\nAll magmas satisfying x * x = y * z force every product to be a single constant element; hence any further equation, including x * (x * y) = (y * x) * z, is "
+hard3_0009,False,False,True,True,labeled:FALSE,52.29,2941,534,0.000216,VERDICT: FALSE\nRULE: default false
+hard3_0010,False,False,True,True,labeled:FALSE,59.15,2940,1108,0.000325,VERDICT: FALSE\nRULE: default false
+hard3_0011,False,False,True,True,labeled:FALSE,64.97,2941,691,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0012,False,True,False,True,labeled:TRUE,69.24,2941,797,0.000266,VERDICT: TRUE\nRULE: exact renaming
+hard3_0013,False,False,True,True,labeled:FALSE,71.48,2941,436,0.000198,VERDICT: FALSE\nRULE: default false
+hard3_0014,True,True,True,True,labeled:TRUE,74.63,2941,326,0.000177,"VERDICT: TRUE\nRULE: left projection\n\nThe first equation is bare and of the form x = x * T with x absent from T, forcing a left‑projection law (a*b = a). Under that law the right‑hand side of the se"
+hard3_0015,True,True,True,True,labeled:TRUE,83.43,2940,666,0.000241,VERDICT: TRUE\nRULE: left projection
+hard3_0016,False,False,True,True,labeled:FALSE,93.01,2941,1384,0.000378,VERDICT: FALSE\nRULE: default false
+hard3_0017,False,True,False,True,labeled:TRUE,96.17,2938,1290,0.000360,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces a right‑zero (right‑projection) behavior, which makes the target equation hold in every magma satisfying the premise."
+hard3_0018,False,False,True,True,labeled:FALSE,102.41,2941,1463,0.000393,VERDICT: FALSE\nRULE: default false
+hard3_0019,False,False,True,True,labeled:FALSE,104.72,2941,1021,0.000309,VERDICT: FALSE\nRULE: default false
+hard3_0020,True,False,False,True,labeled:FALSE,107.00,2942,1066,0.000317,VERDICT: FALSE\nRULE: default false
+hard3_0021,False,False,True,True,labeled:FALSE,110.12,2941,762,0.000259,VERDICT: FALSE\nRULE: default false
+hard3_0022,False,False,True,True,labeled:FALSE,116.13,2940,992,0.000303,VERDICT: FALSE\nRULE: default false
+hard3_0023,True,False,False,True,labeled:FALSE,126.21,2935,2001,0.000495,VERDICT: FALSE\nRULE: default false
+hard3_0024,True,False,False,True,labeled:FALSE,125.48,2941,1609,0.000420,VERDICT: FALSE\nRULE: default false
+hard3_0025,False,False,True,True,labeled:FALSE,129.91,2942,1409,0.000382,VERDICT: FALSE\nRULE: default false
+hard3_0026,False,False,True,True,labeled:FALSE,133.45,2942,1405,0.000382,VERDICT: FALSE\nRULE: default false
+hard3_0027,True,False,False,True,labeled:FALSE,132.50,2939,445,0.000199,VERDICT: FALSE\nRULE: default false
+hard3_0028,True,True,True,True,labeled:TRUE,137.12,2942,506,0.000211,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0029,False,False,True,True,labeled:FALSE,143.66,2940,1202,0.000343,VERDICT: FALSE\nRULE: default false
+hard3_0030,True,False,False,True,labeled:FALSE,158.61,2941,2742,0.000636,VERDICT: FALSE\nRULE: default false
+hard3_0031,False,False,True,True,labeled:FALSE,150.35,2941,846,0.000275,VERDICT: FALSE\nRULE: default false
+hard3_0032,False,False,True,True,labeled:FALSE,156.06,2941,962,0.000297,VERDICT: FALSE\nRULE: default false
+hard3_0033,True,True,True,True,labeled:TRUE,162.72,2941,1369,0.000375,VERDICT: TRUE\nRULE: right projection
+hard3_0034,True,False,False,True,labeled:FALSE,165.53,2942,1174,0.000338,VERDICT: FALSE\nRULE: default false
+hard3_0035,False,True,False,True,labeled:TRUE,165.53,2942,593,0.000227,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0036,True,True,True,True,labeled:TRUE,173.51,2942,1404,0.000381,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0037,False,True,False,True,labeled:TRUE,180.95,2940,1886,0.000473,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces a right‑projection behavior, which makes the target equation hold in every magma."
+hard3_0038,True,False,False,True,labeled:FALSE,181.16,2940,1074,0.000319,VERDICT: FALSE\nRULE: default false
+hard3_0039,False,False,True,True,labeled:FALSE,184.04,2942,1001,0.000305,VERDICT: FALSE\nRULE: default false
+hard3_0040,False,True,False,True,labeled:TRUE,185.98,2941,400,0.000191,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0041,False,True,False,True,labeled:TRUE,197.89,2941,1382,0.000377,"VERDICT: TRUE\nRULE: left projection\n\nThe identity forces a left‑projection law (a * b = a), under which the target equation also holds. Hence the implication is valid for all magmas."
+hard3_0042,False,False,True,True,labeled:FALSE,206.75,2941,1708,0.000439,VERDICT: FALSE\nRULE: default false
+hard3_0043,True,False,False,True,labeled:FALSE,201.85,2941,547,0.000219,VERDICT: FALSE\nRULE: default false
+hard3_0044,False,False,True,True,labeled:FALSE,210.95,2940,933,0.000292,VERDICT: FALSE\nRULE: default false
+hard3_0045,False,False,True,True,labeled:FALSE,213.65,2941,787,0.000264,VERDICT: FALSE\nRULE: default false
+hard3_0046,True,True,True,True,labeled:TRUE,7.38,2941,1579,0.000415,"VERDICT: TRUE\nRULE: right projection\nThe premise x = ((y*z)*y)*x forces a right‑projection law a*b = b, under which the target equation also reduces to the trivial identity x = x."
+hard3_0047,True,False,False,True,labeled:FALSE,4.02,2940,781,0.000263,VERDICT: FALSE\nRULE: default false
+hard3_0048,True,True,True,True,labeled:TRUE,8.35,2941,362,0.000183,VERDICT: TRUE\nRULE: right projection
+hard3_0049,True,True,True,True,labeled:TRUE,13.70,2941,681,0.000244,VERDICT: TRUE\nRULE: right projection
+hard3_0050,False,True,False,True,labeled:TRUE,16.82,2939,929,0.000291,VERDICT: TRUE\nRULE: default true
+hard3_0051,True,True,True,True,labeled:TRUE,22.96,2939,864,0.000279,VERDICT: TRUE\nRULE: default true
+hard3_0052,True,False,False,True,labeled:FALSE,26.72,2940,920,0.000289,VERDICT: FALSE\nRULE: default false
+hard3_0053,True,True,True,True,labeled:TRUE,30.60,2940,630,0.000234,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces all products to be a single constant, making any further equation, including the target, universally true."
+hard3_0054,True,True,True,True,labeled:TRUE,35.53,2939,916,0.000289,VERDICT: TRUE\nRULE: constant operation
+hard3_0055,False,True,False,True,labeled:TRUE,39.67,2939,828,0.000272,VERDICT: TRUE\nRULE: consequence of idempotent left‑dependent operation
+hard3_0056,False,True,False,True,labeled:TRUE,42.12,2940,660,0.000240,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces all products to be equal to a constant, making the target identity hold automatically."
+hard3_0057,False,True,False,True,labeled:TRUE,49.98,2936,1432,0.000387,"VERDICT: TRUE\nRULE: derived implication\n\nThe equation forces all squares to be a single constant and makes every right‑column constant, which also ensures the target equation holds in every magma."
+hard3_0058,True,True,True,True,labeled:TRUE,52.96,2936,1359,0.000373,"VERDICT: TRUE\nRULE: exact instance\n\nEquation 2 is obtained from Equation 1 by the uniform substitution y←x, z←x, w←x, so any magma satisfying Equation 1 must also satisfy Equation 2."
+hard3_0059,False,True,False,True,labeled:TRUE,59.95,2940,1757,0.000448,VERDICT: TRUE\nRULE: constant operation
+hard3_0060,True,True,True,True,labeled:TRUE,63.85,2940,1612,0.000421,VERDICT: TRUE\nRULE: constant operation
+hard3_0061,True,True,True,True,labeled:TRUE,63.71,2939,565,0.000222,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to a single constant, making both equations hold."
+hard3_0062,False,False,True,True,labeled:FALSE,72.21,2944,1215,0.000346,VERDICT: FALSE\nRULE: default false
+hard3_0063,False,False,True,True,labeled:FALSE,74.11,2944,750,0.000257,VERDICT: FALSE\nRULE: default false
+hard3_0064,False,False,True,True,labeled:FALSE,86.90,2944,1628,0.000424,VERDICT: FALSE\nRULE: default false
+hard3_0065,False,False,True,True,labeled:FALSE,78.94,2940,338,0.000179,VERDICT: FALSE\nRULE: default false
+hard3_0066,True,False,False,True,labeled:FALSE,94.97,2945,1043,0.000313,VERDICT: FALSE\nRULE: default false
+hard3_0067,True,True,True,True,labeled:TRUE,95.69,2944,384,0.000188,VERDICT: TRUE\nRULE: left projection
+hard3_0068,True,True,True,True,labeled:TRUE,101.03,2944,351,0.000182,VERDICT: TRUE\nRULE: left projection
+hard3_0069,False,False,True,True,labeled:FALSE,111.04,2945,1319,0.000365,VERDICT: FALSE\nRULE: default false
+hard3_0070,False,True,False,True,labeled:TRUE,109.79,2941,617,0.000232,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe RHS of Eq1 has rhsVars=3, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=122, xCount=2, matching motif C6. Hence Eq1 forces the necessary projec"
+hard3_0071,False,True,False,True,labeled:TRUE,116.05,2945,894,0.000285,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation \(x = y*(y*(y*(x*y)))\) forces all elements to be identical (any model must be a singleton magma), and in any singleton magma the target equat"
+hard3_0072,False,False,True,True,labeled:FALSE,117.99,2944,500,0.000210,VERDICT: FALSE\nRULE: default false
+hard3_0073,False,False,True,True,labeled:FALSE,122.01,2944,617,0.000232,VERDICT: FALSE\nRULE: default false
+hard3_0074,False,True,False,True,labeled:TRUE,127.31,2945,646,0.000238,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe feature vector for the product side of Equation 1 is  \nrhsVars=3, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=122, xCount=2, which matches m"
+hard3_0075,False,False,True,True,labeled:FALSE,131.14,2945,618,0.000232,VERDICT: FALSE\nRULE: default false
+hard3_0076,False,False,True,True,labeled:FALSE,134.68,2945,814,0.000270,VERDICT: FALSE\nRULE: default false
+hard3_0077,True,True,True,True,labeled:TRUE,137.22,2943,382,0.000187,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0078,False,False,True,True,labeled:FALSE,140.77,2944,584,0.000226,VERDICT: FALSE\nRULE: default false
+hard3_0079,False,False,True,True,labeled:FALSE,146.36,2945,900,0.000286,VERDICT: FALSE\nRULE: default false
+hard3_0080,False,False,True,True,labeled:FALSE,150.79,2943,747,0.000257,VERDICT: FALSE\nRULE: default false
+hard3_0081,False,False,True,True,labeled:FALSE,156.25,2944,1151,0.000334,VERDICT: FALSE\nRULE: default false
+hard3_0082,False,False,True,True,labeled:FALSE,160.87,2944,847,0.000276,VERDICT: FALSE\nRULE: default false
+hard3_0083,False,False,True,True,labeled:FALSE,164.51,2944,798,0.000266,VERDICT: FALSE\nRULE: default false
+hard3_0084,False,False,True,True,labeled:FALSE,167.82,2943,885,0.000283,VERDICT: FALSE\nRULE: default false
+hard3_0085,True,True,True,True,labeled:TRUE,168.13,2944,351,0.000182,VERDICT: TRUE\nRULE: left projection
+hard3_0086,False,False,True,True,labeled:FALSE,175.63,2943,793,0.000265,VERDICT: FALSE\nRULE: default false
+hard3_0087,True,True,True,True,labeled:TRUE,177.64,2944,360,0.000183,VERDICT: TRUE\nRULE: left projection
+hard3_0088,True,True,True,True,labeled:TRUE,181.64,2943,297,0.000171,VERDICT: TRUE\nRULE: left projection
+hard3_0089,True,False,False,True,labeled:FALSE,186.96,2943,455,0.000201,VERDICT: FALSE\nRULE: default false
+hard3_0090,True,True,True,True,labeled:TRUE,191.42,2945,316,0.000175,VERDICT: TRUE\nRULE: left projection
+hard3_0091,False,False,True,True,labeled:FALSE,197.03,2945,543,0.000218,VERDICT: FALSE\nRULE: default false
+hard3_0092,False,False,True,True,labeled:FALSE,203.10,2943,691,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0093,False,False,True,True,labeled:FALSE,207.79,2944,370,0.000185,VERDICT: FALSE\nRULE: default false
+hard3_0094,False,False,True,True,labeled:FALSE,213.81,2944,557,0.000221,VERDICT: FALSE\nRULE: default false
+hard3_0095,False,True,False,True,labeled:TRUE,88.33,2944,562,0.000222,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe bare side x = y * (y * ((z * w) * x)) yields rhsVars=4, Lx=FALSE, Rx=TRUE, rhsTotals=1112, satisfying motif C13, which forces the target equation to hol"
+hard3_0096,False,False,True,True,labeled:FALSE,1.45,2941,139,0.000141,VERDICT: FALSE\nRULE: default false
+hard3_0097,False,True,False,True,labeled:TRUE,4.97,2944,945,0.000294,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0098,False,True,False,True,labeled:TRUE,12.83,2945,1078,0.000320,"VERDICT: TRUE\nRULE: right projection\n\nThe premise forces the magma to behave as a right‑projection (a * b = b), and under this law the target equation holds."
+hard3_0099,False,False,True,True,labeled:FALSE,12.96,2944,623,0.000233,VERDICT: FALSE\nRULE: default false
+hard3_0100,False,True,False,True,labeled:TRUE,17.49,2944,697,0.000247,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0101,False,False,True,True,labeled:FALSE,22.73,2945,737,0.000255,VERDICT: FALSE\nRULE: default false
+hard3_0102,False,False,True,True,labeled:FALSE,28.01,2944,1017,0.000308,VERDICT: FALSE\nRULE: default false
+hard3_0103,False,False,True,True,labeled:FALSE,35.04,2943,1240,0.000350,VERDICT: FALSE\nRULE: default false
+hard3_0104,False,True,False,True,labeled:TRUE,40.22,2944,1534,0.000406,VERDICT: TRUE\nRULE: left projection
+hard3_0105,False,True,False,True,labeled:TRUE,38.66,2943,675,0.000243,VERDICT: TRUE\nRULE: left projection
+hard3_0106,True,False,False,True,labeled:FALSE,51.56,2942,2457,0.000582,VERDICT: FALSE\nRULE: default false
+hard3_0107,True,False,False,True,labeled:FALSE,46.65,2944,718,0.000251,VERDICT: FALSE\nRULE: default false
+hard3_0108,False,False,True,True,labeled:FALSE,49.24,2944,711,0.000250,VERDICT: FALSE\nRULE: default false
+hard3_0109,True,True,True,True,labeled:TRUE,58.65,2944,1403,0.000381,VERDICT: TRUE\nRULE: singleton collapse
+hard3_0110,False,True,False,True,labeled:TRUE,57.76,2944,768,0.000261,VERDICT: TRUE\nRULE: right projection
+hard3_0111,False,True,False,True,labeled:TRUE,65.54,2943,655,0.000239,VERDICT: TRUE\nRULE: right projection
+hard3_0112,False,False,True,True,labeled:FALSE,67.90,2944,621,0.000233,VERDICT: FALSE\nRULE: default false\n\nThe implication cannot be guaranteed for all magmas; no universal derivation exists.
+hard3_0113,False,False,True,True,labeled:FALSE,78.83,2944,1360,0.000373,VERDICT: FALSE\nRULE: default false
+hard3_0114,True,False,False,True,labeled:FALSE,81.30,2945,885,0.000283,VERDICT: FALSE\nRULE: default false
+hard3_0115,True,False,False,True,labeled:FALSE,84.30,2945,707,0.000249,VERDICT: FALSE\nRULE: default false
+hard3_0116,False,False,True,True,labeled:FALSE,88.43,2944,558,0.000221,VERDICT: FALSE\nRULE: default false
+hard3_0117,True,True,True,True,labeled:TRUE,100.58,2943,1604,0.000420,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0118,False,False,True,True,labeled:FALSE,98.94,2944,545,0.000218,VERDICT: FALSE\nRULE: default false
+hard3_0119,False,False,True,True,labeled:FALSE,102.73,2944,690,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0120,False,False,True,True,labeled:FALSE,105.75,2945,537,0.000217,VERDICT: FALSE\nRULE: default false
+hard3_0121,False,True,False,True,labeled:TRUE,110.81,2944,652,0.000239,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0122,False,False,True,True,labeled:FALSE,117.09,2941,1175,0.000338,"VERDICT: FALSE\nRULE: parity witness\n\nThe XOR magma (a * b = a ⊕ b) satisfies the first equation when y = z, but the second equation then forces y = 0, which can fail (e.g., y = z = 1, x = 0). Hence"
+hard3_0123,False,True,False,True,labeled:TRUE,119.73,2940,698,0.000247,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0124,True,False,False,True,labeled:FALSE,123.21,2945,657,0.000240,VERDICT: FALSE\nRULE: default false
+hard3_0125,False,False,True,True,labeled:FALSE,127.78,2944,750,0.000257,VERDICT: FALSE\nRULE: default false
+hard3_0126,False,True,False,True,labeled:TRUE,131.32,2944,528,0.000215,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe features of the product side of Eq 1 satisfy motif C15 (rhsVars ≥ 4 and Lx = FALSE), which yields a true implication."
+hard3_0127,True,True,True,True,labeled:TRUE,135.64,2943,635,0.000235,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0128,False,True,False,True,labeled:TRUE,137.75,2945,506,0.000211,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0129,False,False,True,True,labeled:FALSE,143.19,2944,950,0.000295,VERDICT: FALSE\nRULE: default false
+hard3_0130,False,False,True,True,labeled:FALSE,145.94,2943,828,0.000272,VERDICT: FALSE\nRULE: default false
+hard3_0131,True,False,False,True,labeled:FALSE,151.18,2945,690,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0132,False,True,False,True,labeled:TRUE,158.82,2943,1236,0.000350,VERDICT: TRUE\nRULE: left projection
+hard3_0133,True,True,True,True,labeled:TRUE,158.53,2944,320,0.000176,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * T with T not containing x forces a*b = a for all a,b. Substituting this projection into the target equation reduces both sides to x, so the "
+hard3_0134,True,False,False,True,labeled:FALSE,165.34,2940,1006,0.000306,VERDICT: FALSE\nRULE: default false
+hard3_0135,True,False,False,True,labeled:FALSE,165.74,2945,560,0.000221,VERDICT: FALSE\nRULE: default false
+hard3_0136,True,True,True,True,labeled:TRUE,167.65,2944,286,0.000169,"VERDICT: TRUE\nRULE: left projection\n\nThe premise has the form x = x *T with x absent from T, forcing the left‑projection law a*b = a. Substituting this law into the target equation collapses both s"
+hard3_0137,True,False,False,True,labeled:FALSE,173.73,2945,559,0.000221,VERDICT: FALSE\nRULE: default false
+hard3_0138,True,True,True,True,labeled:TRUE,177.18,2944,270,0.000166,VERDICT: TRUE\nRULE: left projection
+hard3_0139,True,True,True,True,labeled:TRUE,183.49,2941,605,0.000230,VERDICT: TRUE\nRULE: right projection
+hard3_0140,True,False,False,True,labeled:FALSE,193.13,2944,1335,0.000368,VERDICT: FALSE\nRULE: default false
+hard3_0141,False,False,True,True,labeled:FALSE,198.96,2943,1142,0.000332,VERDICT: FALSE\nRULE: set exclusion
+hard3_0142,True,True,True,True,labeled:TRUE,203.95,2942,1466,0.000393,VERDICT: TRUE\nRULE: right projection
+hard3_0143,False,False,True,True,labeled:FALSE,202.69,2944,652,0.000239,VERDICT: FALSE\nRULE: default false
+hard3_0144,True,True,True,True,labeled:TRUE,217.87,2945,1993,0.000494,VERDICT: TRUE\nRULE: right projection
+hard3_0145,True,True,True,True,labeled:TRUE,218.17,2944,1104,0.000325,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0146,False,True,False,True,labeled:TRUE,5.95,2945,710,0.000250,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given equation forces all elements to be equal in any magma, making the target identity hold universally."
+hard3_0147,True,False,False,True,labeled:FALSE,9.50,2944,1430,0.000387,VERDICT: FALSE\nRULE: default false
+hard3_0148,True,True,True,True,labeled:TRUE,9.42,2945,474,0.000205,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0149,False,False,True,True,labeled:FALSE,16.48,2944,1295,0.000361,VERDICT: FALSE\nRULE: default false
+hard3_0150,False,False,True,True,labeled:FALSE,21.34,2944,1416,0.000384,VERDICT: FALSE\nRULE: default false
+hard3_0151,False,False,True,True,labeled:FALSE,25.12,2944,923,0.000290,VERDICT: FALSE\nRULE: default false
+hard3_0152,False,True,False,True,labeled:TRUE,22.92,2944,326,0.000177,VERDICT: TRUE\nRULE: left projection
+hard3_0153,False,False,True,True,labeled:FALSE,31.24,2944,496,0.000209,VERDICT: FALSE\nRULE: default false
+hard3_0154,True,False,False,True,labeled:FALSE,34.98,2943,562,0.000222,VERDICT: FALSE\nRULE: default false
+hard3_0155,True,False,False,True,labeled:FALSE,36.57,2943,158,0.000145,VERDICT: FALSE\nRULE: default false
+hard3_0156,True,True,True,True,labeled:TRUE,44.82,2945,971,0.000299,VERDICT: TRUE\nRULE: left projection
+hard3_0157,True,True,True,True,labeled:TRUE,46.35,2944,683,0.000245,VERDICT: TRUE\nRULE: right projection
+hard3_0158,True,False,False,True,labeled:FALSE,49.79,2944,583,0.000226,VERDICT: FALSE\nRULE: default false
+hard3_0159,False,False,True,True,labeled:FALSE,58.06,2944,1130,0.000330,VERDICT: FALSE\nRULE: default false
+hard3_0160,True,False,False,True,labeled:FALSE,60.03,2945,612,0.000231,VERDICT: FALSE\nRULE: default false
+hard3_0161,False,False,True,True,labeled:FALSE,65.05,2946,815,0.000270,VERDICT: FALSE\nRULE: default false
+hard3_0162,True,False,False,True,labeled:FALSE,69.55,2944,626,0.000234,VERDICT: FALSE\nRULE: default false
+hard3_0163,False,False,True,True,labeled:FALSE,77.83,2945,1216,0.000346,VERDICT: FALSE\nRULE: default false
+hard3_0164,False,False,True,True,labeled:FALSE,79.72,2945,705,0.000249,VERDICT: FALSE\nRULE: default false
+hard3_0165,False,True,False,True,labeled:TRUE,82.37,2942,433,0.000197,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0166,False,True,False,True,labeled:TRUE,89.19,2942,581,0.000225,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0167,False,True,False,True,labeled:TRUE,93.39,2944,584,0.000226,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe RHS of Equation 1 has four distinct variables, with x not left‑most nor right‑most, satisfying motif C1, which guarantees the implication."
+hard3_0168,True,True,True,True,labeled:TRUE,100.31,2941,829,0.000272,VERDICT: TRUE\nRULE: right projection
+hard3_0169,False,False,True,True,labeled:FALSE,103.18,2945,684,0.000245,VERDICT: FALSE\nRULE: default false
+hard3_0170,False,False,True,True,labeled:FALSE,107.13,2945,784,0.000264,VERDICT: FALSE\nRULE: default false
+hard3_0171,False,False,True,True,labeled:FALSE,113.42,2946,1048,0.000314,VERDICT: FALSE\nRULE: default false
+hard3_0172,False,False,True,True,labeled:FALSE,115.80,2945,851,0.000277,VERDICT: FALSE\nRULE: default false
+hard3_0173,False,False,True,True,labeled:FALSE,122.34,2945,1065,0.000317,VERDICT: FALSE\nRULE: spine isolation
+hard3_0174,False,True,False,True,labeled:TRUE,124.18,2945,772,0.000262,VERDICT: TRUE\nRULE: right projection\nThe premise x = (y*y)*(z*(y*x)) forces the law a * b = b; under this law the target identity also holds.
+hard3_0175,False,True,False,True,labeled:TRUE,127.58,2944,793,0.000265,VERDICT: TRUE\nRULE: left projection\n\nThe premise equation forces a left‑projection behaviour (every product collapses to its left factor); under this behaviour the target equation reduces to an ide
+hard3_0176,True,False,False,True,labeled:FALSE,131.26,2945,703,0.000248,VERDICT: FALSE\nRULE: default false
+hard3_0177,False,False,True,True,labeled:FALSE,134.63,2945,660,0.000240,VERDICT: FALSE\nRULE: default false
+hard3_0178,False,False,True,True,labeled:FALSE,139.78,2945,691,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0179,False,False,True,True,labeled:FALSE,141.64,2945,527,0.000215,VERDICT: FALSE\nRULE: default false
+hard3_0180,False,False,True,True,labeled:FALSE,146.46,2945,831,0.000273,VERDICT: FALSE\nRULE: default false
+hard3_0181,False,True,False,True,labeled:TRUE,150.68,2945,688,0.000246,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0182,False,False,True,True,labeled:FALSE,159.30,2945,1430,0.000387,VERDICT: FALSE\nRULE: counterexample
+hard3_0183,True,True,True,True,labeled:TRUE,162.83,2946,937,0.000293,"VERDICT: TRUE\nRULE: left projection\nThe premise matches the left‑projection pattern (x = x * T with T not containing x). Under that rule every product collapses to its left argument, making the targ"
+hard3_0184,False,False,True,True,labeled:FALSE,161.98,2945,426,0.000196,VERDICT: FALSE\nRULE: default false
+hard3_0185,False,False,True,True,labeled:FALSE,168.62,2944,1069,0.000318,VERDICT: FALSE\nRULE: default false
+hard3_0186,False,False,True,True,labeled:FALSE,175.69,2942,1330,0.000367,VERDICT: FALSE\nRULE: default false
+hard3_0187,True,False,False,True,labeled:FALSE,175.30,2946,669,0.000242,VERDICT: FALSE\nRULE: default false
+hard3_0188,True,True,True,True,labeled:TRUE,179.86,2944,762,0.000260,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe premise forces a left‑projection behavior, which also validates the target equation."
+hard3_0189,False,False,True,True,labeled:FALSE,189.65,2946,1704,0.000439,VERDICT: FALSE\nRULE: default false
+hard3_0190,False,False,True,True,labeled:FALSE,186.63,2945,197,0.000152,VERDICT: FALSE\nRULE: default false
+hard3_0191,False,True,False,True,labeled:TRUE,197.89,2944,907,0.000287,VERDICT: TRUE\nRULE: right projection
+hard3_0192,True,False,False,True,labeled:FALSE,199.80,2945,952,0.000296,VERDICT: FALSE\nRULE: default false
+hard3_0193,True,False,False,True,labeled:FALSE,205.25,2945,808,0.000268,VERDICT: FALSE\nRULE: default false
+hard3_0194,True,False,False,True,labeled:FALSE,211.99,2946,980,0.000301,VERDICT: FALSE\nRULE: default false
+hard3_0195,False,False,True,True,labeled:FALSE,216.85,2944,829,0.000272,VERDICT: FALSE\nRULE: default false
+hard3_0196,True,False,False,True,labeled:FALSE,6.77,2945,1039,0.000312,VERDICT: FALSE\nRULE: default false
+hard3_0197,True,False,False,True,labeled:FALSE,6.78,2944,688,0.000246,VERDICT: FALSE\nRULE: default false
+hard3_0198,True,False,False,True,labeled:FALSE,10.73,2945,665,0.000241,VERDICT: FALSE\nRULE: default false
+hard3_0199,True,False,False,True,labeled:FALSE,14.05,2945,730,0.000254,VERDICT: FALSE\nRULE: default false
+hard3_0200,False,False,True,True,labeled:FALSE,21.26,2946,1520,0.000404,VERDICT: FALSE\nRULE: default false
+hard3_0201,False,False,True,True,labeled:FALSE,19.58,2945,512,0.000212,VERDICT: FALSE\nRULE: default false
+hard3_0202,True,False,False,True,labeled:FALSE,27.56,2944,985,0.000302,VERDICT: FALSE\nRULE: default false
+hard3_0203,True,False,False,True,labeled:FALSE,36.02,2944,1580,0.000415,VERDICT: FALSE\nRULE: default false
+hard3_0204,True,False,False,True,labeled:FALSE,34.01,2945,753,0.000258,VERDICT: FALSE\nRULE: default false
+hard3_0205,True,False,False,True,labeled:FALSE,40.35,2944,658,0.000240,VERDICT: FALSE\nRULE: default false
+hard3_0206,False,False,True,True,labeled:FALSE,43.17,2944,938,0.000293,VERDICT: FALSE\nRULE: default false
+hard3_0207,True,False,False,True,labeled:FALSE,45.15,2944,771,0.000261,VERDICT: FALSE\nRULE: default false
+hard3_0208,True,False,False,True,labeled:FALSE,52.24,2944,973,0.000300,VERDICT: FALSE\nRULE: default false
+hard3_0209,True,False,False,True,labeled:FALSE,56.65,2946,1091,0.000322,VERDICT: FALSE\nRULE: default false
+hard3_0210,True,False,False,True,labeled:FALSE,60.26,2946,415,0.000194,VERDICT: FALSE\nRULE: default false
+hard3_0211,False,False,True,True,labeled:FALSE,66.91,2945,752,0.000258,VERDICT: FALSE\nRULE: default false
+hard3_0212,True,True,True,True,labeled:TRUE,69.92,2942,662,0.000241,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0213,True,False,False,True,labeled:FALSE,75.20,2944,686,0.000245,VERDICT: FALSE\nRULE: default false
+hard3_0214,True,False,False,True,labeled:FALSE,88.78,2945,1660,0.000430,VERDICT: FALSE\nRULE: default false
+hard3_0215,False,False,True,True,labeled:FALSE,84.24,2945,560,0.000221,VERDICT: FALSE\nRULE: default false
+hard3_0216,False,True,False,True,labeled:TRUE,90.35,2945,541,0.000218,VERDICT: TRUE\nRULE: left projection
+hard3_0217,False,True,False,True,labeled:TRUE,95.74,2942,683,0.000245,"VERDICT: TRUE\nRULE: left projection\nThe equation forces a * b = a for all elements, which makes the target equation hold."
+hard3_0218,False,False,True,True,labeled:FALSE,99.46,2945,600,0.000229,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a suitable counterexample can be constructed where the first equation is satisfied while the second fails.
+hard3_0219,False,True,False,True,labeled:TRUE,105.92,2945,1031,0.000311,VERDICT: TRUE\nRULE: left projection
+hard3_0220,False,False,True,True,labeled:FALSE,111.07,2946,1225,0.000348,VERDICT: FALSE\nRULE: default false
+hard3_0221,True,False,False,True,labeled:FALSE,112.67,2945,584,0.000226,VERDICT: FALSE\nRULE: default false
+hard3_0222,False,False,True,True,labeled:FALSE,116.35,2945,550,0.000219,VERDICT: FALSE\nRULE: default false
+hard3_0223,False,True,False,True,labeled:TRUE,120.24,2946,1074,0.000319,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe premise matches T4: Eq 1 is bare with ≥4 variables, while Eq 2 involves only 2 variables. Hence Eq 1 implies Eq 2 over all magmas."
+hard3_0224,False,False,True,True,labeled:FALSE,122.17,2946,404,0.000192,VERDICT: FALSE\nRULE: default false
+hard3_0225,False,False,True,True,labeled:FALSE,127.58,2945,501,0.000210,VERDICT: FALSE\nRULE: default false
+hard3_0226,False,False,True,True,labeled:FALSE,130.20,2946,803,0.000267,VERDICT: FALSE\nRULE: default false
+hard3_0227,False,False,True,True,labeled:FALSE,141.27,2945,1524,0.000404,VERDICT: FALSE\nRULE: default false
+hard3_0228,False,False,True,True,labeled:FALSE,138.50,2942,1045,0.000313,VERDICT: FALSE\nRULE: default false
+hard3_0229,False,False,True,True,labeled:FALSE,144.56,2946,1359,0.000373,VERDICT: FALSE\nRULE: default false
+hard3_0230,True,True,True,True,labeled:TRUE,151.40,2944,1892,0.000474,VERDICT: TRUE\nRULE: right projection
+hard3_0231,True,False,False,True,labeled:FALSE,149.62,2945,1063,0.000317,VERDICT: FALSE\nRULE: default false
+hard3_0232,True,True,True,True,labeled:TRUE,153.61,2944,739,0.000255,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0233,True,True,True,True,labeled:TRUE,159.36,2945,448,0.000200,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0234,False,False,True,True,labeled:FALSE,162.72,2942,544,0.000218,VERDICT: FALSE\nRULE: default false
+hard3_0235,False,False,True,True,labeled:FALSE,170.06,2945,886,0.000283,VERDICT: FALSE\nRULE: default false
+hard3_0236,False,False,True,True,labeled:FALSE,173.74,2946,961,0.000297,VERDICT: FALSE\nRULE: default false
+hard3_0237,False,False,True,True,labeled:FALSE,181.33,2945,1611,0.000421,VERDICT: FALSE\nRULE: default false
+hard3_0238,True,True,True,True,labeled:TRUE,185.05,2946,1498,0.000400,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0239,True,False,False,True,labeled:FALSE,185.79,2946,1404,0.000382,VERDICT: FALSE\nRULE: default false
+hard3_0240,True,True,True,True,labeled:TRUE,190.67,2946,1603,0.000419,VERDICT: TRUE\nRULE: right projection
+hard3_0241,False,False,True,True,labeled:FALSE,191.54,2946,89,0.000132,VERDICT: FALSE\nRULE: default false
+hard3_0242,False,True,False,True,labeled:TRUE,195.36,2946,381,0.000187,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0243,True,True,True,True,labeled:TRUE,211.99,2946,1509,0.000402,VERDICT: TRUE\nRULE: right projection
+hard3_0244,True,False,False,True,labeled:FALSE,207.81,2944,716,0.000251,VERDICT: FALSE\nRULE: default false
+hard3_0245,True,False,False,True,labeled:FALSE,218.15,2944,941,0.000294,VERDICT: FALSE\nRULE: default false
+hard3_0246,True,False,False,True,labeled:FALSE,3.21,2943,592,0.000227,VERDICT: FALSE\nRULE: default false
+hard3_0247,True,False,False,True,labeled:FALSE,7.81,2944,762,0.000260,VERDICT: FALSE\nRULE: default false
+hard3_0248,False,False,True,True,labeled:FALSE,11.75,2944,600,0.000229,VERDICT: FALSE\nRULE: default false
+hard3_0249,True,False,False,True,labeled:FALSE,15.64,2945,1101,0.000324,VERDICT: FALSE\nRULE: default false
+hard3_0250,True,False,False,True,labeled:FALSE,18.55,2943,860,0.000278,VERDICT: FALSE\nRULE: default false
+hard3_0251,True,False,False,True,labeled:FALSE,19.60,2945,456,0.000201,VERDICT: FALSE\nRULE: default false
+hard3_0252,True,False,False,True,labeled:FALSE,26.92,2945,695,0.000247,VERDICT: FALSE\nRULE: default false
+hard3_0253,False,False,True,True,labeled:FALSE,29.69,2944,1021,0.000309,VERDICT: FALSE\nRULE: default false
+hard3_0254,False,False,True,True,labeled:FALSE,34.97,2944,1052,0.000315,VERDICT: FALSE\nRULE: default false
+hard3_0255,True,True,True,True,labeled:TRUE,38.76,2944,313,0.000174,VERDICT: TRUE\nRULE: right projection
+hard3_0256,True,True,True,True,labeled:TRUE,42.55,2944,406,0.000192,VERDICT: TRUE\nRULE: right projection
+hard3_0257,True,True,True,True,labeled:TRUE,45.30,2944,298,0.000171,VERDICT: TRUE\nRULE: right projection
+hard3_0258,True,True,True,True,labeled:TRUE,48.93,2944,772,0.000261,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0259,True,False,False,True,labeled:FALSE,61.35,2944,1415,0.000384,VERDICT: FALSE\nRULE: default false
+hard3_0260,True,True,True,True,labeled:TRUE,61.54,2944,596,0.000228,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe features of the product side of Eq 1 are rhsVars=3, Lx=TRUE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=122, xCount=2, which match motif C8, giving a "
+hard3_0261,True,True,True,True,labeled:TRUE,72.09,2945,1596,0.000418,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given equation forces a very strong left‑absorbing behavior in every magma, which also guarantees the target equation. Hence the implication holds for "
+hard3_0262,True,False,False,True,labeled:FALSE,68.76,2943,525,0.000215,VERDICT: FALSE\nRULE: default false
+hard3_0263,False,False,True,True,labeled:FALSE,75.29,2944,1273,0.000357,VERDICT: FALSE\nRULE: default false
+hard3_0264,False,True,False,True,labeled:TRUE,82.77,2943,854,0.000277,VERDICT: TRUE\nRULE: right projection
+hard3_0265,True,True,True,True,labeled:TRUE,90.35,2944,1183,0.000340,VERDICT: TRUE\nRULE: vacuous truth
+hard3_0266,True,False,False,True,labeled:FALSE,87.42,2945,632,0.000235,VERDICT: FALSE\nRULE: default false
+hard3_0267,True,False,False,True,labeled:FALSE,92.11,2944,617,0.000232,VERDICT: FALSE\nRULE: default false
+hard3_0268,True,False,False,True,labeled:FALSE,97.91,2944,832,0.000273,VERDICT: FALSE\nRULE: default false
+hard3_0269,True,True,True,True,labeled:TRUE,98.92,2945,372,0.000186,VERDICT: TRUE\nRULE: right projection
+hard3_0270,False,False,True,True,labeled:FALSE,105.83,2944,876,0.000281,VERDICT: FALSE\nRULE: default false
+hard3_0271,True,False,False,True,labeled:FALSE,114.70,2945,1041,0.000313,VERDICT: FALSE\nRULE: default false
+hard3_0272,True,False,False,True,labeled:FALSE,114.47,2944,592,0.000227,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied but the second fails.
+hard3_0273,True,True,True,True,labeled:TRUE,118.99,2944,395,0.000190,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = T * x with T not containing x forces a * b = b for all a,b; under this rule the target equation reduces to x = x."
+hard3_0274,False,False,True,True,labeled:FALSE,123.39,2944,552,0.000220,VERDICT: FALSE\nRULE: default false
+hard3_0275,False,False,True,True,labeled:FALSE,129.47,2943,1359,0.000373,VERDICT: FALSE\nRULE: default false
+hard3_0276,False,False,True,True,labeled:FALSE,131.33,2943,513,0.000212,VERDICT: FALSE\nRULE: default false
+hard3_0277,False,False,True,True,labeled:FALSE,135.45,2943,638,0.000236,VERDICT: FALSE\nRULE: default false
+hard3_0278,True,True,True,True,labeled:TRUE,137.22,2940,558,0.000221,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0279,True,False,False,True,labeled:FALSE,141.44,2943,713,0.000250,VERDICT: FALSE\nRULE: default false
+hard3_0280,False,False,True,True,labeled:FALSE,148.11,2943,949,0.000295,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; no universal deduction can be made from the first identity to guarantee the second across all magmas.
+hard3_0281,False,True,False,True,labeled:TRUE,152.76,2944,959,0.000297,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0282,False,False,True,True,labeled:FALSE,154.65,2945,896,0.000285,VERDICT: FALSE\nRULE: default false
+hard3_0283,True,False,False,True,labeled:FALSE,156.61,2945,602,0.000229,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the first equation is satisfied while the second fails.
+hard3_0284,True,True,True,True,labeled:TRUE,165.08,2943,881,0.000282,VERDICT: TRUE\nRULE: left projection
+hard3_0285,True,False,False,True,labeled:FALSE,168.81,2943,682,0.000244,VERDICT: FALSE\nRULE: default false
+hard3_0286,False,False,True,True,labeled:FALSE,172.42,2943,464,0.000203,VERDICT: FALSE\nRULE: default false
+hard3_0287,False,False,True,True,labeled:FALSE,176.78,2944,667,0.000242,VERDICT: FALSE\nRULE: default false
+hard3_0288,True,False,False,True,labeled:FALSE,182.36,2944,1591,0.000417,VERDICT: FALSE\nRULE: default false
+hard3_0289,False,True,False,True,labeled:TRUE,185.32,2944,841,0.000275,VERDICT: TRUE\nRULE: left projection
+hard3_0290,True,False,False,True,labeled:FALSE,193.66,2941,1340,0.000369,VERDICT: FALSE\nRULE: default false
+hard3_0291,True,False,False,True,labeled:FALSE,192.25,2944,895,0.000285,VERDICT: FALSE\nRULE: default false
+hard3_0292,True,True,True,True,labeled:TRUE,200.56,2944,700,0.000248,VERDICT: TRUE\nRULE: right projection
+hard3_0293,False,False,True,True,labeled:FALSE,204.70,2944,508,0.000211,VERDICT: FALSE\nRULE: default false
+hard3_0294,True,False,False,True,labeled:FALSE,211.67,2944,885,0.000283,VERDICT: FALSE\nRULE: default false
+hard3_0295,True,True,True,True,labeled:TRUE,216.19,2945,667,0.000242,VERDICT: TRUE\nRULE: right projection
+hard3_0296,True,True,True,True,labeled:TRUE,4.43,2944,743,0.000256,VERDICT: TRUE\nRULE: right projection
+hard3_0297,True,True,True,True,labeled:TRUE,6.65,2945,392,0.000189,VERDICT: TRUE\nRULE: right projection
+hard3_0298,True,True,True,True,labeled:TRUE,9.41,2944,340,0.000179,VERDICT: TRUE\nRULE: right projection
+hard3_0299,True,True,True,True,labeled:TRUE,12.02,2944,279,0.000168,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = ((y*z)*(w*u))*x forces a*b = b for all a,b, making both sides of the target equation collapse to x."
+hard3_0300,False,True,False,True,labeled:TRUE,19.85,2944,961,0.000297,VERDICT: TRUE\nRULE: left projection
+hard3_0301,False,True,False,True,labeled:TRUE,22.25,2941,465,0.000203,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0302,False,False,True,True,labeled:FALSE,26.78,2944,624,0.000233,VERDICT: FALSE\nRULE: default false
+hard3_0303,False,False,True,True,labeled:FALSE,33.10,2944,1250,0.000352,VERDICT: FALSE\nRULE: default false
+hard3_0304,False,False,True,True,labeled:FALSE,38.06,2945,991,0.000303,VERDICT: FALSE\nRULE: default false
+hard3_0305,False,True,False,True,labeled:TRUE,37.93,2944,749,0.000257,"VERDICT: TRUE\nRULE: contradiction motif\nThe left‑hand side of Eq 1 is a bare variable x and its right‑hand side fits motif C8 (three variables, leftmost x, x appears only in the left subtree of the "
+hard3_0306,False,False,True,True,labeled:FALSE,40.57,2944,466,0.000203,VERDICT: FALSE\nRULE: default false
+hard3_0307,True,True,True,True,labeled:TRUE,44.03,2944,601,0.000229,VERDICT: TRUE\nRULE: left projection
+hard3_0308,True,False,False,True,labeled:FALSE,52.08,2945,776,0.000262,VERDICT: FALSE\nRULE: default false
+hard3_0309,False,False,True,True,labeled:FALSE,55.51,2943,624,0.000233,VERDICT: FALSE\nRULE: default false
+hard3_0310,False,False,True,True,labeled:FALSE,60.03,2938,323,0.000176,VERDICT: FALSE\nRULE: default false
+hard3_0311,False,True,False,True,labeled:TRUE,66.46,2943,834,0.000273,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = ((x * (y * z)) * z) * z fits the left‑projection pattern x = x * T with T containing no x, forcing a * b = a for all elements. Under this law th"
+hard3_0312,False,False,True,True,labeled:FALSE,76.10,2941,1414,0.000383,VERDICT: FALSE\nRULE: default false
+hard3_0313,True,True,True,True,labeled:TRUE,76.60,2944,711,0.000250,VERDICT: TRUE\nRULE: projection family
+hard3_0314,True,False,False,True,labeled:FALSE,84.96,2945,1173,0.000338,VERDICT: FALSE\nRULE: default false
+hard3_0315,True,False,False,True,labeled:FALSE,87.58,2944,723,0.000252,VERDICT: FALSE\nRULE: default false
+hard3_0316,True,True,True,True,labeled:TRUE,100.66,2943,2171,0.000527,"VERDICT: TRUE\nRULE: right projection\n\nThe premise has the form x = (…)*x, forcing a right‑projection behavior (a*b = b) in every magma; under this law the target equation holds identically."
+hard3_0317,True,False,False,True,labeled:FALSE,94.97,2944,643,0.000237,VERDICT: FALSE\nRULE: default false
+hard3_0318,True,False,False,True,labeled:FALSE,102.52,2944,1093,0.000322,VERDICT: FALSE\nRULE: default false
+hard3_0319,True,True,True,True,labeled:TRUE,109.04,2944,1322,0.000366,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe computed feature vector for the product side of Eq 1 matches motif C13, which yields a direct proof that the target equation holds in all magmas satisfy"
+hard3_0320,False,False,True,True,labeled:FALSE,110.16,2943,891,0.000284,VERDICT: FALSE\nRULE: default false
+hard3_0321,True,False,False,True,labeled:FALSE,113.31,2944,517,0.000213,VERDICT: FALSE\nRULE: default false
+hard3_0322,False,False,True,True,labeled:FALSE,115.84,2943,384,0.000188,VERDICT: FALSE\nRULE: default false
+hard3_0323,True,True,True,True,labeled:TRUE,119.29,2944,495,0.000209,VERDICT: TRUE\nRULE: right projection
+hard3_0324,True,True,True,True,labeled:TRUE,125.53,2944,938,0.000293,"VERDICT: TRUE\nRULE: right projection\nThe premise of Eq 1 is of the form x = T * x with T not containing x, which forces the right‑projection law a * b = b in every magma satisfying Eq 1. Under this "
+hard3_0325,True,True,True,True,labeled:TRUE,129.68,2944,830,0.000273,VERDICT: TRUE\nRULE: right projection
+hard3_0326,True,True,True,True,labeled:TRUE,132.05,2944,464,0.000203,VERDICT: TRUE\nRULE: right projection
+hard3_0327,False,False,True,True,labeled:FALSE,134.40,2945,504,0.000211,VERDICT: FALSE\nRULE: default false
+hard3_0328,False,False,True,True,labeled:FALSE,141.75,2942,1038,0.000312,VERDICT: FALSE\nRULE: default false
+hard3_0329,True,False,False,True,labeled:FALSE,145.57,2944,942,0.000294,VERDICT: FALSE\nRULE: default false
+hard3_0330,False,True,False,True,labeled:TRUE,146.66,2944,577,0.000224,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0331,True,False,False,True,labeled:FALSE,156.78,2944,1662,0.000431,VERDICT: FALSE\nRULE: default false
+hard3_0332,False,True,False,True,labeled:TRUE,156.45,2944,678,0.000244,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe features of the product side of Eq 1 match motif C8, guaranteeing the implication. Hence the target equation holds in every magma."
+hard3_0333,True,True,True,True,labeled:TRUE,160.23,2944,639,0.000236,VERDICT: TRUE\nRULE: right projection
+hard3_0334,True,False,False,True,labeled:FALSE,168.39,2941,1316,0.000365,VERDICT: FALSE\nRULE: default false
+hard3_0335,True,False,False,True,labeled:FALSE,170.28,2945,931,0.000292,VERDICT: FALSE\nRULE: default false
+hard3_0336,True,True,True,True,labeled:TRUE,171.32,2941,368,0.000185,"VERDICT: TRUE\nRULE: right projection\n\nThe first equation is of the form x = T * x with x absent from T, forcing a right‑projection law (a * b = b). Under this law the second equation reduces to x ="
+hard3_0337,True,False,False,True,labeled:FALSE,179.14,2944,1004,0.000306,VERDICT: FALSE\nRULE: default false
+hard3_0338,True,True,True,True,labeled:TRUE,179.50,2944,310,0.000174,"VERDICT: TRUE\nRULE: right projection\n\nThe premise x = T * x with x absent from T forces a*b = b for all a,b, making Eq2 hold."
+hard3_0339,False,True,False,True,labeled:TRUE,193.26,2944,1712,0.000440,VERDICT: TRUE\nRULE: right projection
+hard3_0340,True,True,True,True,labeled:TRUE,188.51,2941,480,0.000206,VERDICT: TRUE\nRULE: right projection
+hard3_0341,True,True,True,True,labeled:TRUE,193.30,2944,285,0.000169,"VERDICT: TRUE\nRULE: right projection\n\nThe equation x = (((y*z)*w)*u)*x forces the right‑projection law a * b = b, making every product equal its rightmost factor. The target equation’s right‑hand s"
+hard3_0342,False,False,True,True,labeled:FALSE,201.51,2943,814,0.000269,VERDICT: FALSE\nRULE: default false
+hard3_0343,False,True,False,True,labeled:TRUE,214.33,2942,1671,0.000432,VERDICT: TRUE\nRULE: constant operation
+hard3_0344,False,False,True,True,labeled:FALSE,211.99,2943,760,0.000259,VERDICT: FALSE\nRULE: default false
+hard3_0345,False,False,True,True,labeled:FALSE,218.70,2943,904,0.000287,VERDICT: FALSE\nRULE: default false
+hard3_0346,False,True,False,True,labeled:TRUE,5.54,2943,1019,0.000308,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0347,False,False,True,True,labeled:FALSE,10.01,2943,931,0.000292,VERDICT: FALSE\nRULE: default false
+hard3_0348,False,False,True,True,labeled:FALSE,10.38,2943,412,0.000193,VERDICT: FALSE\nRULE: default false
+hard3_0349,False,False,True,True,labeled:FALSE,13.89,2943,656,0.000239,VERDICT: FALSE\nRULE: default false
+hard3_0350,False,True,False,True,labeled:TRUE,20.93,2943,1141,0.000332,VERDICT: TRUE\nRULE: constant operation
+hard3_0351,False,False,True,True,labeled:FALSE,28.73,2942,1330,0.000367,VERDICT: FALSE\nRULE: default false
+hard3_0352,True,True,True,True,labeled:TRUE,29.11,2942,894,0.000285,"VERDICT: TRUE\nRULE: left projection\n\nThe identity forces the product to ignore its second argument, making both sides of the target equation equal."
+hard3_0353,True,False,False,True,labeled:FALSE,31.22,2943,476,0.000205,VERDICT: FALSE\nRULE: default false
+hard3_0354,True,True,True,True,labeled:TRUE,40.19,2939,1028,0.000310,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces the binary operation to be constant (or the magma to be trivial), under which the target equation also holds."
+hard3_0355,True,False,False,True,labeled:FALSE,37.93,2942,97,0.000133,VERDICT: FALSE\nRULE: default false
+hard3_0356,False,False,True,True,labeled:FALSE,47.26,2942,1172,0.000337,VERDICT: FALSE\nRULE: default false
+hard3_0357,False,True,False,True,labeled:TRUE,48.80,2943,893,0.000284,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given identity is strong enough to force a constant‐valued operation in every magma, and in such a magma the target identity also holds. Hence the impl"
+hard3_0358,False,False,True,True,labeled:FALSE,51.31,2943,696,0.000247,VERDICT: FALSE\nRULE: default false
+hard3_0359,False,False,True,True,labeled:FALSE,60.26,2943,1275,0.000357,VERDICT: FALSE\nRULE: default false
+hard3_0360,False,True,False,True,labeled:TRUE,65.19,2939,1034,0.000311,VERDICT: TRUE\nRULE: constant operation
+hard3_0361,True,False,False,True,labeled:FALSE,63.67,2942,313,0.000174,VERDICT: FALSE\nRULE: default false
+hard3_0362,False,True,False,True,labeled:TRUE,73.25,2942,1020,0.000309,VERDICT: TRUE\nRULE: right projection
+hard3_0363,False,True,False,True,labeled:TRUE,76.20,2942,543,0.000218,VERDICT: TRUE\nRULE: constant operation
+hard3_0364,True,True,True,True,labeled:TRUE,81.53,2943,713,0.000250,VERDICT: TRUE\nRULE: left projection
+hard3_0365,True,True,True,True,labeled:TRUE,89.71,2939,1072,0.000318,VERDICT: TRUE\nRULE: left projection
+hard3_0366,True,False,False,True,labeled:FALSE,91.56,2942,529,0.000215,VERDICT: FALSE\nRULE: default false
+hard3_0367,True,False,False,True,labeled:FALSE,96.71,2942,897,0.000285,VERDICT: FALSE\nRULE: default false
+hard3_0368,False,False,True,True,labeled:FALSE,100.55,2943,713,0.000250,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general; there exist magmas satisfying \(x*x = (x*y)*(y*z)\) for all assignments while failing \(x*y = x*(z*(z*x))\).
+hard3_0369,False,True,False,True,labeled:TRUE,108.03,2944,1162,0.000336,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given equation forces the binary operation to behave essentially as a constant (all products yield the same element), which trivially makes the target "
+hard3_0370,False,False,True,True,labeled:FALSE,109.51,2943,511,0.000212,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas; a counterexample can be constructed where the left‑hand equation is satisfied but the right‑hand one fails.
+hard3_0371,False,False,True,True,labeled:FALSE,114.67,2944,742,0.000256,VERDICT: FALSE\nRULE: default false
+hard3_0372,False,False,True,True,labeled:FALSE,119.72,2944,1045,0.000313,VERDICT: FALSE\nRULE: default false
+hard3_0373,False,True,False,True,labeled:TRUE,120.24,2943,607,0.000230,VERDICT: TRUE\nRULE: left projection
+hard3_0374,True,False,False,True,labeled:FALSE,125.83,2940,947,0.000295,VERDICT: FALSE\nRULE: default false
+hard3_0375,True,True,True,True,labeled:TRUE,131.63,2943,1349,0.000371,VERDICT: TRUE\nRULE: left projection
+hard3_0376,True,False,False,True,labeled:FALSE,135.75,2944,1131,0.000330,VERDICT: FALSE\nRULE: default false
+hard3_0377,False,True,False,True,labeled:TRUE,136.89,2940,1010,0.000307,VERDICT: TRUE\nRULE: right projection
+hard3_0378,True,True,True,True,labeled:TRUE,141.02,2944,986,0.000302,VERDICT: TRUE\nRULE: right projection
+hard3_0379,True,False,False,True,labeled:FALSE,144.06,2944,634,0.000235,VERDICT: FALSE\nRULE: default false
+hard3_0380,True,True,True,True,labeled:TRUE,149.35,2943,997,0.000304,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe premise forces each left‑operand to yield a result independent of the right‑operand, making both sides of the target identity collapse to the same valu"
+hard3_0381,True,False,False,True,labeled:FALSE,152.59,2942,599,0.000229,VERDICT: FALSE\nRULE: default false
+hard3_0382,True,False,False,True,labeled:FALSE,156.18,2943,587,0.000226,VERDICT: FALSE\nRULE: default false
+hard3_0383,False,True,False,True,labeled:TRUE,161.85,2942,983,0.000302,"VERDICT: TRUE\nRULE: right projection\n\nThe identity forces a*b = b for all a,b, so the target equation holds in every magma."
+hard3_0384,True,False,False,True,labeled:FALSE,164.52,2943,535,0.000216,VERDICT: FALSE\nRULE: default false
+hard3_0385,True,True,True,True,labeled:TRUE,171.79,2939,1049,0.000314,VERDICT: TRUE\nRULE: constant operation
+hard3_0386,True,False,False,True,labeled:FALSE,175.53,2939,912,0.000288,VERDICT: FALSE\nRULE: default false
+hard3_0387,True,False,False,True,labeled:FALSE,178.24,2942,836,0.000274,VERDICT: FALSE\nRULE: default false
+hard3_0388,True,False,False,True,labeled:FALSE,185.47,2939,1522,0.000404,VERDICT: FALSE\nRULE: default false
+hard3_0389,True,True,True,True,labeled:TRUE,192.20,2943,1450,0.000390,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation forces the product to depend only on the right argument, which makes the target identity hold in every magma."
+hard3_0390,True,False,False,True,labeled:FALSE,190.22,2942,669,0.000242,VERDICT: FALSE\nRULE: default false
+hard3_0391,False,True,False,True,labeled:TRUE,197.84,2944,949,0.000295,VERDICT: TRUE\nRULE: constant operation
+hard3_0392,False,False,True,True,labeled:FALSE,201.90,2944,631,0.000235,VERDICT: FALSE\nRULE: default false
+hard3_0393,True,False,False,True,labeled:FALSE,210.19,2944,855,0.000277,VERDICT: FALSE\nRULE: default false
+hard3_0394,False,False,True,True,labeled:FALSE,212.80,2943,815,0.000270,VERDICT: FALSE\nRULE: default false
+hard3_0395,True,False,False,True,labeled:FALSE,216.71,2944,617,0.000232,VERDICT: FALSE\nRULE: default false
+hard3_0396,True,True,True,True,labeled:TRUE,7.52,2944,1026,0.000310,VERDICT: TRUE\nRULE: trivial implication
+hard3_0397,True,True,True,True,labeled:TRUE,10.85,2944,916,0.000289,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces the binary operation to be constant, which makes the second equation hold in every magma."
+hard3_0398,True,False,False,True,labeled:FALSE,12.76,2944,734,0.000254,VERDICT: FALSE\nRULE: default false
+hard3_0399,True,False,False,True,labeled:FALSE,17.35,2944,920,0.000290,VERDICT: FALSE\nRULE: default false
+hard3_0400,True,True,True,True,labeled:TRUE,20.99,2944,884,0.000283,VERDICT: TRUE\nRULE: constant operation

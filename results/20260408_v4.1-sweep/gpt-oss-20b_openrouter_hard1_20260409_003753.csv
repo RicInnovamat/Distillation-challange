@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,False,True,True,VERDICT: FALSE,180.51,2943,5995,0.000748,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=0, 1*0=1, 1*1=1 satisfies Eq1 but fails Eq2 for x=1, y=0, z=0, w=0."
+hard1_0002,False,True,False,True,VERDICT: TRUE,516.04,2955,4939,0.000632,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces the operation to be constant. In a constant magma, Eq2 holds trivially. Thus Eq1 implies Eq2."
+hard1_0003,True,True,True,True,VERDICT: TRUE,384.21,2956,897,0.000187,"VERDICT: TRUE\nRULE: right projection\n\nThe identity forces right‑zero behavior, and the target holds under that projection."
+hard1_0004,False,True,False,True,VERDICT: TRUE,463.14,2959,1994,0.000308,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe target uses fewer variables and has a higher imbalance than the source, satisfying the structural heuristic condition. Hence the implication holds over"
+hard1_0005,False,True,False,True,VERDICT: TRUE,213.81,2961,1551,0.000259,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source is bare with three variables, and the target has more variable occurrences than the source. This satisfies the structural heuristic T1, guarante"
+hard1_0006,False,False,True,True,VERDICT: FALSE,379.96,2954,1184,0.000219,"VERDICT: FALSE\nRULE: leftmost exclusion\n\nThe leftmost variable of Eq1 is the same on both sides (x), but in Eq2 it differs (x vs y). This syntactic mismatch guarantees that Eq1 cannot imply Eq2 in "
+hard1_0007,True,True,True,True,VERDICT: TRUE,7.88,2956,749,0.000171,"VERDICT: TRUE\nRULE: right projection\nRight-zero law forces every product to collapse to its rightmost factor, making Eq2 hold."
+hard1_0008,False,True,False,True,VERDICT: TRUE,188.33,2957,1540,0.000258,VERDICT: TRUE\nRULE: left projection
+hard1_0009,False,True,False,True,VERDICT: TRUE,350.24,2957,1689,0.000275,"VERDICT: TRUE  \nRULE: contradiction motif  \n\nThe bare‑source collapse analysis shows that Eq1 forces a left‑projection behaviour, and Eq2 is satisfied under that projection."
+hard1_0010,False,,,False,,685.17,0,0,0.000000,[EXCEPTION] TypeError: argument of type 'NoneType' is not a container or iterable
+hard1_0011,False,False,True,True,VERDICT: FALSE,176.50,2957,410,0.000134,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe left-zero magma a*b=a satisfies Eq1 for all assignments, but Eq2 fails when x≠y."
+hard1_0012,False,True,False,True,VERDICT: TRUE,318.13,2955,862,0.000183,"VERDICT: TRUE\nRULE: constant operation\nEquation 1 forces all products to be a constant, so Eq2 holds."
+hard1_0013,True,True,True,True,VERDICT: TRUE,94.67,2955,9660,0.001151,VERDICT: TRUE\nRULE: constant operation\n\nEquation 1 forces the operation to be constant: for any magma satisfying  \n\(x*y=((z*y)*x)*x\) one can show \(x*y\) is independent of \(y\) and hence consta
+hard1_0014,False,False,True,True,VERDICT: FALSE,198.13,2945,6724,0.000828,VERDICT: FALSE\nRULE: default false
+hard1_0015,False,False,True,True,VERDICT: FALSE,550.61,2960,23796,0.002706,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with table  \n\(f(x,0)=f(x,1)=L(x)\) where \(L(0)=0,L(1)=0,L(2)=1\),  \n\(f(0,2)=2,\;f(1,2)=1,\;f(2,2)=0\) satisfies \(x*x=x*(y*(z*y))\) for a"
+hard1_0016,False,,,False,,728.35,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0017,False,False,True,True,VERDICT: FALSE,241.19,2959,11190,0.001320,"VERDICT: FALSE\nRULE: default false\n\nThe given equations do not satisfy any of the exact TRUE or FALSE inference rules, and no counterexample has been found."
+hard1_0018,True,False,False,True,VERDICT: FALSE,343.99,2958,28573,0.003232,VERDICT: FALSE\nRULE: default false
+hard1_0019,False,,,False,,791.35,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0020,False,False,True,True,VERDICT: FALSE,97.65,2957,502,0.000144,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe left-zero magma (a*b = a) satisfies Eq1 for all elements, but Eq2 fails when x≠y."
+hard1_0021,False,False,True,True,VERDICT: FALSE,307.02,2941,26885,0.003046,"VERDICT: FALSE\nRULE: default false\nNo exact TRUE or FALSE route applies, so default to FALSE."
+hard1_0022,False,False,True,True,VERDICT: FALSE,583.83,2958,3882,0.000516,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table a*a=b, a*b=b, b*a=b, b*b=a satisfies Eq1 but not Eq2."
+hard1_0023,True,True,True,True,VERDICT: TRUE,114.84,2941,2196,0.000330,VERDICT: TRUE\nRULE: T1
+hard1_0024,False,False,True,True,VERDICT: FALSE,719.55,2957,18976,0.002176,VERDICT: FALSE\nRULE: default false
+hard1_0025,False,False,True,True,VERDICT: FALSE,672.16,2957,18854,0.002163,VERDICT: FALSE\nRULE: default false
+hard1_0026,False,True,False,True,VERDICT: TRUE,279.65,2956,2211,0.000332,VERDICT: TRUE\nRULE: projection family
+hard1_0027,True,True,True,True,VERDICT: TRUE,428.46,2941,1167,0.000217,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare with three distinct variables, and Eq2 has more variable occurrences than Eq1. This satisfies the structural heuristic, so Eq1 implies Eq2 over"
+hard1_0028,False,False,True,True,VERDICT: FALSE,608.18,2956,3788,0.000505,"VERDICT: FALSE\nRULE: default false\n\nThe given equations do not match any of the explicit TRUE or FALSE patterns in the decision procedure. No rule applies, so the procedure concludes FALSE."
+hard1_0029,False,True,False,True,VERDICT: TRUE,372.56,2944,6501,0.000803,VERDICT: TRUE\nRULE: right-zero\n\nEq1 forces the magma to be right-zero.  \nEq2 holds in any right-zero magma.
+hard1_0030,False,False,True,True,VERDICT: FALSE,433.07,2961,1206,0.000221,"VERDICT: FALSE\nRULE: right-zero witness\n\nThe right-zero magma (a*b = b) satisfies Eq1 for all assignments but fails Eq2, providing a decisive counterexample."
+hard1_0031,False,False,True,True,VERDICT: FALSE,185.02,2960,6025,0.000752,VERDICT: FALSE\nRULE: default false
+hard1_0032,False,False,True,True,VERDICT: FALSE,296.24,2952,6111,0.000761,VERDICT: FALSE\nRULE: default false
+hard1_0033,False,True,False,True,VERDICT: TRUE,383.27,2955,465,0.000140,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b), and Eq2 reduces to x = x under that projection."
+hard1_0034,True,False,False,True,VERDICT: FALSE,149.65,2952,7566,0.000921,VERDICT: FALSE\nRULE: default false
+hard1_0035,True,True,True,True,VERDICT: TRUE,566.27,2944,841,0.000181,"VERDICT: TRUE\nRULE: left projection\n\nEq1 is of the form x = x * T with T = ((y*z)*(w*u)) not containing x, forcing left‑projection (a*b = a). Under left‑projection Eq2 reduces to x = x, so it holds"
+hard1_0036,False,False,True,True,VERDICT: FALSE,414.10,2955,23417,0.002665,VERDICT: FALSE\nRULE: default false
+hard1_0037,False,False,True,True,VERDICT: FALSE,535.41,2959,8477,0.001021,VERDICT: FALSE\nRULE: default false
+hard1_0038,False,False,True,True,VERDICT: FALSE,657.45,2955,12178,0.001428,VERDICT: FALSE\nRULE: counterexample
+hard1_0039,False,True,False,True,VERDICT: TRUE,368.61,2957,2142,0.000324,VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation x = x * ((x * y) * (z * z)) forces a structure where the imbalance of variable occurrences in the target equation x = x * (((x * y) * x) * y) 
+hard1_0040,True,True,True,True,VERDICT: TRUE,8.62,2956,731,0.000169,"VERDICT: TRUE\nRULE: left projection\nEquation 1 forces left‑projection, which satisfies Equation 2."
+hard1_0041,True,False,False,True,false,659.69,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (((y * x) * y) * z) * x. Eq2: x * y = z * (w * (z * y)). We need to see if Eq1 forces Eq2. Likely false. Let's analyze.\n\nFirst, step 0:"
+hard1_0042,False,False,True,True,VERDICT: FALSE,756.35,2942,8732,0.001049,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe identity \(x = (y * x) * (x * z)\) holds in the left‑zero magma (where \(a*b = a\)), but the target \(x = x * (y * (x * (y * z)))\) does not. Thus the im"
+hard1_0043,False,False,True,True,VERDICT: FALSE,53.55,2955,9872,0.001175,VERDICT: FALSE\nRULE: default false
+hard1_0044,True,True,True,True,VERDICT: TRUE,155.77,2941,502,0.000143,"VERDICT: TRUE\nRULE: right projection\n\nEquation 1 forces right‑projection behavior, so Eq2 reduces to x = x under that interpretation."
+hard1_0045,False,False,True,True,VERDICT: FALSE,340.18,2957,12315,0.001443,VERDICT: FALSE\nRULE: default false
+hard1_0046,True,True,True,True,VERDICT: TRUE,539.21,2957,8412,0.001014,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces every product to be a constant, so Eq2 holds in all magmas."
+hard1_0047,False,False,True,True,VERDICT: FALSE,180.50,2958,5903,0.000738,"VERDICT: FALSE\nRULE: default false\n\nI could not find a proof that Eq1 forces Eq2, nor a concrete counterexample. Thus I conclude the implication does not hold in general."
+hard1_0048,False,True,False,True,VERDICT: TRUE,282.34,2958,2050,0.000314,"VERDICT: TRUE\nRULE: right projection\n\nThe source equation forces right‑projection behavior (a*b = b). Under this interpretation the target equation collapses to x = x, so it holds in all magmas."
+hard1_0049,False,False,True,True,VERDICT: FALSE,436.97,2959,4281,0.000560,VERDICT: FALSE\nRULE: XOR parity witness\n\nThe magma defined by XOR satisfies the first equation but not the second. Thus the implication fails.
+hard1_0050,True,True,True,True,VERDICT: TRUE,124.09,2957,698,0.000165,"VERDICT: TRUE\nRULE: left projection\n\nEq1 is of the form x = x * T with T not containing x, so it forces the left‑zero law a*b = a.  \nUnder left‑zero, the right side of Eq2 simplifies to x, so Eq2 "
+hard1_0051,False,False,True,True,VERDICT: FALSE,217.35,2955,715,0.000167,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe left-zero magma (a*b = a) satisfies Eq 1 for all variables, but Eq 2 would require a = c for all a, c, which is false. Thus Eq 1 does not imply Eq 2 over"
+hard1_0052,True,True,True,True,VERDICT: TRUE,41.88,2943,5473,0.000690,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe implication holds because any magma satisfying \(x=(y*x)*(y*x)\) must have the form \(a*b=f(b)\) with \(f\) an involution, and such magmas automaticall"
+hard1_0053,False,False,True,True,false,261.32,2955,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * y = (x * z) * (y * w). Eq2: x * y = (x * y) * (z * x).\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard1_0054,True,,,False,,782.35,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0055,False,False,True,True,VERDICT: FALSE,132.01,2955,1329,0.000235,VERDICT: FALSE\nRULE: right-zero witness
+hard1_0056,True,True,True,True,VERDICT: TRUE,149.60,2958,1869,0.000294,VERDICT: TRUE\nRULE: contradiction motif\n\nThe bare left side of Eq1 together with at least four distinct variables on the right forces a collapse that makes any equation true.
+hard1_0057,False,False,True,True,VERDICT: FALSE,303.64,2944,2465,0.000359,VERDICT: FALSE\nRULE: spine isolation
+hard1_0058,False,True,False,True,VERDICT: TRUE,486.24,2957,11164,0.001317,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces all products to be a constant, so any magma satisfying it also satisfies the target."
+hard1_0059,True,True,True,True,VERDICT: TRUE,127.15,2941,604,0.000155,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b). Under that collapse Eq2 reduces to x = x, so it holds."
+hard1_0060,True,False,False,True,VERDICT: FALSE,300.25,2959,6506,0.000804,VERDICT: FALSE\nRULE: default false
+hard1_0061,True,False,False,True,VERDICT: FALSE,478.40,2957,11828,0.001390,VERDICT: FALSE\nRULE: default false
+hard1_0062,False,False,True,True,VERDICT: FALSE,128.00,2958,11135,0.001314,VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with operation a*b = 1 if a=b else 0 satisfies Eq1 but fails Eq2 for x=2.
+hard1_0063,True,True,True,True,VERDICT: TRUE,192.90,2959,448,0.000138,"VERDICT: TRUE\nRULE: right projection\n\nThe source is bare: x = T * x with T = ((y*z)*w) not containing x, forcing right‑projection (a*b = b). Under this projection the target reduces to x = x, so it"
+hard1_0064,True,True,True,True,VERDICT: TRUE,356.11,2957,504,0.000144,"VERDICT: TRUE\nRULE: left projection\n\nThe premise is a bare equation of the form x = x * T with T free of x, forcing left‑projection (a*b = a). Under this projection the target reduces to x = x, so "
+hard1_0065,True,False,False,True,FALSE,119.66,2954,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = x * (y * (z * y)). Eq2: x = (x * (x * (x * y))) * x.\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. right side"
+hard1_0066,False,True,False,True,VERDICT: TRUE,404.89,2945,7802,0.000947,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identity forces the magma to be a group of exponent 2, which satisfies the target."
+hard1_0067,True,False,False,True,VERDICT: FALSE,463.12,2957,10863,0.001284,VERDICT: FALSE\nRULE: default false
+hard1_0068,False,False,True,True,FALSE,277.12,2956,32768,0.003693,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x * x = y * ((x * z) * y)\n\nEquation 2: x * (y * x) = x * (z * x)\n\nWe need to see if Eq1 => Eq2 holds universally.
+hard1_0069,True,True,True,True,VERDICT: TRUE,315.08,2956,516,0.000145,"VERDICT: TRUE  \nRULE: right projection  \n\nBecause Eq1 forces right‑projection (a*b = b), Eq2 reduces to x = x."

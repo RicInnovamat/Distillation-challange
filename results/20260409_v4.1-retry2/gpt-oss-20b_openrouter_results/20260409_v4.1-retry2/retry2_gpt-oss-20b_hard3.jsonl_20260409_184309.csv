@@ -1,0 +1,39 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0032,False,True,False,True,VERDICT: TRUE,99.98,2954,1566,0.000261,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0050,False,True,False,True,VERDICT: TRUE,450.79,2939,9422,0.001125,"VERDICT: TRUE\nRULE: derived constant operation\n\nSince Eq1 forces the magma to be constant (all products equal the same constant), Eq2 holds trivially for any such magma."
+hard3_0056,False,True,False,True,VERDICT: TRUE,27.95,2951,8215,0.000992,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces all products to be equal to a constant, so any magma satisfying it is constant and therefore satisfies the target equation."
+hard3_0092,False,False,True,True,VERDICT: FALSE,188.92,2943,22455,0.002558,VERDICT: FALSE\nRULE: default false
+hard3_0105,False,False,True,True,VERDICT: FALSE,266.36,2954,16906,0.001948,VERDICT: FALSE\nRULE: leftmost exclusion
+hard3_0129,False,False,True,True,VERDICT: FALSE,112.13,2944,11135,0.001313,"VERDICT: FALSE\nRULE: counterexample\n\nI constructed a 3-element magma where Eq1 holds (all row 0 is zero, row 1 is one, row 2 is left-projection except f(2,1)=0). This satisfies the identity for all"
+hard3_0131,True,False,False,True,VERDICT: FALSE,182.69,2945,22296,0.002541,VERDICT: FALSE\nRULE: default false
+hard3_0134,True,False,False,True,VERDICT: FALSE,183.32,2940,8121,0.000982,VERDICT: FALSE\nRULE: default false
+hard3_0162,True,False,False,True,VERDICT: FALSE,268.23,2957,14499,0.001684,VERDICT: FALSE\nRULE: default false
+hard3_0164,False,False,True,True,VERDICT: FALSE,116.15,2956,14804,0.001717,"VERDICT: FALSE\nRULE: default false\n\nThe provided set of syntactic rules did not identify the implication as true, nor any concrete falsifying example was constructed. Hence the implication is not c"
+hard3_0175,False,True,False,True,VERDICT: TRUE,217.43,2957,14519,0.001686,"VERDICT: TRUE  \nRULE: T5\n\nProof sketch: Eq1 forces the magma to be right‑zero (a*b=b), the unique 2‑element operation satisfying Eq1. In a right‑zero magma Eq2 becomes x * y = y = ((x * x) * y) * y"
+hard3_0183,True,False,False,True,VERDICT: FALSE,236.10,2963,18893,0.002167,VERDICT: FALSE\nRULE: default false\n\nThe two equations are not provably equivalent over all magmas.
+hard3_0188,True,False,False,True,VERDICT: FALSE,73.14,2955,22564,0.002571,VERDICT: FALSE\nRULE: default false
+hard3_0189,False,False,True,True,VERDICT: FALSE,232.60,2959,17614,0.002026,VERDICT: FALSE\nRULE: default false
+hard3_0193,True,False,False,True,VERDICT: FALSE,64.39,2958,11516,0.001355,"VERDICT: FALSE\nRULE: default false\n\nNo true rule applies, and a counterexample was not constructed, so the implication cannot be established."
+hard3_0199,True,False,False,True,VERDICT: FALSE,115.88,2958,9050,0.001084,VERDICT: FALSE\nRULE: default false\n\nNo true‐route applies and no syntactic false‑rule fired; hence implication fails.
+hard3_0200,False,False,True,True,VERDICT: FALSE,162.68,2963,6492,0.000803,"VERDICT: FALSE\nRULE: counterexample\n\nA magma on {0,1,2} with table a*b = a for all a,b except 1*2 = 0 satisfies Eq 1 for every assignment. Taking x=1, y=2, z=0, w=0 gives LHS = 1, RHS = (1*(2*1))*("
+hard3_0205,True,True,True,True,VERDICT: TRUE,266.39,2957,4936,0.000632,"VERDICT: TRUE  \nRULE: right projection  \n\nReason: Equation 1 forces the identity a⋆b = b for all a,b (right‐zero law).  \nUnder right‐projection, both sides of Equation 2 reduce to x, so Equation 2"
+hard3_0208,True,False,False,True,VERDICT: FALSE,71.44,2962,5451,0.000688,VERDICT: FALSE\nRULE: default false\n\nThe equations fail to imply each other over all magmas.
+hard3_0214,True,True,True,True,VERDICT: TRUE,171.95,2963,4388,0.000572,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe identities are compatible: any magma satisfying  \n\(x = ((x * x) * y) * (x * z)\) for all variables must behave as a left‐projection operation, i.e. \"
+hard3_0221,True,True,True,True,VERDICT: TRUE,271.09,2945,7493,0.000913,"VERDICT: TRUE\nRULE: T1\nEquation 1 is a bare identity with 3 distinct variables, while Equation 2 has a larger total number of variable occurrences.  By the structural TRUE heuristic T1, this guarant"
+hard3_0231,True,False,False,True,VERDICT: FALSE,37.90,2963,3826,0.000510,VERDICT: FALSE  \nRULE: default false\n\nThe equations do not imply each other over all magmas.
+hard3_0234,False,False,True,True,VERDICT: FALSE,203.27,2955,12516,0.001465,VERDICT: FALSE\nRULE: default false\n\nThe equation 1 does not provide any evidence that 2 must hold in all magmas.
+hard3_0237,False,False,True,True,VERDICT: FALSE,270.63,2958,9749,0.001161,VERDICT: FALSE\nRULE: default false\n\nUnable to match any TRUE route; attempts to construct a counterexample suggest Eq1 does not guarantee Eq2. No exact case or structural rule applies.
+hard3_0248,False,False,True,True,VERDICT: FALSE,61.53,2957,10806,0.001277,"VERDICT: FALSE  \nRULE: default false  \n\nNo exact truth route applies, and no syntactic false conditions are triggered. Hence, the implication does not hold for all magmas."
+hard3_0265,True,True,True,True,VERDICT: TRUE,207.97,2957,16222,0.001873,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is bare and contains three distinct variables, while the target equation has a larger total variable occurrence count. By T1 in the str"
+hard3_0270,False,False,True,True,VERDICT: FALSE,294.18,2957,16133,0.001863,VERDICT: FALSE\nRULE: default false
+hard3_0279,True,False,False,True,VERDICT: FALSE,64.09,2943,6194,0.000770,"VERDICT: FALSE\nRULE: counterexample\n\nWe exhibit a two‑step counterexample: let the universe be {0,1,2} and define a * b = f(a) where f is the 3‑cycle 0→1→2→0.  Then ((x*y)*(x*z))*w = x for all x,y,"
+hard3_0306,False,False,True,True,VERDICT: FALSE,84.63,2961,7231,0.000884,"VERDICT: FALSE\nRULE: finite witness\n\nWe can define a 3‑element magma with elements {0,1,2} and operation  \n\(a * b = g(a)\) where \(g\) is the 3‑cycle \(0\mapsto1\mapsto2\mapsto0\).  \nThen for al"
+hard3_0317,True,True,True,True,VERDICT: TRUE,234.31,2962,5532,0.000697,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 forces a*b = b (right‑zero) for any magma satisfying it, and right‑zero satisfies Eq2. Thus Eq2 holds in every variety of Eq1. This satisfies the impli"
+hard3_0333,True,False,False,True,VERDICT: FALSE,153.32,2957,21097,0.002409,VERDICT: FALSE\nRULE: default false
+hard3_0339,False,False,True,True,VERDICT: FALSE,132.80,2944,11061,0.001305,VERDICT: FALSE\nRULE: counterexample\n\nI constructed a 3‑element magma with table  \n\n| ₐₓ  | 0 | 1 | 2 |\n|-----------|---|---|---|\n| **0** | 0 | 2 | 2 |\n| **1** | 0 | 1 | 0 |\n| **2** | 1 | 1 | 
+hard3_0351,False,False,True,True,VERDICT: FALSE,230.12,2942,10186,0.001209,"VERDICT: FALSE\nRULE: counterexample\n\nThe magma on \{0,1\} with table  \n\(0*0=0,\;0*1=0,\;1*0=1,\;1*1=0\) satisfies  \n\n\(x*y=x*(y*(z*x))\) for all \(x,y,z\), but fails  \n\n\(x*y=x*((z*y)*w)\) wh"
+hard3_0357,False,False,True,True,VERDICT: FALSE,134.37,2943,14018,0.001630,VERDICT: FALSE  \nRULE: default false\n\nThe two equations are not equivalent; there exist magmas that satisfy  \n\(x*y = z*(z*(y*x))\) but fail to satisfy \(x*y = (x*z)*(y*z)\).  \nA concrete counter
+hard3_0369,False,False,True,True,VERDICT: FALSE,146.98,2944,18097,0.002079,VERDICT: FALSE\nRULE: default false
+hard3_0374,True,True,True,True,VERDICT: TRUE,177.95,2940,9104,0.001090,VERDICT: TRUE  \nRULE: derivation  \n\nEq1 forces the operation to be of the form a*b = g(a) with idempotent g (g(g(a))=g(a)). Hence x*y = g(x) and (x*y)*x = g(g(x)) = g(x). Thus Eq2 holds automatical
+hard3_0376,True,False,False,True,VERDICT: FALSE,362.57,2944,18658,0.002141,VERDICT: FALSE\nRULE: default false
+hard3_0386,True,False,False,True,VERDICT: FALSE,22.84,2950,7068,0.000866,VERDICT: FALSE\nRULE: default false

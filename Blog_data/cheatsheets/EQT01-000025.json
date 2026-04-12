@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:26.982627+00:00",
+  "publicCode": "EQT01-000025",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000025",
+  "data": {
+    "cnItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5",
+    "shareItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-c23de45c01c770b1a4315764178865e8e137ef36",
+    "entityName": "SimonRJ",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/39976045?v=4",
+    "cheatsheetTitle": "Test 7 - Simon Watts",
+    "cheatsheetContent": "You are a Formal Logic Auditor and Automated Theorem Prover. Your goal is to determine if Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) over all magmas.\n\n### PHASE 1: THE UNIVERSAL QUANTIFIER AUDIT (CRITICAL)\n1. CANONICALIZE: Normalize variables to x, y, z, w, u, v...\n2. ISOLATED VARIABLE CHECK: Look for a variable (e.g., x) that appears as a bare term on one side of EQ1 but is ABSENT from the other side.\n3. THE VARYING TEST: Ask: \"If I fix all variables on the RHS, can the LHS variable still vary?\"\n   - RULE: If EQ1 is [x = Term(y, z)], and x is a universal variable, then x is forced to be a constant. If x is a constant, then every element in the set S is equal to that constant. \n   - RESULT: This forces a Singleton Collapse (|S|=1). If |S|=1, VERDICT is TRUE.\n4. DECOUPLING: If x is on the left and w is on the right, and both are isolated, the result is a constant. \n\n### PHASE 2: PROJECTION & PARITY AUDIT\n1. Test Left-Projection (x*y=x) and Right-Projection (x*y=y). \n2. DISPARITY CHECK: You MUST verify these models by assigning DIFFERENT values to variables on opposite sides (e.g., x=0, y=1). If Eq 1 reduces to 0=1, the model is INVALID.\n3. If no non-singleton model survives the Disparity Check, the verdict is TRUE.\n\n### PHASE 3: FORMAL PROOF (TRUE PATH)\n- Step 1: Identify the Singleton Collapse (e.g., \"Since x is on the left and doesn't appear on the right, x must equal the constant result of the RHS for all x\").\n- Step 2: Conclude that |S|=1.\n- Step 3: State that EQ2 is vacuously true in a singleton magma.\n\n### PHASE 4: THE WITNESS-CROSS-CHECK (ANTI-HALLUCINATION)\nIf you propose a Counter-model (FALSE):\n1. Provide Table and Violation Witness.\n2. THE CROSS-CHECK: You MUST show that EQ1 holds for EVERY possible value of the isolated variable. If you only show it holds for x=b, but it fails for x=a, your model is a hallucination.\n\n### REQUIRED OUTPUT FORMAT\nVERDICT: [Exactly TRUE or FALSE]\nREASONING: [Identify Isolated Variables. Perform the Varying Test. State if the set collapses to a singleton.]\nPROOF: [If TRUE: Numbered steps showing the Singleton Collapse. If FALSE: Leave empty.]\nCOUNTEREXAMPLE: [If FALSE: Provide S, Table, Witness, and the Mandatory Cross-Check.]",
+    "publishedAt": "2026-04-06T15:04:49Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5",
+        "entityName": "SimonRJ",
+        "publishedAt": "2026-04-06T15:04:49Z",
+        "shareItemId": "cn_d193ff943c1046d6bc1c25bb1ac950b5"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_6f64c85a-d431-482c-add7-e8fd0723eb46",
+    "publicCode": "EQT01-000025",
+    "remark": "This prompt key framework is it forces the AI to stop acting like a \"text predictor\" and start acting like a Symbolic Logic Auditor. Instead of guessing the answer, it follows a rigorous checklist designed to catch the most common algebraic traps.\nHere are the key ideas and strengths that make it effective:\n## 1. The \"Varying Test\" (Detecting Singleton Collapses)\nIn many hard algebra problems, an equation is \"TRUE\" simply because the set is forced to collapse into a single point.\n\n* The Idea: If a variable appears alone on one side (like $x$) but is totally missing from the other, it means $x$ is equal to a constant. If $x$ must be a constant, then every element in the set must be the same.\n* The Strength: This catches \"Hidden Truths\" that look impossible to prove. It identifies when the \"universe\" of the problem has shrunk to a single value, making every equation automatically true.\n\n## 2. Mandatory Disparity Check\nAI models often suffer from \"Confirmation Bias\"—they pick values that happen to make an equation work (like $x=0, y=0$) and assume it’s always true.\n\n* The Idea: This forces the AI to assign different values to variables on opposite sides of the equals sign (e.g., $x=0, y=1$).\n* The Strength: It acts as a stress test. If the equation results in a contradiction like $0=1$, the AI immediately knows its \"guess\" was wrong and that the set must be a singleton or the logic is more complex.\n\n## 3. Variable Decoupling & Independence\nIn non-associative math, you can't just move parentheses around. You have to rely on which variables \"matter.\"\n\n* The Idea: If a variable appears on the left but is missing on the right, the result must be independent of that variable.\n* The Strength: This allows the AI to discover \"hidden functions\" or \"projection properties\" (where an operation ignores one of its inputs). It helps the AI solve problems by identifying what the operation does rather than just what it looks like.\n\n## 4. The Witness-Cross-Check (The Hallucination Killer)\nThis is the final \"Iron Gate.\" It prevents the AI from providing a fake counter-example table that doesn't actually satisfy the rules.\n\n* The Idea: If the AI finds a case where Equation 2 fails, it is required to take those exact same numbers and plug them back into Equation 1.\n* The Strength: If the AI sees $1=0$ in its own verification, it realizes its counter-example is a hallucination. It forces the AI to be its own harshest critic and retract wrong answers before you ever see them.",
+    "likeCount": 0,
+    "favoriteCount": 1,
+    "referencedCount": 0,
+    "commentCount": 1,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

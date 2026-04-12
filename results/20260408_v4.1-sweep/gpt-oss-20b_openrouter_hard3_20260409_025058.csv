@@ -1,0 +1,401 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0001,True,True,True,True,VERDICT: TRUE,10.12,2947,2160,0.000326,VERDICT: TRUE\nRULE: right projection
+hard3_0002,True,False,False,True,FALSE,246.90,2949,1403,0.000243,We need to decide if equation1 implies equation2 over all magmas.\n\nEquation1: x = x * (x * y)\nEquation2: x = (x * ((x * x) * x)) * x\n\nWe need to see if Eq1 implies Eq2 in all magmas.\n\nWe can tr
+hard3_0003,True,False,False,True,VERDICT: FALSE,399.06,2953,9971,0.001185,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with operation table  \na*a=c, a*b=a, a*c=b;  \nb*a=c, b*b=a, b*c=b;  \nc*a=c, c*b=a, c*c=b  \nsatisfies x = y*(x*x) but fails x = y*(z*(z*(w*"
+hard3_0004,True,True,True,True,VERDICT: TRUE,412.51,2938,756,0.000171,VERDICT: TRUE\nRULE: singleton collapse
+hard3_0005,True,True,True,True,VERDICT: TRUE,489.70,2952,925,0.000190,"VERDICT: TRUE\nRULE: right projection\nEquation 1 forces right‑projection, and Eq2 holds when every product is replaced by its rightmost variable."
+hard3_0006,True,False,False,True,VERDICT: FALSE,4805.96,2949,4100,0.000539,VERDICT: FALSE\nRULE: default false
+hard3_0007,False,False,True,True,VERDICT: FALSE,579.89,2949,2434,0.000356,"VERDICT: FALSE\nRULE: counterexample\n\nA two‑element magma with operation a*x=b, b*x=a satisfies x*x=x*y for all x,y.  \nFor x=a,y=a,z=a,w=a, the left side is a*(a*a)=a*b=b, while the right side is ("
+hard3_0008,True,True,True,True,VERDICT: TRUE,701.81,2936,1076,0.000206,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation x*x = y*z with disjoint variable sets forces the magma to be constant, so any product equals a fixed element. Under a constant operation, both s"
+hard3_0009,False,False,True,True,VERDICT: FALSE,3443.70,2954,5309,0.000673,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with left‑zero behaviour except for one special product (e.g. a*b=c) satisfies  \nx = x*(x*(x*y)) for all x,y, but fails x = (x*(y*(x*x)))*z for suitabl"
+hard3_0010,False,False,True,True,VERDICT: FALSE,3508.98,2951,17019,0.001961,VERDICT: FALSE\nRULE: counterexample
+hard3_0011,False,True,False,True,VERDICT: TRUE,837.99,2954,2452,0.000358,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation x = x * (x * (y * z)) is bare with three variables, and the target has more variable occurrences, so the structural heuristic applies."
+hard3_0012,False,True,False,True,TRUE,984.15,2954,32768,0.003693,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x = x * (y * (x * x))\n\nEquation 2: x * x = (x * y) * (x * x)\n\nWe need to see if Eq1 logically entails Eq2 in all 
+hard3_0013,False,True,False,True,VERDICT: TRUE,979.82,2954,1740,0.000280,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is bare with three distinct variables, and the target has a larger total number of variable occurrences (6 vs. 5). By the structural he"
+hard3_0014,True,True,True,True,VERDICT: TRUE,1070.58,2956,500,0.000144,VERDICT: TRUE\nRULE: left projection
+hard3_0015,True,True,True,True,VERDICT: TRUE,1173.77,2940,1716,0.000277,"VERDICT: TRUE\nRULE: left projection\n\nEq1 forces left‑projection (a*b = a), so Eq2 holds under that interpretation."
+hard3_0016,False,False,True,True,VERDICT: FALSE,1211.45,2954,3408,0.000464,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n  0 0 = 1, 0 1 = 0, 1 0 = 1, 1 1 = 0  \nsatisfies x = y*(x*(x*x)) for all x,y but fails x*y = (y*y)*(y*y)."
+hard3_0017,False,False,True,True,VERDICT: FALSE,3714.94,2951,4536,0.000587,"VERDICT: FALSE\nRULE: custom counterexample\n\nI constructed a 2‑element magma with operation  \n\(a*b = b\) if \(a=0\) and \(a*b = 1-b\) if \(a=1\).  \nFor all \(x,y\) this magma satisfies  \n\(x = y"
+hard3_0018,False,False,True,True,VERDICT: FALSE,3783.16,2952,13642,0.001589,VERDICT: FALSE\nRULE: counterexample
+hard3_0019,False,True,False,True,VERDICT: TRUE,1390.58,2954,1334,0.000235,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare with three distinct variables and Eq2 has a larger total number of variable occurrences, so the structural heuristic (T1) applies."
+hard3_0020,True,True,True,True,VERDICT: TRUE,5064.77,2942,3188,0.000439,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is bare with three distinct variables, and the target has more total variable occurrences, so the structural TRUE heuristic applies. No"
+hard3_0021,False,False,True,True,VERDICT: FALSE,1579.79,2954,8875,0.001065,"VERDICT: FALSE\nRULE: counterexample\nA 3‑element magma satisfies Eq1 for all assignments but fails Eq2 for x=1, y=2."
+hard3_0022,False,True,False,True,VERDICT: TRUE,1804.73,2953,1791,0.000286,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is bare with three variables and the target has a larger size, so the structural heuristic applies."
+hard3_0023,True,True,True,True,TRUE,5182.88,2952,32768,0.003693,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x = x * ((y * z) * x)\n\nEquation 2: x = x * (y * x)\n\nWe need to see if Eq1 implies Eq2 in all magmas.\n\nWe follow
+hard3_0024,True,True,True,True,VERDICT: TRUE,2770.90,2941,569,0.000151,VERDICT: TRUE  \nRULE: left projection  \n\nThe premise is a bare equation of the form \(x = x * T\) with \(T\) not containing \(x\).  \nThis forces left‑projection behaviour (\(a*b = a\)).  \nUnder l
+hard3_0025,False,False,True,True,false,2947.82,2955,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * ((y * x) * x). Eq2: x = (y * z) * ((y * y) * x).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEquation 1: x = y * ((y * x) 
+hard3_0026,False,False,True,True,VERDICT: FALSE,5409.08,2955,4627,0.000598,"VERDICT: FALSE\nRULE: counterexample\n\nA counterexample is provided by the group \( \mathbb{Z}_3 \) under addition modulo 3.  \nFor all \(x,y\in\mathbb{Z}_3\),\n\n\[\nx = y + ((y+y)+x) \quad\text{sin"
+hard3_0027,True,,,False,,5082.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0028,True,True,True,True,VERDICT: TRUE,3.07,2955,670,0.000162,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0029,False,True,False,True,VERDICT: TRUE,36.43,2940,2848,0.000401,"VERDICT: TRUE\nRULE: structural heuristic\n\nEquation 1 is bare with three variables, and Equation 2 has a larger size, so the structural heuristic applies."
+hard3_0030,True,True,True,True,VERDICT: TRUE,4711.64,2941,4756,0.000611,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 forces left‑zero, which makes Eq2 hold in every magma."
+hard3_0031,False,False,True,True,FALSE,167.76,2954,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (x * y) * (x * x). Eq2: x * y = x * (z * (z * y)). We need to see if Eq1 forces Eq2. Let's analyze.\n\nEquation 1: x = (x*y)*(x*x). This 
+hard3_0032,False,,,False,,4782.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0033,True,True,True,True,VERDICT: TRUE,3229.00,2954,2155,0.000326,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe size of Equation 2 exceeds that of Equation 1 while Equation 1 is bare with at least three variables, satisfying the structural TRUE heuristic."
+hard3_0034,True,True,True,True,VERDICT: TRUE,361.42,2942,2241,0.000335,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0035,False,True,False,True,VERDICT: TRUE,391.10,2955,2790,0.000396,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0036,True,False,False,True,VERDICT: FALSE,543.98,2957,5223,0.000663,VERDICT: FALSE\nRULE: default false
+hard3_0037,False,True,False,True,TRUE,3405.36,2957,32768,0.003693,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x = (x * (x * y)) * x\n\nEquation 2: x * x = x * ((y * y) * x)\n\nWe need to see if Eq1 implies Eq2 in all magmas.\n\
+hard3_0038,True,True,True,True,VERDICT: TRUE,612.67,2940,1411,0.000243,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation forces left‑projection behavior, which makes the target equation hold in all magmas."
+hard3_0039,False,,,False,,4929.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0040,False,True,False,True,VERDICT: TRUE,719.19,2956,1335,0.000236,"VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 forces left‑projection behavior, so every product collapses to its leftmost variable, which satisfies Equation 2."
+hard3_0041,False,False,True,True,VERDICT: FALSE,767.24,2954,5105,0.000650,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with table  \n0*0=1, 0*1=1, 0*2=1;  \n1*0=2, 1*1=2, 1*2=2;  \n2*0=0, 2*1=0, 2*2=0  \nsatisfies Eq1 for all assignments but fails Eq2 when x=0."
+hard3_0042,False,False,True,True,VERDICT: FALSE,929.88,2941,3193,0.000439,VERDICT: FALSE\nRULE: counterexample\n\nThe identity \(x = ((x * x) * y) * y\) forces the operation to be of the form \(a * b = g(a)\) where \(g^3 = \text{id}\).  \nFor a 3‑element set with \(g\) a 3‑
+hard3_0043,True,True,True,True,VERDICT: TRUE,943.45,2941,1906,0.000298,"VERDICT: TRUE\nRULE: contradiction motif\nEquation 1 forces a left‑most projection, so Eq2 holds."
+hard3_0044,False,True,False,True,VERDICT: TRUE,984.93,2951,1472,0.000250,"VERDICT: TRUE\nRULE: structural heuristic\n\nEquation 1 is bare with 4 variables and Eq2 is larger, so the structural heuristic applies."
+hard3_0045,False,,,False,,5034.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0046,True,True,True,True,VERDICT: TRUE,1167.62,2941,1191,0.000219,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b=b), and Eq2 reduces to x=x under that."
+hard3_0047,True,True,True,True,VERDICT: TRUE,3689.48,2953,1283,0.000230,"VERDICT: TRUE\nRULE: right projection\n\nThe equation forces right‑projection (a*b = b), and the target holds under that projection."
+hard3_0048,True,True,True,True,VERDICT: TRUE,1226.78,2959,470,0.000140,"VERDICT: TRUE\nRULE: right projection\n\nThe source is a bare equation of the form x = T * x with T = ((y*z)*z) not containing x, forcing right‑projection (a*b = b). Under this projection Eq2 reduces "
+hard3_0049,True,True,True,True,VERDICT: TRUE,1359.30,2956,2113,0.000321,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces the right‑zero law a*b=b, so Eq2 holds in every such magma."
+hard3_0050,False,,,False,,5104.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0051,True,False,False,True,VERDICT: FALSE,3885.37,2952,14291,0.001661,VERDICT: FALSE\nRULE: default false
+hard3_0052,True,False,False,True,VERDICT: FALSE,1576.92,2953,4470,0.000580,VERDICT: FALSE\nRULE: default false
+hard3_0053,True,True,True,True,VERDICT: TRUE,3959.14,2953,11466,0.001350,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces the magma to be constant: for any a,b we have a*b = c.  \nWith a constant operation both sides of Eq2 equal c, so Eq2 holds."
+hard3_0054,True,True,True,True,VERDICT: TRUE,1639.55,2954,1650,0.000270,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces a constant operation (both sides are non‑variable products with disjoint variable sets), so any magma satisfying Eq1 is constant. In a constant ma"
+hard3_0055,False,False,True,True,FALSE,4034.88,2952,32768,0.003693,We need to decide if equation1: x * x = (x * y) * z implies equation2: x * y = ((x * x) * x) * y over all magmas.\n\nWe must follow steps.\n\nEquation1: left side: x * x. right side: (x * y) * z.\n\nE
+hard3_0056,False,,,False,,5184.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0057,False,False,True,True,VERDICT: FALSE,1879.42,2954,10615,0.001256,"VERDICT: FALSE\nRULE: counterexample witness\nA counterexample magma on {0,1,2} satisfies Eq1 but not Eq2. Thus the implication does not hold in all magmas."
+hard3_0058,True,True,True,True,VERDICT: TRUE,1909.01,2949,8252,0.000996,VERDICT: TRUE\nRULE: constant operation
+hard3_0059,False,False,True,True,VERDICT: FALSE,1960.90,2953,4489,0.000582,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with three elements {c,d,e} and operation table  \nf(c,c)=c, f(c,d)=d, f(c,e)=d,  \nf(d,c)=d, f(d,d)=c, f(d,e)=c,  \nf(e,c)=d, f(e,d)=c, f(e,e)=c  \nsat"
+hard3_0060,True,False,False,True,VERDICT: FALSE,2044.20,2953,11020,0.001301,VERDICT: FALSE\nRULE: default false
+hard3_0061,True,True,True,True,VERDICT: TRUE,4161.13,2939,1206,0.000221,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces a constant magma (all products equal one constant), and Eq2 holds in any constant magma."
+hard3_0062,False,False,True,True,VERDICT: FALSE,2115.45,2957,4851,0.000622,"VERDICT: FALSE\nRULE: counterexample\n\nWe found a 2‑element magma with table  \nt00=1, t01=0, t10=1, t11=0 that satisfies  \nx = x*(x*(y*(y*x))) for all x,y, but fails  \nx = x*((y*y)*(x*x)). Thus th"
+hard3_0063,False,True,False,True,VERDICT: TRUE,4167.23,2959,1850,0.000292,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0064,False,True,False,True,VERDICT: TRUE,4163.73,2957,1288,0.000230,"VERDICT: TRUE  \nRULE: contradiction motif  \n\nThe source equation forces left‑projection behaviour, and the target collapses to the same variable under that projection."
+hard3_0065,False,True,False,True,TRUE,5297.24,2953,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = x * (y * (x * (x * z))). Eq2: x * x = (x * x) * y.\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEq1: x = x * (y * (x * (x * z))
+hard3_0066,True,True,True,True,VERDICT: TRUE,2522.46,2958,990,0.000198,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe product side of Eq1 contains four distinct variables, with x neither leftmost nor rightmost, so the motif C1 applies, forcing Eq1 to imply Eq2 over all "
+hard3_0067,True,True,True,True,VERDICT: TRUE,2506.22,2944,1707,0.000276,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation is bare with four distinct variables, while the target uses only two, satisfying the structural heuristic condition."
+hard3_0068,True,False,False,True,VERDICT: FALSE,2552.34,2957,8878,0.001065,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with operation  \n\(a*b=a\) if \(b\in\{0,1\}\) and \(a*2=0\) satisfies Eq1 for all \(x,y,z\) but fails Eq2 when \(x=2\)."
+hard3_0069,False,False,True,True,VERDICT: FALSE,4348.43,2958,3645,0.000490,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=1, 1*0=0, 1*1=0 satisfies  \nx = y*(x*(z*(x*x))) for all x,y,z, but fails  \nx = ((y*x)*x)*(x*x) when x=1, y=0. Thus "
+hard3_0070,False,False,True,True,VERDICT: FALSE,2679.59,2958,15068,0.001746,"VERDICT: FALSE\nRULE: counterexample\n\nThe identity x = y * (x * (z * (y * x))) is satisfied by any magma of the form a*b = g(b) where g is an involution (g² = id). For such a magma, Eq1 holds becaus"
+hard3_0071,False,False,True,True,VERDICT: FALSE,2725.20,2958,9329,0.001115,"VERDICT: FALSE\nRULE: counterexample\n\nCounterexample: the group (ℤ₄, + mod 4) satisfies x = y*(y*(y*(x*y))) but fails x = ((y*y)*x)*(z*z)."
+hard3_0072,False,,,False,,5445.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0073,False,True,False,True,VERDICT: TRUE,4479.97,2957,1600,0.000265,"VERDICT: TRUE\nRULE: contradiction motif\n\nEq1 forces a left‑projection‑like collapse, so Eq2 holds in all magmas."
+hard3_0074,False,True,False,True,VERDICT: TRUE,2921.50,2958,3052,0.000424,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0075,False,False,True,True,VERDICT: FALSE,4571.78,2958,5249,0.000666,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with operation f(x,y)=h(y) where h is a 4‑cycle satisfies Eq1 but not Eq2."
+hard3_0076,False,True,False,True,VERDICT: TRUE,3022.78,2958,701,0.000166,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0077,True,True,True,True,VERDICT: TRUE,4.16,2954,1120,0.000212,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0078,False,False,True,True,VERDICT: FALSE,57.45,2957,15971,0.001846,VERDICT: FALSE\nRULE: default false
+hard3_0079,False,True,False,True,true,3218.95,2956,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * (z * (z * (z * x))). Eq2: x = ((y * y) * z) * (x * x).\n\nWe must follow steps.\n\nStep 0: Quick meta-check. Let's parse.\n\nEq1: lef
+hard3_0080,False,False,True,True,VERDICT: FALSE,159.39,2956,11378,0.001340,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with table  \n0 * 0 = 0, 0 * 1 = 1, 1 * 0 = 1, 1 * 1 = 1  \nsatisfies Eq 1 but fails Eq 2. Thus Eq 1 does not imply Eq 2."
+hard3_0081,False,False,True,True,VERDICT: FALSE,219.02,2957,11263,0.001328,"VERDICT: FALSE\nRULE: counterexample\n\nWe built a 3‑element magma with table  \n0→(0,0,1), 1→(2,1,1), 2→(0,2,2) that satisfies Eq1 but fails Eq2 for a=1,b=0."
+hard3_0082,False,False,True,True,VERDICT: FALSE,4720.24,2957,8905,0.001068,VERDICT: FALSE\nRULE: default false
+hard3_0083,False,True,False,True,TRUE,445.55,2955,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = x * (x * ((y * z) * y)). Eq2: x * y = (x * z) * (w * y).\n\nWe must follow steps.\n\nStep0: Quick meta-check. Let's parse.\n\nEq1: left s
+hard3_0084,False,True,False,True,VERDICT: TRUE,410.06,2961,1119,0.000212,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation forces the leftmost variable to be preserved in every product, and the target equation collapses to the same variable under that project"
+hard3_0085,True,True,True,True,VERDICT: TRUE,509.43,2944,423,0.000135,"VERDICT: TRUE\nRULE: left projection\n\nThe equation forces left‑projection (a*b = a), under which the target equation holds."
+hard3_0086,False,True,False,True,VERDICT: TRUE,535.10,2956,535,0.000148,"VERDICT: TRUE\nRULE: left projection\n\nEq1 forces left‑projection (a*b = a). Under that interpretation Eq2 reduces to x = x, so it holds."
+hard3_0087,True,True,True,True,VERDICT: TRUE,576.83,2955,1097,0.000209,VERDICT: TRUE\nRULE: left projection
+hard3_0088,True,True,True,True,VERDICT: TRUE,665.71,2956,1376,0.000240,VERDICT: TRUE\nRULE: left projection
+hard3_0089,True,False,False,True,VERDICT: FALSE,801.00,2956,9917,0.001180,"VERDICT: FALSE\nRULE: default false\n\nNo exact TRUE route applies, and no syntactic FALSE route is triggered. The implication is not provable by the given rules."
+hard3_0090,True,True,True,True,VERDICT: TRUE,795.79,2945,538,0.000148,"VERDICT: TRUE\nRULE: left projection\n\nEq1 forces left‑projection (a*b = a), and Eq2 reduces to x = x under that projection."
+hard3_0091,False,False,True,True,VERDICT: FALSE,874.93,2945,1364,0.000238,"VERDICT: FALSE\nRULE: parity exclusion\n\nThe parity of the two sides of Equation 1 is identical, while the parity of the two sides of Equation 2 differs, violating the parity exclusion rule."
+hard3_0092,False,,,False,,4961.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0093,False,False,True,True,VERDICT: FALSE,3591.61,2962,2294,0.000341,VERDICT: FALSE\nRULE: spine isolation
+hard3_0094,False,True,False,True,VERDICT: TRUE,3676.04,2959,7665,0.000932,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe product side of Eq1 is `y * (y * ((z * x) * x))`.  \nIts features are:  \n- rhsVars=3 (y, z, x)  \n- Lx=FALSE (x is not leftmost)  \n- Rx=TRUE (x is rig"
+hard3_0095,False,True,False,True,VERDICT: TRUE,1143.55,2957,1246,0.000226,"VERDICT: TRUE  \nRULE: contradiction motif\n\nThe source‑collapse analysis shows the product side has 4 distinct variables with counts 1,1,1,2, leftmost variable not x, rightmost variable x, matching "
+hard3_0096,False,True,False,True,VERDICT: TRUE,1218.06,2941,825,0.000179,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation forces right‑projection behavior, collapsing every product to its rightmost variable. Under this collapse, the target equation holds as "
+hard3_0097,False,True,False,True,VERDICT: TRUE,1297.68,2959,6016,0.000751,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source‑collapse motif C13 applies: the right‑hand side of Eq1 has 4 distinct variables, the multiset of variable counts is 1112, the leftmost variable i"
+hard3_0098,False,True,False,True,true,1397.72,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas.\n\nEq1: x = y * (z * ((y * y) * x))\n\nEq2: x = ((x * x) * x) * (y * x)\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nFirst, step 0: read"
+hard3_0099,False,False,True,True,VERDICT: FALSE,5019.03,2962,2960,0.000414,"VERDICT: FALSE\nRULE: spine isolation\nEq1 has a pure right‑spine of depth 3, but Eq2 is not a pure right‑spine, violating the spine isolation condition."
+hard3_0100,False,True,False,True,VERDICT: TRUE,3926.64,2957,22997,0.002618,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0101,False,True,False,True,VERDICT: TRUE,1588.41,2960,940,0.000192,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0102,False,True,False,True,VERDICT: TRUE,2363.54,2959,2092,0.000319,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source‑collapse lemma C13 applies to the bare source, forcing the implication."
+hard3_0103,False,False,True,True,VERDICT: FALSE,4008.66,2958,7754,0.000942,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with table  \n0*0=0, 0*1=0, 1*0=1, 1*1=1, and 0*1=2, 2*1=0, 2*2=2 satisfies Eq1 but not Eq2.  \nThus Eq1 does not imply Eq2 over all magmas."
+hard3_0104,False,True,False,True,VERDICT: TRUE,1678.86,2955,15000,0.001739,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe implication holds because Eq1 forces the left‑zero law (a*b=a for all a,b), and Eq2 is valid in every left‑zero magma."
+hard3_0105,False,,,False,,5176.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0106,True,False,False,True,VERDICT: FALSE,1763.75,2959,2204,0.000331,VERDICT: FALSE\nRULE: spine isolation
+hard3_0107,True,True,True,True,VERDICT: TRUE,1822.75,2955,470,0.000140,"VERDICT: TRUE\nRULE: left projection\n\nThe first equation is of the form \(x = x * T\) with \(T\) not containing \(x\), so it forces left‑projection behavior. Under left‑projection every product redu"
+hard3_0108,False,False,True,True,VERDICT: FALSE,1986.14,2955,31962,0.003604,VERDICT: FALSE\nRULE: counterexample
+hard3_0109,True,True,True,True,VERDICT: TRUE,1951.86,2961,597,0.000155,"VERDICT: TRUE\nRULE: left projection\n\nThe equation x = x * ((y * z) * (w * w)) forces the left‑projection law a*b = a, and under that law the target (x * y) * x = (x * z) * y collapses to x = x, whi"
+hard3_0110,False,True,False,True,VERDICT: TRUE,5180.03,2944,1888,0.000296,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0111,False,True,False,True,VERDICT: TRUE,2084.47,2958,1602,0.000265,VERDICT: TRUE\nRULE: contradiction motif\nThe source-collapse lemma C6 applies.
+hard3_0112,False,False,True,True,VERDICT: FALSE,2134.89,2957,9894,0.001177,"VERDICT: FALSE\nRULE: default false\n\nNo exact TRUE rule applies, and no exact FALSE rule or counterexample has been found."
+hard3_0113,False,False,True,True,VERDICT: FALSE,2205.86,2957,21792,0.002486,VERDICT: FALSE\nRULE: default false
+hard3_0114,True,True,True,True,TRUE,2322.83,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * ((y * y) * (z * x)). Eq2: x = (x * y) * (x * (y * x)).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0115,True,False,False,True,VERDICT: FALSE,2381.43,2958,9472,0.001131,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n\(a*a=a,\; a*b=a,\; b*a=b,\; b*b=b\) satisfies  \n\(x = y*((y*z)*(x*x))\) for all \(x,y,z\).  \nHowever, for \(x=a,\; y=b,\; z=a"
+hard3_0116,False,False,True,True,VERDICT: FALSE,4210.41,2957,2424,0.000355,VERDICT: FALSE\nRULE: spine isolation
+hard3_0117,True,False,False,True,VERDICT: FALSE,5286.08,2956,17280,0.001989,VERDICT: FALSE\nRULE: default false
+hard3_0118,False,False,True,True,false,2512.82,2961,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * ((z * x) * (y * x)). Eq2: x = (((y * x) * z) * y) * x.\n\nWe need to see if Eq1 logically implies Eq2 in all magmas. Likely false. Le
+hard3_0119,False,False,True,True,VERDICT: FALSE,5331.86,2962,9217,0.001103,VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with table  \n\[\n\begin{array}{c|ccc}\n* & 0 & 1 & 2\\\hline\n0 & 2 & 0 & 1\\\n1 & 2 & 0 & 1\\\n2 & 2 & 0 & 1\n\end{array}\n\]\nsatisfies Eq 
+hard3_0120,False,True,False,True,VERDICT: TRUE,2601.06,2962,946,0.000193,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0121,False,True,False,True,VERDICT: TRUE,4383.61,2959,981,0.000197,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe equation forces a left‑projection behavior, and the target collapses to the same variable under that projection. Thus the implication holds in all magma"
+hard3_0122,False,False,True,True,VERDICT: FALSE,4395.34,2952,3523,0.000476,"VERDICT: FALSE\nRULE: default false\n\nA 3‑element magma with operation f(u,v)=g(v) where g is a 3‑cycle satisfies Eq1 but not Eq2."
+hard3_0123,False,True,False,True,VERDICT: TRUE,2789.96,2940,959,0.000194,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0124,True,True,True,True,VERDICT: TRUE,2883.40,2958,8499,0.001024,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0125,False,True,False,True,VERDICT: TRUE,4514.22,2955,4115,0.000541,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is a bare equation with 5 distinct variables, while Eq2 has more variable occurrences. By the structural heuristic (T1), this suffices to conclude that"
+hard3_0126,False,True,False,True,VERDICT: TRUE,2958.04,2959,720,0.000168,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0127,True,True,True,True,VERDICT: TRUE,3024.61,2960,1495,0.000253,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0128,False,True,False,True,VERDICT: TRUE,3045.18,2956,930,0.000191,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation matches motif C8, forcing a left‑projection behavior that makes the target hold."
+hard3_0129,False,,,False,,53.65,0,0,0.000000,[EXCEPTION] TypeError: argument of type 'NoneType' is not a container or iterable
+hard3_0130,False,False,True,True,VERDICT: FALSE,124.61,2956,15599,0.001805,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=0, 1*0=1, 1*1=0 satisfies Eq1 for all assignments, but Eq2 fails for x=1, y=0, z=1. Thus Eq1 does not imply Eq2."
+hard3_0131,True,,,False,,4755.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0132,False,True,False,True,VERDICT: TRUE,193.27,2956,663,0.000162,VERDICT: TRUE\nRULE: left projection
+hard3_0133,True,True,True,True,VERDICT: TRUE,319.15,2957,7022,0.000861,VERDICT: TRUE\nRULE: left projection
+hard3_0134,True,,,False,,4829.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0135,True,False,False,True,false,492.07,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = x * ((y * (z * x)) * z). Eq2: x = (x * y) * (y * (y * x)).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0136,True,True,True,True,VERDICT: TRUE,531.30,2944,903,0.000188,"VERDICT: TRUE  \nRULE: left projection  \n\nThe source equation forces left‑projection behaviour (a*b = a).  \nUnder this behaviour the target reduces to x = x, which holds."
+hard3_0137,True,True,True,True,VERDICT: TRUE,534.45,2956,369,0.000129,"VERDICT: TRUE\nRULE: left projection\n\nThe source equation forces left‑projection (a*b = a), and under that interpretation the target equation collapses to x = x, so it holds in all magmas."
+hard3_0138,True,True,True,True,VERDICT: TRUE,594.63,2944,520,0.000146,"VERDICT: TRUE\nRULE: left projection\n\nEquation 1 forces left‑zero behavior (a *b = a), so Eq2 holds trivially."
+hard3_0139,True,False,False,True,VERDICT: FALSE,3426.84,2954,5032,0.000642,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with operation a*b=f(b) where f is a 3‑cycle satisfies Eq1 but not Eq2.  \nFor S={0,1,2} and f(0)=1, f(1)=2, f(2)=0, Eq1 holds because y*f(f(x))=x for a"
+hard3_0140,True,False,False,True,VERDICT: FALSE,4856.93,2955,8591,0.001034,"VERDICT: FALSE\nRULE: default false\n\nThe given rules do not match any TRUE condition, and no syntactic FALSE condition applies. Thus, by the protocol, the implication is declared false."
+hard3_0141,False,True,False,True,VERDICT: TRUE,3546.52,2956,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = y * ((x * (y * y)) * x). Eq2: x * x = ((y * y) * y) * x.\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEq1: x = y * ((x * (y * y
+hard3_0142,True,False,False,True,VERDICT: FALSE,4913.92,2955,22691,0.002585,VERDICT: FALSE\nRULE: default false
+hard3_0143,False,True,False,True,VERDICT: TRUE,960.25,2944,1337,0.000235,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source‑collapse analysis shows the product side has 3 distinct variables, the top split is variable–product, x occurs only on the right, and x appears t"
+hard3_0144,True,,,False,,4997.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0145,True,False,False,True,VERDICT: FALSE,4941.49,2962,2602,0.000375,VERDICT: FALSE\nRULE: XOR parity witness
+hard3_0146,False,False,True,True,VERDICT: FALSE,1184.59,2960,3311,0.000453,VERDICT: FALSE\nRULE: spine isolation
+hard3_0147,True,True,True,True,VERDICT: TRUE,1216.61,2957,1545,0.000259,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0148,True,True,True,True,VERDICT: TRUE,4962.83,2945,1185,0.000219,"VERDICT: TRUE  \nRULE: contradiction motif  \n\nThe right‑hand side of Eq1 contains 5 distinct variables and the leftmost variable is not x, satisfying motif C15, which guarantees that Eq2 holds in ev"
+hard3_0149,False,False,True,True,VERDICT: FALSE,3777.87,2959,967,0.000195,"VERDICT: FALSE\nRULE: parity exclusion\n\nThe parity of the variables in the two sides of the source equation is identical, while the target equation has a different parity distribution."
+hard3_0150,False,False,True,True,VERDICT: FALSE,1451.50,2959,3180,0.000439,VERDICT: FALSE\nRULE: spine isolation
+hard3_0151,False,False,True,True,VERDICT: FALSE,3975.46,2961,8453,0.001019,VERDICT: FALSE\nRULE: default false
+hard3_0152,False,True,False,True,VERDICT: TRUE,1580.86,2955,489,0.000142,"VERDICT: TRUE\nRULE: left projection\n\nEq1 is of the form x = x * T with T not containing x, so it forces left‑projection (a*b = a).  \nUnder left‑projection every product in Eq2 collapses to its lef"
+hard3_0153,False,False,True,True,VERDICT: FALSE,4010.87,2957,10960,0.001294,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=1, 1*0=0, 1*1=1 satisfies  \nx = x * (((y * z) * x) * y) for all x,y,z, but fails  \nx * (y * x) = x * (z * z) when x"
+hard3_0154,True,False,False,True,VERDICT: FALSE,3991.14,2943,2734,0.000389,"VERDICT: FALSE\nRULE: default false\n\nA magma with two elements defined by  \n\(0*0=1,\;0*1=0,\;1*0=1,\;1*1=0\) satisfies  \n\(x = y * (((x * x) * z) * x)\) for all \(x,y,z\), but fails  \n\(x * y = "
+hard3_0155,True,True,True,True,VERDICT: TRUE,4074.46,2958,8135,0.000984,"VERDICT: TRUE\nRULE: right projection\n\nThe source equation forces the magma to be right‑projection with an involutive right‑side function, which automatically satisfies the target."
+hard3_0156,True,True,True,True,VERDICT: TRUE,4032.97,2945,1019,0.000200,VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 forces a projection-like collapse that makes Equation 2 automatically true.
+hard3_0157,True,True,True,True,VERDICT: TRUE,1898.65,2957,17861,0.002053,"VERDICT: TRUE\nRULE: structural TRUE heuristics\n\nThe identity forces the magma to be of the form a*b = f(b) with f an involution (f² = id). In such a magma, Eq2 reduces to x = f(f(x)) = x, so Eq2 ho"
+hard3_0158,True,True,True,True,VERDICT: TRUE,1908.50,2957,2554,0.000370,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0159,False,False,True,True,VERDICT: FALSE,4203.69,2957,20145,0.002305,VERDICT: FALSE\nRULE: default false
+hard3_0160,True,True,True,True,VERDICT: TRUE,2005.05,2963,2066,0.000316,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation is bare (x = product) with three distinct variables.  \nThe target has more total variable occurrences (6 vs. 5), satisfying the structural he"
+hard3_0161,False,False,True,True,VERDICT: FALSE,2179.68,2959,11509,0.001355,VERDICT: FALSE\nRULE: default false
+hard3_0162,True,,,False,,5276.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0163,False,False,True,True,VERDICT: FALSE,5213.89,2958,11042,0.001303,VERDICT: FALSE\nRULE: default false
+hard3_0164,False,,,False,,5300.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0165,False,True,False,True,VERDICT: TRUE,4227.31,2942,1113,0.000211,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe product in Eq1 has four distinct variables with x neither leftmost nor rightmost, matching motif C1."
+hard3_0166,False,False,True,True,VERDICT: FALSE,2479.90,2959,7368,0.000899,VERDICT: FALSE\nRULE: default false
+hard3_0167,False,True,False,True,VERDICT: TRUE,2429.28,2955,1259,0.000227,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0168,True,True,True,True,VERDICT: TRUE,5261.14,2954,6053,0.000754,"VERDICT: TRUE\nRULE: right-zero\n\nEq1 forces the magma to be right‑zero (a*b = b).  In a right‑zero magma x*x = x, so (x*x)*x = x as well, making Eq2 hold."
+hard3_0169,False,False,True,True,VERDICT: FALSE,4333.00,2958,12938,0.001512,VERDICT: FALSE\nRULE: default false
+hard3_0170,False,True,False,True,VERDICT: TRUE,5305.68,2956,5939,0.000742,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source is bare with four distinct variables and the product side has the pattern that triggers the contradiction motif, guaranteeing that the target hol"
+hard3_0171,False,True,False,True,VERDICT: TRUE,2680.82,2963,7240,0.000885,"VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 forces a contradiction in any magma, so Eq2 holds."
+hard3_0172,False,True,False,True,VERDICT: TRUE,4446.73,2958,10852,0.001282,"VERDICT: TRUE\nRULE: right projection\n\nThe identity forces the magma to be right‑zero, and the target holds in every right‑zero magma."
+hard3_0173,False,False,True,True,FALSE,5388.61,2958,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * y) * (z * (y * x)). Eq2: x = y * (y * (z * (y * x))).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEquation 1: x = (y*y) *
+hard3_0174,False,True,False,True,TRUE,2958.95,2956,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * y) * (z * (y * x)). Eq2: x = (y * ((x * z) * z)) * x.\n\nWe must follow steps.\n\nStep0: Quick meta-check. Let's parse.\n\nEq1: left
+hard3_0175,False,,,False,,5503.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0176,True,True,True,True,VERDICT: TRUE,4578.93,2945,2144,0.000324,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0177,False,True,False,True,true,5514.57,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * z) * (y * (y * x)). Eq2: x = (((x * y) * x) * y) * x.\n\nWe must follow steps.\n\nFirst, read equations as binary trees.\n\nEq1: lef"
+hard3_0178,False,False,True,True,VERDICT: FALSE,37.13,2960,3488,0.000472,"VERDICT: FALSE\nRULE: counterexample\n\nConsider the 2‑element magma with operation a*b = ¬b. Eq1 holds for all assignments, but Eq2 fails for x=0,y=0."
+hard3_0179,False,True,False,True,VERDICT: TRUE,4631.88,2958,19867,0.002274,VERDICT: TRUE\nRULE: right projection family
+hard3_0180,False,True,False,True,VERDICT: TRUE,85.21,2958,2134,0.000323,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe target has fewer variables and a larger imbalance than the source, satisfying the structural heuristic condition. Thus Eq 1 forces Eq 2 over all magmas"
+hard3_0181,False,True,False,True,VERDICT: TRUE,186.92,2963,3288,0.000451,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation is bare with four distinct variables, and the target uses only two variables, satisfying the structural heuristic T4."
+hard3_0182,False,True,False,True,VERDICT: TRUE,198.09,2958,1344,0.000237,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0183,True,,,False,,4808.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0184,False,False,True,True,false,3371.07,2956,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (x * y) * ((y * z) * y). Eq2: x = (((x * y) * y) * y) * x.\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEq1: x = (x*y) * ((y*z)
+hard3_0185,False,True,False,True,VERDICT: TRUE,3322.97,2961,20052,0.002295,VERDICT: TRUE\nRULE: structural TRUE heuristics
+hard3_0186,False,True,False,True,VERDICT: TRUE,527.01,2953,7521,0.000916,"VERDICT: TRUE\nRULE: left projection\n\nThe identity forces left‑projection behaviour, which in turn makes the target identity hold."
+hard3_0187,True,True,True,True,VERDICT: TRUE,3421.69,2963,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (x * y) * ((z * y) * y). Eq2: x = (x * y) * (z * (z * w)). We need to see if Eq1 forces Eq2.\n\nWe follow steps.\n\nStep 0: Quick meta-ch
+hard3_0188,True,,,False,,4926.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0189,False,,,False,,4935.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0190,False,False,True,True,VERDICT: FALSE,740.21,2956,11869,0.001394,VERDICT: FALSE\nRULE: default false
+hard3_0191,False,False,True,True,VERDICT: FALSE,3536.29,2957,11626,0.001368,VERDICT: FALSE\nRULE: default false
+hard3_0192,True,False,False,True,VERDICT: FALSE,3487.16,2958,2316,0.000343,VERDICT: FALSE\nRULE: parity exclusion
+hard3_0193,True,,,False,,4974.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0194,True,True,True,True,TRUE,5006.22,2959,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * x) * ((z * z) * x). Eq2: x = (y * (y * z)) * (x * x).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0195,False,False,True,True,VERDICT: FALSE,5035.17,2957,13127,0.001533,VERDICT: FALSE\nRULE: default false
+hard3_0196,True,True,True,True,VERDICT: TRUE,4941.71,2958,1544,0.000259,VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 forces a left‑projection behavior with x appearing twice on the right side.  \nUnder that projection every product collapses to its leftmost vari
+hard3_0197,True,True,True,True,VERDICT: TRUE,1284.39,2957,944,0.000193,"VERDICT: TRUE  \nRULE: contradiction motif  \n\nThe source equation has four distinct variables on the right side and the leftmost variable is not \(x\), triggering motif C15. This guarantees that the"
+hard3_0198,True,False,False,True,VERDICT: FALSE,3740.34,2958,6613,0.000816,VERDICT: FALSE\nRULE: left-zero witness
+hard3_0199,True,,,False,,5082.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0200,False,,,False,,5126.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0201,False,False,True,True,VERDICT: FALSE,1585.93,2958,14810,0.001718,"VERDICT: FALSE\nRULE: counterexample\nA magma with table 0*0=0, 0*1=0, 1*0=1, 1*1=0 satisfies Eq1 but not Eq2. Thus Eq1 does not imply Eq2."
+hard3_0202,True,,,False,,5155.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0203,True,False,False,True,VERDICT: FALSE,1631.56,2944,1547,0.000258,VERDICT: FALSE\nRULE: XOR parity witness
+hard3_0204,True,False,False,True,FALSE,4005.18,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * (x * x)) * (z * x). Eq2: x = y * (((x * z) * z) * x).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nFirst, step 0: read bot"
+hard3_0205,True,,,False,,5184.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0206,False,True,False,True,TRUE,5149.05,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * (y * x)) * (y * x). Eq2: x * y = x * (z * (w * y)). We need to see if Eq1 forces Eq2.\n\nWe follow steps.\n\nStep 0: Quick meta-chec
+hard3_0207,True,False,False,True,VERDICT: FALSE,1942.50,2955,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (y * (y * z)) * (x * z). Eq2: x * y = (z * (z * x)) * y.\n\nWe need to see if Eq1 logically entails Eq2. We can try to find a counterexam
+hard3_0208,True,,,False,,5247.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0209,True,False,False,True,VERDICT: FALSE,4107.56,2959,4649,0.000600,VERDICT: FALSE\nRULE: default false\n\nEq1 does not force Eq2 in all magmas. No rule applies to prove the implication. Hence the implication fails.
+hard3_0210,True,True,True,True,VERDICT: TRUE,2020.18,2959,1663,0.000272,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0211,False,True,False,True,VERDICT: TRUE,4137.16,2958,1910,0.000299,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0212,True,False,False,True,VERDICT: FALSE,2113.10,2953,8759,0.001052,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \nf(0,0)=1, f(0,1)=0, f(1,0)=1, f(1,1)=0  \nsatisfies Eq1 for all assignments but fails Eq2 (e.g. x=0, y=1). Thus Eq1 does not imp"
+hard3_0213,True,True,True,True,VERDICT: TRUE,4152.30,2955,1515,0.000255,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0214,True,,,False,,5297.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0215,False,True,False,True,TRUE,2407.94,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = ((x * x) * y) * (z * x). Eq2: x = x * ((y * (z * z)) * x).\n\nWe need to check the steps.\n\nFirst, parse equations.\n\nEq1: left side: x"
+hard3_0216,False,False,True,True,VERDICT: FALSE,2424.96,2958,11985,0.001407,VERDICT: FALSE\nRULE: default false
+hard3_0217,False,False,True,True,VERDICT: FALSE,2472.29,2942,1571,0.000261,VERDICT: FALSE\nRULE: default false
+hard3_0218,False,False,True,True,VERDICT: FALSE,2518.04,2960,1025,0.000202,"VERDICT: FALSE\nRULE: leftmost exclusion\n\nEq1 has the same leftmost variable (x) on both sides, but Eq2 does not, so the implication fails over all magmas."
+hard3_0219,False,False,True,True,VERDICT: FALSE,4372.50,2945,5926,0.000740,VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with operation a*b = g(a) where g is a 3‑cycle satisfies Eq1 for all assignments but fails Eq2.
+hard3_0220,False,True,False,True,VERDICT: TRUE,4419.77,2946,3205,0.000441,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 has 4 distinct variables while Eq2 uses only 2, so by heuristic T4 the implication holds."
+hard3_0221,True,,,False,,5424.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0222,False,False,True,True,VERDICT: FALSE,2752.44,2958,6440,0.000797,VERDICT: FALSE\nRULE: counterexample\n\nA magma with three elements and operation a*b = g(a) where g is a 3‑cycle satisfies Eq1 (since g³ = id) but fails Eq2 (which would require g = id). Thus Eq1 doe
+hard3_0223,False,,,False,,5452.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0224,False,True,False,True,VERDICT: TRUE,4491.88,2959,2497,0.000363,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0225,False,True,False,True,VERDICT: TRUE,4562.75,2963,10118,0.001202,VERDICT: TRUE\nRULE: left projection
+hard3_0226,False,True,False,True,TRUE,2993.48,2963,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = ((x * y) * z) * (w * z). Eq2: x = (x * x) * (x * (y * z)).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0227,False,False,True,True,false,5467.48,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas.\n\nEq1: x = ((x * y) * z) * (w * z)\nEq2: x = (((x * y) * z) * z) * z\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nFirst, step 0: read b"
+hard3_0228,False,True,False,True,VERDICT: TRUE,2.60,2959,1777,0.000284,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source has at least four distinct variables while the target uses only two, so the structural heuristic applies."
+hard3_0229,False,False,True,True,VERDICT: FALSE,3145.24,2957,29378,0.003320,"VERDICT: FALSE\nRULE: default false\n\nI could not find a proof that Eq 1 forces Eq 2, and no known rule applies to confirm the implication."
+hard3_0230,True,False,False,True,VERDICT: FALSE,91.87,2957,1701,0.000276,VERDICT: FALSE\nRULE: rightmost exclusion
+hard3_0231,True,,,False,,4749.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0232,True,True,True,True,VERDICT: TRUE,227.65,2955,16952,0.001953,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe only non‑trivial magmas satisfying the source identity are the two‑element examples, and in both cases the target identity holds automatically. No coun"
+hard3_0233,True,True,True,True,VERDICT: TRUE,331.80,2960,9677,0.001153,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0234,False,,,False,,4831.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0235,False,True,False,True,TRUE,4854.79,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = ((y * y) * x) * (x * z). Eq2: x = x * ((y * (z * w)) * u).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. Righ"
+hard3_0236,False,False,True,True,FALSE,3456.45,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = ((y * y) * x) * (x * z). Eq2: x = (y * x) * ((y * x) * x).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nWe can attempt to see i
+hard3_0237,False,,,False,,4899.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0238,True,,,False,,4921.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0239,True,True,True,True,VERDICT: TRUE,637.17,2957,7680,0.000934,VERDICT: TRUE\nRULE: structural TRUE heuristics\n\nThe target equation is satisfied in all magmas that satisfy the source equation.
+hard3_0240,True,True,True,True,VERDICT: TRUE,3466.97,2959,5686,0.000714,"VERDICT: TRUE\nRULE: right projection\n\nThe equation x = ((y * y) * z) * (w * x) is of the form x = T * x with T = ((y * y) * z) * w, which does not contain x. This forces the magma to satisfy right‑"
+hard3_0241,False,True,False,True,VERDICT: TRUE,842.56,2959,16691,0.001925,"VERDICT: TRUE\nRULE: singleton collapse\n\nEq1 cannot be satisfied in any magma with more than one element, so it forces a singleton magma.  \nIn a singleton magma every equation holds, including Eq2."
+hard3_0242,False,True,False,True,VERDICT: TRUE,3502.70,2959,1764,0.000283,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0243,True,False,False,True,VERDICT: FALSE,4908.60,2959,12918,0.001510,"VERDICT: FALSE\nRULE: counterexample witness\n\nI found a magma with elements {0,1,2} and operation table\n\n```\n   * | 0 1 2\n   -----------\n   0 | 0 1 2\n   1 | 0 1 2\n   2 | 0 1 2\n```\n\n(i.e. `"
+hard3_0244,True,False,False,True,VERDICT: FALSE,1014.01,2957,11620,0.001367,VERDICT: FALSE\nRULE: default false
+hard3_0245,True,True,True,True,VERDICT: TRUE,4943.74,2959,1215,0.000222,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0246,True,True,True,True,VERDICT: TRUE,1193.61,2956,828,0.000180,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation is bare and matches motif C8, forcing left‑projection behavior, which makes the target equation hold in every magma."
+hard3_0247,True,True,True,True,VERDICT: TRUE,1219.62,2957,2593,0.000374,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation satisfies motif C8 (rhsVars=3, Lx=TRUE, xTop=left, topShape=m‑v), which guarantees that the target follows in all magmas."
+hard3_0248,False,,,False,,5063.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0249,True,True,True,True,VERDICT: TRUE,1303.61,2956,1792,0.000286,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe target equation uses only two variables, while the source equation involves four distinct variables, satisfying the structural heuristic condition."
+hard3_0250,True,True,True,True,true,1406.65,2956,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (x * (y * (y * x))) * z. Eq2: x * y = x * (z * (w * x)). We need to see if Eq1 forces Eq2.\n\nWe go through steps.\n\nStep 0: Quick meta-
+hard3_0251,True,True,True,True,VERDICT: TRUE,1523.92,2958,1040,0.000203,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source‐collapse motif C8 applies: Eq1 forces left‑projection, so Eq2 holds."
+hard3_0252,True,False,False,True,VERDICT: FALSE,1620.18,2960,8104,0.000980,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with elements {x,a,b} and operation defined by a*any=x, b*any=x, x*a=a, x*b=b, x*x=a, a*a=a, a*b=a, b*a=a, b*b=a satisfies Eq1 for all x,y,z but fails E"
+hard3_0253,False,True,False,True,VERDICT: TRUE,1593.46,2957,948,0.000193,"VERDICT: TRUE  \nRULE: contradiction motif  \n\nThe source is bare with the product side having three distinct variables, leftmost variable x, x only on the left of the top product, and a m‑v shape. T"
+hard3_0254,False,False,True,True,VERDICT: FALSE,4026.57,2957,26157,0.002966,VERDICT: FALSE\nRULE: counterexample witness\n\nWe constructed a 3‑element magma with operation table\n\n```\n   * | 0 1 2\n   ---------\n   0 | 0 1 2\n   1 | 0 1 0\n   2 | 0 1 2\n```\n\nThis magma sa
+hard3_0255,True,True,True,True,VERDICT: TRUE,1735.12,2957,1497,0.000253,VERDICT: TRUE\nRULE: contradiction motif\nThe source‑collapse motif C13 applies to the bare source.
+hard3_0256,True,True,True,True,VERDICT: TRUE,1788.57,2957,474,0.000141,"VERDICT: TRUE\nRULE: right projection\n\nEq1 is of the form x = T * x with T not containing x, forcing right‑projection behaviour (a*b = b). Under this behaviour Eq2 reduces to x = x, so it holds. Thu"
+hard3_0257,True,True,True,True,VERDICT: TRUE,1846.06,2944,561,0.000150,"VERDICT: TRUE\nRULE: right projection\n\nThe equation forces right‑projection behavior, and the target holds under that projection."
+hard3_0258,True,True,True,True,VERDICT: TRUE,1959.14,2944,1338,0.000236,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0259,True,True,True,True,VERDICT: TRUE,4087.16,2957,1720,0.000278,"VERDICT: TRUE\nRULE: contradiction motif\nThe source is bare with leftmost variable x, matching motif C8, which forces left‑projection behavior, making Eq2 hold."
+hard3_0260,True,True,True,True,VERDICT: TRUE,2018.08,2959,1112,0.000211,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0261,True,False,False,True,VERDICT: FALSE,2062.71,2958,4647,0.000600,"VERDICT: FALSE\nRULE: default false\n\nThe equations are not equivalent over all magmas. No TRUE rule applies, and none of the syntactic FALSE conditions are satisfied, so the implication fails in gen"
+hard3_0262,True,True,True,True,VERDICT: TRUE,4149.17,2956,1818,0.000289,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0263,False,False,True,True,VERDICT: FALSE,2217.97,2955,24156,0.002746,"VERDICT: FALSE\nRULE: counterexample witness\n\nCounterexample: a 3‑element magma with table  \n0*0=1, 0*1=0, 0*2=0, 1*0=0, 1*1=1, 1*2=2, 2*0=1, 2*1=2, 2*2=2.  \nIt satisfies Eq1 but fails Eq2."
+hard3_0264,False,False,True,True,VERDICT: FALSE,2268.87,2960,5159,0.000656,"VERDICT: FALSE\nRULE: default false\n\nNo exact TRUE route applies, and no syntactic FALSE rule is triggered. The implication does not hold in general."
+hard3_0265,True,,,False,,5303.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0266,True,True,True,True,VERDICT: TRUE,4213.64,2956,841,0.000181,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation falls into motif C4, forcing the implication."
+hard3_0267,True,,,False,,5324.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0268,True,True,True,True,VERDICT: TRUE,4267.25,2957,978,0.000196,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0269,True,True,True,True,VERDICT: TRUE,2526.38,2945,612,0.000156,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection behavior. Under right projection, Eq2 reduces to x = x, so the implication holds."
+hard3_0270,False,,,False,,5417.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0271,True,False,False,True,VERDICT: FALSE,5341.64,2958,12709,0.001487,VERDICT: FALSE\nRULE: default false
+hard3_0272,True,True,True,True,VERDICT: TRUE,4514.64,2944,7294,0.000891,"VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 is a bare source with four distinct variables on the product side, matching motif C1. Thus it forces any equation, including Equation 2."
+hard3_0273,True,True,True,True,VERDICT: TRUE,4426.59,2959,602,0.000155,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b). Under this collapse, Eq2 also reduces to the same variable on both sides."
+hard3_0274,False,False,True,True,VERDICT: FALSE,2865.66,2957,5678,0.000713,"VERDICT: FALSE\nRULE: counterexample\nA 3‑element left‑constant magma with mapping a→b, b→c, c→a satisfies Eq1 but not Eq2."
+hard3_0275,False,False,True,True,VERDICT: FALSE,5416.23,2956,7334,0.000895,VERDICT: FALSE\nRULE: default false
+hard3_0276,False,True,False,True,VERDICT: TRUE,3019.99,2943,1125,0.000212,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0277,False,False,True,True,VERDICT: FALSE,3109.47,2958,9116,0.001092,VERDICT: FALSE\nRULE: default false
+hard3_0278,True,True,True,True,VERDICT: TRUE,48.49,2940,1916,0.000299,"VERDICT: TRUE\nRULE: contradiction motif\n\nEquation 1 forces left‑projection behavior, which makes Eq2 hold in every magma."
+hard3_0279,True,,,False,,4708.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0280,False,True,False,True,VERDICT: TRUE,4622.54,2956,1591,0.000264,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0281,False,True,False,True,VERDICT: TRUE,4641.13,2957,1794,0.000286,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare with 4 distinct variables, while Eq2 uses only 2.  \nThis satisfies the structural heuristic T4, so Eq1 implies Eq2 over all magmas."
+hard3_0282,False,True,False,True,VERDICT: TRUE,217.69,2960,1867,0.000294,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare with 4 variables, while Eq2 uses only 2. By rule T4, this guarantees that Eq1 implies Eq2 over all magmas."
+hard3_0283,True,,,False,,4800.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0284,True,True,True,True,VERDICT: TRUE,382.87,2956,1916,0.000299,VERDICT: TRUE\nRULE: structural heuristic
+hard3_0285,True,True,True,True,VERDICT: TRUE,3353.98,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas.\n\nEq1: x = ((x * y) * (y * z)) * w\n\nEq2: x * y = x * ((x * z) * z)\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nFirst, step 0: read t"
+hard3_0286,False,True,False,True,VERDICT: TRUE,514.46,2954,1512,0.000255,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0287,False,True,False,True,VERDICT: TRUE,544.66,2957,2032,0.000312,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe size of Eq2 exceeds that of Eq1 while Eq1 is bare with three variables, so the structural heuristic applies."
+hard3_0288,True,False,False,True,VERDICT: FALSE,582.07,2955,11000,0.001299,VERDICT: FALSE\nRULE: default false
+hard3_0289,False,False,True,True,VERDICT: FALSE,692.15,2959,3381,0.000461,VERDICT: FALSE\nRULE: spine isolation
+hard3_0290,True,False,False,True,VERDICT: FALSE,3455.37,2956,1045,0.000204,VERDICT: FALSE\nRULE: XOR parity witness
+hard3_0291,True,True,True,True,VERDICT: TRUE,860.48,2957,1266,0.000228,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source is bare with x appearing twice and the product side has 4 distinct variables, matching motif C13, which guarantees the implication. The collapse "
+hard3_0292,True,True,True,True,VERDICT: TRUE,845.06,2955,611,0.000156,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b), and Eq2 reduces to x = x under that projection."
+hard3_0293,False,False,True,True,VERDICT: FALSE,3568.41,2957,19517,0.002236,VERDICT: FALSE\nRULE: default false
+hard3_0294,True,False,False,True,VERDICT: FALSE,3619.91,2957,8257,0.000997,VERDICT: FALSE\nRULE: left-zero witness
+hard3_0295,True,False,False,True,VERDICT: FALSE,1123.54,2958,11045,0.001304,"VERDICT: FALSE\nRULE: left-zero witness\n\nThe left-zero magma (a*b = a) satisfies the source equation but not the target, providing a decisive counterexample."
+hard3_0296,True,True,True,True,VERDICT: TRUE,1127.43,2955,1113,0.000211,"VERDICT: TRUE  \nRULE: right projection  \n\nThe equation forces the magma to be right‑zero (a*b = b). In a right‑zero magma the target equation reduces to x = x, so it holds in all such magmas."
+hard3_0297,True,True,True,True,VERDICT: TRUE,1221.16,2958,1408,0.000244,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source is bare with the product side containing four distinct variables and the rightmost variable being x. This matches motif C13, which guarantees tha"
+hard3_0298,True,True,True,True,VERDICT: TRUE,1224.01,2957,2051,0.000314,"VERDICT: TRUE\nRULE: contradiction motif\nThe bare source yields the vector rhsVars=4, rhsTotals=1112, Lx=FALSE, Rx=TRUE, matching motif C13."
+hard3_0299,True,True,True,True,VERDICT: TRUE,1307.52,2957,609,0.000156,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b). Under this collapse Eq2 reduces to x = x, which holds."
+hard3_0300,False,False,True,True,VERDICT: FALSE,1440.73,2957,3802,0.000507,"VERDICT: FALSE\nRULE: counterexample\n\nA magma with three elements {0,1,2} and operation defined by f(a,b)=g(a) where g is the 3‑cycle (0→1→2→0) satisfies Eq1 for all assignments, but Eq2 fails becau"
+hard3_0301,False,False,True,True,VERDICT: FALSE,1518.99,2954,7881,0.000956,"VERDICT: FALSE\nRULE: counterexample\n\nDefine a magma on a set S with operation a*b = h(a) where h is a permutation of order 3. Then Eq 1 reduces to h³(x)=x, which holds for all x. Eq 2 reduces to x "
+hard3_0302,False,False,True,True,VERDICT: FALSE,3912.81,2957,2936,0.000412,"VERDICT: FALSE\nRULE: XOR parity witness\n\nA counterexample is given by the magma where the operation is defined by a*b = a+b mod 2. For x=1, y=1, z=0, Eq1 holds but Eq2 fails."
+hard3_0303,False,False,True,True,VERDICT: FALSE,1665.48,2961,4958,0.000634,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=1, 0*1=1, 1*0=0, 1*1=0 satisfies  \nx = ((x*(x*y))*y)*y for all x,y, but fails  \nx = x*(x*((x*y)*x)) (e.g. x=0,y=0)."
+hard3_0304,False,False,True,True,FALSE,1731.15,2958,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = ((x * (x * y)) * z) * y. Eq2: x = (x * y) * ((x * y) * x).\n\nWe must follow steps.\n\nFirst, parse equations.\n\nEq1: left side: x. righ"
+hard3_0305,False,True,False,True,VERDICT: TRUE,3985.49,2959,2117,0.000322,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0306,False,,,False,,5203.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0307,True,True,True,True,VERDICT: TRUE,4073.33,2957,11158,0.001316,"VERDICT: TRUE\nRULE: structural TRUE heuristics\n\nThe identity forces the operation to be of the form a*b = f(a) where f^3 = id, which makes both equations hold."
+hard3_0308,True,True,True,True,VERDICT: TRUE,1988.58,2945,1912,0.000299,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source is bare with x on the left, and the product has x as the leftmost variable, matching motif C8, which forces the implication to hold in all magmas"
+hard3_0309,False,True,False,True,VERDICT: TRUE,4113.19,2956,1682,0.000274,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0310,False,False,True,True,VERDICT: FALSE,2127.65,2938,3925,0.000520,"VERDICT: FALSE\nRULE: counterexample\n\nA right‑constant operation defined by a unary map g with g³ = id but g² ≠ id satisfies Eq1 for all x,y,z,w, yet Eq2 fails."
+hard3_0311,False,True,False,True,VERDICT: TRUE,4154.77,2958,1792,0.000286,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe bare source forces left‑projection, collapsing every product to its leftmost variable, which satisfies the target."
+hard3_0312,False,True,False,True,VERDICT: TRUE,2179.46,2941,1833,0.000290,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 is bare and uses four distinct variables, while Eq2 uses only two. By rule T4 this guarantees that Eq1 implies Eq2 over all magmas."
+hard3_0313,True,True,True,True,VERDICT: TRUE,4259.73,2962,13600,0.001585,VERDICT: TRUE\nRULE: exact renaming
+hard3_0314,True,True,True,True,VERDICT: TRUE,4203.88,2963,6277,0.000779,"VERDICT: TRUE\nRULE: exact instance\n\nThe equation x = ((y * (x * z)) * y) * x forces the right‑zero law a*b = b, which in turn makes every equation of the form x = (y * z) * (w * (u * x)) true in al"
+hard3_0315,True,False,False,True,VERDICT: FALSE,2431.36,2957,19718,0.002258,VERDICT: FALSE\nRULE: default false
+hard3_0316,True,False,False,True,VERDICT: FALSE,2432.50,2956,13836,0.001611,VERDICT: FALSE\nRULE: default false
+hard3_0317,True,,,False,,5334.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0318,True,True,True,True,VERDICT: TRUE,4271.73,2955,1343,0.000236,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0319,True,,,False,,5397.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0320,False,,,False,,5418.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0321,True,True,True,True,VERDICT: TRUE,2702.07,2944,1381,0.000240,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe bare source collapse analysis of Eq 1 yields the feature vector  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m‑v, rhsTotals=1112, xCount=2, whi"
+hard3_0322,False,True,False,True,VERDICT: TRUE,2733.72,2943,393,0.000132,VERDICT: TRUE\nRULE: right projection
+hard3_0323,True,True,True,True,VERDICT: TRUE,2809.16,2959,1261,0.000227,VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b).  \nUnder right‑projection Eq2 evaluates to x = x.
+hard3_0324,True,True,True,True,VERDICT: TRUE,2869.83,2957,537,0.000148,"VERDICT: TRUE\nRULE: right projection\n\nThe equation forces right‑projection (a*b = b). Under this interpretation Eq2 reduces to x = x, which holds."
+hard3_0325,True,True,True,True,VERDICT: TRUE,2937.93,2957,1353,0.000238,"VERDICT: TRUE\nRULE: contradiction motif\nThe RHS has four distinct variables and x is not leftmost, matching motif C15."
+hard3_0326,True,True,True,True,VERDICT: TRUE,3029.23,2957,10656,0.001261,"VERDICT: TRUE\nRULE: right projection\n\nEq1 is a bare equation of the form x = T * x with T not containing x, so it forces the right‑projection law a*b = b. Under this law Eq2 reduces to x = x, which"
+hard3_0327,False,True,False,True,VERDICT: TRUE,3035.68,2958,1342,0.000236,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0328,False,False,True,True,VERDICT: FALSE,38.90,2955,9505,0.001134,VERDICT: FALSE\nRULE: default false
+hard3_0329,True,True,True,True,TRUE,4661.99,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x = (((x * y) * x) * z) * w. Eq2: x * (x * y) = x * (z * z).\n\nWe need to see if Eq1 forces Eq2. Let's analyze.\n\nEq1: x = (((x*y)*x)*z)*w.
+hard3_0330,False,True,False,True,VERDICT: TRUE,115.07,2962,1881,0.000296,VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation forces a left‑projection behavior that makes the target hold.
+hard3_0331,True,False,False,True,VERDICT: FALSE,4658.19,2957,3125,0.000432,VERDICT: FALSE\nRULE: spine isolation
+hard3_0332,False,True,False,True,VERDICT: TRUE,261.29,2944,2057,0.000315,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation falls into the C8 motif, forcing a left‑projection behaviour that makes the target equation automatically true."
+hard3_0333,True,,,False,,4814.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0334,True,,,False,,4840.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0335,True,,,False,,4876.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0336,True,True,True,True,VERDICT: TRUE,527.18,2954,1372,0.000240,"VERDICT: TRUE\nRULE: right projection\n\nEq1 forces right‑projection (a*b = b). Under this projection Eq2 reduces to x = x, so it holds in all magmas."
+hard3_0337,True,True,True,True,VERDICT: TRUE,540.01,2957,1141,0.000214,VERDICT: TRUE\nRULE: contradiction motif\n\nThe source equation is bare with the product side containing four distinct variables and the rightmost variable being the same as the left side. This matche
+hard3_0338,True,True,True,True,VERDICT: TRUE,3408.81,2957,822,0.000179,"VERDICT: TRUE\nRULE: right projection\n\nEq1 is of the form x = T * x with T not containing x, forcing right‑projection (a*b = b). Under right‑projection Eq2 reduces to y = y, so it holds. Thus Eq1 im"
+hard3_0339,False,,,False,,744.47,2955,32768,0.003693,
+hard3_0340,True,True,True,True,VERDICT: TRUE,747.79,2958,587,0.000153,"VERDICT: TRUE\nRULE: right projection\n\nEq1 is of the form x = T * x with T not containing x, forcing right‑projection (a*b = b).  \nUnder right‑projection, Eq2 reduces to x = x, so it holds.  \nHenc"
+hard3_0341,True,True,True,True,VERDICT: TRUE,815.02,2959,1058,0.000205,VERDICT: TRUE\nRULE: contradiction motif
+hard3_0342,False,False,True,True,false,3608.11,2954,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * (x * (x * z)). Eq2: x * y = (x * z) * (y * y).\n\nWe must follow steps. Let's parse.\n\nEquation1: left side: x * x. 
+hard3_0343,False,False,True,True,VERDICT: FALSE,3570.37,2960,2978,0.000416,VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n\n```\n   * | 0 1\n   --------\n   0 | 0 1\n   1 | 0 0\n```\n\nsatisfies `x*x = y*(x*(x*z))` for all assignments but violates  \
+hard3_0344,False,False,True,True,VERDICT: FALSE,4924.67,2956,2391,0.000352,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n0*0=0, 0*1=1, 1*0=0, 1*1=0 satisfies the first equation for all assignments, but for x=0, y=1 the second equation fails (LHS=1, "
+hard3_0345,False,True,False,True,true,1136.79,2960,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * (x * (z * w)). Eq2: x * (y * x) = x * (y * y).\n\nWe must follow steps.\n\nStep0: Quick meta-check: read both equatio
+hard3_0346,False,False,True,True,false,3760.58,2954,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * (x * (z * w)). Eq2: x * (y * z) = y * (z * w).\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0347,False,True,False,True,VERDICT: TRUE,4996.22,2956,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * (x * (z * w)). Eq2: x * (y * x) = (x * z) * z.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0348,False,False,True,True,VERDICT: FALSE,1337.54,2961,5243,0.000666,"VERDICT: FALSE\nRULE: counterexample witness\n\nA 3‑element magma with table  \n\n```\n   * 0 1 2\n   0 2 0 2\n   1 1 2 2\n   2 2 2 2\n```\n\nsatisfies `x*x = y*(y*(x*z))` for all `x,y,z` (since every"
+hard3_0349,False,True,False,True,VERDICT: TRUE,4984.27,2956,1134,0.000213,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces a constant operation, so Eq2 holds in all such magmas."
+hard3_0350,False,False,True,True,false,1532.76,2954,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * (z * (x * w)). Eq2: x * (y * y) = (y * x) * y.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0351,False,,,False,,5155.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0352,True,True,True,True,VERDICT: TRUE,1594.32,2955,4519,0.000586,"VERDICT: TRUE\nRULE: logical implication\n\nEq1 forces the left‑projection property a*b = g(a), which makes Eq2 automatically true."
+hard3_0353,True,True,True,True,VERDICT: TRUE,1667.80,2956,26675,0.003023,VERDICT: TRUE\nRULE: structural TRUE heuristics
+hard3_0354,True,,,False,,5175.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0355,True,True,True,True,VERDICT: TRUE,1782.91,2955,10324,0.001224,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces the magma to be constant, which makes the target equation automatically true."
+hard3_0356,False,True,False,True,VERDICT: TRUE,4036.39,2955,6470,0.000800,"VERDICT: TRUE\nRULE: 2.12 structural TRUE heuristics\n\nThe equation x*y = z*(x*(x*y)) forces the operation to be of the form a*b = h(b) where h is an involution. For any such operation, ((y*y)*z)*y ="
+hard3_0357,False,,,False,,5225.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0358,False,False,True,True,false,1943.95,2960,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = y * ((x * y) * z). Eq2: x * (y * y) = (x * x) * y.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0359,False,True,False,True,VERDICT: TRUE,4136.64,2954,9234,0.001104,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces the magma to be constant, and in any constant magma the target identity holds."
+hard3_0360,False,False,True,True,VERDICT: FALSE,4138.51,2950,4380,0.000570,"VERDICT: FALSE\nRULE: counterexample\n\nWe constructed a 3‑element magma with table  \na*b = 0 for all a, b; b*2 = 1; c*1 = 2; all other products 0.  \nIn this magma Eq1 holds for every assignment, bu"
+hard3_0361,True,True,True,True,VERDICT: TRUE,2143.18,2957,4552,0.000589,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 has disjoint variable sets on each side, forcing all products to be a constant, so Eq2 holds in that case."
+hard3_0362,False,False,True,True,VERDICT: FALSE,2154.28,2955,2897,0.000407,"VERDICT: FALSE\nRULE: counterexample\n\nA counterexample magma with elements {0,a,b} (0 absorbing, a*a=b*b=0, a*b=b*a=a) satisfies Eq1 but violates Eq2. Thus the implication does not hold."
+hard3_0363,False,True,False,True,VERDICT: TRUE,2192.48,2959,893,0.000187,"VERDICT: TRUE\nRULE: constant operation\n\nEq1 forces a constant magma, so Eq2 holds automatically."
+hard3_0364,True,False,False,True,VERDICT: FALSE,4175.74,2954,2642,0.000379,VERDICT: FALSE\nRULE: default false
+hard3_0365,True,True,True,True,VERDICT: TRUE,2438.77,2939,5011,0.000639,"VERDICT: TRUE\nRULE: left projection\n\nThe source equation forces left‑projection behavior (a*b = a for all a,b), which immediately implies the target equation."
+hard3_0366,True,False,False,True,VERDICT: FALSE,4225.30,2953,3652,0.000490,VERDICT: FALSE\nRULE: default false
+hard3_0367,True,False,False,True,VERDICT: FALSE,2466.31,2955,7493,0.000913,VERDICT: FALSE\nRULE: default false
+hard3_0368,False,True,False,True,VERDICT: TRUE,4357.64,2956,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = (x * y) * (y * z). Eq2: x * y = x * (z * (z * x)). We need to see if Eq1 logically entails Eq2 in all magmas. Likely fals
+hard3_0369,False,,,False,,5381.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0370,False,True,False,True,VERDICT: TRUE,2667.25,2956,9805,0.001167,VERDICT: TRUE\nRULE: constant operation
+hard3_0371,False,False,True,True,VERDICT: FALSE,2707.24,2957,6720,0.000828,"VERDICT: FALSE\nRULE: default false\n\nA 3‑element magma with table  \na*a=a, a*b=a, a*c=b, b*a=a, b*b=a, b*c=b, c*a=b, c*b=b, c*c=a  \nsatisfies x*x=(y*z)*(z*w) for all assignments but violates x*(y*"
+hard3_0372,False,False,True,True,VERDICT: FALSE,5329.76,2957,5804,0.000727,"VERDICT: FALSE\nRULE: counterexample\n\nWe built a 3‑element magma {a,b,c} with table  \na*a=a, a*b=a, b*a=b, b*b=b, a*c=a, c*a=a, b*c=b, c*b=b, c*c=a.  \nHere Im(*)={a,b} and for all a,b∈Im(*) we hav"
+hard3_0373,False,False,True,True,false,5383.47,2956,32768,0.003693,"We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x * y = (x * y) * (z * w). Eq2: x * x = x * (y * (z * y)). We need to see if Eq1 forces Eq2. Likely false. Let's analyze.\n\nEq1: For all x,y"
+hard3_0374,True,,,False,,5461.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0375,True,False,False,True,VERDICT: FALSE,4550.38,2954,3919,0.000520,"VERDICT: FALSE\nRULE: counterexample\n\nA 2‑element magma with table  \n\(f(0,0)=1,\; f(0,1)=1,\; f(1,0)=0,\; f(1,1)=1\) satisfies  \n\(x*y=(y*z)*(y*y)\) for all \(x,y,z\) but fails  \n\(x*y=((x*y)*z)"
+hard3_0376,True,,,False,,5518.83,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0377,False,False,True,True,VERDICT: FALSE,4628.91,2953,14001,0.001629,VERDICT: FALSE\nRULE: default false
+hard3_0378,True,True,True,True,VERDICT: TRUE,3051.40,2957,4080,0.000538,"VERDICT: TRUE\nRULE: structural heuristic\n\nEq1 forces a*b to depend only on the right operand and be idempotent, so any magma satisfying Eq1 has a*b = f(b) with f(f(b)) = f(b). Substituting this int"
+hard3_0379,True,False,False,True,VERDICT: FALSE,64.56,2957,4074,0.000537,VERDICT: FALSE\nRULE: default false
+hard3_0380,True,False,False,True,false,4694.17,2956,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = (y * (y * x)) * z. Eq2: x * (x * x) = x * (y * y).\n\nWe must follow steps.\n\nStep0: Quick meta-check. Let's parse.\n\nE
+hard3_0381,True,,,False,,4778.84,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard3_0382,True,False,False,True,VERDICT: FALSE,249.65,2956,8760,0.001052,VERDICT: FALSE\nRULE: default false
+hard3_0383,False,False,True,True,FALSE,329.57,2955,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x * y = (y * (z * x)) * y. Eq2: x * y = ((y * y) * y) * y.\n\nWe need to see if Eq1 logically entails Eq2. We can try to find a counterexampl
+hard3_0384,True,True,True,True,VERDICT: TRUE,487.55,2954,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * x = ((y * x) * z) * z. Eq2: x * x = (y * z) * (y * z).\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0385,True,True,True,True,VERDICT: TRUE,3351.82,2956,1484,0.000252,"VERDICT: TRUE\nRULE: constant operation\nEquation 1 forces a constant operation, so every product equals the same element and Eq 2 holds."
+hard3_0386,True,,,False,,555.27,2956,32768,0.003693,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x * x = ((y * z) * z) * z\n\nEquation 2: x * x = (x * x) * x\n\nWe need to see if Eq1 => Eq2 holds universally.\n\nWe
+hard3_0387,True,False,False,True,VERDICT: FALSE,653.30,2953,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x * y = ((x * z) * x) * w. Eq2: x * y = ((x * y) * z) * z.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely false. We nee
+hard3_0388,True,False,False,True,FALSE,647.15,2736,3799,0.000500,We need to decide if equation 1 implies equation 2 over all magmas.\n\nEquation 1: x * y = ((z * x) * w) * y\n\nEquation 2: x * y = (z * x) * y\n\nWe need to see if Eq1 => Eq2 holds in all magmas.\n\n
+hard3_0389,True,False,False,True,VERDICT: FALSE,739.99,2956,7867,0.000954,VERDICT: FALSE\nRULE: default false
+hard3_0390,True,False,False,True,VERDICT: FALSE,748.45,2959,3357,0.000458,VERDICT: FALSE\nRULE: default false
+hard3_0391,False,False,True,True,VERDICT: FALSE,823.19,2957,3467,0.000470,"VERDICT: FALSE\nRULE: counterexample\n\nA 3‑element magma with table  \n\n```\n   * | 0 1 2\n   ------------\n   0 | 0 0 0\n   1 | 1 0 1\n   2 | 2 2 0\n```\n\nsatisfies `x*(x*x) = (y*z)*y` for all `x,"
+hard3_0392,False,False,True,True,VERDICT: FALSE,3534.43,2957,5337,0.000676,"VERDICT: FALSE\nRULE: counterexample\n\nI constructed a 2‑element magma with operation  \n\(a*b = 1\) if \(a=0\) and \(a*b = 0\) if \(a=1\).  \nFor all \(x,y,z,w\) the equation \(x*(x*y)=(x*z)*w\) hol"
+hard3_0393,True,False,False,True,false,3577.01,2957,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * (x * y) = (y * z) * w. Eq2: (x * x) * y = (z * z) * w.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely f
+hard3_0394,False,True,False,True,VERDICT: TRUE,1086.59,2956,6850,0.000842,"VERDICT: TRUE\nRULE: constant magma\n\nEq1 forces the magma to be constant (all products equal the same element). In any constant magma, Eq2 holds trivially, so Eq1 implies Eq2 over all magmas."
+hard3_0395,True,False,False,True,VERDICT: FALSE,1138.69,2944,1259,0.000227,VERDICT: FALSE\nRULE: right-zero witness\n\nRight-zero magma (x*y = y) satisfies Eq1 for all assignments but fails Eq2.
+hard3_0396,True,False,False,True,FALSE,3781.35,2955,32768,0.003693,We need to decide if equation1 implies equation2 over all magmas. Eq1: x * (y * z) = (w * x) * y. Eq2: x * (y * z) = (x * w) * y.\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. We can t
+hard3_0397,True,False,False,True,false,5055.90,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas. Eq1: x * (y * z) = (w * w) * y. Eq2: x * (x * y) = z * (y * w).\n\nWe must follow steps. Let's parse.\n\nEq1: left side: x * (y * z). Right side: 
+hard3_0398,True,False,False,True,false,1347.61,2957,32768,0.003693,We need to decide if Eq1 implies Eq2 over all magmas.\n\nEq1: x * (y * z) = (w * w) * y\n\nEq2: x * (y * y) = y * (x * x)\n\nWe need to see if Eq1 logically entails Eq2 in all magmas. Likely false. Le
+hard3_0399,True,True,True,True,VERDICT: TRUE,3857.31,2955,25011,0.002840,"VERDICT: TRUE\nRULE: exact identity\n\nThe identity x*(y*z) = (w*u)*x forces the magma to be constant, and in any constant magma the equation (x*x)*y = (z*w)*y holds."
+hard3_0400,True,True,True,True,VERDICT: TRUE,5055.50,2961,5228,0.000664,"VERDICT: TRUE\nRULE: derived\n\nBy substituting z:=x, w:=x, u:=y in Eq1 we get (x*y)*x = x*(y*x).  \nSubstituting z:=x, w:=x, u:=z gives (x*z)*x = x*(y*x).  \nHence (x*y)*x = (x*z)*x, so Eq2 follows f"

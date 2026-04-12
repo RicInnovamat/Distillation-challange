@@ -1,0 +1,276 @@
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Rate limited, waiting 5s...
+  Rate limited, waiting 5s...
+  Rate limited, waiting 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Rate limited, waiting 5s...
+  Rate limited, waiting 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Upstream error code=504 (The operation was aborted), retrying in 5s...
+  Request error: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>, retrying in 5s...
+  Request error: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>, retrying in 5s...
+  Request error: , retrying in 15s...
+  Request error: , retrying in 15s...
+  Request error: , retrying in 15s...
+Loaded 200 problems from 'hard2'
+Prompt template: cheatsheets/v4.1_10KB_cheatsheet.md (10231 bytes)
+Sample rendered prompt (10173 chars):
+---
+You are solving equational implication problems over magmas: a set with one binary operation \* and no other axioms.
+Task: decide whether Equation 1 implies Equation 2 over ALL magmas.
+
+Question:
+Does x * (y * z) = (y * w) * w imply x * (y * y) = (z * w) * u over all magmas?
+
+OUTPUT FORMAT (mandator...
+---
+Model: Google: Gemma 4 31B | backend: openrouter | model_id: google/gemma-4-31b-it
+[official-mode] overrides for gemma-4-31b: {"provider":{"order":["Novita","Parasail","Venice"],"quantizations":["bf16"],"allow_fallbacks":true},"seed":0,"max_tokens":8192}
+  [1/200] hard2_0095: OK (expected=False, got=False, $0.0007, 36.9s)
+  [2/200] hard2_0170: WRONG (expected=True, got=False, $0.0006, 59.7s)
+  [3/200] hard2_0195: OK (expected=False, got=False, $0.0006, 65.7s)
+  [4/200] hard2_0182: OK (expected=False, got=False, $0.0006, 74.9s)
+  [5/200] hard2_0008: OK (expected=True, got=True, $0.0006, 76.7s)
+  [6/200] hard2_0145: OK (expected=True, got=True, $0.0007, 93.0s)
+  [7/200] hard2_0007: OK (expected=False, got=False, $0.0006, 105.3s)
+  [8/200] hard2_0183: OK (expected=False, got=False, $0.0006, 111.7s)
+  [9/200] hard2_0171: OK (expected=False, got=False, $0.0006, 127.8s)
+  [10/200] hard2_0120: WRONG (expected=True, got=False, $0.0006, 131.1s)
+  [11/200] hard2_0059: OK (expected=True, got=True, $0.0005, 136.7s)
+  [12/200] hard2_0108: WRONG (expected=False, got=True, $0.0009, 136.9s)
+  [13/200] hard2_0084: OK (expected=False, got=False, $0.0006, 147.5s)
+  [14/200] hard2_0146: OK (expected=False, got=False, $0.0006, 151.3s)
+  [15/200] hard2_0196: OK (expected=False, got=False, $0.0006, 160.8s)
+  [16/200] hard2_0082: WRONG (expected=True, got=False, $0.0007, 169.2s)
+  [17/200] hard2_0047: OK (expected=False, got=False, $0.0007, 189.3s)
+  [18/200] hard2_0022: OK (expected=True, got=True, $0.0005, 189.3s)
+  [19/200] hard2_0184: OK (expected=True, got=True, $0.0005, 202.8s)
+  [20/200] hard2_0021: WRONG (expected=True, got=False, $0.0006, 207.3s)
+  [21/200] hard2_0032: OK (expected=False, got=False, $0.0007, 215.3s)
+  [22/200] hard2_0197: OK (expected=False, got=False, $0.0006, 226.9s)
+  [23/200] hard2_0097: WRONG (expected=True, got=False, $0.0009, 240.5s)
+  [24/200] hard2_0060: WRONG (expected=True, got=False, $0.0006, 240.9s)
+  [25/200] hard2_0110: WRONG (expected=True, got=False, $0.0007, 254.1s)
+  [26/200] hard2_0135: OK (expected=False, got=False, $0.0006, 256.1s)
+  [27/200] hard2_0172: OK (expected=False, got=False, $0.0006, 258.8s)
+  [28/200] hard2_0046: OK (expected=False, got=False, $0.0007, 261.6s)
+  [29/200] hard2_0023: WRONG (expected=True, got=False, $0.0007, 263.1s)
+  [30/200] hard2_0072: OK (expected=True, got=True, $0.0006, 278.4s)
+  [31/200] hard2_0011: OK (expected=False, got=False, $0.0006, 300.3s)
+  [32/200] hard2_0185: OK (expected=True, got=True, $0.0007, 318.5s)
+  [33/200] hard2_0147: OK (expected=True, got=True, $0.0008, 319.1s)
+  [34/200] hard2_0036: OK (expected=True, got=True, $0.0007, 328.7s)
+  [35/200] hard2_0148: OK (expected=False, got=False, $0.0006, 330.9s)
+  [36/200] hard2_0061: OK (expected=True, got=True, $0.0007, 331.8s)
+  [37/200] hard2_0086: OK (expected=True, got=True, $0.0007, 339.4s)
+  [38/200] hard2_0109: OK (expected=False, got=False, $0.0007, 339.8s)
+  [39/200] hard2_0048: OK (expected=False, got=False, $0.0006, 340.9s)
+  [40/200] hard2_0136: WRONG (expected=True, got=False, $0.0006, 345.1s)
+  [41/200] hard2_0099: OK (expected=True, got=True, $0.0008, 356.5s)
+  [42/200] hard2_0049: OK (expected=True, got=True, $0.0005, 362.4s)
+  [43/200] hard2_0111: OK (expected=True, got=True, $0.0005, 364.9s)
+  [44/200] hard2_0161: WRONG (expected=False, got=True, $0.0011, 375.2s)
+  [45/200] hard2_0123: OK (expected=False, got=False, $0.0007, 376.3s)
+  [46/200] hard2_0124: OK (expected=False, got=False, $0.0007, 382.4s)
+  [47/200] hard2_0037: OK (expected=True, got=True, $0.0005, 387.7s)
+  [48/200] hard2_0062: WRONG (expected=False, got=True, $0.0009, 433.4s)
+  [49/200] hard2_0199: WRONG (expected=True, got=False, $0.0007, 446.0s)
+  [50/200] hard2_0174: WRONG (expected=True, got=False, $0.0007, 465.4s)
+  [51/200] hard2_0098: WRONG (expected=True, got=False, $0.0007, 471.6s)
+  [52/200] hard2_0187: OK (expected=False, got=False, $0.0007, 472.0s)
+  [53/200] hard2_0024: OK (expected=True, got=True, $0.0008, 472.9s)
+  [54/200] hard2_0149: OK (expected=True, got=True, $0.0007, 480.2s)
+  [55/200] hard2_0012: OK (expected=False, got=False, $0.0008, 481.8s)
+  [56/200] hard2_0186: WRONG (expected=True, got=False, $0.0007, 488.1s)
+  [57/200] hard2_0073: OK (expected=True, got=True, $0.0008, 493.2s)
+  [58/200] hard2_0074: OK (expected=True, got=True, $0.0005, 532.7s)
+  [59/200] hard2_0025: OK (expected=False, got=False, $0.0006, 537.1s)
+  [60/200] hard2_0175: OK (expected=False, got=False, $0.0007, 540.9s)
+  [61/200] hard2_0137: WRONG (expected=True, got=False, $0.0007, 546.6s)
+  [62/200] hard2_0200: WRONG (expected=True, got=False, $0.0006, 549.8s)
+  [63/200] hard2_0100: OK (expected=False, got=False, $0.0006, 553.5s)
+  [64/200] hard2_0150: OK (expected=False, got=False, $0.0007, 556.9s)
+  [65/200] hard2_0050: OK (expected=True, got=True, $0.0007, 566.5s)
+  [66/200] hard2_0038: OK (expected=False, got=False, $0.0007, 579.9s)
+  [67/200] hard2_0051: OK (expected=False, got=False, $0.0006, 584.3s)
+  [68/200] hard2_0112: OK (expected=False, got=False, $0.0007, 584.5s)
+  [69/200] hard2_0125: OK (expected=False, got=False, $0.0007, 589.5s)
+  [70/200] hard2_0013: OK (expected=False, got=False, $0.0006, 608.6s)
+  [71/200] hard2_0188: OK (expected=False, got=False, $0.0006, 614.6s)
+  [72/200] hard2_0163: OK (expected=False, got=False, $0.0008, 641.3s)
+  [73/200] hard2_0151: OK (expected=False, got=False, $0.0007, 643.6s)
+  [74/200] hard2_0089: OK (expected=True, got=True, $0.0005, 656.9s)
+  [75/200] hard2_0063: OK (expected=True, got=True, $0.0007, 658.9s)
+  [76/200] hard2_0176: OK (expected=False, got=False, $0.0006, 660.7s)
+  [77/200] hard2_0064: OK (expected=False, got=False, $0.0007, 664.7s)
+  [78/200] hard2_0001: OK (expected=False, got=False, $0.0006, 672.1s)
+  [79/200] hard2_0026: WRONG (expected=True, got=False, $0.0007, 675.8s)
+  [80/200] hard2_0113: WRONG (expected=True, got=False, $0.0008, 675.9s)
+  [81/200] hard2_0114: WRONG (expected=True, got=False, $0.0006, 684.1s)
+  [82/200] hard2_0039: WRONG (expected=True, got=False, $0.0006, 687.3s)
+  [83/200] hard2_0126: OK (expected=True, got=True, $0.0008, 699.6s)
+  [84/200] hard2_0164: OK (expected=True, got=True, $0.0007, 707.3s)
+  [85/200] hard2_0189: OK (expected=True, got=True, $0.0007, 715.4s)
+  [86/200] hard2_0127: OK (expected=True, got=True, $0.0006, 719.9s)
+  [87/200] hard2_0177: OK (expected=False, got=False, $0.0006, 750.5s)
+  [88/200] hard2_0052: OK (expected=False, got=False, $0.0007, 754.3s)
+  [89/200] hard2_0040: OK (expected=True, got=True, $0.0005, 774.0s)
+  [90/200] hard2_0065: WRONG (expected=True, got=False, $0.0006, 801.8s)
+  [91/200] hard2_0015: WRONG (expected=False, got=True, $0.0007, 810.1s)
+  [92/200] hard2_0140: OK (expected=True, got=True, $0.0005, 827.2s)
+  [93/200] hard2_0014: OK (expected=False, got=False, $0.0008, 835.8s)
+  [94/200] hard2_0102: OK (expected=False, got=False, $0.0006, 856.7s)
+  [95/200] hard2_0139: OK (expected=False, got=False, $0.0008, 875.1s)
+  [96/200] hard2_0115: OK (expected=True, got=True, $0.0006, 878.7s)
+  [97/200] hard2_0190: OK (expected=False, got=False, $0.0006, 892.5s)
+  [98/200] hard2_0003: WRONG (expected=True, got=False, $0.0007, 895.0s)
+  [99/200] hard2_0002: OK (expected=False, got=False, $0.0007, 908.3s)
+  [100/200] hard2_0028: WRONG (expected=True, got=False, $0.0007, 914.1s)
+  [101/200] hard2_0090: OK (expected=False, got=False, $0.0008, 914.2s)
+  [102/200] hard2_0165: OK (expected=False, got=False, $0.0007, 921.9s)
+  [103/200] hard2_0027: OK (expected=False, got=False, $0.0007, 924.0s)
+  [104/200] hard2_0053: OK (expected=True, got=True, $0.0007, 930.3s)
+  [105/200] hard2_0152: OK (expected=False, got=False, $0.0007, 939.2s)
+  [106/200] hard2_0128: WRONG (expected=True, got=False, $0.0007, 956.5s)
+  [107/200] hard2_0103: WRONG (expected=True, got=False, $0.0006, 964.5s)
+  [108/200] hard2_0016: WRONG (expected=False, got=True, $0.0007, 964.7s)
+  [109/200] hard2_0091: OK (expected=True, got=True, $0.0006, 967.9s)
+  [110/200] hard2_0076: OK (expected=False, got=False, $0.0008, 969.6s)
+  [111/200] hard2_0153: WRONG (expected=True, got=False, $0.0006, 969.6s)
+  [112/200] hard2_0041: OK (expected=False, got=False, $0.0007, 988.9s)
+  [113/200] hard2_0078: WRONG (expected=True, got=False, $0.0007, 994.1s)
+  [114/200] hard2_0178: WRONG (expected=True, got=False, $0.0007, 995.8s)
+  [115/200] hard2_0191: OK (expected=False, got=False, $0.0007, 1007.1s)
+  [116/200] hard2_0077: OK (expected=False, got=False, $0.0006, 1011.3s)
+  [117/200] hard2_0079: WRONG (expected=True, got=False, $0.0006, 1040.0s)
+  [118/200] hard2_0104: OK (expected=False, got=False, $0.0007, 1040.6s)
+  [119/200] hard2_0154: OK (expected=True, got=True, $0.0007, 1065.1s)
+  [120/200] hard2_0054: OK (expected=False, got=False, $0.0006, 1071.8s)
+  [121/200] hard2_0179: OK (expected=False, got=False, $0.0006, 1073.1s)
+  [122/200] hard2_0029: OK (expected=False, got=False, $0.0006, 1097.6s)
+  [123/200] hard2_0116: OK (expected=True, got=True, $0.0007, 1111.5s)
+  [124/200] hard2_0042: OK (expected=False, got=False, $0.0006, 1120.3s)
+  [125/200] hard2_0092: OK (expected=False, got=False, $0.0006, 1122.2s)
+  [126/200] hard2_0117: WRONG (expected=True, got=False, $0.0006, 1140.2s)
+  [127/200] hard2_0142: OK (expected=False, got=False, $0.0007, 1172.4s)
+  [128/200] hard2_0167: OK (expected=False, got=False, $0.0007, 1179.0s)
+  [129/200] hard2_0141: WRONG (expected=True, got=False, $0.0007, 1181.4s)
+  [130/200] hard2_0066: OK (expected=True, got=True, $0.0005, 1204.4s)
+  [131/200] hard2_0030: OK (expected=True, got=True, $0.0005, 1223.9s)
+  [132/200] hard2_0080: WRONG (expected=True, got=False, $0.0006, 1225.4s)
+  [133/200] hard2_0166: OK (expected=False, got=False, $0.0008, 1230.2s)
+  [134/200] hard2_0004: OK (expected=True, got=True, $0.0008, 1231.1s)
+  [135/200] hard2_0043: OK (expected=False, got=False, $0.0006, 1248.8s)
+  [136/200] hard2_0129: OK (expected=False, got=False, $0.0008, 1256.7s)
+  [137/200] hard2_0130: OK (expected=True, got=True, $0.0005, 1259.4s)
+  [138/200] hard2_0018: WRONG (expected=True, got=False, $0.0006, 1260.8s)
+  [139/200] hard2_0055: OK (expected=False, got=False, $0.0006, 1281.3s)
+  [140/200] hard2_0192: WRONG (expected=False, got=True, $0.0007, 1295.2s)
+  [141/200] hard2_0118: OK (expected=False, got=False, $0.0007, 1303.9s)
+  [142/200] hard2_0093: OK (expected=False, got=False, $0.0007, 1316.2s)
+  [143/200] hard2_0155: WRONG (expected=True, got=False, $0.0006, 1318.3s)
+  [144/200] hard2_0006: OK (expected=True, got=True, $0.0005, 1327.4s)
+  [145/200] hard2_0193: OK (expected=True, got=True, $0.0006, 1348.5s)
+  [146/200] hard2_0031: OK (expected=False, got=False, $0.0007, 1352.6s)
+  [147/200] hard2_0168: WRONG (expected=True, got=False, $0.0006, 1364.1s)
+  [148/200] hard2_0005: WRONG (expected=True, got=False, $0.0007, 1391.9s)
+  [149/200] hard2_0143: OK (expected=False, got=False, $0.0010, 1394.3s)
+  [150/200] hard2_0105: OK (expected=False, got=False, $0.0008, 1395.3s)
+  [151/200] hard2_0067: OK (expected=False, got=False, $0.0007, 1407.1s)
+  [152/200] hard2_0081: OK (expected=True, got=True, $0.0005, 1428.5s)
+  [153/200] hard2_0180: OK (expected=False, got=False, $0.0008, 1429.6s)
+  [154/200] hard2_0019: OK (expected=True, got=True, $0.0006, 1447.8s)
+  [155/200] hard2_0068: OK (expected=False, got=False, $0.0006, 1457.2s)
+  [156/200] hard2_0044: OK (expected=True, got=True, $0.0007, 1490.6s)
+  [157/200] hard2_0094: OK (expected=True, got=True, $0.0008, 1519.0s)
+  [158/200] hard2_0119: OK (expected=True, got=True, $0.0008, 1525.3s)
+  [159/200] hard2_0131: OK (expected=True, got=True, $0.0006, 1529.3s)
+  [160/200] hard2_0169: OK (expected=False, got=False, $0.0006, 1531.7s)
+  [161/200] hard2_0144: OK (expected=False, got=False, $0.0006, 1544.0s)
+  [162/200] hard2_0181: WRONG (expected=False, got=True, $0.0007, 1548.4s)
+  [163/200] hard2_0056: OK (expected=False, got=False, $0.0007, 1552.0s)
+  [164/200] hard2_0194: OK (expected=False, got=False, $0.0006, 1566.8s)
+  [165/200] hard2_0057: OK (expected=True, got=True, $0.0007, 1567.0s)
+  [166/200] hard2_0058: OK (expected=True, got=True, $0.0005, 1581.0s)
+  [167/200] hard2_0107: WRONG (expected=True, got=False, $0.0007, 1585.1s)
+  [168/200] hard2_0157: OK (expected=False, got=False, $0.0007, 1601.6s)
+  [169/200] hard2_0132: OK (expected=True, got=True, $0.0006, 1643.5s)
+  [170/200] hard2_0106: OK (expected=True, got=True, $0.0007, 1643.8s)
+  [171/200] hard2_0069: WRONG (expected=True, got=False, $0.0007, 1668.8s)
+  [172/200] hard2_0045: OK (expected=False, got=False, $0.0006, 1672.6s)
+  [173/200] hard2_0009: OK (expected=False, got=False, $0.0005, 1689.0s)
+  [174/200] hard2_0121: OK (expected=True, got=True, $0.0007, 1719.1s)
+  [175/200] hard2_0133: OK (expected=False, got=False, $0.0007, 1731.8s)
+  [176/200] hard2_0096: OK (expected=False, got=False, $0.0008, 1745.1s)
+  [177/200] hard2_0083: WRONG (expected=True, got=False, $0.0007, 1747.3s)
+  [178/200] hard2_0159: WRONG (expected=True, got=False, $0.0006, 1748.6s)
+  [179/200] hard2_0122: OK (expected=False, got=False, $0.0006, 1756.4s)
+  [180/200] hard2_0071: OK (expected=False, got=False, $0.0006, 1756.8s)
+  [181/200] hard2_0134: OK (expected=False, got=False, $0.0007, 1761.6s)
+  [182/200] hard2_0035: OK (expected=True, got=True, $0.0008, 1762.0s)
+  [183/200] hard2_0085: OK (expected=True, got=True, $0.0006, 1789.9s)
+  [184/200] hard2_0173: OK (expected=False, got=False, $0.0006, 1808.2s)
+  [185/200] hard2_0198: WRONG (expected=True, got=False, $0.0006, 1814.4s)
+  [186/200] hard2_0158: OK (expected=False, got=False, $0.0006, 1818.1s)
+  [187/200] hard2_0087: OK (expected=False, got=False, $0.0006, 1821.8s)
+  [188/200] hard2_0075: OK (expected=True, got=True, $0.0006, 1828.8s)
+  [189/200] hard2_0101: OK (expected=True, got=True, $0.0007, 1866.9s)
+  [190/200] hard2_0017: OK (expected=True, got=True, $0.0007, 1867.7s)
+  [191/200] hard2_0088: OK (expected=False, got=False, $0.0007, 1871.9s)
+  [192/200] hard2_0034: OK (expected=False, got=False, $0.0007, 1874.4s)
+  [193/200] hard2_0156: OK (expected=False, got=False, $0.0007, 1882.6s)
+  [194/200] hard2_0010: OK (expected=False, got=False, $0.0007, 1974.1s)
+  [195/200] hard2_0162: WRONG (expected=True, got=False, $0.0006, 1979.6s)
+  [196/200] hard2_0020: OK (expected=False, got=False, $0.0006, 2016.0s)
+  [197/200] hard2_0138: WRONG (expected=True, got=False, $0.0007, 2040.5s)
+  [198/200] hard2_0160: OK (expected=True, got=True, $0.0008, 2047.2s)
+  [199/200] hard2_0070: WRONG (expected=True, got=False, $0.0006, 2067.2s)
+  [200/200] hard2_0033: OK (expected=True, got=True, $0.0007, 2088.9s)
+
+============================================================
+  Model:       gemma-4-31b (openrouter)
+  Dataset:     hard2
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     200
+  Correct:            150/200 (75.0%)
+  Wrong:              50
+  Parse errors:       0
+  ---
+  TRUE→TRUE:          57
+  TRUE→FALSE:         43  (missed implications)
+  FALSE→TRUE:         7  (confabulations)
+  FALSE→FALSE:        93
+  ---
+  Total cost:         $0.1326
+  Total tokens:       610908 in / 117751 out
+  Avg latency:        942.2s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/gemma-4-31b_openrouter_hard2_20260411_020127.csv
+Reasoning written to: results/20260410_v4.1-official/gemma-4-31b_openrouter_hard2_20260411_020127.json

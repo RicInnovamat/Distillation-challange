@@ -13,6 +13,19 @@ models:
       input_cost_per_1m: 0.039
       output_cost_per_1m: 0.190
     # 120B params — default GGUF is ~65GB, exceeds 64GB RAM
+    params:
+      temperature: 1.0    # reasoning models require temp=1
+      max_tokens: 65536   # reasoning tokens count against limit; 32K too low
+    # Applied only when --official-mode is set. Mirrors SAIR's
+    # evaluation_models.json entry for gpt-oss-120b. Temperature is
+    # deliberately excluded — --official-mode leaves temperature alone.
+    official_params:
+      provider: "deepinfra/bf16"
+      reasoning_effort: "low"
+      seed: 0
+      max_tokens: 8192
+      # Healthy bf16 alternatives for --official-fallbacks.
+      fallback_providers: ["Chutes"]
 
   gemma-4-31b:
     display_name: "Google: Gemma 4 31B"
@@ -22,7 +35,28 @@ models:
       output_cost_per_1m: 0.400
     ollama:
       model_id: "gemma4:31b"
-      num_ctx: 32768   # 32K — model supports 256K but 64GB RAM can't hold the KV cache
+      num_ctx: 8192    # 8K — max observed usage is 5.4K tokens; saves 9GB KV cache vs 32K
+    # Applied only when --official-mode is set.
+    # reasoning_effort="low" is in SAIR's evaluation_models.json for this
+    # model, but with 10KB cheatsheets the reasoning tokens fully exhaust
+    # the 8192 budget before any visible content is emitted (content="",
+    # finish_reason="length"). Temporarily disabled while we raise this
+    # upstream; toggle back on if SAIR fixes the doubled-budget retry.
+    official_params:
+      provider: "novita/bf16"
+      # reasoning_effort: "low"
+      seed: 0
+      max_tokens: 8192
+      # Additional providers appended to provider.order when
+      # --official-fallbacks is set. Novita has been in a persistent
+      # "degraded" state (status=-2) with server_overload errors;
+      # the bf16 alternatives (Parasail, Venice) absorb most of the load.
+      # AkashML serves the same model at fp8 — meaningful quantization
+      # divergence from strict SAIR spec (bf16), but the only healthy
+      # fallback left when all three bf16 providers rate-limit at once.
+      # Entries support `slug/quant` syntax so the quantizations filter
+      # unions across providers.
+      fallback_providers: ["Parasail", "Venice", "AkashML/fp8"]
 
   llama-3.3-70b:
     display_name: "Meta: Llama 3.3 70B Instruct"
@@ -33,6 +67,15 @@ models:
     ollama:
       model_id: "llama3.3:70b"
       num_ctx: 16384   # 16K — model supports 128K but 70B weights + KV cache exceed 64GB RAM at higher ctx
+    # Applied only when --official-mode is set. Llama has no reasoning
+    # mode, so the official config sets reasoning_effort="none".
+    official_params:
+      provider: "deepinfra/fp8"
+      reasoning_effort: "none"
+      seed: 0
+      max_tokens: 8192
+      # Healthy fp8 alternatives for --official-fallbacks.
+      fallback_providers: ["Inceptron", "AkashML", "Together"]
 
   deepseek-v3.2:
     display_name: "DeepSeek: DeepSeek V3.2"
@@ -50,7 +93,10 @@ models:
       output_cost_per_1m: 0.110
     ollama:
       model_id: "gpt-oss:20b"
-      num_ctx: 131072  # 128K max context
+      num_ctx: 65536   # 65K — covers 100% of observed usage (max 35.7K); ~18.5GB total RAM
+    params:
+      temperature: 1.0    # reasoning models require temp=1
+      max_tokens: 65536   # reasoning tokens count against limit; 32K too low
 
   gemini-3.1-flash-lite:
     display_name: "Google: Gemini 3.1 Flash Lite Preview"

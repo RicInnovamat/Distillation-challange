@@ -1,0 +1,175 @@
+  [69/69] hard1_0065: WRONG (expected=True, got=False, $0.0004, 42.5s)
+
+============================================================
+  Model:       gpt-oss-120b (openrouter)
+  Dataset:     hard1
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     69
+  Correct:            49/69 (71.0%)
+  Wrong:              20
+  Parse errors:       0
+  ---
+  TRUE→TRUE:          17
+  TRUE→FALSE:         7  (missed implications)
+  FALSE→TRUE:         13  (confabulations)
+  FALSE→FALSE:        32
+  ---
+  Total cost:         $0.0178
+  Total tokens:       203075 in / 51871 out
+  Avg latency:        21.9s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard1_20260410_135517.csv
+Reasoning written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard1_20260410_135517.json
+  [200/200] hard2_0161: WRONG (expected=False, got=True, $0.0004, 98.5s)
+
+============================================================
+  Model:       gpt-oss-120b (openrouter)
+  Dataset:     hard2
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     200
+  Correct:            97/200 (48.5%)
+  Wrong:              103
+  Parse errors:       0
+  ---
+  TRUE→TRUE:          30
+  TRUE→FALSE:         70  (missed implications)
+  FALSE→TRUE:         33  (confabulations)
+  FALSE→FALSE:        67
+  ---
+  Total cost:         $0.0540
+  Total tokens:       588708 in / 163477 out
+  Avg latency:        50.4s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard2_20260410_135655.csv
+Reasoning written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard2_20260410_135655.json
+  [400/400] hard3_0345: OK (expected=False, got=False, $0.0003, 218.7s)
+
+============================================================
+  Model:       gpt-oss-120b (openrouter)
+  Dataset:     hard3
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     400
+  Correct:            232/400 (58.0%)
+  Wrong:              168
+  Parse errors:       0
+  ---
+  TRUE→TRUE:          90
+  TRUE→FALSE:         105  (missed implications)
+  FALSE→TRUE:         63  (confabulations)
+  FALSE→FALSE:        142
+  ---
+  Total cost:         $0.1111
+  Total tokens:       1177268 in / 342930 out
+  Avg latency:        107.9s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard3_20260410_140034.csv
+Reasoning written to: results/20260410_v4.1-official/gpt-oss-120b_openrouter_hard3_20260410_140034.json
+  [69/69] hard1_0064: PARSE_ERR (expected=True, got=None, $0.0000, 357.3s)
+
+============================================================
+  Model:       llama-3.3-70b (openrouter)
+  Dataset:     hard1
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     69
+  Correct:            0/0 (0.0%)
+  Wrong:              0
+  Parse errors:       69
+  ---
+  TRUE→TRUE:          0
+  TRUE→FALSE:         0  (missed implications)
+  FALSE→TRUE:         0  (confabulations)
+  FALSE→FALSE:        0
+  ---
+  Total cost:         $0.0000
+  Total tokens:       0 in / 0 out
+  Avg latency:        261.7s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard1_20260410_140632.csv
+Reasoning written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard1_20260410_140632.json
+  [200/200] hard2_0183: PARSE_ERR (expected=False, got=None, $0.0000, 1019.6s)
+
+============================================================
+  Model:       llama-3.3-70b (openrouter)
+  Dataset:     hard2
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     200
+  Correct:            0/0 (0.0%)
+  Wrong:              0
+  Parse errors:       200
+  ---
+  TRUE→TRUE:          0
+  TRUE→FALSE:         0  (missed implications)
+  FALSE→TRUE:         0  (confabulations)
+  FALSE→FALSE:        0
+  ---
+  Total cost:         $0.0000
+  Total tokens:       0 in / 0 out
+  Avg latency:        730.4s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard2_20260410_142331.csv
+Reasoning written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard2_20260410_142331.json
+  [400/400] hard3_0393: PARSE_ERR (expected=True, got=None, $0.0000, 2041.2s)
+
+============================================================
+  Model:       llama-3.3-70b (openrouter)
+  Dataset:     hard3
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     400
+  Correct:            0/0 (0.0%)
+  Wrong:              0
+  Parse errors:       400
+  ---
+  TRUE→TRUE:          0
+  TRUE→FALSE:         0  (missed implications)
+  FALSE→TRUE:         0  (confabulations)
+  FALSE→FALSE:        0
+  ---
+  Total cost:         $0.0000
+  Total tokens:       0 in / 0 out
+  Avg latency:        1445.7s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard3_20260410_145733.csv
+Reasoning written to: results/20260410_v4.1-official/llama-3.3-70b_openrouter_hard3_20260410_145733.json
+  [69/69] hard1_0009: PARSE_ERR (expected=False, got=None, $0.0000, 2284.3s)
+
+============================================================
+  Model:       gemma-4-31b (openrouter)
+  Dataset:     hard1
+  Prompt:      cheatsheets/v4.1_10KB_cheatsheet.md
+============================================================
+  Total problems:     69
+  Correct:            6/7 (85.7%)
+  Wrong:              1
+  Parse errors:       62
+  ---
+  TRUE→TRUE:          5
+  TRUE→FALSE:         0  (missed implications)
+  FALSE→TRUE:         1  (confabulations)
+  FALSE→FALSE:        1
+  ---
+  Total cost:         $0.0070
+  Total tokens:       21393 in / 10089 out
+  Avg latency:        1691.4s
+============================================================
+
+
+Results written to: results/20260410_v4.1-official/gemma-4-31b_openrouter_hard1_20260410_153537.csv
+Reasoning written to: results/20260410_v4.1-official/gemma-4-31b_openrouter_hard1_20260410_153537.json

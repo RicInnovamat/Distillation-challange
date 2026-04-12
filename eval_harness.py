@@ -26,6 +26,7 @@ import sys
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from enum import Enum
 from pathlib import Path
 
 import aiohttp
@@ -166,26 +167,271 @@ def render_prompt(template: str, problem: Problem) -> str:
 
 
 # ---------------------------------------------------------------------------
-# VERDICT parsing
+# VERDICT parsing — priority-based extractor ported from SAIR's official
+# judge.py (github.com/SAIRcompetition/equational-theories-stage1-judge)
+# so our local grader matches the Stage 1 eval exactly.
+#
+# Three marker types, in descending priority:
+#   3. boxed    — \boxed{TRUE} / \boxed{FALSE}
+#   2. labeled  — VERDICT:/ANSWER:/FINAL ANSWER:/RESULT:/OUTPUT_RESULT:/\text{}
+#   1. line     — first or last non-empty line is bare TRUE/FALSE
+# Tie-break: highest priority wins; within same priority, last occurrence wins.
+# Instruction preambles like "VERDICT: TRUE or FALSE" and "VERDICT: TRUE/FALSE"
+# are detected and ignored.
 # ---------------------------------------------------------------------------
 
-VERDICT_PATTERNS = [
-    re.compile(r"VERDICT\s*:\s*(TRUE|FALSE)", re.IGNORECASE),
-    re.compile(r"VERDICT\s*=\s*(TRUE|FALSE)", re.IGNORECASE),
-    re.compile(r"\b(TRUE|FALSE)\b", re.IGNORECASE),
-]
+_BOXED_START_RE = re.compile(r"(?i)\\+boxed\s*\{")
+_VERDICT_RE = re.compile(r"(?i)\bVERDICT\s*[:：]\s*(TRUE|FALSE)\b")
+_ANSWER_RE = re.compile(
+    r"(?i)\b(?:FINAL\s+ANSWER|ANSWER|OUTPUT_RESULT|RESULT)\s*[:：=-]\s*(TRUE|FALSE)\b"
+)
+_LATEX_TEXT_RE = re.compile(r"(?i)\\text\s*\{\s*(TRUE|FALSE)\s*\}")
+_LINE_RE = re.compile(
+    r"(?i)^\s*(?:FINAL\s+ANSWER\s*[:：=-]\s*)?(TRUE|FALSE)\s*[.!?]*\s*$"
+)
+_LATEX_WRAPPER_RE = re.compile(
+    r"(?is)^\\(?:text|mathrm|mathbf|operatorname)\s*\{(.+)\}$"
+)
+
+
+class _VerdictSource(Enum):
+    LINE = 1
+    LABELED = 2
+    BOXED = 3
+
+
+@dataclass
+class _VerdictCandidate:
+    value: bool
+    source: _VerdictSource
+    index: int
+
+
+def _strip_markdown(s: str) -> str:
+    return s.replace("***", "").replace("**", "").replace("__", "").replace("`", "")
+
+
+def _parse_bool_label(label: str) -> bool | None:
+    u = label.upper()
+    if u == "TRUE":
+        return True
+    if u == "FALSE":
+        return False
+    return None
+
+
+def _is_instruction_clause(response: str, match_end: int) -> bool:
+    """Detect 'VERDICT: TRUE or FALSE' and 'VERDICT: TRUE/FALSE' instruction hints."""
+    after = response[match_end:].split("\n", 1)[0].lstrip()
+    if after[:2].upper() == "OR":
+        rest = after[2:]
+        return not rest or rest[0].isspace()
+    if after.startswith("/"):
+        return bool(re.match(r"(?i)(TRUE|FALSE)\b", after[1:].lstrip()))
+    return False
+
+
+def _parse_boxed_content(token: str) -> bool | None:
+    STRIP = " \t\r\n.,;:!?$()[]"
+    current = token.strip()
+    for _ in range(4):
+        current = current.strip(STRIP)
+        if current.upper() == "ANSWER":
+            return None
+        verdict = _parse_bool_label(current)
+        if verdict is not None:
+            return verdict
+        m = _LATEX_WRAPPER_RE.match(current)
+        if m:
+            current = m.group(1)
+            continue
+        break
+    return None
+
+
+def _extract_boxed(response: str, out: list) -> None:
+    for m in _BOXED_START_RE.finditer(response):
+        depth = 1
+        content_start = m.end()
+        content_end = None
+        for i, ch in enumerate(response[content_start:]):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    content_end = content_start + i
+                    break
+        if content_end is None:
+            continue
+        value = _parse_boxed_content(response[content_start:content_end])
+        if value is not None:
+            out.append(_VerdictCandidate(value=value, source=_VerdictSource.BOXED, index=m.start()))
+
+
+def _extract_labeled(response: str, out: list) -> None:
+    for pattern in (_VERDICT_RE, _ANSWER_RE, _LATEX_TEXT_RE):
+        for m in pattern.finditer(response):
+            if _is_instruction_clause(response, m.end()):
+                continue
+            value = _parse_bool_label(m.group(1))
+            if value is not None:
+                out.append(_VerdictCandidate(value=value, source=_VerdictSource.LABELED, index=m.start()))
+
+
+def _extract_leading_line(response: str, out: list) -> None:
+    first = next((line for line in response.splitlines() if line.strip()), None)
+    if first is None:
+        return
+    m = _LINE_RE.match(first)
+    if not m:
+        return
+    value = _parse_bool_label(m.group(1))
+    if value is not None:
+        out.append(_VerdictCandidate(value=value, source=_VerdictSource.LINE, index=0))
+
+
+def _extract_trailing_line(response: str, out: list) -> None:
+    last = next((line for line in reversed(response.splitlines()) if line.strip()), None)
+    if last is None:
+        return
+    m = _LINE_RE.match(last)
+    if not m:
+        return
+    value = _parse_bool_label(m.group(1))
+    if value is not None:
+        out.append(_VerdictCandidate(value=value, source=_VerdictSource.LINE, index=len(response)))
+
+
+def _best_verdict_candidate(candidates: list) -> _VerdictCandidate | None:
+    if not candidates:
+        return None
+    top = max(c.source.value for c in candidates)
+    return max((c for c in candidates if c.source.value == top), key=lambda c: c.index)
 
 
 def parse_verdict(text: str | None) -> tuple[bool | None, str]:
-    """Parse VERDICT from model output. Returns (prediction, raw_match)."""
+    """Extract TRUE/FALSE verdict from a model response.
+
+    Returns (prediction, raw_match_description). The description encodes the
+    marker tier ("boxed"/"labeled"/"line") and the verdict, for CSV debugging.
+    """
     if not text:
         return None, ""
-    for pattern in VERDICT_PATTERNS:
-        match = pattern.search(text)
-        if match:
-            val = match.group(1).upper()
-            return val == "TRUE", match.group(0)
-    return None, ""
+    cleaned = _strip_markdown(text)
+    candidates: list[_VerdictCandidate] = []
+    _extract_boxed(cleaned, candidates)
+    _extract_labeled(cleaned, candidates)
+    _extract_leading_line(cleaned, candidates)
+    _extract_trailing_line(cleaned, candidates)
+    chosen = _best_verdict_candidate(candidates)
+    if chosen is None:
+        return None, ""
+    raw = f"{chosen.source.name.lower()}:{'TRUE' if chosen.value else 'FALSE'}"
+    return chosen.value, raw
+
+
+# ---------------------------------------------------------------------------
+# Official Stage 1 eval mode — payload overrides
+# ---------------------------------------------------------------------------
+#
+# When --official-mode is set, the harness mirrors SAIR's official
+# evaluation_models.json exactly (except temperature, which the user has
+# opted to leave under their existing config). The 3 official models each
+# declare an `official_params` block in models.yaml with:
+#
+#   provider:         "<slug>[/<quantization>]"   e.g. "deepinfra/bf16"
+#   reasoning_effort: "low" | "none" | ...         optional
+#   seed:             int                          optional
+#   max_tokens:       int                          optional
+#
+# build_official_overrides() turns that block into OpenRouter payload fields.
+
+# OpenRouter provider display-name lookup (mirrors SAIR models.py _PROVIDER_NAMES).
+# Only the providers used by the 3 official models are listed; unknown slugs
+# pass through unchanged so display names like "DeepInfra" work directly.
+_OFFICIAL_PROVIDER_DISPLAY_NAMES: dict[str, str] = {
+    "deepinfra": "DeepInfra",
+    "novita": "Novita",
+}
+
+
+def _parse_provider_tag(tag: str) -> tuple[str, str | None]:
+    """Split 'deepinfra/bf16' → ('deepinfra', 'bf16'); bare 'deepinfra' → ('deepinfra', None)."""
+    if "/" in tag:
+        slug, quant = tag.split("/", 1)
+        return slug.strip(), quant.strip()
+    return tag.strip(), None
+
+
+def _provider_display_name(slug: str) -> str:
+    return _OFFICIAL_PROVIDER_DISPLAY_NAMES.get(slug.lower(), slug)
+
+
+def build_official_overrides(model_config: dict, allow_fallbacks: bool = False) -> dict:
+    """Build OpenRouter payload fragments from a model's `official_params` block.
+
+    Returns a dict containing any of: `provider`, `reasoning`, `seed`, `max_tokens`.
+    Temperature is deliberately never touched — the caller keeps whatever the
+    normal params-resolution produced.
+
+    `allow_fallbacks` defaults to False (strict provider pinning, matching SAIR's
+    evaluation_models.json). Set True via `--official-fallbacks` to let OpenRouter
+    route past the pinned provider when it's capacity-constrained — the provider
+    still stays first in `provider.order`, it's just not exclusive.
+
+    Raises ValueError if the model config has no `official_params` section.
+    """
+    params = model_config.get("official_params")
+    if not params:
+        raise ValueError(
+            "model has no `official_params` block — not one of the 3 official "
+            "Stage 1 evaluation models, cannot use --official-mode"
+        )
+
+    overrides: dict = {}
+
+    provider_tag = params.get("provider")
+    if provider_tag:
+        slug, quant = _parse_provider_tag(provider_tag)
+        order = [_provider_display_name(slug)]
+        quants: list[str] = [quant] if quant else []
+        # When fallbacks are enabled, append any `fallback_providers` from
+        # the official_params block. This is the only way OpenRouter will
+        # actually route past a rate-limited primary — `allow_fallbacks:
+        # true` alone with a single-item order does nothing.
+        #
+        # Fallback entries support the same `slug/quant` syntax as the
+        # primary provider; any distinct quant values are unioned into the
+        # `quantizations` filter so mixed-quant fallback pools (e.g. three
+        # bf16 providers plus an fp8 alternative) all get through. Without
+        # this, a stricter quant filter would silently exclude any fallback
+        # served under a different quantization.
+        if allow_fallbacks:
+            for fb in params.get("fallback_providers", []):
+                fb_slug, fb_quant = _parse_provider_tag(fb)
+                name = _provider_display_name(fb_slug)
+                if name not in order:
+                    order.append(name)
+                if fb_quant and fb_quant not in quants:
+                    quants.append(fb_quant)
+        prov: dict = {"order": order}
+        if quants:
+            prov["quantizations"] = quants
+        prov["allow_fallbacks"] = allow_fallbacks
+        overrides["provider"] = prov
+
+    reasoning_effort = params.get("reasoning_effort")
+    if reasoning_effort is not None:
+        overrides["reasoning"] = {"effort": reasoning_effort}
+
+    if "seed" in params:
+        overrides["seed"] = params["seed"]
+
+    if "max_tokens" in params:
+        overrides["max_tokens"] = params["max_tokens"]
+
+    return overrides
 
 
 # ---------------------------------------------------------------------------
@@ -193,8 +439,13 @@ def parse_verdict(text: str | None) -> tuple[bool | None, str]:
 # ---------------------------------------------------------------------------
 
 SEMAPHORE = None
-MAX_RETRIES = 3
-RETRY_DELAYS = [2, 5, 15]
+MAX_RETRIES = 5
+RETRY_DELAYS = [5, 15, 30, 60, 120]  # handles persistent upstream 429s on BYOK providers
+HARD_TIMEOUT_S = 300  # aiohttp total timeout per API call. Matches SAIR judge
+                      # llm.py recommended httpx timeout. Reasoning-mode gemma
+                      # (effort=low) runs 30-67s per call under concurrent load;
+                      # the old 180s tripped on tail latency and caused retry
+                      # storms against Novita.
 
 
 async def call_openrouter(
@@ -205,8 +456,14 @@ async def call_openrouter(
     base_url: str,
     temperature: float,
     max_tokens: int,
+    extra_payload: dict | None = None,
 ) -> dict:
-    """Call OpenRouter chat completion API with retry logic."""
+    """Call OpenRouter chat completion API with retry logic.
+
+    `extra_payload` is merged on top of the base request body — used by
+    --official-mode to inject provider pinning, reasoning, and seed.
+    `max_tokens` inside `extra_payload` overrides the positional argument.
+    """
     url = f"{base_url}/chat/completions"
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -220,30 +477,81 @@ async def call_openrouter(
         "temperature": temperature,
         "max_tokens": max_tokens,
     }
+    if extra_payload:
+        payload.update(extra_payload)
 
+    # The SEMAPHORE wraps only the HTTP request itself, not the retry-sleep.
+    # Holding the slot during `asyncio.sleep(delay)` would serialize retries
+    # behind a single slow provider: at concurrency N, N tasks in sustained
+    # retry-sleep cycles lock out all other requests. Releasing the slot
+    # between attempts lets healthy tasks make progress while retrying ones
+    # are backed off.
     for attempt in range(MAX_RETRIES):
+        delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
+        retry_msg: str | None = None
+        data: dict | None = None
         try:
             async with SEMAPHORE:
-                async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=120)) as resp:
-                    if resp.status == 429:
-                        delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
-                        print(f"  Rate limited, waiting {delay}s...", file=sys.stderr)
-                        await asyncio.sleep(delay)
-                        continue
-                    if resp.status >= 500:
-                        delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
-                        print(f"  Server error {resp.status}, retrying in {delay}s...", file=sys.stderr)
-                        await asyncio.sleep(delay)
-                        continue
-                    resp.raise_for_status()
-                    return await resp.json()
+                async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=HARD_TIMEOUT_S)) as resp:
+                    status = resp.status
+                    if status == 429:
+                        retry_msg = f"Rate limited, waiting {delay}s..."
+                    elif status >= 500:
+                        retry_msg = f"Server error {status}, retrying in {delay}s..."
+                    else:
+                        resp.raise_for_status()
+                        data = await resp.json()
+            # Semaphore released here — decisions/sleeps happen outside.
         except (aiohttp.ClientError, asyncio.TimeoutError) as e:
             if attempt < MAX_RETRIES - 1:
-                delay = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
                 print(f"  Request error: {e}, retrying in {delay}s...", file=sys.stderr)
                 await asyncio.sleep(delay)
+                continue
+            raise
+
+        if retry_msg is None:
+            # HTTP succeeded with 200 — validate payload shape.
+            if data is None:
+                retry_msg = f"Null response body, retrying in {delay}s..."
+            elif "error" in data:
+                # OpenRouter returns HTTP 200 with an `error` field for
+                # transient upstream failures (e.g. code 504 "operation
+                # was aborted", code 429 passed through from the provider).
+                # Treat any 5xx or 408/429 error code as retriable.
+                err = data.get("error") or {}
+                err_code = err.get("code")
+                err_msg = err.get("message", "")
+                transient_codes = {408, 429, 500, 502, 503, 504}
+                if isinstance(err_code, int) and err_code in transient_codes:
+                    retry_msg = f"Upstream error code={err_code} ({err_msg}), retrying in {delay}s..."
+                # else: permanent error, fall through and let evaluate_problem
+                # surface it to the user.
             else:
-                raise
+                usage = data.get("usage", {})
+                choices = data.get("choices", [])
+                content = ""
+                finish_reason = None
+                if choices:
+                    choice = choices[0] or {}
+                    content = (choice.get("message", {}).get("content", "") or "").strip()
+                    finish_reason = choice.get("finish_reason")
+                tok_out = usage.get("completion_tokens", 0)
+                if not content:
+                    # Reasoning models (gemma-4-31b at effort=low) emit tokens
+                    # into a hidden `reasoning` field; `content` comes back empty
+                    # when the budget is exhausted (finish_reason=length) or the
+                    # model skips the final answer (finish_reason=stop). Mirrors
+                    # SAIR judge llm.py: retry once on any empty text response.
+                    retry_msg = (
+                        f"Empty content (finish={finish_reason}, out_tok={tok_out}), "
+                        f"retrying in {delay}s..."
+                    )
+
+        if retry_msg is None:
+            return data
+
+        print(f"  {retry_msg}", file=sys.stderr)
+        await asyncio.sleep(delay)
 
     raise RuntimeError(f"Failed after {MAX_RETRIES} retries")
 
@@ -375,6 +683,7 @@ async def evaluate_problem(
     temperature: float,
     max_tokens: int,
     dry_run: bool = False,
+    extra_payload: dict | None = None,
 ) -> Result:
     """Evaluate a single problem and return the result."""
     rendered = render_prompt(prompt_template, problem)
@@ -396,7 +705,8 @@ async def evaluate_problem(
         start = time.monotonic()
         if backend == "openrouter":
             response = await call_openrouter(
-                session, model_id, rendered, api_key, base_url, temperature, max_tokens
+                session, model_id, rendered, api_key, base_url, temperature, max_tokens,
+                extra_payload=extra_payload,
             )
         elif backend == "ollama":
             response = await call_ollama(
@@ -474,6 +784,8 @@ async def run_evaluation(
     backend_cfg: dict,
     config: dict,
     dry_run: bool = False,
+    official_mode: bool = False,
+    official_fallbacks: bool = False,
 ) -> RunSummary:
     """Run evaluation across all problems with async parallelism."""
     global SEMAPHORE
@@ -491,9 +803,52 @@ async def run_evaluation(
     else:
         raise ValueError(f"unknown backend: {backend}")
 
-    temperature = defaults.get("temperature", 0.0)
-    max_tokens = defaults.get("max_tokens", 1024)
+    # Per-model parameter overrides (e.g., reasoning models need temperature=1)
+    model_cfg_root = config.get("models", {}).get(model_name, {})
+    model_params = model_cfg_root.get("params", {})
+    temperature = model_params.get("temperature", defaults.get("temperature", 0.0))
+    max_tokens = model_params.get("max_tokens", defaults.get("max_tokens", 1024))
     concurrency = defaults.get("concurrency", 10)
+
+    # Official Stage 1 mode: pin provider, reasoning effort, seed, and
+    # (optionally) override max_tokens to mirror SAIR's evaluation_models.json.
+    # Temperature is deliberately left untouched by --official-mode.
+    extra_payload: dict | None = None
+    if official_mode:
+        if backend != "openrouter":
+            print(
+                f"Error: --official-mode requires --backend openrouter (got {backend}).",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        try:
+            extra_payload = build_official_overrides(
+                model_cfg_root, allow_fallbacks=official_fallbacks
+            )
+        except ValueError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        if "max_tokens" in extra_payload:
+            max_tokens = extra_payload["max_tokens"]
+        # Reasoning-mode models (gemma-4-31b-it at effort=low, gpt-oss-120b at
+        # effort=low) run 15-70s per call. At concurrency=10, the pinned bf16
+        # providers (Novita, Parasail, Venice) hit 429 server_overload within
+        # seconds and the whole batch stalls in retry storms. SAIR's judge is
+        # effectively concurrency=1 — 3 is already 3x theirs while keeping
+        # wall-clock reasonable on 69-400 problem datasets.
+        reasoning = extra_payload.get("reasoning") or {}
+        reasoning_effort = reasoning.get("effort") if isinstance(reasoning, dict) else None
+        if reasoning_effort and reasoning_effort != "none" and concurrency > 3:
+            print(
+                f"[official-mode] reasoning.effort={reasoning_effort} — capping "
+                f"concurrency {concurrency} → 3 to avoid provider 429 stampedes"
+            )
+            concurrency = 3
+        print(
+            f"[official-mode] overrides for {model_name}: "
+            f"{json.dumps(extra_payload, separators=(',', ':'))}"
+        )
+
     SEMAPHORE = asyncio.Semaphore(concurrency)
 
     summary = RunSummary(model=f"{model_name} ({backend})", dataset="", prompt_file="")
@@ -504,7 +859,8 @@ async def run_evaluation(
         tasks = [
             evaluate_problem(
                 session, p, prompt_template, backend, backend_cfg,
-                api_key, base_url, temperature, max_tokens, dry_run
+                api_key, base_url, temperature, max_tokens, dry_run,
+                extra_payload=extra_payload,
             )
             for p in problems
         ]
@@ -722,6 +1078,28 @@ def parse_args():
         "--dry-run", action="store_true",
         help="Skip API calls, test data loading and prompt rendering"
     )
+    parser.add_argument(
+        "--official-mode", action="store_true",
+        help="Mirror SAIR's official Stage 1 evaluation_models.json: provider "
+             "pinning, reasoning effort, seed, and max_tokens=8192 for the 3 "
+             "official models (gpt-oss-120b, llama-3.3-70b, gemma-4-31b). "
+             "Temperature is NOT changed. Requires --backend openrouter and "
+             "a model with an `official_params` block in models.yaml."
+    )
+    parser.add_argument(
+        "--official-fallbacks", action="store_true",
+        help="When used with --official-mode, set allow_fallbacks=True so "
+             "OpenRouter can route past the pinned provider if it's capacity-"
+             "constrained. The pinned provider stays first in provider.order. "
+             "Use this when a provider like Novita is returning persistent "
+             "server_overload errors. Diverges slightly from official config."
+    )
+    parser.add_argument(
+        "--call-timeout", type=int, default=None,
+        help="Per-request HTTP hard timeout in seconds (default: 180). "
+             "Raise this when a pinned provider (e.g. Novita) has long tail "
+             "latencies under concurrent load."
+    )
     return parser.parse_args()
 
 
@@ -756,6 +1134,10 @@ def main():
         config.setdefault("defaults", {})["temperature"] = args.temperature
     if args.max_tokens:
         config.setdefault("defaults", {})["max_tokens"] = args.max_tokens
+    if args.call_timeout:
+        global HARD_TIMEOUT_S
+        HARD_TIMEOUT_S = args.call_timeout
+        print(f"HTTP call timeout overridden to {HARD_TIMEOUT_S}s")
 
     # Load data
     problems = load_problems(args.data, config, args.limit)
@@ -779,7 +1161,9 @@ def main():
 
     # Run evaluation
     summary = asyncio.run(run_evaluation(
-        problems, prompt_template, model_name, backend, backend_cfg, config, args.dry_run
+        problems, prompt_template, model_name, backend, backend_cfg, config,
+        args.dry_run, official_mode=args.official_mode,
+        official_fallbacks=args.official_fallbacks,
     ))
     summary.dataset = args.data
     summary.prompt_file = args.prompt

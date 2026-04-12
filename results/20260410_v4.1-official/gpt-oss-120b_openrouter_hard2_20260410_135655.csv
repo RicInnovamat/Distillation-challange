@@ -1,0 +1,201 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard2_0001,False,False,True,True,labeled:FALSE,24.35,2944,787,0.000264,VERDICT: FALSE\nRULE: default false
+hard2_0002,False,False,True,True,labeled:FALSE,31.51,2945,481,0.000206,VERDICT: FALSE\nRULE: default false
+hard2_0003,True,False,False,True,labeled:FALSE,39.28,2942,889,0.000284,VERDICT: FALSE\nRULE: default false
+hard2_0004,True,False,False,True,labeled:FALSE,48.18,2944,597,0.000228,VERDICT: FALSE\nRULE: default false
+hard2_0005,True,False,False,True,labeled:FALSE,53.17,2944,434,0.000197,VERDICT: FALSE\nRULE: default false
+hard2_0006,True,False,False,True,labeled:FALSE,61.75,2945,547,0.000219,VERDICT: FALSE\nRULE: default false
+hard2_0007,False,True,False,True,labeled:TRUE,74.81,2944,1326,0.000367,"VERDICT: TRUE\nRULE: constant operation\n\nEq 1 forces every product to be a constant, making both sides of Eq 2 equal in any magma."
+hard2_0008,True,False,False,True,labeled:FALSE,78.48,2944,681,0.000244,VERDICT: FALSE\nRULE: default false
+hard2_0009,False,True,False,True,labeled:TRUE,84.63,2944,643,0.000237,"VERDICT: TRUE\nRULE: constant operation\n\nThe given equation forces every binary product to be a constant element, which collapses the magma to a single‐element structure; in such a magma every equat"
+hard2_0010,False,False,True,True,labeled:FALSE,93.96,2945,685,0.000245,VERDICT: FALSE\nRULE: default false
+hard2_0011,False,False,True,True,labeled:FALSE,5.55,2941,885,0.000283,VERDICT: FALSE\nRULE: default false
+hard2_0012,False,False,True,True,labeled:FALSE,13.12,2944,742,0.000256,VERDICT: FALSE\nRULE: default false
+hard2_0013,False,False,True,True,labeled:FALSE,21.93,2944,982,0.000301,VERDICT: FALSE\nRULE: default false
+hard2_0014,False,False,True,True,labeled:FALSE,29.43,2944,856,0.000277,VERDICT: FALSE\nRULE: default false
+hard2_0015,False,False,True,True,labeled:FALSE,33.40,2943,293,0.000170,VERDICT: FALSE\nRULE: default false
+hard2_0016,False,True,False,True,labeled:TRUE,46.37,2943,1229,0.000348,VERDICT: TRUE\nRULE: left projection
+hard2_0017,True,False,False,True,labeled:FALSE,50.28,2944,326,0.000177,VERDICT: FALSE\nRULE: default false
+hard2_0018,True,False,False,True,labeled:FALSE,59.15,2941,832,0.000273,VERDICT: FALSE\nRULE: default false
+hard2_0019,True,True,True,True,labeled:TRUE,64.81,2943,562,0.000222,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe premise x = (((y*y)*z)*x)*w yields rhsVars = 4, Lx = FALSE, Rx = FALSE, matching motif C1. Hence the target equation holds in all magmas."
+hard2_0020,False,False,True,True,labeled:FALSE,75.45,2944,980,0.000301,VERDICT: FALSE\nRULE: default false
+hard2_0021,True,True,True,True,labeled:TRUE,82.54,2943,891,0.000284,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0022,True,False,False,True,labeled:FALSE,89.88,2944,872,0.000280,VERDICT: FALSE\nRULE: default false
+hard2_0023,True,False,False,True,labeled:FALSE,89.96,2941,698,0.000247,VERDICT: FALSE\nRULE: default false
+hard2_0024,True,False,False,True,labeled:FALSE,4.28,2941,629,0.000234,VERDICT: FALSE\nRULE: default false
+hard2_0025,False,False,True,True,labeled:FALSE,11.13,2942,846,0.000275,VERDICT: FALSE\nRULE: default false
+hard2_0026,True,False,False,True,labeled:FALSE,16.14,2944,669,0.000242,VERDICT: FALSE\nRULE: default false
+hard2_0027,False,False,True,True,labeled:FALSE,24.98,2945,892,0.000284,VERDICT: FALSE\nRULE: default false
+hard2_0028,True,False,False,True,labeled:FALSE,33.50,2942,749,0.000257,VERDICT: FALSE\nRULE: default false
+hard2_0029,False,False,True,True,labeled:FALSE,42.05,2942,1061,0.000316,VERDICT: FALSE\nRULE: default false
+hard2_0030,True,False,False,True,labeled:FALSE,47.85,2943,574,0.000224,VERDICT: FALSE\nRULE: default false
+hard2_0031,False,False,True,True,labeled:FALSE,58.55,2944,1382,0.000377,VERDICT: FALSE\nRULE: default false
+hard2_0032,False,True,False,True,labeled:TRUE,63.70,2942,974,0.000300,VERDICT: TRUE\nRULE: right projection
+hard2_0033,True,True,True,True,labeled:TRUE,69.77,2944,552,0.000220,"VERDICT: TRUE\nRULE: contradiction motif\n\nThe bare side x = y * ((z * (x * x)) * y) has rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, xCount=2, satisfying motif C6, which yields a univers"
+hard2_0034,False,False,True,True,labeled:FALSE,77.42,2942,445,0.000199,VERDICT: FALSE\nRULE: default false
+hard2_0035,True,False,False,True,labeled:FALSE,86.75,2944,650,0.000238,VERDICT: FALSE\nRULE: default false
+hard2_0036,True,False,False,True,labeled:FALSE,96.25,2945,1232,0.000349,VERDICT: FALSE\nRULE: default false
+hard2_0037,True,True,True,True,labeled:TRUE,2.51,2944,343,0.000180,VERDICT: TRUE\nRULE: right projection
+hard2_0038,False,False,True,True,labeled:FALSE,17.04,2944,1222,0.000347,VERDICT: FALSE\nRULE: default false
+hard2_0039,True,False,False,True,labeled:FALSE,20.35,2944,669,0.000242,VERDICT: FALSE\nRULE: default false
+hard2_0040,True,True,True,True,labeled:TRUE,28.34,2941,531,0.000216,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0041,False,False,True,True,labeled:FALSE,35.65,2945,697,0.000247,VERDICT: FALSE\nRULE: default false
+hard2_0042,False,False,True,True,labeled:FALSE,42.51,2944,338,0.000179,VERDICT: FALSE\nRULE: default false
+hard2_0043,False,False,True,True,labeled:FALSE,51.44,2944,614,0.000231,VERDICT: FALSE\nRULE: default false
+hard2_0044,True,False,False,True,labeled:FALSE,57.68,2944,509,0.000212,VERDICT: FALSE\nRULE: default false
+hard2_0045,False,True,False,True,labeled:TRUE,65.92,2942,723,0.000252,VERDICT: TRUE\nRULE: constant operation
+hard2_0046,False,True,False,True,labeled:TRUE,75.61,2944,1060,0.000316,"VERDICT: TRUE\nRULE: constant operation\n\nThe identity forces every product to be a universal constant, making both equations hold in any magma."
+hard2_0047,False,True,False,True,labeled:TRUE,87.16,2942,1543,0.000408,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe source equation forces a right‑argument dependent operation, which also satisfies the target equation; thus the implication holds in all magmas."
+hard2_0048,False,True,False,True,labeled:TRUE,93.82,2944,1202,0.000343,VERDICT: TRUE\nRULE: constant operation
+hard2_0049,True,False,False,True,labeled:FALSE,3.17,2944,369,0.000185,VERDICT: FALSE\nRULE: default false
+hard2_0050,True,True,True,True,labeled:TRUE,8.42,2941,530,0.000215,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0051,False,False,True,True,labeled:FALSE,18.76,2944,951,0.000296,VERDICT: FALSE\nRULE: default false
+hard2_0052,False,False,True,True,labeled:FALSE,25.73,2944,927,0.000291,VERDICT: FALSE\nRULE: default false
+hard2_0053,True,False,False,True,labeled:FALSE,98.27,2945,1008,0.000306,VERDICT: FALSE\nRULE: default false
+hard2_0054,False,True,False,True,labeled:TRUE,39.41,2944,396,0.000190,VERDICT: TRUE\nRULE: constant operation
+hard2_0055,False,False,True,True,labeled:FALSE,48.23,2944,575,0.000224,VERDICT: FALSE\nRULE: default false
+hard2_0056,False,False,True,True,labeled:FALSE,58.22,2945,1284,0.000359,VERDICT: FALSE\nRULE: default false
+hard2_0057,True,True,True,True,labeled:TRUE,66.85,2945,1423,0.000385,VERDICT: TRUE\nRULE: right projection
+hard2_0058,True,False,False,True,labeled:FALSE,71.53,2945,727,0.000253,VERDICT: FALSE\nRULE: default false
+hard2_0059,True,False,False,True,labeled:FALSE,78.57,2945,647,0.000238,VERDICT: FALSE\nRULE: default false
+hard2_0060,True,False,False,True,labeled:FALSE,87.84,2944,947,0.000295,VERDICT: FALSE\nRULE: default false
+hard2_0061,True,False,False,True,labeled:FALSE,93.02,2944,513,0.000212,VERDICT: FALSE\nRULE: right-zero witness
+hard2_0062,False,True,False,True,labeled:TRUE,6.52,2942,682,0.000244,VERDICT: TRUE\nRULE: constant operation
+hard2_0063,True,False,False,True,labeled:FALSE,13.34,2941,417,0.000194,VERDICT: FALSE\nRULE: default false
+hard2_0064,False,False,True,True,labeled:FALSE,20.32,2945,447,0.000200,VERDICT: FALSE\nRULE: default false
+hard2_0065,True,False,False,True,labeled:FALSE,31.28,2942,959,0.000297,VERDICT: FALSE\nRULE: default false
+hard2_0066,True,True,True,True,labeled:TRUE,44.41,2945,530,0.000216,"VERDICT: TRUE\nRULE: contradiction motif\nThe features satisfy C1, giving a decisive TRUE."
+hard2_0067,False,False,True,True,labeled:FALSE,51.61,2946,558,0.000221,VERDICT: FALSE\nRULE: default false
+hard2_0068,False,True,False,True,labeled:TRUE,61.96,2944,1301,0.000362,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces all products to be a single constant, making any other equation hold."
+hard2_0069,True,False,False,True,labeled:FALSE,66.49,2944,691,0.000246,VERDICT: FALSE\nRULE: default false
+hard2_0070,True,False,False,True,labeled:FALSE,74.34,2942,756,0.000258,VERDICT: FALSE\nRULE: default false
+hard2_0071,False,True,False,True,labeled:TRUE,84.52,2942,950,0.000295,VERDICT: TRUE\nRULE: constant operation
+hard2_0072,True,True,True,True,labeled:TRUE,89.88,2944,562,0.000222,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0073,True,True,True,True,labeled:TRUE,6.56,2944,905,0.000287,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0074,True,True,True,True,labeled:TRUE,11.14,2945,979,0.000301,VERDICT: TRUE\nRULE: right projection
+hard2_0075,True,False,False,True,labeled:FALSE,15.99,2944,452,0.000201,VERDICT: FALSE\nRULE: default false
+hard2_0076,False,False,True,True,labeled:FALSE,27.65,2944,1203,0.000343,VERDICT: FALSE\nRULE: counterexample witness
+hard2_0077,False,False,True,True,labeled:FALSE,34.31,2944,854,0.000277,VERDICT: FALSE\nRULE: default false
+hard2_0078,True,False,False,True,labeled:FALSE,41.65,2942,751,0.000257,VERDICT: FALSE\nRULE: default false
+hard2_0079,True,False,False,True,labeled:FALSE,50.08,2944,881,0.000282,VERDICT: FALSE\nRULE: default false
+hard2_0080,True,True,True,True,labeled:TRUE,56.13,2944,899,0.000286,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0081,True,False,False,True,labeled:FALSE,62.38,2944,566,0.000222,VERDICT: FALSE\nRULE: default false
+hard2_0082,True,False,False,True,labeled:FALSE,70.28,2943,623,0.000233,VERDICT: FALSE\nRULE: default false
+hard2_0083,True,True,True,True,labeled:TRUE,83.26,2944,1489,0.000398,VERDICT: TRUE\nRULE: right projection
+hard2_0084,False,True,False,True,labeled:TRUE,89.91,2944,1281,0.000358,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation forces every column of the operation table to be constant, making the magma a constant magma, which trivially satisfies the second equation."
+hard2_0085,True,False,False,True,labeled:FALSE,94.94,2944,801,0.000267,VERDICT: FALSE\nRULE: default false
+hard2_0086,True,False,False,True,labeled:FALSE,6.22,2944,447,0.000200,VERDICT: FALSE\nRULE: default false
+hard2_0087,False,True,False,True,labeled:TRUE,17.74,2944,1067,0.000318,"VERDICT: TRUE\nRULE: constant forcing\n\nThe equation forces every product to evaluate to a constant, making the target equation hold in all magmas."
+hard2_0088,False,False,True,True,labeled:FALSE,21.07,2941,513,0.000212,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard2_0089,True,True,True,True,labeled:TRUE,27.20,2944,327,0.000177,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0090,False,False,True,True,labeled:FALSE,39.40,2942,1248,0.000352,VERDICT: FALSE\nRULE: default false
+hard2_0091,True,True,True,True,labeled:TRUE,45.13,2944,531,0.000216,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0092,False,True,False,True,labeled:TRUE,54.42,2944,975,0.000300,VERDICT: TRUE\nRULE: constant operation
+hard2_0093,False,False,True,True,labeled:FALSE,60.87,2944,889,0.000284,VERDICT: FALSE\nRULE: default false
+hard2_0094,True,False,False,True,labeled:FALSE,68.68,2945,681,0.000244,VERDICT: FALSE\nRULE: default false
+hard2_0095,False,False,True,True,labeled:FALSE,74.89,2943,910,0.000288,VERDICT: FALSE\nRULE: default false
+hard2_0096,False,True,False,True,labeled:TRUE,86.76,2943,1377,0.000376,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0097,True,True,True,True,labeled:TRUE,91.11,2943,716,0.000251,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0098,True,False,False,True,labeled:FALSE,37.46,2944,773,0.000262,VERDICT: FALSE\nRULE: default false
+hard2_0099,True,True,True,True,labeled:TRUE,5.29,2944,797,0.000266,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0100,False,True,False,True,labeled:TRUE,11.76,2943,1040,0.000312,VERDICT: TRUE\nRULE: exact identity
+hard2_0101,True,True,True,True,labeled:TRUE,16.48,2938,563,0.000222,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0102,False,False,True,True,labeled:FALSE,25.10,2944,621,0.000233,VERDICT: FALSE\nRULE: default false
+hard2_0103,True,True,True,True,labeled:TRUE,34.59,2942,941,0.000294,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe given equation forces the binary operation to be a constant function, which makes the target equation hold in every magma."
+hard2_0104,False,False,True,True,labeled:FALSE,45.61,2943,1529,0.000405,VERDICT: FALSE\nRULE: counterexample
+hard2_0105,False,False,True,True,labeled:FALSE,49.37,2944,644,0.000237,VERDICT: FALSE\nRULE: default false
+hard2_0106,True,True,True,True,labeled:TRUE,57.13,2944,939,0.000293,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0107,True,False,False,True,labeled:FALSE,63.14,2945,650,0.000238,VERDICT: FALSE\nRULE: default false
+hard2_0108,False,True,False,True,labeled:TRUE,71.35,2943,662,0.000241,VERDICT: TRUE\nRULE: constant operation
+hard2_0109,False,False,True,True,labeled:FALSE,79.70,2945,777,0.000262,VERDICT: FALSE\nRULE: default false
+hard2_0110,True,False,False,True,labeled:FALSE,86.20,2944,495,0.000209,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in general for arbitrary magmas.
+hard2_0111,True,False,False,True,labeled:FALSE,95.87,2943,834,0.000273,VERDICT: FALSE\nRULE: default false
+hard2_0112,False,False,True,True,labeled:FALSE,6.92,2943,558,0.000221,VERDICT: FALSE\nRULE: default false
+hard2_0113,True,False,False,True,labeled:FALSE,16.50,2944,974,0.000300,VERDICT: FALSE\nRULE: default false
+hard2_0114,True,True,True,True,labeled:TRUE,22.64,2941,618,0.000232,"VERDICT: TRUE\nRULE: structural heuristic\n\nThe equation forces all elements to be equal in any magma, so the consequent holds in every model."
+hard2_0115,True,False,False,True,labeled:FALSE,30.55,2944,697,0.000247,VERDICT: FALSE\nRULE: default false
+hard2_0116,True,False,False,True,labeled:FALSE,37.65,2944,648,0.000238,VERDICT: FALSE\nRULE: default false
+hard2_0117,True,False,False,True,labeled:FALSE,47.04,2942,787,0.000264,VERDICT: FALSE\nRULE: default false
+hard2_0118,False,False,True,True,labeled:FALSE,51.88,2945,468,0.000204,VERDICT: FALSE\nRULE: default false
+hard2_0119,True,False,False,True,labeled:FALSE,59.01,2941,557,0.000221,VERDICT: FALSE\nRULE: default false
+hard2_0120,True,True,True,True,labeled:TRUE,69.20,2944,768,0.000261,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0121,True,False,False,True,labeled:FALSE,80.54,2944,1583,0.000416,VERDICT: FALSE\nRULE: default false
+hard2_0122,False,False,True,True,labeled:FALSE,85.00,2944,1009,0.000307,VERDICT: FALSE\nRULE: default false
+hard2_0123,False,False,True,True,labeled:FALSE,92.93,2944,943,0.000294,VERDICT: FALSE\nRULE: default false
+hard2_0124,False,True,False,True,labeled:TRUE,7.78,2944,1203,0.000343,VERDICT: TRUE\nRULE: left projection
+hard2_0125,False,False,True,True,labeled:FALSE,12.53,2944,869,0.000280,VERDICT: FALSE\nRULE: default false
+hard2_0126,True,False,False,True,labeled:FALSE,19.86,2940,612,0.000231,VERDICT: FALSE\nRULE: default false
+hard2_0127,True,True,True,True,labeled:TRUE,25.30,2944,457,0.000202,VERDICT: TRUE\nRULE: exact renaming
+hard2_0128,True,False,False,True,labeled:FALSE,37.98,2944,1360,0.000373,VERDICT: FALSE\nRULE: default false
+hard2_0129,False,False,True,True,labeled:FALSE,44.02,2944,897,0.000285,VERDICT: FALSE\nRULE: default false
+hard2_0130,True,True,True,True,labeled:TRUE,50.05,2944,649,0.000238,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0131,True,False,False,True,labeled:FALSE,55.80,2944,519,0.000213,VERDICT: FALSE\nRULE: default false
+hard2_0132,True,True,True,True,labeled:TRUE,66.33,2943,982,0.000301,VERDICT: TRUE\nRULE: trivial implication
+hard2_0133,False,False,True,True,labeled:FALSE,72.10,2944,500,0.000210,VERDICT: FALSE\nRULE: default false
+hard2_0134,False,False,True,True,labeled:FALSE,79.27,2944,658,0.000240,VERDICT: FALSE\nRULE: default false
+hard2_0135,False,False,True,True,labeled:FALSE,87.78,2944,769,0.000261,VERDICT: FALSE\nRULE: default false
+hard2_0136,True,False,False,True,labeled:FALSE,94.60,2944,727,0.000253,VERDICT: FALSE\nRULE: right-zero witness
+hard2_0137,True,False,False,True,labeled:FALSE,12.89,2945,1613,0.000421,VERDICT: FALSE\nRULE: default false
+hard2_0138,True,False,False,True,labeled:FALSE,19.19,2944,1355,0.000372,VERDICT: FALSE\nRULE: default false
+hard2_0139,False,False,True,True,labeled:FALSE,29.13,2944,1752,0.000448,VERDICT: FALSE\nRULE: default false
+hard2_0140,True,True,True,True,labeled:TRUE,31.17,2944,640,0.000236,VERDICT: TRUE\nRULE: left projection
+hard2_0141,True,True,True,True,labeled:TRUE,42.07,2944,1198,0.000342,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0142,False,False,True,True,labeled:FALSE,55.08,2941,2168,0.000527,VERDICT: FALSE\nRULE: default false
+hard2_0143,False,False,True,True,labeled:FALSE,54.24,2944,823,0.000271,VERDICT: FALSE\nRULE: default false
+hard2_0144,False,True,False,True,labeled:TRUE,60.66,2943,623,0.000233,VERDICT: TRUE\nRULE: constant operation
+hard2_0145,True,False,False,True,labeled:FALSE,65.96,2944,396,0.000190,VERDICT: FALSE\nRULE: default false
+hard2_0146,False,True,False,True,labeled:TRUE,79.91,2943,1499,0.000400,VERDICT: TRUE\nRULE: constant operation
+hard2_0147,True,False,False,True,labeled:FALSE,83.36,2944,605,0.000230,VERDICT: FALSE\nRULE: default false
+hard2_0148,False,False,True,True,labeled:FALSE,92.09,2944,729,0.000253,VERDICT: FALSE\nRULE: default false
+hard2_0149,True,False,False,True,labeled:FALSE,4.69,2944,692,0.000246,VERDICT: FALSE\nRULE: default false
+hard2_0150,False,False,True,True,labeled:FALSE,9.51,2943,371,0.000185,VERDICT: FALSE\nRULE: default false
+hard2_0151,False,False,True,True,labeled:FALSE,24.50,2944,1438,0.000388,VERDICT: FALSE\nRULE: default false
+hard2_0152,False,False,True,True,labeled:FALSE,29.59,2944,1051,0.000315,VERDICT: FALSE\nRULE: default false
+hard2_0153,True,False,False,True,labeled:FALSE,34.44,2944,542,0.000218,VERDICT: FALSE\nRULE: default false
+hard2_0154,True,False,False,True,labeled:FALSE,44.42,2944,991,0.000303,VERDICT: FALSE\nRULE: default false
+hard2_0155,True,False,False,True,labeled:FALSE,50.45,2942,722,0.000252,VERDICT: FALSE\nRULE: default false
+hard2_0156,False,False,True,True,labeled:FALSE,58.20,2944,735,0.000254,VERDICT: FALSE\nRULE: default false
+hard2_0157,False,False,True,True,labeled:FALSE,70.26,2943,1625,0.000424,VERDICT: FALSE\nRULE: default false
+hard2_0158,False,True,False,True,labeled:TRUE,73.66,2942,753,0.000258,VERDICT: TRUE\nRULE: constant operation
+hard2_0159,True,True,True,True,labeled:TRUE,79.71,2944,650,0.000238,VERDICT: TRUE\nRULE: contradiction motif
+hard2_0160,True,False,False,True,labeled:FALSE,88.02,2944,551,0.000220,VERDICT: FALSE\nRULE: default false
+hard2_0161,False,True,False,True,labeled:TRUE,98.45,2944,1258,0.000354,"VERDICT: TRUE\nRULE: constant operation\n\nThe premise matches rule 2.4: both sides of the source equation are non‑variable product terms whose variable sets can be renamed to be disjoint, forcing all"
+hard2_0162,True,False,False,True,labeled:FALSE,10.94,2944,1247,0.000352,VERDICT: FALSE\nRULE: default false
+hard2_0163,False,False,True,True,labeled:FALSE,19.17,2945,1590,0.000417,VERDICT: FALSE\nRULE: default false
+hard2_0164,True,False,False,True,labeled:FALSE,27.22,2944,1406,0.000382,VERDICT: FALSE\nRULE: default false
+hard2_0165,False,False,True,True,labeled:FALSE,32.32,2945,789,0.000265,VERDICT: FALSE\nRULE: default false
+hard2_0166,False,True,False,True,labeled:TRUE,40.23,2942,840,0.000274,VERDICT: TRUE\nRULE: constant operation
+hard2_0167,False,True,False,True,labeled:TRUE,48.82,2943,943,0.000294,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0168,True,True,True,True,labeled:TRUE,54.96,2943,887,0.000283,VERDICT: TRUE\nRULE: structural heuristic
+hard2_0169,False,False,True,True,labeled:FALSE,63.14,2944,911,0.000288,VERDICT: FALSE\nRULE: default false
+hard2_0170,True,False,False,True,labeled:FALSE,67.60,2942,468,0.000204,VERDICT: FALSE\nRULE: default false
+hard2_0171,False,False,True,True,labeled:FALSE,77.40,2943,985,0.000302,VERDICT: FALSE\nRULE: default false
+hard2_0172,False,False,True,True,labeled:FALSE,82.80,2945,530,0.000216,VERDICT: FALSE\nRULE: default false
+hard2_0173,False,False,True,True,labeled:FALSE,90.93,2943,466,0.000203,VERDICT: FALSE\nRULE: default false
+hard2_0174,True,False,False,True,labeled:FALSE,3.89,2944,507,0.000211,VERDICT: FALSE\nRULE: default false
+hard2_0175,False,False,True,True,labeled:FALSE,10.92,2944,381,0.000187,VERDICT: FALSE\nRULE: default false
+hard2_0176,False,False,True,True,labeled:FALSE,19.10,2944,459,0.000202,VERDICT: FALSE\nRULE: default false
+hard2_0177,False,False,True,True,labeled:FALSE,28.54,2944,710,0.000250,VERDICT: FALSE\nRULE: default false
+hard2_0178,True,False,False,True,labeled:FALSE,36.93,2944,1100,0.000324,VERDICT: FALSE\nRULE: default false
+hard2_0179,False,False,True,True,labeled:FALSE,43.23,2945,553,0.000220,VERDICT: FALSE\nRULE: default false
+hard2_0180,False,True,False,True,labeled:TRUE,52.33,2943,907,0.000287,VERDICT: TRUE\nRULE: constant operation
+hard2_0181,False,True,False,True,labeled:TRUE,57.90,2944,659,0.000240,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * (y * ((y * z) * y)) is of the form x = x * T with T not containing x, which forces a left‑projection law a * b = a. Under this law the targe"
+hard2_0182,False,False,True,True,labeled:FALSE,70.08,2943,1188,0.000340,VERDICT: FALSE\nRULE: default false
+hard2_0183,False,True,False,True,labeled:TRUE,75.32,2944,1059,0.000316,VERDICT: TRUE\nRULE: left projection
+hard2_0184,True,True,True,True,labeled:TRUE,79.10,2944,299,0.000172,VERDICT: TRUE\nRULE: right projection
+hard2_0185,True,False,False,True,labeled:FALSE,90.71,2944,1092,0.000322,VERDICT: FALSE\nRULE: default false
+hard2_0186,True,False,False,True,labeled:FALSE,98.10,2944,1033,0.000311,VERDICT: FALSE\nRULE: default false
+hard2_0187,False,False,True,True,labeled:FALSE,9.03,2942,762,0.000260,VERDICT: FALSE\nRULE: default false
+hard2_0188,False,True,False,True,labeled:TRUE,15.86,2944,756,0.000258,VERDICT: TRUE\nRULE: exact instance
+hard2_0189,True,False,False,True,labeled:FALSE,23.30,2944,731,0.000254,VERDICT: FALSE\nRULE: default false
+hard2_0190,False,True,False,True,labeled:TRUE,31.19,2943,516,0.000213,"VERDICT: TRUE\nRULE: constant operation\n\nThe equation x * x = ((y * z) * w) * u forces every product to be a constant (the variable sets on the two sides are disjoint), making the magma a constant m"
+hard2_0191,False,True,False,True,labeled:TRUE,44.56,2942,1607,0.000420,VERDICT: TRUE\nRULE: structural heuristic\n\nThe first equation is a bare identity that forces a strong collapse behavior; under this collapse the second equation reduces to the same term on both side
+hard2_0192,False,True,False,True,labeled:TRUE,46.58,2944,389,0.000189,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * (y * ((y * z) * y)) is of the form x = x * T with T not containing x, forcing a·b = a for all elements. Under this projection both sides of "
+hard2_0193,True,False,False,True,labeled:FALSE,55.27,2945,964,0.000298,VERDICT: FALSE\nRULE: default false
+hard2_0194,False,False,True,True,labeled:FALSE,61.56,2944,564,0.000222,VERDICT: FALSE\nRULE: default false
+hard2_0195,False,True,False,True,labeled:TRUE,70.08,2944,637,0.000236,VERDICT: TRUE\nRULE: constant operation
+hard2_0196,False,False,True,True,labeled:FALSE,76.24,2944,435,0.000197,VERDICT: FALSE\nRULE: default false
+hard2_0197,False,False,True,True,labeled:FALSE,83.48,2942,572,0.000223,VERDICT: FALSE\nRULE: right-zero witness
+hard2_0198,True,False,False,True,labeled:FALSE,93.02,2943,522,0.000214,VERDICT: FALSE\nRULE: default false
+hard2_0199,True,False,False,True,labeled:FALSE,5.08,2944,766,0.000260,VERDICT: FALSE\nRULE: default false
+hard2_0200,True,False,False,True,labeled:FALSE,11.00,2942,551,0.000219,VERDICT: FALSE\nRULE: default false

@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,,,False,,1404.13,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0002,False,,,False,,2220.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0003,True,,,False,,2267.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0004,False,,,False,,1373.38,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0005,False,,,False,,1600.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0006,False,,,False,,1308.07,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0007,True,,,False,,1483.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0008,False,,,False,,2056.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0009,False,,,False,,2284.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0010,False,,,False,,1496.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0011,False,,,False,,1669.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0012,False,True,False,True,labeled:TRUE,1275.39,3057,831,0.000760,"VERDICT: TRUE\nRULE: constant operation\n\nEquation 1 has the form A = B where A = (x * y) * x and B = (z * w) * u. The variable sets {x, y} and {z, w, u} are disjoint, and both sides are product term"
+hard1_0013,True,,,False,,1962.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0014,False,,,False,,1848.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0015,False,,,False,,1976.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0016,False,,,False,,1486.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0017,False,,,False,,1781.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0018,True,,,False,,2173.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0019,False,,,False,,1342.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0020,False,,,False,,1709.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0021,False,,,False,,1845.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0022,False,,,False,,1192.08,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0023,True,,,False,,2031.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0024,False,,,False,,2127.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0025,False,,,False,,1765.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0026,False,,,False,,1584.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0027,True,,,False,,1713.84,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0028,False,,,False,,2256.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0029,False,,,False,,1946.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0030,False,,,False,,2103.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0031,False,,,False,,1306.06,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0032,False,,,False,,1875.84,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0033,False,,,False,,1795.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0034,True,,,False,,2187.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0035,True,True,True,True,labeled:TRUE,353.75,3057,864,0.000774,"VERDICT: TRUE\nRULE: left projection\n\nEquation 1 is of the form x = x * T, where T = ((y * z) * (w * u)) does not contain x. This forces the left projection a * b = a. Under left projection, the rig"
+hard1_0036,False,,,False,,1894.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0037,False,,,False,,2210.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0038,False,,,False,,1502.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0039,False,,,False,,1858.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0040,True,True,True,True,labeled:TRUE,1981.80,3056,864,0.000773,"VERDICT: TRUE\nRULE: left projection\n\nEquation 1 is of the form x = x * T, where T = ((y * (z * w)) * w) does not contain x. This forces the left projection a * b = a. Under left projection, both si"
+hard1_0041,True,,,False,,1347.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0042,False,,,False,,1811.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0043,False,,,False,,2162.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0044,True,True,True,True,labeled:TRUE,609.68,3054,1878,0.001179,"VERDICT: TRUE\nRULE: right projection\n\nEq1 is of the form x = T * x where T = (y * (y * z)) does not contain x, which forces right projection (a * b = b). Under right projection, the right side of E"
+hard1_0045,False,,,False,,1528.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0046,True,,,False,,2075.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0047,False,,,False,,1488.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0048,False,,,False,,1667.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0049,False,,,False,,1993.18,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0050,True,True,True,True,labeled:TRUE,547.28,3057,1912,0.001193,"VERDICT: TRUE\nRULE: left projection\n\nEquation 1 is of the form x = x * T, where T = (((y * z) * w) * u) does not contain x. This forces left projection (a * b = a). Under left projection, Equation "
+hard1_0051,False,False,True,True,labeled:FALSE,861.78,3055,1754,0.001129,VERDICT: FALSE\nRULE: leftmost exclusion\n\nEq1 has the same leftmost variable (x) on both sides. Eq2 has different leftmost variables (x and z) on its two sides. This triggers the leftmost exclusion 
+hard1_0052,True,,,False,,2029.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0053,False,,,False,,2212.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0054,True,,,False,,1434.15,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0055,False,,,False,,1850.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0056,True,,,False,,1403.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0057,False,,,False,,1630.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0058,False,,,False,,2006.55,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0059,True,,,False,,1741.66,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0060,True,True,True,True,labeled:TRUE,892.16,3057,1986,0.001222,"VERDICT: TRUE\nRULE: source collapse\n\nEquation 1 matches the canonical form x = (((y * z) * x) * z) * x, which forces right projection (p * q = q). Under right projection, the right side of Equation"
+hard1_0061,True,,,False,,1683.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0062,False,,,False,,2039.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0063,True,,,False,,1260.51,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0064,True,,,False,,1664.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0065,True,,,False,,2087.09,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0066,False,,,False,,1614.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0067,True,,,False,,1922.30,0,0,0.000000,[EXCEPTION] TimeoutError: 
+hard1_0068,False,,,False,,1214.62,0,0,0.000000,[EXCEPTION] RuntimeError: Failed after 3 retries
+hard1_0069,True,,,False,,1677.30,0,0,0.000000,[EXCEPTION] TimeoutError: 

@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-12T12:56:15.289524+00:00",
+  "publicCode": "EQT01-000005",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000005",
+  "data": {
+    "cnItemId": "cn_661e488783b6491a8c68b2d6125a4bc0",
+    "parentCnItemId": null,
+    "rootCnItemId": "cn_661e488783b6491a8c68b2d6125a4bc0",
+    "shareItemId": "cn_661e488783b6491a8c68b2d6125a4bc0",
+    "parentShareItemId": null,
+    "rootShareItemId": "cn_661e488783b6491a8c68b2d6125a4bc0",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-b2d8a87bf5b9f39c5911920665ef59416f04e6d3",
+    "entityName": "back1sair",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/262924112?v=4",
+    "cheatsheetTitle": "emma_1",
+    "cheatsheetContent": "You are a mathematician specializing in equational theories of magmas. \nYour task is to determine whether Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) over all magmas.\n---\n## CHEAT SHEET: FAST DECISION FILTERS\n\nTask: decide whether Eq1 implies Eq2 over all magmas.\n\nImmediate TRUE checks:\n- Eq2 tautology: L2 == R2.\n- Eq2 is Eq1 up to variable renaming or side swap.\n- Eq1 has very strong collapse/projection behavior forcing trivial structure.\n\nImmediate FALSE check:\n- If any finite magma satisfies Eq1 and violates Eq2, output FALSE immediately.\n\nDecision rule:\n- A verified counterexample is decisive.\n- If no quick filter resolves it, continue with full proof/counterexample workflow.\n---\nOutput format (use exact headers without any additional text or formatting):\nVERDICT: must be exactly TRUE or FALSE (in the same line).\nREASONING: must be non-empty.\nPROOF: required if VERDICT is TRUE, empty otherwise.\nCOUNTEREXAMPLE: required if VERDICT is FALSE, empty otherwise.",
+    "publishedAt": "2026-04-01T01:14:01Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_661e488783b6491a8c68b2d6125a4bc0",
+        "entityName": "back1sair",
+        "publishedAt": "2026-04-01T01:14:01Z",
+        "shareItemId": "cn_661e488783b6491a8c68b2d6125a4bc0"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_4f42acba-f13a-4dc1-9851-ff6570453578",
+    "publicCode": "EQT01-000005",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

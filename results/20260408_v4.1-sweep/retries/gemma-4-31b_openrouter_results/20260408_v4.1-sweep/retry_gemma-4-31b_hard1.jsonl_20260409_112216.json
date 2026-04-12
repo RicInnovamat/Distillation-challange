@@ -1,0 +1,39 @@
+{
+  "model": "gemma-4-31b (openrouter)",
+  "backend": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "dataset": "results/20260408_v4.1-sweep/retry_gemma-4-31b_hard1.jsonl",
+  "prompt_file": "cheatsheets/v4.1_10KB_cheatsheet.md",
+  "generated_at": "2026-04-09T07:22:16.262022+00:00",
+  "summary": {
+    "total": 1,
+    "correct": 0,
+    "wrong": 1,
+    "parse_errors": 0,
+    "accuracy": 0.0,
+    "true_as_true": 0,
+    "true_as_false": 1,
+    "false_as_true": 0,
+    "false_as_false": 0,
+    "total_cost_usd": 0.00078396,
+    "total_input_tokens": 3054,
+    "total_output_tokens": 891,
+    "avg_latency_s": 20.76906850001251
+  },
+  "problems": [
+    {
+      "problem_id": "hard1_0007",
+      "expected": true,
+      "predicted": false,
+      "correct": false,
+      "parse_ok": true,
+      "raw_verdict": "VERDICT: FALSE",
+      "latency_s": 20.769,
+      "input_tokens": 3054,
+      "output_tokens": 891,
+      "cost_usd": 0.000784,
+      "reasoning": "",
+      "content": "VERDICT: FALSE\nRULE: right-zero witness\n\nReasoning:\n1. Test Right-zero witness (a * b = b):\n   - Equation 1: x = (y * (y * (y * z))) * x.\n     Right-zero reduction: LHS = x, RHS = x. (Holds)\n   - Equation 2: x * y = z * (w * (w * y)).\n     Right-zero reduction: LHS = y, RHS = y. (Holds)\n   Wait, Right-zero witness holds for both. Let's try Left-zero.\n\n2. Test Left-zero witness (a * b = a):\n   - Equation 1: x = (y * (y * (y * z))) * x.\n     Left-zero reduction: LHS = x, RHS = y. (Fails)\n   Left-zero is not a witness.\n\n3. Test XOR parity witness (a * b = a + b mod 2):\n   - Equation 1: x = (y * (y * (y * z))) * x.\n     Parity LHS: {x: 1}\n     Parity RHS: {y: 3, z: 1, x: 1} -> {y: 1, z: 1, x: 1}\n     Parity differs (x vs x+y+z). (Fails)\n\n4. Re-evaluating Equation 1: x = (y * (y * (y * z))) * x.\n   This is a \"bare\" equation. Let's check the contradiction motifs (Step 2.8).\n   Normalize: x = (y * (y * (y * z))) * x.\n   rhsVars = 3 (x, y, z)\n   Lx = FALSE (leftmost is y)\n   Rx = TRUE (rightmost is x)\n   xTop = right (x is only in the right side of the top split)\n   topShape = m-v (product * variable)\n   rhsTotals = 113 (x:1, z:1, y:3)\n   xCount = 1\n   Vector: rhsVars=3, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-v, rhsTotals=113, xCount=1.\n   None of the motifs (C1, C4, C5, C6, C7, C8, C9, C11, C12, C13, C15) match.\n\n5. Check Right-projection (Step 2.7):\n   Eq 1 is x = T * x where T = (y * (y * (y * z))). T does not contain x.\n   This forces right-projection: a * b = b.\n   Under right-projection, Eq 2: x * y = y and z * (w * (w * y)) = y.\n   Both sides are y. Thus, Eq 2 holds under right-projection.\n   RULE: right projection (Step 2.7) implies TRUE.\n\nWait, I must re-read Step 2.7 carefully: \"If Equation 1 is bare and has the form x = T * x, where T does NOT contain x, then Equation 1 forces right-projection-like behavior: a*b = b for all a,b. If Equation 2 also holds when every product p*q is replaced by q (rightmost variable), answer TRUE.\"\n\nEq 1: x = (y * (y * (y * z))) * x.\nT = (y * (y * (y * z))). T does not contain x.\nThis matches the form x = T * x.\nEq 2: x * y = z * (w * (w * y)).\nRightmost of LHS (x * y) is y.\nRightmost of RHS (z * (w * (w * y))) is y.\ny = y.\n\nVERDICT: TRUE\nRULE: right projection"
+    }
+  ]
+}

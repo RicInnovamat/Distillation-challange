@@ -31,11 +31,14 @@ A [magma](https://en.wikipedia.org/wiki/Magma_(algebra)) is a set with a single 
 │   └── prompts/             # Prompt templates (v0_baseline.txt, etc.)
 ├── cheatsheets/             # Versioned prompt+cheatsheet files
 │   ├── v3.4.1_10KB_cheatsheet.md  # v3.4.1 cheatsheet (8.9KB)
-│   └── v4_10KB_cheatsheet.md      # Current v4 cheatsheet (8.8KB)
+│   ├── v4_10KB_cheatsheet.md      # v4 cheatsheet (8.8KB)
+│   └── v4.1_10KB_cheatsheet.md    # Current v4.1 cheatsheet (10.2KB)
 ├── results/                 # Organized by batch: YYYYMMDD_HHMM_description/
 │   ├── baselines/           # Baseline (no cheatsheet) results per model/dataset + SUMMARY.md
 │   ├── iterations/          # Per-iteration results: v{N}_{model}_{dataset}.csv
-│   └── 20260406_2308_v4-all-models-hard/  # Full v4 sweep (7 models x 3 hard datasets)
+│   ├── 20260406_2308_v4-all-models-hard/  # v4 sweep (7 models x 3 hard datasets)
+│   ├── 20260408_v4.1-sweep/       # v4.1 sweep (4 models x 3 hard datasets + retries)
+│   └── v4.1_results.pdf           # v4.1 full results report with confusion matrices
 ├── Training_data/           # Official problem sets (JSONL)
 │   ├── normal.jsonl         # 1000 problems (500 TRUE / 500 FALSE)
 │   ├── hard1.jsonl          # 69 problems (deduplicated hard set)
@@ -83,6 +86,22 @@ All model inference runs in the cloud via [OpenRouter](https://openrouter.ai/). 
 
 ## Results
 
+### v4.1 Cheatsheet -- 4-Model Hard Sweep (2026-04-09)
+
+v4.1_10KB_cheatsheet.md (10.2KB) evaluated on 4 models x hard1/hard2/hard3 via OpenRouter. All parse errors resolved. Full report with confusion matrices: [`results/v4.1_results.pdf`](results/v4.1_results.pdf).
+
+| Model | hard1 (69) | hard2 (200) | hard3 (400) | ALL (669) | Bias |
+|-------|-----------|-------------|-------------|-----------|------|
+| **grok-4.1-fast** | 53/69 (76.8%) | **160/200 (80.0%)** | 237/400 (59.2%) | **450/669 (67.3%)** | Balanced |
+| **gpt-oss-120b** | **54/69 (78.3%)** | 150/200 (75.0%) | **240/400 (60.0%)** | 444/669 (66.4%) | Slight TRUE |
+| gpt-oss-20b | 48/69 (69.6%) | 140/200 (70.0%) | 234/400 (58.5%) | 422/669 (63.1%) | Moderate TRUE |
+| gemma-4-31b | 51/69 (73.9%) | 117/200 (58.5%) | 226/399 (56.6%) | 394/668 (59.0%) | Extreme FALSE |
+
+**Key improvements over v4:**
+- **GPT-OSS-120b: +34pp hard1, +22pp hard2, +14pp hard3** -- was 43.9%/52.6%/46.1% in v4. Fixed by `temperature=1.0` + `max_tokens=65536`
+- **GPT-OSS-20b: 83 parse errors → 0** -- `temperature=0` caused OpenRouter to silently drop requests for reasoning models
+- **Harness fixes:** per-model params in `config/models.yaml`, per-request 180s timeout, null body guard, empty response retry
+
 ### v4 Cheatsheet -- Full Hard Sweep (2026-04-06)
 
 v4_10KB_cheatsheet.md (8.8KB) evaluated on all 7 models x hard1/hard2/hard3 via OpenRouter. Full results with JSON reasoning in `results/20260406_2308_v4-all-models-hard/`.
@@ -96,14 +115,6 @@ v4_10KB_cheatsheet.md (8.8KB) evaluated on all 7 models x hard1/hard2/hard3 via 
 | llama-3.3-70b | 45/69 (65.2%) | 100/200 (50.0%) | 206/400 (51.5%) | 0 | Total FALSE (0% TRUE recall) |
 | gpt-oss-20b | 38/65 (58.5%) | 76/174 (43.7%) | 179/358 (50.0%) | 72 | TRUE bias + parse err |
 | gpt-oss-120b | 29/66 (43.9%) | 102/194 (52.6%) | 170/369 (46.1%) | 40 | Extreme TRUE bias |
-
-**Key findings:**
-- **Grok dominates** -- best accuracy on all 3 datasets, only model >60% on hard3, most balanced TRUE/FALSE predictions
-- **v4 creates polarized bias** -- DeepSeek/Llama answer FALSE on 99%+ of problems; GPT-OSS answers TRUE on 85-91%; only Grok stays balanced
-- **GPT-120b: 90% of failures from 1024-token truncation** -- reasoning cut off mid-step with no VERDICT emitted (now fixed: max_tokens increased to 16384)
-- **Llama: pure lookup table** -- 99.7% of failures are identical "RULE: default false" boilerplate with zero reasoning
-- **Gemini: fabricates heuristic rules** not in the cheatsheet ("rightmost exclusion", "count exclusion")
-- **Community benchmark:** Betka achieves 98% on hard200 with feature-first protocol + contradiction motifs
 
 ### Baseline (no cheatsheet)
 
@@ -156,7 +167,8 @@ v4_10KB_cheatsheet.md (8.8KB) evaluated on all 7 models x hard1/hard2/hard3 via 
 | Apr 6 | v4 full sweep: 7 models x 3 hard datasets (21 runs) | Done |
 | Apr 6 | JSON failure analysis + community intel review | Done |
 | Apr 7 | max_tokens increased to 16384, PPTX summary generated | Done |
-| Apr 7-9 | v5 cheatsheet: VERDICT-first, feature-first, spine isolation | |
+| Apr 8-9 | v4.1 sweep: temp=1.0 fix, harness hardening, 4 models x 3 hard | Done |
+| Apr 9+ | v5 cheatsheet: VERDICT-first, feature-first, spine isolation | |
 | Apr 10 | Evaluation models announced by SAIR | |
 | Apr 11 | Model-specific optimization begins | |
 | Apr 18 | Final review | |
