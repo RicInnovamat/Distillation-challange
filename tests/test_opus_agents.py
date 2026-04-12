@@ -120,15 +120,27 @@ def test_opus_orchestrator_frontmatter_fields():
     # falsely satisfy the "Bash" requirement.
     tools_str = fields.get("tools", "")
     tokens = [t.strip(" \t[]'\"") for t in tools_str.split(",")]
-    for required in ("Agent", "Read", "Write", "Bash"):
-        assert required in tokens, \
-            f"orchestrator missing required tool {required!r} in tokens={tokens!r}"
+    # Bash is the only required tool — the orchestrator is a thin wrapper
+    # around `scripts/run_opus_benchmark.py`. `Agent` must NOT appear:
+    # Claude Code subagents cannot spawn subagents, so listing `Agent` here
+    # would falsely advertise a capability the runtime silently strips.
+    assert "Bash" in tokens, \
+        f"orchestrator missing required tool 'Bash' in tokens={tokens!r}"
+    assert "Agent" not in tokens, \
+        f"orchestrator must not declare 'Agent' — nested subagent spawn is unsupported; tokens={tokens!r}"
 
 
 def test_opus_orchestrator_body_references_solver():
     _, body = _parse_frontmatter(ORCH_PATH)
     assert "opus-solver" in body, \
         "orchestrator must reference the opus-solver subagent by name"
+
+
+def test_opus_orchestrator_body_delegates_to_driver_script():
+    _, body = _parse_frontmatter(ORCH_PATH)
+    # The wrapper must tell the sonnet runtime to invoke the real driver.
+    assert "scripts/run_opus_benchmark.py" in body, \
+        "orchestrator body must reference scripts/run_opus_benchmark.py as the driver"
 
 
 def test_opus_orchestrator_body_enforces_no_answer_leak():
@@ -145,27 +157,6 @@ def test_opus_orchestrator_body_enforces_no_answer_leak():
     ), "orchestrator body must negate leaking the answer field to the solver"
 
 
-def test_opus_orchestrator_body_output_schema_fields():
-    _, body = _parse_frontmatter(ORCH_PATH)
-    # Every field `gen_pdf.py` reads must appear as a JSON key inside a
-    # fenced code block, not just as a bare word in prose. Extract all
-    # fenced blocks and concatenate them, then require each field to
-    # appear in the shape `"field":`.
-    code_blocks = re.findall(r"```.*?\n(.*?)```", body, re.DOTALL)
-    combined = "\n".join(code_blocks) if code_blocks else ""
-    assert combined, \
-        "orchestrator body must include at least one fenced code block documenting the JSON schema"
-    for field in (
-        "model", "backend", "model_id", "dataset", "prompt_file",
-        "generated_at", "summary", "problems",
-        "total", "correct", "wrong", "parse_errors", "accuracy",
-        "true_as_true", "true_as_false", "false_as_true", "false_as_false",
-    ):
-        pattern = rf'"{re.escape(field)}"\s*:'
-        assert re.search(pattern, combined), \
-            f"orchestrator body must document {field!r} as a JSON schema key inside a fenced code block"
-
-
 def test_opus_orchestrator_body_references_parse_verdict():
     _, body = _parse_frontmatter(ORCH_PATH)
     # The orchestrator must call back into eval_harness.parse_verdict
@@ -178,6 +169,87 @@ def test_opus_orchestrator_body_documents_dataset_paths():
     _, body = _parse_frontmatter(ORCH_PATH)
     for p in ("Training_data/hard1.jsonl", "Training_data/hard2.jsonl", "Training_data/hard3.jsonl"):
         assert p in body, f"orchestrator body missing dataset path {p}"
+
+
+# ---------------------------------------------------------------------------
+# scripts/run_opus_benchmark.py — the real driver
+# ---------------------------------------------------------------------------
+
+DRIVER_PATH = PROJECT_ROOT / "scripts" / "run_opus_benchmark.py"
+
+
+def test_driver_file_exists():
+    assert DRIVER_PATH.exists(), f"{DRIVER_PATH} not found"
+
+
+def test_driver_invokes_claude_cli_with_opus_solver_agent():
+    source = DRIVER_PATH.read_text()
+    # Must shell out to `claude` with `-p` (non-interactive) and
+    # `--agent opus-solver` so each subprocess is a fresh top-level
+    # Claude Code session that CAN dispatch opus-solver.
+    assert re.search(r'"claude"\s*,\s*\n?\s*"-p"', source, re.MULTILINE), \
+        "driver must invoke `claude -p` via subprocess"
+    assert '"--agent"' in source and '"opus-solver"' in source, \
+        "driver must pass --agent opus-solver to the claude CLI"
+
+
+def test_driver_imports_parse_verdict_from_eval_harness():
+    source = DRIVER_PATH.read_text()
+    assert re.search(r'from\s+eval_harness\s+import\s+parse_verdict', source), \
+        "driver must import parse_verdict from eval_harness"
+
+
+def test_driver_documents_all_three_dataset_paths():
+    source = DRIVER_PATH.read_text()
+    for p in ("hard1.jsonl", "hard2.jsonl", "hard3.jsonl"):
+        assert p in source, f"driver missing dataset {p}"
+
+
+def test_driver_anti_cheat_passes_only_equations():
+    source = DRIVER_PATH.read_text()
+    # The solver prompt must be built from equation1 and equation2. The
+    # `answer` key must NOT be referenced inside the function that builds
+    # the solver prompt. Grep the whole source for `answer` occurrences and
+    # require every one of them to be outside `call_solver`.
+    #
+    # Simpler structural check: the call_solver function body must not
+    # contain the literal word `answer`. Extract the function and scan.
+    m = re.search(r'def call_solver\([^)]*\)[^:]*:(.*?)(?=\ndef |\Z)', source, re.DOTALL)
+    assert m, "driver must define a call_solver function"
+    body = m.group(1)
+    assert "equation1" in body and "equation2" in body, \
+        "call_solver must read equation1 and equation2"
+    assert "answer" not in body, \
+        "call_solver must never reference the `answer` field (anti-cheat)"
+
+
+def test_driver_output_schema_fields():
+    source = DRIVER_PATH.read_text()
+    # Every top-level, summary, and per-problem field that gen_pdf.py reads
+    # must appear as a quoted dict key somewhere in the driver source.
+    for field in (
+        "model", "backend", "model_id", "dataset", "prompt_file",
+        "generated_at", "summary", "problems",
+        "total", "correct", "wrong", "parse_errors", "accuracy",
+        "true_as_true", "true_as_false", "false_as_true", "false_as_false",
+        "problem_id", "expected", "predicted", "parse_ok", "raw_verdict",
+        "reasoning", "content", "latency_s", "input_tokens", "output_tokens",
+        "cost_usd",
+    ):
+        assert f'"{field}"' in source, \
+            f"driver source missing JSON schema key {field!r}"
+
+
+def test_driver_never_retries_on_failure():
+    source = DRIVER_PATH.read_text()
+    # The benchmark measures raw one-shot performance. The driver must not
+    # retry a failed solver call. Check that `call_solver` is invoked
+    # exactly once per problem in the main loop — i.e., no retry loop
+    # around it (no `while` or `for _ in range(retries)` wrapping it).
+    assert not re.search(r'for\s+\w+\s+in\s+range\(\s*\w*retry\w*\s*\)', source, re.IGNORECASE), \
+        "driver must not retry failed solver calls"
+    assert not re.search(r'while.*retry', source, re.IGNORECASE), \
+        "driver must not retry failed solver calls in a while loop"
 
 
 # ---------------------------------------------------------------------------
