@@ -23,39 +23,59 @@ A [magma](https://en.wikipedia.org/wiki/Magma_(algebra)) is a set with a single 
 ## Repository Structure
 
 ```
-├── Plan.md                  # Project plan (phases, architecture, costs, timeline)
-├── Meetings_Notes_*.md      # Team meeting notes and decisions
-├── eval_harness.py          # Evaluation harness (JSONL → model API → CSV + accuracy)
+├── Plan.md                   # Project plan (phases, architecture, costs, timeline)
+├── eval_harness.py           # Evaluation harness (JSONL → model API → CSV + accuracy)
 ├── config/
-│   ├── models.yaml          # Model configuration for eval harness
-│   └── prompts/             # Prompt templates (v0_baseline.txt, etc.)
-├── cheatsheets/             # Versioned prompt+cheatsheet files
-│   ├── v3.4.1_10KB_cheatsheet.md  # v3.4.1 cheatsheet (8.9KB)
-│   ├── v4_10KB_cheatsheet.md      # v4 cheatsheet (8.8KB)
-│   └── v4.1_10KB_cheatsheet.md    # Current v4.1 cheatsheet (10.2KB)
-├── results/                 # Organized by batch: YYYYMMDD_HHMM_description/
-│   ├── baselines/           # Baseline (no cheatsheet) results per model/dataset + SUMMARY.md
-│   ├── iterations/          # Per-iteration results: v{N}_{model}_{dataset}.csv
+│   ├── models.yaml           # Model configuration for eval harness
+│   └── prompts/              # Prompt templates (v0_baseline.txt, etc.)
+├── cheatsheets/              # Versioned prompt+cheatsheet files
+│   ├── v4_10KB_cheatsheet.md       # v4 cheatsheet (8.8KB)
+│   ├── v4.1_10KB_cheatsheet.md     # Current best general cheatsheet (10.2KB)
+│   ├── v5.2_10KB_cheatsheet.md     # v5 structured-output experiment
+│   └── v.Opus-*_10KB_cheatsheet.md # Opus-informed iterations (Opus-1 / -2 / -2.1)
+├── results/                  # Organized by batch: YYYYMMDD_HHMM_description/
+│   ├── baselines/            # Baseline (no cheatsheet) results per model/dataset + SUMMARY.md
+│   ├── iterations/           # Per-iteration results: v{N}_{model}_{dataset}.csv
 │   ├── 20260406_2308_v4-all-models-hard/  # v4 sweep (7 models x 3 hard datasets)
-│   ├── 20260408_v4.1-sweep/       # v4.1 sweep (4 models x 3 hard datasets + retries)
-│   └── v4.1_results.pdf           # v4.1 full results report with confusion matrices
-├── Training_data/           # Official problem sets (JSONL)
-│   ├── normal.jsonl         # 1000 problems (500 TRUE / 500 FALSE)
-│   ├── hard1.jsonl          # 69 problems (deduplicated hard set)
-│   ├── hard2.jsonl          # 200 problems (100 TRUE / 100 FALSE)
-│   └── hard3.jsonl          # 400 problems (195 TRUE / 205 FALSE)
-├── Extra_training_data/     # Community-contributed datasets
-│   ├── SAIRCommunityBench_v1.jsonl  # 199 problems (order 4-6, harder distribution)
-│   ├── Hard5_order5.jsonl           # 654 problems (order-5 equations)
-│   ├── full_2000_equations.jsonl    # 1999 problems (full community set)
+│   ├── 20260410_v4.1-official/            # v4.1 official-mode sweep (SAIR evaluation_models.json)
+│   ├── 20260412_v5.2_official/            # v5.2 official-mode sweep
+│   └── Opus_research/                     # All Opus-thread work (see note below)
+│       ├── 20260411_opus-hard1/           # opus-solver raw-reasoning runs on hard1
+│       ├── 20260413_v.Opus-1_official/    # v.Opus-1 cheatsheet sweep
+│       ├── 20260413_v.Opus-2_official/    # v.Opus-2 cheatsheet sweep
+│       ├── 20260413_v.Opus-2.1_official/  # v.Opus-2.1 cheatsheet sweep
+│       └── 20260413_opus-analysis/        # Opus-vs-cheatsheet failure analysis + suggestions PDF
+├── scripts/
+│   ├── report_pdf.py          # Shared PDF report helper (see .claude/skills/generating-result-pdfs/)
+│   ├── run_opus_benchmark.py  # Opus-solver benchmark driver (spawns claude -p --agent opus-solver)
+│   └── refresh_sair_intel.py  # SAIR Zulip + contributor-network sync (48h workflow)
+├── analysis/
+│   └── error_taxonomy.py     # Failure-mode classifier for result JSONs
+├── tests/                    # Pytest suite (parse_verdict, official_overrides, opus_agents)
+├── training_data/            # Official problem sets (JSONL)
+│   ├── normal.jsonl          # 1000 problems (500 TRUE / 500 FALSE)
+│   ├── hard1.jsonl           # 69 problems (deduplicated hard set)
+│   ├── hard2.jsonl           # 200 problems (100 TRUE / 100 FALSE)
+│   └── hard3.jsonl           # 400 problems (195 TRUE / 205 FALSE)
+├── extra_training_data/      # Community-contributed datasets
+│   ├── SAIRCommunityBench_v1.jsonl         # 199 problems (order 4-6, harder distribution)
+│   ├── Hard5_order5.jsonl                  # 654 problems (order-5 equations)
+│   ├── full_2000_equations.jsonl           # 1999 problems (full community set)
 │   └── verification_data_with_citations.jsonl  # 199 problems with Lean proof citations
-├── Research/
-│   ├── equations.txt        # All 4694 equational laws
+├── research/
+│   ├── equations.txt         # All 4694 equational laws
 │   └── Raw_implication_graph.csv  # Per-equation implication statistics
-└── Blog_data/               # Community intelligence (see Blog_data/README.md)
-    ├── cheatsheets/         # Community cheatsheets from SAIR contributor network
-    └── zulip/               # Zulip thread dumps, organized by stream
+├── blog_data/                # Community intelligence (see blog_data/README.md)
+│   ├── cheatsheets/          # Community cheatsheets from SAIR contributor network
+│   └── zulip/                # Zulip thread dumps, organized by stream
+├── meeting_notes/            # Team meeting notes (Meetings_Notes_DD-MM-YY.md)
+├── docs/                     # Reference material
+└── .claude/                  # Project-scoped Claude Code config
+    ├── agents/               # Custom subagents (opus-solver, opus-orchestrator, …)
+    └── skills/               # Project skills (generating-result-pdfs, …)
 ```
+
+**`results/Opus_research/` convention:** all Opus-thread artifacts (opus-solver raw-reasoning runs, v.Opus-N cheatsheet sweeps, opus-informed analysis PDFs) live under this subdirectory. Non-Opus sweeps stay at the `results/` root.
 
 ## Data Format
 
@@ -88,7 +108,7 @@ All model inference runs in the cloud via [OpenRouter](https://openrouter.ai/). 
 
 ### v4.1 Cheatsheet -- 4-Model Hard Sweep (2026-04-09)
 
-v4.1_10KB_cheatsheet.md (10.2KB) evaluated on 4 models x hard1/hard2/hard3 via OpenRouter. All parse errors resolved. Full report with confusion matrices: [`results/v4.1_results.pdf`](results/v4.1_results.pdf).
+v4.1_10KB_cheatsheet.md (10.2KB) evaluated on 4 models x hard1/hard2/hard3 via OpenRouter. All parse errors resolved. Full report with confusion matrices: [`results/20260409_v4.1-retry2/v4.1_results.pdf`](results/20260409_v4.1-retry2/v4.1_results.pdf).
 
 | Model | hard1 (69) | hard2 (200) | hard3 (400) | ALL (669) | Bias |
 |-------|-----------|-------------|-------------|-----------|------|

@@ -1,0 +1,70 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard1_0001,False,True,False,True,labeled:TRUE,309.89,3003,802,0.000269,VERDICT: TRUE\nRULE: right projection
+hard1_0002,False,False,True,True,labeled:FALSE,453.82,3004,762,0.000262,VERDICT: FALSE\nRULE: default false
+hard1_0003,True,False,False,True,labeled:FALSE,83.15,3001,544,0.000220,VERDICT: FALSE\nRULE: default false
+hard1_0004,False,True,False,True,labeled:TRUE,260.77,3004,1528,0.000407,VERDICT: TRUE\nRULE: structural tiebreaker
+hard1_0005,False,False,True,True,labeled:FALSE,15.42,3003,721,0.000254,VERDICT: FALSE\nRULE: default false
+hard1_0006,False,False,True,True,labeled:FALSE,166.23,2996,287,0.000171,"VERDICT: FALSE\nRULE: left-zero witness\n\nIn the left-zero magma (a * b = a) we have x*x = x and (x*y)*z = x, so the first equation holds for all assignments. But (y*z)*w = y, which need not equal x*"
+hard1_0007,True,True,True,True,labeled:TRUE,356.71,3003,1182,0.000342,"VERDICT: TRUE\nRULE: left projection\n\nThe premise `x = (y * (y * (y * z))) * x` forces every product to collapse to its leftmost factor, i.e. `a * b = a` for all elements. Under this projection both"
+hard1_0008,False,True,False,True,labeled:TRUE,497.06,3004,675,0.000245,"VERDICT: TRUE\nRULE: left projection\n\nThe premise `x = x * (y * ((y * z) * y))` is of the form `x = x * T` with `T` not containing `x`, which forces the left‑projection identity `a * b = a` in every"
+hard1_0009,False,False,True,True,labeled:FALSE,132.87,3004,1047,0.000316,VERDICT: FALSE\nRULE: counterexample
+hard1_0010,False,True,False,True,labeled:TRUE,321.59,3004,755,0.000261,"VERDICT: TRUE\nRULE: constant operation\n\nAll magmas satisfying (x*x)*y = (y*y)*z must have a constant binary operation, which makes every product equal and thus forces x*(y*y) = x*(z*z) for all x,y,"
+hard1_0011,False,False,True,True,labeled:FALSE,452.77,3006,510,0.000214,"VERDICT: FALSE\nRULE: left-zero witness\n\nIn the left‑zero magma defined by a * b = a, the first equation holds for all assignments, but the second reduces to x = y, which is not universally true. He"
+hard1_0012,False,True,False,True,labeled:TRUE,104.37,3004,1362,0.000376,VERDICT: TRUE\nRULE: constant operation
+hard1_0013,True,False,False,True,labeled:FALSE,271.25,3002,952,0.000298,VERDICT: FALSE\nRULE: default false
+hard1_0014,False,False,True,True,labeled:FALSE,430.61,3005,505,0.000213,VERDICT: FALSE\nRULE: default false
+hard1_0015,False,False,True,True,labeled:FALSE,63.49,3003,738,0.000257,VERDICT: FALSE\nRULE: default false
+hard1_0016,False,False,True,True,labeled:FALSE,250.27,3006,1219,0.000349,VERDICT: FALSE\nRULE: default false
+hard1_0017,False,False,True,True,labeled:FALSE,405.83,3004,673,0.000245,VERDICT: FALSE\nRULE: default false
+hard1_0018,True,False,False,True,labeled:FALSE,51.42,3005,1169,0.000339,VERDICT: FALSE\nRULE: default false
+hard1_0019,False,False,True,True,labeled:FALSE,205.43,3002,942,0.000296,VERDICT: FALSE\nRULE: default false
+hard1_0020,False,False,True,True,labeled:FALSE,382.65,3004,449,0.000202,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0021,False,False,True,True,labeled:FALSE,22.82,3001,1101,0.000326,VERDICT: FALSE\nRULE: default false
+hard1_0022,False,False,True,True,labeled:FALSE,169.98,3003,212,0.000157,VERDICT: FALSE\nRULE: default false
+hard1_0023,True,True,True,True,labeled:TRUE,367.29,3001,963,0.000300,VERDICT: TRUE\nRULE: left projection
+hard1_0024,False,False,True,True,labeled:FALSE,84.73,3004,758,0.000261,VERDICT: FALSE\nRULE: default false
+hard1_0025,False,False,True,True,labeled:FALSE,140.68,3004,1080,0.000322,VERDICT: FALSE\nRULE: default false
+hard1_0026,False,True,False,True,labeled:TRUE,346.81,3003,1289,0.000362,VERDICT: TRUE\nRULE: right projection
+hard1_0027,True,False,False,True,labeled:FALSE,470.53,3001,829,0.000275,VERDICT: FALSE\nRULE: default false\n\nThis implication does not hold in all magmas.
+hard1_0028,False,True,False,True,labeled:TRUE,110.79,3003,1077,0.000322,VERDICT: TRUE\nRULE: structural tiebreaker
+hard1_0029,False,True,False,True,labeled:TRUE,277.55,3004,1097,0.000326,"VERDICT: TRUE\nRULE: right projection\nThe identity forces a*b = b for all elements, making every product equal its right argument; under this model the consequent also holds."
+hard1_0030,False,False,True,True,labeled:FALSE,12.49,3004,564,0.000224,VERDICT: FALSE\nRULE: default false
+hard1_0031,False,False,True,True,labeled:FALSE,182.26,3005,685,0.000247,VERDICT: FALSE\nRULE: default false
+hard1_0032,False,True,False,True,labeled:TRUE,373.87,3001,969,0.000301,VERDICT: TRUE\nRULE: structural tiebreaker
+hard1_0033,False,False,True,True,labeled:FALSE,155.05,3004,993,0.000306,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas.
+hard1_0034,True,False,False,True,labeled:FALSE,158.24,2999,996,0.000306,VERDICT: FALSE\nRULE: default false
+hard1_0035,True,True,True,True,labeled:TRUE,319.58,3004,268,0.000168,VERDICT: TRUE\nRULE: left projection
+hard1_0036,False,False,True,True,labeled:FALSE,479.09,3002,1189,0.000343,VERDICT: FALSE\nRULE: counterexample
+hard1_0037,False,True,False,True,labeled:TRUE,104.67,3004,730,0.000256,VERDICT: TRUE\nRULE: right projection
+hard1_0038,False,False,True,True,labeled:FALSE,292.78,3002,1155,0.000337,VERDICT: FALSE\nRULE: default false
+hard1_0039,False,False,True,True,labeled:FALSE,433.75,3004,533,0.000218,VERDICT: FALSE\nRULE: default false
+hard1_0040,True,True,True,True,labeled:TRUE,59.82,3003,317,0.000177,VERDICT: TRUE\nRULE: left projection
+hard1_0041,True,True,True,True,labeled:TRUE,247.73,3003,979,0.000303,VERDICT: TRUE\nRULE: right projection
+hard1_0042,False,True,False,True,labeled:TRUE,419.08,3002,896,0.000287,VERDICT: TRUE\nRULE: structural heuristic
+hard1_0043,False,False,True,True,labeled:FALSE,41.64,3002,451,0.000203,VERDICT: FALSE\nRULE: default false
+hard1_0044,True,True,True,True,labeled:TRUE,216.57,3001,1419,0.000387,"VERDICT: TRUE\nRULE: singleton collapse\n\nThe identity forces every element to be the unique left identity, collapsing the magma to a singleton, so the consequent holds in all magmas."
+hard1_0045,False,False,True,True,labeled:FALSE,392.80,3006,733,0.000257,VERDICT: FALSE\nRULE: default false
+hard1_0046,True,False,False,True,labeled:FALSE,43.83,3002,1363,0.000376,VERDICT: FALSE\nRULE: default false
+hard1_0047,False,False,True,True,labeled:FALSE,184.82,3005,737,0.000257,VERDICT: FALSE\nRULE: default false
+hard1_0048,False,False,True,True,labeled:FALSE,370.88,3001,445,0.000202,VERDICT: FALSE\nRULE: default false
+hard1_0049,False,False,True,True,labeled:FALSE,220.99,3004,511,0.000214,VERDICT: FALSE\nRULE: XOR parity witness
+hard1_0050,True,False,False,True,labeled:FALSE,165.33,3004,889,0.000286,VERDICT: FALSE\nRULE: constant witness
+hard1_0051,False,False,True,True,labeled:FALSE,325.73,3002,279,0.000170,VERDICT: FALSE\nRULE: left-zero witness
+hard1_0052,True,True,True,True,labeled:TRUE,482.52,3003,1078,0.000322,"VERDICT: TRUE  \nRULE: structural heuristic  \n\nThe identity \(x = (y * x) * (y * x)\) forces a right‑projection–like behaviour in any magma, which suffices to derive the target identity \(x = ((x * "
+hard1_0053,False,False,True,True,labeled:FALSE,118.32,3004,630,0.000237,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally; a counterexample magma can be constructed where the first identity is satisfied while the second fails.
+hard1_0054,True,False,False,True,labeled:FALSE,297.83,3003,978,0.000303,VERDICT: FALSE\nRULE: default false
+hard1_0055,False,False,True,True,labeled:FALSE,29.40,3004,626,0.000236,"VERDICT: FALSE\nRULE: right-zero witness\n\nIn the 2‑element magma with operation defined by a * b = b (right projection), the first equation reduces to x = x (always true), while the second reduces t"
+hard1_0056,True,False,False,True,labeled:FALSE,193.12,3005,1043,0.000315,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold universally; no general proof forces the second equation from the first.
+hard1_0057,False,False,True,True,labeled:FALSE,384.73,3004,704,0.000251,VERDICT: FALSE\nRULE: default false
+hard1_0058,False,True,False,True,labeled:TRUE,293.47,3004,543,0.000220,"VERDICT: TRUE\nRULE: structural tiebreaker\n\nIn any magma satisfying x * (y * z) = (w * w) * z for all choices of x,y,z,w, the left‑hand side is independent of x and w, forcing every product to be a "
+hard1_0059,True,True,True,True,labeled:TRUE,172.28,3001,680,0.000246,"VERDICT: TRUE\nRULE: right projection\nEq1 forces a *b = b for all a,b, so Eq2 holds automatically."
+hard1_0060,True,False,False,True,labeled:FALSE,343.74,3004,901,0.000288,VERDICT: FALSE\nRULE: default false
+hard1_0061,True,False,False,True,labeled:FALSE,492.53,3004,876,0.000284,VERDICT: FALSE\nRULE: default false
+hard1_0062,False,False,True,True,labeled:FALSE,127.96,3005,1043,0.000315,VERDICT: FALSE\nRULE: default false
+hard1_0063,True,True,True,True,labeled:TRUE,307.79,3001,545,0.000221,VERDICT: TRUE\nRULE: right projection
+hard1_0064,True,True,True,True,labeled:TRUE,438.86,3004,288,0.000172,VERDICT: TRUE\nRULE: left projection
+hard1_0065,True,True,True,True,labeled:TRUE,69.98,3001,408,0.000195,"VERDICT: TRUE\nRULE: left projection\n\nThe premise x = x * (y * (z * y)) has the form x = x * T with T not containing x, forcing a left‑projection law a * b = a. Under this law the target equation co"
+hard1_0066,False,True,False,True,labeled:TRUE,451.65,3005,1718,0.000444,VERDICT: TRUE\nRULE: structural tiebreaker
+hard1_0067,True,False,False,True,labeled:FALSE,59.87,3004,744,0.000259,"VERDICT: FALSE\nRULE: constant witness\n\nA two‑element magma with operation defined by a * b = 0 (constant) makes the premise identity true for all assignments, while the conclusion fails for suitabl"
+hard1_0068,False,False,True,True,labeled:FALSE,221.00,3003,1015,0.000310,VERDICT: FALSE\nRULE: default false
+hard1_0069,True,False,False,True,labeled:FALSE,415.57,3001,1149,0.000335,VERDICT: FALSE\nRULE: default false\n\nThe implication does not hold in all magmas. A counterexample can be constructed where the premise identity is satisfied but the conclusion fails.
