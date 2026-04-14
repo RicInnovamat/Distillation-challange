@@ -1,0 +1,42 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0050,False,True,False,True,labeled:TRUE,930.12,3128,2051,0.000512,"VERDICT: TRUE\nPROOF: Assume a magma (M,∗) satisfies the premise  \n\n  (1) ∀x,y  x∗x = y∗(y∗x).  \n\nFix any element a∈M. Taking y = a in (1) gives  \n\n  a∗(a∗x) = x∗x  for all x.  \n\nHence the rig"
+hard3_0051,True,False,False,True,labeled:FALSE,244.19,3128,1212,0.000352,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0052,True,True,True,True,labeled:TRUE,569.90,3129,1365,0.000381,"VERDICT: TRUE\nREASONING: The premise Eq1 : x * y = z * (y * z) forces every binary product to be a constant element of the magma. Indeed, fixing any y, the left‑hand side shows that the map a ↦ a * y"
+hard3_0053,True,False,False,True,labeled:FALSE,812.79,3129,138,0.000148,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0054,True,True,True,True,labeled:TRUE,172.43,3128,1033,0.000318,"VERDICT: TRUE\nREASONING: The premise \(x*y = z*(z*w)\) holds for all assignments of variables in a magma \((M,*)\).  \nTake arbitrary elements \(a,b,c,d\in M\).  By instantiating the variables we obt"
+hard3_0055,False,True,False,True,labeled:TRUE,488.59,3128,1336,0.000376,"VERDICT: TRUE\nREASONING: The premise equation forces a left‑projection law.\nPROOF:  \nAssume a magma (M,*) satisfies  \n (1) ∀x,y,z  x * x = (x * y) * z.  \nFix arbitrary a,b∈M and put x:=a, y:=b, z"
+hard3_0056,False,False,True,True,labeled:FALSE,803.16,3129,754,0.000265,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0057,False,False,True,True,labeled:FALSE,155.56,3125,1326,0.000374,VERDICT: FALSE\nREASONING: parity exclusion\nThe two sides of the premise \(x*x = (y*z)*z\) have the same parity of variable occurrences (each variable appears an even number of times on both sides). 
+hard3_0058,True,True,True,True,labeled:TRUE,412.66,3125,643,0.000244,VERDICT: TRUE\nREASONING: The source equation Eq1 is of the form A = B where both A and B are product terms (neither side is a single variable) and the sets of variables occurring in A and B are disjo
+hard3_0059,False,True,False,True,labeled:TRUE,766.87,3129,787,0.000272,"VERDICT: TRUE\nREASONING: The premise \(x * x = (y * z) * w\) forces the binary operation to be constant: for any elements \(a,b,c,d\) in the magma,\n\(a*a = (b*c)*d\). Choosing arbitrary \(b,c,d\) sh"
+hard3_0060,True,False,False,True,labeled:FALSE,47.35,3129,902,0.000293,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0061,True,True,True,True,labeled:TRUE,375.57,3128,1158,0.000342,"VERDICT: TRUE\nPROOF:  \nAssume a magma \((M,*)\) satisfies the identity  \n\n\[\n\forall x,y,z\in M\;:\;x*y = (z*z)*z\tag{1}\n\]\n\nFix any element \(a\in M\).  Taking \(z=a\) in (1) gives  \n\n\[\nx"
+hard3_0062,False,False,True,True,labeled:FALSE,719.67,3133,978,0.000308,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0063,False,False,True,True,labeled:FALSE,1044.35,3133,2027,0.000507,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0064,False,False,True,True,labeled:FALSE,311.61,3133,1630,0.000432,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0065,False,True,False,True,labeled:TRUE,714.06,3129,2809,0.000656,"VERDICT: TRUE\nREASONING: The equation x = x * (y * (x * (x * z))) forces a left‑zero law (a * b = a) in any magma, because the inner term y * (x * (x * z)) can be made to denote any element of the ma"
+hard3_0066,True,True,True,True,labeled:TRUE,997.69,3134,2350,0.000569,VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation of the form x = x * T where the variable x appears inside T. By repeatedly substituting the premise into itself (instantiating the outer x 
+hard3_0067,True,True,True,True,labeled:TRUE,217.32,3133,486,0.000215,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation of the form x = x * T where T does not contain x (the right‑hand side variables are y, z, w). By the left‑projection rule (Step 2.6), any m"
+hard3_0068,True,True,True,True,labeled:TRUE,562.38,3133,619,0.000240,"VERDICT: TRUE\nREASONING: Eq1 is a bare equation of the form x = x * T where T = y * (z * (z * z)) contains no occurrence of x. By rule 2.6 (left projection family), this forces the magma to satisfy t"
+hard3_0069,False,False,True,True,labeled:FALSE,92.63,3134,1799,0.000464,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0070,False,False,True,True,labeled:FALSE,525.06,3130,3070,0.000705,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0071,False,False,True,True,labeled:FALSE,758.15,3134,1567,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0072,False,False,True,True,labeled:FALSE,110.27,3133,2087,0.000519,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0073,False,False,True,True,labeled:FALSE,367.20,3133,2205,0.000541,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0074,False,False,True,True,labeled:FALSE,674.64,3134,2182,0.000537,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0075,False,False,True,True,labeled:FALSE,976.41,3134,905,0.000294,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0076,False,True,False,True,labeled:TRUE,249.75,3134,897,0.000293,"VERDICT: TRUE\nREASONING: Applying the contradiction motif C10 in STEP 2.8. For the premise equation  \n\(x = y * (z * (x * (w * x)))\) the right‑hand side has rhsVars = 4 (variables x,y,z,w), Lx = FA"
+hard3_0077,True,True,True,True,labeled:TRUE,645.40,3132,1523,0.000412,VERDICT: TRUE\nREASONING: The premise equation x = y * (z * (y * (x * x))) is a bare equation of the form x = T where the variable x appears inside T. By analysing the structure of T we see that the o
+hard3_0078,False,False,True,True,labeled:FALSE,936.62,3133,2281,0.000556,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0079,False,False,True,True,labeled:FALSE,201.02,3134,1122,0.000335,VERDICT: FALSE\nREASONING: spine isolation
+hard3_0080,False,False,True,True,labeled:FALSE,543.09,3132,1234,0.000357,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0081,False,False,True,True,labeled:FALSE,817.42,3133,825,0.000279,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0082,False,False,True,True,labeled:FALSE,142.03,3133,791,0.000272,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0083,False,False,True,True,labeled:FALSE,469.13,3133,1230,0.000356,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0084,False,False,True,True,labeled:FALSE,874.79,3132,2054,0.000512,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0085,True,True,True,True,labeled:TRUE,75.67,3133,576,0.000232,VERDICT: TRUE\nREASONING: The premise of rule 2.6 (left projection) is satisfied: Eq1 is of the form x = x * T with T = y * ((y * y) * z) which does **not** contain x. Hence Eq1 forces the identity a 
+hard3_0086,False,True,False,True,labeled:TRUE,390.59,3132,411,0.000200,"VERDICT: TRUE\nREASONING: Eq1 is bare and of the form x = x * T with T = y * ((y*z) * y) which does not contain x. By rule 2.6 (left projection family), this forces the identity a * b = a in all magma"
+hard3_0087,True,True,True,True,labeled:TRUE,753.03,3133,635,0.000243,"VERDICT: TRUE\nREASONING: Eq1 is a bare equation of the form x = x * T with T = y * ((y * z) * w). Since T does not contain x, Eq1 forces a left‑projection law a * b = a in any magma satisfying it. Un"
+hard3_0088,True,True,True,True,labeled:TRUE,189.49,3132,564,0.000229,VERDICT: TRUE\nREASONING: Eq1 is a bare equation of the form x = x * T where T = y * ((y * z) * w) does not contain x. This triggers the left‑projection rule: any magma satisfying Eq1 must obey the la
+hard3_0089,True,False,False,True,labeled:FALSE,347.85,3132,1764,0.000457,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0090,True,True,True,True,labeled:TRUE,672.65,3134,466,0.000211,"VERDICT: TRUE\nREASONING: Eq1 is a bare equation of the form x = x * T where T = y * ((z * z) * w) does not contain the variable x. By the left projection rule (Step 2.6), this forces the binary opera"

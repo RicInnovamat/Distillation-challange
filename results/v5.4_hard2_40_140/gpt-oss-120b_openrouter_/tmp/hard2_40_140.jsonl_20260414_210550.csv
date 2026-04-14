@@ -1,0 +1,102 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard2_0040,True,True,True,True,labeled:TRUE,336.76,3130,633,0.000242,"VERDICT: TRUE\nREASONING: \n- Eq1 is bare: x = y * (x * ((y * z) * w)).\n- Compute features of RHS:\n  - rhsVars = 4 (variables x, y, z, w)\n  - Lx = FALSE (leftmost variable is y)\n  - Rx = FALSE (ri"
+hard2_0041,False,False,True,True,labeled:FALSE,378.26,3134,1377,0.000384,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0042,False,True,False,True,labeled:TRUE,429.47,3133,1035,0.000319,VERDICT: TRUE\nREASONING: The identity  \n\(x*(y*x) = (z*w)*u\)  \nasserts that for any choice of five elements the left‑hand side and the right‑hand side evaluate to the same element. By letting the 
+hard2_0043,False,False,True,True,labeled:FALSE,459.16,3133,806,0.000275,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0044,True,True,True,True,labeled:TRUE,547.21,3133,732,0.000261,"VERDICT: TRUE\nREASONING: \nStep 2.8 (bare‑source contradiction motifs) applies.  \nFor Eq1, the right‑hand side P = (y * ((z * z) * x)) * w has:\nrhsVars = 4, Lx = FALSE, Rx = FALSE.  \nSince rhsVars"
+hard2_0045,False,True,False,True,labeled:TRUE,555.66,3131,781,0.000270,"VERDICT: TRUE\nREASONING: The premise `x * x = ((y * z) * w) * u` forces every binary product in the magma to be a constant element. Indeed, for any choices of variables the left‑hand side is a produc"
+hard2_0046,False,False,True,True,labeled:FALSE,610.75,3133,252,0.000170,VERDICT: FALSE\nREASONING: parity exclusion
+hard2_0047,False,False,True,True,labeled:FALSE,26.51,3131,1275,0.000364,"VERDICT: FALSE\nREASONING: counterexample\n\nMagma with elements {0,1} and operation * defined by the table:\n\n| * | 0 | 1 |\n|---|---|---|\n| 0 | 0 | 1 |\n| 1 | 0 | 0 |\n\nThat is:\n- 0*0 = 0, 0*1 ="
+hard2_0048,False,False,True,True,labeled:FALSE,85.30,3133,308,0.000181,VERDICT: FALSE\nREASONING: parity exclusion
+hard2_0049,True,True,True,True,labeled:TRUE,187.26,3133,914,0.000296,"VERDICT: TRUE\nREASONING: The premise equation is bare (x = P) with P = y * (((z * w) * x) * y). Computing the required features for P:\nrhsVars=4, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, rhsTot"
+hard2_0050,True,True,True,True,labeled:TRUE,220.99,3130,685,0.000252,"VERDICT: TRUE\nREASONING: Applied contradiction motif C2. For Eq1, the right‑hand product P = y * ((z * x) * z) has features rhsVars=3, rhsTotals=112, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, whi"
+hard2_0051,False,False,True,True,labeled:FALSE,233.25,3133,1444,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0052,False,False,True,True,labeled:FALSE,328.76,3133,1448,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0053,True,False,False,True,labeled:FALSE,368.65,3134,1596,0.000425,VERDICT: FALSE\nREASONING: right-zero witness
+hard2_0054,False,False,True,True,labeled:FALSE,407.05,3133,390,0.000196,VERDICT: FALSE\nREASONING: parity exclusion
+hard2_0055,False,False,True,True,labeled:FALSE,441.69,3133,190,0.000158,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0056,False,False,True,True,labeled:FALSE,490.81,3134,1942,0.000491,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0057,True,True,True,True,labeled:TRUE,531.70,3134,779,0.000270,"VERDICT: TRUE\nREASONING: Applying Step 2.8 (contradiction motifs). For Eq1, the product side P = y * ((z * (w * w)) * x) has rhsVars = 4 (variables y, z, w, x), Lx = FALSE (x is not the leftmost vari"
+hard2_0058,True,True,True,True,labeled:TRUE,615.66,3134,947,0.000302,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1 (rhsVars ≥ 4, Lx = FALSE, Rx = FALSE) which matches the structure of Eq1.\nPROOF: The right‑hand side of Eq1 is (y*z)*((w*x)*y) containing four"
+hard2_0059,True,True,True,True,labeled:TRUE,4.88,3134,653,0.000246,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1 (rhsVars ≥ 4, Lx = FALSE, Rx = FALSE) since Eq1 has four distinct variables (y, x, z, w) and x is neither the leftmost nor rightmost variable i"
+hard2_0060,True,False,False,True,labeled:FALSE,64.74,3133,1905,0.000484,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0061,True,True,True,True,labeled:TRUE,123.50,3133,1351,0.000379,"VERDICT: TRUE\nREASONING: The premise equation\n\[x = y * (((x * x) * z) * z)\]\nforces every element of any magma satisfying it to be equal to every other element, i.e. the magma collapses to a singl"
+hard2_0062,False,True,False,True,labeled:TRUE,164.81,3131,854,0.000284,VERDICT: TRUE\nPROOF: From the premise  \n\[\nx * x = ((y * z) * w) * u\tag{1}\n\]\nwe can derive that **all binary products are equal to a single constant element** of the magma.\n\n1. **All products
+hard2_0063,True,True,True,True,labeled:TRUE,209.98,3130,758,0.000266,"VERDICT: TRUE\nREASONING: Applied contradiction motif C2 (rhsVars=3, rhsTotals=112, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m) which matches the structure of Eq1, forcing a projection that makes Eq"
+hard2_0064,False,False,True,True,labeled:FALSE,253.62,3134,1500,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0065,True,True,True,True,labeled:TRUE,339.32,3131,1580,0.000422,"VERDICT: TRUE\nREASONING: The premise Eq1 forces the binary operation * to be constant (all products yield the same element). Consequently any equation, including Eq2, holds in all such magmas.\nPROOF"
+hard2_0066,True,True,True,True,labeled:TRUE,382.35,3134,528,0.000223,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1. For Eq1, the right‑hand side term T = (y*x) * ((z*w)*w) contains four distinct variables (y,x,z,w), the leftmost variable is y (so Lx is false"
+hard2_0067,False,False,True,True,labeled:FALSE,465.37,3135,1052,0.000322,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0068,False,True,False,True,labeled:TRUE,463.68,3133,551,0.000227,"VERDICT: TRUE\nREASONING: The premise Eq1, x * (x * y) = (z * w) * u, forces every possible product in the magma to be a single constant element. Indeed, for arbitrary elements a,b,c,d,e we can set x="
+hard2_0069,True,True,True,True,labeled:TRUE,521.51,3133,971,0.000307,"VERDICT: TRUE\nREASONING: Applying the bare‑source contradiction motif (Step 2.8) to the premise  \n\(x = y * (((y * x) * y) * z)\) we obtain the feature vector  \nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop="
+hard2_0070,True,False,False,True,labeled:FALSE,565.83,3131,1857,0.000475,"VERDICT: FALSE\nREASONING: COUNTEREXAMPLE\nMagma with elements {0,1} and operation * defined by the table:\n* | 0 1\n0 | 0 0\n1 | 0 1\n\nChecking the implication:\n- For all x,y,z in {0,1}, the identi"
+hard2_0071,False,True,False,True,labeled:TRUE,620.20,3131,1177,0.000346,"VERDICT: TRUE\nPROOF: In any magma (M, *) the hypothesis \n\[x * x = ((y * z) * w) * u\]\nholds for all assignments of the variables iff the binary operation * is constant.  \n\nIndeed, fix arbitrary "
+hard2_0072,True,True,True,True,labeled:TRUE,32.45,3133,584,0.000233,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1. For the RHS term ((y*(x*x))*z)*w we have rhsVars=4, Lx=FALSE, Rx=FALSE, satisfying C1 (rhsVars ≥ 4 and both Lx and Rx false). Hence the implic"
+hard2_0073,True,True,True,True,labeled:TRUE,92.76,3133,981,0.000309,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = ((y * (x * z)) * x) * y.  \nFeatures of the right‑hand side term P = ((y * (x * z)) * x) * y are:  \nrhsVars=3, Lx=FALSE, Rx=FALSE, xTo"
+hard2_0074,True,True,True,True,labeled:TRUE,148.80,3134,905,0.000294,"VERDICT: TRUE\nREASONING: Applying contradiction motif C10. For Eq1, the right‑hand side term is (y*z)*(w*(x*x)). Its features are:\n- rhsVars = 4 (variables y, z, w, x)\n- Lx = FALSE (the leftmost va"
+hard2_0075,True,True,True,True,labeled:TRUE,193.63,3133,794,0.000273,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = ((y * (z * z)) * x) * w. Analyzing the right‑hand side P = ((y * (z * z)) * x) * w we obtain the feature vector  \nrhsVars=4, Lx=FALSE,"
+hard2_0076,False,True,False,True,labeled:TRUE,267.65,3133,797,0.000274,"VERDICT: TRUE\nREASONING: The source equation (x * y) * x = (z * w) * u has both sides as non‑variable product terms whose variable sets are disjoint ({x,y} on the left, {z,w,u} on the right). By rule"
+hard2_0077,False,False,True,True,labeled:FALSE,289.04,3133,1406,0.000389,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0078,True,False,False,True,labeled:FALSE,352.48,3131,1088,0.000329,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0079,True,True,True,True,labeled:TRUE,412.78,3133,1548,0.000416,"VERDICT: TRUE\nREASONING: The premise equation is bare (x = …) with RHS term (y * (x * (y * z))) * y. Its features are rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=113, xCount=1, "
+hard2_0080,True,False,False,True,labeled:FALSE,450.45,3133,1590,0.000424,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0081,True,True,True,True,labeled:TRUE,514.63,3133,556,0.000228,"VERDICT: TRUE\nREASONING: The source equation is bare (x = …) and its right‑hand side contains four distinct variables (x, y, z, w). The leftmost variable of the RHS is y (not x) and the rightmost var"
+hard2_0082,True,True,True,True,labeled:TRUE,542.37,3132,1529,0.000413,"VERDICT: TRUE\nREASONING: The premise `x * y = y * ((z * w) * x)` forces the binary operation `*` to be constant in any magma.  \n- Assume a magma (M,*) satisfies the equation for all assignments of v"
+hard2_0083,True,False,False,True,labeled:FALSE,592.42,3133,1284,0.000366,"VERDICT: FALSE\nREASONING: rightmost-variable exclusion (Eq1 has the same rightmost variable on both sides (x), but Eq2 does not)."
+hard2_0084,False,False,True,True,labeled:FALSE,46.18,3133,992,0.000311,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0085,True,True,True,True,labeled:TRUE,69.44,3133,567,0.000230,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1 – RHS has ≥4 distinct variables, x is neither leftmost nor rightmost.\nPROOF: The source equation is bare (x = ((y*z)*(x*w))*u). RHS contains f"
+hard2_0086,True,False,False,True,labeled:FALSE,127.03,3133,606,0.000237,VERDICT: FALSE\nREASONING: spine isolation
+hard2_0087,False,True,False,True,labeled:TRUE,172.33,3133,1042,0.000320,"VERDICT: TRUE\nREASONING: The identity  \n\[x * (x * y) = (z * y) * w\]  \nholds for all choices of the variables \(x,y,z,w\). Varying \(z\) and \(w\) while keeping \(x,y\) fixed forces the right‑hand"
+hard2_0088,False,False,True,True,labeled:FALSE,216.69,3130,933,0.000299,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0089,True,True,True,True,labeled:TRUE,260.40,3133,885,0.000290,"VERDICT: TRUE\nREASONING: The source equation is bare (x = …) with RHS product P = y * (((x * x) * z) * w). Its features are:\nrhsVars=4, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, rhsTotals=1112, "
+hard2_0090,False,True,False,True,labeled:TRUE,391.46,3131,1527,0.000412,"VERDICT: TRUE\nREASONING: The given premise forces a right‑projection law in any magma, which then makes the target identity hold automatically.\nPROOF:  \nAssume the equation  \n\n\[\n\forall x,y,z\;"
+hard2_0091,True,True,True,True,labeled:TRUE,387.96,3133,768,0.000268,"VERDICT: TRUE\nREASONING: Using contradiction motif C1.\nPROOF: For the premise equation \(x = y * (((x * z) * x) * w)\) the right‑hand side contains four distinct variables \(\{x,y,z,w\}\). The leftm"
+hard2_0092,False,True,False,True,labeled:TRUE,434.58,3133,1087,0.000329,"VERDICT: TRUE\nREASONING: The identity\n\[\nx * (y * z) = (w * u) * u\n\]\nholds for **all** choices of variables in any magma only when the binary operation * is constant, i.e., there exists a distin"
+hard2_0093,False,False,True,True,labeled:FALSE,474.65,3133,1843,0.000472,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0094,True,False,False,True,labeled:FALSE,527.90,3134,1127,0.000336,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0095,False,False,True,True,labeled:FALSE,614.74,3132,1400,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0096,False,False,True,True,labeled:FALSE,665.31,3132,1243,0.000358,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0097,True,False,False,True,labeled:FALSE,47.19,3132,2094,0.000520,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0098,True,True,True,True,labeled:TRUE,102.82,3133,1289,0.000367,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with T = (y * (x * (y * z))) * y. Computing the required features for contradiction motifs gives rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left,"
+hard2_0099,True,True,True,True,labeled:TRUE,159.71,3133,1105,0.000332,"VERDICT: TRUE\nREASONING: Applying STEP 2.8 “contradiction motif”, we compute the features of the RHS of Eq1 (y * (x * ((z * y) * y))): rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, rhsTota"
+hard2_0100,False,False,True,True,labeled:FALSE,197.11,3132,614,0.000239,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0101,True,False,False,True,labeled:FALSE,238.56,3127,788,0.000272,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0102,False,False,True,True,labeled:FALSE,304.33,3133,2278,0.000555,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0103,True,False,False,True,labeled:FALSE,356.42,3131,390,0.000196,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0104,False,False,True,True,labeled:FALSE,447.23,3132,953,0.000303,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0105,False,True,False,True,labeled:TRUE,490.33,3133,1198,0.000350,"VERDICT: TRUE\nREASONING: The premise equation  \n\(x = y * ((y * (y * x)) * x)\) forces the binary operation * to behave as a right‑projection, i.e. for all elements a,b we have a*b = b. Substituting"
+hard2_0106,True,False,False,True,labeled:FALSE,508.62,3133,1948,0.000492,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0107,True,False,False,True,labeled:FALSE,550.60,3134,1153,0.000341,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0108,False,True,False,True,labeled:TRUE,595.11,3132,399,0.000198,"VERDICT: TRUE\nREASONING: Rule 2.4 (Constant-operation source) applies because both sides of the premise Eq1 are product terms with disjoint variable sets ({x} on the left, {y,z,w,u} on the right). Th"
+hard2_0109,False,True,False,True,labeled:TRUE,139.73,3134,2784,0.000651,"VERDICT: TRUE\nREASONING: The given identity forces every magma satisfying it to be a singleton magma, in which all elements are equal. In a singleton magma any equation holds, in particular \(x * (y "
+hard2_0110,True,False,False,True,labeled:FALSE,79.84,3133,1302,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0111,True,True,True,True,labeled:TRUE,130.65,3132,613,0.000239,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = T with T = (y * ((y * x) * z)) * w. Analyzing T:\n- Distinct variables on the right‑hand side: {y, x, z, w} → rhsVars = 4\n- The leftmo"
+hard2_0112,False,False,True,True,labeled:FALSE,181.97,3132,1641,0.000434,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0113,True,True,True,True,labeled:TRUE,221.74,3133,699,0.000255,"VERDICT: TRUE\nREASONING: Applied contradiction motif C9. For Eq1, the right‑hand side term P = (y * (x * (z * z))) * z has rhsVars=3, Lx=False, Rx=False, xTop=left, topShape=m‑v, rhsTotals=113, which"
+hard2_0114,True,True,True,True,labeled:TRUE,264.98,3130,822,0.000278,"VERDICT: TRUE\nREASONING: Using STEP 2.8 (bare‑source contradiction motifs), the equation is bare (x = P) with P = (y * (x * x)) * z. Its features are rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShap"
+hard2_0115,True,True,True,True,labeled:TRUE,361.43,3133,594,0.000235,"VERDICT: TRUE\nREASONING: Using contradiction motif C1. For Eq1, the product side P = ((y*(z*x))*x)*w has rhsVars=4 (variables y,z,x,w), Lx=FALSE (leftmost variable is y), Rx=FALSE (rightmost variable"
+hard2_0116,True,True,True,True,labeled:TRUE,401.13,3133,1612,0.000428,"VERDICT: TRUE\nREASONING: The premise equation is of the form x = y * ((x * (z * z)) * z), which is a bare equation with the left‑hand side a single variable. The right‑hand side does not contain the "
+hard2_0117,True,False,False,True,labeled:FALSE,439.63,3131,904,0.000294,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0118,False,False,True,True,labeled:FALSE,526.49,3134,1468,0.000401,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0119,True,True,True,True,labeled:TRUE,558.66,3130,759,0.000266,"VERDICT: TRUE\nREASONING: Applied contradiction motif C8. For Eq1, the right‑hand side term y*(x*(y*(y*z))) has rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, and rhsTotals=113. This matches"
+hard2_0120,True,True,True,True,labeled:TRUE,583.69,3133,2535,0.000604,"VERDICT: TRUE\nREASONING: The equation x = ((y * (x * x)) * x) * z forces every element of any magma satisfying it to be equal to every other element, collapsing the magma to a one‑element (singleton)"
+hard2_0121,True,False,False,True,labeled:FALSE,676.01,3133,1482,0.000404,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0122,False,False,True,True,labeled:FALSE,151.57,3133,1644,0.000435,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0123,False,False,True,True,labeled:FALSE,116.96,3133,1603,0.000427,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0124,False,False,True,True,labeled:FALSE,229.96,3133,1321,0.000373,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0125,False,False,True,True,labeled:FALSE,204.88,3133,1168,0.000344,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0126,True,True,True,True,labeled:TRUE,246.23,3129,1256,0.000361,"VERDICT: TRUE\nREASONING: The source equation is bare (single variable on the left) and its right‑hand side is the product \nP = ((y * (z * x)) * w).  \nFeatures of P:  \nrhsVars=4, Lx=FALSE, Rx=FALSE"
+hard2_0127,True,False,False,True,labeled:FALSE,324.41,3133,1774,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0128,True,False,False,True,labeled:FALSE,427.13,3133,1624,0.000431,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0129,False,False,True,True,labeled:FALSE,421.97,3133,1508,0.000409,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0130,True,True,True,True,labeled:TRUE,455.17,3133,822,0.000278,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with RHS containing four distinct variables (y, x, z, w). Its features are rhsVars=4, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTota"
+hard2_0131,True,True,True,True,labeled:TRUE,514.65,3133,821,0.000278,"VERDICT: TRUE\nREASONING: Applied contradiction motif C1 (rhsVars ≥ 4, Lx = FALSE, Rx = FALSE) to the bare equation x = ((y * (z * z)) * x) * w, which forces a contradiction in all magmas, thus the ta"
+hard2_0132,True,True,True,True,labeled:TRUE,576.71,3132,735,0.000262,"VERDICT: TRUE\nREASONING: The source equation is bare (x = RHS). For RHS = y * ((z * (x * x)) * w) we compute the required features:\nrhsVars=4, Lx=FALSE, Rx=FALSE, xTop=right, topShape=v-m, rhsTotals"
+hard2_0133,False,False,True,True,labeled:FALSE,608.91,3133,2036,0.000509,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0134,False,False,True,True,labeled:FALSE,14.45,3133,1361,0.000381,"VERDICT: FALSE\nREASONING: rightmost-variable exclusion (Eq1 has the same rightmost variable on both sides (x), but Eq2’s sides have a different rightmost variable (y))."
+hard2_0135,False,False,True,True,labeled:FALSE,82.21,3133,195,0.000159,VERDICT: FALSE\nREASONING: parity exclusion
+hard2_0136,True,False,False,True,labeled:FALSE,141.17,3133,1228,0.000356,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0137,True,False,False,True,labeled:FALSE,189.04,3134,1476,0.000403,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0138,True,True,True,True,labeled:TRUE,309.40,3133,1966,0.000496,VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation of the form x = y * T where the variable x appears on the right‑hand side only once and not as the leftmost factor of T. This forces the ma
+hard2_0139,False,False,True,True,labeled:FALSE,278.14,3133,2130,0.000527,VERDICT: FALSE\nREASONING: default false fallback
+hard2_0140,True,True,True,True,labeled:TRUE,344.35,3133,531,0.000223,VERDICT: TRUE\nREASONING: The premise of the left‑projection rule (STEP 2.6) is satisfied: Eq1 has the form x = x * T with T = y * (z * (w * z)) and T does not contain x. Hence Eq1 forces the identity

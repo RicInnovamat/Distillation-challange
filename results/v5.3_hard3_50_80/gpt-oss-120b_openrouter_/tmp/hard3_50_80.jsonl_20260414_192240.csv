@@ -1,0 +1,32 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0050,False,False,True,True,labeled:FALSE,75.12,2856,1349,0.000368,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0051,True,False,False,True,labeled:FALSE,169.39,2856,918,0.000286,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0052,True,False,False,True,labeled:FALSE,200.08,2857,1186,0.000337,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0053,True,False,False,True,labeled:FALSE,253.32,2857,1272,0.000353,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0054,True,True,True,True,labeled:TRUE,172.55,2856,1131,0.000326,"VERDICT: TRUE\nREASONING: The source equation x * y = z * (z * w) has both sides as non‑variable product terms whose variable sets are disjoint ({x,y} ∩ {z,w} = ∅). By rule 2.4 (constant‑operation sou"
+hard3_0055,False,False,True,True,labeled:FALSE,72.64,2856,1295,0.000357,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0056,False,False,True,True,labeled:FALSE,134.29,2857,2473,0.000581,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \n\nMagma \(M = \{a,b\}\) with operation \(*\) defined by the table:\n\n\[\n\begin{array}{c|cc}\n* & a & b \\ \hline\na & a & a \\\nb & a & b\n\end{ar"
+hard3_0057,False,True,False,True,labeled:TRUE,221.85,2853,1538,0.000403,"VERDICT: TRUE\nREASONING: The source equation x*x = (y*z)*z has both sides as non‑variable product terms whose variable sets ({x} and {y,z}) are disjoint. By rule 2.4 (constant‑operation source), this"
+hard3_0058,True,True,True,True,labeled:TRUE,297.21,2853,811,0.000265,"VERDICT: TRUE\nREASONING: The target equation is a direct substitution instance of the premise: by substituting y → x, z → x, w → x in the premise x * x = (y * z) * w we obtain exactly x * x = (x * x)"
+hard3_0059,False,True,False,True,labeled:TRUE,116.88,2857,687,0.000242,VERDICT: TRUE\nREASONING: Rule 2.4 (Constant-operation source) applies because the premise equation `x * x = (y * z) * w` has both sides as non‑variable product terms whose variable sets `{x}` and `{y
+hard3_0060,True,False,False,True,labeled:FALSE,220.37,2857,316,0.000171,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0061,True,True,True,True,labeled:TRUE,257.96,2856,634,0.000232,"VERDICT: TRUE\nREASONING: The source equation \(x * y = (z * z) * z\) is of the form \(A = B\) where both \(A\) and \(B\) are non‑variable product terms, and the variable sets of \(A\) (\{x,y\}) and \"
+hard3_0062,False,False,True,True,labeled:FALSE,104.01,2861,1713,0.000437,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0063,False,False,True,True,labeled:FALSE,189.13,2861,2085,0.000508,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0064,False,False,True,True,labeled:FALSE,274.97,2861,821,0.000268,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0065,False,True,False,True,labeled:TRUE,112.49,2857,650,0.000235,"VERDICT: TRUE\nREASONING: Equation 1 is bare (left side a single variable) and its right‑hand side T = (y * (x * (x * z))) yields the feature vector rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=right, topShape"
+hard3_0066,True,False,False,True,labeled:FALSE,161.57,2862,1754,0.000445,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0067,True,True,True,True,labeled:TRUE,241.37,2861,511,0.000209,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation of the form x = x * T where the term T = y * (z * (y * w)) contains no occurrence of x. By rule 2.6 (Left projection family), such an ident"
+hard3_0068,True,True,True,True,labeled:TRUE,97.90,2861,431,0.000193,VERDICT: TRUE\nREASONING: The premise of rule 2.6 (Left projection family) is satisfied.\nPROOF: Equation 1 is bare with left side x and right side T = y * (z * (z * z)). The variable x does not occur
+hard3_0069,False,False,True,True,labeled:FALSE,238.98,2862,1635,0.000422,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0070,False,True,False,True,labeled:TRUE,236.95,2858,858,0.000274,"VERDICT: TRUE\nREASONING: In Eq1 the right‑hand side is the term P = y * (x * (z * (y * x))).  \nFeatures: rhsVars=3, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=221, xCount=2.  \nThese mat"
+hard3_0071,False,False,True,True,labeled:FALSE,71.62,2862,1275,0.000354,VERDICT: FALSE\nREASONING: spine isolation\n\nPROOF:
+hard3_0072,False,False,True,True,labeled:FALSE,145.51,2861,1227,0.000345,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0073,False,True,False,True,labeled:TRUE,259.19,2861,828,0.000269,"VERDICT: TRUE\nREASONING: Using Step 2.8 (contradiction motif) we compute features of the product side of Eq 1:\n- rhsVars=3 (variables x,y,z)\n- Lx=FALSE (x is not leftmost)\n- Rx=TRUE (x is rightmos"
+hard3_0074,False,True,False,True,labeled:TRUE,228.38,2862,825,0.000268,"VERDICT: TRUE\nREASONING: Applied STEP 2.8 (contradiction motif). For Eq1, the right‑hand side P = y * (z * (x * (z * x))) has features rhsVars=3, xTop=right, topShape=v‑m, xCount=2, which matches mot"
+hard3_0075,False,True,False,True,labeled:TRUE,144.14,2862,669,0.000239,VERDICT: TRUE\nREASONING: Applied contradiction motif C6 (Step 2.8). For the premise equation x = y * (z * (x * (z * x))) we computed the features:\n- rhsVars = 3\n- xTop = right (x occurs only in the
+hard3_0076,False,True,False,True,labeled:TRUE,206.51,2862,728,0.000250,"VERDICT: TRUE\nREASONING: Applied contradiction motif C15 from rule 2.8. For the source equation \(x = y * (z * (x * (w * x)))\), the right‑hand side term has 4 distinct variables (x, y, z, w), and th"
+hard3_0077,True,True,True,True,labeled:TRUE,263.45,2860,795,0.000263,"VERDICT: TRUE\nREASONING: Applied contradiction motif C6 (rhsVars=3, xTop=right, topShape=v-m, xCount=2) from Step 2.8.\nPROOF: The premise equation is bare (x = y * (z * (y * (x * x)))). Analyzing th"
+hard3_0078,False,False,True,True,labeled:FALSE,110.45,2861,816,0.000267,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0079,False,False,True,True,labeled:FALSE,199.59,2862,405,0.000189,VERDICT: FALSE\nREASONING: spine isolation
+hard3_0080,False,False,True,True,labeled:FALSE,89.13,2860,2000,0.000492,VERDICT: FALSE\nREASONING: default false fallback
