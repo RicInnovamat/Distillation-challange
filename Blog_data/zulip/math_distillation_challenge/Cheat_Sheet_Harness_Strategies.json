@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Cheat Sheet Harness Strategies",
-  "message_count": 1,
+  "message_count": 3,
   "messages": [
     {
       "id": 1543,
@@ -44,6 +44,104 @@
       "avatar_url": "https://secure.gravatar.com/avatar/681d322aaf7a200b45928e5587f23027?d=identicon&version=1",
       "content_type": "text/html",
       "date": "2026-04-13T03:39:31.000Z"
+    },
+    {
+      "id": 1557,
+      "sender_id": 117,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"234\">Arjun Garg</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Cheat.20Sheet.20Harness.20Strategies/near/1543\">said</a>:</p>\n<blockquote>\n<p>Hey guys! I've been running some experiments for the challenge and I wanted to share some findings that y'all may find interesting. I wrote a program to apply the decision rules in my cheat sheet (ID EQT010003) deterministically and was able to show that they cover 85.72% of all the problems in the full 22 million problem matrix with 99.93% precision (one of the rules is more of a heuristic). On Hard3, this programmatic approach covers 18.8% of the problems and gets 66.75% accuracy (the rest fall into the DEFAULT bucket, which has about 50% accuracy), which is an upper bound for how well the LLM can do, assuming it makes no calculation errors. </p>\n<p>V1 of my cheat sheet did poorly, with the worst performing rule M3 firing only 7 out of the 42 times (16.7%) it should have. I tested 5 different ways to present this rule and was able to get this up to 81% (a 9x improvement!) with no false fires through prompting alone. The most successful approach was to include a step-by-step algorithm, as well as a fully worked example. Testing this same approach on two other rules, however, I found that it helped on M2, but slightly hurt on M4. I believe this has to do with the rule type. On arithmetic/counting rules, a procedural step-by-step algorithm helps, but on pattern matching rules the model performs poorly across the board. My baseline model got 57.25% on Hard3, but with these prompt changes, I was able to get this up to 65.50%, close to the 66.75% upper bound!</p>\n<p>This experiment was done on the GPT model. When testing on Llama I found that no matter how I prompted it, it had almost coin-flip accuracy on every rule. It was not able to reliably execute any of them for the hard problems. Curious as to if other people had a similar experience testing on this model?</p>\n<p>Here is the full breakdown for the M3 experiment:</p>\n<p>A. Control (2-line stub): 4/42 100% precision<br>\nB. Full Definition + 2 examples: 28/42 100% precision<br>\nC. Definition, no examples: 10/42 100% precision<br>\nD. Step-by-step algorithm + 1 example: 34/42 100% precision<br>\nE. Reference table + 1 example: 24/42 92% precision</p>\n<p>Prompts (rest of the cheatsheet was kept the same):</p>\n<p><div class=\"codehilite\"><pre><span></span><code>A. M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.\n    Mirror of M2 using rightmost + right-depth.\n\nB. M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.\n    Evaluation rule: ignore the left input. Walking from root through\n    right children, every ◇ adds +1 mod 3 to the value. A term&#39;s value\n    is (value of its rightmost leaf) + (right-depth) mod 3.\n    → An equation holds iff BOTH sides have the same rightmost variable\n    AND right-depth(L) ≡ right-depth(R) (mod 3).\n\n    Worked example:\n      Eq1 = x = y ◇ (z ◇ x)\n      rightmost(L) = x;   rightmost(R) = x. ✓\n      right-depth(L) = 0; right-depth(R) = 2. 0 ≢ 2 (mod 3).\n      → Eq1 does NOT hold in right-cycle. (Not a witness; move on.)\n\n      Eq1 = x = y ◇ (z ◇ (w ◇ x))\n      rightmost(L) = x;   rightmost(R) = x. ✓\n      right-depth(L) = 0; right-depth(R) = 3. 0 ≡ 3 (mod 3). ✓\n      → Eq1 holds. Now evaluate Eq2 the same way.\n\nC. M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.\n    An equation holds iff BOTH sides have the same RIGHTMOST variable\n    AND right-depth(L) ≡ right-depth(R) (mod 3).\n\nD. M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.\n    To check whether an equation holds in right-cycle, perform these\n    steps mechanically on each side:\n      Step 1: Find the rightmost variable letter reading the side L→R.\n      Step 2: Count the right-depth: starting from the root, walk into\n              the right child repeatedly until you reach a leaf; count\n              how many ◇ nodes you traversed.\n      Step 3: Reduce right-depth modulo 3 (0, 1, or 2).\n    The equation holds iff BOTH sides have the same rightmost variable\n    AND their right-depths mod 3 are equal.\n\n    Worked example:\n      Eq1 = x = y ◇ (z ◇ (w ◇ x))\n      Step 1: rightmost of x = x. rightmost of y◇(z◇(w◇x)) = x. Same ✓\n      Step 2: right-depth of x = 0. right-depth of y◇(z◇(w◇x)) = 3\n              (root → right child z◇(w◇x); then → right child w◇x;\n              then → right child x; 3 ◇ nodes walked).\n      Step 3: 0 mod 3 = 0; 3 mod 3 = 0. Equal ✓\n      → Eq1 holds in right-cycle.\n\nE. M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.\n    An equation holds iff BOTH sides have the same rightmost variable\n    AND their right-depths are in the SAME group below:\n      Group A (right-depth mod 3 = 0): 0, 3, 6, 9\n      Group B (right-depth mod 3 = 1): 1, 4, 7, 10\n      Group C (right-depth mod 3 = 2): 2, 5, 8, 11\n\n    Right-depth reference for common shapes:\n      x                                 → right-depth 0 (Group A)\n      y ◇ x                             → right-depth 1 (Group B)\n      y ◇ (z ◇ x)                       → right-depth 2 (Group C)\n      y ◇ (z ◇ (w ◇ x))                 → right-depth 3 (Group A)\n      y ◇ (z ◇ (w ◇ (u ◇ x)))           → right-depth 4 (Group B)\n\n    Worked example:\n      Eq1 = x = y ◇ (z ◇ (w ◇ x))\n      LHS shape = x → right-depth 0 (Group A)\n      RHS shape = y ◇ (z ◇ (w ◇ x)) → right-depth 3 (Group A)\n      Rightmost matches (x = x). Both Group A → Eq1 HOLDS in right-cycle.\n</code></pre></div><br>\n</p>\n</blockquote>\n<p>Would be very interesting to know how u mined the deterministic program to cover 85.72% of full 22 mil implications. This alone would be an interesting contribution to AI interpretability.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776089769,
+      "client": "ZulipElectron",
+      "subject": "Cheat Sheet Harness Strategies",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-04-13T14:16:09.000Z"
+    },
+    {
+      "id": 1562,
+      "sender_id": 234,
+      "content": "<p>I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to output True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the upper bound for your own cheat sheets. I found it helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. </p>\n<p><a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main\">https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1776133065,
+      "client": "website",
+      "subject": "Cheat Sheet Harness Strategies",
+      "topic_links": [],
+      "last_edit_timestamp": 1776133176,
+      "edit_history": [
+        {
+          "user_id": 234,
+          "timestamp": 1776133176,
+          "prev_content": "I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the upper bound for your own cheat sheets. I found it helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. \n\nhttps://github.com/arjun2garg/SAIR-Math-Distillation/tree/main",
+          "prev_rendered_content": "<p>I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the upper bound for your own cheat sheets. I found it helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. </p>\n<p><a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main\">https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main</a></p>"
+        },
+        {
+          "user_id": 234,
+          "timestamp": 1776133107,
+          "prev_content": "I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the upper bound for your own cheat sheets. I found it extremely helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. \n\nhttps://github.com/arjun2garg/SAIR-Math-Distillation/tree/main",
+          "prev_rendered_content": "<p>I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the upper bound for your own cheat sheets. I found it extremely helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. </p>\n<p><a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main\">https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main</a></p>"
+        },
+        {
+          "user_id": 234,
+          "timestamp": 1776133085,
+          "prev_content": "I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the algebraic upper bound for your own cheat sheets. I found it extremely helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. \n\nhttps://github.com/arjun2garg/SAIR-Math-Distillation/tree/main",
+          "prev_rendered_content": "<p>I basically wrote scripts to parse each equation, extract some structural features, and then encode rules based on those features in python to decide whether to implement True or False. I also added the ability to test counterexamples and then, aside from some base rules that I came up with myself, used agents to try a bunch of rules and counterexamples. I treated Hard3 as a validation set to avoid overfitting. I had Claude help me make a repo if yall want to experiment on your own or test the algebraic upper bound for your own cheat sheets. I found it extremely helpful to see a rule-by-rule breakdown of which rules the LLM could get right and how often to help me decide which ones to keep and which to remove. </p>\n<p><a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main\">https://github.com/arjun2garg/SAIR-Math-Distillation/tree/main</a></p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 119
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 188
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 206
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Arjun Garg",
+      "sender_email": "user234@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/681d322aaf7a200b45928e5587f23027?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-14T02:17:45.000Z"
     }
   ]
 }

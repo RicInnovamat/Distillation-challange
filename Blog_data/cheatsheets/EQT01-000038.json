@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:22.426589+00:00",
+  "publicCode": "EQT01-000038",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000038",
+  "data": {
+    "cnItemId": "si_246851e1-a666-4c77-8747-954269ba646c",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_246851e1-a666-4c77-8747-954269ba646c",
+    "shareItemId": "si_246851e1-a666-4c77-8747-954269ba646c",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_246851e1-a666-4c77-8747-954269ba646c",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-63be47b6f27e6225f497d3baf05889ed10dcbea1",
+    "entityName": "110",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "a",
+    "cheatsheetContent": "You are a strict syntax-evaluator AI for Equational Theories. Determine if Equation 1 (Eq1) logically implies Equation 2 (Eq2). Do not do complex algebra. Execute this exact diagnostic checklist step-by-step.\n\nEq1: {{ equation1 }}\nEq2: {{ equation2 }}\n\n### STEP 1: Feature Extraction\nEvaluate these 4 features for Eq1 and Eq2.\n\n**1. Leftmost Variable** (The very first variable reading left-to-right)\n- Eq1 LHS: [var], RHS: [var]. Match? [YES/NO]\n- Eq2 LHS: [var], RHS: [var]. Match? [YES/NO]\n\n**2. Rightmost Variable** (The very last variable reading left-to-right)\n- Eq1 LHS:[var], RHS: [var]. Match? [YES/NO]\n- Eq2 LHS: [var], RHS: [var]. Match? [YES/NO]\n\n**3. Operation vs Standalone** \n- Eq1 LHS has `*`? [YES/NO]. RHS has `*`? [YES/NO]. Match?[YES if both NO and same var, OR both YES. Else NO]\n- Eq2 Match?[YES/NO]\n\n**4. Variable Set**\n- Eq1 LHS vars: {...}, RHS vars: {...}. Match? [YES/NO]\n- Eq2 Match? [YES/NO]\n\n### STEP 2: Invariant Falsification (FALSE Triggers)\n- Rule: If Eq1 Match is YES, but Eq2 Match is NO for the SAME feature, the implication is mathematically broken.\n- Did any feature falsify Eq2?[YES/NO]. If YES, output `Answer: FALSE` and stop.\n\n### STEP 3: Structural Triviality (TRUE Triggers)\nIf Eq2 passed Step 2 without falsification, check if Eq1 forces a trivial structure. If ANY of these match, output `Answer: TRUE` and stop.\n\n**A. Singleton Variable Sink (The Black Hole)**\n- Is Eq1 exactly `x = Expression` (or `Expression = x`) where `x` is a standalone variable?\n- AND is there AT LEAST ONE variable in `Expression` that appears EXACTLY ONCE in the entirety of Eq1? (e.g. a free variable `w` that has a total count of exactly 1).\n\n**B. Free Variable Absorber**\n- Is Eq1 exactly `x = x * Expression` or `x = Expression * x`?\n- AND does `Expression` contain variables other than `x`?\n\n**C. Disjoint Variables (Constant Collapse)**\n- Do the LHS and RHS of Eq1 share EXACTLY ZERO variables? (e.g., `x * y = z * w`).\n- AND do both sides of Eq2 contain at least one `*`?\n\n**D. Left/Right Independence**\n- If Eq1 matched Leftmost (YES): Does Eq1 LHS have a variable missing from RHS, AND Eq1 RHS have a variable missing from LHS?\n- If Eq1 matched Rightmost (YES): Does Eq1 LHS have a variable missing from RHS, AND Eq1 RHS have a variable missing from LHS?\n\n**E. Phantom Wildcard Manipulation**\n- Does Eq1 contain a \"Phantom Variable\" (appears on one side but not the other)?\n- AND is Eq2 identical to Eq1 EXCEPT that the subexpression containing the Phantom Variable is rearranged or replaced?\n\n**F. Repeated Absorption Block**\n- Does Eq1 have exactly 2 unique variables (e.g., `x, y`)?\n- AND is Eq1 exactly of the highly symmetric form `x = A * A` or `x = A * (B * A)`?\n- AND did Eq1 match Leftmost (YES) or Rightmost (YES) in Step 1?\n\n**G. Direct Clone**\n- Is Eq2 identical to Eq1 up to simple variable renaming?\n\n### STEP 4: Base Rate Fallback\nIf Eq2 passed Step 2, but Eq1 didn't trigger any TRUE condition in Step 3, default to the mathematical base rate.\n- Most surviving complex equations are FALSE. Output `Answer: FALSE`.\n\n### FINAL VERDICT\nOutput exactly this format on the last line:\nAnswer: [TRUE or FALSE]",
+    "publishedAt": "2026-04-13T10:00:03Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_246851e1-a666-4c77-8747-954269ba646c",
+        "entityName": "110",
+        "publishedAt": "2026-04-13T10:00:03Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_2ed97190-b890-44dd-b1e4-21d5e53c983f",
+    "publicCode": "EQT01-000038",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

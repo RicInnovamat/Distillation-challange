@@ -1,6 +1,6 @@
 # Community Cheatsheets — Index
 
-_Generated from `_network_snapshot.json` (fetched 2026-04-13). 37 public + 0 hidden = 37 total._
+_Generated from `_network_snapshot.json` (fetched 2026-04-15). 47 public + 0 hidden = 47 total._
 
 Source: <https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage1>
 
@@ -39,7 +39,17 @@ Source: <https://competition.sair.foundation/contributor-network?competition=mat
 | `EQT01-000031` | ZPY v3.9.2 Zer00logy/Zero-ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-08 | [✓](EQT01-000031.json) |
 | `EQT01-000032` | ZPY v3.9.4 Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-08 | [✓](EQT01-000032.json) |
 | `EQT01-000033` | v23c | omegaestable | 0 | 0 | 2026-04-11 | [✓](EQT01-000033.json) |
-| `EQT010000` | a_1 | back3 | 0 | 0 | 2026-04-12 | [✓](EQT010000.json) |
-| `EQT010001` | IR3 | Sven Benson | 0 | 0 | 2026-04-12 | [✓](EQT010001.json) |
-| `EQT010002` | IRvNew2short | Sven Benson | 0 | 0 | 2026-04-12 | [✓](EQT010002.json) |
-| `EQT010003` | bank_lookup_v5 | Arjun Garg | 0 | 0 | 2026-04-13 | [✓](EQT010003.json) |
+| `EQT01-000034` | a_1 | back3 | 0 | 0 | 2026-04-12 | [✓](EQT01-000034.json) |
+| `EQT01-000035` | IR3 | Sven Benson | 0 | 0 | 2026-04-12 | [✓](EQT01-000035.json) |
+| `EQT01-000036` | IRvNew2short | Sven Benson | 0 | 0 | 2026-04-12 | [✓](EQT01-000036.json) |
+| `EQT01-000037` | bank_lookup_v5 | Arjun Garg | 0 | 0 | 2026-04-13 | [✓](EQT01-000037.json) |
+| `EQT01-000038` | a | 110 | 0 | 0 | 2026-04-13 | [✓](EQT01-000038.json) |
+| `EQT01-000039` | ZPY v4.2.0. Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000039.json) |
+| `EQT01-000040` | ZPY v4.2.1. Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000040.json) |
+| `EQT01-000041` | ZPY v4.2.2. Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000041.json) |
+| `EQT01-000042` | ZPY v4.2.3. Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000042.json) |
+| `EQT01-000043` | ZPY v4.2.2. Zer00logy/Zero-Ology Ternary 6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000043.json) |
+| `EQT01-000044` | Random | Baiyue Wang | 0 | 0 | 2026-04-14 | [✓](EQT01-000044.json) |
+| `EQT01-000045` | ZPY v4.2.22 Zer00logy/Zero-Ology Ternary6GemLogic | haha8888haha8888 | 0 | 0 | 2026-04-14 | [✓](EQT01-000045.json) |
+| `EQT01-000046` | cs004 | Chi Po Choi | 0 | 0 | 2026-04-15 | [✓](EQT01-000046.json) |
+| `EQT01-000047` | v26c | omegaestable | 0 | 0 | 2026-04-15 | [✓](EQT01-000047.json) |

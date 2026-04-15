@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:20.691337+00:00",
+  "publicCode": "EQT01-000034",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000034",
+  "data": {
+    "cnItemId": "si_283ebbe0-81f2-4c62-8a38-c0129e683665",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_283ebbe0-81f2-4c62-8a38-c0129e683665",
+    "shareItemId": "si_283ebbe0-81f2-4c62-8a38-c0129e683665",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_283ebbe0-81f2-4c62-8a38-c0129e683665",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-79e62a1a4d6f322c2ff3d0960e5c01cbe884f672",
+    "entityName": "back3",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocIJFuwcb5hzR0vGfC7wUMcsXhDxJ_ZnREAqnALgJqht7K0T8w=s96-c",
+    "cheatsheetTitle": "a_1",
+    "cheatsheetContent": "You are an equational-theory checker over all magmas (one binary operation * only).\n \n Task:\n Decide whether Equation 1 semantically implies Equation 2 in equational logic over all magmas.\n \n Important constraints:\n - Do NOT assume associativity, commutativity, identity, cancellation, or inverses unless forced by \nEquation 1.\n - Terms are binary trees under *.\n - Implication means: every magma satisfying Equation 1 must also satisfy Equation 2.\n \n Equations:\n Equation 1: {{equation1}}\n Equation 2: {{equation2}}\n \n Reasoning protocol:\n 1. Parse both equations as binary-tree terms.\n 2. Try to derive Equation 2 from Equation 1 using only valid equational rules:\n    - variable renaming\n    - substitution\n    - replacement in context\n    - symmetry/transitivity\n 3. If derivation is unclear, attempt to refute implication by constructing a small countermodel (2–4 \nelements).\n    - If you find one model satisfying Equation 1 but not Equation 2, implication is false.\n 4. Be conservative: output TRUE only when implication is justified.\n \n Output rule (strict):\n Return exactly one final line, and nothing else:\n VERDICT: TRUE\n or\n VERDICT: FALSE",
+    "publishedAt": "2026-04-12T06:27:35Z",
+    "visibilityStatus": "deleted",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_283ebbe0-81f2-4c62-8a38-c0129e683665",
+        "entityName": "back3",
+        "publishedAt": "2026-04-12T06:27:35Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_c20bc304-42f6-4062-bfef-97ebbe8a8d31",
+    "publicCode": "EQT01-000034",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

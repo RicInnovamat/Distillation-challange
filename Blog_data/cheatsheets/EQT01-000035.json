@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:21.121845+00:00",
+  "publicCode": "EQT01-000035",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000035",
+  "data": {
+    "cnItemId": "si_0fcbceb6-6bd6-4e32-aa7e-d55893523435",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_0fcbceb6-6bd6-4e32-aa7e-d55893523435",
+    "shareItemId": "si_0fcbceb6-6bd6-4e32-aa7e-d55893523435",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_0fcbceb6-6bd6-4e32-aa7e-d55893523435",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-2b0c83a4f7ac06dfbdf09ff11a7e275701f78d53",
+    "entityName": "Sven Benson",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJN7BLxUnIU5cApUWcm-z82ecFdqLFZzN4N2zwLNqW_8HfSd4sj=s96-c",
+    "cheatsheetTitle": "IR3",
+    "cheatsheetContent": "⟦MAG-VM₇⟧\n\nE₁ := {{ equation1 }}\nE₂ := {{ equation2 }}\n\n𝔐 := ⟨A,*⟩ , A≠∅\nτ ::= x | *(τ,τ)\n\n¬α ¬χ ¬ι ¬κ ¬ε ¬ζ\nα : *(*(a,b),c)=*(a,*(b,c))\nχ : *(a,b)=*(b,a)\nι : *(a,a)=a\nκ : [*L/*R cancellation]\nε : unit\nζ : zero\n(assume none unless derivable from E₁)\n\nρ := {\nr: t=t,\ns: t=u ⇒ u=t,\nt: t=u ∧ u=v ⇒ t=v,\nl: t=u ⇒ *(t,w)=*(u,w),\nq: t=u ⇒ *(w,t)=*(w,u),\nσ: inst(E₁, var↦term),\nc: equal-substitution in identical context\n}\n\nβ := {\n!rebracket,\n!swap,\n!xx>x,\n!cancel,\n!drop,\n!insert,\n!“compare-eq”,\n!hidden-laws\n}\n\nκ₀ := parse(tree)\nκ₁ := canon(strip ws, trim outer parens, α-rename for compare only)\nκ₂ := triv\nκ₃ := probe\nκ₄ := M₂\nκ₅ := M₃\nκ₆ := Δ\nκ₇ := out\n\nΦ := κ₀→κ₁→κ₂→κ₃→κ₄→κ₅→κ₆→κ₇\n¬halt until (⊥ ∨ ⊤)\n\ntriv:\n1. lhs(E₂) ≡ rhs(E₂)            ⇒ ⊤\n2. E₂ ≈ E₁                      ⇒ ⊤\n3. E₂ = σ(E₁)                   ⇒ ⊤\nwhere\n≡ = exact same tree\n≈ = same up to variable renaming and/or side swap\n\nfeatures:\nV(t)=varset(t)\nL(t)=leftmost leaf\nR(t)=rightmost leaf\nP(t)=parity vector mod2\nS(t)=tree shape\nN(t)=node count\nRep(t)=repeat-count profile\n\nprobe:\nif V(E₂)⊄V(E₁)         ⇒ priority(0011,0101)\nif Rep(E₂) high        ⇒ priority(0110)\nif S(E₂) far from S(E₁)⇒ priority(M₂ before Δ)\nif L(E₁)≠L(E₂)         ⇒ priority(0011)\nif R(E₁)≠R(E₂)         ⇒ priority(0101)\n\nM₂:\nΩ₂ := [\n0011, 0101, 0000, 1111, 0001, 0111, 0110, 1110, 1000, 1001,\n0010, 0100, 1011, 1101, 1010, 1100\n]\nencoding:\nb₀₀b₀₁b₁₀b₁₁ means\nf(0,0)=b₀₀, f(0,1)=b₀₁, f(1,0)=b₁₀, f(1,1)=b₁₁\n\nfor f∈Ω₂:\n  if ∀ν  E₁^f(ν)=1\n     and ∃μ E₂^f(μ)=0\n  then ⊥ := witness(f,μ)\n\nM₃:\nΩ₃ := {\nπL(x,y)=x,\nπR(x,y)=y,\nk₀(x,y)=0,\nk₁(x,y)=1,\nmin,\nmax,\nτ⁺(x,y)=min(x+y,2),\nhand-asym tables\n}\nfor f∈Ω₃:\n  if ∀ν E₁^f(ν)=1\n     and ∃μ E₂^f(μ)=0\n  then ⊥ := witness(f,μ)\n\nΔ:\ngoal := derive lhs(E₂)=rhs(E₂) via ρ only\nmode:\n  build chain u₀=u₁=…=uₙ\n  with u₀=lhs(E₂), uₙ=rhs(E₂)\n  each edge labeled by one of ρ\nallowed:\n  σ(E₁)\n  r,s,t,l,q,c\nforbidden:\n  β\n⊤ iff valid labeled chain exists\n\ndecision:\n⊥ := one finite witness with\n     domain\n     full table\n     ∀ν E₁ true\n     one μ with E₂ false\n     lhs(E₂)^μ , rhs(E₂)^μ shown\n\n⊤ := one explicit derivation chain only\n\nif ⊥ found first ⇒ FALSE\nelse if ⊤ found ⇒ TRUE\nelse continue search/derivation\n(no guessing)\n\noutput contract:\nVERDICT: TRUE|FALSE\nREASONING: compact trace of Φ, probes used, search/proof path\nPROOF: non-empty iff VERDICT=TRUE; else empty\nCOUNTEREXAMPLE: non-empty iff VERDICT=FALSE; else empty\n\nwitness format:\nA={...}\nf=....\nμ: x↦..., y↦..., ...\nE₁: universal check passed\nE₂(μ): lhs=..., rhs=...\n\nproof format:\n1. ...\n2. ...\n...\nn. lhs(E₂)=rhs(E₂)\n\nsolve:\nE₁ = {{ equation1 }}\nE₂ = {{ equation2 }}",
+    "publishedAt": "2026-04-12T16:10:17Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_0fcbceb6-6bd6-4e32-aa7e-d55893523435",
+        "entityName": "Sven Benson",
+        "publishedAt": "2026-04-12T16:10:17Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_fff4f492-6a51-4867-836b-fddeb25eb3ef",
+    "publicCode": "EQT01-000035",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

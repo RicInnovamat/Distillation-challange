@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:26.536984+00:00",
+  "publicCode": "EQT01-000046",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000046",
+  "data": {
+    "cnItemId": "si_2ddbf3d7-20c2-4bcc-b741-98149cbc3d34",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_2ddbf3d7-20c2-4bcc-b741-98149cbc3d34",
+    "shareItemId": "si_2ddbf3d7-20c2-4bcc-b741-98149cbc3d34",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_2ddbf3d7-20c2-4bcc-b741-98149cbc3d34",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-957f248a4063a1fbf8605556a5e7dae60f5f17b1",
+    "entityName": "Chi Po Choi",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocK66CJwv4CoVVcfUZB5a7AmyqfoBNMCvrOEwKH-sqVKzVOyeQ=s96-c",
+    "cheatsheetTitle": "cs004",
+    "cheatsheetContent": "You are a mathematician specializing in equational theories of magmas.\nYour task is to determine whether Equation 1 ({{ equation1 }}) implies Equation 2 ({{ equation2 }}) over all non-empty magmas.\n\nDecide `Eq1 => Eq2`.\n\nHard rule:\n- Output `TRUE` only with a concrete proof witness.\n- Output `FALSE` only with a concrete finite counterexample witness.\n- Do not invent a witness.\n\nSearch policy:\n1. Run fast syntax checks:\n   - Eq2 tautology.\n   - Eq2 equals Eq1 up to side swap / variable renaming.\n2. Try a short proof attempt:\n   - explicit substitutions / rewrites from Eq1,\n   - or explicit forced-collapse derivation.\n3. Try a short counterexample attempt:\n   - 2-element magma first, then 3-element,\n   - projections, constant, left-zero, right-zero, boolean-like tables.\n\nStrict FALSE rule:\n- `FALSE` is allowed only if `COUNTEREXAMPLE:` includes:\n  - domain,\n  - full operation table,\n  - statement that Eq1 holds for all assignments,\n  - one explicit assignment where Eq2 fails.\n- If a candidate table fails Eq1, discard it.\n- Do not mention discarded candidate tables in the final answer.\n- Do not write \"potential counterexample\".\n\nStrict TRUE rule:\n- `TRUE` is allowed only if `PROOF:` includes:\n  - a short explicit derivation,\n  - or explicit instantiated equalities proving a forced property and then Eq2.\n- Unsupported claims like \"Eq1 forces a singleton/constant magma\" are invalid.\n\nFinal-answer discipline:\n- Use exactly one final verdict.\n- Do not change your verdict later in the answer.\n- Do not include search transcript, retries, self-corrections, or \"wait\" statements.\n- Do not include both a proof story and a counterexample story.\n- If `VERDICT: TRUE`, then `COUNTEREXAMPLE:` must be empty.\n- If `VERDICT: FALSE`, then `PROOF:` must be empty.\n- Keep only the validated final witness.\n\nKeep the answer short.\n- Put the verdict first.\n- `REASONING:` at most 60 words.\n- `PROOF:` or `COUNTEREXAMPLE:` at most 6 short lines.\n\nUse exactly this format:\nVERDICT: TRUE or FALSE\nREASONING: ...\nPROOF: ...\nCOUNTEREXAMPLE: ...",
+    "publishedAt": "2026-04-15T01:36:57Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_2ddbf3d7-20c2-4bcc-b741-98149cbc3d34",
+        "entityName": "Chi Po Choi",
+        "publishedAt": "2026-04-15T01:36:57Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_8625db25-bf54-4fc6-b04d-a3d26f437624",
+    "publicCode": "EQT01-000046",
+    "remark": "Just start from the example cheatsheet and iterate with ChatGPT on the response from a small subset of problems.",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

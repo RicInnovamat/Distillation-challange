@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:21.556490+00:00",
+  "publicCode": "EQT01-000036",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000036",
+  "data": {
+    "cnItemId": "si_52d6e31e-e4ba-44c8-b18d-b0b690345c1b",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_52d6e31e-e4ba-44c8-b18d-b0b690345c1b",
+    "shareItemId": "si_52d6e31e-e4ba-44c8-b18d-b0b690345c1b",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_52d6e31e-e4ba-44c8-b18d-b0b690345c1b",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-2b0c83a4f7ac06dfbdf09ff11a7e275701f78d53",
+    "entityName": "Sven Benson",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJN7BLxUnIU5cApUWcm-z82ecFdqLFZzN4N2zwLNqW_8HfSd4sj=s96-c",
+    "cheatsheetTitle": "IRvNew2short",
+    "cheatsheetContent": "E₁ := {{ equation1 }}\nE₂ := {{ equation2 }}\n\n𝔐 := ⟨A,*⟩, A≠∅\nτ ::= x | *(τ,τ)\n\nassume no assoc/comm/idem/cancel/unit/zero/hidden-laws unless derivable from E₁\n\nρ := {\nr,s,t,\nl: t=u ⇒ *(t,w)=*(u,w),\nq: t=u ⇒ *(w,t)=*(w,u),\nσ: substitution-instance(E₁),\nc: equal-substitution in identical context\n}\n\nβ := {!rebracket,!swap,!xx>x,!cancel,!drop,!insert,!hidden-laws}\n\nΦ := parse→canon→triv→probe→M₂→M₃→Δ→verify→out\n\ntriv:\n- lhs(E₂)≡rhs(E₂) ⇒ ⊤\n- E₂≈E₁ ⇒ ⊤\n- E₂ or side-swap(E₂) is σ(E₁) ⇒ ⊤\n\nfeatures:\nV,L,R,P,S,Rep on terms\nL≡(E): L(lhs(E))=L(rhs(E))\nR≡(E): R(lhs(E))=R(rhs(E))\nP≡(E): P(lhs(E))=P(rhs(E))\n\nprobe:\n- if V(E₂)⊄V(E₁), prefer models\n- if L≡(E₁) and not L≡(E₂), try πL first\n- if R≡(E₁) and not R≡(E₂), try πR first\n- if P≡(E₁) and not P≡(E₂), try xor-like first\n- if shape gap in E₂ is large, try models before Δ\n\nM₂:\nA={0,1}; test all 16 binary tables\nif ∀ν on eqvars(E₁), E₁ true and ∃μ on eqvars(E₂), E₂ false ⇒ ⊥\n\nM₃:\nA={0,1,2}; test πL,πR,k₀,k₁,min,max,τ⁺,fixed asym tables\nif ∀ν on eqvars(E₁), E₁ true and ∃μ on eqvars(E₂), E₂ false ⇒ ⊥\n\nΔ:\nderive lhs(E₂)=rhs(E₂) by a labeled chain using ρ only; no β\nif chain exists ⇒ ⊤\n\nverify:\n- TRUE only with explicit labeled derivation chain\n- FALSE only with finite domain, full table, universal E₁ check, and one μ falsifying E₂\n- otherwise reject and continue\n\noutput:\nVERDICT: TRUE|FALSE\nREASONING: compact trace\nPROOF: non-empty iff TRUE\nCOUNTEREXAMPLE: non-empty iff FALSE",
+    "publishedAt": "2026-04-12T20:54:32Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_52d6e31e-e4ba-44c8-b18d-b0b690345c1b",
+        "entityName": "Sven Benson",
+        "publishedAt": "2026-04-12T20:54:32Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_1070d186-57cb-48ed-8230-60717a5d5d4c",
+    "publicCode": "EQT01-000036",
+    "remark": "IR simplified",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

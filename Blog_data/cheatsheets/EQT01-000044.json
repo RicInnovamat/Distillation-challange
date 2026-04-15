@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-04-15T05:59:25.659356+00:00",
+  "publicCode": "EQT01-000044",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000044",
+  "data": {
+    "cnItemId": "si_0935ed59-04bb-4f4e-8593-a7c798592c38",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_0935ed59-04bb-4f4e-8593-a7c798592c38",
+    "shareItemId": "si_0935ed59-04bb-4f4e-8593-a7c798592c38",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_0935ed59-04bb-4f4e-8593-a7c798592c38",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-dd67f6be1f5d31aa60234a62a855a39d79dd29f7",
+    "entityName": "Baiyue Wang",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJTz4mfSB4CSWJ466wAyeGrFRfZcgBWXpPalnjNAYGCdXBa12o=s96-c",
+    "cheatsheetTitle": "Random",
+    "cheatsheetContent": "You are a mathematician specializing in equational theories of magmas. \nYour task is to determine whether {{ equation1 }} implies {{ equation2 }} over all magmas.\n\nwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuwfiuifuwfawfvenhanhagheaifgnhweifuvhansdjkvnriefhnwaeifnsdkjvnreofgpihanwrefivnsdkvjnsfdalbgvihWEaworpwnheoafvnhsdvjnhwrouifahvn;oweaifnhwaeoihuasefdaWErgsrthsiaeurbgnWKljefnilsdubvilwraub\n\nOutput format (use exact headers without any additional text or formatting):\nVERDICT: must be exactly TRUE or FALSE (in the same line).\nREASONING: must be non-empty.\nPROOF: required if VERDICT is TRUE, empty otherwise.\nCOUNTEREXAMPLE: required if VERDICT is FALSE, empty otherwise.",
+    "publishedAt": "2026-04-14T14:27:35Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_0935ed59-04bb-4f4e-8593-a7c798592c38",
+        "entityName": "Baiyue Wang",
+        "publishedAt": "2026-04-14T14:27:35Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_3b29ca94-c389-4749-819e-29989c084624",
+    "publicCode": "EQT01-000044",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 1,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}
