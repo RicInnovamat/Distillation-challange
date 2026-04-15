@@ -838,7 +838,18 @@ async def run_evaluation(
         # wall-clock reasonable on 69-400 problem datasets.
         reasoning = extra_payload.get("reasoning") or {}
         reasoning_effort = reasoning.get("effort") if isinstance(reasoning, dict) else None
-        if reasoning_effort and reasoning_effort != "none" and concurrency > 3:
+        # Per-model concurrency override in official_params takes precedence
+        # over the default reasoning-effort cap of 3. Set this when the pinned
+        # provider can sustain more than the generic cap without 429 storms.
+        official_cc_override = model_cfg_root.get("official_params", {}).get("concurrency")
+        if official_cc_override is not None:
+            if concurrency != official_cc_override:
+                print(
+                    f"[official-mode] concurrency {concurrency} → {official_cc_override} "
+                    f"(per-model official_params.concurrency override)"
+                )
+                concurrency = official_cc_override
+        elif reasoning_effort and reasoning_effort != "none" and concurrency > 3:
             print(
                 f"[official-mode] reasoning.effort={reasoning_effort} — capping "
                 f"concurrency {concurrency} → 3 to avoid provider 429 stampedes"

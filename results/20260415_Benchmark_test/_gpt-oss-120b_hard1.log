@@ -1,0 +1,106 @@
+Loaded 69 problems from 'hard1'
+Prompt template: cheatsheets/EQT01-000050.md (7003 bytes)
+Sample rendered prompt (7021 chars):
+---
+You are a mathematician specializing in equational theories of magmas. 
+Your task is to determine whether Equation 1 (x = y * (y * ((x * y) * x))) implies Equation 2 (x * y = ((z * x) * w) * y) over all magmas.
+---
+## CHEAT SHEET: EQUATIONAL THEORIES IMPLICATION (MAGMAS)
+### Version 3F - Balanced Hy...
+---
+Model: OpenAI: gpt-oss-120b | backend: openrouter | model_id: openai/gpt-oss-120b
+[official-mode] concurrency 10 → 7 (per-model official_params.concurrency override)
+[official-mode] overrides for gpt-oss-120b: {"provider":{"order":["DeepInfra","Cerebras","BaseTen","Parasail"],"quantizations":["bf16","fp16","fp4"],"allow_fallbacks":true},"reasoning":{"effort":"low"},"seed":0,"max_tokens":8192}
+  [1/69] hard1_0013: OK (expected=True, got=True, $0.0003, 59.6s)
+  [2/69] hard1_0068: WRONG (expected=False, got=True, $0.0003, 64.2s)
+  [3/69] hard1_0052: OK (expected=True, got=True, $0.0004, 72.7s)
+  [4/69] hard1_0043: WRONG (expected=False, got=True, $0.0004, 74.4s)
+  [5/69] hard1_0030: WRONG (expected=False, got=True, $0.0004, 75.7s)
+  [6/69] hard1_0027: WRONG (expected=True, got=False, $0.0004, 79.8s)
+  [7/69] hard1_0007: OK (expected=True, got=True, $0.0003, 129.7s)
+  [8/69] hard1_0010: WRONG (expected=False, got=True, $0.0007, 140.2s)
+  [9/69] hard1_0040: OK (expected=True, got=True, $0.0004, 141.6s)
+  [10/69] hard1_0037: WRONG (expected=False, got=True, $0.0004, 149.2s)
+  [11/69] hard1_0062: WRONG (expected=False, got=True, $0.0004, 163.2s)
+  [12/69] hard1_0046: OK (expected=True, got=True, $0.0004, 171.5s)
+  [13/69] hard1_0065: OK (expected=True, got=True, $0.0005, 172.0s)
+  [14/69] hard1_0020: OK (expected=False, got=False, $0.0002, 186.8s)
+  [15/69] hard1_0004: WRONG (expected=False, got=True, $0.0004, 232.1s)
+  [16/69] hard1_0034: OK (expected=True, got=True, $0.0004, 238.9s)
+  [17/69] hard1_0050: OK (expected=True, got=True, $0.0004, 240.7s)
+  [18/69] hard1_0017: WRONG (expected=False, got=True, $0.0004, 244.5s)
+  [19/69] hard1_0022: WRONG (expected=False, got=True, $0.0004, 266.7s)
+  [20/69] hard1_0031: WRONG (expected=False, got=True, $0.0004, 270.1s)
+  [21/69] hard1_0055: OK (expected=False, got=False, $0.0002, 276.2s)
+  [22/69] hard1_0059: OK (expected=True, got=True, $0.0006, 285.7s)
+  [23/69] hard1_0047: WRONG (expected=False, got=True, $0.0003, 288.5s)
+  [24/69] hard1_0028: WRONG (expected=False, got=True, $0.0003, 323.5s)
+  [25/69] hard1_0001: WRONG (expected=False, got=True, $0.0004, 330.8s)
+  [26/69] hard1_0056: WRONG (expected=True, got=False, $0.0005, 333.7s)
+  [27/69] hard1_0053: WRONG (expected=False, got=True, $0.0003, 341.6s)
+  [28/69] hard1_0014: OK (expected=False, got=False, $0.0005, 347.1s)
+  [29/69] hard1_0044: OK (expected=True, got=True, $0.0004, 351.6s)
+  [30/69] hard1_0011: OK (expected=False, got=False, $0.0002, 360.4s)
+  [31/69] hard1_0066: OK (expected=False, got=False, $0.0003, 396.9s)
+  [32/69] hard1_0038: WRONG (expected=False, got=True, $0.0004, 413.9s)
+  [33/69] hard1_0069: OK (expected=True, got=True, $0.0006, 422.5s)
+  [34/69] hard1_0041: OK (expected=True, got=True, $0.0005, 430.3s)
+  [35/69] hard1_0005: WRONG (expected=False, got=True, $0.0003, 430.7s)
+  [36/69] hard1_0063: OK (expected=True, got=True, $0.0004, 443.5s)
+  [37/69] hard1_0008: WRONG (expected=False, got=True, $0.0004, 449.5s)
+  [38/69] hard1_0021: WRONG (expected=False, got=True, $0.0004, 465.5s)
+  [39/69] hard1_0051: OK (expected=False, got=False, $0.0002, 470.6s)
+  [40/69] hard1_0026: WRONG (expected=False, got=True, $0.0004, 483.6s)
+  [41/69] hard1_0002: WRONG (expected=False, got=True, $0.0003, 491.0s)
+  [42/69] hard1_0018: OK (expected=True, got=True, $0.0003, 495.2s)
+  [43/69] hard1_0060: OK (expected=True, got=True, $0.0004, 497.0s)
+  [44/69] hard1_0025: WRONG (expected=False, got=True, $0.0003, 514.8s)
+  [45/69] hard1_0035: WRONG (expected=True, got=False, $0.0006, 539.7s)
+  [46/69] hard1_0023: OK (expected=True, got=True, $0.0005, 559.4s)
+  [47/69] hard1_0015: WRONG (expected=False, got=True, $0.0004, 563.6s)
+  [48/69] hard1_0057: WRONG (expected=False, got=True, $0.0004, 563.9s)
+  [49/69] hard1_0032: WRONG (expected=False, got=True, $0.0005, 584.8s)
+  [50/69] hard1_0029: WRONG (expected=False, got=True, $0.0004, 600.1s)
+  [51/69] hard1_0045: WRONG (expected=False, got=True, $0.0004, 606.8s)
+  [52/69] hard1_0042: WRONG (expected=False, got=True, $0.0003, 619.3s)
+  [53/69] hard1_0054: OK (expected=True, got=True, $0.0004, 621.1s)
+  [54/69] hard1_0048: OK (expected=False, got=False, $0.0008, 634.9s)
+  [55/69] hard1_0012: OK (expected=False, got=False, $0.0005, 635.6s)
+  [56/69] hard1_0006: OK (expected=False, got=False, $0.0002, 658.2s)
+  [57/69] hard1_0009: WRONG (expected=False, got=True, $0.0004, 671.8s)
+  [58/69] hard1_0064: OK (expected=True, got=True, $0.0004, 696.1s)
+  [59/69] hard1_0039: WRONG (expected=False, got=True, $0.0005, 698.0s)
+  [60/69] hard1_0067: OK (expected=True, got=True, $0.0006, 701.0s)
+  [61/69] hard1_0061: OK (expected=True, got=True, $0.0004, 705.4s)
+  [62/69] hard1_0036: WRONG (expected=False, got=True, $0.0004, 726.9s)
+  [63/69] hard1_0049: OK (expected=False, got=False, $0.0003, 747.1s)
+  [64/69] hard1_0033: WRONG (expected=False, got=True, $0.0003, 755.9s)
+  [65/69] hard1_0019: WRONG (expected=False, got=True, $0.0005, 774.2s)
+  [66/69] hard1_0024: WRONG (expected=False, got=True, $0.0004, 779.0s)
+  [67/69] hard1_0003: OK (expected=True, got=True, $0.0006, 781.2s)
+  [68/69] hard1_0016: WRONG (expected=False, got=True, $0.0004, 788.1s)
+  [69/69] hard1_0058: WRONG (expected=False, got=True, $0.0005, 789.0s)
+
+============================================================
+  Model:       gpt-oss-120b (openrouter)
+  Dataset:     hard1
+  Prompt:      cheatsheets/EQT01-000050.md
+============================================================
+  Total problems:     69
+  Correct:            31/69 (44.9%)
+  Wrong:              38
+  Parse errors:       0
+  ---
+  TRUE→TRUE:          21
+  TRUE→FALSE:         3  (missed implications)
+  FALSE→TRUE:         35  (confabulations)
+  FALSE→FALSE:        10
+  ---
+  Total cost:         $0.0283
+  Total tokens:       119225 in / 124647 out
+  Avg latency:        429.3s
+============================================================
+
+
+Results written to: results/20260415_Benchmark_test/gpt-oss-120b_openrouter_hard1_20260415_212642.csv
+Reasoning written to: results/20260415_Benchmark_test/gpt-oss-120b_openrouter_hard1_20260415_212642.json

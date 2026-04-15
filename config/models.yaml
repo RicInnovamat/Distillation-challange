@@ -24,8 +24,27 @@ models:
       reasoning_effort: "low"
       seed: 0
       max_tokens: 8192
-      # Healthy bf16 alternatives for --official-fallbacks.
-      fallback_providers: ["Chutes"]
+      # Per-model concurrency override: bypasses the default
+      # reasoning-effort cap of 3 (set in eval_harness.py). DeepInfra bf16
+      # absorbs gpt-oss-120b throughput better than Novita, so 7 is safe
+      # while keeping headroom for the pinned-provider 429 backoff.
+      concurrency: 7
+      # Healthy alternatives appended when --official-fallbacks is set.
+      # Reviewed 2026-04-15 via OpenRouter endpoints API (/api/v1/models/
+      # openai/gpt-oss-120b/endpoints): Chutes is no longer listed for
+      # gpt-oss-120b — removed. DeepInfra/bf16 is the ONLY bf16 endpoint
+      # for this model, so strict fallbacks must accept quant divergence.
+      # Cerebras/fp16 is closest to the bf16 SAIR spec and has 100%
+      # uptime_1d; BaseTen/fp4 and Parasail/fp4 are fp4 last-resorts.
+      # Their quants union into `provider.quantizations`, widening the
+      # filter from ["bf16"] → ["bf16","fp16","fp4"].
+      # (Earlier unquantized Fireworks/Together/Groq entries removed:
+      # their `quantization` field is null in the endpoints API, so the
+      # bf16 filter would have excluded them. Earlier DeepInfra/turbo
+      # entry also removed: `turbo` is a DeepInfra SKU variant, not a
+      # valid OpenRouter `quantizations` enum value — it poisoned the
+      # quantizations filter and caused 400 Bad Request on every call.)
+      fallback_providers: ["Cerebras/fp16", "BaseTen/fp4", "Parasail/fp4"]
 
   gemma-4-31b:
     display_name: "Google: Gemma 4 31B"
@@ -48,15 +67,16 @@ models:
       seed: 0
       max_tokens: 8192
       # Additional providers appended to provider.order when
-      # --official-fallbacks is set. Novita has been in a persistent
-      # "degraded" state (status=-2) with server_overload errors;
-      # the bf16 alternatives (Parasail, Venice) absorb most of the load.
-      # AkashML serves the same model at fp8 — meaningful quantization
-      # divergence from strict SAIR spec (bf16), but the only healthy
-      # fallback left when all three bf16 providers rate-limit at once.
-      # Entries support `slug/quant` syntax so the quantizations filter
-      # unions across providers.
-      fallback_providers: ["Parasail", "Venice", "AkashML/fp8"]
+      # --official-fallbacks is set. Reviewed 2026-04-15 via OpenRouter
+      # endpoints API (/api/v1/models/google/gemma-4-31b-it/endpoints):
+      # Novita/bf16 (primary) is still persistently degraded (status=-2,
+      # server_overload); Venice has been removed from OpenRouter entirely;
+      # AkashML has flipped from healthy to degraded but is kept as a
+      # last-resort fp8 fallback. DeepInfra/fp8 is the new healthy
+      # alternative (fp8 quant divergence from strict bf16 SAIR spec,
+      # same trade-off as AkashML). Entries support `slug/quant` syntax
+      # so the quantizations filter unions across providers.
+      fallback_providers: ["Parasail", "DeepInfra/fp8", "AkashML/fp8"]
 
   llama-3.3-70b:
     display_name: "Meta: Llama 3.3 70B Instruct"
