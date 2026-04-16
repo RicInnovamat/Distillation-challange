@@ -1,0 +1,655 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+order5_hard_0001,True,False,False,True,labeled:FALSE,2874.03,3109,1291,0.000367,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0002,False,True,False,True,labeled:TRUE,3047.11,3093,1871,0.000476,"VERDICT: TRUE\nREASONING: The given equation is a bare source (single variable on the left). The right‑hand side does not contain the left variable as a solitary factor, so the simple projection rules"
+order5_hard_0003,True,False,False,True,labeled:FALSE,3089.55,3109,1465,0.000400,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0004,False,False,True,True,labeled:FALSE,3174.39,3093,879,0.000288,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0005,True,False,False,True,labeled:FALSE,3219.93,3109,1686,0.000442,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0006,False,False,True,True,labeled:FALSE,3271.35,3093,1923,0.000486,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0007,True,False,False,True,labeled:FALSE,3369.74,3109,1169,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0008,False,True,False,True,labeled:TRUE,3365.85,3093,2424,0.000581,VERDICT: TRUE\nPROOF:\nThe equation  \n\n\[\nx = (y * (y * ((z * z) * x))) * y\n\]\n\nis a *bare* equation (the left‑hand side is a single variable).  \nThe right‑hand side contains the variable \(x\)
+order5_hard_0009,True,True,True,True,labeled:TRUE,3413.97,3108,2276,0.000554,VERDICT: TRUE\nREASONING: The premise equation  \n x = (y * ((z * x) * (y * z))) * y  \nis a bare identity with the variable x appearing on the left‑hand side and also inside the right‑hand side. By e
+order5_hard_0010,False,False,True,True,labeled:FALSE,3453.66,3094,1135,0.000336,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0011,True,False,False,True,labeled:FALSE,3485.19,3108,1502,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0012,False,False,True,True,labeled:FALSE,3537.57,3094,1368,0.000381,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0013,True,False,False,True,labeled:FALSE,3578.92,3108,1559,0.000417,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0014,False,False,True,True,labeled:FALSE,3715.34,3094,1924,0.000486,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0015,True,True,True,True,labeled:TRUE,3662.38,3108,694,0.000253,"VERDICT: TRUE\nREASONING: The premise equation forces every element of any magma to be a left identity for the operation, which in turn forces the operation to be a left projection (a * b = a) for all"
+order5_hard_0016,False,False,True,True,labeled:FALSE,3699.44,3094,1069,0.000324,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0017,True,False,False,True,labeled:FALSE,3760.45,3108,1170,0.000344,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0018,False,False,True,True,labeled:FALSE,3873.70,3094,1758,0.000455,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0019,True,False,False,True,labeled:FALSE,3856.74,3109,1480,0.000402,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0020,False,False,True,True,labeled:FALSE,532.28,3094,1505,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0021,True,False,False,True,labeled:FALSE,599.04,3109,1567,0.000419,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0022,False,False,True,True,labeled:FALSE,2024.06,3108,1429,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0023,True,False,False,True,labeled:FALSE,2303.30,3108,1616,0.000428,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0024,False,True,False,True,labeled:TRUE,31.11,3108,699,0.000254,"VERDICT: TRUE\nREASONING: Using contradiction motif C7.\nPROOF: For Eq1, the right‑hand side T = ((((y*y)*z)*x)*x)*z contains three distinct variables {x,y,z} (rhsVars = 3). The leftmost leaf of T is "
+order5_hard_0025,True,False,False,True,labeled:FALSE,94.97,3109,1251,0.000359,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0026,False,False,True,True,labeled:FALSE,107.37,3108,1322,0.000372,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0027,True,False,False,True,labeled:FALSE,241.77,3108,1668,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0028,False,False,True,True,labeled:FALSE,251.02,3108,1463,0.000399,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0029,True,False,False,True,labeled:FALSE,418.98,3109,2608,0.000617,"VERDICT: FALSE\nREASONING: Counterexample found. Consider the magma \(M = \{0,1\}\) with binary operation defined as right projection: \(a * b = b\) for all \(a,b\in M\). Assignment: \(x = 0\), \(y = "
+order5_hard_0030,False,False,True,True,labeled:FALSE,406.57,3109,1889,0.000480,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0031,True,False,False,True,labeled:FALSE,480.56,3109,1312,0.000371,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0032,False,False,True,True,labeled:FALSE,572.07,3109,1830,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0033,True,False,False,True,labeled:FALSE,709.04,3108,1104,0.000331,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0034,False,False,True,True,labeled:FALSE,869.58,3109,1687,0.000442,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0035,True,False,False,True,labeled:FALSE,875.85,3108,1600,0.000425,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0036,False,False,True,True,labeled:FALSE,1014.17,3109,1630,0.000431,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0037,True,False,False,True,labeled:FALSE,1029.29,3109,1472,0.000401,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0038,False,False,True,True,labeled:FALSE,1113.87,3109,1156,0.000341,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0039,True,False,False,True,labeled:FALSE,1267.00,3108,1791,0.000462,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0040,False,False,True,True,labeled:FALSE,1287.48,3109,2262,0.000551,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0041,True,False,False,True,labeled:FALSE,1422.33,3108,1492,0.000405,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0042,False,False,True,True,labeled:FALSE,1480.55,3108,1069,0.000324,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0043,True,False,False,True,labeled:FALSE,1527.10,3109,2411,0.000579,"VERDICT: FALSE\nREASONING: COUNTEREXAMPLE\nMagma with two elements {0,1} and operation * defined by the table:\n\n| * | 0 | 1 |\n|---|---|---|\n| 0 | 0 | 0 |\n| 1 | 1 | 0 |\n\nThat is:\n- 0*0 = 0, 0*1"
+order5_hard_0044,False,True,False,True,labeled:TRUE,1681.89,3108,755,0.000265,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with RHS T = ((((y*y)*z)*x)*x)*z. Computing features: rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCount=2. Thi"
+order5_hard_0045,True,False,False,True,labeled:FALSE,1885.15,3108,2074,0.000515,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0046,False,False,True,True,labeled:FALSE,2093.03,3108,2629,0.000621,"VERDICT: FALSE\nREASONING: Counterexample – use the two‑element magma ( {0,1}, operation a * b = a ⊕ b mod 2 ).  \nAssignment: x = 0, y = 0, z = 1.  \n\n- Compute Eq1:  \n  RHS = y * (((x * (z * z)) *"
+order5_hard_0047,True,False,False,True,labeled:FALSE,2162.80,3108,1516,0.000409,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0048,False,False,True,True,labeled:FALSE,2311.00,3108,1198,0.000349,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0049,True,False,False,True,labeled:FALSE,2443.57,3108,1855,0.000474,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0050,False,False,True,True,labeled:FALSE,2458.24,3109,1693,0.000443,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0051,True,False,False,True,labeled:FALSE,2634.97,3108,2226,0.000544,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0052,False,False,True,True,labeled:FALSE,2680.12,3109,1543,0.000414,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0053,True,False,False,True,labeled:FALSE,2694.91,3109,1667,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0054,False,False,True,True,labeled:FALSE,2884.53,3109,1807,0.000465,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0055,True,True,True,True,labeled:TRUE,2892.74,3109,2530,0.000602,VERDICT: TRUE\nREASONING: The identity x = ((y * (x * y)) * z) * (y * z) forces every element of a magma to be equal to every other element (the only models are the one‑element magmas). In a one‑eleme
+order5_hard_0056,False,False,True,True,labeled:FALSE,2967.28,3109,1435,0.000394,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0057,True,False,False,True,labeled:FALSE,3036.57,3108,1776,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0058,False,False,True,True,labeled:FALSE,3150.74,3109,1850,0.000473,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0059,True,False,False,True,labeled:FALSE,3228.46,3108,1994,0.000500,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0060,False,False,True,True,labeled:FALSE,3271.32,3109,1826,0.000468,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0061,True,False,False,True,labeled:FALSE,3326.15,3109,1769,0.000457,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0062,False,False,True,True,labeled:FALSE,3403.35,3108,884,0.000289,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0063,True,False,False,True,labeled:FALSE,3416.94,3108,2221,0.000543,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0064,False,True,False,True,labeled:TRUE,3478.23,3108,585,0.000232,"VERDICT: TRUE\nREASONING: Applied contradiction motif (STEP 2.8). For the bare equation x = ((((y*y)*z)*x)*x)*z, the product side P has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v,"
+order5_hard_0065,True,False,False,True,labeled:FALSE,3540.58,3108,1476,0.000402,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0066,False,False,True,True,labeled:FALSE,3618.22,3108,1927,0.000487,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0067,True,False,False,True,labeled:FALSE,3590.41,3108,2073,0.000515,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0068,False,False,True,True,labeled:FALSE,3630.83,3108,1912,0.000484,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0069,True,False,False,True,labeled:FALSE,3675.93,3108,2224,0.000544,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0070,False,False,True,True,labeled:FALSE,3705.90,3109,1366,0.000381,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0071,True,False,False,True,labeled:FALSE,3763.40,3108,1740,0.000452,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0072,False,False,True,True,labeled:FALSE,3853.72,3109,1229,0.000355,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0073,True,False,False,True,labeled:FALSE,3937.47,3108,1865,0.000476,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0074,False,False,True,True,labeled:FALSE,73.48,3109,1865,0.000476,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \n\nConsider the magma M = {0,1} with binary operation * defined by the constant table:\n\n* | 0 1\n---------\n0 | 0 0\n1 | 0 0\n\ni.e., a * b = 0 for"
+order5_hard_0075,True,False,False,True,labeled:FALSE,54.36,3108,1691,0.000443,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0076,False,False,True,True,labeled:FALSE,164.76,3109,1348,0.000377,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0077,True,True,True,True,labeled:TRUE,182.13,3109,1077,0.000326,"VERDICT: TRUE\nREASONING: The premise equation is bare (x = …). Computing the features of the right‑hand side P = (y * (z * ((y * x) * x))) * z gives:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topSha"
+order5_hard_0078,False,False,True,True,labeled:FALSE,297.60,3109,1369,0.000381,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0079,True,False,False,True,labeled:FALSE,362.62,3109,1001,0.000311,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0080,False,False,True,True,labeled:FALSE,446.24,3109,1167,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0081,True,False,False,True,labeled:FALSE,519.20,3109,1333,0.000375,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0082,False,False,True,True,labeled:FALSE,537.76,3108,1319,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0083,True,True,True,True,labeled:TRUE,743.15,3109,1434,0.000394,VERDICT: TRUE\nREASONING: The given source equation is a bare equation of the form x = T where the variable x occurs in T. By analysing the structure of T we see that the equation forces every element
+order5_hard_0084,False,True,False,True,labeled:TRUE,821.87,3108,592,0.000234,"VERDICT: TRUE\nREASONING: Using STEP 2.8 contradiction motifs. For Eq1, RHS term P = ((((y*y)*z)*x)*x)*z has features:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=222, xCount=2."
+order5_hard_0085,True,False,False,True,labeled:FALSE,933.67,3108,1296,0.000367,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0086,False,False,True,True,labeled:FALSE,949.68,3108,1299,0.000368,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0087,True,True,True,True,labeled:TRUE,1036.32,3109,640,0.000243,"VERDICT: TRUE\nREASONING: Applying STEP 2.8 (contradiction motif). For Eq1, the product side P = (((y*x)*x)*(z*y))*z yields the feature vector rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, r"
+order5_hard_0088,False,False,True,True,labeled:FALSE,1174.88,3108,1288,0.000366,VERDICT: FALSE\nREASONING: default false fallback\nPROOF:
+order5_hard_0089,True,False,False,True,labeled:FALSE,1197.68,3109,1122,0.000334,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0090,False,False,True,True,labeled:FALSE,1346.46,3109,1634,0.000432,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0091,True,False,False,True,labeled:FALSE,1395.52,3109,954,0.000303,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0092,False,False,True,True,labeled:FALSE,1448.15,3109,2812,0.000656,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0093,True,True,True,True,labeled:TRUE,1533.42,3108,736,0.000261,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with T = (((y*x)*z)*(x*y))*z. Computing the required features:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCo"
+order5_hard_0094,False,False,True,True,labeled:FALSE,1750.37,3109,1622,0.000429,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0095,True,True,True,True,labeled:TRUE,1822.74,3108,769,0.000267,"VERDICT: TRUE\nREASONING: Using STEP 2.8 contradiction motifs. For the product side P = (((y*x)*z)*(x*y))*z we have rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, xCount=2. This matches motif"
+order5_hard_0096,False,True,False,True,labeled:TRUE,2122.04,3109,3011,0.000693,"VERDICT: TRUE\nREASONING: The source identity forces a collapse of any magma to a singleton (all elements equal). By instantiating the variables in the source equation appropriately (e.g., setting y ="
+order5_hard_0097,True,False,False,True,labeled:FALSE,2161.57,3108,1269,0.000362,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0098,False,False,True,True,labeled:FALSE,2361.24,3109,2096,0.000519,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0099,True,True,True,True,labeled:TRUE,2408.24,3108,1135,0.000337,"VERDICT: TRUE\nREASONING: Applied STEP 2.8 (bare‑source contradiction motifs). For Eq1, the right‑hand side P = (y * (z * ((x * y) * y))) * z yields the feature vector rhsVars=3, Lx=FALSE, Rx=FALSE, x"
+order5_hard_0100,False,False,True,True,labeled:FALSE,2526.87,3109,1619,0.000429,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0101,True,False,False,True,labeled:FALSE,2544.14,3108,2423,0.000582,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0102,False,False,True,True,labeled:FALSE,2614.46,3108,1118,0.000334,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0103,True,False,False,True,labeled:FALSE,2730.39,3108,4275,0.000933,"VERDICT: FALSE\nREASONING: XOR parity witness\nPROOF:  \nConsider the two-element magma \(M = \{0,1\}\) with the binary operation defined as exclusive‑or (addition modulo 2): \(a * b = a \oplus b\).  "
+order5_hard_0104,False,True,False,True,labeled:TRUE,2794.00,3108,849,0.000283,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation (x = T) with RHS term T = ((((y*y)*z)*x)*x)*z. Computing features of T gives rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTot"
+order5_hard_0105,True,False,False,True,labeled:FALSE,2953.55,3108,1483,0.000403,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0106,False,False,True,True,labeled:FALSE,3040.66,3108,2003,0.000502,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0107,True,True,True,True,labeled:TRUE,3151.80,3108,2295,0.000557,VERDICT: TRUE\nREASONING: The given premise x = (((y * (y * x)) * z) * y) * z forces every element of any magma to be equal to every other element (the magma collapses to a singleton). In a singleton 
+order5_hard_0108,False,False,True,True,labeled:FALSE,3270.77,3108,2592,0.000614,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0109,True,True,True,True,labeled:TRUE,3231.49,3108,2213,0.000542,VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation with variable x on the left and x appearing only once on the right. The maximal multiplicity of a variable on the right‑hand side is 3 (z o
+order5_hard_0110,False,False,True,True,labeled:FALSE,3357.48,3109,1990,0.000499,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0111,True,False,False,True,labeled:FALSE,3328.77,3109,1960,0.000494,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0112,False,False,True,True,labeled:FALSE,3371.85,3109,1766,0.000457,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0113,True,False,False,True,labeled:FALSE,3508.18,3108,2017,0.000504,"VERDICT: FALSE\nREASONING: spine isolation\n\n**Spine isolation counterexample**\n\nConsider the magma with underlying set {a,b} and binary operation * defined by the table:\n\n| * | a | b |\n|---|---"
+order5_hard_0114,False,False,True,True,labeled:FALSE,3458.80,3109,1390,0.000385,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0115,True,False,False,True,labeled:FALSE,3491.14,3109,1401,0.000387,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0116,False,False,True,True,labeled:FALSE,3544.27,3109,1657,0.000436,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0117,True,False,False,True,labeled:FALSE,3583.78,3108,713,0.000257,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0118,False,False,True,True,labeled:FALSE,3631.41,3109,1722,0.000448,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0119,True,False,False,True,labeled:FALSE,3677.44,3108,1649,0.000435,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0120,False,False,True,True,labeled:FALSE,3786.63,3109,1792,0.000462,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0121,True,False,False,True,labeled:FALSE,3767.20,3108,1558,0.000417,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0122,False,False,True,True,labeled:FALSE,3799.74,3108,1063,0.000323,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0123,True,False,False,True,labeled:FALSE,3859.08,3109,1783,0.000460,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0124,False,True,False,True,labeled:TRUE,35.46,3108,773,0.000268,"VERDICT: TRUE\nREASONING: Step 2.8 contradiction motif applies.\nPROOF: For Eq1 the right‑hand side P = ((((y*y)*z)*x)*x)*z has features \nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTo"
+order5_hard_0125,True,True,True,True,labeled:TRUE,59.55,3108,701,0.000254,"VERDICT: TRUE\nREASONING: The premise equation  \n\(x = y * (((x * z) * (y * x)) * z)\) forces the binary operation to behave as a left projection (i.e., \(a * b = a\) for all elements). Under this fo"
+order5_hard_0126,False,False,True,True,labeled:FALSE,180.33,3108,1942,0.000490,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0127,True,False,False,True,labeled:FALSE,233.26,3108,1193,0.000348,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0128,False,False,True,True,labeled:FALSE,259.90,3108,1581,0.000422,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0129,True,True,True,True,labeled:TRUE,333.80,3109,2451,0.000587,VERDICT: TRUE\nREASONING: The premise equation \nx = (y * z) * (((x * z) * z) * y) \nis a bare source with the variable x appearing exactly once on the right‑hand side. By analysing the structure of t
+order5_hard_0130,False,False,True,True,labeled:FALSE,462.49,3109,1379,0.000383,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0131,True,False,False,True,labeled:FALSE,595.93,3108,2537,0.000603,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0132,False,True,False,True,labeled:TRUE,671.69,3109,2629,0.000621,VERDICT: TRUE\nREASONING: The premise equation x = (((y*y)*y)*x)*(y*z) forces every element of any magma to be equal to every other element (any assignment yields x equal to an expression containing a
+order5_hard_0133,True,False,False,True,labeled:FALSE,766.11,3108,1795,0.000462,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0134,False,False,True,True,labeled:FALSE,866.97,3109,1300,0.000368,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0135,True,True,True,True,labeled:TRUE,920.55,3108,1077,0.000326,"VERDICT: TRUE\nREASONING: The antecedent equation forces a collapse of all variables to a single element in any magma, making the consequent equation hold vacuously.\nPROOF:  \nFrom the antecedent  \n"
+order5_hard_0136,False,False,True,True,labeled:FALSE,1009.02,3109,1228,0.000355,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0137,True,False,False,True,labeled:FALSE,1052.35,3108,1827,0.000468,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0138,False,False,True,True,labeled:FALSE,1130.67,3109,2087,0.000518,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0139,True,False,False,True,labeled:FALSE,1267.12,3108,1479,0.000402,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0140,False,False,True,True,labeled:FALSE,1297.19,3109,1536,0.000413,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0141,True,False,False,True,labeled:FALSE,1360.30,3109,1554,0.000417,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0142,False,False,True,True,labeled:FALSE,1487.78,3108,1229,0.000355,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0143,True,False,False,True,labeled:FALSE,1610.46,3110,1584,0.000422,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0144,False,True,False,True,labeled:TRUE,1716.93,3108,898,0.000292,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = ((((y * y) * z) * x) * x) * z. Normalising the right‑hand side P = ((((y*y)*z)*x)*x)*z gives the feature vector  \nrhsVars=3, Lx=FALSE,"
+order5_hard_0145,True,False,False,True,labeled:FALSE,1867.48,3109,1569,0.000419,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0146,False,False,True,True,labeled:FALSE,2029.59,3108,1212,0.000351,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0147,True,False,False,True,labeled:FALSE,2204.88,3109,1723,0.000449,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0148,False,False,True,True,labeled:FALSE,2335.28,3108,1682,0.000441,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0149,True,False,False,True,labeled:FALSE,2374.76,3109,1778,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0150,False,False,True,True,labeled:FALSE,2517.57,3109,1404,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0151,True,False,False,True,labeled:FALSE,2597.94,3109,1410,0.000389,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0152,False,False,True,True,labeled:FALSE,2629.26,3109,1636,0.000432,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0153,True,True,True,True,labeled:TRUE,2823.79,3110,2257,0.000550,"VERDICT: TRUE\nREASONING: The given source identity forces every magma satisfying it to be a singleton magma (all elements equal). In a singleton magma any identity holds, in particular the target ide"
+order5_hard_0154,False,False,True,True,labeled:FALSE,2807.37,3109,1439,0.000395,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0155,True,False,False,True,labeled:FALSE,2960.05,3109,1429,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0156,False,False,True,True,labeled:FALSE,3015.61,3109,1083,0.000327,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0157,True,False,False,True,labeled:FALSE,3054.41,3109,2251,0.000549,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0158,False,False,True,True,labeled:FALSE,3161.65,3109,1347,0.000377,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0159,True,False,False,True,labeled:FALSE,3229.68,3110,1203,0.000350,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0160,False,False,True,True,labeled:FALSE,3271.88,3109,1828,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0161,True,False,False,True,labeled:FALSE,3333.23,3110,2715,0.000637,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0162,False,False,True,True,labeled:FALSE,3435.95,3108,1362,0.000380,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0163,True,False,False,True,labeled:FALSE,3420.19,3109,1605,0.000426,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0164,False,True,False,True,labeled:TRUE,3460.03,3108,806,0.000274,"VERDICT: TRUE\nREASONING: \nStep 2.8 (contradiction motif) applies.\nFor Eq₁: x = ((((y*y)*z)*x)*x)*z\n- rhsVars = 3 (variables x,y,z)\n- Lx = FALSE (leftmost variable is y)\n- Rx = FALSE (rightmost v"
+order5_hard_0165,True,False,False,True,labeled:FALSE,3499.03,3109,1724,0.000449,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0166,False,False,True,True,labeled:FALSE,3546.70,3108,1433,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0167,True,False,False,True,labeled:FALSE,3596.57,3109,2125,0.000525,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0168,False,False,True,True,labeled:FALSE,3634.23,3108,1752,0.000454,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0169,True,False,False,True,labeled:FALSE,3680.62,3108,1743,0.000452,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0170,False,False,True,True,labeled:FALSE,3707.54,3109,908,0.000294,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0171,True,False,False,True,labeled:FALSE,3772.84,3109,1340,0.000376,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0172,False,False,True,True,labeled:FALSE,3808.71,3109,1683,0.000441,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0173,True,False,False,True,labeled:FALSE,3859.19,3110,1853,0.000473,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0174,False,False,True,True,labeled:FALSE,5.00,3109,1009,0.000313,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0175,True,False,False,True,labeled:FALSE,66.83,3109,1433,0.000394,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0176,False,False,True,True,labeled:FALSE,121.02,3109,1672,0.000439,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0177,True,False,False,True,labeled:FALSE,191.68,3108,1371,0.000382,VERDICT: FALSE\nREASONING: parity exclusion
+order5_hard_0178,False,False,True,True,labeled:FALSE,316.38,3109,1439,0.000395,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0179,True,False,False,True,labeled:FALSE,411.42,3109,2155,0.000531,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0180,False,False,True,True,labeled:FALSE,424.50,3109,2007,0.000503,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0181,True,True,True,True,labeled:TRUE,452.29,3109,1100,0.000330,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with RHS P = (y * (y * (z * (x * y)))) * z. Its features are rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=113, xCount"
+order5_hard_0182,False,True,False,True,labeled:TRUE,557.95,3108,1860,0.000475,"VERDICT: TRUE\nREASONING: In any magma, the equation  \nx = y * (x * (x * (y * (z * z))))  \nforces all elements to be equal. Indeed, substituting a * b = a (left projection) yields x = y, substitutin"
+order5_hard_0183,True,False,False,True,labeled:FALSE,735.56,3108,1209,0.000351,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0184,False,True,False,True,labeled:TRUE,843.70,3108,748,0.000263,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T). Computing features of T = ((((y*y)*z)*x)*x)*z gives rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCount=2. This"
+order5_hard_0185,True,False,False,True,labeled:FALSE,888.04,3108,1442,0.000395,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0186,False,False,True,True,labeled:FALSE,968.30,3108,1762,0.000456,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0187,True,False,False,True,labeled:FALSE,1119.28,3109,1595,0.000424,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0188,False,False,True,True,labeled:FALSE,1190.98,3108,1502,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0189,True,True,True,True,labeled:TRUE,1222.49,3108,3170,0.000724,VERDICT: TRUE\nREASONING: The only magmas in which the given source equation  \n\(x = (y * (y * (z * (x * y)))) * z\) holds as an identity are singleton magmas (magmas with a single element). In any s
+order5_hard_0190,False,False,True,True,labeled:FALSE,1357.25,3109,1183,0.000346,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0191,True,False,False,True,labeled:FALSE,1425.91,3108,1385,0.000384,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0192,False,False,True,True,labeled:FALSE,1460.21,3109,1224,0.000354,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0193,True,True,True,True,labeled:TRUE,1550.22,3108,2064,0.000513,"VERDICT: TRUE\nREASONING: The premise equation  \n\(x = y * ((z * y) * (x * (x * z)))\) forces every element of any magma to be equal, i.e., it implies the magma is a singleton. In a one‑element magma"
+order5_hard_0194,False,False,True,True,labeled:FALSE,1714.36,3109,590,0.000233,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0195,True,False,False,True,labeled:FALSE,1890.45,3108,1356,0.000379,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0196,False,False,True,True,labeled:FALSE,2061.15,3109,1866,0.000476,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0197,True,True,True,True,labeled:TRUE,2230.73,3108,2218,0.000543,"VERDICT: TRUE\nREASONING: The premise equation forces a collapse of all variables, making the magma effectively a singleton where every element is equal. In such a collapse the conclusion equation hol"
+order5_hard_0198,False,False,True,True,labeled:FALSE,2350.76,3109,1628,0.000431,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0199,True,False,False,True,labeled:FALSE,2435.48,3108,1492,0.000405,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0200,False,False,True,True,labeled:FALSE,2473.53,3109,1871,0.000477,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0201,True,False,False,True,labeled:FALSE,2555.50,3108,1600,0.000425,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0202,False,False,True,True,labeled:FALSE,2706.29,3108,1638,0.000432,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0203,True,False,False,True,labeled:FALSE,2786.55,3108,1506,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0204,False,True,False,True,labeled:TRUE,2814.49,3108,933,0.000298,VERDICT: TRUE\nREASONING: Applying STEP 2.8 (bare‑source contradiction motifs). The equation is bare (left side is the single variable x). Normalizing the right‑hand side P = ((((y*y)*z)*x)*x)*z gives
+order5_hard_0205,True,False,False,True,labeled:FALSE,2903.74,3109,1786,0.000461,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0206,False,False,True,True,labeled:FALSE,2941.85,3108,1753,0.000454,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0207,True,False,False,True,labeled:FALSE,3021.70,3108,1522,0.000410,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0208,False,False,True,True,labeled:FALSE,3134.14,3108,969,0.000305,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0209,True,False,False,True,labeled:FALSE,3212.38,3109,2175,0.000535,"VERDICT: FALSE\nREASONING: counterexample (right projection magma)  \nPROOF:  \n\nDefine a magma with two distinct elements {a, b} and operation * given by a * b = b for all a, b (right projection).  "
+order5_hard_0210,False,False,True,True,labeled:FALSE,3362.57,3109,1839,0.000471,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0211,True,False,False,True,labeled:FALSE,3339.89,3108,1559,0.000417,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0212,False,False,True,True,labeled:FALSE,3382.31,3109,2596,0.000614,"VERDICT: FALSE\nREASONING: counterexample\nPROOF:\nDefine a magma M with set {0,1} and binary operation * given by left projection: a * b = a for all a,b ∈ {0,1}.\n\nAssignment:\nx = 0, y = 0, z = 0, "
+order5_hard_0213,True,False,False,True,labeled:FALSE,3422.25,3109,995,0.000310,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0214,False,False,True,True,labeled:FALSE,3470.12,3109,1490,0.000404,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0215,True,True,True,True,labeled:TRUE,3493.61,3108,839,0.000281,"VERDICT: TRUE\nREASONING: The implication fits contradiction motif C7.\nPROOF: For Eq1, the right‑hand side P = (y * ((x * y) * (z * x))) * z has distinct variables {x,y,z} (rhsVars=3). The leftmost v"
+order5_hard_0216,False,False,True,True,labeled:FALSE,3551.97,3109,1829,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0217,True,True,True,True,labeled:TRUE,3622.18,3108,848,0.000282,"VERDICT: TRUE\nREASONING: Applied contradiction motif C7 from STEP 2.8.\nPROOF: For Eq1, the right‑hand product P = (y * ((x*y)*(z*x))) * z has the features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, t"
+order5_hard_0218,False,False,True,True,labeled:FALSE,3698.17,3109,1488,0.000404,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0219,True,False,False,True,labeled:FALSE,3701.54,3108,740,0.000262,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0220,False,False,True,True,labeled:FALSE,3791.74,3109,1808,0.000465,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0221,True,False,False,True,labeled:FALSE,3835.51,3108,1325,0.000373,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0222,False,False,True,True,labeled:FALSE,3810.72,3108,1474,0.000401,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0223,True,False,False,True,labeled:FALSE,3957.42,3109,2036,0.000508,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0224,False,True,False,True,labeled:TRUE,29.28,3108,654,0.000245,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = P with P = ((((y*y)*z)*x)*x)*z. Computing the required features yields rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotal"
+order5_hard_0225,True,False,False,True,labeled:FALSE,106.09,3109,1573,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0226,False,False,True,True,labeled:FALSE,131.15,3108,1377,0.000383,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0227,True,True,True,True,labeled:TRUE,261.70,3109,1852,0.000473,"VERDICT: TRUE\nREASONING: The given premise forces all elements of the magma to be equal (singleton collapse). In any magma where the identity x = (y*z)*(x*((x*z)*y)) holds for all assignments, substi"
+order5_hard_0228,False,False,True,True,labeled:FALSE,314.01,3108,1809,0.000465,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0229,True,False,False,True,labeled:FALSE,342.98,3109,1158,0.000341,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0230,False,False,True,True,labeled:FALSE,470.03,3109,1311,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0231,True,False,False,True,labeled:FALSE,459.37,3109,1258,0.000360,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0232,False,False,True,True,labeled:FALSE,576.62,3109,1673,0.000439,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0233,True,False,False,True,labeled:FALSE,727.35,3108,1461,0.000399,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0234,False,False,True,True,labeled:FALSE,823.06,3109,1050,0.000321,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0235,True,False,False,True,labeled:FALSE,903.22,3108,1993,0.000500,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0236,False,False,True,True,labeled:FALSE,978.80,3110,1095,0.000329,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0237,True,False,False,True,labeled:FALSE,1056.61,3108,802,0.000274,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0238,False,False,True,True,labeled:FALSE,1143.03,3110,1297,0.000368,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0239,True,True,True,True,labeled:TRUE,1231.25,3108,872,0.000287,VERDICT: TRUE\nREASONING: Applying STEP 2.8 (contradiction motif). For the bare source equation  \n\(x = (y * ((x * z) * (y * x))) * z\) we compute the features of the product side \(P\):\n\n- rhsVars
+order5_hard_0240,False,False,True,True,labeled:FALSE,1302.93,3110,498,0.000216,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0241,True,False,False,True,labeled:FALSE,1368.52,3109,1102,0.000331,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0242,False,False,True,True,labeled:FALSE,1468.33,3109,1340,0.000376,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0243,True,False,False,True,labeled:FALSE,1604.76,3108,1997,0.000501,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0244,False,True,False,True,labeled:TRUE,1672.91,3109,783,0.000270,"VERDICT: TRUE\nREASONING: The premise equation is bare (x = T) with T = ((((y*y)*z)*x)*x)*z. Computing the required features:\n- rhsVars = 3 (variables y, z, x)\n- Lx = FALSE (leftmost variable is y)\"
+order5_hard_0245,True,False,False,True,labeled:FALSE,1933.16,3108,2107,0.000522,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0246,False,False,True,True,labeled:FALSE,2007.08,3109,1440,0.000395,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0247,True,False,False,True,labeled:FALSE,2194.46,3109,2043,0.000509,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0248,False,True,False,True,labeled:TRUE,2321.46,3109,2080,0.000516,VERDICT: TRUE\nREASONING: The only magmas in which the identity \nx = (y * (y * ((z * z) * x))) * y \nholds for all assignments are the trivial one‑element magmas (or degenerate cases that collapse al
+order5_hard_0249,True,True,True,True,labeled:TRUE,2443.79,3108,1384,0.000384,VERDICT: TRUE\nREASONING: The premise equation \nx = y * ((z * ((y * z) * x)) * z) \nis a bare‑source identity in which the right‑hand side contains the variable x only inside a product term. In any m
+order5_hard_0250,False,True,False,True,labeled:TRUE,2551.78,3110,1631,0.000431,"VERDICT: TRUE\nREASONING: No FALSE rule applies; the premise forces a degenerate (singleton) magma, in which both sides of the target equation are equal for all assignments. Therefore the implication "
+order5_hard_0251,True,False,False,True,labeled:FALSE,2645.00,3108,1959,0.000493,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0252,False,False,True,True,labeled:FALSE,2760.86,3110,2337,0.000565,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0253,True,False,False,True,labeled:FALSE,2772.22,3108,1881,0.000479,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0254,False,False,True,True,labeled:FALSE,2914.06,3110,1873,0.000477,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0255,True,False,False,True,labeled:FALSE,2864.78,3109,1399,0.000387,VERDICT: FALSE\nREASONING: parity exclusion
+order5_hard_0256,False,False,True,True,labeled:FALSE,2954.84,3110,1508,0.000408,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0257,True,False,False,True,labeled:FALSE,3127.44,3108,1656,0.000436,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0258,False,False,True,True,labeled:FALSE,3208.07,3110,1507,0.000408,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0259,True,False,False,True,labeled:FALSE,3214.01,3109,1620,0.000429,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0260,False,False,True,True,labeled:FALSE,3294.94,3110,929,0.000298,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0261,True,False,False,True,labeled:FALSE,3312.53,3109,1281,0.000365,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0262,False,False,True,True,labeled:FALSE,3375.96,3109,1012,0.000314,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0263,True,False,False,True,labeled:FALSE,3428.57,3109,1619,0.000429,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0264,False,True,False,True,labeled:TRUE,3465.49,3109,724,0.000259,"VERDICT: TRUE\nREASONING: Applied contradiction motif C7. For Eq1, the right‑hand side P = ((((y*y)*z)*x)*x)*z has rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, xCount=2, which matches motif"
+order5_hard_0265,True,False,False,True,labeled:FALSE,3499.88,3108,1246,0.000358,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0266,False,False,True,True,labeled:FALSE,3597.60,3109,1243,0.000357,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0267,True,True,True,True,labeled:TRUE,3603.06,3108,2495,0.000595,VERDICT: TRUE\nREASONING: The premise equation is a bare identity x = T with T = ((y * (x * (y * z))) * y) * z. An analysis of the structure shows that the only way this equation can hold for all assi
+order5_hard_0268,False,False,True,True,labeled:FALSE,3621.21,3109,1394,0.000386,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0269,True,False,False,True,labeled:FALSE,3665.51,3108,1430,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0270,False,False,True,True,labeled:FALSE,3713.60,3110,1520,0.000410,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0271,True,False,False,True,labeled:FALSE,3838.42,3109,1886,0.000480,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0272,False,False,True,True,labeled:FALSE,3802.36,3110,2433,0.000584,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0273,True,False,False,True,labeled:FALSE,3939.56,3109,1957,0.000493,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0274,False,True,False,True,labeled:TRUE,75.10,3110,1783,0.000460,"VERDICT: TRUE\nPROOF: The identity \n\[ x = (y*y) * ((z * (x*x)) * z) \]\nholds in a magma only when every element of the magma is equal to every other element.  \nIndeed, fix arbitrary elements \(a,b"
+order5_hard_0275,True,False,False,True,labeled:FALSE,79.97,3109,1918,0.000486,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0276,False,False,True,True,labeled:FALSE,139.54,3110,1530,0.000412,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0277,True,False,False,True,labeled:FALSE,224.79,3109,1376,0.000383,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0278,False,False,True,True,labeled:FALSE,277.30,3110,2279,0.000554,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0279,True,False,False,True,labeled:FALSE,354.56,3109,1988,0.000499,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0280,False,False,True,True,labeled:FALSE,393.29,3110,1211,0.000351,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0281,True,False,False,True,labeled:FALSE,469.31,3109,1826,0.000468,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0282,False,False,True,True,labeled:FALSE,620.00,3109,1121,0.000334,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0283,True,False,False,True,labeled:FALSE,723.07,3109,1341,0.000376,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0284,False,True,False,True,labeled:TRUE,830.93,3109,974,0.000306,"VERDICT: TRUE\nREASONING: \nStep 2.8 applies. For Eq1, the product side P = ((((y*y)*z)*x)*x)*z has features:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=222, xCount=2.\nThese m"
+order5_hard_0285,True,False,False,True,labeled:FALSE,865.74,3108,1319,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0286,False,False,True,True,labeled:FALSE,941.35,3109,1540,0.000414,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0287,True,False,False,True,labeled:FALSE,1139.07,3108,1860,0.000475,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0288,False,False,True,True,labeled:FALSE,1226.40,3109,1539,0.000414,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0289,True,False,False,True,labeled:FALSE,1288.25,3108,1133,0.000336,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0290,False,False,True,True,labeled:FALSE,1300.08,3110,589,0.000233,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0291,True,False,False,True,labeled:FALSE,1457.13,3108,1833,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0292,False,False,True,True,labeled:FALSE,1504.07,3110,897,0.000292,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0293,True,False,False,True,labeled:FALSE,1630.77,3110,2504,0.000597,"VERDICT: FALSE\nREASONING: counterexample\n\nMagma with domain {0,1} and binary operation * defined by the table:\n\n| * | 0 | 1 |\n|---|---|---|\n| 0 | 0 | 0 |\n| 1 | 0 | 1 |\n\nAssign variables: x ="
+order5_hard_0294,False,False,True,True,labeled:FALSE,1780.66,3110,1941,0.000490,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0295,True,False,False,True,labeled:FALSE,1820.99,3109,1346,0.000377,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0296,False,False,True,True,labeled:FALSE,1992.39,3110,1377,0.000383,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0297,True,False,False,True,labeled:FALSE,2137.59,3109,1489,0.000404,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0298,False,False,True,True,labeled:FALSE,2307.99,3110,1485,0.000403,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0299,True,False,False,True,labeled:FALSE,2385.26,3110,1265,0.000362,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0300,False,False,True,True,labeled:FALSE,2563.31,3110,1860,0.000475,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0301,True,False,False,True,labeled:FALSE,2615.22,3110,1381,0.000384,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0302,False,False,True,True,labeled:FALSE,2643.74,3109,1455,0.000398,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0303,True,False,False,True,labeled:FALSE,2773.80,3110,1240,0.000357,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0304,False,True,False,True,labeled:TRUE,2786.88,3109,759,0.000265,"VERDICT: TRUE\nREASONING: Step 2.8 contradiction motif applies. For Eq1, the product side P = ((((y*y)*z)*x)*x)*z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=222, xC"
+order5_hard_0305,True,False,False,True,labeled:FALSE,2895.27,3108,722,0.000258,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0306,False,False,True,True,labeled:FALSE,3059.59,3109,1916,0.000485,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0307,True,False,False,True,labeled:FALSE,3136.56,3108,1744,0.000453,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0308,False,False,True,True,labeled:FALSE,3246.07,3109,1849,0.000473,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0309,True,False,False,True,labeled:FALSE,3242.66,3109,1765,0.000457,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0310,False,False,True,True,labeled:FALSE,3284.53,3110,1838,0.000471,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0311,True,True,True,True,labeled:TRUE,3345.21,3109,2265,0.000552,"VERDICT: TRUE\nREASONING: No TRUE route was blocked, and none of the FALSE routes (spine isolation, word exclusion, parity exclusion, leftmost/rightmost exclusion, SET/AB exclusion) applied. The premi"
+order5_hard_0312,False,False,True,True,labeled:FALSE,3459.17,3110,1693,0.000443,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0313,True,False,False,True,labeled:FALSE,3431.94,3108,1494,0.000405,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0314,False,False,True,True,labeled:FALSE,3526.78,3110,1310,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0315,True,False,False,True,labeled:FALSE,3507.68,3109,1870,0.000477,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0316,False,False,True,True,labeled:FALSE,3554.83,3110,1371,0.000382,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0317,True,False,False,True,labeled:FALSE,3684.31,3109,1901,0.000482,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0318,False,False,True,True,labeled:FALSE,3636.00,3110,986,0.000309,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0319,True,False,False,True,labeled:FALSE,3686.57,3108,1321,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0320,False,False,True,True,labeled:FALSE,3720.70,3110,1296,0.000368,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0321,True,False,False,True,labeled:FALSE,3769.59,3108,896,0.000291,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0322,False,False,True,True,labeled:FALSE,3815.08,3109,1508,0.000408,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0323,True,False,False,True,labeled:FALSE,3866.72,3108,1155,0.000341,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0324,False,True,False,True,labeled:TRUE,40.09,3109,855,0.000284,"VERDICT: TRUE\nREASONING: The source equation is bare (x = P) with P = ((((y*y)*z)*x)*x)*z. Computing the required features:\n- rhsVars=3 (variables y, z, x)\n- Lx=FALSE (leftmost leaf is y)\n- Rx=FAL"
+order5_hard_0325,True,False,False,True,labeled:FALSE,141.43,3109,1756,0.000455,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0326,False,False,True,True,labeled:FALSE,210.84,3109,1778,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0327,True,False,False,True,labeled:FALSE,208.23,3110,1774,0.000458,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0328,False,False,True,True,labeled:FALSE,357.21,3109,2118,0.000524,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0329,True,False,False,True,labeled:FALSE,362.20,3110,1059,0.000322,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0330,False,False,True,True,labeled:FALSE,474.05,3110,1397,0.000387,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0331,True,False,False,True,labeled:FALSE,489.24,3109,1351,0.000378,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0332,False,False,True,True,labeled:FALSE,641.96,3110,1313,0.000371,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0333,True,False,False,True,labeled:FALSE,782.32,3108,1674,0.000439,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0334,False,False,True,True,labeled:FALSE,921.40,3110,1957,0.000493,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0335,True,False,False,True,labeled:FALSE,985.25,3109,1674,0.000439,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0336,False,False,True,True,labeled:FALSE,1047.89,3110,1633,0.000432,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0337,True,False,False,True,labeled:FALSE,1067.00,3109,1097,0.000330,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0338,False,False,True,True,labeled:FALSE,1155.61,3110,1366,0.000381,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0339,True,False,False,True,labeled:FALSE,1246.55,3109,1833,0.000470,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0340,False,False,True,True,labeled:FALSE,1372.77,3110,1254,0.000360,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0341,True,False,False,True,labeled:FALSE,1378.96,3108,1269,0.000362,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0342,False,False,True,True,labeled:FALSE,1529.79,3109,1287,0.000366,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0343,True,False,False,True,labeled:FALSE,1616.75,3109,1396,0.000386,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0344,False,True,False,True,labeled:TRUE,1725.27,3109,735,0.000261,"VERDICT: TRUE\nREASONING: Applying Step 2.8 (contradiction motifs) to the bare equation x = ((((y*y)*z)*x)*x)*z, we compute the features of the right‑hand side term T:\nrhsVars=3, Lx=FALSE, Rx=FALSE, "
+order5_hard_0345,True,False,False,True,labeled:FALSE,1916.36,3109,1666,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0346,False,False,True,True,labeled:FALSE,2049.16,3109,1236,0.000356,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0347,True,False,False,True,labeled:FALSE,2214.48,3109,1570,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0348,False,False,True,True,labeled:FALSE,2373.69,3109,1331,0.000374,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0349,True,False,False,True,labeled:FALSE,2401.47,3109,2318,0.000562,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0350,False,False,True,True,labeled:FALSE,2480.82,3110,1116,0.000333,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0351,True,False,False,True,labeled:FALSE,2567.08,3108,1339,0.000376,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0352,False,False,True,True,labeled:FALSE,2656.70,3110,1367,0.000381,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0353,True,False,False,True,labeled:FALSE,2748.27,3108,2299,0.000558,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0354,False,False,True,True,labeled:FALSE,2820.57,3110,609,0.000237,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0355,True,False,False,True,labeled:FALSE,3007.15,3109,2168,0.000533,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0356,False,False,True,True,labeled:FALSE,2982.33,3110,2006,0.000502,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0357,True,False,False,True,labeled:FALSE,3079.60,3109,1855,0.000474,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0358,False,False,True,True,labeled:FALSE,3191.76,3110,987,0.000309,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0359,True,False,False,True,labeled:FALSE,3243.42,3109,1677,0.000440,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0360,False,False,True,True,labeled:FALSE,3283.75,3110,1665,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0361,True,False,False,True,labeled:FALSE,3344.83,3109,1562,0.000418,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0362,False,False,True,True,labeled:FALSE,3379.12,3109,1014,0.000314,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0363,True,False,False,True,labeled:FALSE,3431.81,3109,1121,0.000334,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0364,False,True,False,True,labeled:TRUE,3466.85,3109,839,0.000281,"VERDICT: TRUE\nREASONING: Applied Step 2.8 (contradiction motif). For Eq1, RHS P = ((((y*y)*z)*x)*x)*z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCount=2, whi"
+order5_hard_0365,True,False,False,True,labeled:FALSE,3514.11,3108,1932,0.000488,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0366,False,False,True,True,labeled:FALSE,3559.35,3109,1369,0.000381,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0367,True,False,False,True,labeled:FALSE,3606.78,3109,2030,0.000507,VERDICT: FALSE\nREASONING: spine isolation (mixed spine pattern in Eq1 does not satisfy pure left/right spine requirement)
+order5_hard_0368,False,False,True,True,labeled:FALSE,3646.03,3109,1921,0.000486,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0369,True,False,False,True,labeled:FALSE,3694.26,3109,2171,0.000534,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0370,False,False,True,True,labeled:FALSE,3727.04,3110,1771,0.000458,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0371,True,False,False,True,labeled:FALSE,3784.66,3110,2314,0.000561,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0372,False,False,True,True,labeled:FALSE,3825.82,3110,1935,0.000489,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0373,True,False,False,True,labeled:FALSE,3869.05,3109,1017,0.000314,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0374,False,False,True,True,labeled:FALSE,17.52,3110,1664,0.000437,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0375,True,False,False,True,labeled:FALSE,132.72,3108,1329,0.000374,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0376,False,False,True,True,labeled:FALSE,189.87,3110,1495,0.000405,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0377,True,False,False,True,labeled:FALSE,213.46,3109,757,0.000265,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0378,False,False,True,True,labeled:FALSE,290.12,3110,1501,0.000406,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0379,True,False,False,True,labeled:FALSE,409.33,3108,1168,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0380,False,False,True,True,labeled:FALSE,500.41,3110,1754,0.000455,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0381,True,False,False,True,labeled:FALSE,499.30,3108,1293,0.000367,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0382,False,False,True,True,labeled:FALSE,650.86,3109,1447,0.000396,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0383,True,False,False,True,labeled:FALSE,789.56,3109,1463,0.000399,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0384,False,True,False,True,labeled:TRUE,831.80,3109,1039,0.000319,VERDICT: TRUE\nREASONING: The equation x = ((((y * y) * z) * x) * x) * z is a bare source (left side is a single variable). Analyzing the product side P = ((((y*y)*z)*x)*x)*z gives the feature vector 
+order5_hard_0385,True,False,False,True,labeled:FALSE,918.10,3110,1738,0.000452,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0386,False,False,True,True,labeled:FALSE,991.01,3109,1373,0.000382,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0387,True,False,False,True,labeled:FALSE,1072.45,3109,1185,0.000346,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0388,False,False,True,True,labeled:FALSE,1168.49,3109,1612,0.000428,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0389,True,False,False,True,labeled:FALSE,1313.94,3108,1744,0.000453,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0390,False,False,True,True,labeled:FALSE,1417.24,3110,2389,0.000575,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0391,True,False,False,True,labeled:FALSE,1472.07,3108,1911,0.000484,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0392,False,False,True,True,labeled:FALSE,1484.90,3110,1542,0.000414,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0393,True,False,False,True,labeled:FALSE,1643.60,3109,1860,0.000475,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0394,False,False,True,True,labeled:FALSE,1783.52,3110,1648,0.000434,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0395,True,False,False,True,labeled:FALSE,1955.38,3110,2291,0.000557,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0396,False,False,True,True,labeled:FALSE,2062.10,3110,1121,0.000334,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0397,True,False,False,True,labeled:FALSE,2228.95,3109,1457,0.000398,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0398,False,False,True,True,labeled:FALSE,2395.22,3110,1685,0.000441,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0399,True,False,False,True,labeled:FALSE,2459.72,3109,1382,0.000384,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0400,False,False,True,True,labeled:FALSE,2492.96,3110,1217,0.000353,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0401,True,False,False,True,labeled:FALSE,2670.27,3108,2320,0.000562,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0402,False,False,True,True,labeled:FALSE,2704.59,3109,1169,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0403,True,False,False,True,labeled:FALSE,2762.55,3108,1518,0.000410,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0404,False,True,False,True,labeled:TRUE,2828.39,3109,908,0.000294,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = ((((y * y) * z) * x) * x) * z. Analyzing the right‑hand side P we find:\n- distinct variables rhsVars=3 (x,y,z);\n- leftmost variable i"
+order5_hard_0405,True,False,False,True,labeled:FALSE,2915.23,3109,1629,0.000431,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0406,False,False,True,True,labeled:FALSE,2992.70,3109,1535,0.000413,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0407,True,False,False,True,labeled:FALSE,3153.68,3109,1828,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0408,False,False,True,True,labeled:FALSE,3175.68,3109,1778,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0409,True,False,False,True,labeled:FALSE,3245.74,3109,1907,0.000484,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0410,False,False,True,True,labeled:FALSE,3285.58,3110,1847,0.000472,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0411,True,False,False,True,labeled:FALSE,3357.64,3108,2160,0.000532,VERDICT: FALSE\nREASONING: right-zero witness\nPROOF:
+order5_hard_0412,False,False,True,True,labeled:FALSE,3387.49,3110,1639,0.000433,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0413,True,False,False,True,labeled:FALSE,3444.72,3109,2108,0.000522,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0414,False,False,True,True,labeled:FALSE,3473.11,3110,1342,0.000376,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0415,True,False,False,True,labeled:FALSE,3514.93,3110,1889,0.000480,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0416,False,False,True,True,labeled:FALSE,3560.56,3110,1128,0.000336,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0417,True,False,False,True,labeled:FALSE,3606.32,3109,1463,0.000399,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0418,False,False,True,True,labeled:FALSE,3643.08,3110,1252,0.000359,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0419,True,False,False,True,labeled:FALSE,3692.10,3108,1194,0.000348,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0420,False,False,True,True,labeled:FALSE,3728.45,3110,1350,0.000378,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0421,True,False,False,True,labeled:FALSE,3784.50,3109,1944,0.000491,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0422,False,False,True,True,labeled:FALSE,3824.83,3109,1576,0.000421,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0423,True,True,True,True,labeled:TRUE,3876.65,3109,2000,0.000501,"VERDICT: TRUE\nREASONING: The given premise is a bare equation (left side is the single variable x). The variable x appears inside the product on the right‑hand side, so the simple left‑ or right‑proj"
+order5_hard_0424,False,True,False,True,labeled:TRUE,20.72,3109,700,0.000254,"VERDICT: TRUE\nREASONING: Using STEP 2.8 contradiction motifs, we compute features of the product side T = ((((y*y)*z)*x)*x)*z. The distinct variables are {x,y,z} → rhsVars=3; leftmost variable is y →"
+order5_hard_0425,True,False,False,True,labeled:FALSE,86.31,3109,1219,0.000353,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0426,False,False,True,True,labeled:FALSE,151.40,3109,1630,0.000431,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0427,True,False,False,True,labeled:FALSE,277.50,3110,1484,0.000403,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0428,False,False,True,True,labeled:FALSE,357.64,3109,1758,0.000455,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0429,True,False,False,True,labeled:FALSE,398.28,3109,908,0.000294,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0430,False,True,False,True,labeled:TRUE,516.50,3110,2063,0.000513,"VERDICT: TRUE\nREASONING: The premise equation forces all elements of any magma satisfying it to be equal, i.e., the magma must be a singleton. In a singleton magma every term evaluates to the unique "
+order5_hard_0431,True,False,False,True,labeled:FALSE,515.97,3108,2070,0.000515,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0432,False,False,True,True,labeled:FALSE,594.20,3110,1440,0.000395,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0433,True,False,False,True,labeled:FALSE,799.74,3109,1377,0.000383,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0434,False,True,False,True,labeled:TRUE,946.74,3110,2349,0.000568,VERDICT: TRUE\nREASONING: The premise equation is a bare identity of the form x = T where the variable x occurs within T but not as a top‑level factor. Such an equation forces a strong collapse of the
+order5_hard_0435,True,False,False,True,labeled:FALSE,972.19,3108,1221,0.000353,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0436,False,False,True,True,labeled:FALSE,1077.79,3110,1761,0.000456,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0437,True,False,False,True,labeled:FALSE,1086.12,3108,1449,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0438,False,True,False,True,labeled:TRUE,1257.02,3110,1990,0.000499,"VERDICT: TRUE\nREASONING: The identity  \n  x = (y * (x * x)) * ((y * z) * y)  \nforces every element of a magma to be equal to every other element, i.e. the magma must be a singleton. Indeed, setting"
+order5_hard_0439,True,False,False,True,labeled:FALSE,1252.73,3109,969,0.000305,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0440,False,False,True,True,labeled:FALSE,1311.55,3110,1395,0.000386,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0441,True,False,False,True,labeled:FALSE,1384.19,3109,696,0.000253,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0442,False,False,True,True,labeled:FALSE,1553.83,3109,1575,0.000421,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0443,True,False,False,True,labeled:FALSE,1671.67,3108,2315,0.000561,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0444,False,True,False,True,labeled:TRUE,1747.81,3108,664,0.000247,"VERDICT: TRUE\nREASONING: Applied contradiction motif C7. For Eq1, the right-hand side P = ((((y*y)*z)*x)*x)*z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, xCount=2, which matc"
+order5_hard_0445,True,False,False,True,labeled:FALSE,1922.11,3109,1733,0.000451,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0446,False,False,True,True,labeled:FALSE,2096.99,3108,1410,0.000389,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0447,True,False,False,True,labeled:FALSE,2247.72,3108,1789,0.000461,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0448,False,False,True,True,labeled:FALSE,2350.45,3108,725,0.000259,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0449,True,False,False,True,labeled:FALSE,2413.70,3110,1715,0.000447,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0450,False,False,True,True,labeled:FALSE,2508.91,3109,1947,0.000491,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0451,True,False,False,True,labeled:FALSE,2579.62,3110,1456,0.000398,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0452,False,False,True,True,labeled:FALSE,2672.71,3109,1927,0.000487,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0453,True,False,False,True,labeled:FALSE,2854.36,3110,1771,0.000458,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0454,False,True,False,True,labeled:TRUE,2906.23,3109,1474,0.000401,VERDICT: TRUE\nREASONING: The premise equation  \n\(x = (y*y) * ((z * (x*x)) * z)\) forces every element of any magma satisfying it to be equal to every other element (the magma collapses to a singlet
+order5_hard_0455,True,False,False,True,labeled:FALSE,3034.01,3110,2505,0.000597,"VERDICT: FALSE\nREASONING: counterexample\nPROOF:\nConsider the magma with set {0,1} and operation * defined as addition modulo 2 (XOR):\n- 0*0 = 0, 0*1 = 1, 1*0 = 1, 1*1 = 0.\n\nFor arbitrary element"
+order5_hard_0456,False,False,True,True,labeled:FALSE,3003.41,3109,1405,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0457,True,False,False,True,labeled:FALSE,3092.39,3110,1519,0.000410,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0458,False,False,True,True,labeled:FALSE,3238.89,3109,1302,0.000369,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0459,True,False,False,True,labeled:FALSE,3305.39,3110,1308,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0460,False,False,True,True,labeled:FALSE,3294.57,3109,1456,0.000398,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0461,True,False,False,True,labeled:FALSE,3448.31,3109,2039,0.000509,"VERDICT: FALSE\nREASONING: spine isolation (Eq1 has a mixed spine RL, which does not satisfy the pure left/right spine requirement, leading to a failure of the spine isolation rule)"
+order5_hard_0462,False,False,True,True,labeled:FALSE,3386.64,3108,1005,0.000312,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0463,True,False,False,True,labeled:FALSE,3439.40,3109,1068,0.000324,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0464,False,True,False,True,labeled:TRUE,3470.15,3108,596,0.000234,"VERDICT: TRUE\nREASONING: Applied contradiction motif C7.\nPROOF: For Eq1, the RHS term P = ((((y*y)*z)*x)*x)*z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, xCount=2, which mat"
+order5_hard_0465,True,False,False,True,labeled:FALSE,3526.26,3110,2286,0.000556,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0466,False,False,True,True,labeled:FALSE,3567.74,3108,1530,0.000412,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0467,True,False,False,True,labeled:FALSE,3667.25,3108,1402,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0468,False,False,True,True,labeled:FALSE,3647.01,3108,1321,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0469,True,False,False,True,labeled:FALSE,3744.01,3109,1498,0.000406,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0470,False,False,True,True,labeled:FALSE,3761.13,3109,1262,0.000361,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0471,True,False,False,True,labeled:FALSE,3785.81,3109,1890,0.000480,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0472,False,False,True,True,labeled:FALSE,3828.57,3109,1319,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0473,True,False,False,True,labeled:FALSE,3877.90,3108,1423,0.000392,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0474,False,False,True,True,labeled:FALSE,28.60,3109,1361,0.000380,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0475,True,False,False,True,labeled:FALSE,107.06,3108,622,0.000239,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0476,False,False,True,True,labeled:FALSE,219.61,3109,1797,0.000463,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0477,True,False,False,True,labeled:FALSE,226.47,3108,1776,0.000459,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0478,False,False,True,True,labeled:FALSE,303.64,3109,1581,0.000422,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0479,True,False,False,True,labeled:FALSE,373.93,3108,1688,0.000442,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0480,False,False,True,True,labeled:FALSE,433.41,3109,1373,0.000382,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0481,True,True,True,True,labeled:TRUE,1110.65,3108,1993,0.000500,VERDICT: TRUE\nREASONING: No false routes fire; Eq1 cannot be satisfied in any non‑singleton magma (any non‑trivial binary operation yields a counter‑example to the identity x = (y*(((x*z)*y)*z))*z). 
+order5_hard_0482,False,False,True,True,labeled:FALSE,1502.99,3108,1610,0.000427,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0483,True,False,False,True,labeled:FALSE,833.88,3108,1958,0.000493,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0484,False,False,True,True,labeled:FALSE,843.77,3108,1165,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0485,True,False,False,True,labeled:FALSE,926.39,3108,1828,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0486,False,False,True,True,labeled:FALSE,1089.02,3108,1946,0.000491,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0487,True,False,False,True,labeled:FALSE,1157.22,3108,1669,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0488,False,True,False,True,labeled:TRUE,1231.88,3108,1498,0.000406,"VERDICT: TRUE\nREASONING: The premise equation forces every element of any magma to be equal (i.e., any model of the premise is a singleton magma). In a singleton magma any two terms evaluate to the s"
+order5_hard_0489,True,False,False,True,labeled:FALSE,1257.58,3108,436,0.000204,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0490,False,False,True,True,labeled:FALSE,1325.20,3109,1812,0.000466,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0491,True,False,False,True,labeled:FALSE,1396.78,3108,1453,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0492,False,False,True,True,labeled:FALSE,1582.11,3109,1814,0.000466,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0493,True,False,False,True,labeled:FALSE,1689.38,3109,2043,0.000509,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0494,False,False,True,True,labeled:FALSE,1832.69,3109,2235,0.000546,"VERDICT: FALSE\nREASONING: counterexample (right-zero magma)\nPROOF: \nMagma: any non‑empty set with operation defined by a * b = b (right projection).  \nTake elements a, b, c with a ≠ b. Assign x = "
+order5_hard_0495,True,False,False,True,labeled:FALSE,1958.84,3108,1741,0.000452,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0496,False,False,True,True,labeled:FALSE,3342.73,3109,940,0.000300,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0497,True,False,False,True,labeled:FALSE,2250.84,3108,1796,0.000462,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0498,False,False,True,True,labeled:FALSE,3749.87,3109,1920,0.000486,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \nConsider the magma (M, *) where * is the right projection: a * b = b for all a,b ∈ M.  \nTake three distinct elements a,b,c ∈ M and assign  \n\n- x "
+order5_hard_0499,True,False,False,True,labeled:FALSE,2509.65,3109,1936,0.000489,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \nMagma: {a, b} with binary operation * defined by a * b = b for all a, b (right projection).\nAssignment: x = a, y = a, z = b.\n\nEvaluate Eq1: \nRHS"
+order5_hard_0500,False,False,True,True,labeled:FALSE,2523.89,3109,1760,0.000456,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0501,True,False,False,True,labeled:FALSE,2587.65,3108,1375,0.000382,VERDICT: FALSE\nREASONING: spine isolation\n\nThe premise of the spine isolation rule is satisfied:\n\n- Eq1 is a bare equation `x = T` with `x` appearing exactly once in `T`.  \n  The path from the r
+order5_hard_0502,False,False,True,True,labeled:FALSE,2767.59,3108,1989,0.000499,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0503,True,False,False,True,labeled:FALSE,2775.23,3108,1322,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0504,False,True,False,True,labeled:TRUE,2835.94,3108,745,0.000263,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with T = ((((y*y)*z)*x)*x)*z. Analyzing the product side T yields the feature vector rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑"
+order5_hard_0505,True,False,False,True,labeled:FALSE,3179.73,3123,2298,0.000558,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0506,False,False,True,True,labeled:FALSE,3399.31,3108,1387,0.000385,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0507,True,False,False,True,labeled:FALSE,3617.65,3108,1319,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0508,False,False,True,True,labeled:FALSE,3843.91,3108,1570,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0509,True,True,True,True,labeled:TRUE,252.02,3108,709,0.000256,"VERDICT: TRUE\nREASONING: The bare equation x = (y * (z * (x * (x * y)))) * z matches contradiction motif C7. Features: rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, xCount=2. This triggers "
+order5_hard_0510,False,False,True,True,labeled:FALSE,669.59,3109,1467,0.000400,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0511,True,False,False,True,labeled:FALSE,1104.86,3108,1890,0.000480,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0512,False,False,True,True,labeled:FALSE,1502.21,3109,1901,0.000482,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0513,True,False,False,True,labeled:FALSE,2263.94,3108,1419,0.000391,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0514,False,False,True,True,labeled:FALSE,2657.35,3109,1308,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0515,True,False,False,True,labeled:FALSE,3091.62,3108,1663,0.000437,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0516,False,True,False,True,labeled:TRUE,3366.52,3109,2727,0.000639,"VERDICT: TRUE\nREASONING: The identity  \n\(x = (y * ((x * x) * y)) * (z * z)\) forces every element of any magma to be equal to every other element, i.e. the magma must be a singleton.  \nIndeed, tak"
+order5_hard_0517,True,False,False,True,labeled:FALSE,3574.43,3109,1675,0.000440,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0518,False,False,True,True,labeled:FALSE,3797.11,3109,1623,0.000430,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0519,True,False,False,True,labeled:FALSE,160.69,3110,1429,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0520,False,False,True,True,labeled:FALSE,529.10,3109,1125,0.000335,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0521,True,False,False,True,labeled:FALSE,1020.33,3110,1868,0.000476,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0522,False,False,True,True,labeled:FALSE,1407.07,3108,1627,0.000430,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0523,True,False,False,True,labeled:FALSE,2120.61,3109,1400,0.000387,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0524,False,True,False,True,labeled:TRUE,2779.53,3108,608,0.000237,"VERDICT: TRUE\nREASONING: The premise matches contradiction motif C7.\nPROOF: The right‑hand side of Eq1 is P = ((((y*y)*z)*x)*x)*z. Its features are rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape"
+order5_hard_0525,True,False,False,True,labeled:FALSE,3256.97,3109,1504,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0526,False,False,True,True,labeled:FALSE,3457.39,3108,1723,0.000449,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0527,True,False,False,True,labeled:FALSE,3583.19,3109,1506,0.000407,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0528,False,False,True,True,labeled:FALSE,3890.10,3108,1735,0.000451,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0529,True,False,False,True,labeled:FALSE,380.18,3109,1915,0.000485,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0530,False,False,True,True,labeled:FALSE,804.69,3109,1566,0.000419,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0531,True,False,False,True,labeled:FALSE,1273.09,3108,2310,0.000560,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0532,False,True,False,True,labeled:TRUE,1733.38,3109,2407,0.000579,VERDICT: TRUE\nPROOF: The given premise \n\[x = (((y * y) * y) * x) * (y * z)\] \nis a *bare* equation (the left‑hand side is a single variable). In any magma in which this identity holds for all assi
+order5_hard_0533,True,False,False,True,labeled:FALSE,2345.29,3109,1396,0.000386,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0534,False,False,True,True,labeled:FALSE,2830.81,3109,1131,0.000336,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0535,True,False,False,True,labeled:FALSE,3187.28,3109,1713,0.000447,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0536,False,False,True,True,labeled:FALSE,3442.54,3109,1526,0.000411,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0537,True,False,False,True,labeled:FALSE,3656.05,3109,1730,0.000450,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0538,False,False,True,True,labeled:FALSE,3877.75,3109,1243,0.000357,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0539,True,False,False,True,labeled:FALSE,324.49,3109,2225,0.000544,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0540,False,False,True,True,labeled:FALSE,667.55,3109,1406,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0541,True,False,False,True,labeled:FALSE,1156.75,3109,1390,0.000385,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0542,False,False,True,True,labeled:FALSE,1547.45,3108,1177,0.000345,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0543,True,True,True,True,labeled:TRUE,2248.82,3108,917,0.000295,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with T = ((y * ((x * y) * z)) * x) * z. Analyzing T yields the feature vector:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rh"
+order5_hard_0544,False,True,False,True,labeled:TRUE,2706.97,3108,708,0.000256,"VERDICT: TRUE\nREASONING: The source equation is bare (left side is x). Analyzing the product term P = ((((y*y)*z)*x)*x)*z gives the feature vector:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape"
+order5_hard_0545,True,False,False,True,labeled:FALSE,3127.52,3108,696,0.000253,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0546,False,False,True,True,labeled:FALSE,3394.40,3108,1321,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0547,True,True,True,True,labeled:TRUE,3611.40,3109,1006,0.000312,"VERDICT: TRUE\nREASONING: In Eq1 the right‑hand side term is P = ((y * ((x * y) * z)) * x) * z. Its features are:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=222, xCount=2.\nThe"
+order5_hard_0548,False,False,True,True,labeled:FALSE,3843.15,3108,1987,0.000499,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0549,True,True,True,True,labeled:TRUE,421.30,3108,919,0.000296,"VERDICT: TRUE\nREASONING: The source equation is bare with RHS P = ((y * ((x * y) * z)) * x) * z. Features: rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTotals=222, xCount=2. This matche"
+order5_hard_0550,False,False,True,True,labeled:FALSE,856.81,3109,1544,0.000415,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0551,True,True,True,True,labeled:TRUE,1299.26,3108,649,0.000245,"VERDICT: TRUE\nREASONING: Applied contradiction motif (Step 2.8). For Eq1, the product side P = ((y * ((x * z) * y)) * x) * z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, xCoun"
+order5_hard_0552,False,False,True,True,labeled:FALSE,1834.32,3109,1607,0.000427,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0553,True,False,False,True,labeled:FALSE,2426.75,3110,1753,0.000454,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0554,False,False,True,True,labeled:FALSE,2918.78,3109,1594,0.000424,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0555,True,False,False,True,labeled:FALSE,3255.52,3109,1716,0.000447,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0556,False,False,True,True,labeled:FALSE,3479.90,3109,1226,0.000354,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0557,True,False,False,True,labeled:FALSE,3691.70,3110,623,0.000240,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0558,False,False,True,True,labeled:FALSE,3889.47,3109,1568,0.000419,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0559,True,False,False,True,labeled:FALSE,316.63,3108,1666,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0560,False,False,True,True,labeled:FALSE,778.45,3109,684,0.000251,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0561,True,False,False,True,labeled:FALSE,1187.40,3110,2371,0.000572,"VERDICT: FALSE\nREASONING: Counterexample – take the magma with set {0,1} and binary operation defined by a * b = a XOR b (addition modulo 2). Assign variables x=1, y=1, z=0. Then\n- Eq1: RHS = (y*x)*"
+order5_hard_0562,False,False,True,True,labeled:FALSE,1699.55,3108,1604,0.000426,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0563,True,False,False,True,labeled:FALSE,2458.59,3108,2439,0.000585,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0564,False,True,False,True,labeled:TRUE,2811.43,3108,761,0.000266,"VERDICT: TRUE\nREASONING: Applied contradiction motif C7. For Eq1, the product side P = ((((y*y)*z)*x)*x)*z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCount=2"
+order5_hard_0565,True,False,False,True,labeled:FALSE,3193.09,3123,372,0.000192,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0566,False,False,True,True,labeled:FALSE,3508.45,3108,1453,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0567,True,False,False,True,labeled:FALSE,3654.09,3108,1167,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0568,False,False,True,True,labeled:FALSE,3949.19,3108,1432,0.000393,VERDICT: FALSE\nREASONING: rightmost exclusion
+order5_hard_0569,True,False,False,True,labeled:FALSE,241.15,3108,2109,0.000522,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0570,False,False,True,True,labeled:FALSE,690.77,3109,1353,0.000378,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0571,True,False,False,True,labeled:FALSE,3298.61,3108,316,0.000181,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0572,False,False,True,True,labeled:FALSE,1682.64,3109,1496,0.000405,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0573,True,False,False,True,labeled:FALSE,2331.75,3109,1416,0.000390,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0574,False,True,False,True,labeled:TRUE,2927.00,3109,1353,0.000378,"VERDICT: TRUE\nREASONING: The premise equation  \n\(x = (y*y) * ((z * (x*x)) * z)\) forces every element of any magma satisfying it to be equal to every other element, i.e., the magma must be a single"
+order5_hard_0575,True,False,False,True,labeled:FALSE,3312.42,3109,1829,0.000469,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0576,False,False,True,True,labeled:FALSE,3526.48,3109,1165,0.000343,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0577,True,False,False,True,labeled:FALSE,3741.50,3110,1743,0.000452,"VERDICT: FALSE\nREASONING: COUNTEREXAMPLE\nPROOF: \nConsider the magma \(M = \{a,b\}\) with binary operation \(*\) defined by the table:\n\n\[\n\begin{array}{c|cc}\n* & a & b \\ \hline\na & a & a \\\n"
+order5_hard_0578,False,False,True,True,labeled:FALSE,133.24,3109,1308,0.000370,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0579,True,True,True,True,labeled:TRUE,438.46,3110,739,0.000262,"VERDICT: TRUE\nREASONING: Applying STEP 2.8 (contradiction motif) to the bare source Eq1 x = (y * (z * x)) * (x * (x * w)):\n- rhsVars = 4 (variables y, z, x, w)\n- Lx = FALSE (leftmost leaf is y, not"
+order5_hard_0580,False,False,True,True,labeled:FALSE,989.09,3109,1318,0.000372,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0581,True,True,True,True,labeled:TRUE,1364.11,3110,972,0.000306,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = (y*(z*x))*(x*(x*w)). Computing features of the product side yields rhsVars=4, Lx=FALSE, Rx=FALSE among others. This satisfies contradic"
+order5_hard_0582,False,False,True,True,labeled:FALSE,1965.73,3108,1530,0.000412,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0583,True,True,True,True,labeled:TRUE,2442.94,3110,895,0.000291,"VERDICT: TRUE\nREASONING: The source equation is bare (x on the left) with product side P = (y*(z*x)) * (x*(x*w)). Features: rhsVars=4, Lx=FALSE, Rx=FALSE, xTop=both, topShape=m-m, rhsTotals=3111, xCo"
+order5_hard_0584,False,True,False,True,labeled:TRUE,2839.49,3108,582,0.000232,"VERDICT: TRUE\nREASONING: The source equation is bare (x = T) with T = ((((y*y)*z)*x)*x)*z. Computing the required features:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCo"
+order5_hard_0585,True,False,False,True,labeled:FALSE,3257.15,3110,1747,0.000453,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0586,False,True,False,True,labeled:TRUE,3485.61,3108,2167,0.000533,VERDICT: TRUE\nREASONING: The given equation  \n\[ x = y * (((x * (z * z)) * y) * y) \]  \nhas a variable \(x\) on the left‑hand side and a product term on the right‑hand side that contains \(y\) as a
+order5_hard_0587,True,False,False,True,labeled:FALSE,3703.41,3109,1482,0.000403,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0588,False,False,True,True,labeled:FALSE,43.10,3108,1802,0.000464,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0589,True,False,False,True,labeled:FALSE,397.36,3110,767,0.000267,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0590,False,False,True,True,labeled:FALSE,893.75,3109,1196,0.000348,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0591,True,False,False,True,labeled:FALSE,1347.21,3109,1607,0.000427,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0592,False,False,True,True,labeled:FALSE,1828.40,3109,1972,0.000496,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0593,True,False,False,True,labeled:FALSE,2359.11,3109,1573,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0594,False,False,True,True,labeled:FALSE,2874.46,3109,1877,0.000478,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0595,True,False,False,True,labeled:FALSE,3199.40,3110,1509,0.000408,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0596,False,False,True,True,labeled:FALSE,3449.49,3109,1193,0.000348,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0597,True,False,False,True,labeled:FALSE,3657.50,3109,1421,0.000391,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0598,False,False,True,True,labeled:FALSE,3888.55,3109,1469,0.000400,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0599,True,True,True,True,labeled:TRUE,572.27,3109,2424,0.000582,"VERDICT: TRUE\nREASONING: The premise equation is a bare identity x = T where the variable x appears in T. In any magma, such an identity forces every element to be equal (the magma collapses to a sin"
+order5_hard_0600,False,False,True,True,labeled:FALSE,1007.55,3109,2029,0.000507,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0601,True,False,False,True,labeled:FALSE,1463.36,3110,1266,0.000362,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0602,False,False,True,True,labeled:FALSE,2083.07,3108,1023,0.000316,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0603,True,False,False,True,labeled:FALSE,2590.81,3109,1464,0.000399,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0604,False,True,False,True,labeled:TRUE,2963.34,3108,836,0.000280,"VERDICT: TRUE\nREASONING: \nEq1 is bare (x = P) with P = ((((y*y)*z)*x)*x)*z.\nFeatures: rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m-v, rhsTotals=222, xCount=2.\nThese match contradiction mot"
+order5_hard_0605,True,False,False,True,labeled:FALSE,3311.66,3109,1452,0.000397,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0606,False,False,True,True,labeled:FALSE,3539.01,3108,1610,0.000427,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0607,True,True,True,True,labeled:TRUE,3753.86,3110,1507,0.000408,"VERDICT: TRUE\nPROOF: Eq2 is obtained from Eq1 by the substitution \(z := y\). Since Eq1 holds for all elements of any magma, replacing the variable \(z\) by the term \(y\) yields a valid identity in "
+order5_hard_0608,False,False,True,True,labeled:FALSE,99.30,3108,1584,0.000422,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0609,True,False,False,True,labeled:FALSE,446.30,3108,854,0.000283,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0610,False,False,True,True,labeled:FALSE,1037.35,3109,2249,0.000549,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0611,True,False,False,True,labeled:FALSE,1343.53,3108,2033,0.000507,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0612,False,False,True,True,labeled:FALSE,1970.09,3109,1510,0.000408,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0613,True,False,False,True,labeled:FALSE,2522.94,3108,1575,0.000420,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0614,False,False,True,True,labeled:FALSE,2852.22,3109,1588,0.000423,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0615,True,False,False,True,labeled:FALSE,3295.22,3108,1404,0.000388,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0616,False,False,True,True,labeled:FALSE,3589.37,3109,1668,0.000438,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0617,True,False,False,True,labeled:FALSE,3725.65,3108,679,0.000250,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0618,False,False,True,True,labeled:FALSE,81.67,3109,1148,0.000339,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0619,True,False,False,True,labeled:FALSE,384.22,3110,1428,0.000393,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0620,False,False,True,True,labeled:FALSE,903.84,3109,1359,0.000379,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0621,True,False,False,True,labeled:FALSE,1269.26,3110,1582,0.000422,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \n\nConsider the two-element magma \(M=\{0,1\}\) with the binary operation defined as XOR (addition modulo 2):\n\n\[\n\begin{array}{c|cc}\n* & 0 & 1 \"
+order5_hard_0622,False,False,True,True,labeled:FALSE,1776.25,3108,806,0.000274,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0623,True,True,True,True,labeled:TRUE,2433.61,3110,767,0.000267,"VERDICT: TRUE\nREASONING: Applying contradiction motif C1. For Eq1, the right-hand side product P = ((y*x)*x) * ((x*z)*w) has rhsVars=4 (variables x,y,z,w), Lx=FALSE (leftmost variable y), Rx=FALSE (r"
+order5_hard_0624,False,True,False,True,labeled:TRUE,3124.82,3108,662,0.000247,"VERDICT: TRUE\nREASONING: \nStep 2.8 (contradiction motifs) applies.  \nFor Eq1, the product side P = ((((y*y)*z)*x)*x)*z has features:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsTota"
+order5_hard_0625,True,False,False,True,labeled:FALSE,3405.37,3108,1929,0.000488,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0626,False,False,True,True,labeled:FALSE,3619.07,3108,1606,0.000426,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0627,True,False,False,True,labeled:FALSE,3843.10,3108,1939,0.000490,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0628,False,False,True,True,labeled:FALSE,173.76,3108,1788,0.000461,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0629,True,False,False,True,labeled:FALSE,568.10,3108,1759,0.000455,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0630,False,False,True,True,labeled:FALSE,1092.16,3109,1621,0.000429,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0631,True,False,False,True,labeled:FALSE,1423.71,3108,1989,0.000499,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0632,False,False,True,True,labeled:FALSE,2157.74,3109,1906,0.000483,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0633,True,False,False,True,labeled:FALSE,2605.81,3108,2120,0.000524,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0634,False,False,True,True,labeled:FALSE,3013.32,3109,1448,0.000396,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0635,True,False,False,True,labeled:FALSE,3348.07,3109,412,0.000200,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0636,False,False,True,True,labeled:FALSE,3575.46,3109,2105,0.000521,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0637,True,False,False,True,labeled:FALSE,3793.95,3108,1159,0.000341,VERDICT: FALSE\nREASONING: spine isolation
+order5_hard_0638,False,False,True,True,labeled:FALSE,168.26,3109,1657,0.000436,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0639,True,False,False,True,labeled:FALSE,526.81,3108,2125,0.000525,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0640,False,False,True,True,labeled:FALSE,929.11,3109,597,0.000235,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0641,True,True,True,True,labeled:TRUE,1350.22,3108,654,0.000245,"VERDICT: TRUE\nREASONING: Using STEP 2.8 contradiction motifs. For Eq1, the product side P = ((y * ((z * y) * x)) * x) * z has features rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, xCount=2"
+order5_hard_0642,False,False,True,True,labeled:FALSE,1971.57,3108,1387,0.000385,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0643,True,True,True,True,labeled:TRUE,2554.47,3108,928,0.000298,"VERDICT: TRUE\nREASONING: Applying Step 2.8 (contradiction motifs) to the bare source equation\n\(x = ((y * ((z * y) * x)) * x) * z\):\n- rhsVars = 3 (variables y, z, x)\n- Lx = FALSE (x is not the le"
+order5_hard_0644,False,True,False,True,labeled:TRUE,2956.81,3108,812,0.000275,"VERDICT: TRUE\nREASONING: Applying STEP 2.8 (contradiction motifs) to the bare source Eq1 x = ((((y*y)*z)*x)*x)*z yields the feature vector rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m‑v, rhsT"
+order5_hard_0645,True,False,False,True,labeled:FALSE,3300.99,3108,2018,0.000505,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \n\nConsider the magma \(M=\{a,b\}\) with binary operation defined as right projection:\n\[\n\forall u,v\in M,\qquad u * v = v.\n\]\n\nAssign the vari"
+order5_hard_0646,False,False,True,True,labeled:FALSE,3530.62,3108,1955,0.000493,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0647,True,False,False,True,labeled:FALSE,3748.52,3109,1951,0.000492,"VERDICT: FALSE\nREASONING: counterexample\nPROOF: \nMagma: two-element set {0,1} with operation defined by a * b = b (right projection).\nAssignment: x = 0, y = 0, z = 1.\n- Eq1 evaluates to 0 = 0 (tr"
+order5_hard_0648,False,False,True,True,labeled:FALSE,82.67,3108,1137,0.000337,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0649,True,True,True,True,labeled:TRUE,644.01,3108,864,0.000285,"VERDICT: TRUE\nREASONING: The premise Eq1 is a bare equation x = P where P = (y * (x * ((x * z) * y))) * z. Analyzing P yields the feature vector:\nrhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape=m"
+order5_hard_0650,False,False,True,True,labeled:FALSE,1157.18,3109,1334,0.000375,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0651,True,False,False,True,labeled:FALSE,1513.31,3109,1060,0.000323,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0652,False,False,True,True,labeled:FALSE,3256.50,3109,1086,0.000328,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0653,True,False,False,True,labeled:FALSE,2680.94,3110,1014,0.000314,VERDICT: FALSE\nREASONING: default false fallback
+order5_hard_0654,False,False,True,True,labeled:FALSE,3099.80,3109,1437,0.000394,VERDICT: FALSE\nREASONING: default false fallback
