@@ -2,7 +2,7 @@
   "channel": "17 Prime Scales are the Science of Intelligence",
   "channel_id": 18,
   "topic": "general chat",
-  "message_count": 12,
+  "message_count": 13,
   "messages": [
     {
       "id": 1417,
@@ -366,6 +366,32 @@
       "stream_id": 18,
       "avatar_url": "/user_avatars/5/77d5b2143b76f84cc94028545e5e76dfa9029791.png",
       "content_type": "text/html"
+    },
+    {
+      "id": 1612,
+      "sender_id": 290,
+      "content": "<p>State:<br>\nM_t = {(i, w_i, s_i)}</p>\n<p>Input:<br>\nA_t = {(i, s)}</p>\n<p>Parameter:<br>\nα ∈ (0,1)</p>\n<p>Dynamics:</p>\n<ol>\n<li>Decay: w_i ← α w_i</li>\n<li>Inversion: s_i → -s_i</li>\n<li>Sum: S(i)</li>\n<li>Decision: D(i) ∈ {-1,0,1}</li>\n<li>Update memory</li>\n</ol>\n<p>Functional Python Implementation</p>\n<div class=\"codehilite\" data-code-language=\"Python\"><pre><span></span><code><span class=\"kn\">import</span><span class=\"w\"> </span><span class=\"nn\">random</span>\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">collections</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">defaultdict</span>\n\n<span class=\"k\">class</span><span class=\"w\"> </span><span class=\"nc\">AdaptiveSystem</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span><span class=\"w\"> </span><span class=\"fm\">__init__</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">alpha</span><span class=\"o\">=</span><span class=\"mf\">0.8</span><span class=\"p\">,</span> <span class=\"n\">epsilon</span><span class=\"o\">=</span><span class=\"mf\">0.05</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alpha</span> <span class=\"o\">=</span> <span class=\"n\">alpha</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">epsilon</span> <span class=\"o\">=</span> <span class=\"n\">epsilon</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">memory</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n\n    <span class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">step</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">arriving</span><span class=\"p\">):</span>\n        <span class=\"n\">new_memory</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n        <span class=\"k\">for</span> <span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">w</span><span class=\"p\">,</span> <span class=\"n\">s</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">memory</span><span class=\"p\">:</span>\n            <span class=\"n\">w_new</span> <span class=\"o\">=</span> <span class=\"n\">w</span> <span class=\"o\">*</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alpha</span>\n            <span class=\"k\">if</span> <span class=\"n\">w_new</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">epsilon</span><span class=\"p\">:</span>\n                <span class=\"n\">new_memory</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">((</span><span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">w_new</span><span class=\"p\">,</span> <span class=\"n\">s</span><span class=\"p\">))</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">memory</span> <span class=\"o\">=</span> <span class=\"n\">new_memory</span>\n\n        <span class=\"n\">sway</span> <span class=\"o\">=</span> <span class=\"n\">defaultdict</span><span class=\"p\">(</span><span class=\"nb\">int</span><span class=\"p\">)</span>\n\n        <span class=\"k\">for</span> <span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">s</span> <span class=\"ow\">in</span> <span class=\"n\">arriving</span><span class=\"p\">:</span>\n            <span class=\"n\">sway</span><span class=\"p\">[</span><span class=\"n\">pos</span><span class=\"p\">]</span> <span class=\"o\">+=</span> <span class=\"n\">s</span>\n\n        <span class=\"k\">for</span> <span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">w</span><span class=\"p\">,</span> <span class=\"n\">s</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">memory</span><span class=\"p\">:</span>\n            <span class=\"n\">sway</span><span class=\"p\">[</span><span class=\"n\">pos</span><span class=\"p\">]</span> <span class=\"o\">+=</span> <span class=\"o\">-</span><span class=\"n\">s</span>\n\n        <span class=\"n\">decisions</span> <span class=\"o\">=</span> <span class=\"p\">{}</span>\n        <span class=\"k\">for</span> <span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">val</span> <span class=\"ow\">in</span> <span class=\"n\">sway</span><span class=\"o\">.</span><span class=\"n\">items</span><span class=\"p\">():</span>\n            <span class=\"k\">if</span> <span class=\"n\">val</span> <span class=\"o\">&gt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n                <span class=\"n\">decisions</span><span class=\"p\">[</span><span class=\"n\">pos</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"mi\">1</span>\n            <span class=\"k\">elif</span> <span class=\"n\">val</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n                <span class=\"n\">decisions</span><span class=\"p\">[</span><span class=\"n\">pos</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"o\">-</span><span class=\"mi\">1</span>\n            <span class=\"k\">else</span><span class=\"p\">:</span>\n                <span class=\"n\">decisions</span><span class=\"p\">[</span><span class=\"n\">pos</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n\n        <span class=\"k\">for</span> <span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"n\">d</span> <span class=\"ow\">in</span> <span class=\"n\">decisions</span><span class=\"o\">.</span><span class=\"n\">items</span><span class=\"p\">():</span>\n            <span class=\"k\">if</span> <span class=\"n\">d</span> <span class=\"o\">!=</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n                <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">memory</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">((</span><span class=\"n\">pos</span><span class=\"p\">,</span> <span class=\"mf\">1.0</span><span class=\"p\">,</span> <span class=\"n\">d</span><span class=\"p\">))</span>\n\n        <span class=\"k\">return</span> <span class=\"n\">decisions</span>\n</code></pre></div>\n<hr>",
+      "recipient_id": 276,
+      "timestamp": 1776304436,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Angel Jassiel Dorantes Benavides",
+      "sender_email": "user290@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "17 Prime Scales are the Science of Intelligence",
+      "type": "stream",
+      "stream_id": 18,
+      "avatar_url": "/user_avatars/5/0b0ddbd15134130c80532d7497d809f8aae03dde.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T01:53:56.000Z"
     }
   ]
 }

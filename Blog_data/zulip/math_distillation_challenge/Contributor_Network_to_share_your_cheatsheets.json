@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Contributor Network to share your cheatsheets",
-  "message_count": 3,
+  "message_count": 5,
   "messages": [
     {
       "id": 1361,
@@ -142,6 +142,65 @@
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
       "content_type": "text/html",
       "date": "2026-04-09T19:46:45.000Z"
+    },
+    {
+      "id": 1623,
+      "sender_id": 113,
+      "content": "<p>Is there an explanation for the F1 score column on the leaderboard? What is that exactly?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776363067,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-16T18:11:07.000Z"
+    },
+    {
+      "id": 1624,
+      "sender_id": 25,
+      "content": "<p><a href=\"https://en.wikipedia.org/wiki/F-score\">https://en.wikipedia.org/wiki/F-score</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1776371994,
+      "client": "ZulipElectron",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "love_you_gesture",
+          "emoji_code": "1f91f",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T20:39:54.000Z"
     }
   ]
 }

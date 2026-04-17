@@ -2,7 +2,7 @@
   "channel": "general",
   "channel_id": 9,
   "topic": "greetings",
-  "message_count": 4,
+  "message_count": 5,
   "messages": [
     {
       "id": 22,
@@ -153,6 +153,39 @@
       "stream_id": 9,
       "avatar_url": "https://secure.gravatar.com/avatar/46dd9ae8ab7b120724e3b31ec27371e1?d=identicon&version=1",
       "content_type": "text/html"
+    },
+    {
+      "id": 1607,
+      "sender_id": 290,
+      "content": "<p><a href=\"/user_uploads/5/53/Up-fWO808C1WNoZz3pVpjPme/Screenshot_20260415-193712-716.png\">Screenshot_20260415-193712-716.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/53/Up-fWO808C1WNoZz3pVpjPme/Screenshot_20260415-193712-716.png\" title=\"Screenshot_20260415-193712-716.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"1080x1486\" src=\"/user_uploads/thumbnail/5/53/Up-fWO808C1WNoZz3pVpjPme/Screenshot_20260415-193712-716.png/840x560.webp\"></a></div>",
+      "recipient_id": 24,
+      "timestamp": 1776301438,
+      "client": "website",
+      "subject": "greetings",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "octopus",
+          "emoji_code": "1f419",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Angel Jassiel Dorantes Benavides",
+      "sender_email": "user290@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "general",
+      "type": "stream",
+      "stream_id": 9,
+      "avatar_url": "/user_avatars/5/0b0ddbd15134130c80532d7497d809f8aae03dde.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T01:03:58.000Z"
     }
   ]
 }

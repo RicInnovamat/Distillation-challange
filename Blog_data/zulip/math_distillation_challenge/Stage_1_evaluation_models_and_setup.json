@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Stage 1 evaluation models and setup",
-  "message_count": 8,
+  "message_count": 12,
   "messages": [
     {
       "id": 1509,
@@ -323,6 +323,149 @@
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
       "content_type": "text/html",
       "date": "2026-04-11T02:56:56.000Z"
+    },
+    {
+      "id": 1600,
+      "sender_id": 25,
+      "content": "<p>Hi everyone, with 5 days remaining in Stage 1 of the Mathematics Distillation Challenge - Equational Theories, we wanted to share a few updates:</p>\n<p><strong> 1. Evaluation configuration</strong><br>\nThank you for the helpful feedback from the community. Stage 1 evaluation will include both the 8192 and 16384 output-token settings, with separate leaderboards for each. The official evaluation setup is here: <a href=\"https://github.com/SAIRcompetition/equational-theories-stage1-judge\">https://github.com/SAIRcompetition/equational-theories-stage1-judge</a><br>\nFor gemma-4-31b-it, the current issue is provider stability on OpenRouter. If this remains unresolved by the end of Stage 1, we may use a SAIR-hosted serving setup for evaluation of gemma-4-31b-it, with the same model and fixed configuration, while ensuring fairness of the evaluation.</p>\n<p><strong> 2. Final evaluation problem set</strong><br>\nThe final offline evaluation set will be completely different from the public selected problem sets, and it will include different levels of difficulty. We strongly encourage participants not to overfit to specific public subsets, but instead to focus on underlying mathematical reasoning and generalization.</p>\n<p><strong> 3. Contributor Network</strong><br>\nWe encourage participants to share prompts through the SAIR Contributor Network. Shared prompts can be benchmarked and shown on the leaderboard here: <a href=\"https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage1&amp;tab=leaderboard\">https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage1&amp;tab=leaderboard</a><br>\nThis may help participants iterate and improve more effectively. We also want to thank community members who have shared github repos, experience reports, and papers. We really appreciate this open collaboration.</p>\n<p><strong> 4. About Stage 2</strong><br>\nStage 2 will begin after Stage 1 ends. After internal discussion, we have adjusted participation so that Stage 2 will be open to anyone who wants to register. Stage 1 participants will be able to use the Stage 2 Playground. More detailed rules will be announced after Stage 2 begins.</p>\n<p>Thank you again to everyone participating in SAIR competitions and contributing to the discussion.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776296360,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 236
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 275
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-15T23:39:20.000Z"
+    },
+    {
+      "id": 1616,
+      "sender_id": 236,
+      "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> we have run some few tests on different equations sets, to check for potential overfitting.  One issue that emerged, is that models really struggle on equations of order equal or higher than 5. Can you confirm that the final test is going to be run on orders strictly lower than 5? more generally, what will the conditions of the set of equations of the final test? Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776326414,
+      "client": "website",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Erzio",
+      "sender_email": "user236@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c966445f0cdaac2f678aa5c5cc9e8d9c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-16T08:00:14.000Z"
+    },
+    {
+      "id": 1622,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"236\">Erzio</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Stage.201.20evaluation.20models.20and.20setup/near/1616\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> we have run some few tests on different equations sets, to check for potential overfitting.  One issue that emerged, is that models really struggle on equations of order equal or higher than 5. Can you confirm that the final test is going to be run on orders strictly lower than 5? more generally, what will the conditions of the set of equations of the final test? Thanks!</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> I will confirm with the other co-organizers and get back to you. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776362628,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 236
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T18:03:48.000Z"
+    },
+    {
+      "id": 1627,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> Our current plan is that the Stage 1 final evaluation set will not include order 5 or higher problems. More generally, the final offline evaluation set will be different from the public selected problem sets and will include different levels of difficulty. The main goal is to evaluate generalization rather than performance on a specific subset.</p>\n<p>We might also run a separate leaderboard on some order 5 problems as an interesting experiment, even if it is not part of the official leaderboard.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776380786,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "rock_on",
+          "emoji_code": "1f918",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T23:06:26.000Z"
     }
   ]
 }
