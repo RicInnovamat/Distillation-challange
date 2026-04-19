@@ -1,0 +1,4 @@
+GPT full_2000 started at Sun Apr 19 21:05:26 +04 2026
+GEMMA full_2000 started at Sun Apr 19 21:05:28 +04 2026
+GPT full_2000 DONE at Sun Apr 19 22:25:25 +04 2026
+GEMMA full_2000 DONE at Sun Apr 19 23:19:55 +04 2026
