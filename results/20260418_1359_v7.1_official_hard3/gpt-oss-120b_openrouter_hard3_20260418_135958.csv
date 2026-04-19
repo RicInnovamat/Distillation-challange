@@ -1,0 +1,401 @@
+problem_id,expected,predicted,correct,parse_ok,raw_verdict,latency_s,input_tokens,output_tokens,cost_usd,response_text
+hard3_0001,True,True,True,True,labeled:TRUE,977.41,3216,504,0.000221,"REASONING: Eq1 is a bare equation of the form x = T * x with T = y, and T does not contain x. By rule 2.7 (right projection) this forces the law a * b = b for all elements of any magma. Under this law"
+hard3_0002,True,False,False,True,labeled:FALSE,1027.86,3220,1269,0.000367,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0003,True,False,False,True,labeled:FALSE,1068.15,3220,1894,0.000485,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0004,True,True,True,True,labeled:TRUE,1068.89,3220,266,0.000176,"REASONING: In Eq1 the variable x appears only on the left side and does not occur in the term y * (z * w) on the right. By rule 2.3 (singleton / collapse source), this forces the magma to be a singlet"
+hard3_0005,True,True,True,True,labeled:TRUE,1092.35,3219,601,0.000240,REASONING: The premise of rule 2.7 (right projection) is satisfied because Eq1 can be renamed to the form x = T * x with T = (y*z) which does not contain x. This forces the identity a * b = b for all 
+hard3_0006,True,True,True,True,labeled:TRUE,1142.73,3218,1283,0.000369,"REASONING: Eq1 states that for all elements a,b in any magma, a*a = a*b. Hence for each fixed a, the product a*· is a constant function equal to a*a. Consequently, for any elements a,b,c we have:\n- a"
+hard3_0007,False,True,False,True,labeled:TRUE,1161.66,3218,715,0.000261,"REASONING: Eq1 can be rewritten as x*y = x*x (swap sides). Here the variable y does not appear in the right‑hand side term x*x, so Eq1 matches the “missing‑variable absorption” pattern with y absent. "
+hard3_0008,True,True,True,True,labeled:TRUE,1208.30,3218,693,0.000257,"REASONING: The source equation `x * x = y * z` can be renamed to the form `a * b = T` where `a` and `b` are variables (here both `x`) and `T` is a product (`y * z`) that shares no variables with `{a,b"
+hard3_0009,False,False,True,True,labeled:FALSE,1258.96,3223,1319,0.000376,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0010,False,False,True,True,labeled:FALSE,1308.30,3222,1562,0.000422,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0011,False,False,True,True,labeled:FALSE,1389.76,3223,1840,0.000475,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0012,False,False,True,True,labeled:FALSE,1418.90,3223,1429,0.000397,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0013,False,False,True,True,labeled:FALSE,1469.38,3223,1376,0.000387,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0014,True,True,True,True,labeled:TRUE,1494.38,3223,509,0.000222,"REASONING: The source equation is bare (single variable on the left). It can be rewritten as x = x * T with T = (y * (z * y)), which does not contain x. By rule 2.6 (left projection), this forces the "
+hard3_0015,True,False,False,True,labeled:FALSE,1585.27,3222,1698,0.000448,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0016,False,False,True,True,labeled:FALSE,1606.98,3223,934,0.000303,REASONING: rightmost-variable exclusion\nVERDICT: FALSE\nPROOF:
+hard3_0017,False,False,True,True,labeled:FALSE,35.59,3220,1692,0.000447,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0018,False,False,True,True,labeled:FALSE,27.77,3223,521,0.000225,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0019,False,False,True,True,labeled:FALSE,75.04,3223,1026,0.000321,VERDICT: FALSE\nREASONING: spine isolation
+hard3_0020,True,False,False,True,labeled:FALSE,124.32,3224,1126,0.000340,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0021,False,True,False,True,labeled:TRUE,179.04,3223,2289,0.000561,"REASONING: No TRUE route fired in steps 2‑2.8, and no FALSE route fired in steps 3‑4. The only way Eq1 can hold in all magmas is when the operation satisfies a left‑projection law (a * b = a) for ever"
+hard3_0022,False,False,True,True,labeled:FALSE,202.11,3222,1308,0.000374,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0023,True,False,False,True,labeled:FALSE,246.35,3217,2131,0.000530,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0024,True,True,True,True,labeled:TRUE,251.96,3223,576,0.000235,REASONING: The premise x = x * ((y * z) * z) is a bare equation of the form x = x * T where T does not contain x. By rule 2.6 (left projection) this forces the law a * b = a for all elements of any ma
+hard3_0025,False,False,True,True,labeled:FALSE,298.14,3224,2281,0.000559,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0026,False,False,True,True,labeled:FALSE,302.45,3224,1584,0.000427,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0027,True,False,False,True,labeled:FALSE,341.97,3221,1190,0.000352,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0028,True,False,False,True,labeled:FALSE,371.65,3224,1715,0.000452,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0029,False,False,True,True,labeled:FALSE,397.54,3222,1714,0.000451,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0030,True,False,False,True,labeled:FALSE,433.00,3223,2376,0.000577,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0031,False,False,True,True,labeled:FALSE,460.46,3223,2035,0.000512,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0032,False,False,True,True,labeled:FALSE,485.02,3223,1937,0.000494,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0033,True,True,True,True,labeled:TRUE,517.93,3223,2106,0.000526,REASONING: The identity x = (y * x) * (z * x) forces the operation to be a right projection (a * b = b) or a singleton magma. In both cases the target identity x * x = ((y * x) * x) * x holds. Hence t
+hard3_0034,True,False,False,True,labeled:FALSE,543.66,3224,1700,0.000449,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0035,False,False,True,True,labeled:FALSE,576.15,3224,2262,0.000556,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0036,True,True,True,True,labeled:TRUE,607.06,3224,1842,0.000476,"REASONING: The equation \(x = (x * (x * x)) * y\) forces every element to be a left‑zero element: for any \(x,y\) we have \((x*(x*x))*y = x\). Setting \(a = x*(x*x)\) gives \(a*y = a\) for all \(y\), "
+hard3_0037,False,True,False,True,labeled:TRUE,628.70,3222,1822,0.000472,"REASONING: The given equation is a bare source. None of the true routes 2.1‑2.7, 2.9‑2.12 apply directly, and the contradiction‑motif check (2.8) does not match. No false route from step 3 fires becau"
+hard3_0038,True,False,False,True,labeled:FALSE,658.46,3222,1641,0.000437,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0039,False,False,True,True,labeled:FALSE,688.39,3224,1771,0.000462,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0040,False,False,True,True,labeled:FALSE,727.27,3223,1725,0.000453,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0041,False,True,False,True,labeled:TRUE,778.42,3223,3140,0.000722,"REASONING:  \nEq1 is a bare equation of the form x = ((x*x)*x)*y.  \nFrom Eq1 we obtain for any x, y:\n\n1. Let a = ((x*x)*x). Then Eq1 gives x = a*y for all y.  \n   Hence the row of a in the multipl"
+hard3_0042,False,False,True,True,labeled:FALSE,762.57,3223,1434,0.000398,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0043,True,False,False,True,labeled:FALSE,792.48,3223,1340,0.000380,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0044,False,False,True,True,labeled:FALSE,819.35,3222,1437,0.000399,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0045,False,True,False,True,labeled:TRUE,846.46,3223,1900,0.000487,"REASONING: No true route fired in steps 2‑2.12, and no false route fired in steps 3.0‑3.6. The identity  \n x = ((y * x) * y) * x  \nforces the right‑projection law a * b = b in every magma. Indeed, s"
+hard3_0046,True,True,True,True,labeled:TRUE,847.61,3223,643,0.000248,"REASONING: Eq1 is a bare equation x = T * x with T = ((y*z)*y) which does not contain x. By rule 2.7 (right projection), this forces the law a*b = b in any magma satisfying Eq1. Applying this law to E"
+hard3_0047,True,True,True,True,labeled:TRUE,870.95,3222,547,0.000230,"REASONING: Eq1 is a bare equation with the form x = T * x where T = ((y*z)*y) does not contain x. By rule 2.7 (right projection), this forces a*b = b for all elements. Applying this reduction to Eq2, "
+hard3_0048,True,False,False,True,labeled:FALSE,892.07,3223,721,0.000263,REASONING: right projection\nVERDICT: FALSE
+hard3_0049,True,True,True,True,labeled:TRUE,921.18,3223,639,0.000247,REASONING: Eq1 is a bare equation of the form x = T * x where T = ((y*z)*w) does not contain x. By rule 2.7 (right projection) this forces the identity a * b = b for all elements of any magma satisfyi
+hard3_0050,False,False,True,True,labeled:FALSE,954.83,3221,674,0.000254,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0051,True,False,False,True,labeled:FALSE,991.46,3221,815,0.000280,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0052,True,False,False,True,labeled:FALSE,1034.90,3222,1219,0.000357,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0053,True,True,True,True,labeled:TRUE,1049.04,3222,758,0.000270,"REASONING: The premise of rule 2.12 (missing‑variable absorption) applies. In Eq1 we have the form x * y = z * (y * z). The right‑hand side does not contain the variable x, so Eq1 forces a right‑proje"
+hard3_0054,True,True,True,True,labeled:TRUE,1079.33,3221,616,0.000243,"REASONING: The source equation `x * y = z * (z * w)` has the form `x*y = T` where `T = z*(z*w)` contains no occurrence of `x` or `y`. Hence the binary operation must be constant: for any elements a,b "
+hard3_0055,False,False,True,True,labeled:FALSE,1109.36,3221,1311,0.000375,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0056,False,True,False,True,labeled:TRUE,1154.07,3222,1568,0.000424,"REASONING: From Eq1 we have ∀x,y,z: x*x = (y*x)*z. Fix x. Let p = x*x. Then for all y,z we have (y*x)*z = p. Define u = y*x. Then for all u (since y varies over all elements, u ranges over the entire "
+hard3_0057,False,False,True,True,labeled:FALSE,1197.11,3218,1836,0.000474,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0058,True,False,False,True,labeled:FALSE,1219.74,3218,1081,0.000331,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0059,False,False,True,True,labeled:FALSE,1250.34,3222,369,0.000196,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0060,True,False,False,True,labeled:FALSE,1287.61,3222,544,0.000229,REASONING: missing-variable absorption\nVERDICT: FALSE
+hard3_0061,True,True,True,True,labeled:TRUE,1342.18,3221,770,0.000272,"REASONING: The source equation `x * y = (z * z) * z` has the form `x*y = T` where `T` is a product `(z*z)*z` whose variables `{z}` are disjoint from `{x,y}`. Hence the equation forces the binary opera"
+hard3_0062,False,False,True,True,labeled:FALSE,1428.72,3226,1532,0.000417,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0063,False,True,False,True,labeled:TRUE,1502.88,3226,2432,0.000588,"REASONING: Using Eq1 we can derive the left projection law a * b = a for all elements, and then Eq2 holds automatically under this law.\n\nVERDICT: TRUE\nPROOF: From the given identity  \n x = x * (x "
+hard3_0064,False,False,True,True,labeled:FALSE,1526.06,3226,1600,0.000430,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0065,False,True,False,True,labeled:TRUE,1585.42,3222,2095,0.000524,REASONING: The given premise `x = x * (y * (x * (x * z)))` is a bare equation with the left side a single variable. By examining the structure of the right‑hand side we see that the variable `x` occur
+hard3_0066,True,False,False,True,labeled:FALSE,1669.76,3227,1837,0.000475,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0067,True,False,False,True,labeled:FALSE,25.61,3226,1421,0.000396,"REASONING: No true route applies (features do not match any projection, collapse, or contradiction motif). No false syntactic exclusion route applies. No small finite witness route is obvious, and the"
+hard3_0068,True,False,False,True,labeled:FALSE,53.98,3226,1409,0.000394,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0069,False,False,True,True,labeled:FALSE,94.30,3227,2026,0.000511,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0070,False,False,True,True,labeled:FALSE,137.19,3223,1909,0.000488,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0071,False,False,True,True,labeled:FALSE,149.95,3227,1040,0.000323,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0072,False,False,True,True,labeled:FALSE,233.42,3226,2457,0.000593,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0073,False,False,True,True,labeled:FALSE,241.26,3226,2081,0.000521,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0074,False,False,True,True,labeled:FALSE,270.11,3227,1526,0.000416,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0075,False,False,True,True,labeled:FALSE,279.90,3227,735,0.000266,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0076,False,True,False,True,labeled:TRUE,294.06,3227,477,0.000216,"REASONING:  \nEq1 is bare with left side variable x and right side term  \nP = y * (z * (x * (w * x))).  \n\nFeatures of P:  \n- rhsVars = 4 (variables x, y, z, w)  \n- Lx = FALSE (leftmost variable i"
+hard3_0077,True,False,False,True,labeled:FALSE,356.45,3225,1579,0.000426,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0078,False,False,True,True,labeled:FALSE,370.08,3226,1499,0.000411,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0079,False,False,True,True,labeled:FALSE,389.64,3227,1187,0.000351,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0080,False,False,True,True,labeled:FALSE,427.46,3225,1463,0.000404,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0081,False,False,True,True,labeled:FALSE,459.58,3226,2443,0.000590,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0082,False,False,True,True,labeled:FALSE,488.21,3226,1601,0.000430,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0083,False,False,True,True,labeled:FALSE,513.56,3226,1580,0.000426,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0084,False,False,True,True,labeled:FALSE,540.27,3225,1435,0.000398,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0085,True,False,False,True,labeled:FALSE,569.70,3226,1579,0.000426,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0086,False,False,True,True,labeled:FALSE,600.41,3225,1353,0.000383,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0087,True,True,True,True,labeled:TRUE,611.32,3226,574,0.000235,"REASONING: The source equation is bare (left side is a single variable). It can be rewritten as x = x * T with T = y * ((y * z) * w), which does not contain x. By rule 2.6 (left projection), this forc"
+hard3_0088,True,True,True,True,labeled:TRUE,636.74,3225,558,0.000232,"REASONING: The source equation is bare (single variable on the left). It can be renamed to the form x = x * T where T = y * ((y * z) * w) does not contain x. By rule 2.6 (left projection), this forces"
+hard3_0089,True,False,False,True,labeled:FALSE,683.01,3225,1530,0.000416,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0090,True,True,True,True,labeled:TRUE,701.61,3227,595,0.000239,"REASONING: The source equation is bare (single variable on the left) and can be rewritten as x = x * T where T = y * ((z * z) * w) does not contain x. By rule 2.6 (left projection), this forces the la"
+hard3_0091,False,False,True,True,labeled:FALSE,744.48,3227,1889,0.000485,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0092,False,False,True,True,labeled:FALSE,766.98,3225,1426,0.000397,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0093,False,False,True,True,labeled:FALSE,784.90,3226,752,0.000269,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0094,False,False,True,True,labeled:FALSE,815.73,3226,1573,0.000425,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0095,False,False,True,True,labeled:FALSE,827.81,3226,697,0.000258,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0096,False,True,False,True,labeled:TRUE,857.68,3223,1016,0.000319,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=1112, xCount=2 → matches motif C10 (rhsVars >= 4 AND Lx=FALSE) in step 2.8, which yields a TRUE verdict.\n\nVERDICT: TRUE\n"
+hard3_0097,False,True,False,True,labeled:TRUE,871.66,3226,565,0.000233,"REASONING: The source equation is bare (left side is a single variable x). Analyzing the right‑hand side P = y * (z * ((x * w) * x)) we obtain the feature vector  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop="
+hard3_0098,False,False,True,True,labeled:FALSE,947.94,3227,1830,0.000474,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0099,False,False,True,True,labeled:FALSE,962.31,3226,2296,0.000562,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0100,False,False,True,True,labeled:FALSE,965.11,3226,823,0.000282,"VERDICT: FALSE\nREASONING: COUNTEREXAMPLE\nMagma with two elements {0,1} and operation * defined by the table:\n* | 0 1\n0 | 0 0\n1 | 0 1\n\nAssignment: x=1, y=0, z=1, w=0.\n\nCompute Eq1:\nRHS = y * "
+hard3_0101,False,False,True,True,labeled:FALSE,1000.20,3227,1089,0.000333,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0102,False,True,False,True,labeled:TRUE,1033.14,3226,825,0.000283,"REASONING: The source equation is bare (single variable on the left). Computing the features of the right‑hand side \(P = y * (z * ((w * w) * x))\) gives:\nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, to"
+hard3_0103,False,False,True,True,labeled:FALSE,1065.30,3225,1650,0.000439,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0104,False,False,True,True,labeled:FALSE,1101.58,3226,1643,0.000438,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0105,False,False,True,True,labeled:FALSE,1133.45,3225,1757,0.000460,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0106,True,False,False,True,labeled:FALSE,1168.51,3224,1756,0.000459,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0107,True,True,True,True,labeled:TRUE,1179.04,3226,586,0.000237,"REASONING: The source equation is bare (left side is a single variable x) and can be rewritten as x = x * T with T = ((y*z)*(y*w)). T does not contain x, so by the left projection rule (2.6) the equat"
+hard3_0108,False,False,True,True,labeled:FALSE,1249.63,3226,1868,0.000481,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0109,True,True,True,True,labeled:TRUE,1255.68,3226,483,0.000218,"REASONING: The source equation is bare and can be renamed to the form x = x * T where T = ((y*z)*(w*w)) does not contain x. By rule 2.6 (left projection), this forces a * b = a for all elements of any"
+hard3_0110,False,False,True,True,labeled:FALSE,1317.31,3226,1334,0.000379,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0111,False,False,True,True,labeled:FALSE,1363.03,3225,1005,0.000317,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0112,False,False,True,True,labeled:FALSE,1449.77,3226,2237,0.000551,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0113,False,False,True,True,labeled:FALSE,1481.99,3226,1591,0.000428,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0114,True,False,False,True,labeled:FALSE,1543.55,3227,2218,0.000547,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0115,True,False,False,True,labeled:FALSE,1583.80,3227,1615,0.000433,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0116,False,False,True,True,labeled:FALSE,1613.82,3226,1130,0.000341,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0117,True,False,False,True,labeled:FALSE,36.10,3225,1887,0.000484,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0118,False,False,True,True,labeled:FALSE,53.21,3226,1543,0.000419,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0119,False,False,True,True,labeled:FALSE,87.68,3226,1928,0.000492,"REASONING: No TRUE route (steps 2.1‑2.12) applies to the given equations, and none of the FALSE syntactic exclusion rules (steps 3.0‑3.6) fire. No small‑finite witness (steps 4.1‑4.4) was found that m"
+hard3_0120,False,False,True,True,labeled:FALSE,126.08,3227,1236,0.000361,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0121,False,True,False,True,labeled:TRUE,154.68,3226,830,0.000284,"REASONING:  \nEq1 is bare (single variable on the left).  \nRHS P = y * ((z * w) * (x * x)).  \nFeatures:  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=2111, xCount=2.  \nMotif "
+hard3_0122,False,True,False,True,labeled:TRUE,197.41,3223,608,0.000241,"REASONING: Applied Step 2.8 contradiction motifs. For Eq1, the product side P = y * ((z*w)*(w*x)) has features rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=1112, xCount=1. Motif C"
+hard3_0123,False,False,True,True,labeled:FALSE,236.76,3222,1363,0.000385,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0124,True,False,False,True,labeled:FALSE,268.53,3227,1276,0.000368,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0125,False,True,False,True,labeled:TRUE,279.38,3226,685,0.000256,REASONING: The source equation is bare (left side is a single variable x). Normalizing the right‑hand side gives the product term  \nP = y * ((z*w)*(u*x)).  \n\nFeatures of P:  \n- rhsVars = 5 (variab
+hard3_0126,False,False,True,True,labeled:FALSE,308.54,3226,1215,0.000357,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0127,True,False,False,True,labeled:FALSE,343.14,3225,1447,0.000401,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0128,False,False,True,True,labeled:FALSE,370.61,3227,827,0.000283,REASONING: leftmost exclusion\nVERDICT: FALSE\nPROOF:
+hard3_0129,False,False,True,True,labeled:FALSE,400.49,3226,1433,0.000398,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0130,False,True,False,True,labeled:TRUE,414.25,3225,780,0.000274,"REASONING: The premise Eq1 is a bare equation (single variable on the left). Computing the features of the product side P = ((y * (x * x)) * z) gives rhsVars=3, Lx=FALSE, Rx=FALSE, xTop=left, topShape"
+hard3_0131,True,False,False,True,labeled:FALSE,451.35,3227,1529,0.000416,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0132,False,True,False,True,labeled:TRUE,468.28,3225,515,0.000224,"REASONING: Eq1 is a bare equation of the form x = x * T where T = ((y * (y * y)) * z). T does not contain x, so by the left projection rule (2.6) the equation forces a * b = a for all elements of any "
+hard3_0133,True,False,False,True,labeled:FALSE,517.05,3226,1730,0.000455,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0134,True,False,False,True,labeled:FALSE,552.97,3222,1903,0.000487,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0135,True,False,False,True,labeled:FALSE,579.41,3227,1769,0.000462,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0136,True,True,True,True,labeled:TRUE,585.27,3226,494,0.000220,"REASONING: The source equation is bare (single variable on the left) and can be rewritten as x = x * T where T = ((y * (z * y)) * w) does not contain x. By rule 2.6 (left projection), this forces the "
+hard3_0137,True,False,False,True,labeled:FALSE,630.13,3227,1472,0.000406,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0138,True,True,True,True,labeled:TRUE,652.79,3226,572,0.000234,REASONING: The source equation is bare (single variable on the left). It matches the left‑projection pattern x = x * T where the term T does not contain x (here T = ((y * (z * w)) * u)). By rule 2.6 t
+hard3_0139,True,False,False,True,labeled:FALSE,685.17,3223,1347,0.000382,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0140,True,False,False,True,labeled:FALSE,738.60,3226,1888,0.000485,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0141,False,False,True,True,labeled:FALSE,751.98,3225,1951,0.000496,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0142,True,False,False,True,labeled:FALSE,783.80,3224,1793,0.000466,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0143,False,False,True,True,labeled:FALSE,805.92,3226,1967,0.000500,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0144,True,False,False,True,labeled:FALSE,809.82,3227,823,0.000282,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0145,True,False,False,True,labeled:FALSE,853.06,3226,1762,0.000461,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0146,False,False,True,True,labeled:FALSE,875.82,3227,1736,0.000456,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0147,True,True,True,True,labeled:TRUE,885.34,3226,767,0.000272,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v-m, rhsTotals=2111, xCount=1 → matches contradiction motif C10 (rhsVars ≥ 4 AND Lx=FALSE).\n\nVERDICT: TRUE\nPROOF: By rule 2.8 (contradi"
+hard3_0148,True,True,True,True,labeled:TRUE,905.82,3227,867,0.000291,"REASONING: Applied STEP 2.8 (bare‑source contradiction motifs).  \nFor Eq1, the product side P = y * ((z * (w * u)) * x) has  \nrhsVars=5, Lx=FALSE, Rx=TRUE, xTop=right, topShape=v‑m, rhsTotals=11111,"
+hard3_0149,False,False,True,True,labeled:FALSE,942.94,3226,1172,0.000348,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0150,False,False,True,True,labeled:FALSE,985.31,3226,1638,0.000437,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0151,False,False,True,True,labeled:FALSE,998.84,3226,821,0.000282,REASONING: parity exclusion\nVERDICT: FALSE
+hard3_0152,False,True,False,True,labeled:TRUE,1026.35,3226,507,0.000222,REASONING: Eq1 is a bare equation of the form x = x * T where T = (((y * y) * y) * y) does not contain x. By rule 2.6 (left projection) this forces the projection law a * b = a in all magmas satisfyin
+hard3_0153,False,False,True,True,labeled:FALSE,1080.35,3226,1540,0.000418,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0154,True,False,False,True,labeled:FALSE,1111.69,3225,2053,0.000516,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0155,True,False,False,True,labeled:FALSE,1133.07,3225,1676,0.000444,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0156,True,False,False,True,labeled:FALSE,1174.97,3227,2288,0.000561,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0157,True,False,False,True,labeled:FALSE,1209.36,3226,1700,0.000449,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0158,True,False,False,True,labeled:FALSE,1239.89,3226,1528,0.000416,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0159,False,False,True,True,labeled:FALSE,1294.49,3226,1680,0.000445,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0160,True,False,False,True,labeled:FALSE,1335.29,3227,1726,0.000454,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0161,False,False,True,True,labeled:FALSE,1402.61,3228,2096,0.000524,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0162,True,False,False,True,labeled:FALSE,1480.65,3226,2472,0.000595,"VERDICT: FALSE\nREASONING: COUNTEREXAMPLE\nMagma: set {0,1} with operation defined by a * b = f(a) where f swaps the elements (f(0)=1, f(1)=0). This operation ignores the right argument.\n\nCheck Eq1:"
+hard3_0163,False,False,True,True,labeled:FALSE,1500.75,3227,1679,0.000445,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0164,False,False,True,True,labeled:FALSE,1541.57,3227,1733,0.000455,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0165,False,False,True,True,labeled:FALSE,1586.16,3224,1322,0.000377,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0166,False,True,False,True,labeled:TRUE,1600.74,3224,579,0.000236,"REASONING: The source equation is bare (single variable on the left). Computing the features of the product side P = (y*x)*(x*(z*w)) gives rhsVars=4, Lx=FALSE, Rx=FALSE, which matches contradiction mo"
+hard3_0167,False,True,False,True,labeled:TRUE,17.03,3226,706,0.000260,"REASONING: The source equation is bare (left side is a single variable). Computing the features of the right‑hand side P = (y*x)*(x*(z*w)) gives rhsVars=4, Lx=FALSE, Rx=FALSE. This satisfies contradic"
+hard3_0168,True,False,False,True,labeled:FALSE,78.13,3223,2084,0.000522,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0169,False,False,True,True,labeled:FALSE,88.86,3227,1704,0.000450,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0170,False,True,False,True,labeled:TRUE,100.61,3227,711,0.000261,"REASONING: The source equation is bare (single variable on the left). Normalizing the right‑hand side P = (y*x)*(z*(w*x)) gives the feature vector  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=both, topShape="
+hard3_0171,False,True,False,True,labeled:TRUE,161.74,3228,1011,0.000318,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=both, topShape=m-m, rhsTotals=1112, xCount=2. This matches contradiction motif C10 (rhsVars ≥ 4 AND Lx=FALSE).\n\nVERDICT: TRUE\nPROOF: By rule 2.8 (contr"
+hard3_0172,False,False,True,True,labeled:FALSE,218.65,3227,1580,0.000426,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0173,False,False,True,True,labeled:FALSE,216.47,3227,567,0.000234,REASONING: spine isolation\nVERDICT: FALSE
+hard3_0174,False,False,True,True,labeled:FALSE,273.95,3227,1381,0.000388,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0175,False,False,True,True,labeled:FALSE,291.66,3226,939,0.000304,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0176,True,False,False,True,labeled:FALSE,318.50,3227,1807,0.000469,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0177,False,False,True,True,labeled:FALSE,344.94,3227,1530,0.000417,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0178,False,False,True,True,labeled:FALSE,400.40,3227,2114,0.000528,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0179,False,False,True,True,labeled:FALSE,400.91,3227,1840,0.000475,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0180,False,False,True,True,labeled:FALSE,444.00,3227,2270,0.000557,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0181,False,True,False,True,labeled:TRUE,442.02,3227,907,0.000298,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-m, rhsTotals=1112, xCount=2 → matches contradiction motif C10 (rhsVars ≥ 4 AND Lx=FALSE).\n\nVERDICT: TRUE\nPROOF: By contradiction moti"
+hard3_0182,False,True,False,True,labeled:TRUE,478.51,3227,637,0.000247,"REASONING: The source equation is bare (single variable on the left). Computing the features of the right‑hand side \(P = (y*z)*(w*(w*x))\) gives  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape="
+hard3_0183,True,False,False,True,labeled:FALSE,519.83,3228,1490,0.000409,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0184,False,False,True,True,labeled:FALSE,551.87,3227,1854,0.000478,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0185,False,False,True,True,labeled:FALSE,573.30,3226,1410,0.000394,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0186,False,False,True,True,labeled:FALSE,607.06,3224,1686,0.000446,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0187,True,True,True,True,labeled:TRUE,615.77,3228,498,0.000221,"REASONING: The source equation is bare with left side x and right side (x*y)*T where T = ((z*y)*y). T does not contain x, so by rule 2.6 (left projection) the equation forces a*b = a for all a,b. Unde"
+hard3_0188,True,False,False,True,labeled:FALSE,665.32,3226,1551,0.000421,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0189,False,False,True,True,labeled:FALSE,689.18,3228,1440,0.000399,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0190,False,False,True,True,labeled:FALSE,723.43,3227,1196,0.000353,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0191,False,False,True,True,labeled:FALSE,754.34,3226,1962,0.000499,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0192,True,False,False,True,labeled:FALSE,775.83,3227,1617,0.000433,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0193,True,False,False,True,labeled:FALSE,808.19,3227,1970,0.000500,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0194,True,False,False,True,labeled:FALSE,818.67,3228,1351,0.000383,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0195,False,False,True,True,labeled:FALSE,853.28,3226,1963,0.000499,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0196,True,True,True,True,labeled:TRUE,861.49,3227,667,0.000253,"REASONING: The source equation is bare (single variable on the left). For the product side P = (y*z)*((w*x)*x) we compute the required features:\nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-m"
+hard3_0197,True,True,True,True,labeled:TRUE,885.01,3226,827,0.000283,"REASONING: Applied STEP 2.8 (bare‑source contradiction motifs). For Eq1, the product side P = (y*z)*((w*x)*x) has rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m‑m, rhsTotals=2111, xCount=2. This"
+hard3_0198,True,True,True,True,labeled:TRUE,903.33,3227,482,0.000217,"REASONING: The equation is bare with product side P = (y*z)*((w*u)*x). Features: rhsVars=5, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-m, rhsTotals=11111, xCount=1. Motif C10 (rhsVars ≥ 4 AND Lx=FALSE)"
+hard3_0199,True,False,False,True,labeled:FALSE,952.11,3227,1808,0.000469,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0200,False,False,True,True,labeled:FALSE,978.04,3228,1158,0.000346,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0201,False,False,True,True,labeled:FALSE,1014.14,3227,1869,0.000481,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0202,True,False,False,True,labeled:FALSE,1019.03,3226,1504,0.000412,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0203,True,False,False,True,labeled:FALSE,1051.14,3226,1142,0.000343,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0204,True,False,False,True,labeled:FALSE,1115.55,3227,1914,0.000490,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0205,True,False,False,True,labeled:FALSE,1123.26,3226,1288,0.000371,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0206,False,False,True,True,labeled:FALSE,1176.76,3226,1983,0.000503,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0207,True,False,False,True,labeled:FALSE,1218.92,3226,1903,0.000487,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0208,True,False,False,True,labeled:FALSE,1243.00,3226,1208,0.000355,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0209,True,False,False,True,labeled:FALSE,1281.70,3228,1213,0.000356,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0210,True,False,False,True,labeled:FALSE,1331.19,3228,1431,0.000398,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0211,False,False,True,True,labeled:FALSE,1386.91,3227,1836,0.000475,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0212,True,True,True,True,labeled:TRUE,1416.29,3224,868,0.000291,"REASONING: The source equation is bare (left side is a single variable x). Computing the features of the right‑hand side P = (y * (z * z)) * (w * x) gives  \nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, "
+hard3_0213,True,True,True,True,labeled:TRUE,1475.31,3226,862,0.000290,"REASONING: The premise is a bare source (left side is a single variable x). Computing the features of the product side P = (y * (z * z)) * (w * x) gives rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topSh"
+hard3_0214,True,False,False,True,labeled:FALSE,1543.95,3227,1479,0.000407,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0215,False,False,True,True,labeled:FALSE,1578.57,3227,1197,0.000353,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0216,False,True,False,True,labeled:TRUE,1675.91,3227,1831,0.000474,"REASONING: The identity x = ((x * x) * y) * (z * z) forces the operation * to be a left projection (a * b = a) in any magma. Indeed, substituting any elements a,b,c for x,y,z gives a = ((a*a)*b)*(c*c)"
+hard3_0217,False,False,True,True,labeled:FALSE,42.45,3224,2038,0.000513,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0218,False,True,False,True,labeled:TRUE,84.97,3227,2398,0.000581,"REASONING: The identity x = ((x*y)*x)*(z*w) forces the operation to be left‑absorbing: for any a,b we have a*b = a. Indeed, choosing x:=a, y:=b, and arbitrary z,w shows that the factor (z*w) cannot af"
+hard3_0219,False,False,True,True,labeled:FALSE,73.91,3227,1260,0.000365,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0220,False,False,True,True,labeled:FALSE,148.98,3228,1821,0.000472,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0221,True,False,False,True,labeled:FALSE,183.00,3227,1354,0.000383,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0222,False,False,True,True,labeled:FALSE,191.30,3227,1038,0.000323,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0223,False,False,True,True,labeled:FALSE,258.21,3228,1696,0.000448,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0224,False,False,True,True,labeled:FALSE,264.38,3228,1376,0.000387,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0225,False,False,True,True,labeled:FALSE,298.64,3227,1653,0.000440,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0226,False,False,True,True,labeled:FALSE,322.72,3228,2053,0.000516,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0227,False,False,True,True,labeled:FALSE,339.16,3227,1188,0.000352,VERDICT: FALSE\nREASONING: spine isolation\n\nThe premise of the spine isolation rule is satisfied:\n- Both equations are bare (single variable on the left).\n- In each right‑hand side the variable x 
+hard3_0228,False,False,True,True,labeled:FALSE,358.87,3224,1021,0.000320,VERDICT: FALSE\nREASONING: spine isolation
+hard3_0229,False,False,True,True,labeled:FALSE,393.49,3228,636,0.000247,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0230,True,False,False,True,labeled:FALSE,420.81,3226,1146,0.000344,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0231,True,False,False,True,labeled:FALSE,453.33,3227,1231,0.000360,REASONING: parity exclusion\nVERDICT: FALSE\nPROOF:
+hard3_0232,True,False,False,True,labeled:FALSE,472.34,3226,1362,0.000385,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0233,True,False,False,True,labeled:FALSE,505.67,3227,1395,0.000391,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0234,False,True,False,True,labeled:TRUE,551.28,3224,2004,0.000506,"REASONING: The source equation is bare (single variable on the left). The right‑hand side contains the left variable x in both of its top‑level factors, so neither left‑ nor right‑projection rules app"
+hard3_0235,False,False,True,True,labeled:FALSE,574.21,3227,1156,0.000345,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0236,False,False,True,True,labeled:FALSE,611.31,3228,1616,0.000433,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0237,False,False,True,True,labeled:FALSE,627.83,3227,1324,0.000377,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0238,True,False,False,True,labeled:FALSE,672.23,3228,2318,0.000566,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0239,True,True,True,True,labeled:TRUE,680.91,3228,466,0.000214,"REASONING: The source equation is bare (single variable on the left). For the product side P = ((y*y)*z)*(w*x) we compute the features:\nrhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-m, rhsTota"
+hard3_0240,True,False,False,True,labeled:FALSE,708.58,3228,1412,0.000394,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0241,False,True,False,True,labeled:TRUE,739.87,3228,766,0.000271,"REASONING: The source equation is bare (single variable on the left). Computing features of the right‑hand side P = ((y*z)*x)*(x*w) gives rhsVars=4, Lx=FALSE, Rx=FALSE. This matches contradiction moti"
+hard3_0242,False,True,False,True,labeled:TRUE,763.22,3228,518,0.000224,"REASONING: Eq1 is a bare equation with product side P = ((y*z)*x)*(x*w). Features: rhsVars=4, Lx=FALSE, Rx=FALSE, xTop=both, topShape=m-m, rhsTotals=2111, xCount=2. This matches contradiction motif C1"
+hard3_0243,True,True,True,True,labeled:TRUE,783.41,3228,862,0.000290,"REASONING: The source equation is bare (left side is the single variable x). For the right‑hand side P = ((y*z)*x)*(w*x) we compute the required features:\n\n- rhsVars = 4 (variables x, y, z, w)\n- Lx"
+hard3_0244,True,True,True,True,labeled:TRUE,798.22,3226,768,0.000272,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-m, rhsTotals=2111, xCount=1 → matches motif C10 (rhsVars ≥ 4 AND Lx=FALSE) → TRUE route.\n\nVERDICT: TRUE\nPROOF: By contradiction motif"
+hard3_0245,True,False,False,True,labeled:FALSE,837.93,3226,936,0.000304,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0246,True,False,False,True,labeled:FALSE,879.26,3225,1373,0.000387,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0247,True,False,False,True,labeled:FALSE,891.20,3226,1880,0.000483,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0248,False,False,True,True,labeled:FALSE,931.60,3226,1706,0.000450,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0249,True,False,False,True,labeled:FALSE,941.26,3227,1588,0.000428,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0250,True,False,False,True,labeled:FALSE,980.41,3225,1976,0.000501,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0251,True,False,False,True,labeled:FALSE,995.94,3227,1728,0.000454,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0252,True,False,False,True,labeled:FALSE,1034.93,3227,1797,0.000467,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0253,False,False,True,True,labeled:FALSE,1074.28,3226,2102,0.000525,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0254,False,False,True,True,labeled:FALSE,1076.90,3226,1352,0.000383,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0255,True,True,True,True,labeled:TRUE,1125.52,3226,662,0.000252,"REASONING: The source equation is bare (one side is a single variable). It matches the right‑projection pattern x = T * x with T = y * (z * (y * w)), which does not contain x. Hence the equation force"
+hard3_0256,True,True,True,True,labeled:TRUE,1145.13,3226,537,0.000228,REASONING: The source equation is bare with the form x = T * x where T = y * (z * (z * w)) does not contain x. By rule 2.7 (right projection) this forces a * b = b for all elements in any magma satisf
+hard3_0257,True,True,True,True,labeled:TRUE,1192.24,3226,667,0.000253,"REASONING: Eq1 is a bare equation of the form x = T * x where T = y * (z * (w * w)) does not contain x. By rule 2.7 (right projection), this forces a * b = b for all elements of any magma. Applying th"
+hard3_0258,True,False,False,True,labeled:FALSE,1256.47,3226,1604,0.000431,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0259,True,False,False,True,labeled:FALSE,1292.48,3226,1523,0.000415,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0260,True,False,False,True,labeled:FALSE,1340.27,3226,1716,0.000452,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0261,True,False,False,True,labeled:FALSE,1367.73,3227,1843,0.000476,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0262,True,False,False,True,labeled:FALSE,1397.54,3225,1198,0.000353,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0263,False,False,True,True,labeled:FALSE,1460.14,3226,1423,0.000396,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0264,False,False,True,True,labeled:FALSE,1547.11,3225,1627,0.000435,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0265,True,False,False,True,labeled:FALSE,1567.13,3226,1494,0.000410,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0266,True,False,False,True,labeled:FALSE,1598.81,3227,1414,0.000395,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0267,True,True,True,True,labeled:TRUE,17.75,3226,1004,0.000317,"REASONING: Applied STEP 2.8 (bare‑source contradiction motifs). For Eq1, the product side P = (y * ((x * z) * w)) * x has features rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m‑v, rhsTotals=111"
+hard3_0268,True,True,True,True,labeled:TRUE,57.65,3226,1042,0.000324,"REASONING: The source equation is bare (single variable on the left). Normalizing gives the product side P = (y * ((x * z) * w)) * x. Computing the required features:\n- rhsVars = 4 (variables x, y, z"
+hard3_0269,True,True,True,True,labeled:TRUE,85.19,3227,690,0.000257,REASONING: The premise of rule 2.7 (right projection) is satisfied. Eq1 is bare (x = T * x) with T = y * ((y * z) * w) which does not contain x. Hence Eq1 forces the right projection law a * b = b for
+hard3_0270,False,False,True,True,labeled:FALSE,135.24,3226,2017,0.000509,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0271,True,False,False,True,labeled:FALSE,197.06,3227,1656,0.000440,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0272,True,True,True,True,labeled:TRUE,183.12,3226,640,0.000247,"REASONING: The source equation is bare (left side is a single variable x). Analyzing the product side P = (y * ((z * x) * w)) we obtain the feature vector:\nrhsVars=4, Lx=FALSE, Rx=FALSE, xTop=right, "
+hard3_0273,True,True,True,True,labeled:TRUE,238.13,3226,692,0.000257,"REASONING: The source equation is bare (one side is a single variable). It can be rewritten as x = T * x where T = y * ((z * w) * w) does not contain x. By the right‑projection rule (2.7), the equatio"
+hard3_0274,False,False,True,True,labeled:FALSE,263.98,3226,1395,0.000391,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0275,False,False,True,True,labeled:FALSE,286.19,3225,1134,0.000341,REASONING: parity exclusion\nVERDICT: FALSE
+hard3_0276,False,False,True,True,labeled:FALSE,319.10,3225,1654,0.000440,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0277,False,False,True,True,labeled:FALSE,319.83,3225,1110,0.000337,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0278,True,False,False,True,labeled:FALSE,361.53,3222,1362,0.000384,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0279,True,False,False,True,labeled:FALSE,389.34,3225,1715,0.000452,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0280,False,False,True,True,labeled:FALSE,418.85,3225,972,0.000310,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0281,False,True,False,True,labeled:TRUE,476.66,3226,2262,0.000556,"REASONING: The identity x = ((x*y)*(y*z))*w forces a left‑projection law.  \nIndeed, setting w arbitrarily gives ((x*y)*(y*z))*w = x, so for every a,d we have a*d = a. Hence the operation satisfies a*"
+hard3_0282,False,False,True,True,labeled:FALSE,491.71,3227,1100,0.000335,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0283,True,False,False,True,labeled:FALSE,519.31,3227,1603,0.000430,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0284,True,False,False,True,labeled:FALSE,541.85,3225,1762,0.000461,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0285,True,False,False,True,labeled:FALSE,584.72,3225,1643,0.000438,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0286,False,False,True,True,labeled:FALSE,611.82,3225,1613,0.000432,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0287,False,False,True,True,labeled:FALSE,648.66,3226,1878,0.000483,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0288,True,False,False,True,labeled:FALSE,663.48,3226,1484,0.000408,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0289,False,False,True,True,labeled:FALSE,696.33,3226,1934,0.000493,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0290,True,False,False,True,labeled:FALSE,706.83,3223,1319,0.000376,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0291,True,True,True,True,labeled:TRUE,721.68,3226,713,0.000261,"REASONING: The source equation is bare (single variable on the left). Computing the features of the product side P = ((y*x)*(z*w)) gives rhsVars=4, Lx=FALSE, Rx=FALSE. This matches contradiction motif"
+hard3_0292,True,True,True,True,labeled:TRUE,771.77,3226,626,0.000245,"REASONING: The source equation is bare (single variable on the left). It can be rewritten as x = T * x where T = ((y*y)*(z*y)) does not contain x. By rule 2.7 (right projection), this forces a*b = b f"
+hard3_0293,False,False,True,True,labeled:FALSE,810.44,3226,1839,0.000475,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0294,True,False,False,True,labeled:FALSE,837.09,3226,2007,0.000507,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0295,True,True,True,True,labeled:TRUE,827.90,3227,443,0.000210,REASONING: The source equation is bare with the form x = T * x where T = ((y*z)*(z*w)) does not contain x. This matches RULE 2.7 (right projection). Hence any magma satisfying the source must satisfy 
+hard3_0296,True,True,True,True,labeled:TRUE,860.71,3226,637,0.000247,"REASONING: Eq1 is a bare equation with the variable x on the left and a product on the right of the form T * x where T = ((y*z)*(z*w)). The term T does not contain x, satisfying the condition for the "
+hard3_0297,True,True,True,True,labeled:TRUE,882.45,3227,620,0.000244,"REASONING: The source equation is bare (left side is a single variable x). It matches the right‑projection pattern x = T * x with T = ((y*z)*(w*z)), which does not contain x. Hence the source forces t"
+hard3_0298,True,True,True,True,labeled:TRUE,905.76,3226,557,0.000232,REASONING: The source equation is bare (single variable on the left). It matches the right‑projection pattern x = T * x where T = ((y*z)*(w*z)) does not contain x. By rule 2.7 this forces a*b = b for 
+hard3_0299,True,True,True,True,labeled:TRUE,917.46,3226,553,0.000231,"REASONING: Eq1 is bare (single variable on left). It matches the right‑projection pattern x = T * x where T = ((y*z)*(w*u)) does not contain x. By rule 2.7 this forces a*b = b for all a,b. Under this "
+hard3_0300,False,False,True,True,labeled:FALSE,980.41,3226,1899,0.000487,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0301,False,False,True,True,labeled:FALSE,1016.52,3223,1744,0.000457,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0302,False,True,False,True,labeled:TRUE,1044.32,3226,2149,0.000534,REASONING: The identity x = ((x*(x*y))*x)*x forces the magma to satisfy the left‑projection law a*b = a (by repeatedly substituting the identity into itself). Under the left‑projection law every term 
+hard3_0303,False,False,True,True,labeled:FALSE,1059.15,3226,1546,0.000420,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0304,False,False,True,True,labeled:FALSE,1092.18,3227,1515,0.000414,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0305,False,False,True,True,labeled:FALSE,1143.06,3226,1890,0.000485,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0306,False,False,True,True,labeled:FALSE,1190.63,3226,1865,0.000480,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0307,True,False,False,True,labeled:FALSE,1208.82,3226,1286,0.000370,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0308,True,True,True,True,labeled:TRUE,1270.84,3227,2345,0.000571,REASONING: The premise equation is bare (single variable on the left). It matches the left‑projection pattern after renaming:  \nx = ((x * (y * z)) * x) * z can be rewritten (by associativity of the t
+hard3_0309,False,False,True,True,labeled:FALSE,1310.83,3225,1811,0.000470,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0310,False,False,True,True,labeled:FALSE,1332.14,3220,1225,0.000358,REASONING: spine isolation\nVERDICT: FALSE\nPROOF:
+hard3_0311,False,False,True,True,labeled:FALSE,1393.52,3225,1871,0.000481,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0312,False,False,True,True,labeled:FALSE,1448.53,3223,1772,0.000462,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0313,True,False,False,True,labeled:FALSE,1509.56,3226,1641,0.000438,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0314,True,False,False,True,labeled:FALSE,1551.69,3227,1769,0.000462,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0315,True,False,False,True,labeled:FALSE,1584.20,3226,2099,0.000525,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0316,True,False,False,True,labeled:FALSE,1622.63,3225,1449,0.000401,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0317,True,False,False,True,labeled:FALSE,34.74,3226,1977,0.000501,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0318,True,True,True,True,labeled:TRUE,56.56,3226,680,0.000255,"REASONING: The source equation is bare (x = …). Computing features of the product side P = ((y * (x * z)) * w) gives rhsVars=4, Lx=FALSE, Rx=FALSE, satisfying motif C1 of the contradiction motif rule,"
+hard3_0319,True,True,True,True,labeled:TRUE,95.04,3226,1005,0.000317,"REASONING: rhsVars=4, Lx=FALSE, Rx=TRUE, xTop=right, topShape=m-v, rhsTotals=1112, xCount=2 → matches motif C10 (rhsVars >= 4 AND Lx=FALSE) → contradiction motif yields truth.\n\nVERDICT: TRUE\nPROOF:"
+hard3_0320,False,True,False,True,labeled:TRUE,185.86,3225,2786,0.000655,REASONING: The source equation is bare (single variable on the left). Its right‑hand side is a product in which the distinguished variable x occurs only as the rightmost leaf of the topmost multiplica
+hard3_0321,True,False,False,True,labeled:FALSE,171.98,3226,751,0.000269,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0322,False,True,False,True,labeled:TRUE,204.93,3225,792,0.000276,REASONING: Eq1 is a bare equation with the variable x on the left and a product on the right: x = ((y * (z * y)) * z) * x. This matches the right‑projection pattern x = T * x where T does not contain 
+hard3_0323,True,True,True,True,labeled:TRUE,241.12,3226,701,0.000259,REASONING: Eq1 is bare with left side a single variable x and right side of the form T * x where T = ((y * (z * w)) * z) does not contain x. This matches RULE 2.7 (right projection). Hence Eq1 forces 
+hard3_0324,True,True,True,True,labeled:TRUE,264.17,3226,672,0.000253,REASONING: The source equation is bare (left side is a single variable x). It matches the right‑projection pattern x = T * x where T = ((y * (z * w)) * z) does not contain x. By rule 2.7 this forces a
+hard3_0325,True,True,True,True,labeled:TRUE,290.73,3226,639,0.000247,REASONING: The premise Eq1 is a bare equation of the form x = T * x where the term T does not contain x. This matches the right‑projection rule (Step 2.7). The rule forces the identity a * b = b for a
+hard3_0326,True,True,True,True,labeled:TRUE,310.14,3226,782,0.000274,"REASONING: The source equation is bare (left side is a single variable x). It can be rewritten as x = T * x where T = ((y * (z * w)) * w) does not contain x. By rule 2.7 (right projection), this force"
+hard3_0327,False,False,True,True,labeled:FALSE,357.33,3227,2211,0.000546,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0328,False,False,True,True,labeled:FALSE,382.46,3224,1475,0.000406,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0329,True,False,False,True,labeled:FALSE,413.50,3226,1400,0.000392,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0330,False,False,True,True,labeled:FALSE,446.81,3226,2035,0.000512,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0331,True,False,False,True,labeled:FALSE,489.31,3226,2495,0.000600,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0332,False,False,True,True,labeled:FALSE,493.93,3226,989,0.000314,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0333,True,False,False,True,labeled:FALSE,519.50,3226,1211,0.000356,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0334,True,False,False,True,labeled:FALSE,567.64,3223,2014,0.000508,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0335,True,False,False,True,labeled:FALSE,600.39,3227,1834,0.000474,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0336,True,True,True,True,labeled:TRUE,597.52,3223,587,0.000237,"REASONING: Eq1 is a bare equation of the form x = T * x where T = (((y*y)*z)*w) does not contain x. By rule 2.7 (right projection), this forces the identity a * b = b for all elements of any magma. Un"
+hard3_0337,True,True,True,True,labeled:TRUE,622.06,3226,614,0.000242,REASONING: The source equation is bare (single variable on the left). It matches the right‑projection pattern x = T * x where T = ((y*y)*z)*w does not contain x. Hence the equation forces a*b = b for 
+hard3_0338,True,True,True,True,labeled:TRUE,656.67,3226,721,0.000263,"REASONING: The premise Eq1 is a bare equation of the form x = T * x where T = ((y*y)*z)*w does not contain x. By rule 2.7 (right projection), this forces the identity a * b = b for all elements of any"
+hard3_0339,False,True,False,True,labeled:TRUE,713.37,3226,2236,0.000551,"REASONING: Using Eq1 we obtain the law x = (u*x)*x for all variables u,x. This forces a right‑projection behaviour: for any term A, (A*x)*x = x. Applying this to the term A = (y*z)*(y*w) gives (( (y*z"
+hard3_0340,True,True,True,True,labeled:TRUE,709.52,3223,377,0.000197,"REASONING: The source equation is bare with the form x = T * x where T = (((y*z)*w)*u) does not contain x. By rule 2.7 (right projection), this forces a*b = b for all elements. Under this projection, "
+hard3_0341,True,True,True,True,labeled:TRUE,745.83,3226,526,0.000226,"REASONING: The source equation is bare: x = T * x with T = (((y*z)*w)*u) which does not contain x. By rule 2.7 (Right projection), this forces the identity a*b = b for all elements of any magma. Apply"
+hard3_0342,False,False,True,True,labeled:FALSE,773.73,3225,748,0.000268,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0343,False,False,True,True,labeled:FALSE,793.67,3224,615,0.000243,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0344,False,False,True,True,labeled:FALSE,818.56,3225,563,0.000233,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0345,False,True,False,True,labeled:TRUE,854.95,3225,1529,0.000416,"REASONING: The given equation forces the binary operation to be constant (all products yield the same element), which collapses any magma to a singleton. In a singleton magma both sides of the target "
+hard3_0346,False,False,True,True,labeled:FALSE,874.88,3225,1231,0.000360,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0347,False,False,True,True,labeled:FALSE,892.60,3225,977,0.000311,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0348,False,False,True,True,labeled:FALSE,908.63,3225,585,0.000237,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0349,False,False,True,True,labeled:FALSE,942.79,3225,891,0.000295,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0350,False,False,True,True,labeled:FALSE,967.05,3225,413,0.000204,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0351,False,False,True,True,labeled:FALSE,1007.46,3224,1231,0.000360,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0352,True,True,True,True,labeled:TRUE,1030.87,3224,629,0.000245,REASONING: Eq1 can be renamed to the form x*y = T where T is a product and the variable y does not appear in T (T = x*(z*(x*w))). This matches the “missing-variable absorption” rule (2.12). Since y is
+hard3_0353,True,False,False,True,labeled:FALSE,1063.56,3225,780,0.000274,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0354,True,False,False,True,labeled:FALSE,1090.79,3221,579,0.000236,REASONING: missing-variable absorption\nVERDICT: FALSE
+hard3_0355,True,True,True,True,labeled:TRUE,1120.59,3224,340,0.000190,REASONING: Eq1 can be renamed to the form x = T where the variable x does not appear in the term T (here T = y * (y * (z * z)) contains only y and z). This matches the “singleton collapse” rule: such 
+hard3_0356,False,False,True,True,labeled:FALSE,1169.46,3224,1056,0.000326,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0357,False,False,True,True,labeled:FALSE,1201.57,3225,903,0.000297,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0358,False,False,True,True,labeled:FALSE,1247.45,3225,1171,0.000348,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0359,False,False,True,True,labeled:FALSE,1276.36,3225,646,0.000249,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0360,False,False,True,True,labeled:FALSE,1331.40,3221,802,0.000278,REASONING: missing-variable absorption\nVERDICT: FALSE
+hard3_0361,True,False,False,True,labeled:FALSE,1376.92,3224,1205,0.000355,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0362,False,False,True,True,labeled:FALSE,1431.39,3224,1059,0.000327,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0363,False,False,True,True,labeled:FALSE,1503.73,3224,1105,0.000336,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0364,True,False,False,True,labeled:FALSE,1538.56,3225,997,0.000315,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0365,True,True,True,True,labeled:TRUE,1583.83,3221,623,0.000244,"REASONING: Eq1 can be renamed to the form x * y = x * T where T = (z * z) * x. The variable y does not appear in T, satisfying the “missing‑variable absorption” condition (Rule 2.12). Hence Eq1 forces"
+hard3_0366,True,True,True,True,labeled:TRUE,1616.88,3224,863,0.000290,REASONING: Missing-variable absorption (right projection) applies because Eq1 can be renamed to x*y = g(y) where x does not appear in the right‑hand side. Reducing both sides of Eq2 using the right‑pr
+hard3_0367,True,True,True,True,labeled:TRUE,42.72,3224,1379,0.000388,"REASONING: The given premise x * y = z * ((z * w) * y) forces the right‑projection law a * b = b in every magma. Substituting this law into the target equation reduces both sides to y, so the target h"
+hard3_0368,False,False,True,True,labeled:FALSE,53.40,3225,643,0.000248,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0369,False,False,True,True,labeled:FALSE,120.20,3226,1670,0.000443,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0370,False,False,True,True,labeled:FALSE,151.97,3225,1455,0.000402,VERDICT: FALSE\nREASONING: default false fallback
+hard3_0371,False,False,True,True,labeled:FALSE,167.29,3226,466,0.000214,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0372,False,True,False,True,labeled:TRUE,216.59,3226,1228,0.000359,"REASONING: The premise Eq1 is x*y = (x*y)*(z*y). Let p = x*y and q = z*y. Then Eq1 states p = p*q for all choices of p and q (since x,y,z are arbitrary). Hence the law p*q = p holds universally in any"
+hard3_0373,False,False,True,True,labeled:FALSE,248.25,3225,726,0.000264,REASONING: leftmost-variable exclusion\nVERDICT: FALSE\nPROOF:
+hard3_0374,True,True,True,True,labeled:TRUE,268.78,3222,557,0.000231,"REASONING: missing-variable absorption (y absent in RHS of Eq1) allows left projection reduction, making both sides of Eq2 reduce to the same variable.\n\nVERDICT: TRUE\nPROOF: Since Eq1 is x*y = (x*z"
+hard3_0375,True,False,False,True,labeled:FALSE,292.01,3225,875,0.000292,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0376,True,False,False,True,labeled:FALSE,320.60,3226,899,0.000297,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0377,False,True,False,True,labeled:TRUE,359.81,3222,2249,0.000553,REASONING: The identity x * y = (z * x) * (w * y) forces the binary operation to be a right‑projection (a * b = b) possibly composed with an idempotent unary map on the right argument. In any such mag
+hard3_0378,True,True,True,True,labeled:TRUE,371.30,3226,735,0.000265,REASONING: The premise of rule 2.12 (Missing-variable absorption) is satisfied.  \nEq1 can be renamed to the form \(x*y = T\) where \(T = (z*y)*(z*y)\) is a product term.  \nThe variable \(x\) does **
+hard3_0379,True,True,True,True,labeled:TRUE,402.18,3226,752,0.000269,REASONING: missing-variable absorption (right projection) applies because Eq1 can be renamed to x*y = T where T = (z*w)*(u*y) does not contain x. Reducing Eq2 by the right‑projection rule (p*q → q) gi
+hard3_0380,True,False,False,True,labeled:FALSE,427.40,3225,759,0.000270,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0381,True,False,False,True,labeled:FALSE,479.24,3224,1778,0.000464,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0382,True,False,False,True,labeled:FALSE,500.43,3225,1245,0.000362,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0383,False,False,True,True,labeled:FALSE,537.13,3224,1955,0.000497,"REASONING: counterexample\nVERDICT: FALSE\nPROOF: \n\nMagma: set {0,1} with operation * defined as XOR (addition modulo 2):\n- 0*0 = 0, 0*1 = 1, 1*0 = 1, 1*1 = 0.\n\nAssignment: x = 0, y = 1, z = 1.\n"
+hard3_0384,True,False,False,True,labeled:FALSE,557.85,3225,1167,0.000348,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0385,True,False,False,True,labeled:FALSE,585.89,3221,955,0.000307,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0386,True,True,True,True,labeled:TRUE,607.24,3221,606,0.000241,"REASONING: Eq1 can be renamed to a * b = T where a and b are both x and T = ((y*z)*z)*z. The variables in T are {y,z}, which are disjoint from {a,b} (since a and b are x). Hence Eq1 forces the binary "
+hard3_0387,True,True,True,True,labeled:TRUE,626.60,3224,779,0.000274,REASONING: The premise of rule 2.12 (missing‑variable absorption) is satisfied because Eq1 can be written as x * y = T where T = ((x*z)*x)*w contains no occurrence of y. Hence Eq1 has the form x*y = f
+hard3_0388,True,False,False,True,labeled:FALSE,674.58,3221,1533,0.000417,"REASONING: counterexample\n\nConsider the magma with underlying set {0,1} and binary operation * defined as XOR (addition modulo 2):\n- 0*0 = 0, 0*1 = 1, 1*0 = 1, 1*1 = 0.\n\nTake the assignment x = 0"
+hard3_0389,True,True,True,True,labeled:TRUE,702.47,3225,910,0.000299,REASONING: The premise of rule 2.12 (missing‑variable absorption) is satisfied. Equation 1 can be renamed to the form x * y = T where the variable x does not occur in T (here T = ((z * y) * z) * y con
+hard3_0390,True,True,True,True,labeled:TRUE,738.09,3224,1373,0.000387,"REASONING: The premise Eq1 is x * y = ((z * y) * w) * y. The left side does not contain z or w, so the right side must be independent of z and w for all assignments. This forces the binary operation t"
+hard3_0391,False,False,True,True,labeled:FALSE,770.96,3226,1493,0.000409,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0392,False,False,True,True,labeled:FALSE,782.49,3226,1056,0.000326,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0393,True,False,False,True,labeled:FALSE,800.02,3226,856,0.000288,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0394,False,False,True,True,labeled:FALSE,819.46,3225,656,0.000250,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0395,True,False,False,True,labeled:FALSE,847.88,3226,1212,0.000356,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0396,True,False,False,True,labeled:FALSE,870.74,3226,796,0.000277,REASONING: default false fallback\nVERDICT: FALSE
+hard3_0397,True,False,False,True,labeled:FALSE,888.95,3226,892,0.000295,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0398,True,False,False,True,labeled:FALSE,912.56,3226,749,0.000268,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0399,True,False,False,True,labeled:FALSE,958.16,3226,1414,0.000394,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
+hard3_0400,True,False,False,True,labeled:FALSE,985.77,3226,1234,0.000360,REASONING: default false fallback\nVERDICT: FALSE\nPROOF:
