@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Contributor Network to share your cheatsheets",
-  "message_count": 3,
+  "message_count": 10,
   "messages": [
     {
       "id": 1361,
@@ -142,6 +142,291 @@
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
       "content_type": "text/html",
       "date": "2026-04-09T19:46:45.000Z"
+    },
+    {
+      "id": 1623,
+      "sender_id": 113,
+      "content": "<p>Is there an explanation for the F1 score column on the leaderboard? What is that exactly?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776363067,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-16T18:11:07.000Z"
+    },
+    {
+      "id": 1624,
+      "sender_id": 25,
+      "content": "<p><a href=\"https://en.wikipedia.org/wiki/F-score\">https://en.wikipedia.org/wiki/F-score</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1776371994,
+      "client": "ZulipElectron",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "love_you_gesture",
+          "emoji_code": "1f91f",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-16T20:39:54.000Z"
+    },
+    {
+      "id": 1636,
+      "sender_id": 236,
+      "content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<h2>Cross-Dataset Summary</h2>\n<table>\n<thead>\n<tr>\n<th>Dataset</th>\n<th>SAIR Acc</th>\n<th>Our Acc</th>\n<th>SAIR Macro F1</th>\n<th>Our Macro F1</th>\n<th>Mismatches</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>hard2</td>\n<td>46.5%</td>\n<td>48.5%</td>\n<td>0.428</td>\n<td>0.467</td>\n<td>56/200 (28%)</td>\n</tr>\n<tr>\n<td>hard3</td>\n<td>60.8%</td>\n<td>58.0%</td>\n<td>0.585</td>\n<td>0.573</td>\n<td>143/400 (36%)</td>\n</tr>\n</tbody>\n</table>\n<h2>Hard 2 (200 problems)</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>SAIR</th>\n<th>Ours (local)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Accuracy</strong></td>\n<td>46.5% (93/200)</td>\n<td>48.5% (97/200)</td>\n</tr>\n<tr>\n<td>TP</td>\n<td>21</td>\n<td>30</td>\n</tr>\n<tr>\n<td>FP</td>\n<td>28</td>\n<td>33</td>\n</tr>\n<tr>\n<td>FN</td>\n<td>79</td>\n<td>70</td>\n</tr>\n<tr>\n<td>TN</td>\n<td>72</td>\n<td>67</td>\n</tr>\n<tr>\n<td>TRUE Precision</td>\n<td>0.429</td>\n<td>0.476</td>\n</tr>\n<tr>\n<td>TRUE Recall</td>\n<td>0.210</td>\n<td>0.300</td>\n</tr>\n<tr>\n<td><strong>TRUE F1</strong></td>\n<td>0.282</td>\n<td>0.368</td>\n</tr>\n<tr>\n<td>FALSE Precision</td>\n<td>0.477</td>\n<td>0.489</td>\n</tr>\n<tr>\n<td>FALSE Recall</td>\n<td>0.720</td>\n<td>0.670</td>\n</tr>\n<tr>\n<td><strong>FALSE F1</strong></td>\n<td>0.574</td>\n<td>0.565</td>\n</tr>\n<tr>\n<td><strong>Macro F1</strong></td>\n<td><strong>0.428</strong></td>\n<td><strong>0.467</strong></td>\n</tr>\n</tbody>\n</table>\n<h2>Hard 3 (400 problems)</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>SAIR</th>\n<th>Ours (local)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Accuracy</strong></td>\n<td>60.8% (243/400)</td>\n<td>58.0% (232/400)</td>\n</tr>\n<tr>\n<td>TP</td>\n<td>75</td>\n<td>90</td>\n</tr>\n<tr>\n<td>FP</td>\n<td>37</td>\n<td>63</td>\n</tr>\n<tr>\n<td>FN</td>\n<td>120</td>\n<td>105</td>\n</tr>\n<tr>\n<td>TN</td>\n<td>168</td>\n<td>142</td>\n</tr>\n<tr>\n<td>TRUE Precision</td>\n<td>0.670</td>\n<td>0.588</td>\n</tr>\n<tr>\n<td>TRUE Recall</td>\n<td>0.385</td>\n<td>0.462</td>\n</tr>\n<tr>\n<td><strong>TRUE F1</strong></td>\n<td>0.489</td>\n<td>0.517</td>\n</tr>\n<tr>\n<td>FALSE Precision</td>\n<td>0.583</td>\n<td>0.575</td>\n</tr>\n<tr>\n<td>FALSE Recall</td>\n<td>0.820</td>\n<td>0.693</td>\n</tr>\n<tr>\n<td><strong>FALSE F1</strong></td>\n<td>0.682</td>\n<td>0.628</td>\n</tr>\n<tr>\n<td><strong>Macro F1</strong></td>\n<td><strong>0.585</strong></td>\n<td><strong>0.573</strong></td>\n</tr>\n</tbody>\n</table>",
+      "recipient_id": 43,
+      "timestamp": 1776428547,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "last_edit_timestamp": 1776428730,
+      "edit_history": [
+        {
+          "user_id": 236,
+          "timestamp": 1776428730,
+          "prev_content": "Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?\n\nhere more details:\n\n## Cross-Dataset Summary\n\n| Dataset | SAIR Acc | Our Acc | SAIR Macro F1 | Our Macro F1 | Mismatches |\n|---------|----------|---------|---------------|-------------|------------|\n| hard2   | 46.5%    | 48.5%   | 0.428         | 0.467       | 56/200 (28%) |\n| hard3   | 60.8%    | 58.0%   | 0.585         | 0.573       | 143/400 (36%) |\n\n## Hard 2 (200 problems)\n\n```markdown\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| **TRUE F1**    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| **FALSE F1**   | 0.574      | 0.565        |\n| **Macro F1**   | **0.428**  | **0.467**    |\n```\n\n## Hard 3 (400 problems)\n\n```markdown\n\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| **TRUE F1**    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| **FALSE F1**   | 0.682      | 0.628        |\n| **Macro F1**   | **0.585**  | **0.573**    |\n```",
+          "prev_rendered_content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<h2>Cross-Dataset Summary</h2>\n<table>\n<thead>\n<tr>\n<th>Dataset</th>\n<th>SAIR Acc</th>\n<th>Our Acc</th>\n<th>SAIR Macro F1</th>\n<th>Our Macro F1</th>\n<th>Mismatches</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>hard2</td>\n<td>46.5%</td>\n<td>48.5%</td>\n<td>0.428</td>\n<td>0.467</td>\n<td>56/200 (28%)</td>\n</tr>\n<tr>\n<td>hard3</td>\n<td>60.8%</td>\n<td>58.0%</td>\n<td>0.585</td>\n<td>0.573</td>\n<td>143/400 (36%)</td>\n</tr>\n</tbody>\n</table>\n<h2>Hard 2 (200 problems)</h2>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.574      | 0.565        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.428**</span>  | <span class=\"gs\">**0.467**</span>    |\n</code></pre></div>\n<h2>Hard 3 (400 problems)</h2>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.682      | 0.628        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.585**</span>  | <span class=\"gs\">**0.573**</span>    |\n</code></pre></div>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1776428716,
+          "prev_content": "Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?\n\nhere more details:\n\n```markdown\n## Cross-Dataset Summary\n\n| Dataset | SAIR Acc | Our Acc | SAIR Macro F1 | Our Macro F1 | Mismatches |\n|---------|----------|---------|---------------|-------------|------------|\n| hard2   | 46.5%    | 48.5%   | 0.428         | 0.467       | 56/200 (28%) |\n| hard3   | 60.8%    | 58.0%   | 0.585         | 0.573       | 143/400 (36%) |\n```\n## Hard 2 (200 problems)\n\n```markdown\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| **TRUE F1**    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| **FALSE F1**   | 0.574      | 0.565        |\n| **Macro F1**   | **0.428**  | **0.467**    |\n```\n\n## Hard 3 (400 problems)\n\n```markdown\n\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| **TRUE F1**    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| **FALSE F1**   | 0.682      | 0.628        |\n| **Macro F1**   | **0.585**  | **0.573**    |\n```",
+          "prev_rendered_content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code><span class=\"gu\">## Cross-Dataset Summary</span>\n\n| Dataset | SAIR Acc | Our Acc | SAIR Macro F1 | Our Macro F1 | Mismatches |\n|---------|----------|---------|---------------|-------------|------------|\n| hard2   | 46.5%    | 48.5%   | 0.428         | 0.467       | 56/200 (28%) |\n| hard3   | 60.8%    | 58.0%   | 0.585         | 0.573       | 143/400 (36%) |\n</code></pre></div>\n<h2>Hard 2 (200 problems)</h2>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.574      | 0.565        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.428**</span>  | <span class=\"gs\">**0.467**</span>    |\n</code></pre></div>\n<h2>Hard 3 (400 problems)</h2>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.682      | 0.628        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.585**</span>  | <span class=\"gs\">**0.573**</span>    |\n</code></pre></div>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1776428705,
+          "prev_content": "Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?\n\nhere more details:\n\n```markdown\n## Cross-Dataset Summary\n\n| Dataset | SAIR Acc | Our Acc | SAIR Macro F1 | Our Macro F1 | Mismatches |\n|---------|----------|---------|---------------|-------------|------------|\n| hard2   | 46.5%    | 48.5%   | 0.428         | 0.467       | 56/200 (28%) |\n| hard3   | 60.8%    | 58.0%   | 0.585         | 0.573       | 143/400 (36%) |\n```\n## Hard 2 (200 problems)\n\n```markdown\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| **TRUE F1**    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| **FALSE F1**   | 0.574      | 0.565        |\n| **Macro F1**   | **0.428**  | **0.467**    |\n```\n\n```markdown\n## Hard 3 (400 problems)\n\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| **Accuracy**   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| **TRUE F1**    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| **FALSE F1**   | 0.682      | 0.628        |\n| **Macro F1**   | **0.585**  | **0.573**    |\n```",
+          "prev_rendered_content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code><span class=\"gu\">## Cross-Dataset Summary</span>\n\n| Dataset | SAIR Acc | Our Acc | SAIR Macro F1 | Our Macro F1 | Mismatches |\n|---------|----------|---------|---------------|-------------|------------|\n| hard2   | 46.5%    | 48.5%   | 0.428         | 0.467       | 56/200 (28%) |\n| hard3   | 60.8%    | 58.0%   | 0.585         | 0.573       | 143/400 (36%) |\n</code></pre></div>\n<h2>Hard 2 (200 problems)</h2>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 46.5% (93/200) | 48.5% (97/200) |\n| TP             | 21         | 30           |\n| FP             | 28         | 33           |\n| FN             | 79         | 70           |\n| TN             | 72         | 67           |\n| TRUE Precision | 0.429      | 0.476        |\n| TRUE Recall    | 0.210      | 0.300        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.282      | 0.368        |\n| FALSE Precision| 0.477      | 0.489        |\n| FALSE Recall   | 0.720      | 0.670        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.574      | 0.565        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.428**</span>  | <span class=\"gs\">**0.467**</span>    |\n</code></pre></div>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code><span class=\"gu\">## Hard 3 (400 problems)</span>\n\n|                | SAIR       | Ours (local) |\n|----------------|------------|--------------|\n| <span class=\"gs\">**Accuracy**</span>   | 60.8% (243/400) | 58.0% (232/400) |\n| TP             | 75         | 90           |\n| FP             | 37         | 63           |\n| FN             | 120        | 105          |\n| TN             | 168        | 142          |\n| TRUE Precision | 0.670      | 0.588        |\n| TRUE Recall    | 0.385      | 0.462        |\n| <span class=\"gs\">**TRUE F1**</span>    | 0.489      | 0.517        |\n| FALSE Precision| 0.583      | 0.575        |\n| FALSE Recall   | 0.820      | 0.693        |\n| <span class=\"gs\">**FALSE F1**</span>   | 0.682      | 0.628        |\n| <span class=\"gs\">**Macro F1**</span>   | <span class=\"gs\">**0.585**</span>  | <span class=\"gs\">**0.573**</span>    |\n</code></pre></div>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1776428682,
+          "prev_content": "Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?\n\nhere more details:\n\n```markdown\nCross-Dataset Summary\nDataset\tSAIR Acc\tOur Acc\tSAIR Macro F1\tOur Macro F1\tMismatches\nhard2\t46.5%\t48.5%\t0.428\t0.467\t56/200 (28%)\nhard3\t60.8%\t58.0%\t0.585\t0.573\t143/400 (36%)\n```\nHard 2 (200 problems)\n\n```markdown\nSAIR\tOurs (local)\nAccuracy\t46.5% (93/200)\t48.5% (97/200)\nTP\t21\t30\nFP\t28\t33\nFN\t79\t70\nTN\t72\t67\nTRUE Precision\t0.429\t0.476\nTRUE Recall\t0.210\t0.300\nTRUE F1\t0.282\t0.368\nFALSE Precision\t0.477\t0.489\nFALSE Recall\t0.720\t0.670\nFALSE F1\t0.574\t0.565\nMacro F1\t0.428\t0.467\n```\n\n```markdown\nHard 3 (400 problems)\n\nSAIR\tOurs (local)\nAccuracy\t60.8% (243/400)\t58.0% (232/400)\nTP\t75\t90\nFP\t37\t63\nFN\t120\t105\nTN\t168\t142\nTRUE Precision\t0.670\t0.588\nTRUE Recall\t0.385\t0.462\nTRUE F1\t0.489\t0.517\nFALSE Precision\t0.583\t0.575\nFALSE Recall\t0.820\t0.693\nFALSE F1\t0.682\t0.628\nMacro F1\t0.585\t0.573\n```",
+          "prev_rendered_content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>Cross-Dataset Summary\nDataset SAIR Acc    Our Acc SAIR Macro F1   Our Macro F1    Mismatches\nhard2   46.5%   48.5%   0.428   0.467   56/200 (28%)\nhard3   60.8%   58.0%   0.585   0.573   143/400 (36%)\n</code></pre></div>\n<p>Hard 2 (200 problems)</p>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>SAIR    Ours (local)\nAccuracy    46.5% (93/200)  48.5% (97/200)\nTP  21  30\nFP  28  33\nFN  79  70\nTN  72  67\nTRUE Precision  0.429   0.476\nTRUE Recall 0.210   0.300\nTRUE F1 0.282   0.368\nFALSE Precision 0.477   0.489\nFALSE Recall    0.720   0.670\nFALSE F1    0.574   0.565\nMacro F1    0.428   0.467\n</code></pre></div>\n<div class=\"codehilite\" data-code-language=\"Markdown\"><pre><span></span><code>Hard 3 (400 problems)\n\nSAIR    Ours (local)\nAccuracy    60.8% (243/400) 58.0% (232/400)\nTP  75  90\nFP  37  63\nFN  120 105\nTN  168 142\nTRUE Precision  0.670   0.588\nTRUE Recall 0.385   0.462\nTRUE F1 0.489   0.517\nFALSE Precision 0.583   0.575\nFALSE Recall    0.820   0.693\nFALSE F1    0.682   0.628\nMacro F1    0.585   0.573\n</code></pre></div>"
+        },
+        {
+          "user_id": 236,
+          "timestamp": 1776428608,
+          "prev_content": "Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?\n\nhere more details:\n\n```\nCross-Dataset Summary\nDataset\tSAIR Acc\tOur Acc\tSAIR Macro F1\tOur Macro F1\tMismatches\nhard2\t46.5%\t48.5%\t0.428\t0.467\t56/200 (28%)\nhard3\t60.8%\t58.0%\t0.585\t0.573\t143/400 (36%)\n```\nHard 2 (200 problems)\n\nSAIR\tOurs (local)\nAccuracy\t46.5% (93/200)\t48.5% (97/200)\nTP\t21\t30\nFP\t28\t33\nFN\t79\t70\nTN\t72\t67\nTRUE Precision\t0.429\t0.476\nTRUE Recall\t0.210\t0.300\nTRUE F1\t0.282\t0.368\nFALSE Precision\t0.477\t0.489\nFALSE Recall\t0.720\t0.670\nFALSE F1\t0.574\t0.565\nMacro F1\t0.428\t0.467\n\nHard 3 (400 problems)\n\nSAIR\tOurs (local)\nAccuracy\t60.8% (243/400)\t58.0% (232/400)\nTP\t75\t90\nFP\t37\t63\nFN\t120\t105\nTN\t168\t142\nTRUE Precision\t0.670\t0.588\nTRUE Recall\t0.385\t0.462\nTRUE F1\t0.489\t0.517\nFALSE Precision\t0.583\t0.575\nFALSE Recall\t0.820\t0.693\nFALSE F1\t0.682\t0.628\nMacro F1\t0.585\t0.573",
+          "prev_rendered_content": "<p>Dear community, we have posted a cheatsheet into community contribution, and we have got wildly different results from  our internal models (w/ parameters aligned to official rules). We are in particular concerned with the level of misalignment on the output of the individual problems, that is up to 35% of the overall answers - is anyone experiencing the same issues?</p>\n<p>here more details:</p>\n<div class=\"codehilite\"><pre><span></span><code>Cross-Dataset Summary\nDataset SAIR Acc    Our Acc SAIR Macro F1   Our Macro F1    Mismatches\nhard2   46.5%   48.5%   0.428   0.467   56/200 (28%)\nhard3   60.8%   58.0%   0.585   0.573   143/400 (36%)\n</code></pre></div>\n<p>Hard 2 (200 problems)</p>\n<p>SAIR    Ours (local)<br>\nAccuracy    46.5% (93/200)  48.5% (97/200)<br>\nTP  21  30<br>\nFP  28  33<br>\nFN  79  70<br>\nTN  72  67<br>\nTRUE Precision  0.429   0.476<br>\nTRUE Recall 0.210   0.300<br>\nTRUE F1 0.282   0.368<br>\nFALSE Precision 0.477   0.489<br>\nFALSE Recall    0.720   0.670<br>\nFALSE F1    0.574   0.565<br>\nMacro F1    0.428   0.467</p>\n<p>Hard 3 (400 problems)</p>\n<p>SAIR    Ours (local)<br>\nAccuracy    60.8% (243/400) 58.0% (232/400)<br>\nTP  75  90<br>\nFP  37  63<br>\nFN  120 105<br>\nTN  168 142<br>\nTRUE Precision  0.670   0.588<br>\nTRUE Recall 0.385   0.462<br>\nTRUE F1 0.489   0.517<br>\nFALSE Precision 0.583   0.575<br>\nFALSE Recall    0.820   0.693<br>\nFALSE F1    0.682   0.628<br>\nMacro F1    0.585   0.573</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Erzio",
+      "sender_email": "user236@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c966445f0cdaac2f678aa5c5cc9e8d9c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-17T12:22:27.000Z"
+    },
+    {
+      "id": 1640,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> I just DMed you to check the details for the issue. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776437417,
+      "client": "ZulipElectron",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 236
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-17T14:50:17.000Z"
+    },
+    {
+      "id": 1667,
+      "sender_id": 113,
+      "content": "<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776522460,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "last_edit_timestamp": 1776523054,
+      "edit_history": [
+        {
+          "user_id": 113,
+          "timestamp": 1776523054,
+          "prev_content": "Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, I shouldn't assume the deadline is 23:59 UTC?",
+          "prev_rendered_content": "<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, I shouldn't assume the deadline is 23:59 UTC?</p>"
+        },
+        {
+          "user_id": 113,
+          "timestamp": 1776522606,
+          "prev_content": "Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, or should I assume the deadline is 23:59 UTC?",
+          "prev_rendered_content": "<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, or should I assume the deadline is 23:59 UTC?</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-18T14:27:40.000Z"
+    },
+    {
+      "id": 1669,
+      "sender_id": 113,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"113\">Stacey Szmy</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667\">said</a>:</p>\n<blockquote>\n<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.</p>\n</blockquote>\n<p>I meant to say..  the deadline is 23:59 UTC-12 regardless of location? Or UTC-0?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776523699,
+      "client": "website",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "last_edit_timestamp": 1776524240,
+      "edit_history": [
+        {
+          "user_id": 113,
+          "timestamp": 1776524240,
+          "prev_content": "@_**Stacey Szmy|113** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667):\n```quote\nIs there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.\n```\n\nI ment to say..  the deadline is 23:59 UTC-12 regardless of location? Or UTC-0?",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"113\">Stacey Szmy</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667\">said</a>:</p>\n<blockquote>\n<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.</p>\n</blockquote>\n<p>I ment to say..  the deadline is 23:59 UTC-12 regardless of location? Or UTC-0?</p>"
+        },
+        {
+          "user_id": 113,
+          "timestamp": 1776524081,
+          "prev_content": "@_**Stacey Szmy|113** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667):\n```quote\nIs there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.\n```\n\nI ment to say..  the deadline is 23:59 UTC-12 regardless of location.",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"113\">Stacey Szmy</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667\">said</a>:</p>\n<blockquote>\n<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.</p>\n</blockquote>\n<p>I ment to say..  the deadline is 23:59 UTC-12 regardless of location.</p>"
+        },
+        {
+          "user_id": 113,
+          "timestamp": 1776523764,
+          "prev_content": "@_**Stacey Szmy|113** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667):\n```quote\nIs there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.\n```\n\nI ment to say UTC-12 ..",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"113\">Stacey Szmy</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Contributor.20Network.20to.20share.20your.20cheatsheets/near/1667\">said</a>:</p>\n<blockquote>\n<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations or I should assume the deadline is 23:59 UTC regardless of location.</p>\n</blockquote>\n<p>I ment to say UTC-12 ..</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-18T14:48:19.000Z"
+    },
+    {
+      "id": 1679,
+      "sender_id": 25,
+      "content": "<p>Yes, the deadline is April 20th 23:59 UTC-12 regardless of location for Stage 1.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776539448,
+      "client": "ZulipElectron",
+      "subject": "Contributor Network to share your cheatsheets",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-18T19:10:48.000Z"
     }
   ]
 }

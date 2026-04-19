@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:05:14.878252+00:00",
+  "publicCode": "EQT01-000055",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000055",
+  "data": {
+    "cnItemId": "si_48a86cf2-a75c-4def-9b23-ceac4c01a661",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_48a86cf2-a75c-4def-9b23-ceac4c01a661",
+    "shareItemId": "si_48a86cf2-a75c-4def-9b23-ceac4c01a661",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_48a86cf2-a75c-4def-9b23-ceac4c01a661",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-7ccb5c317299ce3f2cebd3dfc3e40401e550faa2",
+    "entityName": "Israel Cazares",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKl07oVS_nbbLHjIn10YEOG--6cwmPcNV5uFauMStunkk2ddIZG=s96-c",
+    "cheatsheetTitle": "Cazares AN45c",
+    "cheatsheetContent": "You are a mathematician specializing in equational theories of magmas.\n\nYour task is to determine whether Equation 1 implies Equation 2 over ALL magmas.\n\nEquation 1: {{ equation1 }}\nEquation 2: {{ equation2 }}\n\nYour response MUST begin with EXACTLY this line (no preamble):\nVERDICT: TRUE   or   VERDICT: FALSE\n\nThen use these sections:\nREASONING: (required, non-empty)\nPROOF: (required if TRUE, empty otherwise)\nCOUNTEREXAMPLE: (required if FALSE, empty otherwise)\n\nApproximately half of these problems are TRUE and half are FALSE.\nMany equations that look complex actually force the magma to have only 1 element, making the implication trivially TRUE.\n\n=== STEP 1: TRIVIAL MAGMA (check this first) ===\nIf EQ1 has a variable that appears exactly once in the entire equation and only on one side, substituting different values forces all elements equal → trivial 1-element magma → every equation holds → VERDICT: TRUE immediately.\n\n=== STEP 2: COUNTEREXAMPLE SEARCH ===\nTry these magma operation tables. For each: check EQ1 holds for ALL variable assignments. If EQ1 holds but EQ2 fails for some assignment → VERDICT: FALSE.\n\nSize 2 ({0,1}):\n(A) a*b=a     [[0,0],[1,1]]\n(B) a*b=b     [[0,1],[0,1]]\n(C) a*b=0     [[0,0],[0,0]]\n(D) a*b=1     [[1,1],[1,1]]\n(E) min(a,b)  [[0,0],[0,1]]\n(F) max(a,b)  [[0,1],[1,1]]\n(G) a+b mod2  [[0,1],[1,0]]\n\nSize 3 ({0,1,2}) — CRITICAL for hard problems:\n(H) a*b=(b+1)%3     [[1,2,0],[1,2,0],[1,2,0]]\n(I) a*b=(a+1)%3     [[1,1,1],[2,2,2],[0,0,0]]\n(J) a*b=b, 2*0↔1    [[0,1,2],[0,1,2],[1,0,2]]\n(K) band             [[0,0,0],[1,1,0],[2,0,2]]\n(N) mirror           [[0,2,0],[1,1,1],[2,0,2]]\n\nMany hard FALSE problems have NO counterexample on {0,1} but DO have one on {0,1,2}. Check ALL of A through N systematically.\n\nVERIFICATION: For size-3 magmas, confirm EQ1 holds on ALL variable assignments before using it. If EQ1 fails on even one assignment, that magma is not a counterexample — skip it.\n\n=== STEP 3: DECISION ===\nIf trivial magma detected → TRUE.\nIf ANY named counterexample (A–N) is verified → FALSE.\nIf NONE of A–N provides a valid counterexample: the implication is very likely TRUE. Only override this by constructing a custom magma with full step-by-step verification of ALL assignments.",
+    "publishedAt": "2026-04-16T04:47:31Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_48a86cf2-a75c-4def-9b23-ceac4c01a661",
+        "entityName": "Israel Cazares",
+        "publishedAt": "2026-04-16T04:47:31Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_b1ed28fd-5b22-4c40-bd6f-6ab758628452",
+    "publicCode": "EQT01-000055",
+    "remark": "Trivial-magma-first ordering with CE tables. Checks singleton-forcing (trivial magma) before counterexample search — this ordering is the key insight over CE-table-first approaches. Uses 7 size-2 and 5 size-3 magma counterexample tables (A–N).",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

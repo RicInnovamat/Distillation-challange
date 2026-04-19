@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:10:42.447855+00:00",
+  "publicCode": "EQT01-000081",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000081",
+  "data": {
+    "cnItemId": "si_944ec62f-5206-4352-beb6-7a390e356502",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_944ec62f-5206-4352-beb6-7a390e356502",
+    "shareItemId": "si_944ec62f-5206-4352-beb6-7a390e356502",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_944ec62f-5206-4352-beb6-7a390e356502",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-36be52d73cb9edb1c99b53a2a7fc17c1ac323c85",
+    "entityName": "Arpit Singh Gautam",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocISFsGNaGtniYPDTDXIEhLGOMhS2YIBDdzPYFgCS1U0qoYq26FNUw=s96-c",
+    "cheatsheetTitle": "V0 Initial Trial Run",
+    "cheatsheetContent": "You are an expert in universal algebra and equational theories of magmas. A magma is a set M with a binary operation *. An equational law is a universally quantified equation in *. Equation E1 IMPLIES Equation E2 iff every magma satisfying E1 also satisfies E2.\n\nTASK: Decide whether E1 implies E2.\n  E1: {{ equation1 }}\n  E2: {{ equation2 }}\n\n=== DECISION PROCEDURE (follow in order) ===\n\nSTEP 1 — SYNTACTIC SHORTCUTS (check first; often decisive).\n\n(a) If E2 is the trivial law \"x = x\" (or any law that becomes x=x after renaming), answer TRUE.\n(b) If E1 is the \"singleton law\" forcing |M|=1 (e.g. \"x = y\"), answer TRUE (singleton magmas satisfy everything).\n(c) If E1 and E2 are identical up to variable renaming, answer TRUE.\n(d) If E1 is strictly weaker than E2 in an obvious way (E1 is an instance/consequence of E2 but not vice versa), you still need to verify. Do NOT shortcut.\n(e) Associativity (E2: (x*y)*z = x*(y*z)) is NOT implied by commutativity alone, and vice versa. Known non-implications:\n    - commutativity ⇏ associativity\n    - associativity ⇏ commutativity\n    - idempotence (x*x=x) ⇏ associativity or commutativity\n\nSTEP 2 — TRY TO REFUTE (find counterexample magma). This is usually easier than proving. Try candidates IN ORDER. For each, check: does the magma satisfy E1? If yes, does it violate E2? If yes → FALSE with that magma as witness.\n\nCandidate magmas to test (in this order):\n\n  M1. LEFT PROJECTION on {0,1}: x*y = x.\n      Satisfies: x*y = x;  (x*y)*z = x*z = x;  x*(y*z) = x.  So associative.\n      Idempotent: x*x = x. Not commutative in general.\n\n  M2. RIGHT PROJECTION on {0,1}: x*y = y.\n      Satisfies: x*y = y; associative; idempotent; not commutative.\n\n  M3. CONSTANT magma on {0,1}: x*y = 0.\n      Satisfies: x*y = z*w for all x,y,z,w. Highly degenerate.\n      Associative, commutative, but not idempotent (1*1=0≠1).\n\n  M4. Z/2 ADDITION on {0,1}: x*y = x+y mod 2.\n      Associative, commutative, has identity 0, every element self-inverse.\n      NOT idempotent (1*1=0).\n\n  M5. Z/3 ADDITION on {0,1,2}: x*y = x+y mod 3.\n      Associative, commutative group.\n\n  M6. XOR-LIKE on {0,1}: x*y = 1-x·y (or similar small 2×2 table variants).\n      Try all 16 binary operations on {0,1} if needed — only 16 tables exist.\n\n  M7. NON-ASSOCIATIVE 2×2: table [[0,1],[1,0]] defines x*y = x XOR y; table [[0,0],[1,1]] is left-projection; table [[1,0],[0,1]] is non-associative in some rows. Enumerate all 16.\n\n  M8. Small 3×3 tables. Useful ones:\n      - Rock-paper-scissors (cyclic): 0*1=1, 1*2=2, 2*0=0, else loses. Non-associative, non-commutative.\n      - Z/3 with twist: x*y = 2x+y mod 3. Check associativity explicitly.\n\n  M9. FREE MAGMA of rank 1 or 2 modulo E1: if E1 has a simple rewriting system, construct the quotient. If E2 fails in this free magma, E1 does not imply E2.\n\nHEURISTIC: If E1 has few variables and short depth, small magmas (|M| ≤ 3) usually suffice. If E1 involves 3+ variables and depth ≥ 3, try |M|=2 tables exhaustively (all 16) before giving up on refutation.\n\nSTEP 3 — IF REFUTATION FAILS ACROSS M1–M8, CONSIDER TRUE. Attempt a short derivation:\n\n  (a) Treat E1 as a rewrite rule (either direction). Apply to LHS of E2; try to reach RHS of E2.\n  (b) Substitute specific variable patterns into E1 (e.g. set y=x, z=x*x) to derive auxiliary identities.\n  (c) Common derivations:\n      - From x*y = y*x (commutativity) + (x*y)*z = x*(y*z) (associativity), derive any reordering.\n      - From x = x*(y*x) (a common law) you can often derive idempotence by setting y=x.\n      - From x*y = y, any magma is right-projection; derive x*(y*z) = y*z = z and (x*y)*z = z, so associative.\n\nSTEP 4 — CALIBRATION. If you are uncertain:\n  - If you tried M1–M6 and none refutes, lean TRUE.\n  - If E1 is very weak (few constraints) and E2 is specific, lean FALSE — weak premises rarely imply specific conclusions.\n  - If E1 is very strong (forces small or trivial magmas), lean TRUE.\n\n=== KNOWN BASELINE FACTS ===\n\n- Every law implies x = x.\n- The law x = y implies every law (forces |M|=1).\n- x*y = x (left projection law) as E1 implies: associativity, idempotence, x*(y*z)=x, (x*y)*z=x*z=x. Does NOT imply commutativity or x*y=y.\n- x*y = y (right projection law) symmetric to above.\n- x*x = x (idempotence) as E1 implies only laws that hold in all idempotent magmas; does NOT imply associativity, commutativity, or any projection law.\n- Commutativity x*y=y*x does NOT imply associativity (counterexample: rock-paper-scissors made symmetric).\n- Associativity does NOT imply commutativity (counterexample: left projection, or any non-abelian group).\n\n=== OUTPUT FORMAT (STRICT — the first line must parse) ===\n\nRespond EXACTLY in this format, with these headers on their own lines:\n\nVERDICT: TRUE\nor\nVERDICT: FALSE\n\nREASONING: one or two short sentences explaining the key reason.\n\nPROOF: if VERDICT is TRUE, give a brief derivation or cite a known fact. If VERDICT is FALSE, leave empty.\n\nCOUNTEREXAMPLE: if VERDICT is FALSE, give the magma (specify |M| and the multiplication table) that satisfies E1 but not E2. If VERDICT is TRUE, leave empty.\n\nDo NOT include any other headers, markdown, or preamble. The first non-empty line of your response MUST be \"VERDICT: TRUE\" or \"VERDICT: FALSE\" exactly.\n\nKeep the entire response under 300 words. Do not restate the problem.",
+    "publishedAt": "2026-04-18T20:08:29Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_944ec62f-5206-4352-beb6-7a390e356502",
+        "entityName": "Arpit Singh Gautam",
+        "publishedAt": "2026-04-18T20:08:29Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_11e32679-454d-4073-80fa-7bb25946018b",
+    "publicCode": "EQT01-000081",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

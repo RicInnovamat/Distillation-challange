@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 73,
+  "message_count": 84,
   "messages": [
     {
       "id": 341,
@@ -1499,6 +1499,412 @@
       "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
       "content_type": "text/html",
       "date": "2026-04-14T18:10:59.000Z"
+    },
+    {
+      "id": 1591,
+      "sender_id": 25,
+      "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"71\">@Heath Sanchez</span> ! The leaderboard for the contributor network on the hard2 problem set (200 problems) has been added. Thanks!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776275009,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-15T17:43:29.000Z"
+    },
+    {
+      "id": 1592,
+      "sender_id": 273,
+      "content": "<p>Hi everyone,</p>\n<p>I've submitted my cheat sheet to the competition and also wrote a short empirical paper documenting my findings on the single-prompt ceiling effect.</p>\n<p>I'd like to submit it to arXiv (cs.CL) and I'm looking for someone willing to endorse me. If you qualify and are open to it, please reach out at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a> and I'll send you the endorsement code.</p>\n<p>Paper (Zenodo): <a href=\"https://zenodo.org/records/19598433\">https://zenodo.org/records/19598433</a></p>\n<p>Thanks in advance!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776278986,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 280
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Israel Cazares",
+      "sender_email": "user273@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/a6248228c9ad76f59acab5214ac43bd0?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-15T18:49:46.000Z"
+    },
+    {
+      "id": 1594,
+      "sender_id": 236,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span> why areGemma4 results not being published? is the model still used for the evaluation?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776279612,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Erzio",
+      "sender_email": "user236@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c966445f0cdaac2f678aa5c5cc9e8d9c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-15T19:00:12.000Z"
+    },
+    {
+      "id": 1595,
+      "sender_id": 25,
+      "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"236\">@Erzio</span> ! <br>\nGemma-4 results on the Contributor Network leaderboard will be published soon. We will use gemma4-31b-it for Stage 1 evaluation.  Thanks!<br>\nAt the moment, the main issue is that the current provider route for this model on OpenRouter is still not stable. If that instability remains by the end of Stage 1, we may use a SAIR-hosted serving setup for evaluation of gemma-4-31b-it, with the same model and fixed configuration, while ensuring fairness of the evaluation.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776285218,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "thank_you",
+          "emoji_code": "1f64f",
+          "reaction_type": "unicode_emoji",
+          "user_id": 236
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-15T20:33:38.000Z"
+    },
+    {
+      "id": 1596,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"188\">Gavin Litchfield</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1539\">said</a>:</p>\n<blockquote>\n<p>r a few days of testing I'm torn on the 8k token limit.</p>\n<p>I'm seeing a significant performance gap between 8k and 16k on gpt-oss-120b and gemma-4-31b. At 8k, a meaningful fraction of calls silently fail — the models burn through their budget on internal reasoning before producing any visible output, so you get an empty <code>final</code> channel and an unparseable response.</p>\n<p>The practical effect is that the challenge at 8k feels less like \"teach small models to solve equational implication problems\" and more like \"prevent reasoning models from over-thinking themselves out of an answer.\" At 16k, the problem shifts back toward the actual math.</p>\n<p>If the hosts are open to revisiting this detail, it would meaningfully change where I focus my effort over the next few days. Curious whether others are running into the same thing.</p>\n</blockquote>\n<p><span class=\"user-mention\" data-user-id=\"188\">@Gavin Litchfield</span> Thanks for sharing the insights. We discussed this internally, and we understand the concern that 8192 can be tight for reasoning-heavy models in some cases. Our current plan is to keep 8192 as the primary Stage 1 setting and main leaderboard, while also running an additional 16384-token evaluation and showing those results in a separate leaderboard.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776286156,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-15T20:49:16.000Z"
+    },
+    {
+      "id": 1598,
+      "sender_id": 71,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1591\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"71\">Heath Sanchez</span> ! The leaderboard for the contributor network on the hard2 problem set (200 problems) has been added. Thanks!</p>\n</blockquote>\n<p>Thanks so much, <span class=\"user-mention\" data-user-id=\"25\">@YZ</span>  - really appreciate how quickly you added hard2.</p>\n<p>This is already a big step forward.</p>\n<p>I still think an average across all public sets would be the most useful overall view, since it would better reflect whether a cheatsheet is generalizing rather than just doing well on one slice. A single-set leaderboard is definitely helpful, but averaging across the public sets would make it much easier to spot the strongest all-round cheatsheets.</p>\n<p>At the moment, I  could publish five different cheatsheets, each tuned to a different public set, and each could look extremely strong in isolation while transferring poorly to unseen problems (which is how they will ultimately be evaluated). That also makes it harder for others to judge which shared cheatsheets are actually useful for their submissions.</p>\n<p>Held-out performance would be the ideal measure of course, but average public-set performance feels like the best practical proxy to nudge cheatsheets in the right direction.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776286686,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "last_edit_timestamp": 1776286937,
+      "edit_history": [
+        {
+          "user_id": 71,
+          "timestamp": 1776286937,
+          "prev_content": "@_**YZ|25** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1591):\n```quote\nHi @**Heath Sanchez** ! The leaderboard for the contributor network on the hard2 problem set (200 problems) has been added. Thanks!\n```\nThanks so much, @**YZ**  - really appreciate how quickly you added hard2.\n\nThis is already a big step forward.\n\nI still think an average across all public sets would be the most useful overall view, since it would better reflect whether a cheatsheet is generalizing rather than just doing well on one slice. A single-set leaderboard is definitely helpful, but averaging across the public sets would make it much easier to spot the strongest all-round cheatsheets.\n\nAt the moment, I  could submit five different cheatsheets, each tuned to a different public set, and each could look extremely strong in isolation while transferring poorly to unseen problems (which is how they will ultimately be evaluated). That also makes it harder for others to judge which shared cheatsheets are actually useful for their submissions.\n\nHeld-out performance would be the ideal measure of course, but average public-set performance feels like the best practical proxy to nudge cheatsheets in the right direction.",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1591\">said</a>:</p>\n<blockquote>\n<p>Hi <span class=\"user-mention silent\" data-user-id=\"71\">Heath Sanchez</span> ! The leaderboard for the contributor network on the hard2 problem set (200 problems) has been added. Thanks!</p>\n</blockquote>\n<p>Thanks so much, <span class=\"user-mention\" data-user-id=\"25\">@YZ</span>  - really appreciate how quickly you added hard2.</p>\n<p>This is already a big step forward.</p>\n<p>I still think an average across all public sets would be the most useful overall view, since it would better reflect whether a cheatsheet is generalizing rather than just doing well on one slice. A single-set leaderboard is definitely helpful, but averaging across the public sets would make it much easier to spot the strongest all-round cheatsheets.</p>\n<p>At the moment, I  could submit five different cheatsheets, each tuned to a different public set, and each could look extremely strong in isolation while transferring poorly to unseen problems (which is how they will ultimately be evaluated). That also makes it harder for others to judge which shared cheatsheets are actually useful for their submissions.</p>\n<p>Held-out performance would be the ideal measure of course, but average public-set performance feels like the best practical proxy to nudge cheatsheets in the right direction.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 241
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-15T20:58:06.000Z"
+    },
+    {
+      "id": 1599,
+      "sender_id": 188,
+      "content": "<p>Hey all, I'm having to step away from the challenge for the next week, and since I'm just an independent software engineer doing this for the learning, I wanted to go ahead and post my whole project here: <a href=\"https://github.com/GLitchfield/sair-distillation\">https://github.com/GLitchfield/sair-distillation</a>. I doubt it'll be useful to the serious research teams crunching away at this, but the AGENT.md file might be useful for someone wanting to teach Claude how to be a research assistant.</p>\n<p>I also want to thank the folks at SAIR for putting on this challenge. I've always loved math, and getting to work adjacent to it in this open-source format is awesome. Hoping there's a lot more to come with the challenges and collaborative projects.</p>\n<p>Thanks</p>",
+      "recipient_id": 43,
+      "timestamp": 1776290499,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 241
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 273
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 274
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gavin Litchfield",
+      "sender_email": "user188@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/c2bd0d54679dc9e8134e08a1f80ed33f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-15T22:01:39.000Z"
+    },
+    {
+      "id": 1665,
+      "sender_id": 50,
+      "content": "<p>interesting results coming in from overfit prompts on hard3. i've tried this approach but it doesn't make sense if we are to find the generalized solutions that help prof mathematicians understand equationals</p>",
+      "recipient_id": 43,
+      "timestamp": 1776507960,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam Betka",
+      "sender_email": "user50@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/f14bb8ad856c1d25d341b64d3485795c25cd1a97.png",
+      "content_type": "text/html",
+      "date": "2026-04-18T10:26:00.000Z"
+    },
+    {
+      "id": 1666,
+      "sender_id": 50,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"188\">Gavin Litchfield</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1599\">said</a>:</p>\n<blockquote>\n<p>this</p>\n</blockquote>\n<p>hi, nice work. how does your prompts score on 10kb limit? also, as expected, i can see gemma scoring considerably better than older gpt oss. very interesting approach with the batteries. happy seeing someone else using fast inference providers like cerebras!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776508115,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "last_edit_timestamp": 1776508153,
+      "edit_history": [
+        {
+          "user_id": 50,
+          "timestamp": 1776508153,
+          "prev_content": "@_**Gavin Litchfield|188** [said](https://zulip.sair.foundation/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1599):\n```quote\nthis\n```\n\nhi, nice work. how does your prompts score on 10kb limit? also, as expected, i can see gemma scoring considerably better than older gpt oss. very interesting approach with the batteries.",
+          "prev_rendered_content": "<p><span class=\"user-mention silent\" data-user-id=\"188\">Gavin Litchfield</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1599\">said</a>:</p>\n<blockquote>\n<p>this</p>\n</blockquote>\n<p>hi, nice work. how does your prompts score on 10kb limit? also, as expected, i can see gemma scoring considerably better than older gpt oss. very interesting approach with the batteries.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam Betka",
+      "sender_email": "user50@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/f14bb8ad856c1d25d341b64d3485795c25cd1a97.png",
+      "content_type": "text/html",
+      "date": "2026-04-18T10:28:35.000Z"
+    },
+    {
+      "id": 1674,
+      "sender_id": 285,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"71\">Heath Sanchez</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1117\">said</a>:</p>\n<blockquote>\n<p>Adapting the cheatsheets to saturate each new benchmark is genuinely impressive - it demonstrates how effectively models can capture the statistical structure of a given \"training\" set. But this is essentially classic overfitting to one specific slice of the magma distribution.</p>\n<p>For true generalization, we can go one level deeper: distilling the actual underlying laws that govern the entire magma space itself, and then translating those principles into clear, LLM-friendly language within a single prompt. (This representation will be slightly different for each model - DeepSeek, for example, tends to be more literal than the others and benefits from logical steps in pseudocode.)</p>\n<p>This challenge truly lives up to its name - it really is fundamentally a distillation problem.</p>\n<p>On the public datasets, current approaches seem to be memorising \"how it looks\", which works well until the distribution shifts. In contrast, successfully distilling the real generative principles reveals \"why it must be so\". Once you have those principles, the same representation can generalise beautifully to unseen problems without requiring constant remakes.</p>\n<p>Techniques such as symbolic regression or sparse identification of nonlinear dynamics (SINDy) excel at extracting compact, human-interpretable equations that extrapolate far beyond the training data. It also helps to think in terms of elaborative encoding - linking new implications to a coherent network of first principles rather than simply memorising the structure of a random collection of isolated examples.</p>\n<p>I’m excited about this challenge because it aligns perfectly with my work over the past 15 months on \"law discovery and distillation\" in mathematical physics. If we collectively shift toward real law-distillation (instead of standard ML tricks), I think we'll break the cycle of remakes and unlock far more robust, generalisable performance across the whole magma space. Looking forward to seeing what the community discovers next!</p>\n</blockquote>\n<p>This resonates. We run a Lean 4 discovery engine (10,500+ verified theorems from x²=x+1) and the pattern is identical — the AI discovers structural invariants (spine classifications, fiber multiplicities, spectral gaps) much faster than it constructs proofs. The discovery phase is pure routing: \"this structure has property X, route to separation lemma Y.\" The verification phase is traditional proof.</p>\n<p>What's interesting for this challenge: the structural FALSE laws you're mining from the implication graph are exactly the kind of thing our system produces — combinatorial obstructions that can be checked mechanically. Adam McKenna's Spine Isolation Theorem (posted in the Discovery thread here) is a clean example. We contributed a follow-up on his repo exploring whether ring-operation magmas from Fibonacci modular arithmetic give additional separating power beyond cyclic successor magmas.</p>\n<p>The router-vs-mathematician split might be the key architectural insight for Stage 2 — route to the right proof strategy first, then execute. Curious whether your FALSE-law mining has surfaced any divisibility-based patterns (our Zeckendorf/Fibonacci structures generate a lot of those).</p>\n<p>Repo if useful: <a href=\"https://github.com/the-omega-institute/automath\">https://github.com/the-omega-institute/automath</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1776533685,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Wenlin Zhang",
+      "sender_email": "user285@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/87fa48b12d5f812053d0214b9614faa4?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-18T17:34:45.000Z"
+    },
+    {
+      "id": 1675,
+      "sender_id": 285,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"273\">Israel Cazares</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1592\">said</a>:</p>\n<blockquote>\n<p>Hi everyone,</p>\n<p>I've submitted my cheat sheet to the competition and also wrote a short empirical paper documenting my findings on the single-prompt ceiling effect.</p>\n<p>I'd like to submit it to arXiv (cs.CL) and I'm looking for someone willing to endorse me. If you qualify and are open to it, please reach out at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a> and I'll send you the endorsement code.</p>\n<p>Paper (Zenodo): <a href=\"https://zenodo.org/records/19598433\">https://zenodo.org/records/19598433</a></p>\n<p>Thanks in advance!</p>\n</blockquote>\n<p>Hi Israel. Saw your arXiv endorsement request. I lead a Lean 4 formalization project (<a href=\"https://github.com/the-omega-institute/automath\">https://github.com/the-omega-institute/automath</a>, 10,500+ verified theorems) and we have a similar situation: papers on Zenodo, 9 submissions stuck in peer review across ETDS/JNT/SIAM, so we can't share results broadly yet, and no arXiv endorsement for math.DS/cs.AI either.</p>\n<p>Your single-prompt ceiling effect paper sounds relevant to what we're seeing in automated theorem proving. Would be interested to read it and compare notes.</p>\n<p>If anyone in this community can endorse for math.DS, cs.AI, or math.CO, we'd appreciate it too. The Lean 4 library is public and verifiable.</p>\n<p>Happy to return the favor for anyone who needs a review or formalization check.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776534044,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Wenlin Zhang",
+      "sender_email": "user285@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/87fa48b12d5f812053d0214b9614faa4?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-18T17:40:44.000Z"
     }
   ]
 }

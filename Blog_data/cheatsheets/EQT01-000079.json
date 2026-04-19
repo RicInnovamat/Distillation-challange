@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:10:41.595476+00:00",
+  "publicCode": "EQT01-000079",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000079",
+  "data": {
+    "cnItemId": "si_d9f8bf2b-e9bc-4e33-8fe8-2f7b9d3ad33a",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_d9f8bf2b-e9bc-4e33-8fe8-2f7b9d3ad33a",
+    "shareItemId": "si_d9f8bf2b-e9bc-4e33-8fe8-2f7b9d3ad33a",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_d9f8bf2b-e9bc-4e33-8fe8-2f7b9d3ad33a",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-7abd40fd4ec00b19323918597e26ba36ce1a29e1",
+    "entityName": "∆",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "v0",
+    "cheatsheetContent": "You are an expert in universal algebra. Decide whether Equation 1 implies Equation 2 over all magmas.\n\nA MAGMA is a set M with a single binary operation * (no axioms: NOT associative, commutative, or with identity). All variables universally quantified.\n\n\"Equation 1 implies Equation 2\" means: every magma satisfying Equation 1 also satisfies Equation 2.\n\nEquation 1: {{ equation1 }}\nEquation 2: {{ equation2 }}\n\n---\n\nSTRICTLY FORBIDDEN: associativity, commutativity, or any property not stated in Equation 1.\n\nREWRITING RULE: Eq 1 has the form L = R. To apply it to subterm T:\n  • Forward (L→R): consistent σ with σ(L)=T; result σ(R).\n  • Backward (R→L): consistent σ with σ(R)=T; result σ(L).\n  • CRITICAL: When L is \"x*(…)\", A*B matches only if A = σ(x) exactly — not a compound term containing x.\n\n---\n\nSTEP 1 — Try to DERIVE Equation 2 from Equation 1 (≤3 steps).\nIf Equation 2 has a variable NOT in Equation 1, skip to Step 2.\n\nSTEP 2 — Counterexample search.\n\nTry these families. For each, verify eq1 holds, then test eq2.\n\n  Family A: a*b = a. Substitute every (P*Q) → P.\n  Family B: a*b = b. Substitute every (P*Q) → Q.\n  Family C: a*b = f(a), 3-cycle 0→1→2→0. Substitute (P*Q) → f(P). Use f(f(f(x)))=x.\n  Family D: a*b = f(b), same f. Substitute (P*Q) → f(Q). Use f(f(f(x)))=x.\n  Family E: M={0,1,2}: 0*0=0, 0*1=0, 0*2=1, 1*k=1, 2*k=2 (all k). Check eq1 for all inputs; if holds, test eq2.\n\nA counterexample requires: eq1 holds for ALL inputs AND eq2 fails for SOME input (show numbers).\nIf a family fails eq1 for any input, skip it.\n\nSTOP RULE: After all 5 families — if no verified counterexample found → \\boxed{TRUE} immediately. Do not test other magmas.\n\n---\n\nREASONING BUDGET: ≤12 lines. Do not restate equations.\n\nOUTPUT FORMAT:\n\nWrite your reasoning (derivation steps or family checks), then on the FINAL LINE only:\n\\boxed{TRUE}    or    \\boxed{FALSE}\n\nCRITICAL: \\boxed{} appears EXACTLY ONCE — as the last non-empty line.",
+    "publishedAt": "2026-04-18T16:20:49Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_d9f8bf2b-e9bc-4e33-8fe8-2f7b9d3ad33a",
+        "entityName": "∆",
+        "publishedAt": "2026-04-18T16:20:49Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_cb25e6ce-f3d0-453d-9651-9bf271e5ad30",
+    "publicCode": "EQT01-000079",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

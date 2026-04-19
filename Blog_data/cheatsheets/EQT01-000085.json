@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:11:29.209439+00:00",
+  "publicCode": "EQT01-000085",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000085",
+  "data": {
+    "cnItemId": "si_ce80fa80-21a1-4f03-a70d-1588adaf432f",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_ce80fa80-21a1-4f03-a70d-1588adaf432f",
+    "shareItemId": "si_ce80fa80-21a1-4f03-a70d-1588adaf432f",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_ce80fa80-21a1-4f03-a70d-1588adaf432f",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+    "entityName": "Heath",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLa399HpdYBotEiZt9l7JZQAAnYKg6HC6jQQC0LE9IAgKYVGeXy=s96-c",
+    "cheatsheetTitle": "distilled-rules-11",
+    "cheatsheetContent": "<task>\nYou are a strict symbolic procedure runner.\n\nYou must execute the procedure exactly in order.\n</task>\n\n<input>\nEQ1 = {{ equation1 }}\nEQ2 = {{ equation2 }}\n</input>\n\n<procedure>\nSTEP 1.\nParse EQ1 and EQ2 as binary trees.\n- Every variable symbol is an atom.\n- Every binary operator symbol is the same generic binary operation.\n- Parentheses override grouping.\n- Otherwise read binary expressions left-associatively.\n- Treat any non-variable infix symbol such as *, ◇, ·, ○, or ∘ as that same generic binary operation.\n\nSTEP 2.\nCompute exactly these quantities and no others.\n\n1. eq1_lhs_is_var\n   1 iff LHS(EQ1) is a single variable, else 0.\n2. eq1_var_count\n   Number of distinct variables appearing anywhere in EQ1.\n3. delta_rhs_distinct\n   Distinct RHS variable count in EQ2 minus distinct RHS variable count in EQ1.\n4. side_coupling_delta\n   Cross-side variable coupling score of EQ2 minus that of EQ1, where one equation's coupling score is (# variables appearing on both sides) / (# variables appearing anywhere in that equation).\n5. lhs_skeleton_eq\n   1 iff LHS(EQ1) and LHS(EQ2) have the same tree skeleton, else 0.\n6. delta_rhs_nodes\n   RHS node count in EQ2 minus RHS node count in EQ1.\n7. delta_lhs_nodes\n   LHS node count in EQ2 minus LHS node count in EQ1.\n8. new_total_vars_count\n   Number of distinct variables appearing in EQ2 but not in EQ1.\n9. eq1_rhs_distinct\n   Number of distinct variables appearing in RHS(EQ1).\n\nSTEP 3.\nCompute exactly these additional quantities and no others.\n\n10. eq2_rhs_distinct\n    Number of distinct variables appearing in RHS(EQ2).\n11. eq2_lhs_is_var\n    1 iff LHS(EQ2) is a single variable, else 0.\n12. eq2_var_count\n    Number of distinct variables appearing anywhere in EQ2.\n13. eq1_lhs_nodes\n    Total node count in LHS(EQ1).\n14. delta_var_count\n    eq2_var_count minus eq1_var_count.\n15. base_regime_code\n    Defined exactly as follows:\n    - lhs_flag = \"L1\" if eq1_lhs_is_var >= 1, else \"L0\"\n    - var_bucket = \"vle2\" if eq1_var_count <= 2, else \"v3\" if eq1_var_count == 3, else \"vge4\"\n    - lhs_node_bucket = \"dneg2\" if delta_lhs_nodes <= -2, else \"dmid\" if delta_lhs_nodes <= 0, else \"dpos\"\n    - base_regime_code = lhs_flag + \"_\" + var_bucket + \"_\" + lhs_node_bucket\n\nSTEP 4.\nApply regime-specific blocks first.\nIf a listed base_regime_code matches, use ONLY that block.\nOtherwise use the GLOBAL block.\nInside any active block, use the first matching rule.\n\nBLOCK base_regime_code == \"L1_vge4_dmid\"\nR1. if delta_lhs_nodes >= 0 and side_coupling_delta >= -0.083333 then answer = \"1\"\nR2. if delta_lhs_nodes >= 0 and new_total_vars_count <= 0 then answer = \"1\"\nIf no rule matched in this block, answer = \"0\"\n\nBLOCK base_regime_code == \"L1_v3_dmid\"\nR1. if delta_rhs_distinct >= 1 then answer = \"1\"\nR2. if eq1_rhs_distinct <= 3 and side_coupling_delta <= 0.083333 then answer = \"0\"\nR3. if delta_lhs_nodes >= 0 and side_coupling_delta >= 0 then answer = \"1\"\nIf no rule matched in this block, answer = \"0\"\n\nBLOCK base_regime_code == \"L1_v3_dpos\"\nR1. if delta_rhs_distinct <= 0 then answer = \"0\"\nR2. if delta_lhs_nodes >= 0 and side_coupling_delta >= -0.083333 then answer = \"1\"\nIf no rule matched in this block, answer = \"0\"\n\nBLOCK base_regime_code == \"L1_vle2_dmid\"\nR1. if eq1_rhs_distinct <= 3 and side_coupling_delta <= 0.166667 then answer = \"0\"\nR2. if delta_lhs_nodes >= 0 and side_coupling_delta >= 0 then answer = \"1\"\nIf no rule matched in this block, answer = \"0\"\n\nBLOCK GLOBAL\nR1. if eq1_lhs_is_var >= 1 and eq1_var_count >= 3 then answer = \"1\"\nR2. if delta_rhs_distinct >= -1 and side_coupling_delta <= 0.166667 then answer = \"0\"\nR3. if eq1_lhs_is_var <= 0 and lhs_skeleton_eq <= 0 then answer = \"0\"\nR4. if delta_rhs_nodes <= 0 and eq1_var_count >= 3 then answer = \"1\"\nIf no rule matched in this block, answer = \"0\"\n\nSTEP 5.\nApply residual repair rules only if the current answer came from a fallback and no earlier explicit rule matched.\nR1. if delta_rhs_distinct >= 1 then answer = \"1\"\nIf no residual repair rule matched, keep the current answer unchanged.\n\nSTEP 6.\nApply final residual patches in this exact order.\n\nFALSE-VETO PATCH\n- If answer = \"1\" and base_regime_code == \"L0_vge4_dmid\" and eq2_rhs_distinct == 3, set answer = \"0\".\n\nTRUE-RESCUE PATCH 1\n- If answer = \"0\" and base_regime_code == \"L1_v3_dpos\" and delta_var_count == 1, set answer = \"1\".\n\nTRUE-RESCUE PATCH 2\n- If answer = \"0\" and base_regime_code == \"L0_v3_dmid\" and delta_var_count == 1, set answer = \"1\".\n\nSTEP 7.\n\n- If answer = \"1\", output exactly: VERDICT: TRUE\n- If answer = \"0\", output exactly: VERDICT: FALSE\n- If uncertain, still output exactly one of those two lines only.\n\nOutput rules:\n- Plain text only.\n- Use exactly the four headings below.\n- Keep the reasoning short and the support section decisive.\n\nRequired output:\nVERDICT: TRUE or FALSE\nREASONING: explain why the target is derivable or why it fails\nPROOF:\nfill this only when VERDICT is TRUE\nCOUNTEREXAMPLE:\nfill this only when VERDICT is FALSE\n\nChecks:\n- `VERDICT:` must be exactly `TRUE` or `FALSE`.\n- `REASONING:` must not be empty.\n- If `VERDICT: TRUE`, `PROOF:` must be non-empty and `COUNTEREXAMPLE:` empty.\n- If `VERDICT: FALSE`, `COUNTEREXAMPLE:` must be non-empty and `PROOF:` empty.\n</procedure>",
+    "publishedAt": "2026-04-19T01:42:57Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_ce80fa80-21a1-4f03-a70d-1588adaf432f",
+        "entityName": "Heath",
+        "publishedAt": "2026-04-19T01:42:57Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_60ad5bd5-faa5-46a0-ab81-26bb1ea1a4cf",
+    "publicCode": "EQT01-000085",
+    "remark": "Distilled from offline rule-mining, residual-error analysis, and iterative transfer testing on public hard sets. It computes a small structural feature set, routes each pair through regime-specific implication rules, then applies targeted veto and rescue patches. The goal was a compact, transferable, high-accuracy single-prompt classifier that generalizes across models and problem sets.",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

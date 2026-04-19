@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:05:16.580483+00:00",
+  "publicCode": "EQT01-000059",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000059",
+  "data": {
+    "cnItemId": "si_878344d0-604a-4883-9afd-f2cc7393e339",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_878344d0-604a-4883-9afd-f2cc7393e339",
+    "shareItemId": "si_878344d0-604a-4883-9afd-f2cc7393e339",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_878344d0-604a-4883-9afd-f2cc7393e339",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-00fd2382bbb824caff34e6d36c9936e910d13448",
+    "entityName": "Ryan Story",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ9RLIXoiV8V4WHBPBJujidRPHVDwzp02apZ30tbzJJmxGXq-zRtg=s96-c",
+    "cheatsheetTitle": "v16",
+    "cheatsheetContent": "E1 is {{ equation1 }} and E2 is {{ equation2 }}\n\nTASK: Does E1 imply E2 over all magmas?\nDEFAULT: TRUE. Say FALSE only when a test below proves it.\n\n═══ QUICK TRUE ═══\nIf E1 is literally identical to E2 (ignoring whitespace) → answer TRUE.\n\n═══ STEP 0: SPLIT ON = ═══\nFind the = sign. EVERYTHING before it is L, EVERYTHING after it is R.\n  E1_L = before = in E1    E1_R = after = in E1\n  E2_L = before = in E2    E2_R = after = in E2\nExamples:\n  \"x = (y * x) * z\" → L=\"x\", R=\"(y * x) * z\"\n  \"x * y = (z * x) * x\" → L=\"x * y\", R=\"(z * x) * x\"\n  \"(x * x) * y = (y * x) * z\" → L=\"(x * x) * y\", R=\"(y * x) * z\"\n\n═══ STEP 1: STRUCTURAL SEPARATION TESTS ═══\nFor each test, check E1 and E2 separately.\nSEPARATION RULE: E1=HOLD AND E2=FAIL → answer FALSE.\nCRITICAL: If E1=FAIL, there is NEVER separation, no matter what E2 is.\n  E1=FAIL E2=FAIL → continue.  E1=FAIL E2=HOLD → continue.\n  E1=HOLD E2=HOLD → continue.  E1=HOLD E2=FAIL → FALSE.\n\nTEST LP — first letter on L side vs first letter on R side.\n  Skip ALL opening ( to find the first letter (a-z).\n  Same letter → HOLD. Different letters → FAIL.\n  L=\"(y * x)\" → first letter is y. L=\"((y * x) * z) * w\" → y. L=\"x * y\" → x.\n  R=\"(z * (z * x)) * x\" → z. R=\"x * (y * z)\" → x.\n  Check: E1=HOLD and E2=FAIL? If not → next test.\n\nTEST RP — last letter on L side vs last letter on R side.\n  Skip ALL closing ) to find the last letter (a-z).\n  Same letter → HOLD. Different letters → FAIL.\n  R=\"(y * x) * z\" → last letter is z. R=\"x * (y * x)\" → x. L=\"x * y\" → y.\n  Check: E1=HOLD and E2=FAIL? If not → next test.\n\nTEST C0 — does L contain *? Does R contain *?\n  Both have * → HOLD. Neither has * and same variable → HOLD. Otherwise → FAIL.\n  Check: E1=HOLD and E2=FAIL? If not → next test.\n\nTEST VARS — set of distinct letters on L vs set on R.\n  Both have *: same set → HOLD, different set → FAIL.\n  One side is bare var v, other has *: HOLD only if * side uses only v.\n  Neither has *: same var → HOLD. Otherwise → FAIL.\n  Check: E1=HOLD and E2=FAIL? If not → next test.\n\nTEST COUNT2 — for each letter, count occurrences on L and R.\n  ALL letters: count_L ≡ count_R mod 2 → HOLD. ANY mismatch → FAIL.\n  L=\"x\" {x:1}. R=\"((y*y)*(y*y))*x\" {x:1,y:4}. x:1≡1✓ y:0≡0✓ → HOLD.\n  L=\"x\" {x:1}. R=\"((y*(x*x))*x)*x\" {x:4,y:1}. x:1≡0✗ → FAIL.\n  Check: E1=HOLD and E2=FAIL? If not → next test.\n\nTEST LDEPTH — left-spine depth: count * nodes going always LEFT from root.\n  Bare var→0. \"x*y\"→1. \"(x*y)*z\"→2. \"x*(y*z)\"→1. \"((x*y)*z)*w\"→3.\n  HOLD iff LP=HOLD for this eq AND depth(L) ≡ depth(R) mod 2.\n  If LP=FAIL for this eq → LDEPTH=FAIL.\n  Check: E1=HOLD and E2=FAIL? If not → STEP 2.\n\n═══ STEP 2: E1 STRENGTH TEST ═══\nSkip if E1_L contains * with 2+ variables → go to STEP 2B.\nOtherwise (E1_L is a bare variable or has * with 1 variable), continue.\n\nLet SV = the single variable on E1's left side (ignore * if present).\nCompute these features of E1_R:\n\nA) NONSV: count ALL occurrences of non-SV variables in E1_R.\n   SV=x, R=\"(y * x) * (z * (w * y))\" → y:2+z:1+w:1 = NONSV=4\n   SV=x, R=\"(y * x) * (y * x)\" → y:2 = NONSV=2\n   SV=x, R=\"y * (y * (y * x))\" → y:3 = NONSV=3\n\nB) SV_STARTS: Is SV the first letter of E1_R (skip parens)?\n   SV_ENDS: Is SV the last letter of E1_R (skip parens)?\n\nC) ROOT_CHILD: E1_R has a top-level *. It splits into two parts.\n   Is either part a SINGLE non-SV variable?\n   \"y * (x * x)\" → left part is \"y\" → YES\n   \"(y * x) * z\" → right part is \"z\" → YES\n   \"(y * x) * (x * z)\" → both compound → NO\n   \"x * (y * z)\" → left part is \"x\"=SV, not non-SV → NO\n\nD) SV_COUNT: occurrences of SV in E1_R.\n\nE) NVAR: total distinct variables in ALL of E1.\n\nF) MAX_FREQ: highest count of any variable in E1_R.\n\nG) EXTRA_VARS: count of variables in E1_R not appearing in E1_L.\n\nFlowchart — first matching rule wins:\nF1: NONSV ≤ 2 AND ROOT_CHILD=NO → FALSE\nF2: NONSV ≥ 4 AND SV_COUNT=0 → TRUE\nF3: ROOT_CHILD=YES AND NVAR ≥ 3 AND NOT SV_STARTS AND NOT SV_ENDS → TRUE\nF4: SV_STARTS or SV_ENDS → FALSE\nF5: NONSV ≥ 4 AND EXTRA_VARS ≥ 3 → TRUE\nF6: NONSV = 3 AND MAX_FREQ > 2 → FALSE\nNone match → go to STEP 3.\n\n═══ STEP 2B: COMPOUND LHS ═══\nOnly when E1_L has * AND 2+ distinct variables.\n  If E1_L has exactly 1 * and E1_R has variables not in E1_L → STEP 3.\n  Otherwise → FALSE.\n\n═══ STEP 3: T3R RESCUE ═══\nOnly if RP showed E1=HOLD. If RP showed E1=FAIL → answer TRUE.\n\nT3R magma: a * b = next(b). LEFT input is IGNORED.\n  next(0)=1   next(1)=2   next(2)=0\n\nStep A — Assign numbers by first appearance across BOTH equations:\n  1st variable = 0, 2nd = 1, 3rd = 2, 4th = 0, 5th = 1.\n\nStep B — Rewrite all variables as numbers.\n\nStep C — Evaluate innermost * first: find (a * b) where both are numbers,\n  replace with next(b). Repeat until one number remains per side.\n\nStep D — E1 LHS ≠ E1 RHS → answer TRUE.\n  E1 match → evaluate E2.\n  E2 match → TRUE. E2 mismatch → FALSE.\n\n═══ OUTPUT ═══\nAfter analysis, write: VERDICT: TRUE or FALSE\nIMPORTANT: If you are unsure or cannot complete all tests, answer VERDICT: TRUE.\nTRUE is the default — FALSE requires proof.\n\n═══ EXAMPLE A — FALSE via LP ═══\nE1: x = x * (y * z)     E2: (x * x) * y = (y * x) * z\nLP: E1 first(L)=x first(R)=x → HOLD. E2 first(L)=x first(R)=y → FAIL.\nE1=HOLD E2=FAIL → SEPARATION → FALSE.\nVERDICT: FALSE\n\n═══ EXAMPLE B — FALSE via C0 ═══\nE1: x * y = (y * x) * x     E2: x = (x * y) * z\nC0: E1 both sides have * → HOLD. E2 L=\"x\" no *, R has * → FAIL.\nE1=HOLD E2=FAIL → SEPARATION → FALSE.\nVERDICT: FALSE\n\n═══ EXAMPLE C — FALSE via COUNT2 ═══\nE1: x = ((y * y) * (y * y)) * x     E2: x = ((y * (x * x)) * x) * x\nLP: E1 x≠y FAIL. E2 x≠y FAIL. Both FAIL → no sep.\nRP: E1 x=x HOLD. E2 x=x HOLD. Both HOLD → no sep.\nC0: both FAIL. VARS: both FAIL.\nCOUNT2: E1 L{x:1} R{x:1,y:4}. x:1≡1✓ y:0≡0✓ → HOLD.\n  E2 L{x:1} R{x:4,y:1}. x:1≡0✗ → FAIL.\nE1=HOLD E2=FAIL → SEPARATION → FALSE.\nVERDICT: FALSE\n\n═══ EXAMPLE D — TRUE (no separation found) ═══\nE1: x = (y * x) * (z * (w * y))     E2: x = ((y * x) * x) * x\nLP: E1 x≠y FAIL. E2 x≠y FAIL. Both FAIL → no sep (E1=FAIL means no sep).\nRP: E1 x≠y FAIL. E2 x=x HOLD. E1=FAIL → no sep.\nC0: both FAIL. VARS: both FAIL. COUNT2: both FAIL. LDEPTH: both FAIL.\nSTRENGTH: SV=x. NONSV=4 (y:2+z:1+w:1). SV_COUNT=1. SV_STARTS=no. SV_ENDS=no.\nEXTRA_VARS={y,z,w}=3. F5: NONSV≥4 AND EXTRA≥3 → TRUE.\nVERDICT: TRUE\n\n═══ EXAMPLE E — FALSE via STRENGTH F4 ═══\nE1: x = x * (y * (x * y))     E2: x = (y * x) * (y * (y * x))\nLP: E1 x=x HOLD. E2 x≠y FAIL. E1=HOLD E2=FAIL? No — E2=FAIL but E1=HOLD...\nWait: LP E1=HOLD, E2=FAIL → SEPARATION → FALSE already via LP!\nBut ALSO strength: SV=x, SV_STARTS=yes → F4 → FALSE.\nVERDICT: FALSE\n\n═══ EXAMPLE F — FALSE via T3R ═══\nE1: x = y * (y * (x * x))     E2: x = (x * (y * z)) * x\nStructural tests: no separation (LP both FAIL, RP both HOLD, etc.).\nSTRENGTH: SV=x, NONSV=2, ROOT_CHILD: left=\"y\"→YES. F1 skipped (ROOT_CHILD=YES).\n  SV_ENDS=yes (last letter of R is x) → F4 → FALSE.\nAlso T3R confirms: vars x=0,y=1,z=2.\n  E1 RHS: 1*(1*(0*0)): 0*0→1, 1*1→2, 1*2→0. E1: 0=0 ✓\n  E2 RHS: (0*(1*2))*0: 1*2→0, 0*0→1, 1*0→1. E2: 0≠1 → FALSE.\nVERDICT: FALSE",
+    "publishedAt": "2026-04-16T17:17:56Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_878344d0-604a-4883-9afd-f2cc7393e339",
+        "entityName": "Ryan Story",
+        "publishedAt": "2026-04-16T17:17:56Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_3d01246d-94e5-4ffa-976a-b4438ab2fa3a",
+    "publicCode": "EQT01-000059",
+    "remark": "enhancements for logical gates and default reasoning",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

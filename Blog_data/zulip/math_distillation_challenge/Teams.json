@@ -1,0 +1,60 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Teams",
+  "message_count": 2,
+  "messages": [
+    {
+      "id": 1653,
+      "sender_id": 196,
+      "content": "<p>It looks like I can only have 5 members on my team:<br>\n<a href=\"/user_uploads/5/b5/Iy8SPKNpgp5SexevHe3iGBGZ/image.png\">image.png</a><br>\nWhat should I do if my team grows beyond 5 people?</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/b5/Iy8SPKNpgp5SexevHe3iGBGZ/image.png\" title=\"image.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2546x1212\" src=\"/user_uploads/thumbnail/5/b5/Iy8SPKNpgp5SexevHe3iGBGZ/image.png/840x560.webp\"></a></div>",
+      "recipient_id": 43,
+      "timestamp": 1776467936,
+      "client": "website",
+      "subject": "Teams",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Ian Norris",
+      "sender_email": "user196@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/3a50ca8b1fc6d248e1f571b5d9309129?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-17T23:18:56.000Z"
+    },
+    {
+      "id": 1657,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"196\">@Ian Norris</span> Sorry, for fairness reasons, the current team size limit is 5 members. If you have a special case, please feel free to DM me. Thank you for your understanding!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776473890,
+      "client": "ZulipElectron",
+      "subject": "Teams",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-18T00:58:10.000Z"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-19T06:11:30.926478+00:00",
+  "publicCode": "EQT01-000088",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000088",
+  "data": {
+    "cnItemId": "si_dd2dfa43-d83b-4593-8d2a-162744e15d92",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_dd2dfa43-d83b-4593-8d2a-162744e15d92",
+    "shareItemId": "si_dd2dfa43-d83b-4593-8d2a-162744e15d92",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_dd2dfa43-d83b-4593-8d2a-162744e15d92",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-9ad16e0f35850fd7bbb78f10288f6947cffb9d10",
+    "entityName": "yilongguo",
+    "entityAvatarUrl": "https://avatars.githubusercontent.com/u/49829591?v=4",
+    "cheatsheetTitle": "cheatsheet_0419",
+    "cheatsheetContent": "You are an expert in universal algebra and equational logic.\nTask: decide whether Equation A implies Equation B over all magmas.\n\nEquation A: {{ equation1 }}\nEquation B: {{ equation2 }}\n\nOUTPUT CONTRACT (STRICT):\n- Your final line must be exactly one token: True or False.\n- No markdown, no punctuation, no text after final line.\n\nCORE SEMANTICS (MUST APPLY):\n- \"A implies B\" means: for every magma M, if M satisfies A then M satisfies B.\n- To output False, you must provide a coherent counterexample idea:\n  one concrete finite magma where A holds universally but B fails for at least one assignment.\n- To output True, you must provide an actual derivation argument, or prove A forces trivial magma.\n- Do not output True only because counterexample search failed.\n\nHIGH-PRIORITY SAFETY CHECKS:\n1) If you claim \"trivial magma\", show a valid reason that all elements are equal.\n2) If you claim \"counterexample\", ensure A is checked universally in that magma.\n3) If your reasoning contains \"assume\", \"likely\", \"plausible\", or heuristic-only steps,\n   do NOT conclude True from that; prefer False only with real counterexample, otherwise continue reasoning.\n4) Never invent algebraic laws (associativity/commutativity/cancellation) unless derived from A.\n\nFAST TRUE RULES (ONLY THESE ARE AUTOMATIC):\n- If A has form x = t where x does not occur in t, then A forces trivial magma => True.\n- If A is obviously variable-disjoint equality with enough variables that forces all terms equal\n  (e.g. patterns like x*y = z*w with all symbols independent), only then use triviality => True.\n\nDECISION POLICY (ACCURACY-FIRST):\n- When uncertain, do structured analysis before verdict:\n  a) parse variable occurrences and term trees;\n  b) test whether A really forces collapse/triviality;\n  c) if not, attempt a concrete 2-element table counterexample;\n  d) only after successful universal check of A may you return False.\n- Avoid \"optimistic True\" based on pattern similarity.\n\nRECOMMENDED FALSE SEARCH:\n- Try 2-element magmas S={0,1} by table (00,01,10,11), test all 16 tables if needed.\n- Good candidates: left projection, right projection, constants, AND/XNOR-like tables.\n- For each candidate: verify A for all assignments, then find one assignment violating B.\n\nBefore final line, run internal consistency check:\n- If your explanation says A might fail in your candidate structure, it is not a valid counterexample.\n- If your explanation includes only heuristics and no derivation, final verdict cannot be True.\n\nKeep reasoning concise and concrete, then print final line:\nTrue",
+    "publishedAt": "2026-04-19T04:02:43Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_dd2dfa43-d83b-4593-8d2a-162744e15d92",
+        "entityName": "yilongguo",
+        "publishedAt": "2026-04-19T04:02:43Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_f5f309a7-85cc-4d1c-a36c-4981bb9a99ce",
+    "publicCode": "EQT01-000088",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

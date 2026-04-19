@@ -1,0 +1,50 @@
+{
+  "fetched_at": "2026-04-19T06:05:15.305826+00:00",
+  "publicCode": "EQT01-000056",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000056",
+  "data": {
+    "cnItemId": "si_4d5251e6-c13f-487d-8cce-61a898b73aaa",
+    "parentCnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "rootCnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "shareItemId": "si_4d5251e6-c13f-487d-8cce-61a898b73aaa",
+    "parentShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "rootShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-957f248a4063a1fbf8605556a5e7dae60f5f17b1",
+    "entityName": "Chi Po Choi",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocK66CJwv4CoVVcfUZB5a7AmyqfoBNMCvrOEwKH-sqVKzVOyeQ=s96-c",
+    "cheatsheetTitle": "hybrid006",
+    "cheatsheetContent": "Decide whether equation A ({{ equation1 }}) implies equation B ({{ equation2 }}) over all non-empty magmas.\n\nYou have THREE phases. Execute in order. Stop at the first phase that produces a verdict.\n\nOutput exactly this format:\nVERDICT: TRUE or FALSE\nREASONING: ...\nPROOF: non-empty iff TRUE, empty otherwise\nCOUNTEREXAMPLE: non-empty iff FALSE, empty otherwise\n\n================================\nPHASE 1: STRUCTURAL TRUE CHECK\n================================\n\nParse equation A. Identify LHS and RHS (split at `=`).\n\nCompute these features for equation A only:\n1. `bare`: exactly one side of A is a single variable.\n2. `vc`: number of distinct variables in all of A.\n3. `rd`: number of distinct variables on the RHS of A.\n4. `imb`: for each variable, compute |count_on_LHS - count_on_RHS|. Sum all.\n5. `lhs_square`: the LHS contains a subtree S*S where both children are identical.\n\nIf `bare` is TRUE, let x be the single-variable side, T the other side. Compute:\n6. `xc`: times x appears in T.\n7. `rhs_only`: distinct variables in T that are not x.\n\nApply the first matching rule. If matched, answer immediately.\n\n- T1: if `bare`, `xc = 0`, and `rhs_only >= 2`, answer TRUE.\n- T2: if `bare` and `vc >= 5`, answer TRUE.\n- T3: if `bare`, `vc = 4`, and `imb >= 5`, answer TRUE.\n- T4: if `bare`, `vc = 4`, `rd >= 4`, and `lhs_square = FALSE`, answer TRUE.\n- T5: if `bare`, `vc = 3`, and `rd <= 2`, answer TRUE.\n- T6: if `bare`, `vc = 3`, and `imb >= 5`, answer TRUE.\n- T7: if `bare`, `vc = 4`, `rd <= 3`, and `imb >= 4`, answer TRUE.\n\nIf a rule matched: VERDICT: TRUE, REASONING: the rule code, PROOF: structural rule. Stop here.\n\nIf no rule matched, go to Phase 2.\n\n================================\nPHASE 2: COUNTEREXAMPLE SEARCH\n================================\n\nTry to find a finite magma satisfying A but violating B. A magma on {0,1,...,n-1} is given by its operation table: `table[i][j]` is the result of `i * j`.\n\nTry these magmas in this order:\n\n2-element magmas on {0,1}:\n1. Constant-0: `[[0,0],[0,0]]` (x*y = 0 always)\n2. Left projection: `[[0,0],[1,1]]` (x*y = x)\n3. Right projection: `[[0,1],[0,1]]` (x*y = y)\n4. XOR: `[[0,1],[1,0]]` (x*y = x+y mod 2)\n5. AND: `[[0,0],[0,1]]` (x*y = min(x,y))\n6. Asymmetric: `[[0,1],[0,0]]`\n7. Negated-left: `[[1,1],[0,0]]`\n8. Asymmetric-2: `[[0,0],[1,0]]`\n\n3-element magmas on {0,1,2}:\n9. Constant-row: `[[1,1,1],[2,2,2],[0,0,0]]`\n10. Sparse: `[[0,0,0],[0,0,0],[0,1,0]]`\n11. Cycle: `[[1,2,0],[1,2,0],[1,2,0]]`\n12. Step: `[[0,0,0],[0,0,2],[2,2,2]]`\n\nFor each candidate:\n- Check A for ALL variable assignments on the domain. If any assignment makes A's two sides unequal, discard this magma immediately.\n- If A holds for all assignments, check B for ALL variable assignments. If any assignment makes B's two sides unequal, you found a valid counterexample.\n\nValidation:\n- Both sides of B must evaluate to DIFFERENT values. If they are equal (e.g. 0 = 0), that assignment is NOT a counterexample.\n- A must hold for ALL assignments, not just one.\n\nIf counterexample found: VERDICT: FALSE, COUNTEREXAMPLE: state the table, then show one assignment where A holds but B fails, with both sides evaluated. Stop here.\n\nIf no counterexample found, go to Phase 3.\n\n================================\nPHASE 3: PROOF ATTEMPT\n================================\n\nSkip this phase if you are a Llama model. Go directly to the default verdict below.\n\nTry these four proof strategies in order. Stop at the first that succeeds.\n\nSTRATEGY A — Singleton collapse (most common, ~45% of proofs):\nTry to derive x = y from equation A, which means only 1-element magmas satisfy A, so B holds trivially.\nMethod:\n- In A, set all variables except x to x. You get x = f(x) for some expression f.\n- Then in A, set some variables to different values to derive that two different variables must be equal.\n- If you can show x = y for arbitrary x, y, then the magma has one element and B holds.\nExample: from A: `x = y * (y * (x * (x * z)))`, set z=x, y=x: get x = x*(x*(x*(x*x))). Set y=a: a = a*(a*(a*(a*a))). Now the original A with y arbitrary: x = y*(...), and since y*(...) depends on x, derive x = y.\n\nSTRATEGY B — Absorption collapse (~16% of proofs):\nTry to derive x*y = x (left projection) or x*y = y (right projection) from A.\nMethod:\n- From A, substitute values to show the operation ignores one argument.\n- If x*y = x for all x,y: substitute into B, replacing every a*b with a. Check if B simplifies to a tautology.\n- If x*y = y for all x,y: substitute into B, replacing every a*b with b. Check if B simplifies to a tautology.\n\nSTRATEGY C — Constant collapse (~9% of proofs):\nTry to derive that all products are equal: x*y = z*w for all x,y,z,w.\nMethod:\n- From A, show that x*x = y*y (all squares equal), then x*y = x*x (products equal squares).\n- If all products equal some constant c: substitute into B, every product becomes c. Check if B becomes a tautology.\n\nSTRATEGY D — Direct rewrite (~2% of proofs):\nCheck if B follows from A by simple substitution.\n- Can you obtain B's LHS = B's RHS by applying A as a rewrite rule (replace LHS of A with RHS of A, or vice versa) one or two times?\n- Is B just A with variables renamed?\n\nStrict proof rule:\n- You must show the derivation explicitly. Do not just claim \"A forces singleton\" without writing the substitution steps.\n- If no strategy produces a valid derivation, do not guess.\n\nIf a valid proof is found: VERDICT: TRUE, PROOF: the derivation (max 6 lines). Stop here.\n\nIf no proof found or phase skipped: VERDICT: TRUE, REASONING: no counterexample found, PROOF: default.\n\nKeep the answer short: REASONING at most 60 words, PROOF or COUNTEREXAMPLE at most 6 lines.",
+    "publishedAt": "2026-04-16T05:11:58Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+        "entityName": "Heath",
+        "publishedAt": "2026-04-04T10:14:57Z",
+        "shareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d"
+      },
+      {
+        "shareItemId": "si_4d5251e6-c13f-487d-8cce-61a898b73aaa",
+        "entityName": "Chi Po Choi",
+        "publishedAt": "2026-04-16T05:11:58Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_a3948997-ad16-49e7-914d-5c151639a34a",
+    "publicCode": "EQT01-000056",
+    "remark": "1: structural check, 2: counterexample 3: proof",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

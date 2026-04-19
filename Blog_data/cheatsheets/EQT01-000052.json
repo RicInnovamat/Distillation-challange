@@ -1,3 +1,50 @@
 {
-  "detail": "Not Found"
+  "fetched_at": "2026-04-19T06:04:51.054963+00:00",
+  "publicCode": "EQT01-000052",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000052",
+  "data": {
+    "cnItemId": "si_47de2d43-f959-4fc6-8bef-cdfe5100acc3",
+    "parentCnItemId": "cn_ae700e9990054a9a96f964fa7d034c66",
+    "rootCnItemId": "cn_ae700e9990054a9a96f964fa7d034c66",
+    "shareItemId": "si_47de2d43-f959-4fc6-8bef-cdfe5100acc3",
+    "parentShareItemId": "cn_ae700e9990054a9a96f964fa7d034c66",
+    "rootShareItemId": "cn_ae700e9990054a9a96f964fa7d034c66",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-0f94f505bb43e70ace77208e21f7dcdabf4989ca",
+    "entityName": "Woon Siang Yi",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLo2jLkWnJO0ZMrI7HqNbzTdUpoqDv7DXGEPHwtIrFgD3vkVw=s96-c",
+    "cheatsheetTitle": "hard3_overfitted",
+    "cheatsheetContent": "Goal: decide whether Eq1 forces Eq2 in all magmas by executing this rule engine exactly.\n\nEquation 1: {{ equation1 }}\nEquation 2: {{ equation2 }}\n\nA magma is only a set with one binary operation `*`.\n\n- This is a deterministic classifier, not free-form proving.\n- Work like pen and paper. Keep all parentheses.\n- Never invent a search result, table, or counterexample.\n- Use only the rules below.\n- Stop at the first decisive rule.\n- If no rule returns `FALSE`, return `TRUE`.\n\nCall Eq1 the source `A` and Eq2 the target `B`.\n\n## Step 1: Parse exact features\n\nFor each side of `A` and `B`, write:\n\n- leaf list from left to right\n- leftmost leaf\n- rightmost leaf\n- left depth: number of left-edges on the path to the leftmost leaf\n- right depth: number of right-edges on the path to the rightmost leaf\n\nExamples:\n\n- `x * (y * z)` has leftmost leaf `x` with left depth `1`, and rightmost leaf `z` with right depth `2`\n- `(x * z) * w` has leftmost leaf `x` with left depth `2`, and rightmost leaf `w` with right depth `1`\n\nFor each equation `E = L = R`, compute:\n\n- `vars(E)`: number of distinct variables in `L` or `R`\n- `dup(E)`: total number of leaves in `L` and `R`, minus `vars(E)`\n- `LP(E)`: the leftmost leaves of `L` and `R` match\n- `RP(E)`: the rightmost leaves of `L` and `R` match\n\nIf exactly one side of `E` is a lone variable `x` and the other side is not, call `E` bare. Then compute:\n\n- the bare variable `x`\n- all occurrence paths of `x` in the non-bare side, using `L` and `R`\n- `kind(E)`:\n  - `L` if the first occurrence path uses only `L`\n  - `R` if the first occurrence path uses only `R`\n  - `M` if the first occurrence path mixes `L` and `R`\n  - `X` if `x` never appears in the non-bare side\n  - `N` if `E` is not bare\n- `shortest_len(E)`: length of the shortest occurrence path, or `-1` for `N`\n- `occ(E)`: number of occurrences of the bare variable in the non-bare side, or `0` for `N`\n\n## Step 2: Exact shortcut block\n\nCheck in this order.\n\n`X1` If the two sides of `B` are literally identical, answer `TRUE`.\n\n`X2` If `A` and `B` are the same law up to one consistent renaming of variables, allowing a side-swap of `A`, answer `TRUE`.\n\n`X3` If one side of `A` is a lone variable missing from the other side, answer `TRUE`.\nReason: then `A` collapses every model to one element.\n\n## Step 3: Forced-behavior block\n\nThese are exact algebraic shortcuts.\n\n`F1` If `A` is `x = x * y` up to renaming and side-swap, with `x != y`, then `A` forces left projection `a * b = a`.\nAnswer `TRUE` iff `LP(B)` is true; otherwise `FALSE`.\n\n`F2` If `A` is `x = y * x` up to renaming and side-swap, with `x != y`, then `A` forces right projection `a * b = b`.\nAnswer `TRUE` iff `RP(B)` is true; otherwise `FALSE`.\n\n`F3` If both sides of `A` are binary products of variables, have the same left child, and have different right children, then `A` forces left-unary behavior `a * b = f(a)`.\nFor `B`, compute `(leftmost leaf, left depth)` on each side.\nIf the pairs match, answer `TRUE`; otherwise `FALSE`.\nExample: `x * (y * z)` gives `(x,1)`, while `(x * z) * w` gives `(x,2)`, so they do not match.\n\n`F4` If both sides of `A` are binary products of variables, have the same right child, and have different left children, then `A` forces right-unary behavior `a * b = g(b)`.\nFor `B`, compute `(rightmost leaf, right depth)` on each side.\nIf the pairs match, answer `TRUE`; otherwise `FALSE`.\n\nIf no exact rule fires, continue.\n\n## Step 4: Affine refutation block\n\nUse a probe operation of the form `u * v = p*u + q*v + c (mod m)`.\nUnder one fixed probe, every term becomes a linear form\n`a1*x1 + ... + ak*xk + const (mod m)`.\n\nCompute terms recursively:\n\n- a variable becomes coefficient `1` on itself, `0` on the other variables, constant `0`\n- if `P` has vector `pvec` and constant `pc`, and `Q` has vector `qvec` and constant `qc`, then\n  `P * Q` has vector `p*pvec + q*qvec`\n  and constant `p*pc + q*qc + c`\n  all modulo `m`\n\nTwo terms are equal under the probe iff every variable coefficient and the constant match.\n\nTry these probes in order:\n\n- `A1`: `u * v = v + 1 (mod 3)`\n- `A2`: `u * v = u + 1 (mod 3)`\n- `A3`: `u * v = u + v (mod 3)`\n- `A4`: `u * v = u - v (mod 3)`\n- `A5`: `u * v = -u - v (mod 3)`\n- `A6`: `u * v = -u + 2v (mod 4)`\n- `A7`: `u * v = u + 2v (mod 4)`\n- `A8`: `u * v = 2u + v (mod 4)`\n- `A9`: `u * v = 2u + v + 1 (mod 4)`\n- `A10`: `u * v = -2u - 2v (mod 5)`\n\nFor each probe:\n\n1. Compute the affine normal form of `A.lhs`.\n2. Compute the affine normal form of `A.rhs`.\n3. If those differ, discard this probe and move on.\n4. If they match, compute the affine normal forms of `B.lhs` and `B.rhs`.\n5. If the target forms differ, answer `FALSE`.\n6. If the target forms match, move to the next probe.\n\nImportant:\n\n- Do not say a probe works unless you explicitly computed all four normal forms.\n- Do not say \"no counterexample found by search\".\n- If every probe fails to refute, continue.\n\n## Step 5: Structural reject heuristics\n\nCompute this feature row:\n\n- `s_kind`, `s_len`, `s_occ`, `s_dup`, `s_vars`, `s_bare`, `RP(A)`\n- `t_kind`, `t_len`, `t_occ`, `t_dup`, `t_vars`, `t_bare`, `RP(B)`\n\nThen check:\n\n`H1` If `s_kind = M`, `s_vars >= 4`, and `t_kind = X`, answer `FALSE`.\n\n`H2` If `s_kind = L`, `s_len = 1`, `s_dup >= 3`, `t_bare = FALSE`, `t_dup >= 3`, and `t_vars <= 3`, answer `FALSE`.\n\n`H3` If `s_kind = M`, `s_occ = 2`, and `RP(A)` is false, answer `FALSE`.\n\n`H4` If `s_len = 1` and `s_occ = 3`, answer `FALSE`.\n\n`H5` If `s_kind = M`, `s_len = 3`, and `s_occ = 2`, answer `FALSE`.\n\n`H6` If `s_kind = L`, `t_occ = 2`, and `t_vars = 4`, answer `FALSE`.\n\nIf no reject rule fires, answer `TRUE`.\n\n## Step 6: Full TRUE walkthrough\n\nTake:\n\n- `A: x = y * x`\n- `B: x = x * (x * ((y * z) * x))`\n\nTrace:\n\n1. `A` matches `F2`, because it is `x = y * x`.\n2. So `A` forces right projection.\n3. Under right projection, every term evaluates to its rightmost leaf.\n4. The left side of `B` has rightmost leaf `x`.\n5. The right side `x * (x * ((y * z) * x))` also has rightmost leaf `x`.\n6. Therefore `RP(B)` is true.\n7. `F2` returns `TRUE`.\n8. Stop. Do not run Step 4 or Step 5.\n\n## Step 7: Full FALSE walkthrough\n\nTake:\n\n- `A: x = x * (y * (z * x))`\n- `B: x = (((x * x) * x) * x) * x`\n\nUse probe `A1: u * v = v + 1 (mod 3)`.\n\n1. `A.lhs = x`.\n2. `z * x` becomes `x + 1`.\n3. `y * (z * x)` becomes `x + 2`.\n4. `x * (y * (z * x))` becomes `x + 3 = x (mod 3)`.\n5. So the source holds under `A1`.\n6. `x * x` becomes `x + 1`.\n7. `(x * x) * x` becomes `x + 1`.\n8. `((x * x) * x) * x` becomes `x + 1`.\n9. `(((x * x) * x) * x) * x` becomes `x + 1`.\n10. So `B.lhs = x` but `B.rhs = x + 1`.\n11. The target fails under the same probe.\n12. Therefore `A1` is a counterexample and the answer is `FALSE`.\n\n## Output format\n\nUse exactly these four lines and nothing else:\n\nREASONING: name the decisive rule only, using one of `X1 X2 X3 F1 F2 F3 F4 A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 H1 H2 H3 H4 H5 H6 DEFAULT`.\nPROOF: one short sentence if VERDICT is TRUE, otherwise empty.\nCOUNTEREXAMPLE: one short sentence if VERDICT is FALSE, otherwise empty.\nVERDICT: TRUE or FALSE",
+    "publishedAt": "2026-04-15T17:49:56Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_ae700e9990054a9a96f964fa7d034c66",
+        "entityName": "Adam Betka",
+        "publishedAt": "2026-04-03T14:31:01Z",
+        "shareItemId": "cn_ae700e9990054a9a96f964fa7d034c66"
+      },
+      {
+        "shareItemId": "si_47de2d43-f959-4fc6-8bef-cdfe5100acc3",
+        "entityName": "Woon Siang Yi",
+        "publishedAt": "2026-04-15T17:49:56Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_73ef01c6-3208-4f16-91f2-ca108fe9459e",
+    "publicCode": "EQT01-000052",
+    "remark": "Rule-based approach. Overfitted to the hard3 dataset using gpt-oss. Does not generalize to other models or datasets.",
+    "likeCount": 0,
+    "favoriteCount": 1,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
 }
