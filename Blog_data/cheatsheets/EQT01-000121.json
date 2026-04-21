@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-21T06:18:39.536473+00:00",
+  "publicCode": "EQT01-000121",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000121",
+  "data": {
+    "cnItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+    "shareItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-e26da91c0122b84992677a70f30802a9a2a9dc34",
+    "entityName": "M G",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "M-Claude - \"The Collapse Oracle\" v2607",
+    "cheatsheetContent": "# Equational Implication Over Magmas\n\nDetermine: does {{ equation1 }} (Eq1) IMPLY {{ equation2 }} (Eq2)?\n\n## Step 1: Classify each equation\n\nFirst check the LOOKUP TABLE below. If not found, use HEURISTIC rules.\n\n### Heuristic classification (if not in table)\nCount distinct variables (V) and check LHS type.\n\nV-type LHS (starts \"x =\"):\n  4+ vars → C\n  3 vars with ≤2 ops → C\n  3 vars with 3-4 ops → L25\n  2 vars → L09\n  1 var → L00\n\nE-type LHS (e.g. \"x*y =\"):\n  5+ vars → L26\n  4 vars → L22\n  3 vars → L17\n  2 vars → L05\n  1 var → L00\n\n### LOOKUP TABLE\n\"x = y * y\":C\n\"x = y * (z * (y * z))\":C\n\"x = (y * (y * z)) * y\":C\n\"x = ((y * y) * y) * y\":C\n\"x = ((y * y) * z) * y\":C\n\"x = y * (y * (z * (z * y)))\":C\n\"x = y * (z * ((y * x) * y))\":C\n\"x = y * ((y * (y * z)) * z)\":C\n\"x = y * (((x * x) * x) * z)\":C\n\"x = y * (((z * z) * y) * z)\":C\n\"x = (y * y) * (z * (x * y))\":C\n\"x = (y * z) * ((z * y) * z)\":C\n\"x = (y * (z * (x * x))) * z\":C\n\"x = (y * ((x * x) * y)) * z\":C\n\"x = (y * ((y * y) * y)) * y\":C\n\"x = (y * ((z * x) * x)) * y\":C\n\"x = (y * ((z * x) * y)) * y\":C\n\"x = ((y * x) * (z * z)) * z\":C\n\"x = ((y * (y * y)) * x) * z\":C\n\"x = (((y * x) * x) * z) * y\":C\n\"x = (((y * x) * z) * z) * z\":C\n\"x * y = (y * x) * z\":L29A\n\"x * y = (z * x) * x\":L29A\n\"x * y = (z * z) * z\":L29A\n\"x * y = y * (y * (x * z))\":L29A\n\"x * y = z * (y * (z * w))\":L29A\n\"x * y = z * (y * (w * x))\":L29A\n\"x * y = z * ((x * w) * u)\":L29A\n\"x * y = z * ((w * y) * u)\":L29A\n\"x * y = (y * z) * (y * x)\":L29A\n\"x * y = (z * z) * (x * x)\":L29A\n\"x * y = (z * z) * (w * w)\":L29A\n\"x * y = (z * w) * (x * z)\":L29A\n\"x * y = (y * (x * z)) * x\":L29A\n\"x * y = (y * (y * z)) * w\":L29A\n\"x * y = (z * (y * x)) * w\":L29A\n\"x * y = (z * (w * u)) * v\":L29A\n\"x * y = ((z * y) * w) * x\":L29A\n\"x * y = ((z * z) * w) * x\":L29A\n\"x = y * ((z * z) * x)\":L29B\n\"x = (y * x) * (y * x)\":L29B\n\"x = (y * y) * (x * x)\":L29B\n\"x = y * ((x * (z * x)) * x)\":L29B\n\"x = y * ((y * (y * z)) * x)\":L29B\n\"x = y * ((z * (w * w)) * x)\":L29B\n\"x = y * (((z * x) * x) * x)\":L29B\n\"x = (y * x) * ((z * z) * x)\":L29B\n\"x = (y * (y * z)) * (x * x)\":L29B\n\"x = (y * (z * z)) * (w * x)\":L29B\n\"x = (y * (z * w)) * (x * x)\":L29B\n\"x = ((y * z) * y) * (x * x)\":L29B\n\"x = x * (y * (x * z))\":L29C\n\"x = x * (y * (x * (y * z)))\":L29C\n\"x = x * (y * (y * (x * z)))\":L29C\n\"x = x * (y * ((z * w) * z))\":L29C\n\"x = x * ((y * z) * (x * w))\":L29C\n\"x = x * ((y * z) * (w * z))\":L29C\n\"x = x * ((y * (z * w)) * w)\":L29C\n\"x = y * (x * ((z * w) * x))\":L29D\n\"x = y * ((y * x) * (z * x))\":L29D\n\"x = y * ((y * y) * (z * x))\":L29D\n\"x = y * ((z * w) * (u * x))\":L29D\n\"x = (y * z) * (w * (x * x))\":L29D\n\"x * y = (x * x) * x\":L29E\n\"x * y = (x * (z * z)) * x\":L29E\n\"x * y = (x * (z * z)) * w\":L29E\n\"x * y = (x * (z * w)) * u\":L29E\n\"x = (x * (x * (y * y))) * z\":L29F\n\"x = (x * (y * (y * y))) * z\":L29F\n\"x = (x * ((y * x) * z)) * w\":L29F\n\"x = (x * ((y * z) * w)) * u\":L29F\n\"x = y * (x * (z * (x * x)))\":L29G\n\"x = y * (y * (z * (x * x)))\":L29G\n\"x = (y * ((z * x) * z)) * x\":L29H\n\"x = (((y * x) * y) * z) * x\":L29H\n\"x = ((x * y) * (z * x)) * y\":L29I\n\"x = ((x * y) * (z * w)) * u\":L29I\n\"x = (((x * y) * y) * z) * w\":L29J\n\"x = (((x * y) * z) * z) * z\":L29J\n\"x * y = z * ((w * y) * y)\":L29K\n\"x * y = (y * z) * (z * y)\":L29K\n\"x = ((y * z) * (y * x)) * x\":L29L\n\"x * y = ((x * z) * w) * x\":L29M\n\n## Step 2: Apply rules\n\nRule 1 -- COLLAPSE: If Eq1 tag is C → answer TRUE.\nRule 2 -- Target is C, source not C → answer FALSE.\nRule 3 -- E-type Eq1 NEVER implies V-type Eq2 → answer FALSE.\nRule 3b -- V-type Eq1 to V-type Eq2: if both tagged in same L29 sub-group → TRUE; if Eq2 is L29 and Eq1 is same or higher non-collapse V tag → TRUE.\nRule 4 -- L29 sub-groups:\n  Same letter (e.g. both L29A) → TRUE.\n  L29 cross-letter implication table (Eq1 → Eq2):\n    L29H → any L29 letter: TRUE\n    L29A → L29E: TRUE\n    L29A → L29K: TRUE\n    L29A → L29M: TRUE\n    L29C → L29E: TRUE\n    L29C → L29F: TRUE\n    L29C → L29I: TRUE\n    L29C → L29J: TRUE\n    L29C → L29M: TRUE\n    L29B → L29G: TRUE\n    L29E → L29M: TRUE\n    L29F → L29J: TRUE\n    L29F → L29M: TRUE\n  All other cross-letter L29→L29 pairs: FALSE.\nRule 5 -- Level comparison:\n  L29x → non-L29: TRUE\n  Non-L29 → L29x: FALSE\n  L28 → L00 or L01: TRUE\n  L28 → L02 or higher: FALSE\n  L24-L27 → L00: TRUE\n  L24-L27 → L01 or higher: FALSE\n  L11-L23 → L00: TRUE\n  L11-L23 → L01 or higher: FALSE\n  L00-L10 → anything: FALSE\n  Same level (not L29) → same level: FALSE\n\n## Step 3: Default\nIf still uncertain: TRUE.\n\n## OUTPUT\nAnswer ONLY with:\nVERDICT: TRUE\nor\nVERDICT: FALSE\n\n## Notes\nMost equational implications in this dataset are TRUE when Eq1 is V-type (\"x = ...\"). E-type (\"x * y = ...\") Eq1 cannot imply V-type Eq2.",
+    "publishedAt": "2026-04-20T22:35:17Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+        "entityName": "M G",
+        "publishedAt": "2026-04-20T22:35:17Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_cd6396aa-061d-4a24-9cd9-414d1f3dbbc4",
+    "publicCode": "EQT01-000121",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}
