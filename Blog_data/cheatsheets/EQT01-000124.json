@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-04-21T06:18:41.445472+00:00",
+  "publicCode": "EQT01-000124",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000124",
+  "data": {
+    "cnItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+    "shareItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+    "entityName": "Heath",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLa399HpdYBotEiZt9l7JZQAAnYKg6HC6jQQC0LE9IAgKYVGeXy=s96-c",
+    "cheatsheetTitle": "distilled-rules-17",
+    "cheatsheetContent": "<task>\nYou are a strict symbolic procedure runner.\n\nYou must execute the procedure exactly in order.\nDo not skip steps.\nDo not invent rules.\n</task>\n\n<input>\nEQ1 = {{ equation1 }}\nEQ2 = {{ equation2 }}\n</input>\n\n<procedure>\nSTEP 1.\nParse EQ1 and EQ2 as binary trees.\n- Every variable symbol is an atom.\n- Every binary operator symbol is the same generic binary operation.\n- Parentheses override grouping.\n- Otherwise read binary expressions left-associatively.\n- Treat any non-variable infix symbol such as *, ◇, ·, ○, or ∘ as that same generic binary operation.\n\nSTEP 2.\nCompute exactly these quantities and no others.\n\n1. eq1_lhs_is_var\n2. eq1_var_count\n3. delta_rhs_distinct\n4. side_coupling_delta\n5. lhs_skeleton_eq\n6. delta_rhs_nodes\n7. delta_lhs_nodes\n8. new_total_vars_count\n9. eq1_rhs_distinct\n10. eq2_rhs_distinct\n11. eq2_lhs_is_var\n12. eq2_var_count\n13. eq1_lhs_nodes\n14. delta_var_count\n15. base_regime_code\n\nDefinitions:\n- eq1_lhs_is_var = 1 iff LHS(EQ1) is a single variable, else 0.\n- eq1_var_count = number of distinct variables appearing anywhere in EQ1.\n- delta_rhs_distinct = distinct RHS variable count in EQ2 minus distinct RHS variable count in EQ1.\n- side_coupling_delta = coupling(EQ2) minus coupling(EQ1), where coupling(EQk) = (# variables appearing on both sides)/(# variables appearing anywhere in that equation).\n- lhs_skeleton_eq = 1 iff LHS(EQ1) and LHS(EQ2) have the same tree skeleton, else 0.\n- delta_rhs_nodes = RHS node count in EQ2 minus RHS node count in EQ1.\n- delta_lhs_nodes = LHS node count in EQ2 minus LHS node count in EQ1.\n- new_total_vars_count = number of distinct variables appearing in EQ2 but not EQ1.\n- eq1_rhs_distinct = number of distinct variables appearing in RHS(EQ1).\n- eq2_rhs_distinct = number of distinct variables appearing in RHS(EQ2).\n- eq2_lhs_is_var = 1 iff LHS(EQ2) is a single variable, else 0.\n- eq2_var_count = number of distinct variables appearing anywhere in EQ2.\n- eq1_lhs_nodes = total node count in LHS(EQ1).\n- delta_var_count = eq2_var_count minus eq1_var_count.\n- base_regime_code:\n  lhs_flag = \"L1\" if eq1_lhs_is_var >= 1 else \"L0\"\n  var_bucket = \"vle2\" if eq1_var_count <= 2 else \"v3\" if eq1_var_count == 3 else \"vge4\"\n  lhs_node_bucket = \"dneg2\" if delta_lhs_nodes <= -2 else \"dmid\" if delta_lhs_nodes <= 0 else \"dpos\"\n  base_regime_code = lhs_flag + \"_\" + var_bucket + \"_\" + lhs_node_bucket\n\nSTEP 3.\nApply exact direct rules first, in this order.\nUse the first matching rule only.\n\nA3.\nIf one side of EQ1 is a single variable and that variable does not appear anywhere on the other side of EQ1, answer = \"1\".\n\nA5.\nIf EQ1 is exactly x = y*x or x*y = y with x != y, then:\n- if the two sides of EQ2 have the same rightmost leaf, answer = \"1\"\n- otherwise answer = \"0\"\n\nA6.\nIf EQ1 is exactly x*y = x*z with y != z, then:\n- if the two sides of EQ2 have the same leftmost leaf and the same left-path depth, answer = \"1\"\n- otherwise answer = \"0\"\n\nA8.\nIf EQ1 matches a constant-collapse pattern, namely either:\n- x*y = R or R = x*y where x,y are distinct and neither x nor y appears in R, or\n- x*x = y*z with y != z, or\n- y*z = x*x with y != z,\nthen:\n- if both sides of EQ2 are binary products, answer = \"1\"\n- otherwise answer = \"0\"\n\nIf no direct rule matched, continue.\n\nSTEP 4.\nApply witness-failure rules next, in this order.\nUse the first matching rule only.\n\nW1.\nWitness left projection: a*b = a.\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nW2.\nWitness right projection: a*b = b.\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nW4.\nWitness variable-set preservation.\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nW8.\nWitness zero-product:\n- any binary product evaluates to 0\n- a lone variable evaluates to itself\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nW9.\nWitness invariant = (leftmost leaf, left-path-count mod 3).\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nW10.\nWitness invariant = (rightmost leaf, right-path-count mod 3).\nIf EQ1 holds under this witness but EQ2 fails, answer = \"0\".\n\nIf no witness rule matched, continue.\n\nSTEP 5.\nApply fallback.\n\nB2b.\nIf some variable in EQ1 occurs exactly once in the whole equation,\nand LHS(EQ1) is exactly one binary product with exactly two distinct variables,\nthen answer = \"1\".\n\nIf B2b did not apply, continue.\n\nSTEP 6.\nApply regime-specific routing.\n\nIf base_regime_code == \"L1_vge4_dmid\":\n- if delta_lhs_nodes >= 0 and side_coupling_delta >= -0.083333 then answer = \"1\"\n- else answer = \"0\"\n\nIf base_regime_code == \"L1_v3_dmid\":\n- if delta_rhs_distinct >= 5 then answer = \"1\"\n- else if eq1_rhs_distinct <= 3 and side_coupling_delta <= 0.0 then answer = \"0\"\n- else if delta_lhs_nodes >= 0 and side_coupling_delta >= 0 then answer = \"1\"\n- else answer = \"0\"\n\nIf base_regime_code == \"L1_v3_dpos\":\n- if delta_rhs_distinct <= 0 then answer = \"0\"\n- else if delta_lhs_nodes >= 0 and side_coupling_delta >= -0.083333 then answer = \"1\"\n- else answer = \"0\"\n\nIf base_regime_code == \"L1_vle2_dmid\":\n- if eq1_rhs_distinct <= 3 and side_coupling_delta <= 0.166667 then answer = \"0\"\n- else if delta_lhs_nodes >= 0 and side_coupling_delta >= 0 then answer = \"1\"\n- else answer = \"0\"\n\nOtherwise use GLOBAL:\n- if eq1_lhs_is_var >= 1 and eq1_var_count >= 3 then answer = \"1\"\n- else if delta_rhs_distinct >= -1 and side_coupling_delta <= 0.166667 then answer = \"0\"\n- else if eq1_lhs_is_var <= 0 and lhs_skeleton_eq <= 0 then answer = \"0\"\n- else if delta_rhs_nodes <= 0 and eq1_var_count >= 3 then answer = \"1\"\n- else answer = \"0\"\n\nSTEP 7.\nResidual repair and final patches.\n\nResidual repair:\n- If the current answer came from a fallback/no-match branch and delta_rhs_distinct >= 1, set answer = \"1\".\n\nFalse-veto:\n- If answer = \"1\" and base_regime_code == \"L0_vge4_dmid\" and eq2_rhs_distinct == 3, set answer = \"0\".\n\nPatch1:\n- If answer = \"0\" and base_regime_code == \"L1_v3_dpos\" and delta_var_count == 1, set answer = \"1\".\n\nPatch3:\n- If answer = \"0\"\n  and base_regime_code == \"L1_v3_dmid\"\n  and delta_var_count == 0\n  and delta_rhs_distinct == 0\n  and delta_lhs_nodes == 0\n  and delta_rhs_nodes == 0,\n  set answer = \"1\".\n\nSTEP 8.\n- If answer = \"1\", output exactly: VERDICT: TRUE\n- If answer = \"0\", output exactly: VERDICT: FALSE\n- If uncertain, still output exactly one of those two lines only.\n\nOutput rules:\n- Plain text only.\n- Use exactly the four headings below.\n- Keep the reasoning short and the support section decisive.\n\nRequired output format:\n\nVERDICT: TRUE or FALSE\nREASONING: explain why the target is derivable or why it fails\nPROOF:\nfill this only when VERDICT is TRUE\nCOUNTEREXAMPLE:\nfill this only when VERDICT is FALSE\n\nChecks:\n- `VERDICT:` must be exactly `TRUE` or `FALSE`.\n- `REASONING:` must not be empty.\n- If `VERDICT: TRUE`, `PROOF:` must be non-empty and `COUNTEREXAMPLE:` empty.\n- If `VERDICT: FALSE`, `COUNTEREXAMPLE:` must be non-empty and `PROOF:` empty.\n</procedure>",
+    "publishedAt": "2026-04-21T01:57:32Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+        "entityName": "Heath",
+        "publishedAt": "2026-04-21T01:57:32Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_94a03576-678d-4b04-a6b4-5416956c184a",
+    "publicCode": "EQT01-000124",
+    "remark": "",
+    "likeCount": 0,
+    "favoriteCount": 2,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false,
+    "pythonFileContent": null
+  }
+}

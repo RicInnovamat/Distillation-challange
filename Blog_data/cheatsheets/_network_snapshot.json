@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-04-20T09:35:34.247552+00:00",
+  "fetched_at": "2026-04-21T06:00:56.980138+00:00",
   "source_url": "https://server-9527.sair.foundation/api/contributor-network/graph?competition=mathematics-distillation-challenge-equational-theories-stage1",
   "data": {
     "competitions": [
@@ -11,6 +11,12 @@
     ],
     "entities": [
       {
+        "id": "U-00cb6c22aa038d4067db70300ab3ec39c01f95ec",
+        "type": "individual",
+        "name": "学平 董",
+        "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJFVnGRMEhux-bpI85F0A4JSGj3cSfPlGBOidtaBbRLCwcbnw=s96-c"
+      },
+      {
         "id": "U-00fd2382bbb824caff34e6d36c9936e910d13448",
         "type": "individual",
         "name": "Ryan Story",
@@ -21,6 +27,12 @@
         "type": "individual",
         "name": "owen",
         "avatarUrl": "https://avatars.githubusercontent.com/u/239915274?v=4"
+      },
+      {
+        "id": "U-018ef29ce87632c71299963ac0f2b824d1f4ab45",
+        "type": "individual",
+        "name": "张雨阳",
+        "avatarUrl": null
       },
       {
         "id": "U-0ea929375ecc052a739e7986ebffa120a885b032",
@@ -69,6 +81,12 @@
         "type": "individual",
         "name": "Dixing Xu",
         "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLWGuisiKDERQBhCatxtpPtCZAxEmIWNchgpOtd4mJD_sNyYzTW=s96-c"
+      },
+      {
+        "id": "U-30e1a742fdfbc28684163f96288d93226fa1fd15",
+        "type": "individual",
+        "name": "shouldbe",
+        "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKiZGkBRIB4qOcuPnoFnOUIU4fa6Rdbe54s0jfiQAqzS53bYmHjMw=s96-c"
       },
       {
         "id": "U-36be52d73cb9edb1c99b53a2a7fc17c1ac323c85",
@@ -123,6 +141,12 @@
         "type": "individual",
         "name": "Israel Cazares",
         "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKl07oVS_nbbLHjIn10YEOG--6cwmPcNV5uFauMStunkk2ddIZG=s96-c"
+      },
+      {
+        "id": "U-8005cfdfac3058b5ebed6c7a01d8da160a16a608",
+        "type": "individual",
+        "name": "Anirban Mandal",
+        "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLCJ3Brs3Y2tUFIPDpBZcaZROWs3MXOq1F7L-pdY9A2-nljpYSi=s96-c"
       },
       {
         "id": "U-80afc27b81c95799dce76f33aab379c372ed52d9",
@@ -233,6 +257,12 @@
         "avatarUrl": "https://avatars.githubusercontent.com/u/186774017?v=4"
       },
       {
+        "id": "U-e26da91c0122b84992677a70f30802a9a2a9dc34",
+        "type": "individual",
+        "name": "M G",
+        "avatarUrl": null
+      },
+      {
         "id": "U-e8eb4d6a0c197e85490de17d5d22ca0904d08f10",
         "type": "individual",
         "name": "Jun B",
@@ -253,7 +283,7 @@
       {
         "id": "U-f3c2208ef5b1b5ab277c530e6eeec337c615dba8",
         "type": "individual",
-        "name": "Dogton",
+        "name": "Dalton",
         "avatarUrl": null
       },
       {
@@ -482,7 +512,7 @@
         "visibilityStatus": "active",
         "rootShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
         "lineageDepth": 0,
-        "referencedCount": 1,
+        "referencedCount": 2,
         "favoriteCount": 9
       },
       {
@@ -690,7 +720,7 @@
         "visibilityStatus": "active",
         "rootShareItemId": "cn_255575b438d847fabe87f6a809c624ec",
         "lineageDepth": 0,
-        "referencedCount": 0,
+        "referencedCount": 1,
         "favoriteCount": 0
       },
       {
@@ -1002,7 +1032,7 @@
         "visibilityStatus": "active",
         "rootShareItemId": "si_6d32249c-f769-40b3-812a-2aa309d5307a",
         "lineageDepth": 0,
-        "referencedCount": 0,
+        "referencedCount": 1,
         "favoriteCount": 0
       },
       {
@@ -1415,7 +1445,7 @@
         "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
         "cheatsheetTitle": "v14",
         "publishedAt": "2026-04-19T04:09:17Z",
-        "visibilityStatus": "active",
+        "visibilityStatus": "deleted",
         "rootShareItemId": "si_bc1c0d71-617d-40f6-b37e-8d2f3236b608",
         "lineageDepth": 0,
         "referencedCount": 0,
@@ -1444,8 +1474,8 @@
         "visibilityStatus": "active",
         "rootShareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
         "lineageDepth": 0,
-        "referencedCount": 0,
-        "favoriteCount": 0
+        "referencedCount": 1,
+        "favoriteCount": 1
       },
       {
         "shareItemId": "si_ee406563-0c12-4ce4-9038-8117822363ab",
@@ -1562,7 +1592,7 @@
         "rootShareItemId": "si_1c0c90f8-ab6b-44d5-aa97-e54d9f1e3a97",
         "lineageDepth": 3,
         "referencedCount": 0,
-        "favoriteCount": 1
+        "favoriteCount": 2
       },
       {
         "shareItemId": "si_73613a0a-60e2-49de-8597-a506dcea01fe",
@@ -1587,8 +1617,8 @@
         "visibilityStatus": "active",
         "rootShareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
         "lineageDepth": 0,
-        "referencedCount": 0,
-        "favoriteCount": 0
+        "referencedCount": 1,
+        "favoriteCount": 2
       },
       {
         "shareItemId": "si_d779cf35-b6c6-4242-9853-ac29dfd9ed3a",
@@ -1610,7 +1640,7 @@
         "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
         "cheatsheetTitle": "v13f",
         "publishedAt": "2026-04-20T02:05:48Z",
-        "visibilityStatus": "active",
+        "visibilityStatus": "deleted",
         "rootShareItemId": "si_8e22c02d-c23b-414f-862c-e22990d443b2",
         "lineageDepth": 0,
         "referencedCount": 0,
@@ -1640,7 +1670,7 @@
         "rootShareItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd",
         "lineageDepth": 1,
         "referencedCount": 0,
-        "favoriteCount": 0
+        "favoriteCount": 1
       },
       {
         "shareItemId": "si_4368c438-edde-464a-88a3-80181ff147e6",
@@ -1716,6 +1746,227 @@
         "publishedAt": "2026-04-20T07:15:55Z",
         "visibilityStatus": "active",
         "rootShareItemId": "si_0a390e9f-a7af-4fb7-8fdd-8ef126512e6e",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_c3c866ad-d1ec-4400-8d8a-908a40bd1b66",
+        "publicCode": "EQT01-000113",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+        "cheatsheetTitle": "distilled-rules-15",
+        "publishedAt": "2026-04-20T12:19:40Z",
+        "visibilityStatus": "deleted",
+        "rootShareItemId": "si_c3c866ad-d1ec-4400-8d8a-908a40bd1b66",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 1
+      },
+      {
+        "shareItemId": "si_88eba292-d220-457e-854a-c9e4ab9cf8fe",
+        "publicCode": "EQT01-000114",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-2c1bbcd7c77ad40cad30c39880a9e3546bea554d",
+        "cheatsheetTitle": "bank_lookup_v10",
+        "publishedAt": "2026-04-20T13:47:14Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+        "lineageDepth": 1,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_4f94b7aa-95fd-4cf0-b752-90e0c5226684",
+        "publicCode": "EQT01-000115",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-018ef29ce87632c71299963ac0f2b824d1f4ab45",
+        "cheatsheetTitle": "3",
+        "publishedAt": "2026-04-20T15:48:09Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_4f94b7aa-95fd-4cf0-b752-90e0c5226684",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_c93e7951-01bf-427f-8abc-e3d8ea84b8e8",
+        "publicCode": "EQT01-000116",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-00cb6c22aa038d4067db70300ab3ec39c01f95ec",
+        "cheatsheetTitle": "V1",
+        "publishedAt": "2026-04-20T16:12:10Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+        "lineageDepth": 1,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_0e7a1f57-97c1-4d63-b17d-980989633505",
+        "publicCode": "EQT01-000117",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-36be52d73cb9edb1c99b53a2a7fc17c1ac323c85",
+        "cheatsheetTitle": "structured_magma_reasoning_v1",
+        "publishedAt": "2026-04-20T18:18:59Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_0e7a1f57-97c1-4d63-b17d-980989633505",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 1
+      },
+      {
+        "shareItemId": "si_54f14608-a33b-4cc5-9962-b3dd1fcb5350",
+        "publicCode": "EQT01-000118",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-8f8a69e8c14c70790c8d0fb448df6872fb843bca",
+        "cheatsheetTitle": "v28d",
+        "publishedAt": "2026-04-20T18:30:48Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "cn_255575b438d847fabe87f6a809c624ec",
+        "lineageDepth": 1,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_d49ac958-2c2a-4f00-ab64-9bdaa0defd93",
+        "publicCode": "EQT01-000119",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-8005cfdfac3058b5ebed6c7a01d8da160a16a608",
+        "cheatsheetTitle": "Combined_Test1_improved_1.1",
+        "publishedAt": "2026-04-20T20:17:50Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+        "lineageDepth": 1,
+        "referencedCount": 0,
+        "favoriteCount": 1
+      },
+      {
+        "shareItemId": "si_3d0206e6-8cd8-4f90-8ad1-ad7b026ea564",
+        "publicCode": "EQT01-000120",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-30e1a742fdfbc28684163f96288d93226fa1fd15",
+        "cheatsheetTitle": "try_1",
+        "publishedAt": "2026-04-20T21:55:09Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_6d32249c-f769-40b3-812a-2aa309d5307a",
+        "lineageDepth": 1,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+        "publicCode": "EQT01-000121",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-e26da91c0122b84992677a70f30802a9a2a9dc34",
+        "cheatsheetTitle": "M-Claude - \"The Collapse Oracle\" v2607",
+        "publishedAt": "2026-04-20T22:35:17Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_90e36137-5708-4b17-a485-aed7ee8d4587",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_e28204f0-bc47-43e7-8c69-28318032dee9",
+        "publicCode": "EQT01-000122",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-1c169cfc4c624d3e634855c79f2854533e550e9c",
+        "cheatsheetTitle": "MeDone",
+        "publishedAt": "2026-04-21T01:17:49Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_e28204f0-bc47-43e7-8c69-28318032dee9",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_9d712eb0-5c15-47b4-9b51-1fb0e7e4060a",
+        "publicCode": "EQT01-000123",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+        "cheatsheetTitle": "distilled-rules-16",
+        "publishedAt": "2026-04-21T01:56:56Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_9d712eb0-5c15-47b4-9b51-1fb0e7e4060a",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 1
+      },
+      {
+        "shareItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+        "publicCode": "EQT01-000124",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-ef374477abb01630862b4b45807c7a9aebaf0e53",
+        "cheatsheetTitle": "distilled-rules-17",
+        "publishedAt": "2026-04-21T01:57:32Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_2e60a818-2140-404c-9bf4-d322693046b0",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 2
+      },
+      {
+        "shareItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+        "publicCode": "EQT01-000125",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
+        "cheatsheetTitle": "v14p2",
+        "publishedAt": "2026-04-21T03:40:17Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+        "publicCode": "EQT01-000126",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
+        "cheatsheetTitle": "v15ar",
+        "publishedAt": "2026-04-21T04:25:13Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_d58fce79-07f3-478d-9d9d-0815a8624b34",
+        "publicCode": "EQT01-000127",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-268a82dbfdb318807599a69ba872d93a874c475e",
+        "cheatsheetTitle": "Tester",
+        "publishedAt": "2026-04-21T05:18:32Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_d58fce79-07f3-478d-9d9d-0815a8624b34",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_818a2879-c514-4c08-b121-92760be7c99e",
+        "publicCode": "EQT01-000128",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-268a82dbfdb318807599a69ba872d93a874c475e",
+        "cheatsheetTitle": "test314",
+        "publishedAt": "2026-04-21T05:19:06Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_818a2879-c514-4c08-b121-92760be7c99e",
+        "lineageDepth": 0,
+        "referencedCount": 0,
+        "favoriteCount": 0
+      },
+      {
+        "shareItemId": "si_ff672893-2e99-4d70-9388-c5502aca6ad5",
+        "publicCode": "EQT01-000129",
+        "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+        "entityId": "U-268a82dbfdb318807599a69ba872d93a874c475e",
+        "cheatsheetTitle": "HARD AI draft",
+        "publishedAt": "2026-04-21T05:22:19Z",
+        "visibilityStatus": "active",
+        "rootShareItemId": "si_ff672893-2e99-4d70-9388-c5502aca6ad5",
         "lineageDepth": 0,
         "referencedCount": 0,
         "favoriteCount": 0
@@ -1801,14 +2052,39 @@
         "sourceShareItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd",
         "targetShareItemId": "si_2a8c2ad6-7d19-4540-a3a6-bad5e44080e5",
         "type": "reference"
+      },
+      {
+        "sourceShareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+        "targetShareItemId": "si_88eba292-d220-457e-854a-c9e4ab9cf8fe",
+        "type": "reference"
+      },
+      {
+        "sourceShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+        "targetShareItemId": "si_c93e7951-01bf-427f-8abc-e3d8ea84b8e8",
+        "type": "reference"
+      },
+      {
+        "sourceShareItemId": "cn_255575b438d847fabe87f6a809c624ec",
+        "targetShareItemId": "si_54f14608-a33b-4cc5-9962-b3dd1fcb5350",
+        "type": "reference"
+      },
+      {
+        "sourceShareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+        "targetShareItemId": "si_d49ac958-2c2a-4f00-ab64-9bdaa0defd93",
+        "type": "reference"
+      },
+      {
+        "sourceShareItemId": "si_6d32249c-f769-40b3-812a-2aa309d5307a",
+        "targetShareItemId": "si_3d0206e6-8cd8-4f90-8ad1-ad7b026ea564",
+        "type": "reference"
       }
     ],
     "meta": {
       "competitionCount": 1,
-      "entityCount": 42,
-      "itemCount": 112,
-      "relationCount": 16,
-      "generatedAt": "2026-04-20T09:35:33Z",
+      "entityCount": 47,
+      "itemCount": 129,
+      "relationCount": 21,
+      "generatedAt": "2026-04-21T06:00:56Z",
       "truncated": false
     }
   }
