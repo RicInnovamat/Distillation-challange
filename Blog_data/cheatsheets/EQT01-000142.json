@@ -1,0 +1,55 @@
+{
+  "fetched_at": "2026-04-23T06:26:11.981472+00:00",
+  "publicCode": "EQT01-000142",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000142",
+  "data": {
+    "cnItemId": "si_8687b9c1-a625-45b2-8d66-54da840186d8",
+    "parentCnItemId": "si_6f99e002-f53b-4d5e-8549-a6122d76c8fe",
+    "rootCnItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd",
+    "shareItemId": "si_8687b9c1-a625-45b2-8d66-54da840186d8",
+    "parentShareItemId": "si_6f99e002-f53b-4d5e-8549-a6122d76c8fe",
+    "rootShareItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-03503fdf8792dbfc306e9c6496052e838fe74e24",
+    "entityName": "Jiangshan He",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJU4XDwTTEQ-nFLhAD08JIFMStyvtnDndAlysilTXcZmaDdf6c=s96-c",
+    "cheatsheetTitle": "final_2",
+    "cheatsheetContent": "Decide whether source law A ({{ equation1 }}) implies target law B ({{ equation2 }}) over all magmas (binary op `*`). Follow this protocol exactly.\n  \nMODE:single-problem;rule-first;stop-on-match;default=F\nINPUT:A=equation1;B=equation2\nNORM:\n- for collapse on bare A: put lone var on left; rename it x; rename others by first appearance; keep full bracketing\n- for source-form checks: normalize A by first appearance with full bracketing\nFEAT:\n- E:{size,vars,imb,bare,LP,RP,SET,XOR,AB,UT}\n- bare(A):{rhsVars,rhsTotals,Lx,Rx,xTop,square,topShape,xOcc,bn}\n- B.leftBare := B is bare with left side x and right side x*(...)\nEVAL:\n- LP: every product -> leftmost variable\n- RP: every product -> rightmost variable\n- CP: every non-variable product -> c; variable stays itself\n\n[L0 collapse]\nR0 if A.bn='x=(x*(y*(z*(x*y))))' -> EVAL(LP)!\nR1 if A.bn='x=(x*((y*z)*(z*z)))' -> EVAL(LP)!\nR2 if A.bn='x=((((y*z)*x)*z)*x)' -> EVAL(RP)!\n\n[L0B contradiction]\nR3 if A.src in {\n'x=((((y*x)*x)*x)*z)',\n'x=((((y*x)*x)*y)*z)',\n'x=((((y*x)*x)*z)*w)',\n'x=((((y*x)*x)*z)*y)',\n'x=((((y*x)*x)*z)*z)',\n'x=((((y*x)*y)*x)*z)',\n'x=((((y*x)*y)*y)*z)',\n'x=((((y*x)*y)*z)*w)',\n'x=((((y*x)*y)*z)*y)',\n'x=((((y*x)*z)*w)*u)',\n'x=((((y*x)*z)*w)*w)',\n'x=((((y*x)*z)*w)*y)',\n'x=((((y*x)*z)*w)*z)',\n'x=((((y*x)*z)*x)*w)',\n'x=((((y*x)*z)*x)*y)',\n'x=((((y*x)*z)*x)*z)',\n'x=((((y*x)*z)*y)*w)',\n'x=((((y*x)*z)*y)*y)',\n'x=((((y*x)*z)*y)*z)',\n'x=((((y*x)*z)*z)*w)'\n} -> T!\n\n[L2 separator]\nR4 if A.LP & !B.LP -> F!\nR5 if A.RP & !B.RP -> F!\nR6 if A.SET & !B.SET -> F!\nR7 if A.XOR & !B.XOR -> F!\nR8 if A.AB & !B.AB -> F!\n\n[L3 guard]\nR9 if !A.bare & B.bare & B.size==A.size -> F!\n\n[L4 structural]\nR10 if A.bare & A.vars>=4 & A.UT -> T!\nR11 if A.bare & A.vars>=5 & B.size>A.size -> T!\nR12 if A.bare & B.vars>=4 & B.vars<=A.vars-2 -> T!\nR13 if !B.bare & A.vars>=5 & B.size>A.size -> T!\n\n[DEFAULT]\nR14 -> F!\n\nOUTPUT:\n- VERDICT: TRUE|FALSE\n- REASONING: list fired rule and key feature values\n- PROOF: non-empty only if TRUE\n- COUNTEREXAMPLE: non-empty only if FALSE",
+    "publishedAt": "2026-04-22T03:22:12Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 2,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd",
+        "entityName": "Adam Betka",
+        "publishedAt": "2026-04-03T14:32:47Z",
+        "shareItemId": "cn_196603fe2c7742ad9e8d44f48b8a84dd"
+      },
+      {
+        "shareItemId": "si_6f99e002-f53b-4d5e-8549-a6122d76c8fe",
+        "entityName": "Jiangshan He",
+        "publishedAt": "2026-04-21T10:13:01Z"
+      },
+      {
+        "shareItemId": "si_8687b9c1-a625-45b2-8d66-54da840186d8",
+        "entityName": "Jiangshan He",
+        "publishedAt": "2026-04-22T03:22:12Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_e0aa34c0-e513-4a30-a16d-950173e0308c",
+    "publicCode": "EQT01-000142",
+    "remark": "more dataset",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}
