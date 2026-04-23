@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 84,
+  "message_count": 93,
   "messages": [
     {
       "id": 341,
@@ -1905,6 +1905,254 @@
       "avatar_url": "https://secure.gravatar.com/avatar/87fa48b12d5f812053d0214b9614faa4?d=identicon&version=1",
       "content_type": "text/html",
       "date": "2026-04-18T17:40:44.000Z"
+    },
+    {
+      "id": 1738,
+      "sender_id": 273,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"285\">Wenlin Zhang</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1675\">ha dicho</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"273\">Israel Cazares</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1592\">said</a>:</p>\n<blockquote>\n<p>Hi everyone,</p>\n<p>I've submitted my cheat sheet to the competition and also wrote a short empirical paper documenting my findings on the single-prompt ceiling effect.</p>\n<p>I'd like to submit it to arXiv (cs.CL) and I'm looking for someone willing to endorse me. If you qualify and are open to it, please reach out at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a> and I'll send you the endorsement code.</p>\n<p>Paper (Zenodo): <a href=\"https://zenodo.org/records/19598433\">https://zenodo.org/records/19598433</a></p>\n<p>Thanks in advance!</p>\n</blockquote>\n<p>Hi Israel. Saw your arXiv endorsement request. I lead a Lean 4 formalization project (<a href=\"https://github.com/the-omega-institute/automath\">https://github.com/the-omega-institute/automath</a>, 10,500+ verified theorems) and we have a similar situation: papers on Zenodo, 9 submissions stuck in peer review across ETDS/JNT/SIAM, so we can't share results broadly yet, and no arXiv endorsement for math.DS/cs.AI either.</p>\n<p>Your single-prompt ceiling effect paper sounds relevant to what we're seeing in automated theorem proving. Would be interested to read it and compare notes.</p>\n<p>If anyone in this community can endorse for math.DS, cs.AI, or math.CO, we'd appreciate it too. The Lean 4 library is public and verifiable.</p>\n<p>Happy to return the favor for anyone who needs a review or formalization check.</p>\n</blockquote>\n<p>Hi Wenlin — really appreciate the thoughtful note.</p>\n<p>Your framing around structural invariant discovery resonates directly with what I document in the paper — the router hypothesis: models aren't constructing proofs step-by-step, they're routing into latent structural templates. What you're describing from the formal side (discovery phase = structural routing, verification phase = traditional proof) is the same phenomenon from a different angle.</p>\n<p>The FALSE-law mining angle is especially interesting. Many failure modes I observed are consistent with misrouting to near-miss structures rather than a lack of reasoning capacity per se — which aligns with what your system surfaces as structural separators.</p>\n<p>Would love to compare notes on how your system represents and selects invariants vs. how prompts implicitly induce them. Happy to connect at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a>.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776723007,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Israel Cazares",
+      "sender_email": "user273@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/a6248228c9ad76f59acab5214ac43bd0?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-20T22:10:07.000Z"
+    },
+    {
+      "id": 1739,
+      "sender_id": 258,
+      "content": "<p>An interesting related challenge would be to come up with preference pairs data (e.g. for DPO) that can fine-tune a small model (maybe Llama 3, 8b?) to become a magma implication decider and prover. We can still keep it at pure text delivery for broader appeal. What do you guys think?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776735103,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Reza Jamei",
+      "sender_email": "user258@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/e552e979dc9058a756f46160f70cbff6?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T01:31:43.000Z"
+    },
+    {
+      "id": 1745,
+      "sender_id": 268,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span> I’ve noticed a rather major issue where LLM intelligence seems to fluctuate based on the time of day. Using the exact same cheatsheet and model, I got completely different results at different hours. For example, when I tested Gemma 31B at 8 AM GMT, it scored 9/10, but by 9 PM GMT, it dropped to 5/10 and the cheatsheet just didn't work anymore. This is quite worrying because it suggests LLM reliability might depend on current user traffic rather than the logic of our cheatsheet. I'm concerned this could really skew the results we've submitted and how the competition is being evaluated.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776749538,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "BlackNull.com",
+      "sender_email": "user268@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/5d5338aad5491e5f24b07e0990f6e7f2?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T05:32:18.000Z"
+    },
+    {
+      "id": 1746,
+      "sender_id": 71,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"268\">BlackNull.com</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1745\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> I’ve noticed a rather major issue where LLM intelligence seems to fluctuate based on the time of day. Using the exact same cheatsheet and model, I got completely different results at different hours. For example, when I tested Gemma 31B at 8 AM GMT, it scored 9/10, but by 9 PM GMT, it dropped to 5/10 and the cheatsheet just didn't work anymore. This is quite worrying because it suggests LLM reliability might depend on current user traffic rather than the logic of our cheatsheet. I'm concerned this could really skew the results we've submitted and how the competition is being evaluated.</p>\n</blockquote>\n<p>Yes, this can be super annoying. I do not think this is just traffic, but a more general feature of how LLMs behave.</p>\n<p>With the same model and the same cheatsheet or prompt, you can still get different outcomes because the model is not a deterministic symbolic engine in practice. This is actually a major limitation of current LLMs that often goes unnoticed, because it is less obvious than things like hallucinations. Small differences in inference trajectory, backend routing, retries, or runtime conditions can push the model into a different reasoning path, and that can materially change accuracy on a small test set. That is one reason current LLM architecture is still not reliable enough for science-level use.</p>\n<p>It  makes the planned 3 repeats per model/problem pair very important for the evaluation. Without repeated runs, a cheatsheet score may mostly reflect one particular reasoning trajectory rather than its true average performance.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776751056,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T05:57:36.000Z"
+    },
+    {
+      "id": 1755,
+      "sender_id": 268,
+      "content": "<p>The cheatsheet performs optimally between 4:00 and 8:00 AM (GMT 0), when the LLM provider, DeepIntra, experiences lower traffic congestion. I recommend that SAIR run cheatsheet independently to ensure maximum accuracy. Through repeated testing during this specific window, I have confirmed that the cheatsheet remains highly stable. The inconsistencies I've observed are clearly traffic-related, which significantly impacts the evaluation process. When over 1,000 questions and multiple cheatsheets are processed simultaneously, the resulting traffic spike causes greater deviations in the results than the LLM’s own reasoning errors.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776773281,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "BlackNull.com",
+      "sender_email": "user268@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/5d5338aad5491e5f24b07e0990f6e7f2?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T12:08:01.000Z"
+    },
+    {
+      "id": 1758,
+      "sender_id": 177,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"268\">BlackNull.com</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1755\">said</a>:</p>\n<blockquote>\n<p>The cheatsheet performs optimally between 4:00 and 8:00 AM (GMT 0), when the LLM provider, DeepIntra, experiences lower traffic congestion. I recommend that SAIR run cheatsheet independently to ensure maximum accuracy. Through repeated testing during this specific window, I have confirmed that the cheatsheet remains highly stable. The inconsistencies I've observed are clearly traffic-related, which significantly impacts the evaluation process. When over 1,000 questions and multiple cheatsheets are processed simultaneously, the resulting traffic spike causes greater deviations in the results than the LLM’s own reasoning errors.</p>\n</blockquote>\n<p>That' s odd, do you think it's redirecting queries to a more quantized model at times of high traffic?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776788592,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam McKenna",
+      "sender_email": "user177@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T16:23:12.000Z"
+    },
+    {
+      "id": 1776,
+      "sender_id": 71,
+      "content": "<p>Did anybody else accidentally submit the wrong cheatsheet version? <span aria-label=\"man facepalming\" class=\"emoji emoji-1f926-200d-2642\" role=\"img\" title=\"man facepalming\">:man_facepalming:</span></p>",
+      "recipient_id": 43,
+      "timestamp": 1776844054,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart_hands",
+          "emoji_code": "1faf6",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-22T07:47:34.000Z"
+    },
+    {
+      "id": 1786,
+      "sender_id": 134,
+      "content": "<p>When we will expect to see the results? (Sorry if this was posted somewhere, I couldn't find it!)<br>\nAlso - how did people get results on hard benchmarks etc. so early? When I was playing on the playground, I could only ever do a few at a time; I never found something to run a full eval. (would've liked to, in retrospect... :) )</p>",
+      "recipient_id": 43,
+      "timestamp": 1776878995,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Alex Meiburg",
+      "sender_email": "user134@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/fa7e9ca1d9249db03849e44977e3cc5f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-22T17:29:55.000Z"
+    },
+    {
+      "id": 1794,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"134\">@Alex Meiburg</span> The competition page states that the leaderboard will be published by April 30, but we will most likely release it earlier.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776882480,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 273
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T18:28:00.000Z"
     }
   ]
 }
