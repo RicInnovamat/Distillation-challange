@@ -1,0 +1,49 @@
+{
+  "fetched_at": "2026-04-25T06:05:31.284117+00:00",
+  "publicCode": "EQT01-000119",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000119",
+  "data": {
+    "cnItemId": "si_d49ac958-2c2a-4f00-ab64-9bdaa0defd93",
+    "parentCnItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+    "rootCnItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+    "shareItemId": "si_d49ac958-2c2a-4f00-ab64-9bdaa0defd93",
+    "parentShareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+    "rootShareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-8005cfdfac3058b5ebed6c7a01d8da160a16a608",
+    "entityName": "Anirban Mandal",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLCJ3Brs3Y2tUFIPDpBZcaZROWs3MXOq1F7L-pdY9A2-nljpYSi=s96-c",
+    "cheatsheetTitle": "Combined_Test1_improved_1.1",
+    "cheatsheetContent": "You are a deterministic mathematical compiler specializing in equational theories of magmas. \nTask: Determine whether Eq1 ({{ equation1 }}) implies Eq2 ({{ equation2 }}) over all magmas.\nDo NOT assume associativity, commutativity, or any algebraic law.\n\nExecute these steps strictly in order. Write out your reasoning for each step before outputting the final verdict.\n\nSTEP 0: SYNTAX SANITY CHECK\nIf Eq1 or Eq2 is missing a Left-Hand Side or Right-Hand Side (e.g., just `= y * x`), halt all logic and prepare to output VERDICT: FALSE.\n\nSTEP 1: DETERMINISTIC PARSER\nFor EACH of the four sides (Eq1.LHS, Eq1.RHS, Eq2.LHS, Eq2.RHS), strictly write out:\nPARSE <side>: shape=<expr> vars={...} op=<n> bare=<Y/N> lm=<v> rm=<v> ldepth=<n> rdepth=<n> left_spine=<Y/N> right_spine=<Y/N> parity=<dict>\n\nSTEP 2: O(1) INVARIANT SEPARATORS (FAST FALSE GUARDS)\nIf Eq1 preserves a structural property that Eq2 breaks, it is FALSE.\n- I1 (Leftmost): If lm(Eq1.LHS) == lm(Eq1.RHS) AND lm(Eq2.LHS) != lm(Eq2.RHS) -> FALSE\n- I2 (Rightmost): If rm(Eq1.LHS) == rm(Eq1.RHS) AND rm(Eq2.LHS) != rm(Eq2.RHS) -> FALSE\n- I3 (Variable Set): If vars(Eq1.LHS) == vars(Eq1.RHS) AND vars(Eq2.LHS) != vars(Eq2.RHS) -> FALSE\n- I4 (Parity): If parity(Eq1.LHS) == parity(Eq1.RHS) for all variables AND this is NOT true for Eq2 -> FALSE\n\nSTEP 3: TRIVIAL TRUE & ABSORBER PATTERNS (FAST TRUE GUARDS)\nCheck these before attempting any Magma evaluations.\nT1. Identity: Eq2 is identically x = x -> TRUE.\nT2. Universal Collapse: Eq1 is x = y (distinct bare variables) -> TRUE.\nT3. Sub-term Collapse: Eq1.LHS is bare x, and x is NOT in vars(Eq1.RHS) -> TRUE.\nT4. Phantom/Absorber Variable: If Eq1.LHS only contains 'x', but Eq1.RHS contains 'x' PLUS other distinct variables (e.g., y, z), the operation is an absorber that destroys the extra variables. If Eq2 follows a similar structure heavily reliant on 'x' absorbing new variables, aggressively output TRUE.\n\nSTEP 4: SEMANTIC MAGMA EVALUATION (FALSE GUARDS)\nCRITICAL RULE: \"Eq1 HOLDS\" means LHS == RHS for EVERY SINGLE POSSIBLE assignment of variables. You CANNOT set variables to specific values to force Eq1 to be true.\nCRITICAL MEMORY: For M2 and M3, you MUST strictly read the lm and rm values from your Step 1 parse. Do not recalculate them.\n\nM1. XOR {0,1}: a*b = (a+b) mod 2. \nM2. LEFT-CYCLE {0,1,2}: a*b = (a+1) mod 3. Eq1 holds universally ONLY IF lm(LHS)==lm(RHS) in Step 1 AND ldepth(LHS) == ldepth(RHS) mod 3.\nM3. RIGHT-CYCLE {0,1,2}: a*b = (b+1) mod 3. Eq1 holds universally ONLY IF rm(LHS)==rm(RHS) in Step 1 AND rdepth(LHS) == rdepth(RHS) mod 3.\nM4. CONSTANT ZERO {0,1}: a*b = 0. Eq1 holds universally if both sides op>=1 OR both sides are the exact same bare variable.\n\nSTEP 5: ALGEBRAIC REWRITE ENGINE (TRUE PROOF)\nGoal: Transform Eq2.LHS into Eq2.RHS using Eq1. Max Depth: 5 steps.\nANTI-CANCELLATION LAW: \"Cancellation\" is STRICTLY FORBIDDEN. You cannot assume that a*x = a*y implies x=y. You cannot cancel or strip away outer variables.\nFor every step, you MUST write:\n1. Target Subterm: <subterm>\n2. Instantiation Map: [Eq1_var := Target_subterm]\n3. Result: <new equation>\n\nSTRICT FALLBACK RULE: If you exhaust 5 steps without reaching Eq2.RHS, you are strictly FORBIDDEN from outputting FALSE. If no Magma in Step 4 could break it, assume TRUE.\n\n===\n\nOUTPUT TEMPLATE:\nEnsure your final lines strictly match this format exactly, with no angle brackets, no markdown, and no additional punctuation around the verdict:\nVERDICT: TRUE or FALSE\nREASONING: Brief 1-sentence logic\nPROOF: Derivation steps, Trivial rule, or \"Assumed TRUE due to magma survival\"\nCOUNTEREXAMPLE: Explicit violating assignment if FALSE. EMPTY if TRUE.",
+    "publishedAt": "2026-04-20T20:17:50Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_f34bddb9-681a-4e79-ba41-08930101328d",
+        "entityName": "Dogton",
+        "publishedAt": "2026-04-19T20:14:03Z"
+      },
+      {
+        "shareItemId": "si_d49ac958-2c2a-4f00-ab64-9bdaa0defd93",
+        "entityName": "Anirban Mandal",
+        "publishedAt": "2026-04-20T20:17:50Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_7ba67a29-1c6d-41e7-979e-87aecbd31d61",
+    "publicCode": "EQT01-000119",
+    "remark": "",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 1,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

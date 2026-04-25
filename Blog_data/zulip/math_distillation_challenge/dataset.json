@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "dataset",
-  "message_count": 10,
+  "message_count": 12,
   "messages": [
     {
       "id": 402,
@@ -400,6 +400,65 @@
       "stream_id": 13,
       "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
       "content_type": "text/html"
+    },
+    {
+      "id": 1761,
+      "sender_id": 113,
+      "content": "<p>x = (y * z) * x  ⇒  x * y = y * ((y * x) * y) </p>\n<p>Benchmark: Sairs hard3#4<br>\nLabel: TRUE<br>\nObserved: FALSE<br>\nStatus:  LIKELY MISLABEL?</p>\n<p>Audited this as it was conflicting with multiple results multiple times is this hard3#4 verdict labeled correctly?</p>\n<p>Set: {0,1}<br>\nOperation:<br>\n0*0=0<br>\n0*1=1<br>\n1*0=0<br>\n1*1=0</p>\n<p>x = 0<br>\ny = 1<br>\nz = 0</p>\n<p>x = (y * z) * x<br>\n0 = (1<em>0)</em>0<br>\n0 = 0*0<br>\n0 = 0   ✓ TRUE</p>\n<p>x * y = y * ((y * x) * y)</p>\n<p>0<em>1 = 1</em>((1<em>0)</em>1)<br>\n1   = 1<em>(0</em>1)<br>\n1   = 1*1<br>\n1   = 0   ✗ FALSE</p>\n<p>Eq1 is TRUE<br>\nEq2 is FALSE</p>",
+      "recipient_id": 43,
+      "timestamp": 1776800849,
+      "client": "website",
+      "subject": "dataset",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T19:47:29.000Z"
+    },
+    {
+      "id": 1765,
+      "sender_id": 25,
+      "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"113\">@Stacey Szmy</span> ! Please check:<br>\n<a href=\"https://teorth.github.io/equational_theories/implications/show_proof.html?pair=34,3556\">https://teorth.github.io/equational_theories/implications/show_proof.html?pair=34,3556</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1776811515,
+      "client": "ZulipElectron",
+      "subject": "dataset",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "ok",
+          "emoji_code": "1f44c",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-21T22:45:15.000Z"
     }
   ]
 }
