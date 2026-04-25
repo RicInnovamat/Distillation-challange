@@ -1,0 +1,49 @@
+{
+  "fetched_at": "2026-04-25T06:09:09.244044+00:00",
+  "publicCode": "EQT01-000148",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000148",
+  "data": {
+    "cnItemId": "si_6406786c-0de7-4bb3-8dd6-bd1f5e589f09",
+    "parentCnItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+    "rootCnItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+    "shareItemId": "si_6406786c-0de7-4bb3-8dd6-bd1f5e589f09",
+    "parentShareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+    "rootShareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-abe27ea62b01080a664195cfdcd5d23de8f92021",
+    "entityName": "Bing Wu",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "current_v04",
+    "cheatsheetContent": "Does Eq1 ({{ equation1 }}) imply Eq2 ({{ equation2 }}) over all magmas?\n\n* is an arbitrary binary operation on a set. Assume no associativity, commutativity, identity, cancellation, surjectivity, bijectivity, or re-bracketing unless Eq1 forces it. Keep exact parentheses.\n\nUse this two-layer procedure. Layer A is strict: commit only if a listed TRUE rule or FALSE witness fires cleanly. Layer B is fallback: a deterministic structural tree over Eq1.\n\n================================================================\nLAYER A -- STRICT TRUE RULES\n================================================================\n\nA1 SAME: Eq2 has syntactically identical sides -> TRUE.\nA2 RENAME: Eq2 equals Eq1 under one consistent variable renaming, possibly swapping Eq1 sides -> TRUE.\nA3 SINGLETON: one side of Eq1 is a bare variable absent from the other side -> TRUE.\nA4 LP-PIN: Eq1 is literally x = x*y or x*y = x with distinct x,y. Then every term is its leftmost leaf. TRUE iff Eq2's two leftmost leaves agree.\nA5 RP-PIN: Eq1 is literally x = y*x or x*y = y with distinct x,y. Then every term is its rightmost leaf. TRUE iff Eq2's two rightmost leaves agree.\nA6 LU-PIN: Eq1 is literally x*y = x*z with distinct y,z. TRUE iff Eq2's sides have the same leftmost leaf and same left-spine depth.\nA7 RU-PIN: Eq1 is literally y*x = z*x with distinct y,z. TRUE iff Eq2's sides have the same rightmost leaf and same right-spine depth.\nA8 CONST: Eq1 is x*y = R or R = x*y with distinct x,y absent from R, or x*x = y*z up to renaming. TRUE iff both Eq2 sides are products.\nA9 DERIVE: Eq2 is an exact substitution instance of Eq1, possibly after swapping Eq1 sides. Do not re-bracket -> TRUE.\n\n================================================================\nLAYER A -- STRICT FALSE WITNESSES\n================================================================\n\nFor each witness, if the witness universally satisfies Eq1 but fails Eq2, commit FALSE.\n\nW1 LP: left projection a*b=a. A term evaluates to its leftmost leaf.\nW2 RP: right projection a*b=b. A term evaluates to its rightmost leaf.\nW3 LIST: a*b concatenates leaf lists. Holds iff both sides have identical leaf sequence.\nW4 SET: a*b unions variable sets. Holds iff both sides use the same variable set.\nW5 AB: a*b adds occurrence vectors over N^vars. Holds iff exact variable counts match.\nW6 XOR: occurrence counts modulo 2 match.\nW7 MOD3: occurrence counts modulo 3 match.\nW8 K0: every product collapses to 0, bare variables remain themselves. Holds iff both sides are products, or the same bare variable.\nW9 LC3: left-cycle mod 3. Signature is (leftmost leaf, left-spine depth mod 3).\nW10 RC3: right-cycle mod 3. Signature is (rightmost leaf, right-spine depth mod 3).\nW11 LC4: left-cycle mod 4.\nW12 RC4: right-cycle mod 4.\n\nProjection-family narrow false witnesses:\n\nW13 RP_BARE_VAR_TERM: Eq1 LHS is bare x; Eq1 RHS root is var_term; RHS count signature is x:2 and other counts (1,2); Eq1 has 3 vars; Eq2 LHS is a product; right-projection separates Eq2 -> FALSE.\nW14 RP_BARE_TERM_TERM: Eq1 LHS is bare x; Eq1 RHS root is term_term; RHS count signature is x:2 and other counts (1,1,1); Eq1 RHS depth=3; Eq2 RHS depth=3; right-projection separates Eq2 -> FALSE.\nW15 RP_2VAR: Eq1 LHS is bare x; Eq1 has exactly 2 variables; right projection collapses Eq1's projected endpoints but Eq2 projects outside that class -> FALSE.\nW16 LP_2VAR: same as W15 with left projection -> FALSE.\nW17 PROJ_13_PRODUCT: Eq1 LHS is bare x; Eq1 RHS count signature is x:1 and other counts (1,3); Eq2 LHS is a product; left or right projection separates Eq2 -> FALSE.\nW18 RP_VARTERM_D4_PRODUCT: Eq1 LHS is bare x; Eq1 RHS root is var_term; Eq1 RHS depth=4; Eq1 has 3 variables; Eq2 LHS is a product; right projection separates Eq2 -> FALSE.\n\nDefinitions:\n- left-spine depth: variable has depth 0; product A*B has 1 + left-spine-depth(A).\n- right-spine depth: variable has depth 0; product A*B has 1 + right-spine-depth(B).\n- RHS count signature for bare Eq1 LHS x counts occurrences of x in Eq1 RHS and sorted counts of all other RHS variables.\n- projection separates Eq2 when Eq1 identifies the projection endpoints but Eq2's projected endpoints remain in different equivalence classes.\n\nIf Layer A committed, stop. Otherwise go to Layer B.\n\n================================================================\nLAYER B -- FALLBACK DECISION TREE\n================================================================\n\nCompute Eq1-only features:\n\nM = minimum total occurrence count of any Eq1 variable across both Eq1 sides.\nS = number of * nodes on Eq1 LHS.\nV = number of distinct variables on Eq1 LHS.\n\nApply:\n\nB1 If M >= 2 -> VERDICT: FALSE.\nB2 Otherwise M = 1:\n  B2a If S = 0, Eq1 LHS is a bare variable -> VERDICT: TRUE.\n  B2b If S = 1 and V = 2, Eq1 LHS is x*y with distinct x,y -> VERDICT: TRUE.\n  B2c Otherwise -> VERDICT: FALSE.\n\n================================================================\nOUTPUT\n================================================================\n\nKeep reasoning brief. On the LAST LINE output exactly:\nVERDICT: TRUE or VERDICT: FALSE",
+    "publishedAt": "2026-04-23T13:47:18Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_a6719897-e07f-414a-ab9c-a012a1015656",
+        "entityName": "Reza Jamei",
+        "publishedAt": "2026-04-19T07:05:41Z"
+      },
+      {
+        "shareItemId": "si_6406786c-0de7-4bb3-8dd6-bd1f5e589f09",
+        "entityName": "Bing Wu",
+        "publishedAt": "2026-04-23T13:47:18Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "sb_si_5e2af4cb-5d3d-4949-b73c-c698e68742ac",
+    "publicCode": "EQT01-000148",
+    "remark": "",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

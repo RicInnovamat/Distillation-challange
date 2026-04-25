@@ -2,7 +2,7 @@
   "channel": "general",
   "channel_id": 9,
   "topic": "new channels",
-  "message_count": 3,
+  "message_count": 4,
   "messages": [
     {
       "id": 80,
@@ -78,6 +78,32 @@
       "stream_id": 9,
       "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
       "content_type": "text/html"
+    },
+    {
+      "id": 1782,
+      "sender_id": 15,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"142\">Aishwarya</span> created a new channel <a class=\"stream\" data-stream-id=\"19\" href=\"/#narrow/channel/19-lean\">#lean</a>.</p>",
+      "recipient_id": 24,
+      "timestamp": 1776867053,
+      "client": "Internal",
+      "subject": "new channels",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "sender_realm_str": "zulipinternal",
+      "display_recipient": "general",
+      "type": "stream",
+      "stream_id": 9,
+      "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T14:10:53.000Z"
     }
   ]
 }
