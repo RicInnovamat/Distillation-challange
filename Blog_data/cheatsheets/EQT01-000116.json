@@ -1,0 +1,50 @@
+{
+  "fetched_at": "2026-04-29T06:40:48.697881+00:00",
+  "publicCode": "EQT01-000116",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000116",
+  "data": {
+    "cnItemId": "si_c93e7951-01bf-427f-8abc-e3d8ea84b8e8",
+    "parentCnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "rootCnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "shareItemId": "si_c93e7951-01bf-427f-8abc-e3d8ea84b8e8",
+    "parentShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "rootShareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-00cb6c22aa038d4067db70300ab3ec39c01f95ec",
+    "entityName": "学平 董",
+    "entityAvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJFVnGRMEhux-bpI85F0A4JSGj3cSfPlGBOidtaBbRLCwcbnw=s96-c",
+    "cheatsheetTitle": "V1",
+    "cheatsheetContent": "<task>\nYou are a strict symbolic procedure runner.\n\nYou must execute the procedure exactly in order.\n</task>\n\n<input>\nEQ1 = {{ equation1 }}\nEQ2 = {{ equation2 }}\n</input>\n\n<procedure>\nSTEP 1.\nParse EQ1 and EQ2 as binary trees.\n- Every variable symbol is an atom.\n- Every \"*\" is the same generic binary operation.\n- Parentheses override grouping.\n- Otherwise read binary expressions left-associatively.\n\nSTEP 2.\nCompute exactly these quantities and no others.\n\n1. eq1_var_count\n   Number of distinct variable letters appearing anywhere in EQ1.\n2. eq1_lhs_is_var\n   1 iff LHS(EQ1) is a single variable letter, else 0.\n3. eq1_lhs_distinct\n   Number of distinct variable letters appearing in LHS(EQ1).\n4. eq1_lhs_nodes\n   Total number of nodes in LHS(EQ1). Each variable counts 1. Each \"*\" counts 1.\n5. eq1_total_chars\n   Total character count of the string \"L = R\" of EQ1, including letters, \"*\", \"(\", \")\", and spaces.\n6. eq1_max_var_freq\n   Largest number of times any single variable letter appears anywhere in EQ1.\n7. eq1_rhs_max_freq\n   Largest number of times any single variable letter appears in RHS(EQ1).\n8. eq1_first_match\n   1 iff the leftmost variable letter appearing in LHS(EQ1) equals the leftmost variable letter appearing in RHS(EQ1), else 0.\n9. eq1_last_match\n   1 iff the rightmost variable letter appearing in LHS(EQ1) equals the rightmost variable letter appearing in RHS(EQ1), else 0.\n10. eq2_lhs_is_var\n    1 iff LHS(EQ2) is a single variable letter, else 0.\n11. eq2_first_match\n    1 iff the leftmost variable letter appearing in LHS(EQ2) equals the leftmost variable letter appearing in RHS(EQ2), else 0.\n12. eq2_last_match\n    1 iff the rightmost variable letter appearing in LHS(EQ2) equals the rightmost variable letter appearing in RHS(EQ2), else 0.\n\nSTEP 3.\nApply rules using ONLY these computed values.\nUse the first matching rule.\n\nR1. if eq1_var_count <= 2 and eq1_total_chars > 23 and eq1_rhs_max_freq <= 3 then answer = \"0\"\nR2. if eq1_var_count > 2 and eq1_lhs_is_var <= 0 and eq2_lhs_is_var > 0 then answer = \"0\"\nR3. if eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match <= 0 and eq1_last_match > 0 and eq2_last_match <= 0 then answer = \"0\"\nR4. if eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match > 0 and eq2_first_match <= 0 then answer = \"0\"\nR5. if eq1_var_count > 3 and eq1_lhs_is_var > 0 and eq1_first_match <= 0 and eq1_last_match <= 0 then answer = \"1\"\nR6. if eq1_var_count > 2 and eq1_lhs_is_var <= 0 and eq2_lhs_is_var <= 0 and eq1_lhs_distinct <= 1 then answer = \"0\"\nR7. if eq1_var_count > 2 and eq1_lhs_is_var <= 0 and eq2_lhs_is_var <= 0 and eq1_lhs_distinct > 1 and eq1_lhs_nodes > 4 then answer = \"0\"\nR8. if eq1_var_count <= 2 and eq1_total_chars > 23 and eq1_rhs_max_freq > 3 then answer = \"0\"\nR9. if eq1_var_count <= 2 and eq1_total_chars <= 23 then answer = \"0\"\nR10. if eq1_var_count <= 3 and eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match <= 0 and eq1_last_match <= 0 then answer = \"1\"\nR11. if eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match > 0 and eq2_first_match > 0 and eq1_max_var_freq <= 2 then answer = \"1\"\nR12. if eq1_var_count > 2 and eq1_lhs_is_var <= 0 and eq2_lhs_is_var <= 0 and eq1_lhs_distinct > 1 and eq1_lhs_nodes <= 4 then answer = \"1\"\nR13. if eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match <= 0 and eq1_last_match > 0 and eq2_last_match > 0 then answer = \"1\"\nR14. if eq1_var_count > 2 and eq1_lhs_is_var > 0 and eq1_first_match > 0 and eq2_first_match > 0 and eq1_max_var_freq > 2 then answer = \"0\"\n\nSTEP 4.\nIf no rule matched, answer = \"0\".\n\nSTEP 5.\nDo not recompute anything.\nDo not add any justification.\nDo not output JSON.\nConvert the already computed answer only:\n- if answer = \"1\", output exactly: VERDICT: TRUE\n- if answer = \"0\", output exactly: VERDICT: FALSE\n</procedure>",
+    "publishedAt": "2026-04-20T16:12:10Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 1,
+    "lineagePathSnapshot": [
+      {
+        "cnItemId": "cn_dd614a8a391346b68efc1bf3e25e175d",
+        "entityName": "Heath",
+        "publishedAt": "2026-04-04T10:14:57Z",
+        "shareItemId": "cn_dd614a8a391346b68efc1bf3e25e175d"
+      },
+      {
+        "shareItemId": "si_c93e7951-01bf-427f-8abc-e3d8ea84b8e8",
+        "entityName": "学平 董",
+        "publishedAt": "2026-04-20T16:12:10Z"
+      }
+    ],
+    "isDerived": true,
+    "itemType": "Derived",
+    "sourceCheatsheetId": "cs_07e64838-73a9-4732-ad79-dd72783b9f92",
+    "publicCode": "EQT01-000116",
+    "remark": "This is my answer.",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}
