@@ -1,0 +1,146 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Interesting stage1 findings",
+  "message_count": 3,
+  "messages": [
+    {
+      "id": 1778,
+      "sender_id": 117,
+      "content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have <strong>incredible generalizability cross the LLM models</strong>, whenever I tested it,</p>\n<p>Here is its performances on stage 1 public sets, plus SairCommunity Bench created by <span class=\"user-mention\" data-user-id=\"50\">@Adam Betka</span> </p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why this is the happening; and also for the Machine Learning Engineers to investigate why, from LLM/Representation point of views.</p>\n<p>Cheers!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776845153,
+      "client": "ZulipElectron",
+      "subject": "Interesting stage1 findings",
+      "topic_links": [],
+      "last_edit_timestamp": 1776845752,
+      "edit_history": [
+        {
+          "user_id": 117,
+          "timestamp": 1776845752,
+          "prev_content": "Hi everyone,\n\nSince now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.\n\nI'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:\n\n[https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145](https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145)\n\nIt might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have **incredible generalizability cross the LLM models**, whenever I tested it,\n\nHere is its performances on stage 1 public sets, plus SairCommunity Bench created by @**Adam Betka** \n\n| Model                  | normal            | hard1          | hard2            | hard3            | SairCommunityBench |\n| ---------------------- | ----------------- | -------------- | ---------------- | ---------------- | ------------------ |\n| gpt-oss-120b           | 80.30% (803/1000) | 44.93% (31/69) | 70.00% (140/200) | 57.00% (228/400) | 77.50% (155/200)   |\n| llama3.3-70b-instruct  | 76.00% (760/1000) | 42.03% (29/69) | 66.50% (133/200) | 57.00% (228/400) | 75.00% (150/200)   |\n| gemma4-31b-it          | 79.80% (798/1000) | 42.03% (29/69) | 69.00% (138/200) | 57.25% (229/400) | 75.50% (151/200)   |\n\nAs you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.\n\nIt would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)\n\nIf this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if @**YZ** could help investigate from mathematical point of view why this is the happening.\n\nCheers!",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have <strong>incredible generalizability cross the LLM models</strong>, whenever I tested it,</p>\n<p>Here is its performances on stage 1 public sets, plus SairCommunity Bench created by <span class=\"user-mention\" data-user-id=\"50\">@Adam Betka</span> </p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why this is the happening.</p>\n<p>Cheers!</p>"
+        },
+        {
+          "user_id": 117,
+          "timestamp": 1776845624,
+          "prev_content": "Hi everyone,\n\nSince now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.\n\nI'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:\n\n[https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145](https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145)\n\nIt might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,\n\nHere is its performances on stage 1 public sets, plus SairCommunity Bench created by @**Adam Betka** \n\n| Model                  | normal            | hard1          | hard2            | hard3            | SairCommunityBench |\n| ---------------------- | ----------------- | -------------- | ---------------- | ---------------- | ------------------ |\n| gpt-oss-120b           | 80.30% (803/1000) | 44.93% (31/69) | 70.00% (140/200) | 57.00% (228/400) | 77.50% (155/200)   |\n| llama3.3-70b-instruct  | 76.00% (760/1000) | 42.03% (29/69) | 66.50% (133/200) | 57.00% (228/400) | 75.00% (150/200)   |\n| gemma4-31b-it          | 79.80% (798/1000) | 42.03% (29/69) | 69.00% (138/200) | 57.25% (229/400) | 75.50% (151/200)   |\n\nAs you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.\n\nIt would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)\n\nIf this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if @**YZ** could help investigate from mathematical point of view why this is the happening.\n\nCheers!",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,</p>\n<p>Here is its performances on stage 1 public sets, plus SairCommunity Bench created by <span class=\"user-mention\" data-user-id=\"50\">@Adam Betka</span> </p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why this is the happening.</p>\n<p>Cheers!</p>"
+        },
+        {
+          "user_id": 117,
+          "timestamp": 1776845523,
+          "prev_content": "Hi everyone,\n\nSince now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.\n\nI'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:\n\n[https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145](https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145)\n\nIt might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,\n\nHere is its performances on stage 1 public sets:\n\n| Model                  | normal            | hard1          | hard2            | hard3            | SairCommunityBench |\n| ---------------------- | ----------------- | -------------- | ---------------- | ---------------- | ------------------ |\n| gpt-oss-120b           | 80.30% (803/1000) | 44.93% (31/69) | 70.00% (140/200) | 57.00% (228/400) | 77.50% (155/200)   |\n| llama3.3-70b-instruct  | 76.00% (760/1000) | 42.03% (29/69) | 66.50% (133/200) | 57.00% (228/400) | 75.00% (150/200)   |\n| gemma4-31b-it          | 79.80% (798/1000) | 42.03% (29/69) | 69.00% (138/200) | 57.25% (229/400) | 75.50% (151/200)   |\n\nAs you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.\n\nIt would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)\n\nIf this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if @**YZ** could help investigate from mathematical point of view why this is the happening.\n\nCheers!",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,</p>\n<p>Here is its performances on stage 1 public sets:</p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why this is the happening.</p>\n<p>Cheers!</p>"
+        },
+        {
+          "user_id": 117,
+          "timestamp": 1776845478,
+          "prev_content": "Hi everyone,\n\nSince now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.\n\nI'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:\n\n[https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145](https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145)\n\nIt might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,\n\nHere is its performances on stage 1 public sets:\n\n| Model                  | normal            | hard1          | hard2            | hard3            | SairCommunityBench |\n| ---------------------- | ----------------- | -------------- | ---------------- | ---------------- | ------------------ |\n| gpt-oss-120b           | 80.30% (803/1000) | 44.93% (31/69) | 70.00% (140/200) | 57.00% (228/400) | 77.50% (155/200)   |\n| llama3.3-70b-instruct  | 76.00% (760/1000) | 42.03% (29/69) | 66.50% (133/200) | 57.00% (228/400) | 75.00% (150/200)   |\n| gemma4-31b-it          | 79.80% (798/1000) | 42.03% (29/69) | 69.00% (138/200) | 57.25% (229/400) | 75.50% (151/200)   |\n\nAs you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.\n\nIt would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)\n\nIf this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if @**YZ** could help investigate from mathematical point of view why that is the happening.\n\nCheers!",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,</p>\n<p>Here is its performances on stage 1 public sets:</p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why that is the happening.</p>\n<p>Cheers!</p>"
+        },
+        {
+          "topic": "Interesting stage1 findings",
+          "user_id": 117,
+          "timestamp": 1776845362,
+          "prev_topic": "✔ Interesting stage1 findings"
+        },
+        {
+          "user_id": 117,
+          "timestamp": 1776845246,
+          "prev_content": "Hi everyone,\n\nSince now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.\n\nI'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:\n\n[https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145](https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145)\n\nIt might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,\n\nHere is its performances on stage1 public sets:\n\n| Model                  | normal            | hard1          | hard2            | hard3            | SairCommunityBench |\n| ---------------------- | ----------------- | -------------- | ---------------- | ---------------- | ------------------ |\n| gpt-oss-120b           | 80.30% (803/1000) | 44.93% (31/69) | 70.00% (140/200) | 57.00% (228/400) | 77.50% (155/200)   |\n| llama3.3-70b-instruct  | 76.00% (760/1000) | 42.03% (29/69) | 66.50% (133/200) | 57.00% (228/400) | 75.00% (150/200)   |\n| gemma4-31b-it          | 79.80% (798/1000) | 42.03% (29/69) | 69.00% (138/200) | 57.25% (229/400) | 75.50% (151/200)   |\n\nAs you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.\n\nIt would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)\n\nIf this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if @**YZ** could help investigate from mathematical point of view why that is the happening.\n\nCheers!",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Since now the stage1 has finished, I figure it is a good time for us to openly share the interesting results/findings we got from stage1 experiments.</p>\n<p>I'll start by sharing a interesting candidate cheatsheet that I obtained during an evolutionary search:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145\">https://competition.sair.foundation/contributor-network/mathematics-distillation-challenge-equational-theories-stage1/EQT01-000145</a></p>\n<p>It might not be the strongest candidate by the stage1 rule (evenly weighted average score across models and datasets), but it seems to have the incredible generalizability cross the LLM models, whenever we tested it,</p>\n<p>Here is its performances on stage1 public sets:</p>\n<table>\n<thead>\n<tr>\n<th>Model</th>\n<th>normal</th>\n<th>hard1</th>\n<th>hard2</th>\n<th>hard3</th>\n<th>SairCommunityBench</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gpt-oss-120b</td>\n<td>80.30% (803/1000)</td>\n<td>44.93% (31/69)</td>\n<td>70.00% (140/200)</td>\n<td>57.00% (228/400)</td>\n<td>77.50% (155/200)</td>\n</tr>\n<tr>\n<td>llama3.3-70b-instruct</td>\n<td>76.00% (760/1000)</td>\n<td>42.03% (29/69)</td>\n<td>66.50% (133/200)</td>\n<td>57.00% (228/400)</td>\n<td>75.00% (150/200)</td>\n</tr>\n<tr>\n<td>gemma4-31b-it</td>\n<td>79.80% (798/1000)</td>\n<td>42.03% (29/69)</td>\n<td>69.00% (138/200)</td>\n<td>57.25% (229/400)</td>\n<td>75.50% (151/200)</td>\n</tr>\n</tbody>\n</table>\n<p>As you could see, every accuracy number is very similar on each test set , even though the llama3.3 would be a little bit dumber in general.</p>\n<p>It would be very helpful if the community could help me check its performance on some other LLMs (e.g, DeepSeek-V3.2) as well. (Because I've burned enough tokens for this lmao)</p>\n<p>If this candidate is tested to actually have good generalization ability across LLM models,  It's also interesting if <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> could help investigate from mathematical point of view why that is the happening.</p>\n<p>Cheers!</p>"
+        },
+        {
+          "topic": "✔ Interesting stage1 findings",
+          "user_id": 117,
+          "timestamp": 1776845220,
+          "prev_topic": "Interesting stage1 findings"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T08:05:53.000Z"
+    },
+    {
+      "id": 1779,
+      "sender_id": 15,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"117\">Gan W.</span> has marked this topic as resolved.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776845220,
+      "client": "Internal",
+      "subject": "Interesting stage1 findings",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "user_id": 117,
+          "timestamp": 1776845362,
+          "prev_topic": "✔ Interesting stage1 findings",
+          "topic": "Interesting stage1 findings"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "sender_realm_str": "zulipinternal",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T08:07:00.000Z"
+    },
+    {
+      "id": 1780,
+      "sender_id": 15,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"117\">Gan W.</span> has marked this topic as unresolved.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776845362,
+      "client": "Internal",
+      "subject": "Interesting stage1 findings",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "sender_realm_str": "zulipinternal",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T08:09:22.000Z"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-05-01T06:54:12.037247+00:00",
+  "publicCode": "EQT01-000126",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000126",
+  "data": {
+    "cnItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+    "shareItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
+    "entityName": "sdaa",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "v15ar",
+    "cheatsheetContent": "You are a strict procedural checker for equational implication over magmas.\nA magma is a set with one binary operation * (no axioms: not associative, not commutative).\nDecide whether a given Eq1 implies Eq2 over all magmas. Do NOT assume associativity, commutativity, or any algebraic law.\n\n═══ STEP 1 — PARSE BOTH EQUATIONS (write this out as your FIRST action) ═══\n\nFor EACH of the four sides — Eq1.LHS, Eq1.RHS, Eq2.LHS, Eq2.RHS — write a single PARSE line in EXACTLY this format. Do not skip this step. Do not shortcut. The rule layer below depends on these values being on the page.\n\n  PARSE <side>: shape=<expr>  vars={...}  op=<n>  bare=<Y/N>\n                lm=<v>  rm=<v>  ldepth=<n>  rdepth=<n>\n                left_spine=<Y/N>  right_spine=<Y/N>\n\nField definitions (compute each by walking the expression as a tree where every * is a binary node):\n  shape       = the side, fully parenthesized exactly as written\n  vars        = the SET of distinct variable letters appearing on the side\n  op          = the count of * symbols on the side\n  bare        = Y iff the side is a single variable letter; else N\n  lm          = leftmost variable letter (read L→R, take first letter)\n  rm          = rightmost variable letter (read L→R, take last letter)\n  ldepth      = walk root → left child → left child → ... until a leaf; count how many * nodes traversed\n  rdepth      = same on the right-child path\n  left_spine  = Y iff every * is on the L-spine (((...(v * a) * b) * c)...) with v at the deepest left leaf, and a, b, c, ... each NOT containing *. Else N.\n  right_spine = mirror (((...c * (b * (a * v))))).\n\nIf a side is bare: shape=v vars={v} op=0 bare=Y lm=v rm=v ldepth=0 rdepth=0 left_spine=N right_spine=N.\n\nWorked parse for side  x*(y*x):\n  shape=(x*(y*x))  vars={x,y}  op=2  bare=N  lm=x  rm=x  ldepth=1  rdepth=2  left_spine=N  right_spine=N\n\n═══ OUTPUT FORMAT (STRICT) ═══\n\nAfter STEP 1 and rule trace (1-4 lines), the VERY LAST line MUST be exactly one of:\n  \\boxed{TRUE}\n  \\boxed{FALSE}\nUppercase. No period. No extra whitespace.\n\n═══ STEP 2 — APPLY RULES IN ORDER. Use ONLY parsed values from Step 1. First match wins. ═══\n\n─── FALSE via 2-element witness magmas ───\n\nL1. LEFT PROJECTION (a*b = a). Every term = its lm.\n    lm(Eq1.LHS) = lm(Eq1.RHS)  AND  lm(Eq2.LHS) ≠ lm(Eq2.RHS) → \\boxed{FALSE}. STOP.\n\nL2. RIGHT PROJECTION (a*b = b). Mirror of L1.\n    rm(Eq1.LHS) = rm(Eq1.RHS)  AND  rm(Eq2.LHS) ≠ rm(Eq2.RHS) → \\boxed{FALSE}. STOP.\n\nL3. CONSTANT ZERO (a*b = 0). Products collapse to 0; bare vars keep their value.\n    cf(eq) = (both sides of eq have op ≥ 1)  OR  (both sides are the SAME single variable letter).\n    cf(Eq1) AND NOT cf(Eq2) → \\boxed{FALSE}. STOP.\n\n─── FALSE via semantic evaluation in small concrete magmas ───\n\nFor each magma: first check Eq1 HOLDS in it. If yes, then check whether Eq2 FAILS under some assignment. Both → \\boxed{FALSE}. Otherwise SKIP and continue.\n\nM1. XOR on {0,1}: a*b = (a+b) mod 2. Term value = parity-sum mod 2 of its variables.\n    Eq1 holds iff for EVERY variable v, parity(Eq1.LHS,v) = parity(Eq1.RHS,v). Refutes Eq2 iff same test on Eq2 fails.\n\nM2. LEFT-CYCLE on {0,1,2}: a*b = (a+1) mod 3. Term value = (lm, ldepth mod 3).\n    Eq1 holds iff lm(Eq1.LHS) = lm(Eq1.RHS) AND ldepth(Eq1.LHS) ≡ ldepth(Eq1.RHS) mod 3. Refutes Eq2 iff fails on Eq2.\n\nM3. RIGHT-CYCLE on {0,1,2}: a*b = (b+1) mod 3. Mirror of M2 using rm, rdepth.\n\nM4. SPIKE-ZERO on {0,1,2}: 0*1 = 2; every other product = 0.\n    Eq1 holds iff BOTH sides have op ≥ 1 AND on each side the outer-* left operand is itself a product (not bare).\n    If not, SKIP. Else check: any assignment where Eq2 has a side of shape (x*y) with x,y both bare and x=0, y=1 → Eq2 = 2 ≠ 0 → refutes.\n\nM5. MOD3-SUM: a*b = (a+b) mod 3. Term value = variable counts vector mod 3.\n    Eq1 holds iff per-variable counts-mod-3 match on Eq1's two sides. Refutes Eq2 iff fails on Eq2.\n\nM6. LEFT NEGATION on {0,1}: a*b = 1 − a. Term value = lm XOR (ldepth mod 2).\n    Eq1 holds iff lm(Eq1.LHS) = lm(Eq1.RHS) AND ldepth(Eq1.LHS) ≡ ldepth(Eq1.RHS) mod 2. Refutes Eq2 iff fails on Eq2.\n\nM7. RIGHT NEGATION on {0,1}: a*b = 1 − b. Mirror of M6 using rm, rdepth.\n\n─── FALSE via spine divisibility (Adam McKenna) ───\n\nD8. Gate: Eq1.RHS.left_spine = Y AND Eq2.RHS.left_spine = Y AND Eq1.LHS.bare = Y AND Eq2.LHS.bare = Y AND lm(Eq1.LHS)=lm(Eq1.RHS) AND lm(Eq2.LHS)=lm(Eq2.RHS).\n    Let n = Eq1.RHS.op, m = Eq2.RHS.op.\n    If n does NOT divide m → \\boxed{FALSE}. STOP.\n\n─── TRUE via sound algebraic patterns ───\n\nT1. EQ2 IS x = x. Eq2.LHS.bare = Y AND Eq2.RHS.bare = Y AND lm(Eq2.LHS) = lm(Eq2.RHS) → \\boxed{TRUE}. STOP.\n\nT3. EQ1 IS x = y (two distinct bares). Eq1.LHS.bare = Y AND Eq1.RHS.bare = Y AND lm(Eq1.LHS) ≠ lm(Eq1.RHS) → \\boxed{TRUE}. STOP.\n\nT4. COLLAPSING EQ1. Eq1.LHS.bare = Y AND lm(Eq1.LHS) is NOT in Eq1.RHS.vars → \\boxed{TRUE}. STOP.\n    (Or the mirror: Eq1.RHS.bare = Y AND lm(Eq1.RHS) is NOT in Eq1.LHS.vars → \\boxed{TRUE}. STOP.)\n\n─── FALSE via Eq1 narrowness ───\n\nF1. NARROW EQ1. If no prior rule fired AND |Eq1.LHS.vars ∪ Eq1.RHS.vars| ≤ 2 → \\boxed{FALSE}. STOP.\n\n═══ STEP 3 — STRUCTURAL DEFAULT (only if no rule above fired) ═══\n\nCompute three integers about Eq1. Write them out before deciding.\n\n  M = for each variable appearing in Eq1 (either side), count total occurrences across BOTH sides; M = the SMALLEST such count.\n  S = Eq1.LHS.op.\n  V = |Eq1.LHS.vars|.\n\nDecide:\n\n  B1. M ≥ 2 → \\boxed{FALSE}. (Every variable tied; Eq1 too loose; tighter Eq2 likely fails in some magma.)\n  B2. Else M = 1:\n      B2a. S = 0 (Eq1.LHS.bare = Y) → \\boxed{TRUE}.\n      B2b. S = 1 AND V = 2 (Eq1.LHS has shape x*y with distinct x, y) → \\boxed{TRUE}.\n      B2c. S ≥ 2 AND Eq1.LHS.bare = N AND Eq1.RHS.bare = N AND ≥ 3 distinct variables appear exactly once in Eq1 → \\boxed{FALSE}.   (multi-singleton trap)\n      B2d. Otherwise → \\boxed{FALSE}.\n\n═══ PROOF DISCIPLINE ═══\n\n- \"No small witness found\" does NOT mean TRUE. Many FALSE problems need size ≥ 5 counterexamples. Do NOT declare TRUE without a rule trigger.\n- Do NOT improvise algebraic proofs. Rely on parse values and the enumerated rules.\n- Never re-bracket. Replace only exact subterms.\n- If any Layer-2 rule commits, STOP immediately.\n\n═══ INPUT ═══\nEq1: {{ equation1 }}\nEq2: {{ equation2 }}",
+    "publishedAt": "2026-04-21T04:25:13Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_80c4c8a6-dc2e-4ed2-8e31-7189eb03ebe5",
+        "entityName": "sdaa",
+        "publishedAt": "2026-04-21T04:25:13Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_e9166e52-6012-4959-8366-08e3aa29ad96",
+    "publicCode": "EQT01-000126",
+    "remark": "",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}

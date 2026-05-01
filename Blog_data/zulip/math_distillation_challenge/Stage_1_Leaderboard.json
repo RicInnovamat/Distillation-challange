@@ -1,0 +1,383 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Stage 1 Leaderboard",
+  "message_count": 11,
+  "messages": [
+    {
+      "id": 1853,
+      "sender_id": 25,
+      "content": "<p>Hi everyone,</p>\n<p>The leaderboard for Mathematics Distillation Challenge - Equational Theories: Stage 1 has been released. You can now view your results here:</p>\n<p><a href=\"https://competition.sair.foundation/leaderboard/mathematics-distillation-challenge-equational-theories-stage1\">https://competition.sair.foundation/leaderboard/mathematics-distillation-challenge-equational-theories-stage1</a></p>\n<p>There are two leaderboards. The main scored leaderboard is based on 600 problems: 200 easy, 200 hard, and 200 extra-hard problems. The order-5 leaderboard is provided for research purposes.</p>\n<p>The evaluation problem sets are available on Hugging Face:</p>\n<p><a href=\"https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems\">https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems</a></p>\n<p>The corresponding subsets are evaluation_normal, evaluation_hard, evaluation_extra_hard, and evaluation_order5.</p>\n<p>You can use the filters on the leaderboard to inspect how your cheatsheet performed on each model and each problem set. Different models and problem sets have different winners, so we hope these results will help participants learn from one another and prepare for Stage 2.</p>\n<p>Please note that only cheatsheets submitted through the official submission portal were evaluated and counted for the final leaderboard. Cheatsheets tested only in the Playground are not included.</p>\n<p>Because the evaluation and checking process had limited time, and because LLM outputs can vary slightly across repeated runs, some small score differences may occur. We hope you understand, and we have tried to make the process as consistent and fair as possible.</p>\n<p>For discussion about insights from the results, please use this channel. If you have questions about your team's score, feel free to DM me.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777536663,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "last_edit_timestamp": 1777536807,
+      "edit_history": [
+        {
+          "user_id": 25,
+          "timestamp": 1777536807,
+          "prev_content": "Hi everyone,\n\nThe leaderboard for Mathematics Distillation Challenge - Equational Theories: Stage 1 has been released. You can now view your results here:\n\nhttps://competition.sair.foundation/leaderboard/mathematics-distillation-challenge-equational-theories-stage1\n\nThere are two leaderboards. The main scored leaderboard is based on 600 problems: 200 easy, 200 hard, and 200 extra-hard problems. The order-5 leaderboard is provided for research purposes.\n\nThe evaluation problem sets are available on Hugging Face:\n\nhttps://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems\n\nThe corresponding subsets are evaluation_normal, evaluation_hard, evaluation_extra_hard, and evaluation_order5.\n\nYou can use the filters on the leaderboard to inspect how your cheatsheet performed on each model and each problem set. Different models and problem sets have different winners, so we hope these results will help participants learn from one another and prepare for Stage 2.\n\nPlease note that only cheatsheets submitted through the official submission portal were evaluated and counted for the final leaderboard. Cheatsheets tested only in the Playground are not included.\n\nBecause the evaluation and checking process had limited time, and because LLM outputs can vary slightly across repeated runs, some small score differences may occur. We hope you understand, and we have tried to make the process as consistent and fair as possible.\n\nFor discussion about insights from the results, please use this channel. If you have questions about your personal score, feel free to DM me.",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>The leaderboard for Mathematics Distillation Challenge - Equational Theories: Stage 1 has been released. You can now view your results here:</p>\n<p><a href=\"https://competition.sair.foundation/leaderboard/mathematics-distillation-challenge-equational-theories-stage1\">https://competition.sair.foundation/leaderboard/mathematics-distillation-challenge-equational-theories-stage1</a></p>\n<p>There are two leaderboards. The main scored leaderboard is based on 600 problems: 200 easy, 200 hard, and 200 extra-hard problems. The order-5 leaderboard is provided for research purposes.</p>\n<p>The evaluation problem sets are available on Hugging Face:</p>\n<p><a href=\"https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems\">https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems</a></p>\n<p>The corresponding subsets are evaluation_normal, evaluation_hard, evaluation_extra_hard, and evaluation_order5.</p>\n<p>You can use the filters on the leaderboard to inspect how your cheatsheet performed on each model and each problem set. Different models and problem sets have different winners, so we hope these results will help participants learn from one another and prepare for Stage 2.</p>\n<p>Please note that only cheatsheets submitted through the official submission portal were evaluated and counted for the final leaderboard. Cheatsheets tested only in the Playground are not included.</p>\n<p>Because the evaluation and checking process had limited time, and because LLM outputs can vary slightly across repeated runs, some small score differences may occur. We hope you understand, and we have tried to make the process as consistent and fair as possible.</p>\n<p>For discussion about insights from the results, please use this channel. If you have questions about your personal score, feel free to DM me.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 234
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-30T08:11:03.000Z"
+    },
+    {
+      "id": 1855,
+      "sender_id": 71,
+      "content": "<p>Go team! Some great results on there. Congratulations to Dufius, vt and Reza - top effort!</p>",
+      "recipient_id": 43,
+      "timestamp": 1777537999,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "tada",
+          "emoji_code": "1f389",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T08:33:19.000Z"
+    },
+    {
+      "id": 1860,
+      "sender_id": 234,
+      "content": "<p>Thanks to the organizers for running this, I really enjoyed digging into the problem. One pattern from the leaderboard that caught my eye: many of the top extra-hard performers scored lower on normal and hard. I ran some analysis with my programatic checker on top cheatsheets (and my own) and the mechanism is interesting.</p>\n<ol>\n<li>The evaluation extra hard cheat sheet seems to fit into a very narrow set of problems. Across all rules on the cheat sheets I tested, the majority of them never fired on any problems. However, there were some that fired a lot:</li>\n</ol>\n<ul>\n<li>vt and pi both had a rule called ‘H3’ which captured all 100 of the FALSE problems in the extra hard set. When tested on the full ETP, however, this rule only had 17.3% precision!</li>\n<li>AJ had a witness magma called M7 which is sound (100% precision everywhere), but the eval set selected for it heavily: 18.5% of evaluation hard problems and 34.5% of extra-hard problems vs 0.17% of the natural 22M distribution, a ~200x concentration. On Hard2 and Hard3 this only covered 3% of problems.</li>\n<li>On my own cheatsheet, I had a heuristic called ‘F1’. This achieved &gt; 70% accuracy on all other problem sets but falls to 0% on 65 problems in extra hard.</li>\n</ul>\n<ol start=\"2\">\n<li>It seems that different problem sets had different rules that worked. All cheat sheets seem to perform better or worse on a different set of them. Evaluation is a genuinely hard problem. Perhaps for the next stage there should be more (but smaller) problem sets constructed with different methods:<br>\n<a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\">evaluation hard.png</a><div class=\"message_inline_image\"><a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\" title=\"evaluation hard.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2308x906\" src=\"/user_uploads/thumbnail/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png/840x560.webp\"></a></div></li>\n</ol>\n<p>Note:</p>\n<ul>\n<li>Since I only tested the top cheat sheets, it could be the case that these just so happened to have rare rules that fit the evaluation set. If we look further down the leaderboard, we might see a greater diversity of rule fires. Perhaps all problems sets will have certain rules that spike disproportionately. In a competitive format this seems like an issue, but it is unclear to me how or if this can be resolved. I’d be curious if people extend this analysis to more cheat sheets and see what they find.</li>\n<li>I would also be really interested to know what the problem selection methodology for the eval and practice sets were. It was mentioned that Hard3 and the evaluation extra hard had different ones.</li>\n</ul>\n<p>Implementation caveats:</p>\n<ul>\n<li>eucalyptus's \"Classification\" step is intuition-only; it was collapsed into CLASSIFY_DEFAULT_FALSE per the cheatsheet's own \"If uncertain, FALSE\" hint. I am curious as to how well the models were able to intuit at this step. </li>\n<li>aj's Step 3 (bilinear matrix magmas), Step 4 (partial subterm algebra), and Step 5 (perturbation method) are not finite-Cayley-table primitives and were not implemented.</li>\n<li>yan-biao's <code>B_SUB</code> (substitution unification) runs scalar on the small splits but is skipped (zero-mask) for the 22M ETP run — per-pair tree unification is intractable in numpy. <code>B3_LOOSE</code>'s \"exactly one dirty slot\" is approximated as ≤1.</li>\n</ul>\n<p>Github with more details: <a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/\">https://github.com/arjun2garg/SAIR-Math-Distillation/</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1777559845,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "last_edit_timestamp": 1777559987,
+      "edit_history": [
+        {
+          "user_id": 234,
+          "timestamp": 1777559987,
+          "prev_content": "Thanks to the organizers for running this, I really enjoyed digging into the problem. One pattern from the leaderboard that caught my eye: many of the top extra-hard performers scored lower on normal and hard. I ran some analysis with my programatic checker on top cheatsheets (and my own) and the mechanism is interesting.\n\n1. The evaluation extra hard cheat sheet seems to fit into a very narrow set of problems. Across all rules on the cheat sheets I tested, the majority of them never fired on any problems. However, there were some that fired a lot:\n* vt and pi both had a rule called ‘H3’ which captured all 100 of the FALSE problems in the extra hard set. When tested on the full ETP, however, this rule only had 17.3% precision!\n* AJ had a witness magma called M7 which is sound (100% precision everywhere), but the eval set selected for it heavily: 18.5% of evaluation hard problems and 34.5% of extra-hard problems vs 0.17% of the natural 22M distribution, a ~200x concentration. On Hard2 and Hard3 this only covered 3% of problems.\n* On my own cheatsheet, I had a heuristic called ‘F1’. This achieved > 70% accuracy on all other problem sets but falls to 0% on 65 problems in extra hard.\n\n2. It seems that different problem sets had different rules that worked. All cheat sheets seem to perform better or worse on a different set of them. Evaluation is a genuinely hard problem. Perhaps for the next stage there should be more (but smaller) problem sets constructed with different methods:\n[evaluation hard.png](/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png)\n\nNote:\n* Since I only tested the top cheat sheets, it could be the case that these just so happened to have rare rules that fit the evaluation set. If we look further down the leaderboard, we might see a greater diversity of rule fires. Perhaps all problems sets will have certain rules that spike disproportionately. In a competitive format this seems like an issue, but it is unclear to me how or if this can be resolved. I’d be curious if people extend this analysis to more cheat sheets and see what they find.\n* I would also be really interested to know what the problem selection methodology was. It was mentioned that Hard3 and the evaluation extra hard had different ones.\n\nImplementation caveats:\n* eucalyptus's \"Classification\" step is intuition-only; it was collapsed into CLASSIFY_DEFAULT_FALSE per the cheatsheet's own \"If uncertain, FALSE\" hint. I am curious as to how well the models were able to intuit at this step. \n* aj's Step 3 (bilinear matrix magmas), Step 4 (partial subterm algebra), and Step 5 (perturbation method) are not finite-Cayley-table primitives and were not implemented.\n* yan-biao's `B_SUB` (substitution unification) runs scalar on the small splits but is skipped (zero-mask) for the 22M ETP run — per-pair tree unification is intractable in numpy. `B3_LOOSE`'s \"exactly one dirty slot\" is approximated as ≤1.\n\nGithub with more details: https://github.com/arjun2garg/SAIR-Math-Distillation/",
+          "prev_rendered_content": "<p>Thanks to the organizers for running this, I really enjoyed digging into the problem. One pattern from the leaderboard that caught my eye: many of the top extra-hard performers scored lower on normal and hard. I ran some analysis with my programatic checker on top cheatsheets (and my own) and the mechanism is interesting.</p>\n<ol>\n<li>The evaluation extra hard cheat sheet seems to fit into a very narrow set of problems. Across all rules on the cheat sheets I tested, the majority of them never fired on any problems. However, there were some that fired a lot:</li>\n</ol>\n<ul>\n<li>vt and pi both had a rule called ‘H3’ which captured all 100 of the FALSE problems in the extra hard set. When tested on the full ETP, however, this rule only had 17.3% precision!</li>\n<li>AJ had a witness magma called M7 which is sound (100% precision everywhere), but the eval set selected for it heavily: 18.5% of evaluation hard problems and 34.5% of extra-hard problems vs 0.17% of the natural 22M distribution, a ~200x concentration. On Hard2 and Hard3 this only covered 3% of problems.</li>\n<li>On my own cheatsheet, I had a heuristic called ‘F1’. This achieved &gt; 70% accuracy on all other problem sets but falls to 0% on 65 problems in extra hard.</li>\n</ul>\n<ol start=\"2\">\n<li>It seems that different problem sets had different rules that worked. All cheat sheets seem to perform better or worse on a different set of them. Evaluation is a genuinely hard problem. Perhaps for the next stage there should be more (but smaller) problem sets constructed with different methods:<br>\n<a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\">evaluation hard.png</a><div class=\"message_inline_image\"><a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\" title=\"evaluation hard.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2308x906\" src=\"/user_uploads/thumbnail/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png/840x560.webp\"></a></div></li>\n</ol>\n<p>Note:</p>\n<ul>\n<li>Since I only tested the top cheat sheets, it could be the case that these just so happened to have rare rules that fit the evaluation set. If we look further down the leaderboard, we might see a greater diversity of rule fires. Perhaps all problems sets will have certain rules that spike disproportionately. In a competitive format this seems like an issue, but it is unclear to me how or if this can be resolved. I’d be curious if people extend this analysis to more cheat sheets and see what they find.</li>\n<li>I would also be really interested to know what the problem selection methodology was. It was mentioned that Hard3 and the evaluation extra hard had different ones.</li>\n</ul>\n<p>Implementation caveats:</p>\n<ul>\n<li>eucalyptus's \"Classification\" step is intuition-only; it was collapsed into CLASSIFY_DEFAULT_FALSE per the cheatsheet's own \"If uncertain, FALSE\" hint. I am curious as to how well the models were able to intuit at this step. </li>\n<li>aj's Step 3 (bilinear matrix magmas), Step 4 (partial subterm algebra), and Step 5 (perturbation method) are not finite-Cayley-table primitives and were not implemented.</li>\n<li>yan-biao's <code>B_SUB</code> (substitution unification) runs scalar on the small splits but is skipped (zero-mask) for the 22M ETP run — per-pair tree unification is intractable in numpy. <code>B3_LOOSE</code>'s \"exactly one dirty slot\" is approximated as ≤1.</li>\n</ul>\n<p>Github with more details: <a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/\">https://github.com/arjun2garg/SAIR-Math-Distillation/</a></p>"
+        },
+        {
+          "user_id": 234,
+          "timestamp": 1777559912,
+          "prev_content": "Thanks to the organizers for running this, I really enjoyed digging into the problem. One pattern from the leaderboard that caught my eye: many of the top extra-hard performers scored lower on normal and hard. I ran some analysis with my programatic checker on top cheatsheets (including my own) and the mechanism is interesting.\n\n1. The evaluation extra hard cheat sheet seems to fit into a very narrow set of problems. Across all rules on the cheat sheets I tested, the majority of them never fired on any problems. However, there were some that fired a lot:\n* vt and pi both had a rule called ‘H3’ which captured all 100 of the FALSE problems in the extra hard set. When tested on the full ETP, however, this rule only had 17.3% precision!\n* AJ had a witness magma called M7 which is sound (100% precision everywhere), but the eval set selected for it heavily: 18.5% of evaluation hard problems and 34.5% of extra-hard problems vs 0.17% of the natural 22M distribution, a ~200x concentration. On Hard2 and Hard3 this only covered 3% of problems.\n* On my own cheatsheet, I had a heuristic called ‘F1’. This achieved > 70% accuracy on all other problem sets but falls to 0% on 65 problems in extra hard.\n\n2. It seems that different problem sets had different rules that worked. All cheat sheets seem to perform better or worse on a different set of them. Evaluation is a genuinely hard problem. Perhaps for the next stage there should be more (but smaller) problem sets constructed with different methods:\n[evaluation hard.png](/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png)\n\nNote:\n* Since I only tested the top cheat sheets, it could be the case that these just so happened to have rare rules that fit the evaluation set. If we look further down the leaderboard, we might see a greater diversity of rule fires. Perhaps all problems sets will have certain rules that spike disproportionately. In a competitive format this seems like an issue, but it is unclear to me how or if this can be resolved. I’d be curious if people extend this analysis to more cheat sheets and see what they find.\n* I would also be really interested to know what the problem selection methodology was. It was mentioned that Hard3 and the evaluation extra hard had different ones.\n\nImplementation caveats:\n* eucalyptus's \"Classification\" step is intuition-only; it was collapsed into CLASSIFY_DEFAULT_FALSE per the cheatsheet's own \"If uncertain, FALSE\" hint. I am curious as to how well the models were able to intuit at this step. \n* aj's Step 3 (bilinear matrix magmas), Step 4 (partial subterm algebra), and Step 5 (perturbation method) are not finite-Cayley-table primitives and were not implemented.\n* yan-biao's `B_SUB` (substitution unification) runs scalar on the small splits but is skipped (zero-mask) for the 22M ETP run — per-pair tree unification is intractable in numpy. `B3_LOOSE`'s \"exactly one dirty slot\" is approximated as ≤1.\n\nGithub with more details: https://github.com/arjun2garg/SAIR-Math-Distillation/",
+          "prev_rendered_content": "<p>Thanks to the organizers for running this, I really enjoyed digging into the problem. One pattern from the leaderboard that caught my eye: many of the top extra-hard performers scored lower on normal and hard. I ran some analysis with my programatic checker on top cheatsheets (including my own) and the mechanism is interesting.</p>\n<ol>\n<li>The evaluation extra hard cheat sheet seems to fit into a very narrow set of problems. Across all rules on the cheat sheets I tested, the majority of them never fired on any problems. However, there were some that fired a lot:</li>\n</ol>\n<ul>\n<li>vt and pi both had a rule called ‘H3’ which captured all 100 of the FALSE problems in the extra hard set. When tested on the full ETP, however, this rule only had 17.3% precision!</li>\n<li>AJ had a witness magma called M7 which is sound (100% precision everywhere), but the eval set selected for it heavily: 18.5% of evaluation hard problems and 34.5% of extra-hard problems vs 0.17% of the natural 22M distribution, a ~200x concentration. On Hard2 and Hard3 this only covered 3% of problems.</li>\n<li>On my own cheatsheet, I had a heuristic called ‘F1’. This achieved &gt; 70% accuracy on all other problem sets but falls to 0% on 65 problems in extra hard.</li>\n</ul>\n<ol start=\"2\">\n<li>It seems that different problem sets had different rules that worked. All cheat sheets seem to perform better or worse on a different set of them. Evaluation is a genuinely hard problem. Perhaps for the next stage there should be more (but smaller) problem sets constructed with different methods:<br>\n<a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\">evaluation hard.png</a><div class=\"message_inline_image\"><a href=\"/user_uploads/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png\" title=\"evaluation hard.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2308x906\" src=\"/user_uploads/thumbnail/5/6c/U8uBQqQmhmefd4S3TnT8aJBN/evaluation-hard.png/840x560.webp\"></a></div></li>\n</ol>\n<p>Note:</p>\n<ul>\n<li>Since I only tested the top cheat sheets, it could be the case that these just so happened to have rare rules that fit the evaluation set. If we look further down the leaderboard, we might see a greater diversity of rule fires. Perhaps all problems sets will have certain rules that spike disproportionately. In a competitive format this seems like an issue, but it is unclear to me how or if this can be resolved. I’d be curious if people extend this analysis to more cheat sheets and see what they find.</li>\n<li>I would also be really interested to know what the problem selection methodology was. It was mentioned that Hard3 and the evaluation extra hard had different ones.</li>\n</ul>\n<p>Implementation caveats:</p>\n<ul>\n<li>eucalyptus's \"Classification\" step is intuition-only; it was collapsed into CLASSIFY_DEFAULT_FALSE per the cheatsheet's own \"If uncertain, FALSE\" hint. I am curious as to how well the models were able to intuit at this step. </li>\n<li>aj's Step 3 (bilinear matrix magmas), Step 4 (partial subterm algebra), and Step 5 (perturbation method) are not finite-Cayley-table primitives and were not implemented.</li>\n<li>yan-biao's <code>B_SUB</code> (substitution unification) runs scalar on the small splits but is skipped (zero-mask) for the 22M ETP run — per-pair tree unification is intractable in numpy. <code>B3_LOOSE</code>'s \"exactly one dirty slot\" is approximated as ≤1.</li>\n</ul>\n<p>Github with more details: <a href=\"https://github.com/arjun2garg/SAIR-Math-Distillation/\">https://github.com/arjun2garg/SAIR-Math-Distillation/</a></p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Arjun Garg",
+      "sender_email": "user234@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/681d322aaf7a200b45928e5587f23027?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T14:37:25.000Z"
+    },
+    {
+      "id": 1866,
+      "sender_id": 177,
+      "content": "<p>Congrats all!  Seems like forsaking llama was something I should have done long ago!</p>",
+      "recipient_id": 43,
+      "timestamp": 1777585594,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "100",
+          "emoji_code": "1f4af",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam McKenna",
+      "sender_email": "user177@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T21:46:34.000Z"
+    },
+    {
+      "id": 1869,
+      "sender_id": 316,
+      "content": "<p>Yeaaaah N1</p>",
+      "recipient_id": 43,
+      "timestamp": 1777590468,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/cb1d4214b22c646c7a7ba66aaf4c6649?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T23:07:48.000Z"
+    },
+    {
+      "id": 1870,
+      "sender_id": 316,
+      "content": "<p>Dufius here</p>",
+      "recipient_id": 43,
+      "timestamp": 1777590496,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/cb1d4214b22c646c7a7ba66aaf4c6649?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T23:08:16.000Z"
+    },
+    {
+      "id": 1871,
+      "sender_id": 316,
+      "content": "<p>What a competition to be part of  genuinely an honor. With the limited time I had to spend on this, ranking up there feels mega. Huge thanks to the organizers, and congratulations to the rest of the leaderboard. Good luck to everyone in Stage 2!</p>",
+      "recipient_id": 43,
+      "timestamp": 1777591290,
+      "client": "ZulipFlutter",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "fire",
+          "emoji_code": "1f525",
+          "reaction_type": "unicode_emoji",
+          "user_id": 177
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/cb1d4214b22c646c7a7ba66aaf4c6649?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T23:21:30.000Z"
+    },
+    {
+      "id": 1872,
+      "sender_id": 196,
+      "content": "<p>My team's cheatsheet had about 9% lower average accuracy on the official SAIR evaluation than on our test set of problems. It underperformed on the evaluation for all 3 models and all 3 difficulty levels. Parse rate didn't change, though.</p>\n<p>How does this compare to your team's results?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777602246,
+      "client": "website",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Ian Norris",
+      "sender_email": "user196@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/3a50ca8b1fc6d248e1f571b5d9309129?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-01T02:24:06.000Z"
+    },
+    {
+      "id": 1873,
+      "sender_id": 316,
+      "content": "<p>Whould you guys like for me to give some insights? And Arjung the SAIR test is what counts not your own local runs or benches. Let it go and lets focus on stage 2.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777606717,
+      "client": "ZulipFlutter",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/cb1d4214b22c646c7a7ba66aaf4c6649?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-01T03:38:37.000Z"
+    },
+    {
+      "id": 1874,
+      "sender_id": 117,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"316\">Vincent Witte</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Stage.201.20Leaderboard/near/1873\">said</a>:</p>\n<blockquote>\n<p>Whould you guys like for me to give some insights? And Arjung the SAIR test is what counts not your own local runs or benches. Let it go and lets focus on stage 2.</p>\n</blockquote>\n<p>Yes it would be great to hear from the winner, the methodology you adopted to generate the Stage1 winning cheatsheet that gave high generalisation across models and test data.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777609670,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-05-01T04:27:50.000Z"
+    },
+    {
+      "id": 1875,
+      "sender_id": 117,
+      "content": "<p>Also it would be nice to hear from the teams that came up with \"highly efficient\"cheatsheets, from \"Pi\" and \"Paws\"<br>\n<a href=\"/user_uploads/5/9d/Is5Ml9awMBqSoPXSzETqzn4_/image.png\">image.png</a><br>\n<a href=\"/user_uploads/5/55/mT3gDIjafFL1bjE0q193xdxJ/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/9d/Is5Ml9awMBqSoPXSzETqzn4_/image.png\" title=\"image.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"1195x65\" src=\"/user_uploads/thumbnail/5/9d/Is5Ml9awMBqSoPXSzETqzn4_/image.png/840x560.webp\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/5/55/mT3gDIjafFL1bjE0q193xdxJ/image.png\" title=\"image.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"1196x70\" src=\"/user_uploads/thumbnail/5/55/mT3gDIjafFL1bjE0q193xdxJ/image.png/840x560.webp\"></a></div><p>Like how you guys came up with these short candidates with high coverage?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777610108,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 Leaderboard",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-05-01T04:35:08.000Z"
+    }
+  ]
+}
