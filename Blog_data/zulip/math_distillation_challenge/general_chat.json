@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "general chat",
-  "message_count": 84,
+  "message_count": 102,
   "messages": [
     {
       "id": 341,
@@ -1905,6 +1905,647 @@
       "avatar_url": "https://secure.gravatar.com/avatar/87fa48b12d5f812053d0214b9614faa4?d=identicon&version=1",
       "content_type": "text/html",
       "date": "2026-04-18T17:40:44.000Z"
+    },
+    {
+      "id": 1738,
+      "sender_id": 273,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"285\">Wenlin Zhang</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1675\">ha dicho</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"273\">Israel Cazares</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1592\">said</a>:</p>\n<blockquote>\n<p>Hi everyone,</p>\n<p>I've submitted my cheat sheet to the competition and also wrote a short empirical paper documenting my findings on the single-prompt ceiling effect.</p>\n<p>I'd like to submit it to arXiv (cs.CL) and I'm looking for someone willing to endorse me. If you qualify and are open to it, please reach out at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a> and I'll send you the endorsement code.</p>\n<p>Paper (Zenodo): <a href=\"https://zenodo.org/records/19598433\">https://zenodo.org/records/19598433</a></p>\n<p>Thanks in advance!</p>\n</blockquote>\n<p>Hi Israel. Saw your arXiv endorsement request. I lead a Lean 4 formalization project (<a href=\"https://github.com/the-omega-institute/automath\">https://github.com/the-omega-institute/automath</a>, 10,500+ verified theorems) and we have a similar situation: papers on Zenodo, 9 submissions stuck in peer review across ETDS/JNT/SIAM, so we can't share results broadly yet, and no arXiv endorsement for math.DS/cs.AI either.</p>\n<p>Your single-prompt ceiling effect paper sounds relevant to what we're seeing in automated theorem proving. Would be interested to read it and compare notes.</p>\n<p>If anyone in this community can endorse for math.DS, cs.AI, or math.CO, we'd appreciate it too. The Lean 4 library is public and verifiable.</p>\n<p>Happy to return the favor for anyone who needs a review or formalization check.</p>\n</blockquote>\n<p>Hi Wenlin — really appreciate the thoughtful note.</p>\n<p>Your framing around structural invariant discovery resonates directly with what I document in the paper — the router hypothesis: models aren't constructing proofs step-by-step, they're routing into latent structural templates. What you're describing from the formal side (discovery phase = structural routing, verification phase = traditional proof) is the same phenomenon from a different angle.</p>\n<p>The FALSE-law mining angle is especially interesting. Many failure modes I observed are consistent with misrouting to near-miss structures rather than a lack of reasoning capacity per se — which aligns with what your system surfaces as structural separators.</p>\n<p>Would love to compare notes on how your system represents and selects invariants vs. how prompts implicitly induce them. Happy to connect at <a href=\"mailto:hello@bytepro.ai\">hello@bytepro.ai</a>.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776723007,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Israel Cazares",
+      "sender_email": "user273@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/a6248228c9ad76f59acab5214ac43bd0?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-20T22:10:07.000Z"
+    },
+    {
+      "id": 1739,
+      "sender_id": 258,
+      "content": "<p>An interesting related challenge would be to come up with preference pairs data (e.g. for DPO) that can fine-tune a small model (maybe Llama 3, 8b?) to become a magma implication decider and prover. We can still keep it at pure text delivery for broader appeal. What do you guys think?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776735103,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Reza Jamei",
+      "sender_email": "user258@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/e552e979dc9058a756f46160f70cbff6?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T01:31:43.000Z"
+    },
+    {
+      "id": 1745,
+      "sender_id": 268,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span> I’ve noticed a rather major issue where LLM intelligence seems to fluctuate based on the time of day. Using the exact same cheatsheet and model, I got completely different results at different hours. For example, when I tested Gemma 31B at 8 AM GMT, it scored 9/10, but by 9 PM GMT, it dropped to 5/10 and the cheatsheet just didn't work anymore. This is quite worrying because it suggests LLM reliability might depend on current user traffic rather than the logic of our cheatsheet. I'm concerned this could really skew the results we've submitted and how the competition is being evaluated.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776749538,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "BlackNull.com",
+      "sender_email": "user268@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/5d5338aad5491e5f24b07e0990f6e7f2?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T05:32:18.000Z"
+    },
+    {
+      "id": 1746,
+      "sender_id": 71,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"268\">BlackNull.com</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1745\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> I’ve noticed a rather major issue where LLM intelligence seems to fluctuate based on the time of day. Using the exact same cheatsheet and model, I got completely different results at different hours. For example, when I tested Gemma 31B at 8 AM GMT, it scored 9/10, but by 9 PM GMT, it dropped to 5/10 and the cheatsheet just didn't work anymore. This is quite worrying because it suggests LLM reliability might depend on current user traffic rather than the logic of our cheatsheet. I'm concerned this could really skew the results we've submitted and how the competition is being evaluated.</p>\n</blockquote>\n<p>Yes, this can be super annoying. I do not think this is just traffic, but a more general feature of how LLMs behave.</p>\n<p>With the same model and the same cheatsheet or prompt, you can still get different outcomes because the model is not a deterministic symbolic engine in practice. This is actually a major limitation of current LLMs that often goes unnoticed, because it is less obvious than things like hallucinations. Small differences in inference trajectory, backend routing, retries, or runtime conditions can push the model into a different reasoning path, and that can materially change accuracy on a small test set. That is one reason current LLM architecture is still not reliable enough for science-level use.</p>\n<p>It  makes the planned 3 repeats per model/problem pair very important for the evaluation. Without repeated runs, a cheatsheet score may mostly reflect one particular reasoning trajectory rather than its true average performance.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776751056,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T05:57:36.000Z"
+    },
+    {
+      "id": 1755,
+      "sender_id": 268,
+      "content": "<p>The cheatsheet performs optimally between 4:00 and 8:00 AM (GMT 0), when the LLM provider, DeepIntra, experiences lower traffic congestion. I recommend that SAIR run cheatsheet independently to ensure maximum accuracy. Through repeated testing during this specific window, I have confirmed that the cheatsheet remains highly stable. The inconsistencies I've observed are clearly traffic-related, which significantly impacts the evaluation process. When over 1,000 questions and multiple cheatsheets are processed simultaneously, the resulting traffic spike causes greater deviations in the results than the LLM’s own reasoning errors.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776773281,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "BlackNull.com",
+      "sender_email": "user268@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/5d5338aad5491e5f24b07e0990f6e7f2?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T12:08:01.000Z"
+    },
+    {
+      "id": 1758,
+      "sender_id": 177,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"268\">BlackNull.com</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1755\">said</a>:</p>\n<blockquote>\n<p>The cheatsheet performs optimally between 4:00 and 8:00 AM (GMT 0), when the LLM provider, DeepIntra, experiences lower traffic congestion. I recommend that SAIR run cheatsheet independently to ensure maximum accuracy. Through repeated testing during this specific window, I have confirmed that the cheatsheet remains highly stable. The inconsistencies I've observed are clearly traffic-related, which significantly impacts the evaluation process. When over 1,000 questions and multiple cheatsheets are processed simultaneously, the resulting traffic spike causes greater deviations in the results than the LLM’s own reasoning errors.</p>\n</blockquote>\n<p>That' s odd, do you think it's redirecting queries to a more quantized model at times of high traffic?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776788592,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam McKenna",
+      "sender_email": "user177@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T16:23:12.000Z"
+    },
+    {
+      "id": 1776,
+      "sender_id": 71,
+      "content": "<p>Did anybody else accidentally submit the wrong cheatsheet version? <span aria-label=\"man facepalming\" class=\"emoji emoji-1f926-200d-2642\" role=\"img\" title=\"man facepalming\">:man_facepalming:</span></p>",
+      "recipient_id": 43,
+      "timestamp": 1776844054,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart_hands",
+          "emoji_code": "1faf6",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-22T07:47:34.000Z"
+    },
+    {
+      "id": 1786,
+      "sender_id": 134,
+      "content": "<p>When we will expect to see the results? (Sorry if this was posted somewhere, I couldn't find it!)<br>\nAlso - how did people get results on hard benchmarks etc. so early? When I was playing on the playground, I could only ever do a few at a time; I never found something to run a full eval. (would've liked to, in retrospect... :) )</p>",
+      "recipient_id": 43,
+      "timestamp": 1776878995,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Alex Meiburg",
+      "sender_email": "user134@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/fa7e9ca1d9249db03849e44977e3cc5f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-22T17:29:55.000Z"
+    },
+    {
+      "id": 1794,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"134\">@Alex Meiburg</span> The competition page states that the leaderboard will be published by April 30, but we will most likely release it earlier.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776882480,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 273
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-22T18:28:00.000Z"
+    },
+    {
+      "id": 1831,
+      "sender_id": 71,
+      "content": "<p>Would it be possible to drop Llama 3.3 70B Instruct from Stage 2? It seems to have caused problems for almost everyone with little/no cost benefit and optimizing for it in the same cheatsheet brought down accuracy across the board.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777062566,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 236
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 177
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Heath Sanchez",
+      "sender_email": "user71@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/62a186edca1996d8ab4aea0c1cacbd21?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-24T20:29:26.000Z"
+    },
+    {
+      "id": 1832,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"71\">@Heath Sanchez</span> For Stage 2, we are considering a more flexible model-calling setup where participants can choose the open-source models they want to use for solving the problems. The detailed rules will be announced when Stage 2 begins. If participants do not want to use Llama 3.3, they do not need to use it.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777070388,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 157
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 50
+        },
+        {
+          "emoji_name": "octopus",
+          "emoji_code": "1f419",
+          "reaction_type": "unicode_emoji",
+          "user_id": 46
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-24T22:39:48.000Z"
+    },
+    {
+      "id": 1833,
+      "sender_id": 113,
+      "content": "<p>I also found a issue with the openai 20b, when the model is ordered to identify its own ai os name from a list of available ai operating systems it identifies as llama <span aria-label=\"rolling on the floor laughing\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rolling on the floor laughing\">:rolling_on_the_floor_laughing:</span> but I'm pretty sure it would identify as the first ai os name listed, llama 70b wasn't to difficult too be honest it just needs a extra line or two of code for hand holding</p>",
+      "recipient_id": 43,
+      "timestamp": 1777075487,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "last_edit_timestamp": 1777075517,
+      "edit_history": [
+        {
+          "user_id": 113,
+          "timestamp": 1777075517,
+          "prev_content": "Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, or should I assume the deadline is 23:59 UTC? \n\nI also found a issue with the openai 20b, when the model is ordered to identify its own ai os name from a list of available ai operating systems it identifies as llama 🤣 but I'm pretty sure it would identify as the first ai os name listed, llama 70b wasn't to difficult too be honest it just needs a extra line or two of code for hand holding",
+          "prev_rendered_content": "<p>Is there an estimated deadline for when a shared sheet would finish being benchmarked before April 20th? For example, if something is submitted by April 19th at 12:00 PM, would it be tested by April 19th at 11:30 PM? I’m looking for an idea of a safe submission deadline if I want to review the benchmarking results before the April 20th, 23:59 AoE cutoff. Additionally, are you monitoring submission locations, or should I assume the deadline is 23:59 UTC? </p>\n<p>I also found a issue with the openai 20b, when the model is ordered to identify its own ai os name from a list of available ai operating systems it identifies as llama <span aria-label=\"rolling on the floor laughing\" class=\"emoji emoji-1f923\" role=\"img\" title=\"rolling on the floor laughing\">:rolling_on_the_floor_laughing:</span> but I'm pretty sure it would identify as the first ai os name listed, llama 70b wasn't to difficult too be honest it just needs a extra line or two of code for hand holding</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-25T00:04:47.000Z"
+    },
+    {
+      "id": 1836,
+      "sender_id": 117,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1832\">said</a>:</p>\n<blockquote>\n<p><span class=\"user-mention silent\" data-user-id=\"71\">Heath Sanchez</span> For Stage 2, we are considering a more flexible model-calling setup where participants can choose the open-source models they want to use for solving the problems. The detailed rules will be announced when Stage 2 begins. If participants do not want to use Llama 3.3, they do not need to use it.</p>\n</blockquote>\n<p>Hi, is it correct to interpret this as: SAIR will shortlist open weight models for us to choose from? Would these models all be general purpose models (e.g. DeepSeek-V4)? Or would you include some  of the open weight prover models as well?</p>\n<p>I think a 'huggingface wildcard model' setup would have loophole: One could finetune model that is overfitted to ETP and use that.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777105518,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-04-25T08:25:18.000Z"
+    },
+    {
+      "id": 1839,
+      "sender_id": 25,
+      "content": "<p>SAIR will work with the community to suggest a set of open-source models for Stage 2 evaluation, such as Gemma 4, GPT-OSS-120B, DeepSeek-V4, Kimi, etc. We will share the detailed model policy when Stage 2 officially begins.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777135922,
+      "client": "ZulipElectron",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 177
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 189
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-25T16:52:02.000Z"
+    },
+    {
+      "id": 1842,
+      "sender_id": 46,
+      "content": "<p>I'm trying to delete my published submissions on the Contribution Network to free up space — but clicking delete on any published item just shows \"load failed.\" Is this expected behavior now that Stage 1 has ended？</p>",
+      "recipient_id": 43,
+      "timestamp": 1777263417,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "sdaa",
+      "sender_email": "user46@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/b9e75d1db449b2ba7ba2b1b0f2b25109bf3b0666.png",
+      "content_type": "text/html",
+      "date": "2026-04-27T04:16:57.000Z"
+    },
+    {
+      "id": 1843,
+      "sender_id": 113,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"46\">sdaa</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//near/1842\">said</a>:</p>\n<blockquote>\n<p>I'm trying to delete my published submissions on the Contribution Network to free up space — but clicking delete on any published item just shows \"load failed.\" Is this expected behavior now that Stage 1 has ended？</p>\n</blockquote>\n<p>All your submitted sheets seem to have been benchmarked already, it seems once your sheets have been benchmarked they are unavailable to be deleted, only submitted sheets that are waiting to be bench marked can be deleted, I'm pretty sure for stage two a second community shared section may be created with another submission process.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777291529,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 46
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-27T12:05:29.000Z"
+    },
+    {
+      "id": 1851,
+      "sender_id": 120,
+      "content": "<p>Hi everyone,</p>\n<p>I wanted to share a project that might be of interest to this community. I've been analyzing the discussions from this Zulip channel and put together an independent deep research report on the SAIR Math Distillation Challenge.<br>\n<strong>GitHub Repository</strong>: <a href=\"https://github.com/Feishu-China/SAIR-Insights\">https://github.com/Feishu-China/SAIR-Insights</a><br>\n<strong>Interactive Bilingual Preview</strong>: <a href=\"https://feishu-china.github.io/SAIR-Insights/\">https://feishu-china.github.io/SAIR-Insights/</a></p>\n<p>The report is available in both <strong>Chinese</strong> and <strong>English</strong>, and covers the full lifecycle of Stage 1 — from the competition background and timeline to core technical discoveries, participant ecosystem, and open questions. It includes dedicated sections on:</p>\n<ul>\n<li><strong>Prompt ordering matters</strong>: The community discovery that placing cheatsheets before task descriptions significantly improves results, both through API caching and better model performance</li>\n<li><strong>Terence Tao's AlphaEvolve predictors</strong> and the difficulty of building truly diverse hard sets</li>\n<li><strong>Het S's creative 3D visualization</strong> of the Magma problem space using fingerprinting + clustering</li>\n<li><strong>The evolution of submission formats</strong> and community infrastructure discussions</li>\n<li><strong>Model hallucination and self-contradiction</strong>: Models finding counterexamples yet constructing fake proofs to overturn their own findings</li>\n<li><strong>Manuel Cázares' systematic study</strong> of 45+ prompt variants and the \"Single-Prompt Ceiling\" phenomenon — including the striking finding that the best local result (79.25%) dropped to 55.5% on the official benchmark</li>\n<li><strong>Cross-distribution generalization challenges</strong>: Only 1 of 52 submissions exceeded 65% on both hard2 and hard3 simultaneously</li>\n<li><strong>The Spine Isolation Theorem</strong> (McKenna et al.): Zero exceptions across 1.54M implication pairs</li>\n</ul>\n<p>All analysis is based on publicly available discussions from this channel (414 messages). The full reports (Chinese &amp; English markdown) and an interactive bilingual HTML page are available in the repo.</p>\n<p>Feedback, corrections, and contributions are very welcome — especially if I've mischaracterized anyone's work or missed important discussions. The repo has a CONTRIBUTING.md for anyone who'd like to contribute.</p>\n<p>Hope this is useful for the community!</p>",
+      "recipient_id": 43,
+      "timestamp": 1777517836,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 46
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 234
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 188
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 317
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 316
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Mengfan Chen",
+      "sender_email": "user120@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/ec956c63aa76dfe955a474e25d3f5baa?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-30T02:57:16.000Z"
+    },
+    {
+      "id": 1887,
+      "sender_id": 258,
+      "content": "<p><a href=\"/user_uploads/5/c7/kFOD_N96t3ajaw7t7lzEteXs/PastedText.txt\">PastedText.txt</a></p>",
+      "recipient_id": 43,
+      "timestamp": 1777708574,
+      "client": "website",
+      "subject": "general chat",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 316
+        },
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 91
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Reza Jamei",
+      "sender_email": "user258@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/e552e979dc9058a756f46160f70cbff6?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-02T07:56:14.000Z"
     }
   ]
 }

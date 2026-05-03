@@ -1,0 +1,44 @@
+{
+  "fetched_at": "2026-05-03T06:44:37.760955+00:00",
+  "publicCode": "EQT01-000125",
+  "source_url": "https://server-9527.sair.foundation/api/contributor-network/by-code/EQT01-000125",
+  "data": {
+    "cnItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+    "parentCnItemId": null,
+    "rootCnItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+    "shareItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+    "parentShareItemId": null,
+    "rootShareItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+    "competitionId": "mathematics-distillation-challenge-equational-theories-stage1",
+    "competitionTitle": "",
+    "entityType": "individual",
+    "entityId": "U-dec1bf3ec210cf71b4f2ad044fb60a5d7c5e56a3",
+    "entityName": "sdaa",
+    "entityAvatarUrl": "",
+    "cheatsheetTitle": "v14p2",
+    "cheatsheetContent": "You are a strict procedural checker for equational implication over magmas.\nA magma is a set with ONE binary operation * (no axioms: not associative, not commutative).\nExecute Rules 1-6 in order, STOP at the first rule that fires.\n\n===== INPUT =====\nEquation 1: {{ equation1 }}\nEquation 2: {{ equation2 }}\n\n===== OUTPUT FORMAT (STRICT) =====\n- Short REASONING (which rule fired, 1-3 lines).\n- LAST line EXACTLY one of:\n  \\boxed{TRUE}\n  \\boxed{FALSE}\n- Write the boxed token literally. Uppercase TRUE or FALSE. No period after.\n\n===== ANTI-PATTERNS =====\n- If a probe magma satisfies Eq1 and REFUTES Eq2, STOP immediately and output \\boxed{FALSE}. Do not prove TRUE after.\n- \"No small counterexample found\" does NOT mean TRUE. Many FALSE problems need size 5+ counterexamples.\n- Do not improvise algebraic proofs.\n\n===== RULE 1 — IDENTITY =====\nIf Eq1 and Eq2 are the same string (ignoring whitespace) → \\boxed{TRUE}. STOP.\n\n===== RULE 2 — TRIVIAL (L0) COLLAPSE =====\nIf a variable on one side of Eq1 is absent from the other, Eq1 forces size-1 magma → implies everything.\n- 2a. Both sides are single bare letters, different: \"x = y\" → \\boxed{TRUE}.\n- 2b. One side is a bare letter v; the other side contains a letter ≠ v absent from v's side: \"x = y * z\" → \\boxed{TRUE}.\n\n===== RULE 3 — PROJECTION LAWS =====\nAfter removing spaces, Eq1 is exactly one of (v, w = two distinct single letters):\n- 3a. \"v=v*w\" or \"v*w=v\" → LEFT-PROJECTION forced (a*b=a). Every term = LEFTMOST letter.\n  If leftmost letter of Eq2.LHS = leftmost of Eq2.RHS → \\boxed{TRUE}. STOP.\n- 3b. \"v=w*v\" or \"w*v=v\" → RIGHT-PROJECTION forced (a*b=b). Every term = RIGHTMOST letter.\n  If rightmost letter of Eq2.LHS = rightmost of Eq2.RHS → \\boxed{TRUE}. STOP.\n\nExample (3b): Eq1 = \"x = y * x\". Eq2 = \"x = x * (x * ((y * z) * x))\". Both rightmost = x → TRUE.\n\n===== RULE 3c — CONSTANT-FORCING (gives TRUE) =====\nScan Eq1 (after removing spaces). Check whether ONE side of Eq1 is exactly \"a*b\" where a and b are TWO DISTINCT single letters, AND the OTHER side R contains NO occurrence of a or b.\n(Examples that match: \"x*y = z*(u*u)\" (LHS is x*y, distinct; RHS has no x,y), \"x*x = y*z\" (RHS is y*z, distinct; LHS has no y,z), \"y*z = x*x\", \"x*y = (z*z)*z\". Examples that do NOT match: \"x*x = ((y*z)*w)*u\" (LHS \"x*x\" has same letter twice, not distinct; RHS is not of form letter*letter), \"x*x = (y*z)*w\" (neither side is letter*letter with distinct letters), \"x*y = x*z\" (x appears in R), \"x*x = y*y\" (both sides are letter*letter but each uses same letter twice, not distinct).)\n\nIf matched: Eq1 forces every product in the magma to equal one single constant. Therefore Eq2 holds iff both of its sides are products.\n- If BOTH sides of Eq2 contain '*' → \\boxed{TRUE}. STOP.\n- If EXACTLY ONE side of Eq2 contains '*' (the other is a bare letter) → \\boxed{FALSE}. STOP.\n\n===== RULE 4 — SPINE ISOLATION (gives FALSE) =====\nLeftmost letter of T = first alphabetic char reading T left→right.\nRightmost letter = last alphabetic char.\n\nIf Eq1 has form \"v = EXPR\" or \"EXPR = v\" (v = single bare letter):\n- 4a. If leftmost letter of EXPR = v → Eq1 holds in LEFT-ZERO magma (a*b=a). Under it, every term = its leftmost letter.\n  If leftmost of Eq2.LHS ≠ leftmost of Eq2.RHS → \\boxed{FALSE}. STOP.\n- 4b. If rightmost letter of EXPR = v AND leftmost ≠ v → Eq1 holds in RIGHT-ZERO magma (a*b=b).\n  If rightmost of Eq2.LHS ≠ rightmost of Eq2.RHS → \\boxed{FALSE}. STOP.\n\nExample: Eq1 = \"x = x * (y * z)\". Leftmost of EXPR = x. Eq2 = \"x * y = y * x\". Leftmost differ → FALSE.\n\n===== RULE 4b — BALANCED-VARS TRAP (gives FALSE) =====\nCount total occurrences of each variable across BOTH sides of Eq1 combined.\nIf EVERY variable appears ≥ 2 times (i.e., no variable appears exactly once) → \\boxed{FALSE}. STOP.\n(Reason: no free parameter in Eq1. Eq1 is \"loose\" — any tighter Eq2 likely fails in some magma.\nExamples: \"x*(y*y) = (y*x)*y\" (x:2, y:3 all ≥2), \"(x*x)*(y*y) = y*(y*x)\" (x:3, y:4 all ≥2) → FALSE.)\n\n===== RULE 4c — MULTI-SINGLETON TRAP (gives FALSE) =====\nIf Eq1 is compound (BOTH sides contain *), AND at least THREE distinct variables each appear exactly ONCE across Eq1's two sides combined → \\boxed{FALSE}. STOP.\n(Reason: too many free parameters in Eq1 — the equation is too loose to constrain a tighter Eq2.\nExamples: \"(x * y) * z = (x * w) * u\" (singletons y,z,w,u → 4 ≥3) → FALSE.\n\"x * x = ((y * z) * w) * u\" (singletons y,z,w,u → 4 ≥3) → FALSE.)\n\n===== RULE 5 — FINITE MAGMA PROBES (gives FALSE) =====\nTry these EIGHT probes in order. For each probe, substitute each letter with 0/1 (or 0/1/2/3) values and evaluate. If probe SATISFIES Eq1 for ALL assignments AND REFUTES Eq2 for SOME assignment → \\boxed{FALSE}. STOP.\n\nP1 — Z/2 XOR: a * b = (a + b) mod 2.\nP2 — Z/2 OR: a * b = max(a, b).\nP3 — Z/3 left-succ (depends only on a): a * b = (a + 1) mod 3. [Good for LEFT-SPINE Eq1]\nP4 — Z/3 right-succ (depends only on b): a * b = (b + 1) mod 3. [Good for RIGHT-SPINE Eq1]\nP5 — Z/3 addition: a * b = (a + b) mod 3.\nP6 — Z/3 subtraction: a * b = (a - b) mod 3 (i.e., (a + 2b) mod 3).\nP7 — Z/4 affine \"2a+b\": a * b = (2a + b) mod 4.\nP8 — Z/4 affine \"a+2b\": a * b = (a + 2b) mod 4.\n\nHINT: if Eq1 is pure left-spine, P3 often catches the FALSE case.\nHINT: if Eq1 is pure right-spine, P4 often catches the FALSE case.\nHINT: if Eq1 involves both left and right spines (e.g., Eq1 = \"x = ... * ...\") or if it has 2+ free vars, try P5-P8.\n\nWorked example (applying P4 to Eq1 = \"x = y * (y * (z * x))\", Eq2 = \"x = y * (((z * w) * y) * x)\"):\n  Under P4: inner (z*x) = x+1, (y*(z*x)) = x+2, y*(y*(z*x)) = x+3 = x (mod 3). Eq1: x = x. ✓\n  Under P4: Eq2 has 4 *-ops on the all-right path: x+4 = x+1 (mod 3). Eq2: x = x+1. Refuted.\n  → \\boxed{FALSE}.\n\nIf ALL 8 probes fail to refute, proceed to Rule 6.\n\n===== RULE 6 — STRUCTURAL DEFAULTS =====\nOnly if Rules 1-5 did not fire.\n\nCase 6a — Eq1 has form \"v = EXPR\" with v = single bare letter. Count DISTINCT free letters in EXPR:\n- 0 free → \\boxed{FALSE}.\n- 1 free → \\boxed{FALSE}.\n- 2 free (counts c_a, c_b):\n  - If c_a ≥ 2 AND c_b ≥ 2 → \\boxed{FALSE}.\n  - If one var appears exactly once AND EXPR starts with letter v AND other appears ≥ 3 times → \\boxed{FALSE}.\n  - Otherwise → \\boxed{TRUE}.\n- 3+ free → \\boxed{TRUE}.\n\nCase 6b — Compound Eq1 (both sides have *). Let:\n  A = every letter of LHS1 in RHS1\n  B = RHS1 has a letter not in LHS1\n  P1 = first char of RHS1 is letter ≠ first letter of LHS1\n  P2 = last char of RHS1 is letter ≠ last letter of LHS1\n  S = LHS1 is exactly \"v * v\" (one single letter squared, same letter both sides of *)\nIf S → \\boxed{FALSE}. STOP.\nElse if A AND B AND (P1 OR P2) → \\boxed{TRUE}.\nElse → \\boxed{FALSE}.\n\n===== FINAL REMINDER =====\nLast line EXACTLY one of:\n\\boxed{TRUE}\n\\boxed{FALSE}",
+    "publishedAt": "2026-04-21T03:40:17Z",
+    "visibilityStatus": "active",
+    "lineageDepth": 0,
+    "lineagePathSnapshot": [
+      {
+        "shareItemId": "si_280532ed-9a00-49d4-b976-f6f364573860",
+        "entityName": "sdaa",
+        "publishedAt": "2026-04-21T03:40:17Z"
+      }
+    ],
+    "isDerived": false,
+    "itemType": "Original",
+    "sourceCheatsheetId": "cs_1fdba669-8fb7-4418-9aba-67140a0ff75a",
+    "publicCode": "EQT01-000125",
+    "remark": "",
+    "itemRole": null,
+    "likeCount": 0,
+    "favoriteCount": 0,
+    "referencedCount": 0,
+    "commentCount": 0,
+    "canComment": false,
+    "viewerHasLiked": false,
+    "viewerHasFavorited": false
+  }
+}
