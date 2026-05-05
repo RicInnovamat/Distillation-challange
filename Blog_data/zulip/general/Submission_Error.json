@@ -1,0 +1,43 @@
+{
+  "channel": "general",
+  "channel_id": 9,
+  "topic": "Submission Error",
+  "message_count": 1,
+  "messages": [
+    {
+      "id": 1750,
+      "sender_id": 305,
+      "content": "<p>Hi, <br>\nI just attempted to submit my team's cheat sheet, but under my submission, it says \"not submitted\" and won't allow me to resubmit. I tried reloading and it says the same thing for my teammate. He can't resubmit on our behalf either. Do you know how to resolve this issue? Thank you!<br>\n<a href=\"/user_uploads/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png\">Screenshot 2026-04-21 at 3.56.30 AM.png</a><br>\n<a href=\"/user_uploads/5/5e/iYVLBSBOSgpYGzsnn5s-LRGW/Screenshot-2026-04-21-at-4.04.49AM.png\">Screenshot 2026-04-21 at 4.04.49 AM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png\" title=\"Screenshot 2026-04-21 at 3.56.30 AM.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2378x612\" src=\"/user_uploads/thumbnail/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png/840x560.webp\"></a></div><div class=\"message_inline_image\"><a href=\"/user_uploads/5/5e/iYVLBSBOSgpYGzsnn5s-LRGW/Screenshot-2026-04-21-at-4.04.49AM.png\" title=\"Screenshot 2026-04-21 at 4.04.49 AM.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"1230x608\" src=\"/user_uploads/thumbnail/5/5e/iYVLBSBOSgpYGzsnn5s-LRGW/Screenshot-2026-04-21-at-4.04.49AM.png/840x560.webp\"></a></div>",
+      "recipient_id": 24,
+      "timestamp": 1776758259,
+      "client": "website",
+      "subject": "Submission Error",
+      "topic_links": [],
+      "last_edit_timestamp": 1776758721,
+      "edit_history": [
+        {
+          "user_id": 305,
+          "timestamp": 1776758721,
+          "prev_content": "Hi, \nI just attempted to submit my team's cheat sheet, but under my submission, it says \"not submitted\" and won't allow me to resubmit. I tried reloading and it says the same thing for my teammate. He can't resubmit on our behalf either. Do you know how to resolve this issue? Thank you!\n[Screenshot 2026-04-21 at 3.56.30 AM.png](/user_uploads/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png)",
+          "prev_rendered_content": "<p>Hi, <br>\nI just attempted to submit my team's cheat sheet, but under my submission, it says \"not submitted\" and won't allow me to resubmit. I tried reloading and it says the same thing for my teammate. He can't resubmit on our behalf either. Do you know how to resolve this issue? Thank you!<br>\n<a href=\"/user_uploads/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png\">Screenshot 2026-04-21 at 3.56.30 AM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png\" title=\"Screenshot 2026-04-21 at 3.56.30 AM.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"2378x612\" src=\"/user_uploads/thumbnail/5/26/SdL09uDJIea_5dk1EtHkfz-b/Screenshot-2026-04-21-at-3.56.30AM.png/840x560.webp\"></a></div>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Sanjiv Kundamal",
+      "sender_email": "user305@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "general",
+      "type": "stream",
+      "stream_id": 9,
+      "avatar_url": "https://secure.gravatar.com/avatar/9c42650d7ee798659206aae0e3c9c65a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T07:57:39.000Z"
+    }
+  ]
+}
