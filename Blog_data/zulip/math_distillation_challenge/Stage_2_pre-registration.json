@@ -1,0 +1,211 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Stage 2 pre-registration",
+  "message_count": 6,
+  "messages": [
+    {
+      "id": 1821,
+      "sender_id": 25,
+      "content": "<p>Hi everyone,</p>\n<p>Mathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration, and registration is open to everyone:<br>\n<a href=\"https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a></p>\n<p>You can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.</p>\n<p>Stage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777007979,
+      "client": "ZulipElectron",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "last_edit_timestamp": 1777008104,
+      "edit_history": [
+        {
+          "user_id": 25,
+          "timestamp": 1777008104,
+          "prev_content": "Hi everyone,\n\nMathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration, , and registration is open to everyone:\nhttps://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\n\nYou can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.\n\nStage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Mathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration, , and registration is open to everyone:<br>\n<a href=\"https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a></p>\n<p>You can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.</p>\n<p>Stage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.</p>"
+        },
+        {
+          "user_id": 25,
+          "timestamp": 1777008095,
+          "prev_content": "Hi everyone,\n\nMathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration.\nhttps://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\n\nYou can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.\n\nStage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Mathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration.<br>\n<a href=\"https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a></p>\n<p>You can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.</p>\n<p>Stage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.</p>"
+        },
+        {
+          "user_id": 25,
+          "timestamp": 1777008012,
+          "prev_content": "Hi everyone,\n\nMathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration.\n\nYou can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.\n\nStage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.",
+          "prev_rendered_content": "<p>Hi everyone,</p>\n<p>Mathematics Distillation Challenge - Equational Theories: Stage 2 is now open for pre-registration.</p>\n<p>You can now register and create/join teams for Stage 2. As in Stage 1, each team can have 1-5 members. The Stage 2 competition will officially begin on May 1, when the submission pipeline, Playground, and Contributor Network for Stage 2 will go live.</p>\n<p>Stage 1 evaluation is currently in progress, and the Stage 1 leaderboard will be released before April 30. The Stage 1 results will provide useful references for Stage 2.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-24T05:19:39.000Z"
+    },
+    {
+      "id": 1822,
+      "sender_id": 157,
+      "content": "<p>What about 1 stage results?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777010341,
+      "client": "website",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Garbid",
+      "sender_email": "user157@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/72a4645be775e7a8bf0ccdba87f1e0c1?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-24T05:59:01.000Z"
+    },
+    {
+      "id": 1823,
+      "sender_id": 113,
+      "content": "<p>Will the submitted stage 1 team sheets be openly displayed alongside the results or do the sheets remain private alongside the results?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777034375,
+      "client": "website",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-24T12:39:35.000Z"
+    },
+    {
+      "id": 1824,
+      "sender_id": 25,
+      "content": "<p>Yes, the Stage 1 submitted cheatsheets will be made open alongside the results, so everyone can use the good Stage 1 cheatsheets as references for Stage 2.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777046815,
+      "client": "ZulipElectron",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-24T16:06:55.000Z"
+    },
+    {
+      "id": 1825,
+      "sender_id": 113,
+      "content": "<p>I'm assuming further information will be available for stage 2?</p>\n<blockquote>\n<blockquote>\n<p><a href=\"https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a> </p>\n</blockquote>\n</blockquote>\n<p>Will stage 2 remain at 10kbs maximum size? Will more ai be added to the stage 2 exam? Will there be a date when all this is decided?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777049233,
+      "client": "website",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-24T16:47:13.000Z"
+    },
+    {
+      "id": 1826,
+      "sender_id": 25,
+      "content": "<p>Details will be released when it's officially launched. Currently just register and create your team.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777049294,
+      "client": "ZulipElectron",
+      "subject": "Stage 2 pre-registration",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-24T16:48:14.000Z"
+    }
+  ]
+}
