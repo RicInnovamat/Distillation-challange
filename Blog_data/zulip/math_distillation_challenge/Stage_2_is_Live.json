@@ -1,0 +1,89 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Stage 2 is Live!",
+  "message_count": 1,
+  "messages": [
+    {
+      "id": 1878,
+      "sender_id": 25,
+      "content": "<p><strong>Mathematics Distillation Challenge - Equational Theories: Stage 2 is now live</strong></p>\n<p>Hi everyone,</p>\n<p>Stage 2 of the Mathematics Distillation Challenge - Equational Theories is now live.</p>\n<p>At a high level, Stage 2 is an autoformalization challenge: participants will build systems that translate equational reasoning into Lean 4 artifacts that can be checked automatically by a deterministic judge.</p>\n<p>This stage moves from true/false prediction to <strong>machine-checkable Lean 4 certificates</strong>. For each equational implication, submissions must provide either a Lean proof that the implication is true, or a Lean certificate of a counterexample showing that the implication is false.</p>\n<p>Stage 2 has two tracks:</p>\n<p><strong>Solo</strong>: one solver subprocess per problem.  <br>\n<strong>Marathon</strong>: one solver subprocess handles a batch of problems under a shared global budget.</p>\n<p>Both tracks use the same deterministic Lean judge and the same public verdict statuses. Submissions should be a single <code>solver.py</code> file, up to 500 KB.</p>\n<p>The official repository includes the evaluation pipeline, Lean judge, demo solvers, tutorials, and local testing tools.</p>\n<p>Stage 2 is open to everyone.</p>\n<p>Deadline: <strong>August 31, 2026, 23:59 AoE</strong></p>\n<p>Competition page: <a href=\"https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview\">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a></p>\n<p>Playground: <a href=\"https://playground.sair.foundation/playground/mathematics-distillation-challenge-equational-theories-stage2\">https://playground.sair.foundation/playground/mathematics-distillation-challenge-equational-theories-stage2</a></p>\n<p>Please note that the Stage 2 Playground is currently available only to participants who registered for Stage 1.</p>\n<p>The Stage 2 Contributor Network will open soon.</p>\n<p>Repository: <a href=\"https://github.com/SAIRcompetition/equational-theories-lean-stage2\">https://github.com/SAIRcompetition/equational-theories-lean-stage2</a></p>\n<p>If you run into setup problems, judge bugs, unclear documentation, or reproducible errors, please open a GitHub issue in the official repository. Feedback on the rules and evaluation setup is also welcome.</p>\n<p>Thank you for participating in SAIR competitions! Good luck, and we’re excited to see what the community builds.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777650830,
+      "client": "ZulipElectron",
+      "subject": "Stage 2 is Live!",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 317
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 189
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 234
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 32
+        },
+        {
+          "emoji_name": "checkered_flag",
+          "emoji_code": "1f3c1",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 225
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 292
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 113
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-01T15:53:50.000Z"
+    }
+  ]
+}

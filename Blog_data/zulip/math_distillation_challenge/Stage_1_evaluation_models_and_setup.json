@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Stage 1 evaluation models and setup",
-  "message_count": 36,
+  "message_count": 40,
   "messages": [
     {
       "id": 1509,
@@ -1234,6 +1234,131 @@
       "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
       "content_type": "text/html",
       "date": "2026-04-20T06:37:35.000Z"
+    },
+    {
+      "id": 1741,
+      "sender_id": 25,
+      "content": "<p>Thanks everyone for the great discussion!</p>",
+      "recipient_id": 43,
+      "timestamp": 1776745920,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 273
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-21T04:32:00.000Z"
+    },
+    {
+      "id": 1742,
+      "sender_id": 25,
+      "content": "<p>Reminder: Stage 1 ends in about 7 hours, so please remember to submit your cheatsheet if you have not done so yet.</p>",
+      "recipient_id": 43,
+      "timestamp": 1776745942,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "alarm_clock",
+          "emoji_code": "23f0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-04-21T04:32:22.000Z"
+    },
+    {
+      "id": 1756,
+      "sender_id": 117,
+      "content": "<p>If 2 cheatsheets are tested to have very similar performance (insignificant diff considering the stochastic nature of LLMs themselves), would SAIR consider the shorter cheatsheet to be the winner?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776778369,
+      "client": "ZulipElectron",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-04-21T13:32:49.000Z"
+    },
+    {
+      "id": 1760,
+      "sender_id": 113,
+      "content": "<p>Or the fastest? Or a difference between the two?</p>",
+      "recipient_id": 43,
+      "timestamp": 1776800566,
+      "client": "website",
+      "subject": "Stage 1 evaluation models and setup",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Stacey Szmy",
+      "sender_email": "user113@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/21e44e00230533d40a9a9209cc063b5a?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-04-21T19:42:46.000Z"
     }
   ]
 }
