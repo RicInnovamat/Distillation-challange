@@ -2,7 +2,7 @@
   "channel": "Math Distillation Challenge - equational theories",
   "channel_id": 13,
   "topic": "Discovery: Spine Isolation Theorem (1.54M pairs, zero vio...",
-  "message_count": 2,
+  "message_count": 3,
   "messages": [
     {
       "id": 1399,
@@ -84,6 +84,32 @@
       "stream_id": 13,
       "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
       "content_type": "text/html"
+    },
+    {
+      "id": 1931,
+      "sender_id": 177,
+      "content": "<p>Just wondering if anyone ended up using this in their cheatsheets?</p>",
+      "recipient_id": 43,
+      "timestamp": 1778173171,
+      "client": "website",
+      "subject": "Discovery: Spine Isolation Theorem (1.54M pairs, zero vio...",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Adam McKenna",
+      "sender_email": "user177@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/1eb4e35f0b3a506d78e314b257c1487f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-07T16:59:31.000Z"
     }
   ]
 }
