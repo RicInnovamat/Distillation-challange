@@ -2,7 +2,7 @@
   "channel": "general",
   "channel_id": 9,
   "topic": "greetings",
-  "message_count": 5,
+  "message_count": 6,
   "messages": [
     {
       "id": 22,
@@ -186,6 +186,39 @@
       "avatar_url": "/user_avatars/5/0b0ddbd15134130c80532d7497d809f8aae03dde.png",
       "content_type": "text/html",
       "date": "2026-04-16T01:03:58.000Z"
+    },
+    {
+      "id": 1904,
+      "sender_id": 134,
+      "content": "<p><a href=\"/user_uploads/5/7f/QlYyLLnwdK-FqX-_vyXmggLF/image.png\">image.png</a><br>\nfever dream</p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/7f/QlYyLLnwdK-FqX-_vyXmggLF/image.png\" title=\"image.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"437x1024\" src=\"/user_uploads/thumbnail/5/7f/QlYyLLnwdK-FqX-_vyXmggLF/image.png/840x560.webp\"></a></div>",
+      "recipient_id": 24,
+      "timestamp": 1777936013,
+      "client": "website",
+      "subject": "greetings",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Alex Meiburg",
+      "sender_email": "user134@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "general",
+      "type": "stream",
+      "stream_id": 9,
+      "avatar_url": "https://secure.gravatar.com/avatar/fa7e9ca1d9249db03849e44977e3cc5f?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-04T23:06:53.000Z"
     }
   ]
 }

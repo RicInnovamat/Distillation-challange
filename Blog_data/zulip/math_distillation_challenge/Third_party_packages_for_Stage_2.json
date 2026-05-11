@@ -1,0 +1,606 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Third party packages for Stage 2",
+  "message_count": 17,
+  "messages": [
+    {
+      "id": 1886,
+      "sender_id": 277,
+      "content": "<p>Is Numpy or Sympy allow for stage 2 solver.py submission?</p>",
+      "recipient_id": 43,
+      "timestamp": 1777706274,
+      "client": "website",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "user_id": 25,
+          "timestamp": 1778048785,
+          "prev_topic": "Third party packages",
+          "topic": "Third party packages for Stage 2"
+        },
+        {
+          "user_id": 25,
+          "timestamp": 1778048750,
+          "prev_topic": "Numpy for Stage 2?",
+          "topic": "Third party packages"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778048785,
+      "sender_full_name": "fsd",
+      "sender_email": "user277@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/b975afe2e2c7e10a68e6e77c420ee23c?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-02T07:17:54.000Z"
+    },
+    {
+      "id": 1892,
+      "sender_id": 25,
+      "content": "<p>Yes, NumPy or SymPy can be used in the Stage 2 <code>solver.py</code> submission. This does not violate the fairness of the competition.</p>",
+      "recipient_id": 43,
+      "timestamp": 1777765988,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "topic": "Third party packages for Stage 2",
+          "user_id": 25,
+          "timestamp": 1778048785,
+          "prev_topic": "Third party packages"
+        },
+        {
+          "topic": "Third party packages",
+          "user_id": 25,
+          "timestamp": 1778048750,
+          "prev_topic": "Numpy for Stage 2?"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778048785,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-02T23:53:08.000Z"
+    },
+    {
+      "id": 1914,
+      "sender_id": 117,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Numpy.20for.20Stage.202.3F/near/1892\">said</a>:</p>\n<blockquote>\n<p>Yes, NumPy or SymPy can be used in the Stage 2 <code>solver.py</code> submission. This does not violate the fairness of the competition.</p>\n</blockquote>\n<p>The README page says no Numpy, etc.  maybe need to update.<br>\n<a href=\"/user_uploads/5/57/vRVYsI-VuW1FdxHGLQNmhtfy/image.png\">image.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/57/vRVYsI-VuW1FdxHGLQNmhtfy/image.png\" title=\"image.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"867x358\" src=\"/user_uploads/thumbnail/5/57/vRVYsI-VuW1FdxHGLQNmhtfy/image.png/840x560.webp\"></a></div>",
+      "recipient_id": 43,
+      "timestamp": 1778038052,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "topic": "Third party packages for Stage 2",
+          "user_id": 25,
+          "timestamp": 1778048785,
+          "prev_topic": "Third party packages"
+        },
+        {
+          "topic": "Third party packages",
+          "user_id": 25,
+          "timestamp": 1778048750,
+          "prev_topic": "Numpy for Stage 2?"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778048785,
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-05-06T03:27:32.000Z"
+    },
+    {
+      "id": 1915,
+      "sender_id": 117,
+      "content": "<p>Can help give the full list of 3rd party packages allowed (and the version), would be nice.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778038154,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "topic": "Third party packages for Stage 2",
+          "user_id": 25,
+          "timestamp": 1778048785,
+          "prev_topic": "Third party packages"
+        },
+        {
+          "topic": "Third party packages",
+          "user_id": 25,
+          "timestamp": 1778048750,
+          "prev_topic": "Numpy for Stage 2?"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778048785,
+      "sender_full_name": "Gan W.",
+      "sender_email": "user117@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/62f195752f4b8a9ab7928b0e6d43725e586f89c5.png",
+      "content_type": "text/html",
+      "date": "2026-05-06T03:29:14.000Z"
+    },
+    {
+      "id": 1917,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"117\">@Gan W.</span> Thanks, good point. We will include NumPy.</p>\n<p>More generally, third-party packages can be added to the sandbox as long as they do not affect fairness, reproducibility, or security.</p>\n<p>Please propose any packages you would like to use in this Zulip topic. For specific requests, opening a GitHub issue is also welcome.</p>\n<p>We will share the approved package list with versions.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778048730,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "last_edit_timestamp": 1778048755,
+      "edit_history": [
+        {
+          "topic": "Third party packages for Stage 2",
+          "user_id": 25,
+          "timestamp": 1778048785,
+          "prev_topic": "Third party packages"
+        },
+        {
+          "user_id": 25,
+          "timestamp": 1778048755,
+          "prev_content": "@**Gan W.** Thanks, good point. We will include NumPy.\n\nMore generally, third-party packages can be added to the sandbox as long as they do not affect fairness, reproducibility, or security.\n\nPlease propose any packages you would like to use in this Zulip channel. For specific requests, opening a GitHub issue is also welcome.\n\nWe will share the approved package list with versions.",
+          "prev_rendered_content": "<p><span class=\"user-mention\" data-user-id=\"117\">@Gan W.</span> Thanks, good point. We will include NumPy.</p>\n<p>More generally, third-party packages can be added to the sandbox as long as they do not affect fairness, reproducibility, or security.</p>\n<p>Please propose any packages you would like to use in this Zulip channel. For specific requests, opening a GitHub issue is also welcome.</p>\n<p>We will share the approved package list with versions.</p>"
+        },
+        {
+          "topic": "Third party packages",
+          "user_id": 25,
+          "timestamp": 1778048750,
+          "prev_topic": "Numpy for Stage 2?"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 117
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778048785,
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-06T06:25:30.000Z"
+    },
+    {
+      "id": 1926,
+      "sender_id": 316,
+      "content": "<p>Hi, building on Gan W.'s question — for solvers that need to do <br>\nnon-trivial counterexample search, the following packages would <br>\nbe valuable:</p>\n<ul>\n<li>\n<p>z3-solver: SMT-based search for finite magmas satisfying Eq1 <br>\n  but violating Eq2. ETP itself uses Z3 (generate_z3_counterexample <br>\n  in teorth/equational_theories). Most direct path to FALSE <br>\n  certificates beyond brute-force enumeration.</p>\n</li>\n<li>\n<p>networkx: graph operations on the implication poset. The ETP <br>\n  graph has ~22M edges and reasoning about ancestry/transitive <br>\n  closure is natural in this representation.</p>\n</li>\n<li>\n<p>pysat (alternative): if z3-solver is rejected for size or <br>\n  fairness reasons, pure-Python SAT.</p>\n</li>\n</ul>\n<p>For all three, deterministic seeding is straightforward and the <br>\noutput is a finite witness that the Lean judge can verify <br>\nindependently. Reproducibility is preserved.</p>\n<p>Versions I'd target: z3-solver==4.13.0, networkx==3.3, pysat==1.8.dev1.</p>\n<p>If the team has fairness concerns about z3 specifically (some <br>\nparticipants having local Z3 expertise), a documented allowlist <br>\nof which Z3 APIs are permitted would address that without <br>\nremoving the tool entirely.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778163021,
+      "client": "ZulipFlutter",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "edit_history": [
+        {
+          "user_id": 25,
+          "timestamp": 1778167907,
+          "prev_topic": "general chat",
+          "topic": "Third party packages for Stage 2"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "last_moved_timestamp": 1778167907,
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/5161cba0304296b89ed3e1869478e372159cb06d.png",
+      "content_type": "text/html",
+      "date": "2026-05-07T14:10:21.000Z"
+    },
+    {
+      "id": 1927,
+      "sender_id": 15,
+      "content": "<p><a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Third.20party.20packages.20for.20Stage.202/near/1926\">A message</a> was moved here from <a class=\"stream-topic\" data-stream-id=\"13\" href=\"/#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic//with/1887\">#Math Distillation Challenge - equational theories &gt; <em>general chat</em></a> by <span class=\"user-mention silent\" data-user-id=\"25\">YZ</span>.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778167907,
+      "client": "Internal",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Notification Bot",
+      "sender_email": "notification-bot@zulip.com",
+      "sender_realm_str": "zulipinternal",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://zulip.sair.foundation/static/images/static_avatars/notification-bot.36f721bad3d0.png",
+      "content_type": "text/html",
+      "date": "2026-05-07T15:31:47.000Z"
+    },
+    {
+      "id": 1928,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"316\">@Vincent Witte</span> Thanks for the suggestions on the packages. I will discuss with the co-organizers for this.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778168026,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 316
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-07T15:33:46.000Z"
+    },
+    {
+      "id": 2018,
+      "sender_id": 323,
+      "content": "<p><a href=\"/user_uploads/5/a6/LX6IbjBZVJXbFSYYJgHBTEh9/Screenshot-2026-05-09-at-10.05.46AM.png\">Screenshot 2026-05-09 at 10.05.46 AM.png</a><br>\nHi @YZ and community,                                                                                                           </p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/a6/LX6IbjBZVJXbFSYYJgHBTEh9/Screenshot-2026-05-09-at-10.05.46AM.png\" title=\"Screenshot 2026-05-09 at 10.05.46 AM.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"703x497\" src=\"/user_uploads/thumbnail/5/a6/LX6IbjBZVJXbFSYYJgHBTEh9/Screenshot-2026-05-09-at-10.05.46AM.png/840x560.webp\"></a></div><p>I'm trying to submit my Stage 2 solver to the Playground and Contributor Network but running into issues:</p>\n<p>1. <strong>Playground</strong>: I can't seem to load my solver.py into the Stage 2 Playground for testing. Is there a specific upload flow or authorization? </p>\n<p>I'm missing, or is the Playground currently only accepting certain formats?  Is there a way I could run it? </p>\n<p>2. <strong>Contributor Network</strong>: When I try to share my solver on the Stage 2 Contributor Network (<a href=\"https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage2\">https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage2</a>), it doesn't seem to gothrough.</p>\n<p>My solver is a single solver.py file (232KB, well under 500KB limit). It handles both Solo and Marathon tracks (auto-detects via JUDGE_MARATHON_MANIFEST env var). It includes:</p>\n<p>- 22M implication matrix oracle (108KB compressed)</p>\n<p>- 27 hardcoded proofs for the hardest cases</p>\n<p>- 13-level tactic engine (grind, self-app, Tao synthesis, Ježek h.symm, etc.)</p>\n<p>- Full counterexample engine (structured, affine, Brockian, product Z_p×Z_q, cyclic successor, random, backtracking)</p>\n<p>- LLM fallback with judge feedback</p>\n<p>Tested locally against all public benchmarks: 918/919 true (99.9%), 922/950 false (97.1%) = 1840/1869 (98.4%).</p>\n<p>Any guidance on the correct submission/sharing flow for Stage 2 would be appreciated. Thanks!</p>\n<p>— Christopher Brock / Riemann Labs</p>",
+      "recipient_id": 43,
+      "timestamp": 1778335879,
+      "client": "website",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        },
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 118
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Christopher Brock",
+      "sender_email": "user323@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/d963525380fd5095b6277261738dc4cd?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-09T14:11:19.000Z"
+    },
+    {
+      "id": 2021,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"323\">@Christopher Brock</span> Thanks for the detailed note.</p>\n<p>At the moment, the Stage 2 Playground is only open to participants who registered for Stage 1. We are considering opening it more broadly so that others can also use the Playground to check format and run basic tests, while giving more credit/priority to participants who registered for Stage 1.</p>\n<p>The Stage 2 Contributor Network should be working now. If you still run into upload or sharing issues, please DM me and we can dive into the details.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778371667,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-10T00:07:47.000Z"
+    },
+    {
+      "id": 2026,
+      "sender_id": 316,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span> Wildcards maybe?</p>",
+      "recipient_id": 43,
+      "timestamp": 1778413114,
+      "client": "ZulipFlutter",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/5161cba0304296b89ed3e1869478e372159cb06d.png",
+      "content_type": "text/html",
+      "date": "2026-05-10T11:38:34.000Z"
+    },
+    {
+      "id": 2027,
+      "sender_id": 316,
+      "content": "<p>The more the better I say</p>",
+      "recipient_id": 43,
+      "timestamp": 1778413139,
+      "client": "ZulipFlutter",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Vincent Witte",
+      "sender_email": "user316@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/5161cba0304296b89ed3e1869478e372159cb06d.png",
+      "content_type": "text/html",
+      "date": "2026-05-10T11:38:59.000Z"
+    },
+    {
+      "id": 2035,
+      "sender_id": 323,
+      "content": "<p>Thanks  <span class=\"user-mention\" data-user-id=\"316\">@Vincent Witte</span> - I hope to share in the network soon. I have submitted my latest version and am down to 29 hard problems.  I even built a digital overview of the process and idea. happy to share. </p>\n<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span>  - The stage 2 contribution area to share work is based on pushing the python script in the playground first. I have my submission in but cannot move further nor share.  I didn't know about the stage 1 competition or I would have partipated as well.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778415486,
+      "client": "website",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "last_edit_timestamp": 1778415919,
+      "edit_history": [
+        {
+          "user_id": 323,
+          "timestamp": 1778415919,
+          "prev_content": "Thanks  @**Vincent Witte** - I hope to share in the network soon. I have submitted my latest version and am down to 29 hard problems.  I even built a digital overview of the process and idea. happy to share. \n\n@**YZ**  - The stage 2 contribution area to share work is based on pushing the python script in the playground first. I have my submission in but cannot move further nor share.",
+          "prev_rendered_content": "<p>Thanks  <span class=\"user-mention\" data-user-id=\"316\">@Vincent Witte</span> - I hope to share in the network soon. I have submitted my latest version and am down to 29 hard problems.  I even built a digital overview of the process and idea. happy to share. </p>\n<p><span class=\"user-mention\" data-user-id=\"25\">@YZ</span>  - The stage 2 contribution area to share work is based on pushing the python script in the playground first. I have my submission in but cannot move further nor share.</p>"
+        },
+        {
+          "user_id": 323,
+          "timestamp": 1778415580,
+          "prev_content": "The stage 2 contribution area to share work is based on pushing the python script in the playground first.  I have my submission in but cannot move further nor share.",
+          "prev_rendered_content": "<p>The stage 2 contribution area to share work is based on pushing the python script in the playground first.  I have my submission in but cannot move further nor share.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Christopher Brock",
+      "sender_email": "user323@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/d963525380fd5095b6277261738dc4cd?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-10T12:18:06.000Z"
+    },
+    {
+      "id": 2038,
+      "sender_id": 323,
+      "content": "<p><span class=\"user-mention silent\" data-user-id=\"323\">Christopher Brock</span> <a href=\"#narrow/channel/13-Math-Distillation-Challenge---equational-theories/topic/Third.20party.20packages.20for.20Stage.202/near/2035\">said</a>:</p>\n<blockquote>\n<p>Thanks  <span class=\"user-mention silent\" data-user-id=\"316\">Vincent Witte</span> - I hope to share in the network soon. I have submitted my latest version and am down to 29 hard problems.  I even built a digital overview of the process and idea. happy to share. </p>\n<p><span class=\"user-mention silent\" data-user-id=\"25\">YZ</span>  - The stage 2 contribution area to share work is based on pushing the python script in the playground first. I have my submission in but cannot move further nor share.  I didn't know about the stage 1 competition or I would have partipated as well.</p>\n</blockquote>\n<p><a href=\"/user_uploads/5/9c/QhCUohAmcumECZYI1uAeChLH/Screenshot-2026-05-10-at-8.31.11AM.png\">Screenshot 2026-05-10 at 8.31.11 AM.png</a></p>\n<div class=\"message_inline_image\"><a href=\"/user_uploads/5/9c/QhCUohAmcumECZYI1uAeChLH/Screenshot-2026-05-10-at-8.31.11AM.png\" title=\"Screenshot 2026-05-10 at 8.31.11 AM.png\"><img data-original-content-type=\"image/png\" data-original-dimensions=\"642x678\" src=\"/user_uploads/thumbnail/5/9c/QhCUohAmcumECZYI1uAeChLH/Screenshot-2026-05-10-at-8.31.11AM.png/840x560.webp\"></a></div>",
+      "recipient_id": 43,
+      "timestamp": 1778416330,
+      "client": "website",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "working_on_it",
+          "emoji_code": "1f6e0",
+          "reaction_type": "unicode_emoji",
+          "user_id": 25
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Christopher Brock",
+      "sender_email": "user323@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "https://secure.gravatar.com/avatar/d963525380fd5095b6277261738dc4cd?d=identicon&version=1",
+      "content_type": "text/html",
+      "date": "2026-05-10T12:32:10.000Z"
+    },
+    {
+      "id": 2044,
+      "sender_id": 25,
+      "content": "<p><span class=\"user-mention\" data-user-id=\"323\">@Christopher Brock</span> I see. It seems that currently only the playground users can share in the contributor network. The logic is not correct.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778431904,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-10T16:51:44.000Z"
+    },
+    {
+      "id": 2045,
+      "sender_id": 25,
+      "content": "<p>We will change the website logic and get back to you. Thank you so much for reporting the issue.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778431924,
+      "client": "ZulipElectron",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-10T16:52:04.000Z"
+    },
+    {
+      "id": 2046,
+      "sender_id": 118,
+      "content": "<p>Hi <span class=\"user-mention\" data-user-id=\"25\">@YZ</span> , following up on Christopher Brock’s message about Lean-side tactic engines for Stage 2 solvers.</p>\n<p>Could you clarify whether submitted Lean certificates are allowed to use standard Lean 4 / Mathlib tactics such as <code>grind</code>, <code>simp</code>, <code>omega</code>, <code>aesop</code>, etc., assuming the generated code contains no <code>sorry</code>/<code>admit</code> and passes the deterministic judge?</p>\n<p>In other words, is the policy based on the declarations/axioms used by the elaborated proof, or are some tactics themselves disallowed in submitted certificate code?</p>\n<p>This is separate from Python-side packages like <code>z3</code> or <code>networkx</code>; I’m asking only about tactics available inside the Lean code submitted to the judge.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778465269,
+      "client": "website",
+      "subject": "Third party packages for Stage 2",
+      "topic_links": [],
+      "last_edit_timestamp": 1778465285,
+      "edit_history": [
+        {
+          "user_id": 118,
+          "timestamp": 1778465285,
+          "prev_content": "Hi @YZ, following up on Christopher Brock’s message about Lean-side tactic engines for Stage 2 solvers.\n\nCould you clarify whether submitted Lean certificates are allowed to use standard Lean 4 / Mathlib tactics such as `grind`, `simp`, `omega`, `aesop`, etc., assuming the generated code contains no `sorry`/`admit` and passes the deterministic judge?\n\nIn other words, is the policy based on the declarations/axioms used by the elaborated proof, or are some tactics themselves disallowed in submitted certificate code?\n\nThis is separate from Python-side packages like `z3` or `networkx`; I’m asking only about tactics available inside the Lean code submitted to the judge.",
+          "prev_rendered_content": "<p>Hi @YZ, following up on Christopher Brock’s message about Lean-side tactic engines for Stage 2 solvers.</p>\n<p>Could you clarify whether submitted Lean certificates are allowed to use standard Lean 4 / Mathlib tactics such as <code>grind</code>, <code>simp</code>, <code>omega</code>, <code>aesop</code>, etc., assuming the generated code contains no <code>sorry</code>/<code>admit</code> and passes the deterministic judge?</p>\n<p>In other words, is the policy based on the declarations/axioms used by the elaborated proof, or are some tactics themselves disallowed in submitted certificate code?</p>\n<p>This is separate from Python-side packages like <code>z3</code> or <code>networkx</code>; I’m asking only about tactics available inside the Lean code submitted to the judge.</p>"
+        }
+      ],
+      "is_me_message": false,
+      "reactions": [],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "Bing Wu",
+      "sender_email": "user118@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/8c99a8a6c86e5c227091ae31b3eb4ac3f55cae64.png",
+      "content_type": "text/html",
+      "date": "2026-05-11T02:07:49.000Z"
+    }
+  ]
+}
