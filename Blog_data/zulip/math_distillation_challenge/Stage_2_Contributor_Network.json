@@ -1,0 +1,41 @@
+{
+  "channel": "Math Distillation Challenge - equational theories",
+  "channel_id": 13,
+  "topic": "Stage 2 Contributor Network",
+  "message_count": 1,
+  "messages": [
+    {
+      "id": 1934,
+      "sender_id": 25,
+      "content": "<p><strong>Stage 2 Contributor Network is now live.</strong></p>\n<p>The Contributor Network for Stage 2 of the Mathematics Distillation Challenge - Equational Theories is now open:</p>\n<p><a href=\"https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage2\">https://competition.sair.foundation/contributor-network?competition=mathematics-distillation-challenge-equational-theories-stage2</a></p>\n<p>This is a space for participants to share solvers, tools, ideas, and progress with the community. We hope it will help facilitate open collaboration, shared learning, and collective progress throughout Stage 2.</p>",
+      "recipient_id": 43,
+      "timestamp": 1778182378,
+      "client": "ZulipElectron",
+      "subject": "Stage 2 Contributor Network",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "+1",
+          "emoji_code": "1f44d",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "Math Distillation Challenge - equational theories",
+      "type": "stream",
+      "stream_id": 13,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-07T19:32:58.000Z"
+    }
+  ]
+}
