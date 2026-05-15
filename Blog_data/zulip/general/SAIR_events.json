@@ -1,0 +1,47 @@
+{
+  "channel": "general",
+  "channel_id": 9,
+  "topic": "SAIR events",
+  "message_count": 1,
+  "messages": [
+    {
+      "id": 2065,
+      "sender_id": 25,
+      "content": "<p>Hi everyone, the livestream for Science x AI Summit 2026 (Palo Alto) will begin in about 3 hours.</p>\n<p>The first session will feature several excellent AI x Math talks, including Prof. Terence Tao’s talk on SAIR Competitions at 10:15 AM PT. We warmly invite everyone to watch the livestream and share it with anyone who may be interested.</p>\n<p>Agenda:<br>\n<a href=\"https://sair.foundation/events/science-ai-summit-2026\">https://sair.foundation/events/science-ai-summit-2026</a></p>\n<p>Watch livestreaming on Youtube:<br>\n<a href=\"https://www.youtube.com/watch?v=XSK11zBg7TQ\">https://www.youtube.com/watch?v=XSK11zBg7TQ</a></p>\n<div class=\"youtube-video message_inline_image\"><a data-id=\"XSK11zBg7TQ\" href=\"https://www.youtube.com/watch?v=XSK11zBg7TQ\"><img src=\"/external_content/d82d36fd90bb963fceb330ea317707dfe350a7eb/68747470733a2f2f692e7974696d672e636f6d2f76692f58534b31317a42673754512f6d7164656661756c742e6a7067\"></a></div>",
+      "recipient_id": 24,
+      "timestamp": 1778592785,
+      "client": "ZulipElectron",
+      "subject": "SAIR events",
+      "topic_links": [],
+      "is_me_message": false,
+      "reactions": [
+        {
+          "emoji_name": "heart",
+          "emoji_code": "2764",
+          "reaction_type": "unicode_emoji",
+          "user_id": 323
+        },
+        {
+          "emoji_name": "looking",
+          "emoji_code": "1f440",
+          "reaction_type": "unicode_emoji",
+          "user_id": 71
+        }
+      ],
+      "submessages": [],
+      "flags": [
+        "read",
+        "historical"
+      ],
+      "sender_full_name": "YZ",
+      "sender_email": "user25@zulip.sair.foundation",
+      "sender_realm_str": "",
+      "display_recipient": "general",
+      "type": "stream",
+      "stream_id": 9,
+      "avatar_url": "/user_avatars/5/4a96bf68716b42a5445a114149cc3dcd6314b33c.png",
+      "content_type": "text/html",
+      "date": "2026-05-12T13:33:05.000Z"
+    }
+  ]
+}
